@@ -1,0 +1,4726 @@
+{
+  "schemaVersion": "stablecoin-research-v1",
+  "campaignId": "stablecoin-v4",
+  "assignmentId": "R6",
+  "asOfUtc": "2026-09-16T04:08:37Z",
+  "scopeWindow": {
+    "start": "2020-01-01",
+    "end": "2021-12-31"
+  },
+  "coverage": {
+    "searchedChains": [
+      "Ethereum",
+      "BNB Chain",
+      "Polygon",
+      "Terra",
+      "Avalanche",
+      "Fantom",
+      "Ergo",
+      "Waves",
+      "Kava",
+      "HECO",
+      "Solana",
+      "Cardano (proposal/testnet leads only)"
+    ],
+    "searchedFamilies": [
+      "2020–2021 directories and surveys",
+      "archive replay",
+      "original repositories and fork attribution",
+      "explorer verification attempts",
+      "rebasing",
+      "coupon/seigniorage shares",
+      "fractional collateral",
+      "collateralized debt",
+      "pooled reserve equity",
+      "floating targets",
+      "governance/postmortems",
+      "testnet and unlaunched proposals",
+      "ticker/version collisions"
+    ],
+    "deepCaseIds": [
+      "R6-P001",
+      "R6-P002",
+      "R6-P003"
+    ],
+    "completenessClaim": false,
+    "stoppingReason": "Stopped after three evidence-rich deep families, seed spot-checks and a broader triage pass to preserve time for both outputs and structural validation. No numeric TaskDescriptor hard budget was exposed in the session. Several archives/explorers failed; later outcomes and deployment proofs remain incomplete."
+  },
+  "protocols": [
+    {
+      "id": "R6-P001",
+      "name": "Liquity LUSD",
+      "aliases": [
+        "LUSD",
+        "Liquity V1"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Dated mainnet announcement in window. Collateral-backed control case often missed by narrow algorithmic lists.",
+        "claimIds": [
+          "R6-C003"
+        ]
+      },
+      "researchDepth": "deep",
+      "classification": [
+        "collateralized debt",
+        "automated liquidation",
+        "USD peg"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [
+        {
+          "chain": "Ethereum",
+          "address": "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
+          "verified": null,
+          "sourceIds": [
+            "R6-S005",
+            "R6-S065"
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "id": "R6-P001-V1",
+          "label": "LUSD V1 historical April 2021 code",
+          "startDate": "2021-04-05",
+          "endDate": null,
+          "tokenRoles": "LUSD debt money; LQTY receives fees and incentives.",
+          "backing": "ETH in borrower Troves.",
+          "redemption": "ETH at dollar face value less fees; bootstrap and TCR restrictions (C004).",
+          "supplyPolicy": "Borrow to mint; repayment, redemption and offsets burn.",
+          "debtAndIncentives": "Stability Pool absorbs liquidations; residual debt/collateral redistributes.",
+          "oracle": "Chainlink primary, Tellor fallback.",
+          "governanceAndAdmin": "Historical README says no admin key.",
+          "liquidityDependencies": "Funded Stability Pool, liquidators, oracle liveness and external LUSD/ETH markets.",
+          "claimIds": [
+            "R6-C003",
+            "R6-C004",
+            "R6-C005",
+            "R6-C006"
+          ]
+        },
+        {
+          "id": "R6-P001-V2",
+          "label": "BOLD V2 initial 2025 deployment—follow-up only",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "BOLD rather than LUSD.",
+          "backing": "ETH and liquid staking collateral per V2 announcement.",
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C007"
+          ]
+        },
+        {
+          "id": "R6-P001-V3",
+          "label": "BOLD V2 May 2025 redeployment—follow-up only",
+          "startDate": "2025-05-19",
+          "endDate": null,
+          "tokenRoles": "BOLD; LQTY participates in protocol liquidity incentives.",
+          "backing": "ETH, wstETH, rETH; distinct from V1.",
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C007",
+            "R6-C058"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": "2021-05-19",
+          "versionId": "R6-P001-V1",
+          "type": "market stress / liquidations",
+          "summary": "Project reports successful liquidation processing, not an exploit.",
+          "beneficiaries": "Stability Pool depositors receive liquidation collateral.",
+          "lossBearers": "Liquidated borrowers lose collateral subject to protocol rules.",
+          "outcome": "Project-reported operational resilience; price perfection not established.",
+          "claimIds": [
+            "R6-C006"
+          ]
+        },
+        {
+          "date": "2025-02-12",
+          "versionId": "R6-P001-V2",
+          "type": "code vulnerability disclosure",
+          "summary": "V2 Stability Pool issue prompted warnings and redeployment.",
+          "beneficiaries": null,
+          "lossBearers": null,
+          "outcome": "Team stated no known affected users; May redeployment. Not a V1 loss.",
+          "claimIds": [
+            "R6-C007"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R6-S005",
+        "R6-S006",
+        "R6-S007",
+        "R6-S008",
+        "R6-S009",
+        "R6-S010",
+        "R6-S011",
+        "R6-S012",
+        "R6-S073"
+      ],
+      "claimIds": [
+        "R6-C003",
+        "R6-C004",
+        "R6-C005",
+        "R6-C006",
+        "R6-C007",
+        "R6-C058"
+      ]
+    },
+    {
+      "id": "R6-P002",
+      "name": "SigmaUSD",
+      "aliases": [
+        "SigUSD",
+        "SigmaRSV"
+      ],
+      "chains": [
+        "Ergo"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Contemporary February 2021 live announcement and May postmortem.",
+        "claimIds": [
+          "R6-C008"
+        ]
+      },
+      "researchDepth": "deep",
+      "classification": [
+        "pooled crypto reserve",
+        "reserve equity",
+        "USD peg"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "AgeUSD",
+          "relationship": "Implementation of framework; not a separate deployed stablecoin ticker.",
+          "evidenceClaimIds": [
+            "R6-C008",
+            "R6-C009"
+          ]
+        },
+        {
+          "relatedName": "StatiCoin",
+          "relationship": "AgeUSD repository names inspiration; no code-fork equality asserted.",
+          "evidenceClaimIds": [
+            "R6-C009"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P002-V1",
+          "label": "SigmaUSD first 2021 deployment",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "SigUSD stable claim; SigRSV residual reserve exposure.",
+          "backing": "Pooled ERG.",
+          "redemption": "Oracle-valued ERG; reserve-share exits constrained.",
+          "supplyPolicy": "Deposit/redeem ERG against mint/burn actions.",
+          "debtAndIncentives": "Reserve holders absorb ERG exposure and receive fees; no coupon queue established.",
+          "oracle": "ERG/USD oracle pool; front-running reported.",
+          "governanceAndAdmin": "Oracle freeze reported; complete authority map unknown.",
+          "liquidityDependencies": "ERG reserve liquidity and accessible oracle/frontends.",
+          "claimIds": [
+            "R6-C008",
+            "R6-C009",
+            "R6-C011"
+          ]
+        },
+        {
+          "id": "R6-P002-V2",
+          "label": "SigmaUSD relaunch reported in 2021; reference v0.4 kept distinct from deployment",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "SigUSD and SigRSV.",
+          "backing": "Pooled ERG.",
+          "redemption": "Reserve rules and proxy execution affect accessibility.",
+          "supplyPolicy": "Mint/redeem architecture retained in source family.",
+          "debtAndIncentives": "Fees and residual reserve exposure.",
+          "oracle": "Oracle-pool timing remains an exposure.",
+          "governanceAndAdmin": "Reference code has ballot/update path; deployed authority unknown.",
+          "liquidityDependencies": "Proxy transaction path and reserve availability.",
+          "claimIds": [
+            "R6-C010",
+            "R6-C011"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": null,
+          "versionId": "R6-P002-V1",
+          "type": "oracle timing exploitation",
+          "summary": "Reported oracle front-running at reserve holders’ expense.",
+          "beneficiaries": "Oracle-aware trader according to project.",
+          "lossBearers": "SigRSV reserve holders.",
+          "outcome": "Oracle frozen and contract relaunched according to project.",
+          "claimIds": [
+            "R6-C011"
+          ]
+        },
+        {
+          "date": null,
+          "versionId": "R6-P002-V2",
+          "type": "transaction path manipulation / denial of service",
+          "summary": "Reported treasury mimic and proxy spam affected fee routing and redemption.",
+          "beneficiaries": "Attacker extracting fees or controlling timing, per account.",
+          "lossBearers": "Users facing blocked exits and reserve exposure.",
+          "outcome": "Patches reported; complete compensation unknown.",
+          "claimIds": [
+            "R6-C011"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R6-S013",
+        "R6-S014",
+        "R6-S015",
+        "R6-S069",
+        "R6-S016",
+        "R6-S017"
+      ],
+      "claimIds": [
+        "R6-C008",
+        "R6-C009",
+        "R6-C010",
+        "R6-C011",
+        "R6-C012",
+        "R6-C061"
+      ]
+    },
+    {
+      "id": "R6-P003",
+      "name": "Malt",
+      "aliases": [
+        "MALT"
+      ],
+      "chains": [
+        "Polygon"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "June 2021 launch reflection and reimbursement record; later redesign separately documented.",
+        "claimIds": [
+          "R6-C013",
+          "R6-C014"
+        ]
+      },
+      "researchDepth": "deep",
+      "classification": [
+        "AMM-level monetary policy",
+        "auction debt",
+        "partial reserves",
+        "USD peg"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P003-V1",
+          "label": "June 2021 V1 deployment",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "MALT; LP positions and arbitrage-auction commitments appear in reimbursement accounting.",
+          "backing": "DAI liquidity/retained funds; complete opening balance sheet unknown.",
+          "redemption": "No verified unconditional dollar redemption right.",
+          "supplyPolicy": null,
+          "debtAndIncentives": "LP rewards and auction commitments documented.",
+          "oracle": null,
+          "governanceAndAdmin": "Team organized recovery; original privilege map unknown.",
+          "liquidityDependencies": "Quickswap MALT/DAI and third-party Adamant vault integration.",
+          "claimIds": [
+            "R6-C013",
+            "R6-C014"
+          ]
+        },
+        {
+          "id": "R6-P003-V2",
+          "label": "November 2021 V2 contest/testnet specification",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "MALT, bonded LPs, arbitrage claims.",
+          "backing": "Retained assets and Liquidity Extension; implied collateral is not audited NAV.",
+          "redemption": "Auction claims paid from future operation; not demand redemption for every MALT.",
+          "supplyPolicy": "Above-target issuance/sales; reserve-funded buy/burn and auctions below.",
+          "debtAndIncentives": "Reward smoothing and future arbitrage-claim payout.",
+          "oracle": "MaltDataLab moving averages; updater dependence.",
+          "governanceAndAdmin": "Privileged roles; audit finds timelock bypass in reviewed revision.",
+          "liquidityDependencies": "Per-pool AMM reserves, LP participation, auction bidders.",
+          "claimIds": [
+            "R6-C015",
+            "R6-C016",
+            "R6-C017"
+          ]
+        },
+        {
+          "id": "R6-P003-V3",
+          "label": "2022 live V2 follow-up",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "MALT and LP positions.",
+          "backing": "Reward Overflow and implied collateral per debrief.",
+          "redemption": "Administrative pause/recovery; full-cost repayment is team claim.",
+          "supplyPolicy": null,
+          "debtAndIncentives": "Initial APR outlier drained reward runway per team.",
+          "oracle": null,
+          "governanceAndAdmin": "Team able to pause; full privilege map not recovered.",
+          "liquidityDependencies": "Exit flows and new participant demand.",
+          "claimIds": [
+            "R6-C018"
+          ]
+        },
+        {
+          "id": "R6-P003-V4",
+          "label": "2023 relaunch report",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "MALT; report discusses arbitrage tokens.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": "Polygon pools; exact deployment not mapped.",
+          "claimIds": [
+            "R6-C019"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": null,
+          "versionId": "R6-P003-V1",
+          "type": "code defect / liquidity exit failure",
+          "summary": "V1 unbonding bugs and insufficient recovery funds reported by June 22.",
+          "beneficiaries": null,
+          "lossBearers": "Affected LPs, auction participants and eligible vault users under team accounting.",
+          "outcome": "Partial DAI reimbursement plan; later team says compensation occurred.",
+          "claimIds": [
+            "R6-C014"
+          ]
+        },
+        {
+          "date": null,
+          "versionId": "R6-P003-V3",
+          "type": "incentive depletion / run risk / code defect",
+          "summary": "2022 debrief links drained reward runway, exit pressure and rounding bug to shutdown decision.",
+          "beneficiaries": null,
+          "lossBearers": "Remaining users exposed to reserve shortfall; team reports treasury contribution.",
+          "outcome": "Team claims repayment and plans another launch.",
+          "claimIds": [
+            "R6-C018"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R6-S018",
+        "R6-S019",
+        "R6-S020",
+        "R6-S021",
+        "R6-S022",
+        "R6-S023",
+        "R6-S024"
+      ],
+      "claimIds": [
+        "R6-C013",
+        "R6-C014",
+        "R6-C015",
+        "R6-C016",
+        "R6-C017",
+        "R6-C018",
+        "R6-C019"
+      ]
+    },
+    {
+      "id": "R6-P004",
+      "name": "bDollar",
+      "aliases": [
+        "BDO",
+        "sBDO",
+        "bBDO"
+      ],
+      "chains": [
+        "BNB Chain"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Original source located; README has copied Ethereum language; explorer proof failed.",
+        "claimIds": [
+          "R6-C021"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "seigniorage shares candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "Basis Cash",
+          "relationship": "Implementation ancestry claimed by repository",
+          "evidenceClaimIds": [
+            "R6-C021"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S025",
+        "R6-S068"
+      ],
+      "claimIds": [
+        "R6-C021"
+      ]
+    },
+    {
+      "id": "R6-P005",
+      "name": "Basis Dollar",
+      "aliases": [
+        "BSD",
+        "BSDS",
+        "BSDB"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Original fork and 2020 introduction located; deployment timing not independently checked.",
+        "claimIds": [
+          "R6-C022"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "seigniorage shares candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "Basis Cash",
+          "relationship": "Explicit GitHub fork",
+          "evidenceClaimIds": [
+            "R6-C022"
+          ]
+        }
+      ],
+      "deployments": [
+        {
+          "chain": "Ethereum",
+          "address": "0x003e0af2916e598Fa5eA5Cb2Da4EDfdA9aEd9Fde",
+          "verified": null,
+          "sourceIds": [
+            "R6-S026"
+          ]
+        }
+      ],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S026",
+        "R6-S027"
+      ],
+      "claimIds": [
+        "R6-C022"
+      ]
+    },
+    {
+      "id": "R6-P006",
+      "name": "Basis Cash",
+      "aliases": [
+        "BAC",
+        "BAS",
+        "BAB"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Contemporary 2020 directory plus original repository establish historical candidate; detailed launch date unverified.",
+        "claimIds": [
+          "R6-C054"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "seigniorage shares"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S003",
+        "R6-S028"
+      ],
+      "claimIds": [
+        "R6-C054"
+      ]
+    },
+    {
+      "id": "R6-P007",
+      "name": "Basis Gold (BUILD/Ethereum)",
+      "aliases": [
+        "BSG",
+        "BSGS",
+        "BSGB"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Distinct source/address found; historical deployment and non-dollar peg need pinned code.",
+        "claimIds": [
+          "R6-C023"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "synthetic gold candidate",
+        "seigniorage lineage"
+      ],
+      "targetUnit": null,
+      "lineage": [
+        {
+          "relatedName": "Basis",
+          "relationship": "Design ancestry in README",
+          "evidenceClaimIds": [
+            "R6-C023"
+          ]
+        }
+      ],
+      "deployments": [
+        {
+          "chain": "Ethereum",
+          "address": "0xB34Ab2f65c6e4F764fFe740ab83F982021Faed6d",
+          "verified": null,
+          "sourceIds": [
+            "R6-S029",
+            "R6-S030"
+          ]
+        }
+      ],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S029",
+        "R6-S030",
+        "R6-S031"
+      ],
+      "claimIds": [
+        "R6-C023"
+      ]
+    },
+    {
+      "id": "R6-P008",
+      "name": "Basis Gold (HECO lead)",
+      "aliases": [
+        "BAG",
+        "BAGS"
+      ],
+      "chains": [
+        "HECO"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Directory-only lead; must not merge with Ethereum BSG.",
+        "claimIds": [
+          "R6-C023"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "identity collision"
+      ],
+      "targetUnit": null,
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S029",
+        "R6-S030",
+        "R6-S031"
+      ],
+      "claimIds": [
+        "R6-C023"
+      ]
+    },
+    {
+      "id": "R6-P009",
+      "name": "Ditto Money",
+      "aliases": [
+        "DITTO"
+      ],
+      "chains": [
+        "BNB Chain"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Original AMPL-fork code retrieved; chain-specific mechanics but no dated deployment proof.",
+        "claimIds": [
+          "R6-C024"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "rebasing candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "Ampleforth",
+          "relationship": "Explicit code fork",
+          "evidenceClaimIds": [
+            "R6-C024"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S032"
+      ],
+      "claimIds": [
+        "R6-C024"
+      ]
+    },
+    {
+      "id": "R6-P010",
+      "name": "DEBASE",
+      "aliases": [
+        "DEBASE",
+        "DEGOV",
+        "Debaseonomics"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Original repository located; deployment/version reconstruction unfinished.",
+        "claimIds": [
+          "R6-C041"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "monetary experiment candidate"
+      ],
+      "targetUnit": null,
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S033"
+      ],
+      "claimIds": [
+        "R6-C041"
+      ]
+    },
+    {
+      "id": "R6-P011",
+      "name": "Empty Set Dollar",
+      "aliases": [
+        "ESD",
+        "døllar"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "2020 directory and original mainnet address register corroborate identity.",
+        "claimIds": [
+          "R6-C055"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "coupon/seigniorage candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [
+        {
+          "chain": "Ethereum",
+          "address": "0x36F3FD68E7325a35EB768F1AedaAe9EA0689d723",
+          "verified": null,
+          "sourceIds": [
+            "R6-S034"
+          ]
+        }
+      ],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S003",
+        "R6-S034"
+      ],
+      "claimIds": [
+        "R6-C055"
+      ]
+    },
+    {
+      "id": "R6-P012",
+      "name": "Dynamic Set Dollar",
+      "aliases": [
+        "DSD"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "ESD derivation explicit in source; dated deployment and version timeline not verified.",
+        "claimIds": [
+          "R6-C025"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "coupon/seigniorage candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "Empty Set Dollar",
+          "relationship": "Source attribution",
+          "evidenceClaimIds": [
+            "R6-C025"
+          ]
+        }
+      ],
+      "deployments": [
+        {
+          "chain": "Ethereum",
+          "address": "0xbd2f0cd039e0bfcf88901c98c0bfac5ab27566e3",
+          "verified": null,
+          "sourceIds": [
+            "R6-S035"
+          ]
+        }
+      ],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S034",
+        "R6-S035"
+      ],
+      "claimIds": [
+        "R6-C025"
+      ]
+    },
+    {
+      "id": "R6-P013",
+      "name": "Ampleforth",
+      "aliases": [
+        "AMPL",
+        "uFragments"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Historical directory and original code family; current CPI target distinguished from historical snapshot.",
+        "claimIds": [
+          "R6-C026"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "rebasing",
+        "purchasing-power target"
+      ],
+      "targetUnit": "CPI-adjusted USD; historical baseline configuration not pinned",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S003",
+        "R6-S036",
+        "R6-S070"
+      ],
+      "claimIds": [
+        "R6-C026"
+      ]
+    },
+    {
+      "id": "R6-P014",
+      "name": "DIGG",
+      "aliases": [
+        "DIGG"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Badger 2021 roadmap and legacy product identify active BTC-targeted experiment.",
+        "claimIds": [
+          "R6-C027",
+          "R6-C059"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "non-dollar target",
+        "rebasing"
+      ],
+      "targetUnit": "BTC",
+      "lineage": [],
+      "deployments": [
+        {
+          "chain": "Ethereum",
+          "address": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+          "verified": null,
+          "sourceIds": [
+            "R6-S037"
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "id": "R6-P014-V1",
+          "label": "Legacy DIGG BTC-targeting version",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "DIGG elastic supply asset.",
+          "backing": "Not backed by custodial BTC per project.",
+          "redemption": null,
+          "supplyPolicy": "Balance rebases around BTC price.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C027",
+            "R6-C059"
+          ]
+        },
+        {
+          "id": "R6-P014-V2",
+          "label": "BIP-92 proposed restructuring; execution unverified",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": null,
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": "Proposal: stop rebases.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C028"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S037",
+        "R6-S038",
+        "R6-S075"
+      ],
+      "claimIds": [
+        "R6-C027",
+        "R6-C028",
+        "R6-C059"
+      ]
+    },
+    {
+      "id": "R6-P015",
+      "name": "YAM",
+      "aliases": [
+        "YAM",
+        "YAMv2",
+        "YAMv3"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Seed identified; direct official docs inaccessible. Retirement/date check remains provisional.",
+        "claimIds": [
+          "R6-C029"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "rebasing candidate",
+        "later governance token candidate"
+      ],
+      "targetUnit": "USDC target claimed by indexed documentation",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S039"
+      ],
+      "claimIds": [
+        "R6-C029"
+      ]
+    },
+    {
+      "id": "R6-P016",
+      "name": "Base Protocol",
+      "aliases": [
+        "BASE"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "adjacent",
+        "reason": "Contemporary project describes crypto-market-cap target, not USD purchasing-power stability.",
+        "claimIds": [
+          "R6-C030"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "market-cap index",
+        "rebasing"
+      ],
+      "targetUnit": "Total crypto market cap divided by 1 trillion",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S040"
+      ],
+      "claimIds": [
+        "R6-C030"
+      ]
+    },
+    {
+      "id": "R6-P017",
+      "name": "Frax V1",
+      "aliases": [
+        "FRAX",
+        "FXS"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Explicit V1 historical documentation gives December 20, 2020 launch.",
+        "claimIds": [
+          "R6-C031"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "fractional collateral",
+        "endogenous equity"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "frxUSD",
+          "relationship": "Later product/version; not a safe ticker-only alias",
+          "evidenceClaimIds": [
+            "R6-C032"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P017-V1",
+          "label": "Original fractional FRAX V1",
+          "startDate": "2020-12-20",
+          "endDate": null,
+          "tokenRoles": "FRAX stable liability; FXS equity-like token.",
+          "backing": "Variable collateral fraction.",
+          "redemption": "Collateral plus minted FXS.",
+          "supplyPolicy": "Market-price-dependent collateral ratio.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C031"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S041",
+        "R6-S042",
+        "R6-S043"
+      ],
+      "claimIds": [
+        "R6-C031",
+        "R6-C032"
+      ]
+    },
+    {
+      "id": "R6-P018",
+      "name": "TerraUSD",
+      "aliases": [
+        "UST",
+        "USTC",
+        "TerraClassicUSD"
+      ],
+      "chains": [
+        "Terra"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "September 2020 primary announcement; separate 2022 chain and ticker migration.",
+        "claimIds": [
+          "R6-C033"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "endogenous mint/burn"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "Terra Classic",
+          "relationship": "Original chain renamed",
+          "evidenceClaimIds": [
+            "R6-C034"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P018-V1",
+          "label": "UST before 2022 migration",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "UST; LUNA association not deeply reconstructed.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C033"
+          ]
+        },
+        {
+          "id": "R6-P018-V2",
+          "label": "Terra Classic/USTC migration",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "USTC on original chain; distinct new Terra.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": "Guide says original market swaps disabled.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C034"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S044",
+        "R6-S045"
+      ],
+      "claimIds": [
+        "R6-C033",
+        "R6-C034"
+      ]
+    },
+    {
+      "id": "R6-P019",
+      "name": "Venus VAI",
+      "aliases": [
+        "VAI"
+      ],
+      "chains": [
+        "BNB Chain"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "September 2021 team governance post discusses outstanding VAI and off-peg conditions.",
+        "claimIds": [
+          "R6-C035"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "collateralized debt"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P019-V1",
+          "label": "VAI September 2021 state",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": null,
+          "backing": "Overcollateralized according to team.",
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C035"
+          ]
+        },
+        {
+          "id": "R6-P019-V2",
+          "label": "VAI V4 PSM later version",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": null,
+          "backing": null,
+          "redemption": "VAI/USDT swap constrained by PSM inventory and limits.",
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C036"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S046",
+        "R6-S047"
+      ],
+      "claimIds": [
+        "R6-C035",
+        "R6-C036"
+      ]
+    },
+    {
+      "id": "R6-P020",
+      "name": "Beanstalk",
+      "aliases": [
+        "BEAN",
+        "Bean"
+      ],
+      "chains": [
+        "Ethereum",
+        "Arbitrum (later replacement)"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Project anniversary dates first deployment August 6, 2021.",
+        "claimIds": [
+          "R6-C037"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "credit based"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P020-V1",
+          "label": "Original Ethereum Beanstalk",
+          "startDate": "2021-08-06",
+          "endDate": "2022-04-17",
+          "tokenRoles": "Bean stablecoin; original governance not reconstructed.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C037"
+          ]
+        },
+        {
+          "id": "R6-P020-V2",
+          "label": "2022 Ethereum replant",
+          "startDate": "2022-08-06",
+          "endDate": null,
+          "tokenRoles": null,
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": "Post-attack community multisig per retrospective documentation.",
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C037",
+            "R6-C038"
+          ]
+        },
+        {
+          "id": "R6-P020-V3",
+          "label": "Later Arbitrum token replacement",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "New Bean token, not the original Ethereum token.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C038"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": "2022-04-17",
+          "versionId": "R6-P020-V1",
+          "type": "governance exploit",
+          "summary": "Flash-loan governance capture described by project.",
+          "beneficiaries": "Attacker.",
+          "lossBearers": "Depositors and holders affected by stolen assets and lost liquidity.",
+          "outcome": "Pause, later replant, governance and token changes.",
+          "claimIds": [
+            "R6-C037",
+            "R6-C038"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R6-S048",
+        "R6-S049"
+      ],
+      "claimIds": [
+        "R6-C037",
+        "R6-C038"
+      ]
+    },
+    {
+      "id": "R6-P021",
+      "name": "Iron Finance",
+      "aliases": [
+        "IRON",
+        "TITAN",
+        "STEEL (separate BNB lead)"
+      ],
+      "chains": [
+        "Polygon",
+        "BNB Chain (unverified separate deployment lead)"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Primary auditor June 2021 postmortem verifies historical Polygon family; BNB mechanics not merged.",
+        "claimIds": [
+          "R6-C039"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "fractional collateral candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [
+        {
+          "date": null,
+          "versionId": null,
+          "type": "economic collapse",
+          "summary": "TITAN collapse in June 2021 per auditor; exact event-date convention not reconciled.",
+          "beneficiaries": null,
+          "lossBearers": "TITAN holders and affected IRON/LP positions; amounts not established.",
+          "outcome": "No universal recovery outcome verified.",
+          "claimIds": [
+            "R6-C039"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R6-S050"
+      ],
+      "claimIds": [
+        "R6-C039"
+      ]
+    },
+    {
+      "id": "R6-P022",
+      "name": "Fei Protocol",
+      "aliases": [
+        "FEI",
+        "TRIBE"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Repository retrieved; original Genesis, direct-incentive mechanics and wind-down evidence not pinned.",
+        "claimIds": [
+          "R6-C040"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "protocol-controlled value candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S051"
+      ],
+      "claimIds": [
+        "R6-C040"
+      ]
+    },
+    {
+      "id": "R6-P023",
+      "name": "Mith Cash",
+      "aliases": [
+        "MIC",
+        "MIS"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Audit index located; full PDF and original fork/deployment history not verified.",
+        "claimIds": [
+          "R6-C042"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "Basis-family candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S052"
+      ],
+      "claimIds": [
+        "R6-C042"
+      ]
+    },
+    {
+      "id": "R6-P024",
+      "name": "Float Protocol",
+      "aliases": [
+        "FLOAT",
+        "BANK"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "2021 auction audit and corrected planned Genesis retrieved; actual launch receipt missing.",
+        "claimIds": [
+          "R6-C043",
+          "R6-C044"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "floating target",
+        "auction supply"
+      ],
+      "targetUnit": "Floating protocol target",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P024-V1",
+          "label": "2021 FLOAT audit-described design",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "FLOAT and BANK.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": "Auctions; floating target.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C044"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S053",
+        "R6-S054"
+      ],
+      "claimIds": [
+        "R6-C043",
+        "R6-C044"
+      ]
+    },
+    {
+      "id": "R6-P025",
+      "name": "Gyroscope",
+      "aliases": [
+        "GYD",
+        "Gyro"
+      ],
+      "chains": [
+        "Ethereum testnet"
+      ],
+      "eligibility": {
+        "status": "adjacent",
+        "reason": "2021 testnet and 2022 mainnet-forthcoming language; excluded from 2020–2021 live-mainnet outcome population.",
+        "claimIds": [
+          "R6-C045"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "testnet",
+        "unlaunched mainnet in scope"
+      ],
+      "targetUnit": "USD target",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S055"
+      ],
+      "claimIds": [
+        "R6-C045"
+      ]
+    },
+    {
+      "id": "R6-P026",
+      "name": "Djed (Cardano proposal)",
+      "aliases": [
+        "DJED"
+      ],
+      "chains": [
+        "Cardano"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "2021 proposal/testnet lead; primary IOG article inaccessible, no in-window mainnet evidence.",
+        "claimIds": [
+          "R6-C046"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "proposal candidate"
+      ],
+      "targetUnit": null,
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S056"
+      ],
+      "claimIds": [
+        "R6-C046"
+      ]
+    },
+    {
+      "id": "R6-P027",
+      "name": "Defrost Finance",
+      "aliases": [
+        "H2O",
+        "H20 (release typography)",
+        "MELT"
+      ],
+      "chains": [
+        "Avalanche"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Issuer November 23, 2021 launch release.",
+        "claimIds": [
+          "R6-C047"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "LP-collateralized debt"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P027-V1",
+          "label": "2021 Defrost launch description",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "H2O/H20 stablecoin; MELT incentive/governance token.",
+          "backing": "LP collateral per issuer.",
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C047"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S057"
+      ],
+      "claimIds": [
+        "R6-C047"
+      ]
+    },
+    {
+      "id": "R6-P028",
+      "name": "QiDAO MAI",
+      "aliases": [
+        "MAI",
+        "miMATIC",
+        "miMatic"
+      ],
+      "chains": [
+        "Polygon"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "July 2021 builder interview confirms MATIC-backed vaults and USDC swap route.",
+        "claimIds": [
+          "R6-C048"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "collateralized debt"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P028-V1",
+          "label": "MAI July 2021 interview",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": null,
+          "backing": "MATIC vault collateral; USDC swap route.",
+          "redemption": null,
+          "supplyPolicy": "Vault borrowing and USDC swaps mint MAI.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C048"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S058"
+      ],
+      "claimIds": [
+        "R6-C048"
+      ]
+    },
+    {
+      "id": "R6-P029",
+      "name": "Parrot PAI",
+      "aliases": [
+        "PAI",
+        "PRT"
+      ],
+      "chains": [
+        "Solana"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "2021 incentive-program lead; direct article failed.",
+        "claimIds": [
+          "R6-C049"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "collateralized candidate"
+      ],
+      "targetUnit": "USD candidate",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S059"
+      ],
+      "claimIds": [
+        "R6-C049"
+      ]
+    },
+    {
+      "id": "R6-P030",
+      "name": "Kava USDX",
+      "aliases": [
+        "USDX"
+      ],
+      "chains": [
+        "Kava"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Retrieved project discussion describes USDX minting incentives from October 2020.",
+        "claimIds": [
+          "R6-C050"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "collateralized debt candidate"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P030-V1",
+          "label": "USDX 2020–2021 incentive era",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": null,
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": "KAVA rewards for USDX minting.",
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C050"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S060"
+      ],
+      "claimIds": [
+        "R6-C050"
+      ]
+    },
+    {
+      "id": "R6-P031",
+      "name": "Neutrino USD",
+      "aliases": [
+        "USDN",
+        "XTN (later transformation)"
+      ],
+      "chains": [
+        "Waves"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Later project litepaper recovered through mirror; original in-window deployment not proved here.",
+        "claimIds": [
+          "R6-C051"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "WAVES reserve candidate",
+        "later floating index"
+      ],
+      "targetUnit": "USD historically; XTN floating later",
+      "lineage": [
+        {
+          "relatedName": "XTN",
+          "relationship": "Proposed rename and monetary-target change",
+          "evidenceClaimIds": [
+            "R6-C051"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P031-V1",
+          "label": "USDN historical WAVES reserve lead",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": null,
+          "backing": "WAVES according to later litepaper.",
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C051"
+          ]
+        },
+        {
+          "id": "R6-P031-V2",
+          "label": "XTN transformation proposal",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "XTN successor name to USDN.",
+          "backing": "Multiple Waves ecosystem tokens proposed.",
+          "redemption": "Basket-based rather than a hard USD peg.",
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C051"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S061"
+      ],
+      "claimIds": [
+        "R6-C051"
+      ]
+    },
+    {
+      "id": "R6-P032",
+      "name": "Olympus",
+      "aliases": [
+        "OHM",
+        "sOHM",
+        "gOHM"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "adjacent",
+        "reason": "Legacy treasury/bonding experiment; distinguish reserve backing from fixed USD redemption.",
+        "claimIds": [
+          "R6-C052"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "reserve currency",
+        "floating target"
+      ],
+      "targetUnit": "Floating monetary asset",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R6-P032-V1",
+          "label": "Olympus Legacy V1 equations",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "OHM monetary token; sOHM staking receipt.",
+          "backing": "Treasury assets.",
+          "redemption": "Staking exchange is not a dollar redemption right.",
+          "supplyPolicy": "Treasury minting and sOHM rebases.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R6-C052"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S063",
+        "R6-S072"
+      ],
+      "claimIds": [
+        "R6-C052"
+      ]
+    },
+    {
+      "id": "R6-P033",
+      "name": "Tomb Finance",
+      "aliases": [
+        "TOMB",
+        "TSHARE",
+        "TBOND"
+      ],
+      "chains": [
+        "Fantom"
+      ],
+      "eligibility": {
+        "status": "adjacent",
+        "reason": "Official organization describes FTM target, not USD. Original deployment unverified.",
+        "claimIds": [
+          "R6-C053"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "non-dollar target",
+        "seigniorage lineage"
+      ],
+      "targetUnit": "FTM",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S064"
+      ],
+      "claimIds": [
+        "R6-C053"
+      ]
+    },
+    {
+      "id": "R6-P034",
+      "name": "AgeUSD framework",
+      "aliases": [
+        "AgeUSD"
+      ],
+      "chains": [
+        "Ergo"
+      ],
+      "eligibility": {
+        "status": "ancestry",
+        "reason": "Framework implemented as SigmaUSD; not an additional live ticker to count.",
+        "claimIds": [
+          "R6-C056"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "reserve framework"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "SigmaUSD",
+          "relationship": "Deployed instance",
+          "evidenceClaimIds": [
+            "R6-C056"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S013",
+        "R6-S015"
+      ],
+      "claimIds": [
+        "R6-C056"
+      ]
+    },
+    {
+      "id": "R6-P035",
+      "name": "Original Basis proposal",
+      "aliases": [
+        "Basecoin",
+        "Basis"
+      ],
+      "chains": [],
+      "eligibility": {
+        "status": "ancestry",
+        "reason": "Basis-family repositories name design ancestry; do not count as a 2020 deployment. Original shutdown records not retrieved.",
+        "claimIds": [
+          "R6-C057"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "unlaunched proposal ancestry"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "Basis Cash",
+          "relationship": "Later implementation of design",
+          "evidenceClaimIds": [
+            "R6-C057"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S026",
+        "R6-S028"
+      ],
+      "claimIds": [
+        "R6-C057"
+      ]
+    },
+    {
+      "id": "R6-P036",
+      "name": "RAI / Reflexer",
+      "aliases": [
+        "RAI"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "unresolved",
+        "reason": "Original launch/control configuration not pinned; current official explanation and dated resource-index leads found.",
+        "claimIds": [
+          "R6-C060"
+        ]
+      },
+      "researchDepth": "unresolved",
+      "classification": [
+        "floating target",
+        "collateralized debt"
+      ],
+      "targetUnit": "Floating redemption target",
+      "lineage": [],
+      "deployments": [],
+      "versions": [],
+      "incidents": [],
+      "sourceIds": [
+        "R6-S071",
+        "R6-S076"
+      ],
+      "claimIds": [
+        "R6-C060"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "R6-S001",
+      "url": "https://defiprime.com/stablecoins",
+      "title": "DeFiPrime stablecoin directory, current edition",
+      "sourceType": "directory",
+      "isPrimary": false,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current 2026 page, not a historical snapshot."
+    },
+    {
+      "id": "R6-S002",
+      "url": "https://web.archive.org/web/20210101000000/https://defiprime.com/stablecoins",
+      "title": "Attempted January 2021 directory replay",
+      "sourceType": "directory",
+      "isPrimary": false,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "Web retrieval returned Internal Error; no snapshot or absence claim established."
+    },
+    {
+      "id": "R6-S003",
+      "url": "https://s2.tokeninsight.com/static/levelPdf/Yearly_Report_2020_EN-min_2.pdf",
+      "title": "CoinGecko 2020 Yearly Cryptocurrency Report, mirrored by TokenInsight",
+      "sourceType": "directory",
+      "isPrimary": false,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "2020 yearly report; PDF pp. 28–30",
+      "accessStatus": "retrieved",
+      "limitations": "Title checked inside PDF; hosting domain is not author. Historical taxonomy used as discovery, not technical authority."
+    },
+    {
+      "id": "R6-S004",
+      "url": "https://www.tbstat.com/wp/uploads/2021/03/20210310_Stablecoin_Report_v1.0.pdf",
+      "title": "The Block: Stablecoins—Bridging the Network Gap Between Traditional Money and Digital Value",
+      "sourceType": "directory",
+      "isPrimary": false,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "20210310 / v1.0",
+      "accessStatus": "retrieved",
+      "limitations": "Historical directory portions inspected, not all 139 pages; no market-size figures reproduced."
+    },
+    {
+      "id": "R6-S005",
+      "url": "https://www.liquity.org/blog/liquity-goes-live-on-ethereum-mainnet",
+      "title": "Liquity Goes Live on Ethereum Mainnet",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-04-05",
+      "eventDate": "2021-04-05",
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved during this research session; no independent reproduction of project measurements."
+    },
+    {
+      "id": "R6-S006",
+      "url": "https://raw.githubusercontent.com/liquity/dev/d3ae2d35c94128eba6750a04983a62b8915846ca/README.md",
+      "title": "Liquity historical README",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": "2021-04-06",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "d3ae2d35c94128eba6750a04983a62b8915846ca",
+      "accessStatus": "retrieved",
+      "limitations": "Historical commit retrieved; not a reproduced bytecode-to-deployment match."
+    },
+    {
+      "id": "R6-S007",
+      "url": "https://raw.githubusercontent.com/liquity/dev/d3ae2d35c94128eba6750a04983a62b8915846ca/packages/contracts/contracts/PriceFeed.sol",
+      "title": "Liquity historical PriceFeed.sol",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": "2021-04-06",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "d3ae2d35c94128eba6750a04983a62b8915846ca",
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved during this research session; no independent reproduction of project measurements."
+    },
+    {
+      "id": "R6-S008",
+      "url": "https://www.liquity.org/blog/how-liquity-handled-its-first-big-stress-test",
+      "title": "How Liquity Handled its First Big Stress Test",
+      "sourceType": "postmortem",
+      "isPrimary": true,
+      "publishedAt": "2021-05-19",
+      "eventDate": "2021-05-19",
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project account; liquidation totals and success judgments not independently replayed."
+    },
+    {
+      "id": "R6-S009",
+      "url": "https://www.liquity.org/blog/addressing-concerns-about-liquity",
+      "title": "Addressing Concerns about Liquity",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project critique of aggregator price sampling; pool-level data not recomputed."
+    },
+    {
+      "id": "R6-S010",
+      "url": "https://www.liquity.org/blog/liquity-v2-redeployment",
+      "title": "V2 Redeployment Updates",
+      "sourceType": "postmortem",
+      "isPrimary": true,
+      "publishedAt": "2025-02-17",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Rolling page includes February 12 onward and May 19 entries; page date is not each event date."
+    },
+    {
+      "id": "R6-S011",
+      "url": "https://www.liquity.org/blog/liquity-v2-is-live",
+      "title": "Liquity V2 is LIVE",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2025-05-19",
+      "eventDate": "2025-05-19",
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved during this research session; no independent reproduction of project measurements."
+    },
+    {
+      "id": "R6-S012",
+      "url": "https://docs.liquity.org/v2-faq",
+      "title": "Liquity V2 FAQ",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current documentation. Used only for explicit distinction from V1."
+    },
+    {
+      "id": "R6-S013",
+      "url": "https://ergoplatform.org/en/blog/2021_02_26-sigmausd-released/",
+      "title": "SigmaUSD—Ergo’s Community Deployed Stablecoin Is Live!",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-02-26",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Announcement establishes live-by date; first deployment transaction not checked."
+    },
+    {
+      "id": "R6-S014",
+      "url": "https://ergoplatform.org/en/blog/2021-02-05-building-ergo-how-the-ageusd-stablecoin-works/",
+      "title": "Building Ergo: How the AgeUSD stablecoin works",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-02-05",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Prelaunch design description; provisional fees must not be substituted for deployed parameters."
+    },
+    {
+      "id": "R6-S015",
+      "url": "https://github.com/Emurgo/age-usd",
+      "title": "AgeUSD original repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "main as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Framework README contains default fees; not deployment-specific."
+    },
+    {
+      "id": "R6-S016",
+      "url": "https://ergoplatform.org/en/blog/2021-05-13-bearwhale-saga/",
+      "title": "Bearwhale Saga",
+      "sourceType": "postmortem",
+      "isPrimary": true,
+      "publishedAt": "2021-05-13",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Ecosystem-authored account, not transaction replay; event dates inside episode are incompletely specified."
+    },
+    {
+      "id": "R6-S017",
+      "url": "https://docs.ergoplatform.com/uses/stablecoins/",
+      "title": "ErgoDocs: Stablecoins",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current listing shows continuing documentation, not proof of uninterrupted solvency or liveness."
+    },
+    {
+      "id": "R6-S018",
+      "url": "https://medium.com/malt-protocol/malt-24-hours-post-launch-reflection-and-plan-of-action-43fd7b7c63f9",
+      "title": "Malt 24 Hours Post Launch",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-06-10",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Contemporary optimistic account preceding reimbursement; exact deployment not checked."
+    },
+    {
+      "id": "R6-S019",
+      "url": "https://medium.com/malt-protocol/malt-reimbursement-plan-5eb1917547d0",
+      "title": "Malt Reimbursement Plan",
+      "sourceType": "postmortem",
+      "isPrimary": true,
+      "publishedAt": "2021-06-22",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Team cost-basis accounting and repayment plan, not verified transfers."
+    },
+    {
+      "id": "R6-S020",
+      "url": "https://github.com/code-423n4/2021-11-malt",
+      "title": "Malt Finance November 2021 contest repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "2021-11 contest; README retrieved from main",
+      "accessStatus": "retrieved",
+      "limitations": "Redesign/testnet specification; cannot establish June V1 mechanics or final V2 deployment equivalence."
+    },
+    {
+      "id": "R6-S021",
+      "url": "https://code4rena.com/reports/2021-11-malt",
+      "title": "Malt Finance Findings & Analysis Report",
+      "sourceType": "audit",
+      "isPrimary": true,
+      "publishedAt": "2022-02-14",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "c3a204a2c0f7c653c6c2dda9f4563fd1dc1cecf3",
+      "accessStatus": "retrieved",
+      "limitations": "Review ran 2021-11-25 to 2021-12-01; findings are not evidence of live exploitation or unpatched deployed code."
+    },
+    {
+      "id": "R6-S022",
+      "url": "https://medium.com/malt-protocol/malt-v2-whitelist-allocations-1c9161995951",
+      "title": "Malt V2 Whitelist Allocations",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2022-02-06",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Retrospective compensation claims and future allocation promises; not payment receipts."
+    },
+    {
+      "id": "R6-S023",
+      "url": "https://medium.com/malt-protocol/malt-v2-debrief-future-plan-fca53ede9e02",
+      "title": "Malt V2 Debrief + Future Plan",
+      "sourceType": "postmortem",
+      "isPrimary": true,
+      "publishedAt": "2022-05-25",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Team causal account; exact pause date and repayment transactions not verified."
+    },
+    {
+      "id": "R6-S024",
+      "url": "https://medium.com/malt-protocol/malt-weekly-update-2-3de7e190ab65",
+      "title": "Malt Update 2",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2023-07-12",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project report of later Polygon operation; no 2026 operating status inferred."
+    },
+    {
+      "id": "R6-S025",
+      "url": "https://github.com/bearn-defi/bdollar-smartcontracts",
+      "title": "bDollar original contracts",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "master as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "README retains Ethereum/Basis wording and parent-audit references; chain/date verification incomplete."
+    },
+    {
+      "id": "R6-S026",
+      "url": "https://github.com/basisdollar/basisdollar-protocol",
+      "title": "Basis Dollar original repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "master as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved during this research session; no independent reproduction of project measurements."
+    },
+    {
+      "id": "R6-S027",
+      "url": "https://basisdollar-fi.medium.com/introducing-the-basis-dollar-protocol-ab5726df2875",
+      "title": "Introducing the Basis Dollar Protocol",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2020-12-15",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Proposal/intro states parameter changes; no deployment equality checked."
+    },
+    {
+      "id": "R6-S028",
+      "url": "https://github.com/Basis-Cash/basiscash-protocol",
+      "title": "Basis Cash original repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "master as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved during this research session; no independent reproduction of project measurements."
+    },
+    {
+      "id": "R6-S029",
+      "url": "https://github.com/build-finance/basis-gold-protocol",
+      "title": "BUILD Basis Gold original repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "master as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Contract roles and Ethereum addresses visible; historical peg and launch not reconstructed."
+    },
+    {
+      "id": "R6-S030",
+      "url": "https://etherscan.io/token/0xb34ab2f65c6e4f764ffe740ab83f982021faed6d",
+      "title": "BSG explorer result",
+      "sourceType": "transaction",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "partial",
+      "limitations": "Search extraction showed exact-match verification label, but direct open failed. Not accepted as fully retrieved contract verification."
+    },
+    {
+      "id": "R6-S031",
+      "url": "https://coinpaprika.com/waluta/bags-basis-gold-share/",
+      "title": "Basis Gold Share HECO directory lead",
+      "sourceType": "directory",
+      "isPrimary": false,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "partial",
+      "limitations": "Search result only; HECO identity and deployment remain unresolved."
+    },
+    {
+      "id": "R6-S032",
+      "url": "https://github.com/ditto-money/ditto-contracts",
+      "title": "Ditto Money contracts",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "main as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Original source and chain-specific oracle discussion retrieved; launch transaction not checked."
+    },
+    {
+      "id": "R6-S033",
+      "url": "https://github.com/debaseonomics/protocol",
+      "title": "DEBASE/DEGOV protocol repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "main as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Identity/repository located; parameter and deployment history not reconstructed."
+    },
+    {
+      "id": "R6-S034",
+      "url": "https://github.com/emptysetsquad/dollar",
+      "title": "Empty Set Dollar original repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "master as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved during this research session; no independent reproduction of project measurements."
+    },
+    {
+      "id": "R6-S035",
+      "url": "https://github.com/dynamicsetdollar/dsd-protocol",
+      "title": "Dynamic Set Dollar repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "main as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "README explicitly attributes Empty Set Squad and inherited audit; epoch claims not verified."
+    },
+    {
+      "id": "R6-S036",
+      "url": "https://www.ampleforth.org/",
+      "title": "Ampleforth current official site",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current CPI target and claims are not a frozen 2020 specification."
+    },
+    {
+      "id": "R6-S037",
+      "url": "https://oldlandingpage.badger.com/products/digg",
+      "title": "Badger legacy DIGG product page",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Legacy page, undated; not proof of present rebase behavior."
+    },
+    {
+      "id": "R6-S038",
+      "url": "https://forum.badger.finance/t/bip-92-digg-restructuring-v3-revised/5653",
+      "title": "BIP 92: DIGG restructuring",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2022-04-27",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Proposal to stop rebasing; execution transaction not checked."
+    },
+    {
+      "id": "R6-S039",
+      "url": "https://docs.yam.finance/yam",
+      "title": "YAM Introduction",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "partial",
+      "limitations": "Search extraction provides retirement statement; repeated direct open failed and shell DNS lookup failed. Do not treat as independently retrieved historical evidence."
+    },
+    {
+      "id": "R6-S040",
+      "url": "https://medium.com/@BaseProtocol/base-protocol-integrates-chainlink-live-on-mainnet-for-crypto-market-cap-data-199b67794c4b",
+      "title": "BASE Chainlink mainnet integration",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2020-11-17",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Contains live-mainnet wording and a future November 30 Uniswap launch; different event types."
+    },
+    {
+      "id": "R6-S041",
+      "url": "https://docs.frax.finance/frax-v1-original/original-design",
+      "title": "Frax V1 Original Design",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Retrospective explicitly labeled V1 history; original contract not replayed."
+    },
+    {
+      "id": "R6-S042",
+      "url": "https://docs.frax.com/protocol/assets/frxusd/frxusd",
+      "title": "Frax USD stablecoin, current specification",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current frxUSD, not historical FRAX V1."
+    },
+    {
+      "id": "R6-S043",
+      "url": "https://gov.frax.finance/t/fip-428-frax-north-star-proposal-v2/3652",
+      "title": "FIP-428 Frax North Star Proposal V2",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Proposal contents establish naming hazard, not execution of every item."
+    },
+    {
+      "id": "R6-S044",
+      "url": "https://medium.com/terra-money/announcing-terrausd-ust-the-interchain-stablecoin-53eab0f8f0ac",
+      "title": "Announcing TerraUSD",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2020-09-21",
+      "eventDate": "2020-09-12",
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Caption gives September 12 Bittrex launch; publication differs. Not genesis transaction proof."
+    },
+    {
+      "id": "R6-S045",
+      "url": "https://docs.terra.money/migration/exchange-migration/",
+      "title": "Terra exchange migration guide",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "2022 migration instructions distinguish original chain and new chain; schedule not an independently checked actual launch."
+    },
+    {
+      "id": "R6-S046",
+      "url": "https://community.venus.io/t/the-solution-to-re-peg-vai-is-coming/1760",
+      "title": "The solution to re-peg VAI is coming",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2021-09-08",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Team diagnosis and planned VIP, not proof of subsequent execution."
+    },
+    {
+      "id": "R6-S047",
+      "url": "https://docs-v4.venus.io/whats-new/psm",
+      "title": "Venus V4 Peg Stability Module",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Later version, not a 2021 redemption promise."
+    },
+    {
+      "id": "R6-S048",
+      "url": "https://bean.money/blog/beanstalk-one-year-anniversary",
+      "title": "Beanstalk One Year Anniversary",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2022-08-06",
+      "eventDate": "2022-08-06",
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project retrospective states 2021 launch and 2022 restart; no transaction replay."
+    },
+    {
+      "id": "R6-S049",
+      "url": "https://docs.bean.money/almanac/disclosures",
+      "title": "Beanstalk Disclosures",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current document includes later Ethereum token replacement and Arbitrum migration; not original 2021 mechanics."
+    },
+    {
+      "id": "R6-S050",
+      "url": "https://medium.com/@omniscia.io/iron-finance-titan-post-mortem-analysis-f1d3fd1abbc9",
+      "title": "IRON/TITAN postmortem by Omniscia",
+      "sourceType": "postmortem",
+      "isPrimary": true,
+      "publishedAt": "2021-06-22",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Auditor account of Polygon TITAN collapse; cannot be generalized to BNB STEEL deployment."
+    },
+    {
+      "id": "R6-S051",
+      "url": "https://github.com/fei-protocol/fei-protocol-core",
+      "title": "FEI Protocol core repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "develop as retrieved",
+      "accessStatus": "retrieved",
+      "limitations": "Current branch includes later proposals; original Genesis date/version and shutdown not verified here."
+    },
+    {
+      "id": "R6-S052",
+      "url": "https://ctdsec.com/audits/mith-cash/",
+      "title": "CTDSEC Mith Cash audit index",
+      "sourceType": "audit",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Index retrieved; linked PDF retrieval failed in web tool, so no inherited/audited-code safety claim."
+    },
+    {
+      "id": "R6-S053",
+      "url": "https://medium.com/float-protocol/float-genesis-thurs-6th-may-a21e6cb3b895",
+      "title": "FLOAT Genesis—Thurs 6th May",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-04-29",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Page contains correction moving start to May 9; exact operational milestones need receipt checks."
+    },
+    {
+      "id": "R6-S054",
+      "url": "https://security.extropy.io/static/media/FloatProtocolReport.6ba3e81f539310b5194e.pdf",
+      "title": "Extropy FLOAT security review",
+      "sourceType": "audit",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "Version 1.0; 521f9c79f32b4ad66bf6192d72a5229d75c6ccba to bfcb47b228ff8ef65d942bba26fb8b346912395b",
+      "accessStatus": "retrieved",
+      "limitations": "Cover says August 2, 2025; body says review April 21–May 4, 2021. Contains placeholder XX vulnerability wording. Original dated copy needed."
+    },
+    {
+      "id": "R6-S055",
+      "url": "https://www.gyro.finance/blog/testnet-game-statistics-and-general-review/",
+      "title": "Gyroscope testnet game review",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2022-03-12",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Reports March 2021 testnet; describes mainnet as forthcoming in 2022."
+    },
+    {
+      "id": "R6-S056",
+      "url": "https://iohk.io/en/blog/posts/2021/08/18/djed-implementing-algorithmic-stablecoins-for-proven-price-stability/",
+      "title": "IOG Djed 2021 implementation article",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "403. Search leads only; cannot establish Cardano deployment in window."
+    },
+    {
+      "id": "R6-S057",
+      "url": "https://www.globenewswire.com/news-release/2021/11/23/2339852/0/en/Defrost-Finance-Launches-as-First-Stablecoin-Native-to-the-Avalanche-Chain.html",
+      "title": "Defrost Finance launch release",
+      "sourceType": "other",
+      "isPrimary": true,
+      "publishedAt": "2021-11-23",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Issuer-authored press release; H20 typography retained; first-on-chain superlative not accepted."
+    },
+    {
+      "id": "R6-S058",
+      "url": "https://polygon.technology/blog/polygon-builder-series-vol-6-ben-and-kila-qidao",
+      "title": "Polygon interview with QiDAO builders",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-07-15",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Primary interview; exact deployment and later collateral versions not checked."
+    },
+    {
+      "id": "R6-S059",
+      "url": "https://gopartyparrot.medium.com/parrot-fledgling-incentive-program-80-000-000-prt-for-psol-and-pai-6588775ec9e2",
+      "title": "Parrot incentive program lead",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "partial",
+      "limitations": "Search excerpt only; direct open failed; no metrics adopted."
+    },
+    {
+      "id": "R6-S060",
+      "url": "https://medium.com/kava-labs/improved-usdx-price-stability-2142821fa82",
+      "title": "Improved USDX Price Stability",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project discussion retrieved; exact first-mint date left unknown."
+    },
+    {
+      "id": "R6-S061",
+      "url": "https://resources.cryptocompare.com/asset-management/1256/1698049445806.pdf",
+      "title": "Neutrino 2.0 XTN Litepaper",
+      "sourceType": "paper",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "6-page mirrored XTN litepaper",
+      "accessStatus": "retrieved",
+      "limitations": "Project-authored document via third-party mirror; original publication date and on-chain rename transaction unverified."
+    },
+    {
+      "id": "R6-S062",
+      "url": "https://docs.neutrino.at/neutrino-protocol/xtn",
+      "title": "Neutrino direct documentation attempt",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "Direct open returned Internal Error."
+    },
+    {
+      "id": "R6-S063",
+      "url": "https://docs.olympusdao.finance/main/contracts-old/equations",
+      "title": "Olympus Legacy V1 equations",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "Legacy V1",
+      "accessStatus": "retrieved",
+      "limitations": "Legacy mechanics explicitly separated from current RBS and Cooler Loans."
+    },
+    {
+      "id": "R6-S064",
+      "url": "https://github.com/tombfinance",
+      "title": "Tomb official GitHub organization",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Organization describes FTM target, with 2021 repository activity; actual original deployment not verified."
+    },
+    {
+      "id": "R6-S065",
+      "url": "https://etherscan.io/address/0x5f98805A4E8be255a32880FDeC7F6728C6568bA0#code",
+      "title": "LUSD explorer verification attempt",
+      "sourceType": "transaction",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "Internal Error; verification remains null."
+    },
+    {
+      "id": "R6-S066",
+      "url": "https://polygonscan.com/address/0xe444a7d44065b06ac551623d56ba610a44a20013",
+      "title": "Malt reimbursement funds explorer link",
+      "sourceType": "transaction",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "403; no balance/reimbursement verification."
+    },
+    {
+      "id": "R6-S067",
+      "url": "https://github.com/liquity/dev/commits/main/?until=2021-04-06",
+      "title": "Liquity historical commit index",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "d3ae2d35c94128eba6750a04983a62b8915846ca",
+      "accessStatus": "retrieved",
+      "limitations": "Web tool failed; direct Python HTTPS retrieved HTML and commit metadata successfully."
+    },
+    {
+      "id": "R6-S068",
+      "url": "https://bscscan.com/token/0x190b589cf9Fb8DDEabBFeae36a813FFb2A702454",
+      "title": "bDollar explorer attempt",
+      "sourceType": "transaction",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "Web retrieval failed; BNB deployment verification unresolved."
+    },
+    {
+      "id": "R6-S069",
+      "url": "https://raw.githubusercontent.com/Emurgo/age-usd/e810b195c8a3356c5e04b05c4a107fd03d3383eb/ageusd-smart-contracts/v0.4/AgeUSD.scala",
+      "title": "AgeUSD v0.4 reference contract",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": "e810b195c8a3356c5e04b05c4a107fd03d3383eb",
+      "accessStatus": "retrieved",
+      "limitations": "Main-file body retrieved via HTTPS; directory HTML pinned its revision. Template has empty updateNFT/ballotTokenId; not a deployed SigmaUSD contract match."
+    },
+    {
+      "id": "R6-S070",
+      "url": "https://github.com/fragmentsorg/ampleforth-contracts",
+      "title": "Ampleforth original code lineage",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Former ampleforth/uFragments URL redirects here; historical CPI configuration not checked."
+    },
+    {
+      "id": "R6-S071",
+      "url": "https://reflexer.finance/why-rai/",
+      "title": "Reflexer Why RAI",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current page retrieved; not evidence for exact 2021 launch."
+    },
+    {
+      "id": "R6-S072",
+      "url": "https://docs.olympusdao.finance/main/overview/tokens",
+      "title": "Olympus current token description",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current floating target and modern RBS; not 2021 implementation."
+    },
+    {
+      "id": "R6-S073",
+      "url": "https://www.liquity.org/blog/liquity-v2-safety-mode",
+      "title": "Liquity V2 Safety Mode",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2025-11-05",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Later explanatory document, not evidence that Safety Mode was triggered."
+    },
+    {
+      "id": "R6-S074",
+      "url": "https://medium.com/malt-protocol/archive/2022/05",
+      "title": "Malt May 2022 archive attempt",
+      "sourceType": "directory",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "Archive route failed; direct V2 debrief later retrieved through related article link."
+    },
+    {
+      "id": "R6-S075",
+      "url": "https://oldlandingpage.badger.com/news/roadmap",
+      "title": "BadgerDAO Retrospective & 2021 Roadmap",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-09-15",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Contemporary product inventory establishes active-by evidence, not exact launch or independent user metrics."
+    },
+    {
+      "id": "R6-S076",
+      "url": "https://docs.reflexer.finance/community-resources",
+      "title": "Reflexer community resources",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Primary curated index includes February 2021 launch references; underlying launch article not retrieved."
+    }
+  ],
+  "claims": [
+    {
+      "id": "R6-C001",
+      "protocolId": null,
+      "versionId": null,
+      "statement": "The live DeFiPrime directory is a current list, while the attempted 2021 archive was inaccessible.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S001",
+        "R6-S002"
+      ],
+      "evidenceLocator": "Current title/list; attempted replay result",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R6-C002",
+      "protocolId": null,
+      "versionId": null,
+      "statement": "CoinGecko’s 2020 report groups AMPL, ESD, Basis Cash and FRAX in its algorithmic taxonomy and simplifies targets as one dollar.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S003"
+      ],
+      "evidenceLocator": "PDF pp. 28–30",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Directory description is a discovery lead, not a faithful specification of every target."
+    },
+    {
+      "id": "R6-C003",
+      "protocolId": "R6-P001",
+      "versionId": "R6-P001-V1",
+      "statement": "Liquity announced Ethereum mainnet availability on 2021-04-05: LUSD borrowing against ETH with 110% minimum collateralization and no recurring interest.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S005"
+      ],
+      "evidenceLocator": "Launch announcement and How can I use Liquity?",
+      "eventDate": "2021-04-05",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R6-C004",
+      "protocolId": "R6-P001",
+      "versionId": "R6-P001-V1",
+      "statement": "Historical V1 has LUSD debt, LQTY fee rewards, Stability Pool offsets and debt redistribution. Redemption burns LUSD for ETH minus fees, with a 14-day bootstrap restriction and a TCR-below-110% block; the README says no admin key.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S006"
+      ],
+      "evidenceLocator": "README lines 180–190, 250, 327; liquidation sections",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Source-to-deployment bytecode not matched."
+    },
+    {
+      "id": "R6-C005",
+      "protocolId": "R6-P001",
+      "versionId": "R6-P001-V1",
+      "statement": "The April 2021 PriceFeed uses Chainlink with Tellor fallback and last-good-price state.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S007"
+      ],
+      "evidenceLocator": "PriceFeed.sol fetchPrice and status branches",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Do not substitute current Tellor timing details for this historical implementation."
+    },
+    {
+      "id": "R6-C006",
+      "protocolId": "R6-P001",
+      "versionId": "R6-P001-V1",
+      "statement": "Liquity reports that liquidations and brief Recovery Mode episodes handled the May 19, 2021 crash; its later discussion cautions that aggregator and Curve prices differ.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S008",
+        "R6-S009"
+      ],
+      "evidenceLocator": "Stress-test Market Turmoil; Addressing Concerns price comparison",
+      "eventDate": "2021-05-19",
+      "reasoning": null,
+      "uncertainty": "No event replay or uniform peg-error time series."
+    },
+    {
+      "id": "R6-C007",
+      "protocolId": "R6-P001",
+      "versionId": null,
+      "statement": "The 2025 BOLD Stability Pool issue and May 19 redeployment belong to V2, not LUSD V1; current FAQ says V1 remains available.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S010",
+        "R6-S011",
+        "R6-S012"
+      ],
+      "evidenceLocator": "February 12–13 entries; May 19 launch; What happens to V1?",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Full V2 incident audit and later operating state not independently checked."
+    },
+    {
+      "id": "R6-C008",
+      "protocolId": "R6-P002",
+      "versionId": "R6-P002-V1",
+      "statement": "SigmaUSD was announced live on Ergo on February 26, 2021; it is an AgeUSD implementation, not a Cardano deployment.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S013"
+      ],
+      "evidenceLocator": "Title and community naming/implementation description",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Live-by date, not first transaction timestamp."
+    },
+    {
+      "id": "R6-C009",
+      "protocolId": "R6-P002",
+      "versionId": "R6-P002-V1",
+      "statement": "AgeUSD uses ERG reserves, stable claims and residual reserve shares. Stablecoin issuance needs reserve headroom; reserve-share exit is constrained; no borrower CDP liquidations are required.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S014",
+        "R6-S015"
+      ],
+      "evidenceLocator": "How does it work?; README How Does The AgeUSD Protocol Work?",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Framework properties, not an unconditional guarantee of full redemption after arbitrary ERG collapse."
+    },
+    {
+      "id": "R6-C010",
+      "protocolId": "R6-P002",
+      "versionId": "R6-P002-V2",
+      "statement": "AgeUSD v0.4 template specifies 2% fees, 400%/800% reserve bounds and a ballot/update path, but leaves deployment token identifiers blank.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S069"
+      ],
+      "evidenceLocator": "AgeUSD.scala lines 4–7, 17, 24–25, 141–208",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Reference revision not matched to deployed SigmaUSD V2; governance-holder distribution unknown."
+    },
+    {
+      "id": "R6-C011",
+      "protocolId": "R6-P002",
+      "versionId": null,
+      "statement": "The May 2021 Bearwhale account reports V1 oracle-update front-running, an oracle freeze/relaunch, and V2 treasury-mimicking/proxy-spam issues followed by patches.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S016"
+      ],
+      "evidenceLocator": "SigmaUSD V1 and V2 sections",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Exact exploit dates, attributable profit, and transaction-level losses unverified."
+    },
+    {
+      "id": "R6-C012",
+      "protocolId": "R6-P002",
+      "versionId": null,
+      "statement": "Current ErgoDocs still lists SigmaUSD; this alone cannot demonstrate uninterrupted redemption, solvency or absence of later incidents.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R6-S017"
+      ],
+      "evidenceLocator": "SigmaUSD section",
+      "eventDate": null,
+      "reasoning": "A documentation listing is not a reserve or liveness measurement.",
+      "uncertainty": null
+    },
+    {
+      "id": "R6-C013",
+      "protocolId": "R6-P003",
+      "versionId": "R6-P003-V1",
+      "statement": "Malt’s June 10, 2021 post described its first 24 hours after launch.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S018"
+      ],
+      "evidenceLocator": "Title/date and introduction",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "June 9 inferred from wording; exact launch timestamp left null."
+    },
+    {
+      "id": "R6-C014",
+      "protocolId": "R6-P003",
+      "versionId": "R6-P003-V1",
+      "statement": "Malt’s June 22 plan attributes affected positions to V1 unbonding bugs and promises approximately 74% cost-basis repayment in DAI, with V2 whitelist access.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S019"
+      ],
+      "evidenceLocator": "Introduction; The plan; Adamant section",
+      "eventDate": "2021-06-22",
+      "reasoning": null,
+      "uncertainty": "Cost-basis methodology and transfers not reproduced; does not imply all holders recovered 74%."
+    },
+    {
+      "id": "R6-C015",
+      "protocolId": "R6-P003",
+      "versionId": "R6-P003-V2",
+      "statement": "The November redesign sells minted MALT above target, spends retained assets below target, and auctions future arbitrage claims when reserves are insufficient; it operates per AMM pool and uses MaltDataLab moving averages.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S020"
+      ],
+      "evidenceLocator": "High level overview; glossary; Liquidity Extension; Known Issues",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Testnet/contest architecture, not verified V1 or final V2 deployment."
+    },
+    {
+      "id": "R6-C016",
+      "protocolId": "R6-P003",
+      "versionId": "R6-P003-V2",
+      "statement": "Code4rena’s November 2021 review, published February 14, 2022, reports timelock bypass, Recovery Mode exit problems and stale data risks.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S021"
+      ],
+      "evidenceLocator": "H-01, H-02, M-30",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Findings not certified as present in deployed contracts; no live exploit inferred."
+    },
+    {
+      "id": "R6-C017",
+      "protocolId": "R6-P003",
+      "versionId": "R6-P003-V2",
+      "statement": "Malt’s February 2022 allocation post says V1 compensation occurred and still discusses V2 launch prospectively.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S022"
+      ],
+      "evidenceLocator": "Whitelist foundations and allocation discussion",
+      "eventDate": "2022-02-06",
+      "reasoning": null,
+      "uncertainty": "Allocation is not compensation in cash; no transfer reconciliation."
+    },
+    {
+      "id": "R6-C018",
+      "protocolId": "R6-P003",
+      "versionId": "R6-P003-V3",
+      "statement": "Malt’s May 25, 2022 debrief describes depleted reward reserves, exits, an unbonding rounding issue, a pause and repayment supported by team funds.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S023"
+      ],
+      "evidenceLocator": "Break down; Why pause; Why repay",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "The claim that code worked flawlessly conflicts with its own rounding-bug account; exact recovery not independently measured."
+    },
+    {
+      "id": "R6-C019",
+      "protocolId": "R6-P003",
+      "versionId": "R6-P003-V4",
+      "statement": "Malt reported a further period of live Polygon operation on July 12, 2023.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S024"
+      ],
+      "evidenceLocator": "Opening paragraph",
+      "eventDate": "2023-07-12",
+      "reasoning": null,
+      "uncertainty": "No later shutdown or 2026 active status established."
+    },
+    {
+      "id": "R6-C020",
+      "protocolId": null,
+      "versionId": null,
+      "statement": "Stress classification must separate reserve losses, blocked exits, code faults, governance powers and disappearing demand; a stable quoted price does not establish solvent redemption.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R6-S006",
+        "R6-S016",
+        "R6-S019",
+        "R6-S021",
+        "R6-S023"
+      ],
+      "evidenceLocator": "Synthesis of three deep families",
+      "eventDate": null,
+      "reasoning": "Different observed mechanisms affect different claimant classes; no mitigation was tested here.",
+      "uncertainty": null
+    },
+    {
+      "id": "R6-C021",
+      "protocolId": "R6-P004",
+      "versionId": null,
+      "statement": "bDollar README lists BDO/sBDO/bBDO and inherited audit references while retaining an Ethereum description; this is insufficient deployment or audit-equivalence evidence.",
+      "evidenceStatus": "contested",
+      "sourceIds": [
+        "R6-S025",
+        "R6-S068"
+      ],
+      "evidenceLocator": "README opening, Contract Addresses, Audit",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Actual fork diff, deployment and audit scope still needed."
+    },
+    {
+      "id": "R6-C022",
+      "protocolId": "R6-P005",
+      "versionId": null,
+      "statement": "Basis Dollar is explicitly a GitHub fork of Basis Cash; its December 2020 introduction proposes oracle, epoch and debt-allocation changes.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S026",
+        "R6-S027"
+      ],
+      "evidenceLocator": "Fork banner; introduction improvements",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Proposal values not certified as deployed."
+    },
+    {
+      "id": "R6-C023",
+      "protocolId": "R6-P007",
+      "versionId": null,
+      "statement": "BUILD’s repository identifies Ethereum BSG at 0xB34Ab2f65c6e4F764fFe740ab83F982021Faed6d; the HECO BAG/BAGS search lead is not established as the same project.",
+      "evidenceStatus": "contested",
+      "sourceIds": [
+        "R6-S029",
+        "R6-S030",
+        "R6-S031"
+      ],
+      "evidenceLocator": "Repository Addresses; explorer and HECO directory leads",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Gold target suggested by explorer extraction, not verified in historical policy code."
+    },
+    {
+      "id": "R6-C024",
+      "protocolId": "R6-P009",
+      "versionId": null,
+      "statement": "Ditto source explicitly derives from Ampleforth but targets one dollar; it documents a BNB/stablecoin TWAP path, configurable master and owner-managed pool sync calls.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S032"
+      ],
+      "evidenceLocator": "Architecture; Oracle deployment; Notifying pools",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Source configuration and deployment timing not checked."
+    },
+    {
+      "id": "R6-C025",
+      "protocolId": "R6-P012",
+      "versionId": null,
+      "statement": "DSD’s source credits Empty Set Squad and labels its linked audit as an audit of the forked codebase; ESD and DSD list different mainnet token addresses.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S034",
+        "R6-S035"
+      ],
+      "evidenceLocator": "README mainnet contracts, audit and copyright",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "An inherited audit is not proof all DSD changes were reviewed."
+    },
+    {
+      "id": "R6-C026",
+      "protocolId": "R6-P013",
+      "versionId": null,
+      "statement": "Current AMPL documentation targets a CPI-adjusted 2019 dollar and rebases balances; the 2020 directory’s flat one-dollar summary should not be treated as precise historical policy.",
+      "evidenceStatus": "contested",
+      "sourceIds": [
+        "R6-S003",
+        "R6-S036",
+        "R6-S070"
+      ],
+      "evidenceLocator": "Current Tracks CPI; historical directory pp. 28–30",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Historical CPI baseline and oracle changes not pinned; current documentation alone cannot settle them."
+    },
+    {
+      "id": "R6-C027",
+      "protocolId": "R6-P014",
+      "versionId": "R6-P014-V1",
+      "statement": "Badger’s legacy page describes DIGG as unbacked by custodial BTC, with a BTC target and balance rebases.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S037"
+      ],
+      "evidenceLocator": "DIGG description",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Undated legacy page; exact initial deployment date unknown."
+    },
+    {
+      "id": "R6-C028",
+      "protocolId": "R6-P014",
+      "versionId": "R6-P014-V2",
+      "statement": "April 27, 2022 BIP-92 proposes a free-floating DIGG exchange rate, stopping rebases and ending external LP support.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S038"
+      ],
+      "evidenceLocator": "BIP Summary",
+      "eventDate": "2022-04-27",
+      "reasoning": null,
+      "uncertainty": "Proposal execution not verified; do not assume the old rebase page remains operational truth."
+    },
+    {
+      "id": "R6-C029",
+      "protocolId": "R6-P015",
+      "versionId": null,
+      "statement": "Indexed YAM documentation says rebasing was disabled December 29, 2020 and calls the launch August 12; direct document retrieval failed.",
+      "evidenceStatus": "unknown",
+      "sourceIds": [
+        "R6-S039"
+      ],
+      "evidenceLocator": "Indexed Introduction; failed direct opens",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Needs original post, governance execution and timezone reconciliation; not one of the completed six seed checks."
+    },
+    {
+      "id": "R6-C030",
+      "protocolId": "R6-P016",
+      "versionId": null,
+      "statement": "BASE’s November 17, 2020 integration post specifies a crypto-market-cap target and separately says Uniswap launch is November 30.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S040"
+      ],
+      "evidenceLocator": "Opening, ratio description and About Base Protocol",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Integration announcement is not trading-launch or deployment timestamp proof."
+    },
+    {
+      "id": "R6-C031",
+      "protocolId": "R6-P017",
+      "versionId": "R6-P017-V1",
+      "statement": "Explicit Frax V1 history gives December 20, 2020 launch and a variable collateral ratio with redemptions funded by collateral plus newly minted FXS.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S041"
+      ],
+      "evidenceLocator": "Original Design",
+      "eventDate": "2020-12-20",
+      "reasoning": null,
+      "uncertainty": "Retrospective labeled history, not independently replayed first mint."
+    },
+    {
+      "id": "R6-C032",
+      "protocolId": "R6-P017",
+      "versionId": null,
+      "statement": "Current frxUSD documentation describes cash-equivalent reserves, while FIP-428 proposes distinct legacy-FRAX and FXS naming changes.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S042",
+        "R6-S043"
+      ],
+      "evidenceLocator": "frxUSD Overview; FIP-428 Renaming of tokens",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Ticker equivalence requires contract and effective-date mapping; proposal alone does not prove every rename executed."
+    },
+    {
+      "id": "R6-C033",
+      "protocolId": "R6-P018",
+      "versionId": "R6-P018-V1",
+      "statement": "The September 21, 2020 UST announcement labels September 12 as its Bittrex Global launch, separating event from publication date.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S044"
+      ],
+      "evidenceLocator": "Image caption and introduction",
+      "eventDate": "2020-09-12",
+      "reasoning": null,
+      "uncertainty": "Exchange launch, not chain genesis; exact mint deployment not checked."
+    },
+    {
+      "id": "R6-C034",
+      "protocolId": "R6-P018",
+      "versionId": "R6-P018-V2",
+      "statement": "Terra’s migration guide renames the old chain Terra Classic, UST to USTC, and states the new Terra chain has no Terra stablecoins.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S045"
+      ],
+      "evidenceLocator": "General info; Branding",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Guide schedule is not actual launch receipt; collapse loss quantification outside this spot-check."
+    },
+    {
+      "id": "R6-C035",
+      "protocolId": "R6-P019",
+      "versionId": "R6-P019-V1",
+      "statement": "A September 8, 2021 Venus team post calls VAI overcollateralized but off peg and proposes temporarily stopping minting.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S046"
+      ],
+      "evidenceLocator": "Opening team post",
+      "eventDate": "2021-09-08",
+      "reasoning": null,
+      "uncertainty": "Collateral sufficiency and diagnosis not independently measured."
+    },
+    {
+      "id": "R6-C036",
+      "protocolId": "R6-P019",
+      "versionId": "R6-P019-V2",
+      "statement": "Venus V4 documents a VAI/USDT PSM with reserve and mint limits; it cannot establish a 2021 VAI redemption entitlement.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R6-S047"
+      ],
+      "evidenceLocator": "Overview and Features",
+      "eventDate": null,
+      "reasoning": "Version-labeled later module differs from historical team response.",
+      "uncertainty": "PSM activation date not checked."
+    },
+    {
+      "id": "R6-C037",
+      "protocolId": "R6-P020",
+      "versionId": "R6-P020-V1",
+      "statement": "Beanstalk’s anniversary post dates original Ethereum deployment August 6, 2021, the governance exploit April 17, 2022 and unpause August 6, 2022.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S048"
+      ],
+      "evidenceLocator": "Anniversary opening",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Dates not confirmed against receipts."
+    },
+    {
+      "id": "R6-C038",
+      "protocolId": "R6-P020",
+      "versionId": null,
+      "statement": "Beanstalk disclosures identify a flash-loan governance attack, subsequent multisig governance and successive Ethereum/Arbitrum Bean replacements.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S049"
+      ],
+      "evidenceLocator": "Disclosure 1",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Asset loss metrics and migration executions not independently reproduced."
+    },
+    {
+      "id": "R6-C039",
+      "protocolId": "R6-P021",
+      "versionId": null,
+      "statement": "Omniscia attributes the 2021 TITAN collapse to the economic mechanism rather than a security breach.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S050"
+      ],
+      "evidenceLocator": "Key takeaways and analysis",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Auditor interpretation; no transaction replay, and no generalization to BNB STEEL."
+    },
+    {
+      "id": "R6-C040",
+      "protocolId": "R6-P022",
+      "versionId": null,
+      "statement": "FEI’s original organization repository was retrieved, but its current develop branch does not by itself establish Genesis mechanics or date.",
+      "evidenceStatus": "unknown",
+      "sourceIds": [
+        "R6-S051"
+      ],
+      "evidenceLocator": "README and develop branch",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Need historical tag, Genesis receipts and later wind-down governance."
+    },
+    {
+      "id": "R6-C041",
+      "protocolId": "R6-P010",
+      "versionId": null,
+      "statement": "The Debaseonomics protocol repository identifies DEBASE and DEGOV; monetary-version and deployment evidence remains unexamined.",
+      "evidenceStatus": "unknown",
+      "sourceIds": [
+        "R6-S033"
+      ],
+      "evidenceLocator": "Repository description",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Do not infer AMPL equivalence from rebase label."
+    },
+    {
+      "id": "R6-C042",
+      "protocolId": "R6-P023",
+      "versionId": null,
+      "statement": "CTDSEC has a Mith Cash audit index, but the linked PDF was not successfully retrieved in this pass.",
+      "evidenceStatus": "unknown",
+      "sourceIds": [
+        "R6-S052"
+      ],
+      "evidenceLocator": "Report Summary and PDF link",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Original fork history and launch remain unresolved."
+    },
+    {
+      "id": "R6-C043",
+      "protocolId": "R6-P024",
+      "versionId": null,
+      "statement": "FLOAT’s Genesis article title names May 6 but its correction moves the launch start to May 9.",
+      "evidenceStatus": "contested",
+      "sourceIds": [
+        "R6-S053"
+      ],
+      "evidenceLocator": "Title and linked launch timeline adjustment",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Neither title nor revised schedule proves first live auction transaction."
+    },
+    {
+      "id": "R6-C044",
+      "protocolId": "R6-P024",
+      "versionId": "R6-P024-V1",
+      "statement": "Extropy’s FLOAT review describes auction supply and BANK governance, but its PDF cover says August 2, 2025 while its body dates review to April–May 2021.",
+      "evidenceStatus": "contested",
+      "sourceIds": [
+        "R6-S054"
+      ],
+      "evidenceLocator": "PDF cover, sections 1–3 and finding 4.1",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Also contains placeholder wording; historical original and commit provenance need recovery."
+    },
+    {
+      "id": "R6-C045",
+      "protocolId": "R6-P025",
+      "versionId": null,
+      "statement": "Gyroscope’s March 2022 retrospective dates its testnet game to March 2021 and still describes mainnet as forthcoming.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S055"
+      ],
+      "evidenceLocator": "Opening two paragraphs",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Not evidence of a 2021 live-mainnet stablecoin."
+    },
+    {
+      "id": "R6-C046",
+      "protocolId": "R6-P026",
+      "versionId": null,
+      "statement": "A Djed 2021 IOG article route was found but inaccessible; Cardano mainnet eligibility was not verified.",
+      "evidenceStatus": "unknown",
+      "sourceIds": [
+        "R6-S056"
+      ],
+      "evidenceLocator": "403 retrieval result",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Do not substitute SigmaUSD deployment for Cardano Djed."
+    },
+    {
+      "id": "R6-C047",
+      "protocolId": "R6-P027",
+      "versionId": "R6-P027-V1",
+      "statement": "Defrost’s November 23, 2021 release announces an Avalanche launch with an LP-collateralized dollar asset and MELT incentives.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S057"
+      ],
+      "evidenceLocator": "Opening and core offer paragraphs",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "First-native superlative, address, H2O spelling and later incident history require verification."
+    },
+    {
+      "id": "R6-C048",
+      "protocolId": "R6-P028",
+      "versionId": "R6-P028-V1",
+      "statement": "QiDAO builders’ July 2021 interview identifies MAI/miMatic, MATIC vault collateral and a USDC swap minting route.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S058"
+      ],
+      "evidenceLocator": "What is MAI? and interview 00:00:40–00:01:16",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Interview date establishes active-by, not launch day."
+    },
+    {
+      "id": "R6-C049",
+      "protocolId": "R6-P029",
+      "versionId": null,
+      "statement": "A Parrot PAI incentive-program search lead was found, but the primary page could not be opened.",
+      "evidenceStatus": "unknown",
+      "sourceIds": [
+        "R6-S059"
+      ],
+      "evidenceLocator": "Search extraction and failed open",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "No TVL, supply or launch date adopted."
+    },
+    {
+      "id": "R6-C050",
+      "protocolId": "R6-P030",
+      "versionId": "R6-P030-V1",
+      "statement": "Kava’s price-stability discussion describes USDX minting incentives from October 2020, establishing in-window activity without settling first launch day.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S060"
+      ],
+      "evidenceLocator": "Minting rewards/history discussion",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "USDX ticker must be disambiguated from unrelated USDx assets; historical collateral set unresolved."
+    },
+    {
+      "id": "R6-C051",
+      "protocolId": "R6-P031",
+      "versionId": "R6-P031-V2",
+      "statement": "The mirrored Neutrino XTN litepaper describes replacing USDN’s WAVES-only reserve with an ecosystem basket and explicitly abandoning a hard USD peg.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S061"
+      ],
+      "evidenceLocator": "PDF pp. 1–2: New Name and Ticker; XTN Price",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Original publication and on-chain rename transaction not verified; original 2020–2021 deployment gap remains."
+    },
+    {
+      "id": "R6-C052",
+      "protocolId": "R6-P032",
+      "versionId": "R6-P032-V1",
+      "statement": "Olympus legacy equations describe OHM bonding/treasury and sOHM staking rebases; current docs explicitly describe a floating asset, not a fiat peg.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S063",
+        "R6-S072"
+      ],
+      "evidenceLocator": "Legacy Staking/Bonding; current OHM token",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Current RBS and Cooler Loans must not be backdated to 2021."
+    },
+    {
+      "id": "R6-C053",
+      "protocolId": "R6-P033",
+      "versionId": null,
+      "statement": "Tomb’s official GitHub organization describes a seigniorage asset pegged to FTM on Fantom Opera.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S064"
+      ],
+      "evidenceLocator": "Organization description",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Original deployment and later incidents not checked."
+    },
+    {
+      "id": "R6-C054",
+      "protocolId": "R6-P006",
+      "versionId": null,
+      "statement": "Basis Cash’s original repository and historical directory identify BAC/BAS as a separate Basis implementation.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S003",
+        "R6-S028"
+      ],
+      "evidenceLocator": "Repository README; historical taxonomy",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Original Basis proposal and later forks are not interchangeable deployments."
+    },
+    {
+      "id": "R6-C055",
+      "protocolId": "R6-P011",
+      "versionId": null,
+      "statement": "ESD’s repository lists the mainnet dollar address 0x36F3FD68E7325a35EB768F1AedaAe9EA0689d723; the 2020 directory independently lists ESD.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S003",
+        "R6-S034"
+      ],
+      "evidenceLocator": "README mainnet; directory taxonomy",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Explorer verification and exact launch date not checked."
+    },
+    {
+      "id": "R6-C056",
+      "protocolId": "R6-P034",
+      "versionId": null,
+      "statement": "AgeUSD is a framework with specifications and code whose deployed Ergo instance is called SigmaUSD.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S013",
+        "R6-S015"
+      ],
+      "evidenceLocator": "SigmaUSD launch; AgeUSD README",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Do not count framework and instance as two deployed currencies."
+    },
+    {
+      "id": "R6-C057",
+      "protocolId": "R6-P035",
+      "versionId": null,
+      "statement": "Basis Cash and Basis Dollar explicitly claim ancestry from the original Basis design.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S026",
+        "R6-S028"
+      ],
+      "evidenceLocator": "History of Basis",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Original Basis shutdown and regulatory explanation only repeated by descendants; no independent primary shutdown record retrieved."
+    },
+    {
+      "id": "R6-C058",
+      "protocolId": "R6-P001",
+      "versionId": "R6-P001-V3",
+      "statement": "Liquity’s November 2025 V2 Safety Mode article describes branch-specific restrictions; it is explanatory documentation, not a report that an incident occurred.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S073"
+      ],
+      "evidenceLocator": "What is Safety Mode?",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "No 2026 system-wide assurance follows."
+    },
+    {
+      "id": "R6-C059",
+      "protocolId": "R6-P014",
+      "versionId": "R6-P014-V1",
+      "statement": "Badger’s September 15, 2021 retrospective lists DIGG as an existing rebasing Bitcoin-tracking product.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S075"
+      ],
+      "evidenceLocator": "Today we have 4 core products: DIGG",
+      "eventDate": "2021-09-15",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R6-C060",
+      "protocolId": "R6-P036",
+      "versionId": null,
+      "statement": "Reflexer’s current explanation describes ETH collateral and signed rates; its resources index points to February 2021 launch coverage. This does not pin the original deployment.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R6-S071",
+        "R6-S076"
+      ],
+      "evidenceLocator": "Why RAI; community resources February 2021 entries",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Original 2021 parameter configuration and creation receipt unresolved."
+    },
+    {
+      "id": "R6-C061",
+      "protocolId": "R6-P002",
+      "versionId": null,
+      "statement": "The pinned AgeUSD v0.4 template caps the stablecoin nominal rate by liabilities per circulating stablecoin; its reserve is finite, so dollar-valued redemption is conditional on sufficient reserves.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R6-S069"
+      ],
+      "evidenceLocator": "liabilitiesIn and scNominalPrice calculation",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Template parameters and script identity not matched to SigmaUSD deployed boxes."
+    }
+  ],
+  "searchLog": [
+    {
+      "id": "R6-L001",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "2021 algorithmic stablecoin list Empty Set Dollar Dynamic Set Dollar forks defiprime; DeFiPrime current and archive replay",
+      "chainOrFamily": "historical directories",
+      "sourceIds": [
+        "R6-S001",
+        "R6-S002"
+      ],
+      "candidateNames": [
+        "ESD",
+        "DSD"
+      ],
+      "result": "Current directory retrieved; January 2021 replay failed.",
+      "limitations": "Current list contains later systems; no archived snapshot certified."
+    },
+    {
+      "id": "R6-L002",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "CoinGecko 2020 yearly PDF; The Block 20210310 report; arxiv 2103.01340 abstract",
+      "chainOrFamily": "2020–2021 surveys",
+      "sourceIds": [
+        "R6-S003",
+        "R6-S004"
+      ],
+      "candidateNames": [
+        "AMPL",
+        "ESD",
+        "Basis Cash",
+        "FRAX",
+        "DAI",
+        "sUSD",
+        "mUSD"
+      ],
+      "result": "Historical taxonomy and directory portions retrieved.",
+      "limitations": "Survey not read exhaustively; metrics not reproduced; many directory candidates remain uninvestigated."
+    },
+    {
+      "id": "R6-L003",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "github bdollar Basis fork; basisdollar/basisdollar-protocol; Basis-Cash/basiscash-protocol",
+      "chainOrFamily": "Ethereum / BNB seigniorage",
+      "sourceIds": [
+        "R6-S025",
+        "R6-S026",
+        "R6-S027",
+        "R6-S028",
+        "R6-S068"
+      ],
+      "candidateNames": [
+        "bDollar",
+        "Basis Dollar",
+        "Basis Cash"
+      ],
+      "result": "Original repositories and explicit BSD fork banner retrieved; BDO explorer failed.",
+      "limitations": "No bytecode diff, no parent-audit inheritance assumption."
+    },
+    {
+      "id": "R6-L004",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Basis Gold github Heco; BUILD basis-gold-protocol; Etherscan BSG",
+      "chainOrFamily": "Ethereum / HECO",
+      "sourceIds": [
+        "R6-S029",
+        "R6-S030",
+        "R6-S031"
+      ],
+      "candidateNames": [
+        "Basis Gold BSG",
+        "Basis Gold BAG/BAGS"
+      ],
+      "result": "Naming collision found.",
+      "limitations": "Explorer direct open failed; HECO source remains directory-only."
+    },
+    {
+      "id": "R6-L005",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "site.github.com Ditto elastic; Ditto-money/ditto-contracts; debaseonomics/protocol",
+      "chainOrFamily": "BNB / Ethereum rebases",
+      "sourceIds": [
+        "R6-S032",
+        "R6-S033"
+      ],
+      "candidateNames": [
+        "Ditto",
+        "DEBASE"
+      ],
+      "result": "Initial Ditto search returned unrelated computing papers; direct original repo route succeeded.",
+      "limitations": "GitHub API organization listings returned 403 rate limit; launch histories unfinished."
+    },
+    {
+      "id": "R6-L006",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "site.liquity.org April 5 2021 launch; liquity/dev history until=2021-04-06; raw historical README/PriceFeed",
+      "chainOrFamily": "Ethereum collateral debt",
+      "sourceIds": [
+        "R6-S005",
+        "R6-S006",
+        "R6-S007",
+        "R6-S067",
+        "R6-S065"
+      ],
+      "candidateNames": [
+        "LUSD"
+      ],
+      "result": "Recovered April 6 commit after web history failed using direct HTTPS HTML.",
+      "limitations": "Explorer failed; no deployment bytecode matching."
+    },
+    {
+      "id": "R6-L007",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "site.liquity.org May 19 2021; V2 redeployment updates; V2 Safety Mode",
+      "chainOrFamily": "Liquity later outcomes",
+      "sourceIds": [
+        "R6-S008",
+        "R6-S009",
+        "R6-S010",
+        "R6-S011",
+        "R6-S012",
+        "R6-S073"
+      ],
+      "candidateNames": [
+        "LUSD",
+        "BOLD"
+      ],
+      "result": "Historical stress account and 2025 successor vulnerability/redeployment distinguished.",
+      "limitations": "No liquidation replay; 2026 absence-of-incidents not asserted."
+    },
+    {
+      "id": "R6-L008",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "site.ergoplatform.org SigmaUSD 2021 bearwhale; AgeUSD original repository and v0.4",
+      "chainOrFamily": "Ergo pooled reserves",
+      "sourceIds": [
+        "R6-S013",
+        "R6-S014",
+        "R6-S015",
+        "R6-S016",
+        "R6-S069"
+      ],
+      "candidateNames": [
+        "SigmaUSD",
+        "AgeUSD",
+        "StatiCoin"
+      ],
+      "result": "Launch, mechanism, postmortem and versioned template retrieved.",
+      "limitations": "Template deployment mapping and attacker wallet attribution incomplete."
+    },
+    {
+      "id": "R6-L009",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "site.ergoplatform.org SigmaUSD 2024 2025 2026; current stablecoins docs",
+      "chainOrFamily": "Ergo later outcomes",
+      "sourceIds": [
+        "R6-S017"
+      ],
+      "candidateNames": [
+        "SigmaUSD",
+        "Dexy",
+        "Gluon"
+      ],
+      "result": "Current listing found; newer monetary-system leads surfaced.",
+      "limitations": "No proof of continuous redemption; later incident search incomplete."
+    },
+    {
+      "id": "R6-L010",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Malt June 2021 launch post mortem v2; November contest repository and report",
+      "chainOrFamily": "Polygon AMM stablecoin",
+      "sourceIds": [
+        "R6-S018",
+        "R6-S019",
+        "R6-S020",
+        "R6-S021",
+        "R6-S066"
+      ],
+      "candidateNames": [
+        "Malt"
+      ],
+      "result": "Launch/reimbursement plus later code review retrieved; reimbursement explorer 403.",
+      "limitations": "V1 and redesign not treated as identical."
+    },
+    {
+      "id": "R6-L011",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Malt V2 Debrief; May 2022/July 2023 Medium archives; reimbursement related links",
+      "chainOrFamily": "Malt later outcomes",
+      "sourceIds": [
+        "R6-S022",
+        "R6-S023",
+        "R6-S024",
+        "R6-S074"
+      ],
+      "candidateNames": [
+        "Malt V2",
+        "Malt 2023"
+      ],
+      "result": "Archive routes failed; direct debrief and 2023 update obtained through related-article links.",
+      "limitations": "Latest retrieved operating report is 2023; no 2026 shutdown conclusion."
+    },
+    {
+      "id": "R6-L012",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "AMPL CPI; DIGG BTC page and BIP92; YAM docs; BASE Chainlink mainnet",
+      "chainOrFamily": "seed target/version checks",
+      "sourceIds": [
+        "R6-S036",
+        "R6-S037",
+        "R6-S038",
+        "R6-S039",
+        "R6-S040",
+        "R6-S070"
+      ],
+      "candidateNames": [
+        "AMPL",
+        "DIGG",
+        "YAM",
+        "BASE"
+      ],
+      "result": "BTC/CPI/index targets distinguished; YAM direct docs unavailable.",
+      "limitations": "YAM remains partial evidence; exact AMPL historical CPI baseline unresolved."
+    },
+    {
+      "id": "R6-L013",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Frax original design; frxUSD; FIP-428; TerraUSD announcement; Terra migration guide",
+      "chainOrFamily": "seed launch and rename checks",
+      "sourceIds": [
+        "R6-S041",
+        "R6-S042",
+        "R6-S043",
+        "R6-S044",
+        "R6-S045"
+      ],
+      "candidateNames": [
+        "FRAX",
+        "FXS",
+        "UST",
+        "USTC"
+      ],
+      "result": "Separate publication, launch, successor version and renamed ticker.",
+      "limitations": "Governance proposal execution not automatically inferred."
+    },
+    {
+      "id": "R6-L014",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Venus VAI 2021 re-peg; V4 PSM; Kava USDX 2020 launch; USDX price stability",
+      "chainOrFamily": "BNB / Kava",
+      "sourceIds": [
+        "R6-S046",
+        "R6-S047",
+        "R6-S060"
+      ],
+      "candidateNames": [
+        "VAI",
+        "USDX"
+      ],
+      "result": "Primary 2021 VAI and project USDX incentive discussions retrieved.",
+      "limitations": "Kava first-mint date remains unknown; later VAI PSM not backdated."
+    },
+    {
+      "id": "R6-L015",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Beanstalk history; anniversary/disclosures; IRON postmortem; FEI Genesis; Mith Cash audit",
+      "chainOrFamily": "seed outcomes",
+      "sourceIds": [
+        "R6-S048",
+        "R6-S049",
+        "R6-S050",
+        "R6-S051",
+        "R6-S052"
+      ],
+      "candidateNames": [
+        "BEAN",
+        "IRON",
+        "FEI",
+        "Mith Cash"
+      ],
+      "result": "BEAN and IRON primary follow-up obtained; FEI original version not pinned; Mith PDF unsupported content type.",
+      "limitations": "IRON project postmortem failed; used auditor account. BEAN history route failed; anniversary succeeded."
+    },
+    {
+      "id": "R6-L016",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Float protocol May 2021 launch; original GitHub org; Extropy audit",
+      "chainOrFamily": "floating target",
+      "sourceIds": [
+        "R6-S053",
+        "R6-S054"
+      ],
+      "candidateNames": [
+        "FLOAT",
+        "BANK"
+      ],
+      "result": "Corrected launch schedule and internally inconsistent audit date found.",
+      "limitations": "No live auction receipt; similarly named modern tokenized-equity project discarded as unrelated search noise."
+    },
+    {
+      "id": "R6-L017",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Gyro dollar 2021 testnet; official testnet review; IOG Djed August 2021 article",
+      "chainOrFamily": "unlaunched/testnet",
+      "sourceIds": [
+        "R6-S055",
+        "R6-S056"
+      ],
+      "candidateNames": [
+        "Gyroscope",
+        "Djed"
+      ],
+      "result": "Gyro primary review proves testnet context; IOG 403 and IACR PDF failed.",
+      "limitations": "No Cardano in-window mainnet certified."
+    },
+    {
+      "id": "R6-L018",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Avalanche 2021 Snowbank Defrost stablecoin launch; Fantom fUSD Polygon MAI QI launch",
+      "chainOrFamily": "Avalanche / Fantom / Polygon",
+      "sourceIds": [
+        "R6-S057",
+        "R6-S058",
+        "R6-S063",
+        "R6-S064"
+      ],
+      "candidateNames": [
+        "Defrost",
+        "MAI",
+        "Snowbank",
+        "fUSD",
+        "Olympus",
+        "Tomb"
+      ],
+      "result": "Defrost issuer release and QiDAO primary interview retrieved; Tomb target checked.",
+      "limitations": "Snowbank/fUSD remained uninvestigated leads; no chain-wide explorer census."
+    },
+    {
+      "id": "R6-L019",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "2021 Solana stablecoin Parrot PAI UXD Cashio launch",
+      "chainOrFamily": "Solana",
+      "sourceIds": [
+        "R6-S059"
+      ],
+      "candidateNames": [
+        "Parrot PAI",
+        "UXD",
+        "Cashio"
+      ],
+      "result": "PAI article lead; direct open failed.",
+      "limitations": "UXD/Cashio primary launch and incident records not investigated."
+    },
+    {
+      "id": "R6-L020",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "USDN XTN Neutrino 2.0; direct Neutrino docs; mirrored XTN litepaper",
+      "chainOrFamily": "Waves",
+      "sourceIds": [
+        "R6-S061",
+        "R6-S062"
+      ],
+      "candidateNames": [
+        "USDN",
+        "XTN"
+      ],
+      "result": "Direct docs failed; project-authored mirror retrieved.",
+      "limitations": "Original publication, rename execution and 2020 activity proof unresolved."
+    },
+    {
+      "id": "R6-L021",
+      "searchedAt": "2026-09-16",
+      "queryOrRoute": "Badger 2021 roadmap; Reflexer why-RAI and community resources",
+      "chainOrFamily": "DIGG / RAI",
+      "sourceIds": [
+        "R6-S075",
+        "R6-S071",
+        "R6-S076"
+      ],
+      "candidateNames": [
+        "DIGG",
+        "RAI"
+      ],
+      "result": "Contemporary DIGG active-by evidence retrieved; RAI original deployment remains a lead.",
+      "limitations": "No exact DIGG launch transaction or RAI original control configuration pinned."
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "R6-X001",
+      "name": "Gyroscope 2021 mainnet outcome case",
+      "reason": "Testnet-only evidence for window; mainnet was still forthcoming in March 2022.",
+      "sourceIds": [
+        "R6-S055"
+      ],
+      "claimIds": [
+        "R6-C045"
+      ]
+    },
+    {
+      "id": "R6-X002",
+      "name": "BASE as a USD stablecoin",
+      "reason": "Target is crypto market capitalization, retained as adjacent monetary experiment.",
+      "sourceIds": [
+        "R6-S040"
+      ],
+      "claimIds": [
+        "R6-C030"
+      ]
+    },
+    {
+      "id": "R6-X003",
+      "name": "OHM as a fixed-dollar stablecoin",
+      "reason": "Treasury/staking experiment; no fixed-dollar peg established.",
+      "sourceIds": [
+        "R6-S063",
+        "R6-S072"
+      ],
+      "claimIds": [
+        "R6-C052"
+      ]
+    },
+    {
+      "id": "R6-X004",
+      "name": "TOMB as a USD stablecoin",
+      "reason": "FTM target; retained adjacent.",
+      "sourceIds": [
+        "R6-S064"
+      ],
+      "claimIds": [
+        "R6-C053"
+      ]
+    },
+    {
+      "id": "R6-X005",
+      "name": "Original Basis as a 2020–2021 deployed token",
+      "reason": "Design ancestry only; not counted as deployed descendant.",
+      "sourceIds": [
+        "R6-S026",
+        "R6-S028"
+      ],
+      "claimIds": [
+        "R6-C057"
+      ]
+    },
+    {
+      "id": "R6-X006",
+      "name": "BOLD as 2021 LUSD mechanics",
+      "reason": "Later separate product/deployments.",
+      "sourceIds": [
+        "R6-S010",
+        "R6-S011",
+        "R6-S012"
+      ],
+      "claimIds": [
+        "R6-C007"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "id": "R6-U001",
+      "protocolId": "R6-P001",
+      "question": "Do deployed V1 bytes and current liveness match the historical reconstruction?",
+      "whyUnresolved": "Explorer failed; successor incidents should not be assigned to V1.",
+      "nextEvidenceNeeded": "Creation receipt, verified source match, dated event replay and later incident review.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U002",
+      "protocolId": "R6-P002",
+      "question": "Which oracle/update authorities and losses applied to each SigmaUSD deployment?",
+      "whyUnresolved": "Framework code is not deployed identity; postmortem incomplete dates/profit attribution.",
+      "nextEvidenceNeeded": "Bank NFTs, creation boxes, script hashes, governance ballots and oracle epoch traces.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U003",
+      "protocolId": "R6-P003",
+      "question": "Were Malt reimbursements executed as claimed, and what survives after 2023?",
+      "whyUnresolved": "Explorer inaccessible; project statements stop at retrieved 2023 update.",
+      "nextEvidenceNeeded": "Distribution transactions, wallet-level basis reconciliation, V1/V2/2023 deployment addresses and later governance/shutdown records.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U004",
+      "protocolId": "R6-P007",
+      "question": "Is Ethereum BSG’s gold target and active interval verifiable independently of HECO BAG?",
+      "whyUnresolved": "Explorer only partial; distinct tickers easily conflated.",
+      "nextEvidenceNeeded": "Pinned policy/oracle code, creation receipts and archived domain ownership/announcements.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U005",
+      "protocolId": "R6-P024",
+      "question": "When did FLOAT actually become tradable and why does its audit carry conflicting dates?",
+      "whyUnresolved": "Planned start corrected; PDF cover/body disagree and contains template text.",
+      "nextEvidenceNeeded": "Genesis and first auction receipts; contemporaneous signed audit and commit archive.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U006",
+      "protocolId": "R6-P015",
+      "question": "When did YAM launch and when was rebasing disabled in each migration?",
+      "whyUnresolved": "Official docs indexed but direct retrieval failed; versions not pinned.",
+      "nextEvidenceNeeded": "Original 2020 posts, execution transaction and token migration records.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U007",
+      "protocolId": "R6-P013",
+      "question": "Was the current AMPL CPI baseline already configured throughout 2020–2021?",
+      "whyUnresolved": "Current homepage differs from simplified historical directory.",
+      "nextEvidenceNeeded": "2020 policy/oracle commit and contract configuration by block.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U008",
+      "protocolId": "R6-P031",
+      "question": "What are USDN launch, recapitalization and executed XTN transition dates?",
+      "whyUnresolved": "Only later mirrored proposal recovered.",
+      "nextEvidenceNeeded": "Original Waves issue/update-asset transactions, governance enactment and reserve changes.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U009",
+      "protocolId": "R6-P004",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U010",
+      "protocolId": "R6-P005",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U011",
+      "protocolId": "R6-P009",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U012",
+      "protocolId": "R6-P010",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U013",
+      "protocolId": "R6-P012",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U014",
+      "protocolId": "R6-P022",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U015",
+      "protocolId": "R6-P023",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U016",
+      "protocolId": "R6-P026",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U017",
+      "protocolId": "R6-P029",
+      "question": "Can eligibility and each deployed historical version be established?",
+      "whyUnresolved": "Only partial source/identity or proposal evidence recovered in bounded pass.",
+      "nextEvidenceNeeded": "Dated primary launch announcement plus creation receipt/code and subsequent governance/postmortems.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U018",
+      "protocolId": "R6-P006",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U019",
+      "protocolId": "R6-P011",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U020",
+      "protocolId": "R6-P014",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U021",
+      "protocolId": "R6-P016",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U022",
+      "protocolId": "R6-P017",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U023",
+      "protocolId": "R6-P018",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U024",
+      "protocolId": "R6-P019",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U025",
+      "protocolId": "R6-P020",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U026",
+      "protocolId": "R6-P021",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U027",
+      "protocolId": "R6-P027",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U028",
+      "protocolId": "R6-P028",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U029",
+      "protocolId": "R6-P030",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U030",
+      "protocolId": "R6-P032",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U031",
+      "protocolId": "R6-P033",
+      "question": "Are all major later outcomes through the research date covered?",
+      "whyUnresolved": "This is a discovery/spot-check record; later incident and version review is incomplete.",
+      "nextEvidenceNeeded": "Chronological primary governance, postmortem, migration and shutdown records; contract state checks.",
+      "priority": "medium"
+    },
+    {
+      "id": "R6-U032",
+      "protocolId": null,
+      "question": "Which omitted historical families remain outside the verified census?",
+      "whyUnresolved": "Only partial directory/chain coverage; no completeness claim.",
+      "nextEvidenceNeeded": "Investigate DAI/Maker Black Thursday, sUSD, mUSD, OUSD, Celo dollars, EOSDT, NuBits, Hive/Steem dollars; Solana UXD/Cashio; Fantom fUSD; BNB TSD; Avalanche Snowbank and further forks.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U033",
+      "protocolId": null,
+      "question": "Which chains/search families were not covered?",
+      "whyUnresolved": "No systematic searches of Tron, EOS, RSK, Harmony, Algorand, Tezos, or pre-2020 BitShares/Steem/NuBits archives; Cardano only proposal lead.",
+      "nextEvidenceNeeded": "Historical chain directories, native explorer issuance records, multilingual archives and bridged-vs-native issuer disambiguation.",
+      "priority": "high"
+    },
+    {
+      "id": "R6-U034",
+      "protocolId": "R6-P036",
+      "question": "Which original RAI controller and governance constraints applied in 2021?",
+      "whyUnresolved": "Current explanation and historical-link index do not establish deployed original parameters.",
+      "nextEvidenceNeeded": "Original launch post, creation receipt, GEB controller code/parameter history and subsequent redemption/shutdown governance.",
+      "priority": "high"
+    }
+  ]
+}
