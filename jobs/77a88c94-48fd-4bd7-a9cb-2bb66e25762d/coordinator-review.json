@@ -1,0 +1,121 @@
+{
+  "stage": "R3",
+  "jobId": "77a88c94-48fd-4bd7-a9cb-2bb66e25762d",
+  "reviewedAt": "2026-09-16T03:53:31.376Z",
+  "status": "retained-for-synthesis-with-gaps",
+  "contributor": {
+    "tokenId": "1",
+    "agentId": "10259"
+  },
+  "artifactHashesVerified": true,
+  "jsonParsePassed": true,
+  "requiredKeysPresent": true,
+  "checkedFieldTypesValid": true,
+  "uniqueRecordIds": true,
+  "internalReferencesResolved": true,
+  "reportIdsResolved": true,
+  "reportUrlsInSourceRegister": true,
+  "validationDetails": {
+    "missingKeys": [],
+    "invalidFields": [],
+    "duplicateIds": [],
+    "unresolvedReferences": [],
+    "versionOwnerMismatches": [],
+    "unresolvedReportIds": [],
+    "unregisteredReportUrls": []
+  },
+  "counts": {
+    "protocols": 5,
+    "sources": 42,
+    "claims": 43,
+    "searchLog": 10,
+    "exclusions": 3,
+    "uncertainties": 10,
+    "versions": 19,
+    "deepCases": 4,
+    "primarySources": 42,
+    "partialSources": 1,
+    "inaccessibleSources": 3,
+    "internalReferencesChecked": 371,
+    "reportIdsChecked": 90
+  },
+  "provenanceObservations": {
+    "timestampsBeforeSubmission": [],
+    "factualClaimsWithoutRetrievedSource": [],
+    "sharedSourceRetrievalTimestamps": [
+      "2026-09-16T03:41:09.040263Z"
+    ],
+    "note": "Source access classifications and retrieval times are worker-reported; the coordinator did not independently retrieve or timestamp source pages."
+  },
+  "verificationLimit": "Coordinator checked accepted artifact hashes and sizes, JSON parsing, required fields, selected types/enumerations, record IDs, internal/report references and visible coverage/provenance gaps. No historical claim, source authenticity, source completeness, deployed bytecode or economic mechanism was independently certified. Server acceptance was structural only; adversarial review is pending.",
+  "coverageGaps": [
+    "Terra historical market-parameter execution and Columbus code could not be fully recovered; governance proposals are not proof of deployed values. Final compensation and legacy-chain status remain unresolved.",
+    "Beanstalk launch code was pinned, but the complete pre-exploit facet/oracle chronology, actual recovery ledger and 2026 custody/fulfillment were not reconstructed.",
+    "Neutrino historical oracle/admin thresholds, bridge rights, exact depeg/reserve path, XTN and Power DAO execution and later outcomes remain unresolved; current Ride code is post-transformation.",
+    "Basis Cash README and later source differ; deployed Treasury identity and recovery/terminal outcomes were not established. ESD is only a triaged contrast. Discovery relatives remain unverified.",
+    "Three sources are recorded inaccessible (R3-S039 through R3-S041); R3-S042 is search-returned article text without a direct open. Those records must not be promoted into independently retrieved technical evidence."
+  ],
+  "workerRecordedUncertainties": [
+    {
+      "id": "R3-U001",
+      "protocolId": "R3-P001",
+      "question": "Exact block-by-block market capacity and seigniorage before/after Columbus?",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U002",
+      "protocolId": "R3-P001",
+      "question": "Final compensation, legacy swap status and new-chain launch verification?",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U003",
+      "protocolId": "R3-P002",
+      "question": "Full 2021-to-April-2022 facet and oracle changes?",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U004",
+      "protocolId": "R3-P002",
+      "question": "Actual total Barn Raise recovery and August 2026 RFF custody/fulfillment?",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U005",
+      "protocolId": "R3-P003",
+      "question": "Historical oracle signers, admin upgrade thresholds, delayed swaps and bridge rights?",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U006",
+      "protocolId": "R3-P003",
+      "question": "Precise USDN depeg path, XTN activation, Power DAO execution and later status?",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U007",
+      "protocolId": "R3-P004",
+      "question": "Which Treasury revision was deployed, and did V2 recover or ultimately cease?",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U008",
+      "protocolId": "R3-P005",
+      "question": "V1 coupon expiration/debt caps and final V2 deployment/successor outcomes?",
+      "priority": "medium"
+    },
+    {
+      "id": "R3-U009",
+      "protocolId": null,
+      "question": "Discovered relatives not investigated: DSD, TSD, Mithril Cash, Basis Dollar, Basis Gold, EAST, DeFo individual assets and BASE?",
+      "priority": "medium"
+    },
+    {
+      "id": "R3-U010",
+      "protocolId": null,
+      "question": "Any major 2025–2026 events missed outside Beanstalk?",
+      "priority": "high"
+    }
+  ],
+  "nextGate": "Preserve accepted originals, reconcile overlapping research lanes and unresolved evidence in synthesis, and perform the approved adversarial reviews before presenting a design or factual completeness claim. Separate assignments from the same contributor do not count as independent-contributor corroboration."
+}

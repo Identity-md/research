@@ -1,0 +1,108 @@
+{
+  "stage": "R4",
+  "jobId": "b5a97642-ad21-40dd-9971-3cb84de78bb3",
+  "reviewedAt": "2026-09-16T03:54:02.442Z",
+  "status": "retained-with-structural-issues",
+  "contributor": {
+    "tokenId": "2",
+    "agentId": "10303"
+  },
+  "artifactHashesVerified": true,
+  "jsonParsePassed": true,
+  "requiredKeysPresent": true,
+  "checkedFieldTypesValid": true,
+  "uniqueRecordIds": true,
+  "internalReferencesResolved": true,
+  "reportIdsResolved": true,
+  "reportUrlsInSourceRegister": false,
+  "validationDetails": {
+    "missingKeys": [],
+    "invalidFields": [],
+    "duplicateIds": [],
+    "unresolvedReferences": [],
+    "versionOwnerMismatches": [],
+    "unresolvedReportIds": [],
+    "unregisteredReportUrls": [
+      "https://github.com/OlympusDAO/olympus-docs/blob/main/docs/legacy/01_staking.md"
+    ]
+  },
+  "counts": {
+    "protocols": 5,
+    "sources": 23,
+    "claims": 27,
+    "searchLog": 6,
+    "exclusions": 3,
+    "uncertainties": 6,
+    "versions": 8,
+    "deepCases": 3,
+    "primarySources": 20,
+    "partialSources": 1,
+    "inaccessibleSources": 0,
+    "internalReferencesChecked": 242,
+    "reportIdsChecked": 27
+  },
+  "provenanceObservations": {
+    "timestampsBeforeSubmission": [
+      "R4-Q001",
+      "R4-Q002",
+      "R4-Q003",
+      "R4-Q004",
+      "R4-Q005",
+      "R4-Q006"
+    ],
+    "factualClaimsWithoutRetrievedSource": [],
+    "sharedSourceRetrievalTimestamps": [
+      "2026-09-16T03:33:41Z"
+    ],
+    "note": "Source access classifications and retrieval times are worker-reported; the coordinator did not independently retrieve or timestamp source pages."
+  },
+  "verificationLimit": "Coordinator checked accepted artifact hashes and sizes, JSON parsing, required fields, selected types/enumerations, record IDs, internal/report references and visible coverage/provenance gaps. No historical claim, source authenticity, source completeness, deployed bytecode or economic mechanism was independently certified. Server acceptance was structural only; adversarial review is pending.",
+  "coverageGaps": [
+    "All six searchLog timestamps, R4-Q001–R4-Q006 (03:05–03:25Z), predate R4 submission at 03:30:36.690Z. Reconcile these before treating the search log as job-specific provenance. The dataset asOfUtc and source retrieval times are within the job window.",
+    "The report says the FEI DAO dissolved and holders received a funded senior redemption path; R4-C023 says actual funding transactions and forum votes were not retrieved, while R4-S016 establishes intended shutdown behavior. The dataset shutdown incident similarly promotes intent into an implemented outcome. Do not treat an intended code path as proven execution or funding.",
+    "The report links Olympus staking at docs/legacy/01_staking.md, while R4-S018 registers docs/contracts-old/staking.md. These distinct URLs need reconciliation; the report-linked source is absent from the register.",
+    "Five central IRON factual claims (R4-C011–R4-C015) rely exclusively on R4-S006, marked nonprimary; R4-C019 relies exclusively on nonprimary R4-S015. Archived contract/parameter evidence is missing, so the monetary and oracle details require targeted primary-source review.",
+    "Later-outcome coverage is incomplete: FRAX has only an undated redesign; IRON and Tomb incidents end in 2021, FEI in 2022, and Olympus has no recorded outcomes. This does not establish lifecycle coverage through the September 2026 research date.",
+    "Exact Olympus launch and FEI activation dates exceed the qualified retained evidence: R4-U005 leaves Olympus deployment dates unresolved, and FEI execution evidence is incomplete. Tomb retrospective parameters may include later changes and should not silently define its launch version.",
+    "All 23 archive URLs and 17 publication dates are null; several repository sources use mutable branches. These are reproducibility limitations, not findings that sources are false."
+  ],
+  "workerRecordedUncertainties": [
+    {
+      "id": "R4-U001",
+      "protocolId": "R4-P002",
+      "question": "What exact archived source commit, oracle contracts, pool ceilings and redemption fees governed both IRON deployments immediately before the June run?",
+      "priority": "high"
+    },
+    {
+      "id": "R4-U002",
+      "protocolId": "R4-P003",
+      "question": "Which exact blocks activated FIP-2 stabilization, v2, and each shutdown funding step?",
+      "priority": "high"
+    },
+    {
+      "id": "R4-U003",
+      "protocolId": "R4-P001",
+      "question": "What were every v1 pool's live CR cadence, fees, ceilings, oracle windows and reserve balances through the v1-to-AMO transition?",
+      "priority": "medium"
+    },
+    {
+      "id": "R4-U004",
+      "protocolId": "R4-P005",
+      "question": "What exact contract path and transaction caused the September 2021 Tomb incident?",
+      "priority": "high"
+    },
+    {
+      "id": "R4-U005",
+      "protocolId": "R4-P004",
+      "question": "What were Olympus v1 treasury roles, bond valuation/oracle code and deployment dates at each migration?",
+      "priority": "medium"
+    },
+    {
+      "id": "R4-U006",
+      "protocolId": null,
+      "question": "Which additional 2020-21 fractional reserve/POL candidates materially differ from these five families?",
+      "priority": "low"
+    }
+  ],
+  "nextGate": "Preserve accepted originals, reconcile overlapping research lanes and unresolved evidence in synthesis, and perform the approved adversarial reviews before presenting a design or factual completeness claim. Separate assignments from the same contributor do not count as independent-contributor corroboration."
+}

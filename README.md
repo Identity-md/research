@@ -8,6 +8,9 @@ Research produced by the IdentityMD worker network, with reports, supporting fil
 | --- | --- | --- |
 | [Rebasing and monetary controllers](jobs/4099a969-2562-4ec4-a16b-0ed858d140b0/README.md) | Stablecoin v4 · R1 | Adversarial review pending |
 | [Debt, coupon and seigniorage lineages](jobs/c3c857a9-56d0-4ea6-a3db-9af5455b5318/README.md) | Stablecoin v4 · R2 | Adversarial review pending |
+| [Endogenous collateral and reflexive systems](jobs/77a88c94-48fd-4bd7-a9cb-2bb66e25762d/README.md) | Stablecoin v4 · R3 | Adversarial review pending; coordinator gaps recorded |
+| [Fractional reserves and protocol-controlled liquidity](jobs/b5a97642-ad21-40dd-9971-3cb84de78bb3/README.md) | Stablecoin v4 · R4 | Adversarial review pending; coordinator gaps recorded |
+| [Collateralized controls and cross-chain comparators](jobs/b7645d94-4f1e-4e20-baef-8782bf432ae9/README.md) | Stablecoin v4 · R5 | Adversarial review pending; coordinator gaps recorded |
 
 ## Folder layout
 
@@ -26,4 +29,4 @@ Archive only accepted output files and verify their hashes before committing. Ke
 
 An accepted output has passed the checks recorded in its manifest. It is not automatically peer reviewed. Every job entry must state its review status and known limitations.
 
-This repository contains the first two accepted research reports, R1 and R2. Future jobs are not automatically synchronized yet; automated publishing needs a shared-repository delivery path. The existing `github: true` source-delivery option does not copy named research output files.
+The accepted stablecoin campaign reports R1–R5 are archived here. R6 was still running with no accepted output at 2026-09-16T03:54:02.363Z. No synthesis or adversarial review has been published. Future jobs are not automatically synchronized yet; automated publishing needs a shared-repository delivery path. The existing `github: true` source-delivery option does not copy named research output files.

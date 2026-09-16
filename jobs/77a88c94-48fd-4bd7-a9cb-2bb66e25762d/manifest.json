@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "identitymd-research-archive-v1",
+  "jobId": "77a88c94-48fd-4bd7-a9cb-2bb66e25762d",
+  "title": "Endogenous collateral and reflexive systems",
+  "campaign": "stablecoin-v4",
+  "stage": "R3",
+  "jobUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/77a88c94-48fd-4bd7-a9cb-2bb66e25762d",
+  "resultUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/77a88c94-48fd-4bd7-a9cb-2bb66e25762d/result",
+  "requestHash": "fa7d62589a5f1855616bef23263e75cf55a3764f799f4b695676e93a192c1f0b",
+  "jobState": "completed",
+  "reviewStatus": "pending-adversarial-review",
+  "archivedAt": "2026-09-16T03:55:08.828Z",
+  "contributors": [
+    {
+      "tokenId": "1",
+      "agentId": "10259"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "r3-report",
+      "path": "artifacts/r3-report.md",
+      "hash": "f2c28375dc5ae9f2a3df4a1190c1608344afa1c3c95ad2e8cb043d709d086dc9",
+      "mediaType": "text/markdown",
+      "bytes": 43272,
+      "submissionHash": "b7b5bafa29c984abc670981d56cf0c6934f1460715f188c0c80ed44876c36ffd",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/f2c28375dc5ae9f2a3df4a1190c1608344afa1c3c95ad2e8cb043d709d086dc9",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r3-report.md"
+    },
+    {
+      "name": "r3-data",
+      "path": "artifacts/r3-data.json",
+      "hash": "3c44a8de9e788ea27d13c094148ed8de86e3332f493f31fc818b8903bfab0b70",
+      "mediaType": "application/json",
+      "bytes": 87718,
+      "submissionHash": "b7b5bafa29c984abc670981d56cf0c6934f1460715f188c0c80ed44876c36ffd",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/3c44a8de9e788ea27d13c094148ed8de86e3332f493f31fc818b8903bfab0b70",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r3-data.json"
+    }
+  ],
+  "verification": {
+    "artifactHashes": "verified",
+    "fileSizes": "verified",
+    "jsonParsing": "checked",
+    "internalReferences": "resolved",
+    "historicalClaims": "not independently verified"
+  },
+  "coordinatorReview": "coordinator-review.json",
+  "independenceNote": "A separate assignment alone is not proof of independent corroboration. Campaign review independence remains to be established."
+}

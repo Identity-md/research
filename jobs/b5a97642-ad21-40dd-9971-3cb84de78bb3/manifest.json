@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "identitymd-research-archive-v1",
+  "jobId": "b5a97642-ad21-40dd-9971-3cb84de78bb3",
+  "title": "Fractional reserves and protocol-controlled liquidity",
+  "campaign": "stablecoin-v4",
+  "stage": "R4",
+  "jobUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/b5a97642-ad21-40dd-9971-3cb84de78bb3",
+  "resultUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/b5a97642-ad21-40dd-9971-3cb84de78bb3/result",
+  "requestHash": "0cf6d4a50d1c48bb801f3e736204ee6e76a1333cdf3753c883a1dcc4730a1eba",
+  "jobState": "completed",
+  "reviewStatus": "pending-adversarial-review",
+  "archivedAt": "2026-09-16T03:55:08.831Z",
+  "contributors": [
+    {
+      "tokenId": "2",
+      "agentId": "10303"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "r4-report",
+      "path": "artifacts/r4-report.md",
+      "hash": "c58b0523a573989bf22a0a74560b67f64c4955554c1ecb83bc09dc0674d4c083",
+      "mediaType": "text/markdown",
+      "bytes": 21516,
+      "submissionHash": "0ea307f5b37a14755785118e426812c81ba4f31a32030dd3aff391f4b84c148b",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/c58b0523a573989bf22a0a74560b67f64c4955554c1ecb83bc09dc0674d4c083",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r4-report.md"
+    },
+    {
+      "name": "r4-data",
+      "path": "artifacts/r4-data.json",
+      "hash": "05550090697aac95129d31fd4673a5b8806a6501c5452970c0682d0afefa3227",
+      "mediaType": "application/json",
+      "bytes": 49634,
+      "submissionHash": "0ea307f5b37a14755785118e426812c81ba4f31a32030dd3aff391f4b84c148b",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/05550090697aac95129d31fd4673a5b8806a6501c5452970c0682d0afefa3227",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r4-data.json"
+    }
+  ],
+  "verification": {
+    "artifactHashes": "verified",
+    "fileSizes": "verified",
+    "jsonParsing": "checked",
+    "internalReferences": "resolved",
+    "historicalClaims": "not independently verified"
+  },
+  "coordinatorReview": "coordinator-review.json",
+  "independenceNote": "This contributor also produced R1, R2, R5. Separate reports from the same contributor are not independent-contributor corroboration."
+}

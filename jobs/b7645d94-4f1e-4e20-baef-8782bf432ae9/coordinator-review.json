@@ -1,0 +1,103 @@
+{
+  "stage": "R5",
+  "jobId": "b7645d94-4f1e-4e20-baef-8782bf432ae9",
+  "reviewedAt": "2026-09-16T03:53:31.381Z",
+  "status": "retained-for-synthesis-with-gaps",
+  "contributor": {
+    "tokenId": "2",
+    "agentId": "10303"
+  },
+  "artifactHashesVerified": true,
+  "jsonParsePassed": true,
+  "requiredKeysPresent": true,
+  "checkedFieldTypesValid": true,
+  "uniqueRecordIds": true,
+  "internalReferencesResolved": true,
+  "reportIdsResolved": true,
+  "reportUrlsInSourceRegister": true,
+  "validationDetails": {
+    "missingKeys": [],
+    "invalidFields": [],
+    "duplicateIds": [],
+    "unresolvedReferences": [],
+    "versionOwnerMismatches": [],
+    "unresolvedReportIds": [],
+    "unregisteredReportUrls": []
+  },
+  "counts": {
+    "protocols": 8,
+    "sources": 23,
+    "claims": 25,
+    "searchLog": 7,
+    "exclusions": 3,
+    "uncertainties": 7,
+    "versions": 8,
+    "deepCases": 4,
+    "primarySources": 23,
+    "partialSources": 0,
+    "inaccessibleSources": 0,
+    "internalReferencesChecked": 222,
+    "reportIdsChecked": 39
+  },
+  "provenanceObservations": {
+    "timestampsBeforeSubmission": [],
+    "factualClaimsWithoutRetrievedSource": [],
+    "sharedSourceRetrievalTimestamps": [
+      "2026-09-16T03:48:11Z"
+    ],
+    "note": "Source access classifications and retrieval times are worker-reported; the coordinator did not independently retrieve or timestamp source pages."
+  },
+  "verificationLimit": "Coordinator checked accepted artifact hashes and sizes, JSON parsing, required fields, selected types/enumerations, record IDs, internal/report references and visible coverage/provenance gaps. No historical claim, source authenticity, source completeness, deployed bytecode or economic mechanism was independently certified. Server acceptance was structural only; adversarial review is pending.",
+  "coverageGaps": [
+    "The report explicitly defines verified as an address identified by a first-party deployment/code manifest, not an explorer bytecode match. Its verified flags therefore must not be read as independently verified deployments; reconcile with the campaign verification requirement before synthesis.",
+    "Kava historical collateral ratios, ceilings, oracle feeders and gateway authorities by upgrade height remain missing; current module docs cannot establish all 2020–2021 parameter values.",
+    "VAI launch contracts, source commits, liquidation formulas and final 2021 bad-debt accounting remain unresolved. Maker PSM/bridge histories and Synthetix deployment and post-2021 incident timelines are incomplete.",
+    "Canonical-versus-bridged DAI/LUSD supplies and custody inventories were not reconciled. No complete peg/supply time series was gathered.",
+    "BitUSD and NuBits are labeled ancestry while their material activity in the target window remains unresolved. This is a research gap, not evidence that they should be excluded from the wider census."
+  ],
+  "workerRecordedUncertainties": [
+    {
+      "id": "R5-U001",
+      "protocolId": "R5-P004",
+      "question": "What exact Kava collateral, ratios, ceilings, oracle feeders and gateway authorities applied at each 2020-2021 upgrade height?",
+      "priority": "high"
+    },
+    {
+      "id": "R5-U002",
+      "protocolId": "R5-P005",
+      "question": "What exact VAI contracts/code and audited bad-debt ledger governed the May 2021 event?",
+      "priority": "high"
+    },
+    {
+      "id": "R5-U003",
+      "protocolId": "R5-P001",
+      "question": "Which DAI bridges/custodians and PSM parameter changes were live on each date?",
+      "priority": "high"
+    },
+    {
+      "id": "R5-U004",
+      "protocolId": "R5-P003",
+      "question": "When exactly were SIP-120 and SIP-165 components deployed on each chain, and what later sUSD peg incidents caused realized losses?",
+      "priority": "medium"
+    },
+    {
+      "id": "R5-U005",
+      "protocolId": "R5-P002",
+      "question": "Which non-Ethereum LUSD representations existed, and who controlled each bridge?",
+      "priority": "medium"
+    },
+    {
+      "id": "R5-U006",
+      "protocolId": "R5-P007",
+      "question": "Was BitUSD materially active during 2020-2021?",
+      "priority": "low"
+    },
+    {
+      "id": "R5-U007",
+      "protocolId": "R5-P008",
+      "question": "Was NuBits materially active during 2020-2021, and under which monetary version?",
+      "priority": "low"
+    }
+  ],
+  "nextGate": "Preserve accepted originals, reconcile overlapping research lanes and unresolved evidence in synthesis, and perform the approved adversarial reviews before presenting a design or factual completeness claim. Separate assignments from the same contributor do not count as independent-contributor corroboration."
+}
