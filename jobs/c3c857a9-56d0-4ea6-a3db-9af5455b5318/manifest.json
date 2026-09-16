@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "identitymd-research-archive-v1",
+  "jobId": "c3c857a9-56d0-4ea6-a3db-9af5455b5318",
+  "title": "Debt, coupon and seigniorage lineages",
+  "campaign": "stablecoin-v4",
+  "stage": "R2",
+  "jobUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/c3c857a9-56d0-4ea6-a3db-9af5455b5318",
+  "resultUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/c3c857a9-56d0-4ea6-a3db-9af5455b5318/result",
+  "requestHash": "fa59b9f2750591257d9346ffbc1438408b1723c53e6ad03eece5213bce8f80a9",
+  "jobState": "completed",
+  "reviewStatus": "pending-adversarial-review",
+  "archivedAt": "2026-09-16T03:33:06.328Z",
+  "contributors": [
+    {
+      "tokenId": "2",
+      "agentId": "10303"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "r2-report",
+      "path": "artifacts/r2-report.md",
+      "hash": "7d8a8e3befe63a007ea9336e3bdcbe4285fd25d41aa98dcde828a27d72e62922",
+      "mediaType": "text/markdown",
+      "bytes": 21604,
+      "submissionHash": "4c85da4c9ac4a68297b0b6638a156829b08779801afe656b2b427c35ebe31742",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/7d8a8e3befe63a007ea9336e3bdcbe4285fd25d41aa98dcde828a27d72e62922",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r2-report.md"
+    },
+    {
+      "name": "r2-data",
+      "path": "artifacts/r2-data.json",
+      "hash": "8feb40cf60566af2982773105791943f0b3a1e468a956ca172a305e19b429117",
+      "mediaType": "application/json",
+      "bytes": 53094,
+      "submissionHash": "4c85da4c9ac4a68297b0b6638a156829b08779801afe656b2b427c35ebe31742",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/8feb40cf60566af2982773105791943f0b3a1e468a956ca172a305e19b429117",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r2-data.json"
+    }
+  ],
+  "verification": {
+    "artifactHashes": "verified",
+    "fileSizes": "verified",
+    "jsonParsing": "checked",
+    "historicalClaims": "not independently verified"
+  },
+  "independenceNote": "R1 and R2 were produced by the same contributor. Separate reports do not constitute independent-contributor corroboration."
+}

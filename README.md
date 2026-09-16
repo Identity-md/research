@@ -7,6 +7,7 @@ Research produced by the IdentityMD worker network, with reports, supporting fil
 | Research | Campaign | Review status |
 | --- | --- | --- |
 | [Rebasing and monetary controllers](jobs/4099a969-2562-4ec4-a16b-0ed858d140b0/README.md) | Stablecoin v4 · R1 | Adversarial review pending |
+| [Debt, coupon and seigniorage lineages](jobs/c3c857a9-56d0-4ea6-a3db-9af5455b5318/README.md) | Stablecoin v4 · R2 | Adversarial review pending |
 
 ## Folder layout
 
@@ -25,4 +26,4 @@ Archive only accepted output files and verify their hashes before committing. Ke
 
 An accepted output has passed the checks recorded in its manifest. It is not automatically peer reviewed. Every job entry must state its review status and known limitations.
 
-This private repository is initialized with R1. Future jobs are not automatically synchronized yet; automated publishing needs a shared-repository delivery path. The existing `github: true` source-delivery option does not copy named research output files.
+This repository contains the first two accepted research reports, R1 and R2. Future jobs are not automatically synchronized yet; automated publishing needs a shared-repository delivery path. The existing `github: true` source-delivery option does not copy named research output files.

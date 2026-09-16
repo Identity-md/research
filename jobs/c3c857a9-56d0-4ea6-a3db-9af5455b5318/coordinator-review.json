@@ -1,0 +1,67 @@
+{
+  "stage": "R2",
+  "jobId": "c3c857a9-56d0-4ea6-a3db-9af5455b5318",
+  "reviewedAt": "2026-09-16T03:32:50.607Z",
+  "status": "retained-for-synthesis-with-gaps",
+  "contributor": {
+    "tokenId": "2",
+    "agentId": "10303"
+  },
+  "artifactHashesVerified": true,
+  "checkedArtifacts": [
+    {
+      "name": "r2-report",
+      "hash": "7d8a8e3befe63a007ea9336e3bdcbe4285fd25d41aa98dcde828a27d72e62922",
+      "bytes": 21604,
+      "matchesAcceptedArtifact": true
+    },
+    {
+      "name": "r2-data",
+      "hash": "8feb40cf60566af2982773105791943f0b3a1e468a956ca172a305e19b429117",
+      "bytes": 53094,
+      "matchesAcceptedArtifact": true
+    }
+  ],
+  "jsonParsePassed": true,
+  "requiredKeysPresent": true,
+  "checkedFieldTypesValid": true,
+  "uniqueRecordIds": true,
+  "internalReferencesResolved": true,
+  "reportIdsResolved": true,
+  "reportUrlsInSourceRegister": true,
+  "validationDetails": {
+    "missingKeys": [],
+    "typeErrors": [],
+    "duplicateIds": [],
+    "invalidReferences": [],
+    "reportMissingIds": [],
+    "reportUrlsAbsentFromRegister": []
+  },
+  "counts": {
+    "protocols": 9,
+    "sources": 24,
+    "claims": 25,
+    "searchLog": 8,
+    "exclusions": 5,
+    "uncertainties": 8,
+    "versions": 11,
+    "deepCases": 4,
+    "primarySources": 21,
+    "partialSources": 2,
+    "internalReferencesChecked": 243,
+    "reportIdsChecked": 56
+  },
+  "verificationLimit": "Coordinator inspected the supplied report and dataset for artifact integrity, required fields, ID/reference consistency and visible coverage/provenance gaps. No external source was independently retrieved, historical claim certified, or economic mechanism reproduced. Server acceptance was structural only. Source access and primary-source classifications remain worker-reported.",
+  "coverageGaps": [
+    "Four deep cases: ESD, DSD, Basis Cash and BUILD Finance Basis Gold. Basis Dollar and Mith Cash remain triaged; bDollar and Tomb have unresolved research depth. This is not a comprehensive census; cross-chain coverage is mainly an unresolved discovery queue.",
+    "DSD canonical DAO commits, deployment/control histories and mechanism activation remain missing; verified token code cannot establish the monetary controller.",
+    "ESD governance activation blocks, migration accounting and holder recoveries were not reconstructed. Basis Cash final mint/shutdown and remaining BAB redemption state, Basis Gold treasury bytecode/terminal state, and Mith Cash MIC2/MIS3 claim migration remain unresolved.",
+    "Basis Cash v1/BIP variants are grouped rather than matched to distinct on-chain activation intervals; original Basis cancellation evidence is successor material, not the primary cancellation announcement.",
+    "Price outcomes were not reproduced from market data. R2-S023 is a partial Reddit summary mirror; R2-S024 is a partial publication index/snippet for Basis v2 timing. These cannot establish complete historical mechanics or precise event outcomes.",
+    "All 24 source retrievedAt values and all 8 search-log timestamps are 2026-09-16T00:00:00Z, before this assignment was submitted at 03:02:13.978Z. Treat them as unverified date-level placeholders, not actual retrieval timestamps; obtain real provenance before chronology-dependent synthesis.",
+    "Report narrative labels bDollar as triaged whereas the JSON correctly leaves eligibility and researchDepth unresolved; Tomb has no supporting source or claim IDs. Preserve unresolved status in synthesis.",
+    "The report genealogy paragraph ends its Mith Cash discussion with R2-C024, but that dataset claim concerns Basis Dollar; Mith Cash identity is R2-C025. The report also calls R2-C011 a project claim where the dataset marks its contradictory DSD parameter descriptions contested. Citation and evidence-label alignment needs correction before publication.",
+    "Excluded comparison families and Heco Basis Gold have no local source/claim references. Their omission is lane scope, not evidence that they fall outside the wider campaign census."
+  ],
+  "nextGate": "S1 must preserve these uncertainty and provenance flags, reconcile the six research lanes and commission targeted gap repairs before design conclusions or public synthesis. Do not overwrite the accepted original artifacts with coordinator corrections."
+}
