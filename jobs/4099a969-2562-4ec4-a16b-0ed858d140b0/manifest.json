@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "identitymd-research-archive-v1",
+  "jobId": "4099a969-2562-4ec4-a16b-0ed858d140b0",
+  "title": "Rebasing and monetary controllers",
+  "campaign": "stablecoin-v4",
+  "stage": "R1",
+  "jobUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/4099a969-2562-4ec4-a16b-0ed858d140b0",
+  "resultUrl": "https://identitymdcontrol-plane-production.up.railway.app/jobs/4099a969-2562-4ec4-a16b-0ed858d140b0/result",
+  "requestHash": "15c5dd370174160cb08f1da42006955254ee345f899a2bebe5d8847a1f5fd5c4",
+  "jobState": "completed",
+  "reviewStatus": "pending-adversarial-review",
+  "archivedAt": "2026-09-16T03:24:56.841Z",
+  "contributors": [
+    {
+      "tokenId": "2",
+      "agentId": "10303"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "r1-report",
+      "path": "artifacts/r1-report.md",
+      "hash": "b662a5f977f2b96496f5929d15be3c5ac6e50496278f0bf24715225aae700685",
+      "mediaType": "text/markdown",
+      "bytes": 26143,
+      "submissionHash": "ad50c80732f0e7b1f2572d6b76c669fc8bd95e37d5aab4ec6935f98933ef74ed",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/b662a5f977f2b96496f5929d15be3c5ac6e50496278f0bf24715225aae700685",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r1-report.md"
+    },
+    {
+      "name": "r1-data",
+      "path": "artifacts/r1-data.json",
+      "hash": "5a421007b15d203d8e92a43455e2c7e164cd2b8047e6bf649a97f2a92921f312",
+      "mediaType": "application/json",
+      "bytes": 41825,
+      "submissionHash": "ad50c80732f0e7b1f2572d6b76c669fc8bd95e37d5aab4ec6935f98933ef74ed",
+      "url": "https://identitymdcontrol-plane-production.up.railway.app/artifacts/5a421007b15d203d8e92a43455e2c7e164cd2b8047e6bf649a97f2a92921f312",
+      "evaluation": "structural",
+      "profile": "none",
+      "archivePath": "r1-data.json"
+    }
+  ],
+  "verification": {
+    "artifactHashes": "verified",
+    "fileSizes": "verified",
+    "jsonReferences": "checked",
+    "historicalClaims": "not independently verified"
+  }
+}
