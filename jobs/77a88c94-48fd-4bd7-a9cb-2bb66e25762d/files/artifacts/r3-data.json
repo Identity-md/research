@@ -1,0 +1,2311 @@
+{
+  "schemaVersion": "stablecoin-research-v1",
+  "campaignId": "stablecoin-v4",
+  "assignmentId": "R3",
+  "asOfUtc": "2026-09-16T03:41:09.040263Z",
+  "scopeWindow": {
+    "start": "2020-01-01",
+    "end": "2021-12-31"
+  },
+  "coverage": {
+    "searchedChains": [
+      "Terra / Terra Classic",
+      "Ethereum",
+      "Waves",
+      "Arbitrum One (later history)",
+      "BNB Smart Chain (ported-asset leads)"
+    ],
+    "searchedFamilies": [
+      "Terra",
+      "Beanstalk",
+      "Neutrino",
+      "Basis Cash",
+      "Empty Set Dollar",
+      "DeFo and Basis relatives (discovery only)"
+    ],
+    "deepCaseIds": [
+      "R3-P001",
+      "R3-P002",
+      "R3-P003",
+      "R3-P004"
+    ],
+    "completenessClaim": false,
+    "stoppingReason": "Bounded seed-first investigation completed four deep families and one triaged contrast; stopped to write and validate artifacts. Historical code/deployment and later-outcome gaps remain; no TaskDescriptor numeric hard budget was supplied in the visible assignment."
+  },
+  "protocols": [
+    {
+      "id": "R3-P001",
+      "name": "TerraUSD / LUNA",
+      "aliases": [
+        "UST",
+        "USTC",
+        "Terra Classic",
+        "LUNC"
+      ],
+      "chains": [
+        "Terra (later Terra Classic)"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "September 2020 launch announcement and 2021 governance establish activity.",
+        "claimIds": [
+          "R3-C001",
+          "R3-C004"
+        ]
+      },
+      "researchDepth": "deep",
+      "classification": [
+        "endogenous mint/burn convertibility",
+        "seigniorage",
+        "2022 discretionary external reserve support"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "TerraKRW / TerraMNT",
+          "relationship": "Non-USD sibling denominations",
+          "evidenceClaimIds": [
+            "R3-C041"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R3-P001-V1",
+          "label": "UST before Columbus-5",
+          "startDate": "2020-09-12",
+          "endDate": "2021-09-30",
+          "tokenRoles": "UST dollar target; LUNA staking, governance and volatility absorber. KRT/MNT have non-USD targets.",
+          "backing": "LUNA conversion capacity; not segregated dollar collateral.",
+          "redemption": "Oracle-valued conversion to LUNA, subject to spreads and capacity.",
+          "supplyPolicy": "UST expansion consumes LUNA; contraction issues LUNA; seigniorage also allocated to community/oracle rewards.",
+          "debtAndIncentives": "No conventional collateralized borrower debt ceiling established; LUNA value depends partly on ecosystem usage.",
+          "oracle": "Validator price reporting; lag and reference-market depth constrain safe conversion.",
+          "governanceAndAdmin": "Governance proposals alter market parameters; validators implement upgrades.",
+          "liquidityDependencies": "LUNA markets and UST AMMs; conversion is not cash withdrawal.",
+          "claimIds": [
+            "R3-C001",
+            "R3-C002",
+            "R3-C004",
+            "R3-C041"
+          ]
+        },
+        {
+          "id": "R3-P001-V2",
+          "label": "Columbus-5",
+          "startDate": "2021-09-30",
+          "endDate": null,
+          "tokenRoles": "UST and LUNA roles retained.",
+          "backing": "No new external collateral created by full seigniorage burn.",
+          "redemption": "Oracle-valued LUNA conversion with market-module limits.",
+          "supplyPolicy": "All seigniorage burned; swap fees redirected to validators.",
+          "debtAndIncentives": "Anchor subsidized deposit yield from a finite reserve and incentivized borrowers.",
+          "oracle": "Validator reporting remains essential.",
+          "governanceAndAdmin": "Columbus upgrade plus parameter governance.",
+          "liquidityDependencies": "Anchor withdrawal demand, UST pools and LUNA sale depth.",
+          "claimIds": [
+            "R3-C003",
+            "R3-C005"
+          ]
+        },
+        {
+          "id": "R3-P001-V3",
+          "label": "2022 reserve defense and collapse",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "UST liability-like target; LUNA dilution absorber; external reserve assets used in defense.",
+          "backing": "Discretionary LFG/TFL reserves supplemented endogenous conversion.",
+          "redemption": "Failed durable dollar parity; conversion subjected LUNA to issuance and selling.",
+          "supplyPolicy": "Contraction and LUNA issuance feedback during run.",
+          "debtAndIncentives": "Reserve-funded demand defense exhausted effectiveness.",
+          "oracle": "No incident-specific oracle compromise established.",
+          "governanceAndAdmin": "Emergency measures and later revival proposal.",
+          "liquidityDependencies": "CEXs, Curve, Anchor and native chain access.",
+          "claimIds": [
+            "R3-C006",
+            "R3-C007"
+          ]
+        },
+        {
+          "id": "R3-P001-V4",
+          "label": "Classic legacy and new-chain/company aftermath",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "Legacy UST/LUNA and new-chain LUNA must be separated.",
+          "backing": "No restored par backing demonstrated.",
+          "redemption": "Snapshot airdrop/claims processes are not $1 redemption.",
+          "supplyPolicy": "Revival plan removes algorithmic stablecoin modules from new chain.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": "Separate chain governance and TFL wind-down.",
+          "liquidityDependencies": "Legacy trading and recovery processes; present execution not measured.",
+          "claimIds": [
+            "R3-C008",
+            "R3-C009"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": "2022-05",
+          "versionId": "R3-P001-V3",
+          "type": "run and reflexive monetary collapse",
+          "summary": "UST peg defense failed amid joint UST/LUNA collapse.",
+          "beneficiaries": "Earlier successful exiters; individual attacker profits unresolved.",
+          "lossBearers": "Remaining UST holders, diluted LUNA holders and exposed liquidity providers.",
+          "outcome": "Revival plan without algorithmic stablecoin.",
+          "claimIds": [
+            "R3-C006",
+            "R3-C007",
+            "R3-C008"
+          ]
+        },
+        {
+          "date": "2024-09-30",
+          "versionId": "R3-P001-V4",
+          "type": "corporate wind-down",
+          "summary": "TFL reports winding down.",
+          "beneficiaries": null,
+          "lossBearers": "Claimants; recovery amount not verified.",
+          "outcome": "2025 claims portal announcement; not chain shutdown.",
+          "claimIds": [
+            "R3-C009"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R3-S001",
+        "R3-S002",
+        "R3-S003",
+        "R3-S004",
+        "R3-S005",
+        "R3-S006",
+        "R3-S007",
+        "R3-S008",
+        "R3-S009",
+        "R3-S010"
+      ],
+      "claimIds": [
+        "R3-C001",
+        "R3-C002",
+        "R3-C003",
+        "R3-C004",
+        "R3-C005",
+        "R3-C006",
+        "R3-C007",
+        "R3-C008",
+        "R3-C009",
+        "R3-C041"
+      ]
+    },
+    {
+      "id": "R3-P002",
+      "name": "Beanstalk",
+      "aliases": [
+        "BEAN",
+        "Bean"
+      ],
+      "chains": [
+        "Ethereum",
+        "Arbitrum One"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "Launch record August 6, 2021.",
+        "claimIds": [
+          "R3-C010"
+        ]
+      },
+      "researchDepth": "deep",
+      "classification": [
+        "uncollateralized credit",
+        "non-convertible dollar target",
+        "governance exploit recovery"
+      ],
+      "targetUnit": "USD",
+      "lineage": [],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R3-P002-V1",
+          "label": "Launch source snapshot",
+          "startDate": "2021-08-06",
+          "endDate": null,
+          "tokenRoles": "Bean target token; Pods ordered future-Bean debt; Stalk governance/seigniorage participation; Seeds grow Stalk.",
+          "backing": "No collateral redemption; Silo deposits and LP assets are custody/liquidity, not universal Bean backing.",
+          "redemption": "Sell on market; sow for Pods, not par dollars or Stalk.",
+          "supplyPolicy": "Seasonal oracle/reserve imbalance expands supply or offers Soil; sowing burns Beans.",
+          "debtAndIncentives": "Soil limits new credit; Weather changes promised Pod yield; ordered debt waits for issuance.",
+          "oracle": "BEAN/ETH and USDC/ETH Uniswap cumulative-price comparison.",
+          "governanceAndAdmin": "Stalk voting, diamond-cut upgrades, emergency commit, owner pause.",
+          "liquidityDependencies": "Bean AMM depth, dollar reference pool and willing lenders.",
+          "claimIds": [
+            "R3-C010",
+            "R3-C011",
+            "R3-C012",
+            "R3-C013",
+            "R3-C014"
+          ]
+        },
+        {
+          "id": "R3-P002-V2",
+          "label": "Updated pre-exploit and paused recovery",
+          "startDate": null,
+          "endDate": "2022-08-06",
+          "tokenRoles": "Same credit family, with intervening BIPs; not all facets reconstructed.",
+          "backing": "Liquidity/custodied non-Bean assets stolen.",
+          "redemption": "No demonstrated par collateral redemption existed.",
+          "supplyPolicy": "Paused after exploit.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": "Flash-loan governance takeover; governance disabled.",
+          "liquidityDependencies": "Loss of non-Bean pool assets impaired market exit.",
+          "claimIds": [
+            "R3-C015",
+            "R3-C016"
+          ]
+        },
+        {
+          "id": "R3-P002-V3",
+          "label": "Replant",
+          "startDate": "2022-08-06",
+          "endDate": null,
+          "tokenRoles": "Replacement Bean, Unripe assets, Fertilizer and legacy credit/deposit claims.",
+          "backing": "Barn Raise recapitalization of stolen non-Bean liquidity; no universal dollar backing.",
+          "redemption": "Unripe recovery conditional; Bean remains market/credit based.",
+          "supplyPolicy": "Future issuance supports recovery and credit/deposit incentives.",
+          "debtAndIncentives": "Fertilizer recapitalizers receive contingent future issuance; creditor demand still required.",
+          "oracle": null,
+          "governanceAndAdmin": "Snapshot plus 5-of-9 community multisig.",
+          "liquidityDependencies": "Restored LP liquidity and new risk capital.",
+          "claimIds": [
+            "R3-C017",
+            "R3-C018"
+          ]
+        },
+        {
+          "id": "R3-P002-V4",
+          "label": "Arbitrum Reseed",
+          "startDate": null,
+          "endDate": "2026-08-23",
+          "tokenRoles": "Arbitrum Bean replaces Ethereum instances; migration semantics distinct.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": "BIP-50 includes generalized shipment allocation of new mints.",
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": "Community upgrade/migration process.",
+          "liquidityDependencies": "Arbitrum Wells; complete revised oracle and incentive settings not reconstructed.",
+          "claimIds": [
+            "R3-C019"
+          ]
+        },
+        {
+          "id": "R3-P002-V5",
+          "label": "Reported EBIP-23 custody and RFF change",
+          "startDate": "2026-08-23",
+          "endDate": null,
+          "tokenRoles": "Bean credit family retained; additional RFF process.",
+          "backing": "Reported removed liquidity held as BEAN/wstETH by separate multisig.",
+          "redemption": "AMM at higher slippage or asynchronous RFF; not par dollar redemption.",
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": "Reported 2-of-3 RFF multisig controlled by subset of BCM.",
+          "liquidityDependencies": "90% withdrawal from BEAN:wstETH Well; reported local LP shortfall.",
+          "claimIds": [
+            "R3-C020"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": "2022-04-17",
+          "versionId": "R3-P002-V2",
+          "type": "governance exploit",
+          "summary": "Flash loan enabled governance takeover and theft.",
+          "beneficiaries": "Attacker.",
+          "lossBearers": "Silo depositors, LPs, Bean holders and future claimants.",
+          "outcome": "Pause, governance removal, later Replant.",
+          "claimIds": [
+            "R3-C015",
+            "R3-C016",
+            "R3-C017"
+          ]
+        },
+        {
+          "date": "2026-08-23",
+          "versionId": "R3-P002-V5",
+          "type": "reported defensive liquidity/custody redesign",
+          "summary": "EBIP-23 reports withdrawing most principal Well liquidity.",
+          "beneficiaries": "No realized gains verified; intended protection of participants.",
+          "lossBearers": "Users face higher slippage or delayed multisig-dependent fills.",
+          "outcome": "Execution/balances not independently verified.",
+          "claimIds": [
+            "R3-C020"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R3-S011",
+        "R3-S012",
+        "R3-S013",
+        "R3-S014",
+        "R3-S015",
+        "R3-S016",
+        "R3-S017",
+        "R3-S018",
+        "R3-S019",
+        "R3-S020",
+        "R3-S021"
+      ],
+      "claimIds": [
+        "R3-C010",
+        "R3-C011",
+        "R3-C012",
+        "R3-C013",
+        "R3-C014",
+        "R3-C015",
+        "R3-C016",
+        "R3-C017",
+        "R3-C018",
+        "R3-C019",
+        "R3-C020"
+      ]
+    },
+    {
+      "id": "R3-P003",
+      "name": "Neutrino USD / XTN",
+      "aliases": [
+        "USDN",
+        "Neutrino Index Token",
+        "NSBT",
+        "SURF"
+      ],
+      "chains": [
+        "Waves",
+        "Ethereum (ported representation)",
+        "BNB Smart Chain (project-reported port)"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "2019 launch with explicit 2020 activity.",
+        "claimIds": [
+          "R3-C021"
+        ]
+      },
+      "researchDepth": "deep",
+      "classification": [
+        "volatile native-chain collateral",
+        "recapitalization token",
+        "capacity-rationed convertibility",
+        "later floating basket index"
+      ],
+      "targetUnit": "USD originally; floating reserve-basket index after transformation",
+      "lineage": [],
+      "deployments": [
+        {
+          "chain": "Waves",
+          "address": "3PC9BfRwJWWiw9AREE2B3eWzCks3CYtg4yo",
+          "verified": null,
+          "sourceIds": [
+            "R3-S028"
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "id": "R3-P003-V1",
+          "label": "Original USDN and NSBT",
+          "startDate": "2019-11-25",
+          "endDate": "2021-01-15",
+          "tokenRoles": "USDN dollar target; WAVES reserve; NSBT recapitalization/governance.",
+          "backing": "Locked WAVES, not burned WAVES; NSBT not identical to backing asset.",
+          "redemption": "Conversion draws from finite WAVES reserve; historical timing/fees unresolved.",
+          "supplyPolicy": "Release/relock preissued USDN; WAVES deposited/returned.",
+          "debtAndIncentives": "NSBT attracts recapitalization; staking yield derives from WAVES leasing.",
+          "oracle": "WAVES valuation necessary; 2020 operator set and exact feeds unresolved.",
+          "governanceAndAdmin": "NSBT governance functions expanded in 2020; exact admin authority unresolved.",
+          "liquidityDependencies": "WAVES liquidity, staking operations, exchanges and bridges.",
+          "claimIds": [
+            "R3-C021",
+            "R3-C022",
+            "R3-C042"
+          ]
+        },
+        {
+          "id": "R3-P003-V2",
+          "label": "Moon Factor",
+          "startDate": "2021-01-15",
+          "endDate": null,
+          "tokenRoles": "USDN/WAVES retained; NSBT supply-limited recap token.",
+          "backing": "WAVES reserves.",
+          "redemption": "NSBT auction sellBond and other functions removed; no assumption of permanent original NSBT redemption.",
+          "supplyPolicy": "NSBT issue curve depends on backing ratio and supply.",
+          "debtAndIncentives": "Maximum NSBT supply 2,835,689; cap is not a guarantee of sufficient new capital.",
+          "oracle": null,
+          "governanceAndAdmin": "Community vote preceded update.",
+          "liquidityDependencies": "Demand for scarce recapitalization token.",
+          "claimIds": [
+            "R3-C023"
+          ]
+        },
+        {
+          "id": "R3-P003-V3",
+          "label": "2022 restricted swaps and SURF",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "USDN/WAVES, NSBT/gNSBT and later SURF.",
+          "backing": "WAVES with impaired recap capacity.",
+          "redemption": "gNSBT-linked daily swap limits; SURF contingent conversion.",
+          "supplyPolicy": "SURF repayment at backing threshold issues circulating USDN.",
+          "debtAndIncentives": "SURF sells recovery exposure; conversion at 115% BR may require multiple cycles.",
+          "oracle": null,
+          "governanceAndAdmin": "Staking affects swaps, fees and votes.",
+          "liquidityDependencies": "WAVES reserves plus capacity rights, recapitalization demand and market depth.",
+          "claimIds": [
+            "R3-C024",
+            "R3-C025"
+          ]
+        },
+        {
+          "id": "R3-P003-V4",
+          "label": "XTN basket transformation",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "XTN floating index; legacy NSBT/SURF/gNSBT retained in redesign.",
+          "backing": "Governance-approved basket of Waves ecosystem tokens.",
+          "redemption": "Basket valuation rather than dollar par; gNSBT capacity retained in litepaper.",
+          "supplyPolicy": "Reserve-value-based issuance with weight incentives; release/relock architecture.",
+          "debtAndIncentives": "SURF conversion moves to XTN-price condition in redesign.",
+          "oracle": "Basket valuation and control contract; exact deployed provider set unknown.",
+          "governanceAndAdmin": "Governance selects reserve tokens and weight parameters.",
+          "liquidityDependencies": "Basket sale liquidity and swap access.",
+          "claimIds": [
+            "R3-C026",
+            "R3-C027",
+            "R3-C029"
+          ]
+        },
+        {
+          "id": "R3-P003-V5",
+          "label": "Power DAO transition announcement",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "gNSBT plus staked POWER governance incentives.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": "October 2023 scheduled governance transition; execution unresolved.",
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R3-C028"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": "2022-06-17",
+          "versionId": "R3-P003-V3",
+          "type": "reserve and recapitalization capacity crisis",
+          "summary": "Project acknowledged NSBT issuance capacity insufficient in stressed conditions.",
+          "beneficiaries": "Earlier exiters retain access to finite reserves; recap investors offered fees/upside.",
+          "lossBearers": "USDN holders unable to exit at par; NSBT/SURF investors take recovery risk.",
+          "outcome": "SURF recapitalization and later abandonment of dollar peg.",
+          "claimIds": [
+            "R3-C024",
+            "R3-C025",
+            "R3-C026"
+          ]
+        },
+        {
+          "date": null,
+          "versionId": "R3-P003-V4",
+          "type": "target redesign",
+          "summary": "USDN transformed to floating XTN basket index.",
+          "beneficiaries": null,
+          "lossBearers": "Legacy holders retain market exposure rather than proven $1 restitution.",
+          "outcome": "February 2023 AMM adaptation; later governance changes.",
+          "claimIds": [
+            "R3-C026",
+            "R3-C028"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R3-S022",
+        "R3-S023",
+        "R3-S024",
+        "R3-S025",
+        "R3-S026",
+        "R3-S027",
+        "R3-S028",
+        "R3-S029",
+        "R3-S030"
+      ],
+      "claimIds": [
+        "R3-C021",
+        "R3-C022",
+        "R3-C023",
+        "R3-C024",
+        "R3-C025",
+        "R3-C026",
+        "R3-C027",
+        "R3-C028",
+        "R3-C029",
+        "R3-C030",
+        "R3-C042"
+      ]
+    },
+    {
+      "id": "R3-P004",
+      "name": "Basis Cash",
+      "aliases": [
+        "BAC",
+        "BAB",
+        "BAS"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "February 2021 project retrospective establishes launch about two months earlier.",
+        "claimIds": [
+          "R3-C032"
+        ]
+      },
+      "researchDepth": "deep",
+      "classification": [
+        "uncollateralized seigniorage shares",
+        "voluntary contraction debt"
+      ],
+      "targetUnit": "USD",
+      "lineage": [
+        {
+          "relatedName": "Basis / Basecoin",
+          "relationship": "Proposal ancestry; explicitly simplified by Basis Cash",
+          "evidenceClaimIds": [
+            "R3-C043"
+          ]
+        }
+      ],
+      "deployments": [],
+      "versions": [
+        {
+          "id": "R3-P004-V1",
+          "label": "Original conceptual model",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "BAC dollar target; BAB bonds; BAS surplus seigniorage.",
+          "backing": "Future BAC demand; not externally backed dollars.",
+          "redemption": "BAB to BAC under expansion conditions; BAC has no promised BAS/dollar redemption.",
+          "supplyPolicy": "Voluntary BAC burn into discounted bonds; expansion creates BAC.",
+          "debtAndIncentives": "BAS incentives and BAB prospective recovery.",
+          "oracle": "Historical detailed deployment unresolved.",
+          "governanceAndAdmin": "Exact launch authority not verified.",
+          "liquidityDependencies": "Markets to sell BAC and voluntary bond demand.",
+          "claimIds": [
+            "R3-C031",
+            "R3-C032",
+            "R3-C043"
+          ]
+        },
+        {
+          "id": "R3-P004-V2",
+          "label": "Retrieved BIP-3/BIP-4-era source",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "BAC/BAB/BAS with treasury and seigniorage proxy.",
+          "backing": "Treasury BAC balance is own-token settlement budget.",
+          "redemption": "BAB redemption requires above-ceiling price and sufficient BAC.",
+          "supplyPolicy": "Below-par BAC burn; conversion-cap formula; above-ceiling expansion and split allocations.",
+          "debtAndIncentives": "Debt cap formula references outstanding bonds; BIP-4 source reserves part of expansion and leaves seigniorage distributions.",
+          "oracle": "Separate bond and seigniorage oracle references.",
+          "governanceAndAdmin": "Operator can change feeds, curve, routing and migrate authority.",
+          "liquidityDependencies": "Oracle pool depth plus BAB exit demand.",
+          "claimIds": [
+            "R3-C033",
+            "R3-C034"
+          ]
+        },
+        {
+          "id": "R3-P004-V3",
+          "label": "BAS V2 migration plan and delay",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "BAS V2 migration distinct from unchanged BAC/BAB.",
+          "backing": null,
+          "redemption": null,
+          "supplyPolicy": "Revised incentives proposed to restore peg.",
+          "debtAndIncentives": null,
+          "oracle": "Uniswap TWAP dependency stated by project.",
+          "governanceAndAdmin": "Team migration schedule; execution not fully reconstructed.",
+          "liquidityDependencies": "Proposed stableswap migration delayed.",
+          "claimIds": [
+            "R3-C035"
+          ]
+        }
+      ],
+      "incidents": [
+        {
+          "date": "2021-02-06",
+          "versionId": "R3-P004-V3",
+          "type": "peg stress and redesign",
+          "summary": "Team sought return to peg and delayed liquidity migration.",
+          "beneficiaries": "No realized beneficiaries established.",
+          "lossBearers": "BAC/BAB holders and liquidity providers exposed to persistent weak demand.",
+          "outcome": "V2 redesign documented; terminal status unverified.",
+          "claimIds": [
+            "R3-C035",
+            "R3-C036"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "R3-S031",
+        "R3-S032",
+        "R3-S033",
+        "R3-S034",
+        "R3-S035"
+      ],
+      "claimIds": [
+        "R3-C031",
+        "R3-C032",
+        "R3-C033",
+        "R3-C034",
+        "R3-C035",
+        "R3-C036",
+        "R3-C043"
+      ]
+    },
+    {
+      "id": "R3-P005",
+      "name": "Empty Set Dollar / Empty Set",
+      "aliases": [
+        "ESD",
+        "ESDS",
+        "ESS",
+        "DSU"
+      ],
+      "chains": [
+        "Ethereum"
+      ],
+      "eligibility": {
+        "status": "included",
+        "reason": "V1 acknowledged by 2021 audit and migration.",
+        "claimIds": [
+          "R3-C037"
+        ]
+      },
+      "researchDepth": "triaged",
+      "classification": [
+        "V1 credit/seigniorage relative",
+        "V2 reserve/stabilizer redesign"
+      ],
+      "targetUnit": "USD/USDC reference; final implementation details not fully reconstructed",
+      "lineage": [],
+      "deployments": [
+        {
+          "chain": "Ethereum",
+          "address": "0x36F3FD68E7325a35EB768F1AedaAe9EA0689d723",
+          "verified": null,
+          "sourceIds": [
+            "R3-S036"
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "id": "R3-P005-V1",
+          "label": "V1, triaged",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "ESD and coupon/deposit state; exact launch parameters unresolved.",
+          "backing": "Not reconstructed from evolving master.",
+          "redemption": "Coupon conditions not reconstructed; do not conflate with Beanstalk Pods.",
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": null,
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R3-C037"
+          ]
+        },
+        {
+          "id": "R3-P005-V2",
+          "label": "Audited V2 and August launch",
+          "startDate": null,
+          "endDate": null,
+          "tokenRoles": "Audit: ESD/ESDS/sESD; release: ESS/DSU.",
+          "backing": "Reserve/stabilizer architecture; no identical implementation asserted.",
+          "redemption": "Audited migrator excludes coupons.",
+          "supplyPolicy": null,
+          "debtAndIncentives": null,
+          "oracle": null,
+          "governanceAndAdmin": "August announcement says Treasury multisig initiated migration.",
+          "liquidityDependencies": null,
+          "claimIds": [
+            "R3-C038"
+          ]
+        }
+      ],
+      "incidents": [],
+      "sourceIds": [
+        "R3-S036",
+        "R3-S037",
+        "R3-S038"
+      ],
+      "claimIds": [
+        "R3-C037",
+        "R3-C038"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "R3-S001",
+      "url": "https://medium.com/terra-money/announcing-terrausd-ust-the-interchain-stablecoin-53eab0f8f0ac",
+      "title": "Announcing TerraUSD",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2020-09-21",
+      "eventDate": "2020-09-12",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Launch announcement, not genesis transaction; promotional adoption claims not accepted."
+    },
+    {
+      "id": "R3-S002",
+      "url": "https://medium.com/terra-money/columbus-5-launches-welcome-to-the-future-of-terra-8a9ebfa570c5",
+      "title": "Columbus-5 Launches",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-09-30",
+      "eventDate": "2021-09-30",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "Columbus-5",
+      "accessStatus": "retrieved",
+      "limitations": "Project account of upgrade; economic benefits are forecasts."
+    },
+    {
+      "id": "R3-S003",
+      "url": "https://classic-agora.terra.money/t/liquidity-parameters-2/1175",
+      "title": "Liquidity Parameters - 2",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2021-05-21",
+      "eventDate": "2021-05-21",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Jump Trading proposal; parameters proposed, not independently verified as executed."
+    },
+    {
+      "id": "R3-S004",
+      "url": "https://classic-agora.terra.money/t/liquidity-parameters-3/3895",
+      "title": "Liquidity Parameters - 3",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2022-01-29",
+      "eventDate": "2022-01-29",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Capacity numbers are proposer simulations; thread includes disputed implementation status."
+    },
+    {
+      "id": "R3-S005",
+      "url": "https://docs.anchorprotocol.com/anchor-2/protocol/anchor-governance/modify-market-parameters",
+      "title": "Anchor: Modify Market Parameters",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Undated surviving documentation; displayed rates are not a historical time series."
+    },
+    {
+      "id": "R3-S006",
+      "url": "https://lfg.org/audit/LFG-Audit-2022-11-14.pdf",
+      "title": "J.S. Held report on LFG and TFL peg defense",
+      "sourceType": "audit",
+      "isPrimary": true,
+      "publishedAt": "2022-11-09",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "Report dated November 9; filename November 14",
+      "accessStatus": "retrieved",
+      "limitations": "Commissioned investigation; uses exchange API records as well as public transactions; not an audit of monetary solvency."
+    },
+    {
+      "id": "R3-S007",
+      "url": "https://arxiv.org/html/2207.13914v3",
+      "title": "Anatomy of a Stablecoin’s failure: the Terra-Luna case",
+      "sourceType": "paper",
+      "isPrimary": true,
+      "publishedAt": "2022-09-25",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "arXiv:2207.13914v3",
+      "accessStatus": "retrieved",
+      "limitations": "Original quantitative research; narrative also cites secondary news. Coordinated-attack attribution remains disputed."
+    },
+    {
+      "id": "R3-S008",
+      "url": "https://classic-agora.terra.money/t/terra-ecosystem-revival-plan-2-passed-gov/18498",
+      "title": "Terra Ecosystem Revival Plan 2 [PASSED GOV]",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2022-05-16",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Living amended proposal; planned launch date is not proof of actual genesis."
+    },
+    {
+      "id": "R3-S009",
+      "url": "https://www.terra.money/",
+      "title": "Terraform Labs shutdown notice",
+      "sourceType": "other",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": "2024-09-30",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Company wind-down does not establish shutdown of either blockchain."
+    },
+    {
+      "id": "R3-S010",
+      "url": "https://medium.com/terra-money/terraform-labs-crypto-loss-claims-portal-launch-7e85e3222db7",
+      "title": "Terraform Labs Crypto Loss Claims Portal Launch",
+      "sourceType": "other",
+      "isPrimary": true,
+      "publishedAt": "2025-03-28",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Claims process announcement, not evidence of final recoveries."
+    },
+    {
+      "id": "R3-S011",
+      "url": "https://docs.bean.money/developers/misc/upgrade-history",
+      "title": "Beanstalk upgrade history",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project-maintained retrospective links transactions and commits; no replay performed."
+    },
+    {
+      "id": "R3-S012",
+      "url": "https://github.com/BeanstalkFarms/Beanstalk/blob/ccce0fa18a83cc09f6a889c302b6e509230a486f/protocol/contracts/farm/facets/FieldFacet/Dibbler.sol",
+      "title": "Beanstalk launch: Dibbler",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "ccce0fa18a83cc09f6a889c302b6e509230a486f",
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved through codeload snapshot; source-to-deployed-bytecode equivalence not independently checked."
+    },
+    {
+      "id": "R3-S013",
+      "url": "https://github.com/BeanstalkFarms/Beanstalk/blob/ccce0fa18a83cc09f6a889c302b6e509230a486f/protocol/contracts/farm/facets/SeasonFacet/Sun.sol",
+      "title": "Beanstalk launch: Sun and adjacent Weather/Silo facets",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "ccce0fa18a83cc09f6a889c302b6e509230a486f",
+      "accessStatus": "retrieved",
+      "limitations": "Codeload source snapshot; linked Sun imports Weather; no deployment replay."
+    },
+    {
+      "id": "R3-S014",
+      "url": "https://github.com/BeanstalkFarms/Beanstalk/blob/ccce0fa18a83cc09f6a889c302b6e509230a486f/protocol/contracts/farm/facets/OracleFacet.sol",
+      "title": "Beanstalk launch: OracleFacet",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "ccce0fa18a83cc09f6a889c302b6e509230a486f",
+      "accessStatus": "retrieved",
+      "limitations": null
+    },
+    {
+      "id": "R3-S015",
+      "url": "https://github.com/BeanstalkFarms/Beanstalk/blob/ccce0fa18a83cc09f6a889c302b6e509230a486f/protocol/contracts/farm/facets/GovernanceFacet/GovernanceFacet.sol",
+      "title": "Beanstalk launch: GovernanceFacet",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "ccce0fa18a83cc09f6a889c302b6e509230a486f",
+      "accessStatus": "retrieved",
+      "limitations": "Launch code must not be equated with all exploit-date code."
+    },
+    {
+      "id": "R3-S016",
+      "url": "https://bean.money/blog/beanstalk-governance-exploit",
+      "title": "Beanstalk Governance Exploit",
+      "sourceType": "postmortem",
+      "isPrimary": true,
+      "publishedAt": "2022-04-19",
+      "eventDate": "2022-04-17",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "First-party loss estimate; no independent transaction replay."
+    },
+    {
+      "id": "R3-S017",
+      "url": "https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-21-replant.md",
+      "title": "BIP-21: Replant Beanstalk",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "BIP-21; mutable master",
+      "accessStatus": "retrieved",
+      "limitations": "Proposal plus retrospective upgrade history used for execution context."
+    },
+    {
+      "id": "R3-S018",
+      "url": "https://docs.bean.money/almanac/disclosures",
+      "title": "Beanstalk disclosures",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Current evolving disclosures, including Arbitrum; not launch-era documentation."
+    },
+    {
+      "id": "R3-S019",
+      "url": "https://bean.money/blog/thoughts-before-the-barn-raise",
+      "title": "Thoughts Before the Barn Raise",
+      "sourceType": "other",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Founders’ retrospective assessment, not proof of economic robustness."
+    },
+    {
+      "id": "R3-S020",
+      "url": "https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-50-reseed-beanstalk.md",
+      "title": "BIP-50: Reseed Beanstalk",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2024-10-01",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "BIP-50; status Passed",
+      "accessStatus": "retrieved",
+      "limitations": "Includes corrections to voted text; exact migration transaction not replayed."
+    },
+    {
+      "id": "R3-S021",
+      "url": "https://github.com/BeanstalkFarms/Beanstalk/issues/1189",
+      "title": "EBIP-23: AI Safety Precautions",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2026-08-24",
+      "eventDate": "2026-08-23",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "Issue 1189",
+      "accessStatus": "retrieved",
+      "limitations": "Reports committed action; transaction and custody balances not independently verified."
+    },
+    {
+      "id": "R3-S022",
+      "url": "https://medium.com/neutrinoteam/neutrino-protocol-celebrates-first-anniversary-394794c72f0d",
+      "title": "Neutrino first anniversary",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2020-11-25",
+      "eventDate": "2019-11-25",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project launch anniversary; token issuance predates launch. Ported deployments not individually verified."
+    },
+    {
+      "id": "R3-S023",
+      "url": "https://medium.com/neutrinoteam/moon-factor-activated-f05691a3465c",
+      "title": "Moon Factor activated",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-01-15",
+      "eventDate": "2021-01-15",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Formula partly rendered as image; precise curve not transcribed."
+    },
+    {
+      "id": "R3-S024",
+      "url": "https://medium.com/neutrinoteam/usdn-vs-ust-understanding-the-differences-d58c950dd22",
+      "title": "USDN vs UST: Understanding the Differences",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2022-06-17",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Retrospective and promotional. Claims of immunity to death spirals not adopted; 2022 access restrictions not backdated."
+    },
+    {
+      "id": "R3-S025",
+      "url": "https://medium.com/neutrinoteam/what-is-surf-and-why-is-it-important-for-the-neutrino-ecosystem-8962c2230049",
+      "title": "What is SURF?",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2022-08-08",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Describes SURF mechanics; illustrative balances are not observed measurements."
+    },
+    {
+      "id": "R3-S026",
+      "url": "https://resources.cryptocompare.com/asset-management/1256/1698049445806.pdf",
+      "title": "Neutrino 2.0 XTN Litepaper",
+      "sourceType": "paper",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "Six-page Neutrino 2.0 litepaper; also present in project code archive",
+      "accessStatus": "retrieved",
+      "limitations": "Project-authored document on third-party host; publication and activation dates unknown."
+    },
+    {
+      "id": "R3-S027",
+      "url": "https://medium.com/swop-fi/swop-fi-in-line-with-ecosystem-changes-81609fbcd15d",
+      "title": "Swop.fi in line with ecosystem changes",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2023-02-01",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "First-party evidence of affected AMM response, not full XTN migration execution."
+    },
+    {
+      "id": "R3-S028",
+      "url": "https://medium.com/neutrinoteam/why-xtn-is-not-actually-burned-fc4716390ae1",
+      "title": "Why XTN is not actually burned?",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2023-07-20",
+      "eventDate": "2019-11-22",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "Updated July 28, 2023",
+      "accessStatus": "retrieved",
+      "limitations": "Retrospective token issuance account; transaction link not independently replayed."
+    },
+    {
+      "id": "R3-S029",
+      "url": "https://medium.com/@neutrinoteam/neutrino-governance-moving-forward-56b624613ebb",
+      "title": "Neutrino Governance moving forward",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2023-10-03",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Transition schedule; individual execution steps not verified."
+    },
+    {
+      "id": "R3-S030",
+      "url": "https://github.com/waves-exchange/neutrino-contract/blob/master/script/neutrino.ride",
+      "title": "Neutrino Ride contract",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "retrieved master; SHA256 098a6dca3e5f8167642f8f3c7c90e7d04343ea2acdd9be4ef3f0830364e2d63c",
+      "accessStatus": "retrieved",
+      "limitations": "Includes basket mechanics; cannot establish 2020 deployed oracle/admin parameters."
+    },
+    {
+      "id": "R3-S031",
+      "url": "https://github.com/Basis-Cash/basiscash-protocol",
+      "title": "Basis Cash source repository",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "master retrieved via codeload",
+      "accessStatus": "retrieved",
+      "limitations": "README model and latest repository are not necessarily launch code."
+    },
+    {
+      "id": "R3-S032",
+      "url": "https://github.com/Basis-Cash/basiscash-protocol/blob/master/contracts/treasury/Treasury.sol",
+      "title": "Basis Cash Treasury implementation",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "SHA256 1049c2a79f6783bbf0cb7ae5a06548aeaddb94c7b4636859864e997698a5f9d9",
+      "accessStatus": "retrieved",
+      "limitations": "Retrieved master contains BIP-3/BIP-4 changes; deployment mapping unresolved."
+    },
+    {
+      "id": "R3-S033",
+      "url": "https://github.com/Basis-Cash/basiscash-protocol/blob/master/contracts/treasury/TreasuryState.sol",
+      "title": "Basis Cash TreasuryState authority",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "master via codeload",
+      "accessStatus": "retrieved",
+      "limitations": "Operator identity at each deployment not verified."
+    },
+    {
+      "id": "R3-S034",
+      "url": "https://medium.com/basis-cash/basis-cash-v2-migration-plan-6bdd88198da2",
+      "title": "Basis Cash V2 Migration Plan",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2021-02-02",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Plan establishes retrospective existence, not final deployment configuration."
+    },
+    {
+      "id": "R3-S035",
+      "url": "https://medium.com/basis-cash/basis-v2-migration-plan-update-c83bee2ee2a2",
+      "title": "Basis V2 Migration Plan Update",
+      "sourceType": "governance",
+      "isPrimary": true,
+      "publishedAt": "2021-02-06",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Schedule and delay announcement."
+    },
+    {
+      "id": "R3-S036",
+      "url": "https://github.com/emptysetsquad/dollar",
+      "title": "Empty Set Dollar source and deployment register",
+      "sourceType": "code",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "master via codeload",
+      "accessStatus": "retrieved",
+      "limitations": "Master evolved beyond first deployment; coupon remnants are not proof of launch parameters."
+    },
+    {
+      "id": "R3-S037",
+      "url": "https://www.openzeppelin.com/news/empty-set-v2-audit",
+      "title": "Empty Set V2 Audit",
+      "sourceType": "audit",
+      "isPrimary": true,
+      "publishedAt": "2021-04-01",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": "bf9753ef9cd5b17236036257f290e0d0b850a029",
+      "accessStatus": "retrieved",
+      "limitations": "Audit explicitly excludes game theory and incentive design; naming differs from August release."
+    },
+    {
+      "id": "R3-S038",
+      "url": "https://medium.com/emptysetdollar/empty-set-v2-live-migrate-now-2a6fceb55d08",
+      "title": "Empty Set V2 Live",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2021-08-02",
+      "eventDate": "2021-08-02",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "retrieved",
+      "limitations": "Project launch announcement, no deployment replay."
+    },
+    {
+      "id": "R3-S039",
+      "url": "https://www.terra.money/Terra_White_paper.pdf",
+      "title": "Historical Terra whitepaper route",
+      "sourceType": "paper",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "URL now returns shutdown HTML, not the requested paper."
+    },
+    {
+      "id": "R3-S040",
+      "url": "https://docs.neutrino.at",
+      "title": "Neutrino documentation route",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "Tool retrieval failed; not used for technical facts."
+    },
+    {
+      "id": "R3-S041",
+      "url": "https://etherscan.io/tx/0x40b23cea3aa6e1a7dd89bbcd24c67f6fa1f6d663d7609f14046cd6cf50b6ce86",
+      "title": "Beanstalk contract-creation transaction",
+      "sourceType": "transaction",
+      "isPrimary": true,
+      "publishedAt": null,
+      "eventDate": "2021-08-06",
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "inaccessible",
+      "limitations": "403; transaction identifier comes from project upgrade history; not called independently verified."
+    },
+    {
+      "id": "R3-S042",
+      "url": "https://medium.com/basis-cash/crypto-ama-with-spencer-noon-c61ef8ecb55",
+      "title": "Basis Cash prelaunch AMA",
+      "sourceType": "documentation",
+      "isPrimary": true,
+      "publishedAt": "2020-09-01",
+      "eventDate": null,
+      "retrievedAt": "2026-09-16T03:41:09.040263Z",
+      "archiveUrl": null,
+      "commitOrVersion": null,
+      "accessStatus": "partial",
+      "limitations": "Search returned substantial article text; direct open not performed; discovery/context only."
+    }
+  ],
+  "claims": [
+    {
+      "id": "R3-C001",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V1",
+      "statement": "UST was announced in September 2020; the announcement identifies a September 12 Bittrex launch, establishing in-window activity.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S001"
+      ],
+      "evidenceLocator": "Title/subtitle and opening paragraph",
+      "eventDate": "2020-09-12",
+      "reasoning": null,
+      "uncertainty": "Not an independently checked genesis date."
+    },
+    {
+      "id": "R3-C002",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V1",
+      "statement": "Terra exchanged USD-denominated stablecoins against oracle-valued LUNA; before Columbus-5 seigniorage also funded community and oracle rewards.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S001",
+        "R3-S002"
+      ],
+      "evidenceLocator": "Scalability; Burn All Seigniorage; Validator Rewards",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Exact pre-upgrade allocations vary by parameters."
+    },
+    {
+      "id": "R3-C003",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V2",
+      "statement": "Columbus-5 changed seigniorage to full burning and redirected swap fees to validators; it did not create external dollar backing.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S002"
+      ],
+      "evidenceLocator": "Burn All Seigniorage; Validator Rewards",
+      "eventDate": "2021-09-30",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C004",
+      "protocolId": "R3-P001",
+      "versionId": null,
+      "statement": "Virtual pool size, recovery period and oracle lag constrained mint/burn throughput; 2021 proponents explicitly identified oracle manipulation paid for by LUNA holders.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S003",
+        "R3-S004"
+      ],
+      "evidenceLocator": "Proposal 2 attack sequence and summary; Proposal 3 liquidity estimates",
+      "eventDate": null,
+      "reasoning": "These are documented dependencies; proposed numbers are not asserted as executed parameters.",
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C005",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V2",
+      "statement": "Anchor documented borrower incentives and direct deposit-rate subsidy from a finite yield reserve; displayed target/threshold rates were 20.5%/19.5%.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S005"
+      ],
+      "evidenceLocator": "Parameter definitions and values",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Undated page cannot establish rate at every 2021 block."
+    },
+    {
+      "id": "R3-C006",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V3",
+      "statement": "May 2022 peg-defense purchases used LFG/TFL resources but did not restore durable parity; quantitative research documents collapse of UST and LUNA.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S006",
+        "R3-S007"
+      ],
+      "evidenceLocator": "JSH Executive Summary and purchases chronology; paper sections 1 and 2",
+      "eventDate": "2022-05",
+      "reasoning": null,
+      "uncertainty": "JSH was commissioned; attack authorship and motives not established."
+    },
+    {
+      "id": "R3-C007",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V3",
+      "statement": "UST contraction issued LUNA into falling demand, diluting existing holders and requiring more LUNA units per dollar; liquidity defense could not itself restore an independent redemption asset.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R3-S002",
+        "R3-S006",
+        "R3-S007"
+      ],
+      "evidenceLocator": "Burn/contraction mechanism; May chronology",
+      "eventDate": null,
+      "reasoning": "Combines issuance rule with observed joint price collapse; not a claim that LUNA market capitalization was spendable collateral.",
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C008",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V4",
+      "statement": "The passed revival plan specified a new chain without the algorithmic stablecoin and snapshot-based LUNA allocation; this was not redemption of old UST at one dollar.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S008"
+      ],
+      "evidenceLocator": "Summary; Token Distribution; Technical details",
+      "eventDate": "2022-05-16",
+      "reasoning": null,
+      "uncertainty": "Genesis execution date not independently checked."
+    },
+    {
+      "id": "R3-C009",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V4",
+      "statement": "TFL reports wind-down from September 30, 2024 and announced a crypto loss claims portal on March 28, 2025.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S009",
+        "R3-S010"
+      ],
+      "evidenceLocator": "Shutdown banner; claims announcement",
+      "eventDate": "2025-03-28",
+      "reasoning": null,
+      "uncertainty": "No final distributions verified; corporate wind-down is not chain termination."
+    },
+    {
+      "id": "R3-C010",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V1",
+      "statement": "Beanstalk launch history identifies August 6, 2021 deployment at block 12974075 and launch commit ccce0fa18a83cc09f6a889c302b6e509230a486f.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S011"
+      ],
+      "evidenceLocator": "First two upgrade-history rows",
+      "eventDate": "2021-08-06",
+      "reasoning": null,
+      "uncertainty": "Explorer request returned 403."
+    },
+    {
+      "id": "R3-C011",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V1",
+      "statement": "At launch, sowing burned Beans up to available Soil and recorded Pods at principal plus Weather yield; Pods were indexed claims on future Beans rather than dollar collateral.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S012",
+        "R3-S013"
+      ],
+      "evidenceLocator": "Dibbler _sowBeans, sowPlot, beansToPods; Sun growSupply",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C012",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V1",
+      "statement": "Launch supply policy used pool reserve imbalance; contraction offered Soil while expansion allocated new Beans to harvestable debt and the Silo. Weather reacted to debt ratios and demand.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S013"
+      ],
+      "evidenceLocator": "Sun stepSun, shrinkSupply, growSupply; imported Weather calcCaseId",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C013",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V1",
+      "statement": "Launch oracle compared Uniswap BEAN/ETH and USDC/ETH cumulative prices; external dollar-token and pool liquidity dependencies remained despite no collateral redemption.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S014"
+      ],
+      "evidenceLocator": "OracleFacet updatePrice and capture",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C014",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V1",
+      "statement": "Stalk-based governance could execute diamond cuts through ordinary and emergency commit paths; owner pause functions existed in launch code.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S015"
+      ],
+      "evidenceLocator": "commit, emergencyCommit, ownerPause, ownerUnpause; imported VotingBooth",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "This snapshot is not a reconstruction of every April 2022 facet."
+    },
+    {
+      "id": "R3-C015",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V2",
+      "statement": "A flash-loan governance exploit on April 17, 2022 stole approximately $77 million of non-Bean assets from liquidity pools; governance was disabled and Beanstalk paused.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S016",
+        "R3-S011"
+      ],
+      "evidenceLocator": "Postmortem opening and response; upgrade history April 17 rows",
+      "eventDate": "2022-04-17",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C016",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V2",
+      "statement": "The observed attack establishes governance/custody failure, not a demonstrated endogenous-token redemption insolvency or proof that the monetary model was robust.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R3-S012",
+        "R3-S016",
+        "R3-S018",
+        "R3-S019"
+      ],
+      "evidenceLocator": "Credit facility; exploit; disclosures; founder retrospective",
+      "eventDate": null,
+      "reasoning": "BEAN did not promise conversion into Stalk or dollars. Theft removed market liquidity independently of voluntary credit dynamics.",
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C017",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V3",
+      "statement": "Replant introduced replacement Bean and Unripe assets and recapitalization through Fertilizer; the planned unpause was August 6, 2022. Later disclosures confirm Replant and 5-of-9 multisig governance.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S017",
+        "R3-S018"
+      ],
+      "evidenceLocator": "BIP-21 Proposed Solution and Effective; disclosures 1 and 3",
+      "eventDate": "2022-08-06",
+      "reasoning": null,
+      "uncertainty": "Recovery is conditional recapitalization, not evidence of full restitution."
+    },
+    {
+      "id": "R3-C018",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V3",
+      "statement": "Beanstalk explicitly warns that loss of willing creditors can defeat peg restoration; historical peg crossings do not guarantee future crossings.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S018"
+      ],
+      "evidenceLocator": "Disclosures 4 and 5",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C019",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V4",
+      "statement": "BIP-50, proposed October 1, 2024 and marked passed, migrated the protocol toward Arbitrum; current disclosures identify successive obsolete Ethereum Bean tokens and current Arbitrum Bean.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S020",
+        "R3-S018"
+      ],
+      "evidenceLocator": "BIP-50 Summary and status; disclosures 1",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Exact migration block not checked."
+    },
+    {
+      "id": "R3-C020",
+      "protocolId": "R3-P002",
+      "versionId": "R3-P002-V5",
+      "statement": "EBIP-23 reports an August 23, 2026 withdrawal of 90% of BEAN:wstETH Well liquidity to a 2-of-3 multisig and asynchronous request-for-fill handling, leaving a local LP-token shortfall.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S021"
+      ],
+      "evidenceLocator": "Committed date; Solution; Less Liquidity; LP Token Shortage",
+      "eventDate": "2026-08-23",
+      "reasoning": null,
+      "uncertainty": "Balances, execution transactions and subsequent fills not checked."
+    },
+    {
+      "id": "R3-C021",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V1",
+      "statement": "Neutrino’s November 25, 2020 anniversary documents a 2019 launch and 2020 USDN activity with WAVES collateral and NSBT reserve/governance roles.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S022"
+      ],
+      "evidenceLocator": "Opening; three initial elements",
+      "eventDate": "2020-11-25",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C022",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V1",
+      "statement": "USDN held WAVES rather than burning it; redemption consumed finite reserves. Initial NSBT recapitalization sold claims to attract WAVES when backing deteriorated.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S022",
+        "R3-S024"
+      ],
+      "evidenceLocator": "Initial setup and USDN Recapitalization Measures",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Detailed 2020 redemption delays, fees and admin keys not verified."
+    },
+    {
+      "id": "R3-C023",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V2",
+      "statement": "Moon Factor activated January 15, 2021, capped NSBT supply at 2,835,689, changed its issue curve, and removed auction functions including sellBond.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S023"
+      ],
+      "evidenceLocator": "Implementation date; maximum supply; auction contract changes",
+      "eventDate": "2021-01-15",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C024",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V3",
+      "statement": "By June 2022 the project reported 95% of NSBT issued and inadequate remaining recapitalization capacity; gNSBT staking controlled daily swap limits.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S024"
+      ],
+      "evidenceLocator": "How USDN Works points 1–2; Recapitalization Measures",
+      "eventDate": "2022-06-17",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C025",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V3",
+      "statement": "SURF offered discounted recapitalization exposure and gNSBT benefits, with conversion into USDN triggered at 115% backing and staged repayment that reduced backing toward 105%.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S025"
+      ],
+      "evidenceLocator": "How automatic conversion works; staking benefits",
+      "eventDate": "2022-08-08",
+      "reasoning": null,
+      "uncertainty": "Examples are hypothetical, not historical reserve measurements."
+    },
+    {
+      "id": "R3-C026",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V4",
+      "statement": "XTN redesign abandoned the hard USD peg for a governance-selected basket and reserve-value-per-circulating-token target; Swop.fi acknowledged the changed target in February 2023.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S026",
+        "R3-S027"
+      ],
+      "evidenceLocator": "Litepaper XTN Price and Multi-collateral; Swop.fi replacing Flat pools",
+      "eventDate": "2023-02-01",
+      "reasoning": null,
+      "uncertainty": "Precise rename and basket deployment dates not established."
+    },
+    {
+      "id": "R3-C027",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V4",
+      "statement": "The project says USDN/XTN was preissued on November 22, 2019; routine issue/burn meant releasing or relocking tokens, not literal minting/burning. The July 28 update clarifies ordinary token burns are possible.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S028"
+      ],
+      "evidenceLocator": "History of XTN creation; July 28 update",
+      "eventDate": "2023-07-28",
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C028",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V5",
+      "statement": "October 2023 governance documentation scheduled a move to Power DAO, including transfer of remaining NSBT issuance inventory and new governance incentives.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S029"
+      ],
+      "evidenceLocator": "Transition process",
+      "eventDate": "2023-10-03",
+      "reasoning": null,
+      "uncertainty": "Scheduled steps not independently verified as executed."
+    },
+    {
+      "id": "R3-C029",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V4",
+      "statement": "Retrieved Neutrino code contains control-contract price history, blocked-state checks and delayed swap accounting; these show dependencies but do not fix 2020 parameters.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S030"
+      ],
+      "evidenceLocator": "PriceKey; getPriceHistory; emergencyShutdownFAIL; balanceLockIntervalREAD",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Mutable master includes XTN basket changes."
+    },
+    {
+      "id": "R3-C030",
+      "protocolId": "R3-P003",
+      "versionId": null,
+      "statement": "Finite WAVES collateral avoids unlimited WAVES minting on redemption but cannot ensure dollar solvency: a WAVES price fall reduces reserve value, while access limits ration exit and recapitalization depends on new risk capital.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R3-S022",
+        "R3-S023",
+        "R3-S024",
+        "R3-S025",
+        "R3-S026"
+      ],
+      "evidenceLocator": "Reserve, capacity and redesign evidence",
+      "eventDate": null,
+      "reasoning": "Separates an existing asset pool from independent external backing; cap and market price impose different limits.",
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C031",
+      "protocolId": "R3-P004",
+      "versionId": "R3-P004-V1",
+      "statement": "Basis Cash used BAC as the USD target token, BAB as contraction debt and BAS as a seigniorage claim; BAS was not a promised dollar-redemption asset.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S031"
+      ],
+      "evidenceLocator": "Three-token system and Stability Mechanism",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C032",
+      "protocolId": "R3-P004",
+      "versionId": "R3-P004-V1",
+      "statement": "The February 2, 2021 V2 announcement says Basis Cash launched two months earlier, establishing 2020–2021 eligibility without proving an exact launch day.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S034"
+      ],
+      "evidenceLocator": "Opening retrospective",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C033",
+      "protocolId": "R3-P004",
+      "versionId": "R3-P004-V2",
+      "statement": "Retrieved Treasury code burns BAC to issue BAB below parity, checks a bond-cap formula, and allows redemption only above a dynamic ceiling and within treasury BAC balance.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S032"
+      ],
+      "evidenceLocator": "buyBonds; _updateConversionLimit; redeemBonds",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "Later source revision; exact historical deployment binding unknown."
+    },
+    {
+      "id": "R3-C034",
+      "protocolId": "R3-P004",
+      "versionId": "R3-P004-V2",
+      "statement": "TreasuryState permits operator changes to oracles, ceiling curve and seigniorage routing and migration of token authority.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S033"
+      ],
+      "evidenceLocator": "setBondOracle; setCeilingCurve; setSeigniorageProxy; migrate",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C035",
+      "protocolId": "R3-P004",
+      "versionId": "R3-P004-V3",
+      "statement": "February 2021 V2 plans sought a return to peg and migrated BAS; a February 6 update delayed BAC liquidity migration after the Yearn/3crv incident and identified Uniswap TWAP dependence.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S034",
+        "R3-S035"
+      ],
+      "evidenceLocator": "Opening; migration schedule; delay rationale",
+      "eventDate": "2021-02-06",
+      "reasoning": null,
+      "uncertainty": "Does not establish ultimate peg recovery, shutdown or a Basis-specific exploit."
+    },
+    {
+      "id": "R3-C036",
+      "protocolId": "R3-P004",
+      "versionId": null,
+      "statement": "Treasury BAC is capacity to settle BAB in BAC, not an independent dollar reserve; if expected expansion disappears, voluntary bond purchases can stop and supply contraction can stall.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R3-S031",
+        "R3-S032",
+        "R3-S035"
+      ],
+      "evidenceLocator": "Debt and treasury implementation",
+      "eventDate": null,
+      "reasoning": "Debt issuance requires a buyer and redemption requires future above-ceiling conditions; no guaranteed fiat realization follows.",
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C037",
+      "protocolId": "R3-P005",
+      "versionId": "R3-P005-V1",
+      "statement": "The ESD repository records Ethereum mainnet DAO/token/oracle addresses; the 2021 V2 audit and migration announcement establish an earlier V1 and in-window activity.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S036",
+        "R3-S037",
+        "R3-S038"
+      ],
+      "evidenceLocator": "README contracts; audit introduction; V2 launch",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "V1 deployment day and bytecode equivalence not checked."
+    },
+    {
+      "id": "R3-C038",
+      "protocolId": "R3-P005",
+      "versionId": "R3-P005-V2",
+      "statement": "The audited Empty Set V2 separates monetary and governance tokens with reserve/stabilizer components; coupons were not included by the audited migrator. August launch used ESS and DSU naming.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S037",
+        "R3-S038"
+      ],
+      "evidenceLocator": "Project overview; Migrator; launch Migration and Liquidity Bootstrapping",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": "April audit names ESD/ESDS/sESD; do not silently equate it to final DSU implementation."
+    },
+    {
+      "id": "R3-C039",
+      "protocolId": null,
+      "versionId": null,
+      "statement": "Monetary redemption, AMM exit, deposit withdrawal and administrative recovery are different claims on assets; the cases do not justify treating TVL or equity market capitalization as independent dollar backing.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R3-S002",
+        "R3-S012",
+        "R3-S016",
+        "R3-S024",
+        "R3-S026",
+        "R3-S032"
+      ],
+      "evidenceLocator": "Cross-case synthesis",
+      "eventDate": null,
+      "reasoning": "Different assets, priorities and bottlenecks appear in each verified mechanism.",
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C040",
+      "protocolId": null,
+      "versionId": null,
+      "statement": "Capacity limits, oracle quality, debt priority and governance powers must be assessed jointly; limits can reduce immediate drain while prolonging or rationing exit.",
+      "evidenceStatus": "inference",
+      "sourceIds": [
+        "R3-S003",
+        "R3-S012",
+        "R3-S015",
+        "R3-S021",
+        "R3-S024",
+        "R3-S032"
+      ],
+      "evidenceLocator": "Cross-case synthesis",
+      "eventDate": null,
+      "reasoning": "Historical mechanisms support a constraint, not a tested counterfactual cure.",
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C041",
+      "protocolId": "R3-P001",
+      "versionId": "R3-P001-V1",
+      "statement": "Terra’s 2020 announcement distinguishes USD-pegged UST from KRW and MNT relatives; these relatives must not be counted as separate USD pegs.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S001"
+      ],
+      "evidenceLocator": "TerraUSD is proven",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C042",
+      "protocolId": "R3-P003",
+      "versionId": "R3-P003-V1",
+      "statement": "The 2020 anniversary describes DeFo national-currency assets and WAVES-derived staking yield; these are adjacent non-USD assets, not additional verified dollar stablecoins.",
+      "evidenceStatus": "project_claim",
+      "sourceIds": [
+        "R3-S022"
+      ],
+      "evidenceLocator": "DeFo and staking paragraphs",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    },
+    {
+      "id": "R3-C043",
+      "protocolId": "R3-P004",
+      "versionId": "R3-P004-V1",
+      "statement": "Basis Cash explicitly describes itself as a simplified implementation of the earlier Basis proposal; ancestry is not evidence that original Basis operated in the scope window.",
+      "evidenceStatus": "fact",
+      "sourceIds": [
+        "R3-S031"
+      ],
+      "evidenceLocator": "History of Basis; differences",
+      "eventDate": null,
+      "reasoning": null,
+      "uncertainty": null
+    }
+  ],
+  "searchLog": [
+    {
+      "id": "R3-L001",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "Terra Columbus 5 seigniorage burn Columbus 4 treasury whitepaper; Beanstalk whitepaper April 2022 governance exploit replant; Neutrino USDN whitepaper 2020 2021 SURF XTN transformation",
+      "chainOrFamily": "seed discovery",
+      "sourceIds": [
+        "R3-S002",
+        "R3-S016",
+        "R3-S018",
+        "R3-S039"
+      ],
+      "candidateNames": [
+        "Terra",
+        "Beanstalk",
+        "Neutrino"
+      ],
+      "result": "Seed mechanisms and upgrade/recovery leads located.",
+      "limitations": "Search snippet alone not accepted as retrieved primary evidence."
+    },
+    {
+      "id": "R3-L002",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "site:docs.neutrino.at USDN NSBT; site:neutrino.at 2020 whitepaper; site:emptyset.finance documentation debt coupons; site:docs.basis.cash mechanism bonds",
+      "chainOrFamily": "discovery",
+      "sourceIds": [],
+      "candidateNames": [
+        "USDN",
+        "ESD",
+        "Basis Cash"
+      ],
+      "result": "No search results returned.",
+      "limitations": "Does not imply protocols or documents absent."
+    },
+    {
+      "id": "R3-L003",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "GitHub repository routes and codeload master: waves-exchange/neutrino-contract, Basis-Cash/basiscash-protocol, emptysetsquad/dollar, BeanstalkFarms/Beanstalk",
+      "chainOrFamily": "code",
+      "sourceIds": [
+        "R3-S030",
+        "R3-S031",
+        "R3-S032",
+        "R3-S033",
+        "R3-S036"
+      ],
+      "candidateNames": [
+        "USDN",
+        "Basis Cash",
+        "ESD",
+        "Beanstalk"
+      ],
+      "result": "Source archives retrieved to scratch and selected files inspected.",
+      "limitations": "GitHub commits API until 2021-12-31 returned 403 rate limit for all five attempted repositories; master not historical proof."
+    },
+    {
+      "id": "R3-L004",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "Historical Terra whitepaper URL; terra-money/core and classic-terra/core v0.5.0 market/spec/README.md; v0.4.6 treasury/spec/README.md",
+      "chainOrFamily": "Terra",
+      "sourceIds": [
+        "R3-S039",
+        "R3-S003",
+        "R3-S004"
+      ],
+      "candidateNames": [
+        "UST"
+      ],
+      "result": "Whitepaper route replaced by shutdown HTML; code paths failed/404; governance primary records retrieved instead.",
+      "limitations": "No historical Terra release successfully pinned."
+    },
+    {
+      "id": "R3-L005",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "Beanstalk upgrade history → ccce0fa18a83cc09f6a889c302b6e509230a486f codeload; contract creation Etherscan route",
+      "chainOrFamily": "Beanstalk",
+      "sourceIds": [
+        "R3-S011",
+        "R3-S012",
+        "R3-S013",
+        "R3-S014",
+        "R3-S015",
+        "R3-S041"
+      ],
+      "candidateNames": [
+        "BEAN"
+      ],
+      "result": "Launch code inspected; explorer returned 403.",
+      "limitations": "Project linkage not independently bytecode-verified."
+    },
+    {
+      "id": "R3-L006",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "site:medium.com/neutrinoteam Moon Factor, SURF, XTN; first anniversary; USDN vs UST; linked Power DAO article",
+      "chainOrFamily": "Neutrino",
+      "sourceIds": [
+        "R3-S022",
+        "R3-S023",
+        "R3-S024",
+        "R3-S025",
+        "R3-S026",
+        "R3-S027",
+        "R3-S028",
+        "R3-S029"
+      ],
+      "candidateNames": [
+        "USDN",
+        "XTN",
+        "DeFo",
+        "EAST"
+      ],
+      "result": "Version changes and loss of USD peg documented.",
+      "limitations": "Exact transaction activation and later state not independently measured."
+    },
+    {
+      "id": "R3-L007",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "site:medium.com/basis-cash launch 2020; 2021 Update; Empty Set Dollar 2021 Empty Set Finance ESDS USDC migration",
+      "chainOrFamily": "contrasts",
+      "sourceIds": [
+        "R3-S031",
+        "R3-S034",
+        "R3-S035",
+        "R3-S036",
+        "R3-S037",
+        "R3-S038",
+        "R3-S042"
+      ],
+      "candidateNames": [
+        "Basis Cash",
+        "Empty Set Dollar",
+        "Mithril Cash",
+        "Basis Dollar",
+        "Basis Gold",
+        "BASE"
+      ],
+      "result": "Selected Basis Cash for fourth deep case, ESD for triage; additional launch leads retained in queue.",
+      "limitations": "No additional contrast promoted without deployment work."
+    },
+    {
+      "id": "R3-L008",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "site:bean.money 2025 2026 Beanstalk shutdown Pinto; Beanstalk BIP 50 Reseed Arbitrum; Beanstalk 2026 protocol",
+      "chainOrFamily": "later outcomes",
+      "sourceIds": [
+        "R3-S018",
+        "R3-S020",
+        "R3-S021"
+      ],
+      "candidateNames": [
+        "Beanstalk",
+        "Pinto"
+      ],
+      "result": "BIP-50 and August 2026 EBIP-23 retrieved.",
+      "limitations": "Pinto relationship not established; search also returned unrelated AWS/gaming results."
+    },
+    {
+      "id": "R3-L009",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "Neutrino XTN 2025 protocol; Basis Cash 2025 shutdown; Terra wind-down site and linked claims portal",
+      "chainOrFamily": "later outcomes",
+      "sourceIds": [
+        "R3-S009",
+        "R3-S010",
+        "R3-S029"
+      ],
+      "candidateNames": [
+        "XTN",
+        "Basis Cash",
+        "Terra"
+      ],
+      "result": "Terra wind-down and claims announcement retrieved; no conclusive recent Neutrino/Basis shutdown primary source.",
+      "limitations": "Ignored unrelated and unauthenticated airdrop results; no terminal-status inference."
+    },
+    {
+      "id": "R3-L010",
+      "searchedAt": "2026-09-16T03:41:09.040263Z",
+      "queryOrRoute": "Terra revival plan; LFG audit; UST collapse market capacity; arXiv 2207.13914v3",
+      "chainOrFamily": "Terra aftermath",
+      "sourceIds": [
+        "R3-S006",
+        "R3-S007",
+        "R3-S008"
+      ],
+      "candidateNames": [
+        "UST",
+        "LUNA"
+      ],
+      "result": "Commissioned forensic report, original empirical paper and governance redesign compared.",
+      "limitations": "No attribution of a coordinated attacker; no full chain replay."
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "R3-X001",
+      "name": "Original Basis / Basecoin",
+      "reason": "Proposal ancestry, not included as a deployed 2020–2021 case.",
+      "sourceIds": [
+        "R3-S031"
+      ],
+      "claimIds": [
+        "R3-C043"
+      ]
+    },
+    {
+      "id": "R3-X002",
+      "name": "TerraKRW / TerraMNT and DeFo non-USD assets",
+      "reason": "Adjacent denominations retained as family context; not additional USD-pegged cases.",
+      "sourceIds": [
+        "R3-S001",
+        "R3-S022"
+      ],
+      "claimIds": [
+        "R3-C041",
+        "R3-C042"
+      ]
+    },
+    {
+      "id": "R3-X003",
+      "name": "XTN and new-chain LUNA as independent 2020–2021 launches",
+      "reason": "Retained only as subsequent transformations, not separate eligible dollar-stablecoin launches.",
+      "sourceIds": [
+        "R3-S008",
+        "R3-S026"
+      ],
+      "claimIds": [
+        "R3-C008",
+        "R3-C026"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "id": "R3-U001",
+      "protocolId": "R3-P001",
+      "question": "Exact block-by-block market capacity and seigniorage before/after Columbus?",
+      "whyUnresolved": "Historical code URLs failed; proposal execution was not replayed.",
+      "nextEvidenceNeeded": "Archived release tags, governance results and state at chosen blocks.",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U002",
+      "protocolId": "R3-P001",
+      "question": "Final compensation, legacy swap status and new-chain launch verification?",
+      "whyUnresolved": "Retrieved wind-down and claims announcements are not settlement records.",
+      "nextEvidenceNeeded": "Genesis/state evidence and administrator distribution records through asOfUtc.",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U003",
+      "protocolId": "R3-P002",
+      "question": "Full 2021-to-April-2022 facet and oracle changes?",
+      "whyUnresolved": "Launch commit pinned; intervening changes only partially traced.",
+      "nextEvidenceNeeded": "BIP commits and transaction replay including exploit-date facets.",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U004",
+      "protocolId": "R3-P002",
+      "question": "Actual total Barn Raise recovery and August 2026 RFF custody/fulfillment?",
+      "whyUnresolved": "Announcements do not prove current balances or full restitution.",
+      "nextEvidenceNeeded": "Recovery ledger, Safe execution transactions and fill history.",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U005",
+      "protocolId": "R3-P003",
+      "question": "Historical oracle signers, admin upgrade thresholds, delayed swaps and bridge rights?",
+      "whyUnresolved": "Current Ride code is post-transformation; old docs unavailable.",
+      "nextEvidenceNeeded": "Dated Ride scripts and account data from 2020/2021 Waves blocks.",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U006",
+      "protocolId": "R3-P003",
+      "question": "Precise USDN depeg path, XTN activation, Power DAO execution and later status?",
+      "whyUnresolved": "Project admits failure but no independent full price/reserve or execution time series retrieved; 2025/2026 searches inconclusive.",
+      "nextEvidenceNeeded": "Waves transactions, reserve snapshots, archived 2022 governance and subsequent execution logs.",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U007",
+      "protocolId": "R3-P004",
+      "question": "Which Treasury revision was deployed, and did V2 recover or ultimately cease?",
+      "whyUnresolved": "Master code differs from README; no complete later primary history.",
+      "nextEvidenceNeeded": "Verified deployed bytecode and historical authority/price/issuance series.",
+      "priority": "high"
+    },
+    {
+      "id": "R3-U008",
+      "protocolId": "R3-P005",
+      "question": "V1 coupon expiration/debt caps and final V2 deployment/successor outcomes?",
+      "whyUnresolved": "Triaged second contrast; audit and release names differ.",
+      "nextEvidenceNeeded": "Pinned V1 code and final DSU/ESS deployment mapping.",
+      "priority": "medium"
+    },
+    {
+      "id": "R3-U009",
+      "protocolId": null,
+      "question": "Discovered relatives not investigated: DSD, TSD, Mithril Cash, Basis Dollar, Basis Gold, EAST, DeFo individual assets and BASE?",
+      "whyUnresolved": "At most two contrasts retained; discovery stopped before verifying each deployment.",
+      "nextEvidenceNeeded": "Dated primary launch sources, contracts and target definitions.",
+      "priority": "medium"
+    },
+    {
+      "id": "R3-U010",
+      "protocolId": null,
+      "question": "Any major 2025–2026 events missed outside Beanstalk?",
+      "whyUnresolved": "Targeted recent-event searches incomplete; no absence-of-events inference justified.",
+      "nextEvidenceNeeded": "Protocol governance/explorer histories through retrieval date.",
+      "priority": "high"
+    }
+  ]
+}
