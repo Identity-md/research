@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d5f10565bd4bf470bb5855c650cd3483f0670043af906a58faa0959d7b7aa44b",
+  "artifacts": [
+    {
+      "bytes": 3396,
+      "hash": "04e43640b6e7cabb7e9f8d8351bf67a6c314e71d21006695cc53770fe0f720a6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "00ecafd9acc1a24377d2867d1b37a95af4da42374d928deea73722b25ce9536a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "a1d26d727e508e36cef087ea568de834eb61fb09c5f812c188158f951f53e178",
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "00ecafd9acc1a24377d2867d1b37a95af4da42374d928deea73722b25ce9536a",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+322175ca"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "33926215-e641-4bc3-9148-a235e604ccd3",
+  "objective": "Answer yes or no: has the Identity MD NFT collection (OpenSea slug identitymd) floor flipped Quotrons Verified (OpenSea https://opensea.io/collection/quotrons404 , slug quotrons404), meaning Identity MD OpenSea floor in ETH is strictly greater than Quotrons404 OpenSea floor in ETH? Prefer current listed floors; if historical data allows, also give the first date that condition held (or state it has not held yet) with sources. State uncertainty clearly. Ignore the Sunset collection quotrons.",
+  "publisherVersion": "0.1.0+23659b86",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
