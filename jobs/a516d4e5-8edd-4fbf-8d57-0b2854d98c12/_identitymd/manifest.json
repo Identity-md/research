@@ -1,0 +1,47 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d2a51fe6e89de82fc76d0e15c50b1987e001b89933b1bd1b65f2236e944f61b2",
+  "artifacts": [
+    {
+      "bytes": 10712,
+      "hash": "830695a3506bcaf5597cde496a96f968c90e9aa57622d0716cc5cb82cafa1b84",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "81d61397c3f0f16790ea854ecdbbfd63fb2c1b009eb144d4b8a104e1e938467a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "46e817e1c3219934193a86080b5c3b624f0b92b67aaf174864bdc39c1ad49c26",
+      "changedPaths": [
+        ".gitignore",
+        "README.md",
+        "bin/crontab.fragment",
+        "bin/this_is_stupid.py"
+      ],
+      "deviceKey": "005b09c485fef904b9243a6da9d08eaa662886a8fda6a804b979cc0740eb9b08",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "81d61397c3f0f16790ea854ecdbbfd63fb2c1b009eb144d4b8a104e1e938467a",
+      "treeHash": "5d2b206b6238fb71b3134655996b6b6c1ba960db",
+      "verifiedTreeHash": "5d2b206b6238fb71b3134655996b6b6c1ba960db",
+      "verifierVersion": "0.1.0+f7836663"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a516d4e5-8edd-4fbf-8d57-0b2854d98c12",
+  "objective": "Create a report that prints \"this is stupid\" at 00:00 UTC on 9-24-2026, 9-25-2026, and 9-26-2026.\n\nDo so by starting the report and holding it open until \"this is stupid\" has been printed at 00:00 UTC on each of the three dates.\n\nBe frugal with credits and use as few resources as possible.",
+  "publisherVersion": "0.1.0+f7836663",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
