@@ -1,0 +1,48 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "a4911b2b14595e3c71a0cd5c7c727a6b51de90fa388b482c9741796fc9590569",
+  "artifacts": [
+    {
+      "bytes": 11955,
+      "hash": "5efe59b271d1384a5cb77e03ad8d3f5a6ea6c677cbdb611037ff692be1f5a8d7",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "40b1c9493c11dba82c0a17e811913cd15025c47231a699d7d7bddf54fe9b1fe5"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "4d78fd9b3f7a10353bdacb0dd155179d7f2c29faa011d372fa3d5386252e23cc",
+      "changedPaths": [
+        "ACTIVE_SEATS_48H.json",
+        "ACTIVE_SEATS_48H.md",
+        "README.md",
+        "evidence/api_snapshot.json",
+        "tools/collect_active_seats.py"
+      ],
+      "deviceKey": "005b09c485fef904b9243a6da9d08eaa662886a8fda6a804b979cc0740eb9b08",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "40b1c9493c11dba82c0a17e811913cd15025c47231a699d7d7bddf54fe9b1fe5",
+      "treeHash": "3b971d7736785ce980c22331d7aaa761f5242237",
+      "verifiedTreeHash": "3b971d7736785ce980c22331d7aaa761f5242237",
+      "verifierVersion": "0.1.0+f7836663"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "96784ca0-9377-4775-b675-dc798f3241fb",
+  "objective": "Produce a verified list of Identity MD NFT seat tokenIds that performed work on the IMD task network in the rolling last 48 hours (UTC). Dogfood run for PvPad WorkerSubsidy epoch inputs. Do NOT launch a token. Do NOT deploy contracts.\n\nData source (public, no auth): https://api.imd.fun\n- GET /jobs?limit=500 (paginate with limit/offset/page/cursor if available until createdAt is older than 48h).\n- For each in-window job: GET /jobs/{id} and read nodes[].seat.tokenId, nodes[].state, nodes[].verdict.status.\n\nInclusion: include a tokenId if it appears on any node that attempted work in-window (state accepted|completed|executing|failed|blocked OR verdict present). Count accepted/completed separately when possible. Exclude null seats and never-dispatched nodes. Deduplicate. Sort tokenIds ascending numerically.\n\nDeliverables in the result tree:\n1) ACTIVE_SEATS_48H.json with fields: asOf (ISO-8601 UTC), windowHours (48), windowStart, windowEnd, source (https://api.imd.fun), uniqueSeats, seats (array of objects with tokenId, jobsTouched, acceptedNodes, agentIds), jobIdsScanned, method (short paragraph).\n2) ACTIVE_SEATS_48H.md: unique count, top 10 by jobsTouched, caveats (API cap, pagination gaps, in-flight jobs).\n3) Do not invent seats. If the list endpoint caps below the true 48h population, say so and still deliver everything obtainable.\n\nSuccess = JSON parses and every listed tokenId was observed on at least one in-window job node.",
+  "publisherVersion": "0.1.0+f7836663",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
