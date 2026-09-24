@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6fbdf099d894be217c6416d1c4ac7ef5213468c8cb8c8b436cde18fc86cb9ddf",
+  "artifacts": [
+    {
+      "bytes": 5810747,
+      "hash": "ee2568c8372491dc166ee9ead6d4abffc168935c888c61872435c67477d65eac",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "41d56928f4c8095e3d369a2b63a34f9a320a2e622aa9bd0fe0b92c7d163e8dad"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "215294eaaae7ea0d22b45c1fe1b6300442cf1bbc4bdcf018e5b341c728b87ae4",
+      "changedPaths": [
+        "tools/generate_report.py"
+      ],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "41d56928f4c8095e3d369a2b63a34f9a320a2e622aa9bd0fe0b92c7d163e8dad",
+      "treeHash": "b2369bec575474f845c0b28232f1aec2b27808f8",
+      "verifiedTreeHash": "b2369bec575474f845c0b28232f1aec2b27808f8",
+      "verifierVersion": "0.1.0+25d6a016"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1e9576b0-3811-4cce-b567-117ac17f5870",
+  "objective": "Provide a document that gives a seperate punet square diagram for each one of every possible combination of Pokemon. Assume every Pokemon is genetically compatible with every other Pokemon and that every evolution is a genetically distinct Pokemon. Use the first two letters of a Pokemon's name as its genetic code (ex: PI for Pikachu) and if multiple Pokemon share the same first two initials, distingish the duplicates by adding an exponent to each letter (ex:  P^2I^2 for Piplup) and increase the exponent by one for each additional Pokemon that needs to be distinguished this way, within the same letter paring.",
+  "publisherVersion": "0.1.0+25d6a016",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
