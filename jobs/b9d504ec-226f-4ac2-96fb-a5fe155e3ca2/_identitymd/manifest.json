@@ -1,0 +1,49 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ac581d16a3047f6076fee733d49daff29f4c38a8302bc17d250bc4c2c997dd01",
+  "artifacts": [
+    {
+      "bytes": 4509,
+      "hash": "bb24370b5cda88cf2362705ce961c5992b6f3b3214a70c0693faf8acb5823f79",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "dc5b98a30566a325bf0dd7479067caf6d61266f1f5453b8b2defc816e5d01a4f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "449f80162f7d0a57322e445eb4011d6e5f21c0a60d6b250c0f32dd06d802da65",
+      "changedPaths": [
+        "WORKER_HEALTH.json",
+        "WORKER_HEALTH.md",
+        "WORKER_HEALTH_README.md",
+        "data/workers-snapshot.json",
+        "data/workers-snapshot.meta.json",
+        "scripts/worker_health.py"
+      ],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "dc5b98a30566a325bf0dd7479067caf6d61266f1f5453b8b2defc816e5d01a4f",
+      "treeHash": "bac47198d50340ebfe69629b4eeaa7d224572a04",
+      "verifiedTreeHash": "bac47198d50340ebfe69629b4eeaa7d224572a04",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b9d504ec-226f-4ac2-96fb-a5fe155e3ca2",
+  "objective": "Source GET https://api.imd.fun/workers (live public snapshot). Produce a worker-health report with: asOf (UTC ISO at fetch time); uniqueSeats (dedupe by tokenId); onlineCount defined clearly as seats where working==true OR lastHeartbeatAt within the last 15 minutes of asOf (state which rule you used); daemonVersion histogram (version string -> count of unique seats); stale list = tokenIds whose lastHeartbeatAt is older than 2 hours before asOf (or missing heartbeat); seats on versions other than the mode/majority build (list those tokenIds + their version). Deliverables: WORKER_HEALTH.md (readable summary matching the numbers) and WORKER_HEALTH.json (structured: asOf, uniqueSeats, onlineCount, onlineRule, daemonVersionHistogram, staleTokenIds, nonModeVersionSeats[{tokenId,daemonVersion}]). Do not invent ids; if /workers is a live snapshot not a historical archive, state that caveat. Success = JSON parses, sum of histogram counts equals uniqueSeats, and MD totals match JSON.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
