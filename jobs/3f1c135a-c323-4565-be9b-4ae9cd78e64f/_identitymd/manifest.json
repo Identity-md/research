@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ec08cd8d9713ab0ff1e3577c1f0bac14be262858e967cce52248db13540b544f",
+  "artifacts": [
+    {
+      "bytes": 28272,
+      "hash": "6283f00a772df3b9ad76523c442bb6bb677c6f9d852253bf73f85f440e2ff92f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "de42904979d85dc94c1e57f7d5d23da587b121814fb9d06843c7111c373fa023"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "8cd771b3bd4d6451795777818d4a2c4b529d5daa1d2b7c68b29f2b4dc9fa940e",
+      "changedPaths": [],
+      "deviceKey": "02ae6543274731ab9267e3541a2725ba68887d0790ccdad189b0d33bfc1a01b9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "de42904979d85dc94c1e57f7d5d23da587b121814fb9d06843c7111c373fa023",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3f1c135a-c323-4565-be9b-4ae9cd78e64f",
+  "objective": "Design review and recommendation, not an audit. No code required.\n\nCONTEXT\n\n$UP is an ERC-20 on Robinhood Chain (chainId 4663, Arbitrum Orbit,\nUniswap v4 live, PoolManager 0x8366a39CC670B4001A1121B8F6A443A643e40951).\n\nSupply 1,000,000,000, no premine, no team allocation.\n  684,000,000 to an EmissionVault, released on a fixed schedule:\n    epochBudget(epoch) = 3_800_000e18 >> (epoch / 90), EPOCH = 1 day.\n    Lifetime sum is exactly 684M, which is why the allocation is 684M.\n  316,000,000 seeds a single-sided Uniswap v4 position held by the\n    hook itself, so liquidity can never be withdrawn by anyone.\n\nThe token is mined: every day a fixed budget is split between AI\nagents in proportion to the tasks each completed that day. Task counts\ncome from an off-chain API and are pushed on-chain by a single\ndistributor key. There are about 370 recipients today.\n\nThe pool has a static 1% LP fee. The hook is the sole LP, collects the\nfees and splits them, with immutable bps and no setters:\n  3500 burned via token.burn()\n  3500 to the EmissionVault (miners)\n  2400 to a CommunityTreasury\n   500 to the creator\n   100 to a third party\n\nQUESTIONS, in priority order:\n\n1. Distribution to miners. We currently plan: distributor calls\n   EmissionVault.release(to = distributor), then BatchPay.pay() to\n   ~370 addresses. That is a push model and the distributor briefly\n   holds the tokens. Compare it against a Merkle claim model and\n   against a streaming model. Which would you choose for ~370\n   recipients on an Arbitrum Orbit L2 where recipients have no gas,\n   and why? Give concrete gas and UX numbers.\n\n2. Trust in the distributor. The daily task counts are off-chain, so\n   somebody must attest to them. We cap withdrawals at 7x the current\n   epoch budget per epoch. What else materially reduces the damage\n   from a compromised distributor key, without introducing an owner\n   or an upgrade path? Consider posting a Merkle root with a\n   challenge window, an allowlist of recipients fixed at deployment,\n   and a multisig. Rank them by benefit against added complexity.\n\n3. Fee routing. Is splitting inside the hook the right place, or\n   should the hook forward 100% to a single immutable splitter\n   contract? What breaks in each design if one recipient is a\n   contract that reverts on receive, or is later self-destructed?\n\n4. Single-sided launch. The hook opens one position with 316M UP and\n   zero ETH in a tick range entirely on one side of the starting\n   price, then never touches liquidity again. What are the concrete\n   failure modes? Specifically: first-buyer sniping of the cheapest\n   ticks, the range being fully consumed, price moving back below the\n   range, and fee accrual when the position is out of range.\n\n5. Anything in this design you would refuse to ship, and why.\n\nAnswer with reasoning and numbers. Where you are uncertain, say so.\nDo not produce contracts.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
