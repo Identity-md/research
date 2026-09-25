@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "2915f2569856d5aac0289603bf77bbe2d5a6f3e7132d9bbe702c98de77bd7d6b",
+  "artifacts": [
+    {
+      "bytes": 20691,
+      "hash": "5dc05cdbf011dd3395b8aa9358dac1147d4fd32ee80af291eba6d77fe810e023",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "dbafbbaf8e2f545ee77388062727e055d4e4ee16e529acba2ba5467818153151"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "2f3c63645fad96ce70302c2e895b74809ae033c0d6cb4ab1c40f65fa4b6a67b8",
+      "changedPaths": [],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "dbafbbaf8e2f545ee77388062727e055d4e4ee16e529acba2ba5467818153151",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "820d0fdf-37d4-46bb-939c-41c4138f2bda",
+  "objective": "Adversarial security review of three Solidity contracts.\n\nGet the code:\n  curl -sS -o up.bundle https://api.imd.fun/bundles/1bd4969ba2e44b6493a7f570dda6eaec548fac50d8e4f875585f9e981e204859\n  git clone up.bundle up && cd up\n\nSCOPE: src/UpToken.sol, src/EmissionVault.sol, src/BatchPay.sol only.\nDo NOT review src/UpHook.sol or src/HookFlags.sol, they are being\nrewritten and any findings on them are wasted.\n\nThese contracts will hold and distribute 70% of a token's supply, so\nassume a motivated attacker and assume the distributor key can be\ncompromised.\n\nThe intended invariants, which the code is supposed to guarantee:\n\n1. Total supply is exactly 1_000_000_000e18, minted once in the\n   constructor, split 700_000_000e18 to the vault and 300_000_000e18\n   to the deployer. No code path mints after construction. No owner,\n   no pause, no blacklist, no upgradeability.\n2. EmissionVault releases on a fixed schedule only: EPOCH is 1 day,\n   HALVING_PERIOD is 90 days, epochBudget(epoch) is\n   3_800_000e18 >> (epoch / 90). Cumulative releases can never exceed\n   the sum of budgets for elapsed epochs. Only the immutable\n   distributor may call release. There is no other withdrawal path,\n   no sweep, no rescue, no way to change the distributor or the\n   schedule.\n3. BatchPay holds no funds between calls and has no owner. It reverts\n   when the recipient and amount arrays differ in length.\n\nFor each invariant, either prove it holds by pointing at the code, or\ngive a concrete sequence of calls that breaks it.\n\nAlso specifically check:\n- integer truncation and rounding in the halving shift, including\n  what epochBudget returns after 20+ halvings and whether it can\n  reach a state that reverts or divides by zero\n- timestamp handling at t == startTime and before it\n- whether reentrancy through a malicious ERC-20 in BatchPay can drain\n  the caller's approval or skew accounting\n- whether a partial or fee-on-transfer token breaks BatchPay's\n  arithmetic\n- unchecked blocks, unbounded loops and gas limits at 400 recipients\n- anything that lets the distributor front-run or accelerate the\n  schedule\n\nReport format: one section per finding, each with severity\n(critical / high / medium / low / informational), the exact file and\nline, why it matters in one sentence, and a concrete fix. List every\ninvariant you could NOT verify and say plainly why. Do not pad the\nreport with generic advice that is not grounded in this code.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
