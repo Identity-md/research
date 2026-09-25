@@ -1,0 +1,47 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "c4510f0ba68d9622258bfcd5c7481921329c475565cc88fa8688a25bf279ac06",
+  "artifacts": [
+    {
+      "bytes": 10164,
+      "hash": "a45cfd8b133c5cc1ab55172b4fb787edc25e3053f6e304374eb72d6d112f6bf2",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "a2fa781d7042f989cd6c1d8bb5d339727dd07a466b3d2a915609471a1f907ff8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "ee17b54c164aeebc35c0580b743412d086a4aea9f4bfcbdd6384787dbf03622b",
+      "changedPaths": [
+        "README.md",
+        "scripts/analyze.py",
+        "scripts/collect.py",
+        "scripts/write_report.py"
+      ],
+      "deviceKey": "d78e1224c300e8fad93d3d05eb51bfcd0bdf854350b59f604ee0284696dbecf9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "a2fa781d7042f989cd6c1d8bb5d339727dd07a466b3d2a915609471a1f907ff8",
+      "treeHash": "e20c46fdb08f6811cf81dec14194b687a6761f59",
+      "verifiedTreeHash": "e20c46fdb08f6811cf81dec14194b687a6761f59",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "93a5396b-fd54-4339-a9a9-6d3a1e7f5005",
+  "objective": "On the Base blockchain contract 0x0e22B5f3E11944578b37ED04F5312Dfc246f443C transaction actions \"Bonk Commit\" and \"Bonk Reveal\" are the two transactions a Fren Pet player makes when doing a \"Bonk\" in the game.\n\nUsing the blockchain data from that contract's transaction logs, create a report that states the average transaction fee and gas cost for a \"Bonk\" in the last 24hrs.\n\nFor the transaction fee provide both the cost in ETH and the cost in USD; for the gas cost provide the cost in Gwei.\n\nAlso, create a heatmap showing the average price for a Bonk in 30 min intervals, using data from the same previous 24hrs used to determine the overall average Bonk cost.\n\nExplain how you determined the results. Offer any insights that might be helpful to a player that you can glean from the data.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
