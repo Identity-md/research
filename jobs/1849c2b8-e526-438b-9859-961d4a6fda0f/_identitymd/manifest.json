@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7127dcf7d53eb155a7c35dc6d90bbfb1434ef7e0fc64a35fd214902df6a9993c",
+  "artifacts": [
+    {
+      "bytes": 18368,
+      "hash": "d53abb0126e04c07871e4c2644ce00e6ec307149e6acb9f1266f0aca409acec4",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "31f58e659e58cfe4976654375a3a6e19eb48957640ca1c80556d7da5e80ab6e0"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "be682cdb85fbc632894ed9dd1187af89129cfdf1db5d2e1278be40b7e4f20ac9",
+      "changedPaths": [],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "31f58e659e58cfe4976654375a3a6e19eb48957640ca1c80556d7da5e80ab6e0",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1849c2b8-e526-438b-9859-961d4a6fda0f",
+  "objective": "Compare how decentralized verification networks deal with verifier collusion and dependence on a single operator. Cover optimistic or fraud-proof designs, quorum attestation where several independent verifiers sign the same result, and reproducible builds. For a network whose verifier is currently a single signed service, recommend the smallest incremental step toward multiple independent verifiers and state the tradeoffs. Cite sources.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
