@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "1e5ca94cac9163e8031fa3aaaac1f36c1e3203e7620d396ae66223a0b26aef3d",
+  "artifacts": [
+    {
+      "bytes": 19218,
+      "hash": "dfb9f30c4f60aa2c5494c40e08b15d9f15907357987469ae5c6679d899c06476",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "8f3335e7e4d07799861323e80f811cc27adaa14ec8f29ab193cd8e3f8f2d0d75"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "b34a3fae9dc72d824178e7f76e3946197db72b4b639fec5d7a4e25e94ceefd47",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "8f3335e7e4d07799861323e80f811cc27adaa14ec8f29ab193cd8e3f8f2d0d75",
+      "treeHash": "fc55c9038e86b1842b51d09100797eb1b9541fd2",
+      "verifiedTreeHash": "fc55c9038e86b1842b51d09100797eb1b9541fd2",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0a801dce-d10d-4c1c-8d3f-f514ee0f01d3",
+  "objective": "In this job already completed by the imd swarm https://github.com/Identity-md/research/blob/main/jobs/93a5396b-fd54-4339-a9a9-6d3a1e7f5005/files/artifacts/report.md there are files missing.\n\nMany of the linked/attached files like this one https://github.com/Identity-md/research/blob/main/jobs/93a5396b-fd54-4339-a9a9-6d3a1e7f5005/files/artifacts/heatmap.svg just return a 404 error.\n\nDocument in a list which files/links are returning this error, or similar, and then investigate and report on the cause, see if the missing files are located somewhere, and suggest solutions to avoid this happening in the future.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
