@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6bcd23963b25dd92453848d1e4afbe413bf5dc2720044bbbc2a9112826f102fa",
+  "artifacts": [
+    {
+      "bytes": 3891,
+      "hash": "cbc714f289657754595ffdc713cd4e099d12e9a3ca777e6c2361e9f4eafc6c0e",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2e02b1acb37e79efde75a70b0d5f513b24ac6b9f4426a435286a92786f9e5412"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "5e46fba7d11f080c50d7b8621cbe7f0f09a4c9f5bd79958eba862520245570c0",
+      "changedPaths": [
+        "HOOK_PERMISSIONS.json",
+        "HOOK_PERMISSIONS.md"
+      ],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "2e02b1acb37e79efde75a70b0d5f513b24ac6b9f4426a435286a92786f9e5412",
+      "treeHash": "9dbf361697c355c82ffac26d727771bd2f5866fa",
+      "verifiedTreeHash": "9dbf361697c355c82ffac26d727771bd2f5866fa",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "47d43340-e5d8-4497-ba2c-8b9833e32cdd",
+  "objective": "Compare Uniswap v4 hook permission patterns for IMD Sepolia launches. Focus on what is safe for the Identity MD factory (PoolManager.initialize called by factory, not by a pad).\n\nSources (public):\n- Uniswap v4 Hooks.sol permission bit layout / BaseHook patterns\n- Live Sepolia reference: BurnShareHook-style swap-path hooks vs hooks that use beforeInitialize\n- Document why beforeInitialize that gates on pad/sender fails factory launch (WrappedError / pad-gated pattern)\n- Recommend a default permission set for (A) no-op smoke hook, (B) fixed fee skim hook, (C) burn-share hook\n\nDeliverables (required):\n1) HOOK_PERMISSIONS.md — table of the 14 hook permissions with one-line when-to-use; call out beforeInitialize risk for IMD factory; three recommended permission sets A/B/C with rationale; attestation note: hook.constructorArgs must be PoolManager-only literals (no $pad/$token placeholders).\n2) HOOK_PERMISSIONS.json — { asOf, recommendations: { noop, feeSkim, burnShare: { permissions: string[] } }, factorySafeRules: string[] }\n\nSuccess = both files present, JSON parses, every permission in A/B/C is a real Hooks.Permissions name, and md recommendations match json. Do not deploy contracts. Do not invent live addresses; if citing Sepolia examples, label them as examples and prefer well-known PoolManager 0xE03A1074c86CFeDd5C142C4F04F1a1536e203543 on chainId 11155111.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
