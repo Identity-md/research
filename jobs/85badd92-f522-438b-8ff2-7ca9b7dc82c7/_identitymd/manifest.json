@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "01508260f105f8be79641e4369f3e15320093ee732379a3a506a67b9f372bf7a",
+  "artifacts": [
+    {
+      "bytes": 26863,
+      "hash": "0ec1ab138c08b36d28a6fc2282a97addcfe503c51b328209a0850283d2f1a51b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "a3167d80ffddee9ab24704a23d4b014ebd7e68a82aa1970221d0680f8c9976b2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "081ae35068f058c53af8b4c092c4e911d5bd6accdd4e7e75014e64554df11db5",
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "a3167d80ffddee9ab24704a23d4b014ebd7e68a82aa1970221d0680f8c9976b2",
+      "treeHash": "2a78275f97545c3daab7019011abc220700fda19",
+      "verifiedTreeHash": "2a78275f97545c3daab7019011abc220700fda19",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "85badd92-f522-438b-8ff2-7ca9b7dc82c7",
+  "objective": "Security audit of imd-panel (repository and commit given in repoUrl/baseCommit), a small self-hosted dashboard for an identity.md worker node. It is a Python standard-library HTTP server (imd_panel/server.py, collect.py, notify.py, history.py, tiers.py) plus a static page (imd_panel/index.html, imd_panel/assets/js/*.js). It binds to 127.0.0.1:8787 and is reached through an SSH tunnel or `tailscale serve`; it runs as the same Unix user as the worker daemon and can restart/stop that systemd user unit, edit its unit file and config, install worker releases with npm, run `imd doctor`, and send Telegram/webhook notifications.\n\nThreat model to assess: (1) a malicious website open in the operator's browser (CSRF, DNS rebinding, cross-origin reads); (2) hostile data coming from the network (api.imd.fun, explorer, 8004scan, GitHub releases) and from task work directories and Claude Code transcripts written by untrusted task agents, reaching the page (XSS despite the CSP), notifications, the filesystem or subprocesses; (3) other local processes or tailnet devices driving write actions; (4) supply chain of the release rollback path (download, SHA-256 check, npm install).\n\nReview specifically: the Host/Origin/X-Dashboard checks in H.trusted and every route in do_GET/do_POST; all subprocess calls and the arguments they take; file reads/writes and path handling (assets, transcripts, work dirs, artifacts, symlinks); how network strings are escaped in the page and in notify.py; secrets exposure in /api/data and exports; denial of service from large inputs. Do not report generic best practices without a concrete path through this code.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "71b23963573b8deef6be3a335dd6f2b001e4d132",
+    "repoUrl": "https://github.com/pointbreak01/imd-panel"
+  }
+}
