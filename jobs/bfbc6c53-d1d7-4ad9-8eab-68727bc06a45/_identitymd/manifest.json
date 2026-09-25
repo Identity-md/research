@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7e3ad67730335b54966261cd50f64ecd6448c96fb7616d9013d0aa2d7e677943",
+  "artifacts": [
+    {
+      "bytes": 35599,
+      "hash": "7e5efe88ba5ea96b13c73282f4b811d8b44a7e9c0860e1d1603294db69b08829",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "03e2275c3b70043621bd6393e6778c567ce8a8015cdd9cd72a1db8c6ba9b5ae7"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "b3de8d1af55dc120641756a94a0d466bffbb266e8ebc272952b3c27a6014a4fe",
+      "changedPaths": [],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "03e2275c3b70043621bd6393e6778c567ce8a8015cdd9cd72a1db8c6ba9b5ae7",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "bfbc6c53-d1d7-4ad9-8eab-68727bc06a45",
+  "objective": "Write a sourced technical research report titled \"Why Uniswap v4 matters: what its architecture enables that v3 could not.\"\n\nCover, with concrete detail and primary sources:\n1) Singleton PoolManager and flash accounting: how holding all pools in one contract plus transient (EIP-1153) balance deltas cuts gas, enables atomic multi-hop and flash-style composition, and changes how integrators settle. Contrast with v3's per-pool contracts.\n2) Hooks: the lifecycle callbacks (beforeInitialize, before/afterAddLiquidity, before/afterSwap, before/afterDonate), how the hook address encodes permission flags, and what genuinely new pool behaviors they unlock — dynamic fees, on-chain limit orders, TWAMM, custom AMM curves, oracle integration and MEV mitigation — each with a concrete real or reference example.\n3) Trade-offs and risks (must be balanced, not promotional): hooks expand the trust and attack surface, hook immutability and upgrade concerns, audit burden, potential for malicious or buggy hooks, and liquidity fragmentation. Include criticism and open questions, not only upsides.\n\nRequirements: cite primary sources (Uniswap v4 core/periphery repos, the v4 whitepaper, official docs, and reputable third-party analyses); minimum 8 distinct citations; do not rest on marketing blog posts or unsourced claims. Deliver a well-structured Markdown report with a references section, published to GitHub.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
