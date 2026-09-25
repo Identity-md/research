@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "db53bcb89dd1b376d4251ca12bb21309d371f6d5d432f888885600e3b7bbfed5",
+  "artifacts": [
+    {
+      "bytes": 3497,
+      "hash": "2f5ea45905492b7697477d1a3c9d021988828c93779bdcd008f27e4e3b80f028",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2fb6ff30f147a9be5d19121b749828a9989e97a012dd331aec2e963dc12fa9c8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "0cfd939b7785366f42e6b94f05e4744ab36063c24020b29e08e481b3d7e535d4",
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "2fb6ff30f147a9be5d19121b749828a9989e97a012dd331aec2e963dc12fa9c8",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e5631917-0eea-4470-8893-76d43beb61c1",
+  "objective": "For the video located here- https://hianime.ms/watch-yugioh-go-rush-episode-26-6c924\n\ncreate properly translated English subtitles for the first five mintues",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
