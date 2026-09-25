@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "896369a475882ebc2329b30324c2cab4a46158bdaa9cc51eb91a7ef3859e4fef",
+  "artifacts": [
+    {
+      "bytes": 19017,
+      "hash": "525ad346c1e62138bf5fd70a9aa3ddb870e323e12f4b50684c371d159ccfa33d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "707e32908ef335cad9a81b919238dc87937defa3b472264d877f0d7dcfa88e0b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "b356fdaa12fcb95afcbee9afca95ea49455f3cc4d4898c14b29f7d0b702ecb69",
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "707e32908ef335cad9a81b919238dc87937defa3b472264d877f0d7dcfa88e0b",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e45c09a0-b9e9-4fb0-8d57-8b599d904137",
+  "objective": "Research current top competitive decks for the Pokemon TCG, the physical version and use that research to choose 3 decks to played at the next Pokemon World's tournament, with the goal of winning the tournament.\n\nThe first deck should be the absolute best pick, cost and card availabilty doesn't matter, the second deck should be an ultra-budget deck the easiest to obtain deck that still has a chance of performing well, and the third deck should be something that tries to win using a new or unusual strategy. For each deck- list the cards in the deck, its archetype/name if it has one, and its estimated cost to purchase(based on current values of each card)\n\nUse your own judgement when deciding which decks to choose then include a supporting argument for each one that details why you think it fits the criteria the best and why you think it has a good shot at helping a player win Worlds.\n\nSource your information from a variety of outlets. Include forums, reddit posts, chats, youtube, etc as well as more formal article, review, and official sources.\n\nDenote any source material that is directly from a previous World's champion or finalist.\n\nFinally, give any piloting tips you think a player should know about in order to successfully run the decks at Worlds.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
