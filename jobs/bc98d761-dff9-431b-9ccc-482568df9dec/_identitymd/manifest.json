@@ -1,0 +1,48 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "fcc515212b2de7477b3bd4cee6804588b895a42c4fa8b8d616298a90e19f7f34",
+  "artifacts": [
+    {
+      "bytes": 14982,
+      "hash": "e800ee3ad0c0fc105e769967a1866a4b21e354c51058d070c5b097db7c0cda2d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "b64275949ae5eb0b9695a8693048be272ba8bcb75e42e22ebe2b020b98bccdaf"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "f4147dbe0f1f1098cda7a153cc48d97dbdd4522349794eb96a11f348d52589d0",
+      "changedPaths": [
+        "scripts/frenpet_diehards/README.md",
+        "scripts/frenpet_diehards/analyze.py",
+        "scripts/frenpet_diehards/fetch.py",
+        "scripts/frenpet_diehards/report.py",
+        "scripts/frenpet_diehards/verify_onchain.py"
+      ],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "b64275949ae5eb0b9695a8693048be272ba8bcb75e42e22ebe2b020b98bccdaf",
+      "treeHash": "09d08afc5e7c121fd62f639442d6a71a75a385cf",
+      "verifiedTreeHash": "09d08afc5e7c121fd62f639442d6a71a75a385cf",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "bc98d761-dff9-431b-9ccc-482568df9dec",
+  "objective": "Build a Fren Pet \"diehard fans\" checker report: pets that have existed for 2+ years, are still alive, and show sustained engagement (spending / bonking / upgrading / combat), using the LIVE public GraphQL API.\n\nPRIMARY SOURCE:\nPOST https://api.pet.game/graphql (Ponder). Do NOT use api.frenpet.xyz.\n\nDEFINITIONS (document clearly; adjust only if on-chain/docs contradict, and cite evidence):\n1) Age: pet.createdAt <= (asOfUnix - 63072000)  // 730 days ≈ 2 years. Also report ageDays.\n2) Alive: treat status == 0 as the primary alive/active class (early pets #0/#1 are status 0 with recent lastAttackUsed and timeUntilStarving in the future). Also tabulate status histogram for createdAt_lte cutoff. Do NOT treat status 4 (typically dead/burned, owner 0x0) as alive. If you find official status enums, prefer those and note the mapping.\n3) Still cared for: timeUntilStarving > asOfUnix (not currently starving-expired) AND/OR lastAttackUsed within last 30 days — report both filters.\n4) Diehard engagement score (compute + rank). Use pet fields when present:\n   - fpSpent, totalRedeemFP, totalRedeemInETH (stringify BigInts)\n   - winQty, lossQty, petWins, level, score\n   - oldestRelevantBonkTimer (recent bonk signal if close to now)\n   - optional relation counts if cheap: attacks, consumeds, wheelSpins, gachas, petItems, redeems (paginate carefully; prefer aggregate fields on pet when enough)\n   Propose a transparent weighted score (e.g. z-score or log1p of fpSpent + combat + level) and list weights in the report.\n\nMETHOD:\n- Fetch _meta for indexer lag.\n- Paginate ALL pets with createdAt_lte cutoff (limit 1000 + after cursor) OR prove a complete filtered query path; do not invent ids.\n- From that set, split alive vs dead; among alive, rank diehards.\n- Deliver top 100 diehards and full CSV/JSON of all alive 2y+ pets meeting the engagement floor (define floor, e.g. fpSpent>0 OR winQty>=100 OR level>=50).\n\nDELIVERABLES:\n1) FRENPET_DIEHARDS.md — method, status legend, counts (2y+ total / alive / diehard), top 25 table (id, name, owner, ageDays, level, fpSpent, wins/losses, lastAttackUsed, score), caveats.\n2) FRENPET_DIEHARDS.json — structured counts + top100 + parameters used.\n3) FRENPET_DIEHARDS_alive.csv — one row per alive 2y+ pet with key metrics (may be large).\n\nSuccess = files present, JSON parses, every listed pet has createdAt<=cutoff and alive status rule, no fabricated pets. No deploy. No private keys.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
