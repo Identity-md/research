@@ -1,0 +1,47 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d6c77ceb789d5eec008edba0526510ebd5b99130b237a72717edf266553df8c7",
+  "artifacts": [
+    {
+      "bytes": 5813,
+      "hash": "0616e384555617cbc7376d12bc9a6ef7e2aadf5b9561ca6c0adec96d5ab35527",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "fcfa6312275f2ec21bbf1ca2c8aae277c7aa2932b5392e389009f77624b451a8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "c2fd14634f79755199d896d8848bb6e0f5650dc9cb1b59f2924d2f5aacb8f966",
+      "changedPaths": [
+        "README.md",
+        "content.js",
+        "manifest.json",
+        "service-worker.js"
+      ],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "fcfa6312275f2ec21bbf1ca2c8aae277c7aa2932b5392e389009f77624b451a8",
+      "treeHash": "2fa8cf971f47f3ba3b35c512f13a15c78fbbb2c2",
+      "verifiedTreeHash": "2fa8cf971f47f3ba3b35c512f13a15c78fbbb2c2",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "425e5465-b229-4fb5-8412-c1c7ea23d196",
+  "objective": "Build me a tool that, once having selected a webpage Element with a Element Picker, the tool writes the code for a canvas-confetti canvas that is the dimensions of the element.",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
