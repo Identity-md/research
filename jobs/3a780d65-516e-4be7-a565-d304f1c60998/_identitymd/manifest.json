@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "982a31b35a62fdee9bed2d1551868b0652c796d427c20cfe983ad3a4c3b705b0",
+  "artifacts": [
+    {
+      "bytes": 27807,
+      "hash": "a2d4e6e672d7e387d9be98e8bb27aeb3ba7bbc1c4f55b581618b7b37686f0321",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "17fb602f664723ad9be9f5f7112bee5d90281c9ec123cd78e434c38078d1395f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "26aff67f7d1fe6e363ea634a064e4d1ba991071a4682a619be1748a64c084902",
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "17fb602f664723ad9be9f5f7112bee5d90281c9ec123cd78e434c38078d1395f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1b3bcb5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3a780d65-516e-4be7-a565-d304f1c60998",
+  "objective": "Provide a researched report that details how to create prompts for Jobs:Research for identity-md agents/works that are highly effective as stress-testing vehicles and at shaking out bugs.\n\nGive a couple of good examples and bad examples with explanations.\n\nIf possible, detail what aspects of a prompt make it better or worse for proc'ing situations that should be tested before launch. If prompt design has little relevance to that, provide information on what would.\n\nAdd any extra useful thoughts you have on the matter in a closing statement",
+  "publisherVersion": "0.1.0+5bfa8261",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
