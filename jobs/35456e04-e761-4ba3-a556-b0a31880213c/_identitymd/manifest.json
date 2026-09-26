@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3f74d3469b273c699d4b50d4cc7dad3c9733a7f6c837b120a5224c7059ab77d5",
+  "artifacts": [
+    {
+      "bytes": 8239,
+      "hash": "96f0cfcd70b0081a5e96bb55c29a79b7bfcc62848efc6dff0b123146cb7c2d96",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "16b422bf7bee26fe72a95fae3d6368105f1f6000778cdfbb22a5f778f0048ea7"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "f061424f1b3d367403edb0f4ee19eef5e8efe588976442fd110753ac48c55fa1",
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "16b422bf7bee26fe72a95fae3d6368105f1f6000778cdfbb22a5f778f0048ea7",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+9ea77f1d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "35456e04-e761-4ba3-a556-b0a31880213c",
+  "objective": "Characterize the holder base of the identity.md NFT collection on Ethereum\nmainnet: 0x0000ec93127baa929e58e97dd0095a2bfb38ec1d\n\nTake the top 500 holders by balance. Aggregate statistics only.\n\nAnswer one question: what kind of people hold this, judged purely by their\non-chain behaviour.\n\nMeasure:\n- how long they have held their identity.md, median and distribution. What share\n  still holds every token they received at mint\n- their track record on everything else: median age of the other ERC-20 and NFT\n  positions currently sitting in those wallets\n- flip rate: share of these wallets that bought and sold any NFT within 30 days,\n  over the last year\n- wallet age: when each address first transacted on Ethereum, distribution\n- how many are dormant, no outgoing transaction in 90 days\n\nExclude contracts, burn addresses and exchange wallets. Say which you excluded\nand how you found them. Report the block height for every number.\n\nThen write three posts for X, one per finding, and let me pick.\n\nVoice rules, follow exactly:\n- lowercase throughout, capitalize only \"I\" and tickers like $IMD\n- two to four short lines, blank line between each, never paragraphs or bullets\n- no em dashes, no emojis, no hashtags, no call to action\n- exactly ONE number per post, stated flat, no adjectives, no hype\n- end on a question to the reader\n\nUnder each post, list the number used and where it came from.\n\nDo not identify anyone. No addresses, no ens names, no social accounts, no\nindividual profiles, no net worth estimates.",
+  "publisherVersion": "0.1.0+9ea77f1d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
