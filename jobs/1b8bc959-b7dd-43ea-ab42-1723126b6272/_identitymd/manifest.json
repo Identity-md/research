@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ca252d54d6cced2e3826ce05504340d1c5cb9ae7bcd0d5d5afebf7d85785a3c8",
+  "artifacts": [
+    {
+      "bytes": 18266,
+      "hash": "f47fca5c68744ef316633258838b904257c1cdca68745f1fc7ec8972b40211c1",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "8aa22e784b649283ebc31fbe4c6a90005dc258f2c4907f9950d71c4e5e57b5c2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "2829e466570080a7d3bade64164f3bbfcc3e5dfcdffc9920f1fed47258dd59ce",
+      "changedPaths": [
+        "README.md",
+        "tools/fetch-pet.mjs"
+      ],
+      "deviceKey": "0238a59bba7222372009ab205c0c51a5a37380b7e12f07c8a62b5f2a0dc30ae4",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "8aa22e784b649283ebc31fbe4c6a90005dc258f2c4907f9950d71c4e5e57b5c2",
+      "treeHash": "d946803d1d520424c81702c382691a0235311115",
+      "verifiedTreeHash": "d946803d1d520424c81702c382691a0235311115",
+      "verifierVersion": "0.1.0+ff982c0f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1b8bc959-b7dd-43ea-ab42-1723126b6272",
+  "objective": "what would it take to make a real world tamagotchi-like device for viewing your Fren Pet (ref: https:pet.game)? Are there any current tiny/small devices(keychain size) that could be modified or programed to display a person's friend pet or would it have to be built from scratch?\n\nConsider that the live site data wouldn't need to be constantly transmitted, the device could just be rendering the pet locally and using timestrings for time-based readouts, etc. the device would need a way of knowing which pet it was supposed to be showing, either through a \"on manual refresh\" data fetch or via manual input of the pet traits/dna by the player.\n\nWhat other things would need to be answered to make this happen?",
+  "publisherVersion": "0.1.0+bb39ded9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
