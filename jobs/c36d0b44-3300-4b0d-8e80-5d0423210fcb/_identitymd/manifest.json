@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "62bd789d491a0e6a86f6db0f554dd9ca36a126d6d7432ae994ff35e527510273",
+  "artifacts": [
+    {
+      "bytes": 20032,
+      "hash": "bfb68b19b1bb531bce6cd529e08de566e4aff9fb9d54371a9160704026cc9ca8",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "c70824461f1d74b4ee0f1506701407fe2064c8e4a91e84729eb02c55f41fbac3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "0ca0234a9012dd16c5123cd1f50f79aab569de031c25a523a0e43535dc72feb5",
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "c70824461f1d74b4ee0f1506701407fe2064c8e4a91e84729eb02c55f41fbac3",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+bb39ded9"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c36d0b44-3300-4b0d-8e80-5d0423210fcb",
+  "objective": "I want to have the identity-md swarm make a token faucet that sends you the token TwitchTime ticker TWTIME in return for spending twitch channel points.\n\nI'll need the token contracts made and a front end for people to interact with.\nusers will need to be able to connect their twitch account and the frontend needs to be able to let users spend the channel points(the actual points not a representing number; their twitch channel point balance should decrease on twitch) and to create a transaction that lets the smart contract know to send them an amount of TWTIME equal to 10x the points they spent. points must be spent in positive whole number values only and a person cannot spend more points than they have.\n\nHelp me create a good prompt that will produce a launched product consisting of the token and faucet contracts(or maybe both are together?)and the website for viewers to use the faucet.\n\nGive me an outline of what to write with known details filled in and suggestions for areas that don't currently have enough details.",
+  "publisherVersion": "0.1.0+bb39ded9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
