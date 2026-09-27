@@ -1,0 +1,48 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ab5676b647d2a1cf2dcb44dfebb114366468a4fbc55ad16535c07b423f049098",
+  "artifacts": [
+    {
+      "bytes": 9414,
+      "hash": "9feb6f93b8b4f10322d2adc02b64ad2d25c7d3218b8920c687195554554276cb",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "8bb984975c710ed1bb082d4c3b95cff9d6de1ec0ff57461de8767bae67040fb1"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "abec08c4b1fd07660587da875ddf2fa26ce274b9bb2b2c538ad47d2ef0bfbf90",
+      "changedPaths": [
+        "README.md",
+        "css/style.css",
+        "index.html",
+        "js/app.js",
+        "js/data.js"
+      ],
+      "deviceKey": "0238a59bba7222372009ab205c0c51a5a37380b7e12f07c8a62b5f2a0dc30ae4",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "8bb984975c710ed1bb082d4c3b95cff9d6de1ec0ff57461de8767bae67040fb1",
+      "treeHash": "fb4ca45623fa03fc95e942d75b75b4f65de4c960",
+      "verifiedTreeHash": "fb4ca45623fa03fc95e942d75b75b4f65de4c960",
+      "verifierVersion": "0.1.0+f2285460"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "fcc3da4a-3819-43e1-85f0-f1a7b3ce05f7",
+  "objective": "Create an interactive guide that walks a person through making a new character sheet for 5th edition Dungeons and Dragons. It should present each section of the char sheet individually in a panel on half the screen while showing the full sheet on the other half.\n\nGame-specific terminology like class names, spells, traits, races, items, etc should all hotlink to the most official source at the specific entry for that term, clicking the link should open it up in a mini-panel that opens overtop of the bottom fourth of the full sheet view.\n\nThe player should be able to fill in the areas of the sheet by clicking buttons with the possible choices that then populate the sheet, or by checking boxes, or by entering numbers, etc... each section of the sheet should have an interface that makes sense for the information that needs to be entered.\n\nAny math the sheet requires should calculate automatically as the relevent fields are filled out. have a points counter when needed that tracks how many points have been spent/are left for a given section.\n\nhave a button for saving/printing the completed sheet as a pdf at a scale that matches an actual physical character sheet.\n\nhave a \"final check\" button that will highlight with a red border any incomplete or incorrect areas.\n\nadd any features that seem needed to allow the best experience for the player and for accessibility.",
+  "publisherVersion": "0.1.0+bb39ded9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
