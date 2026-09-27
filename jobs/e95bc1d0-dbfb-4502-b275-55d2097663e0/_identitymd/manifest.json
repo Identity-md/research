@@ -1,0 +1,62 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "610d28f587087724e8006bfa3bb72cc46cb74e0687a1100cf0f7c02ff94becc6",
+  "artifacts": [
+    {
+      "bytes": 25603,
+      "hash": "1b3ce79e8aa375ff82fe81872b8e0488cae001377bf6e2cf70cb8b657d8bd3cc",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "7171145e5f9eb0effc848807137bba1163b8bc97ac24ebc898f69fe8492cd496"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "d250593104f1167c87b68cfee3a57675495c76a5ea7f2def3788c3e83e8f1c30",
+      "changedPaths": [
+        "README.md",
+        "evidence/data/derived.json",
+        "evidence/data/logs.json",
+        "evidence/data/os_coll.json",
+        "evidence/data/sec.json",
+        "evidence/data/tok_1.svg",
+        "evidence/data/tok_343.svg",
+        "evidence/data/tok_766.svg",
+        "evidence/data/traits.json",
+        "evidence/data/uri_1.txt",
+        "evidence/scripts/analyze.py",
+        "evidence/scripts/code.py",
+        "evidence/scripts/dormant.py",
+        "evidence/scripts/sales.py",
+        "evidence/scripts/sim.py",
+        "evidence/scripts/traits.py",
+        "evidence/scripts/txs.py",
+        "evidence/source/PixelArt.sol",
+        "evidence/source/SwarmPepe_1.sol"
+      ],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "7171145e5f9eb0effc848807137bba1163b8bc97ac24ebc898f69fe8492cd496",
+      "treeHash": "794158a1cc4b3d7d554897be898a23fa25029917",
+      "verifiedTreeHash": "794158a1cc4b3d7d554897be898a23fa25029917",
+      "verifierVersion": "0.1.0+ff982c0f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e95bc1d0-dbfb-4502-b275-55d2097663e0",
+  "objective": "Think about how to grow the Swarm Pepe NFT collection, then propose five ideas.\n\nWHAT EXISTS TODAY, verify all of it yourself before proposing anything:\n\n  SwarmPepe ERC-721  0x999ce0ce8c5f7661e0c74a568ffe27ceb9177bdb  Ethereum mainnet\n  PixelArt renderer  0x07Fd9841eEB6a359EfB30f861D59bFa1f6B03FcA\n  OpenSea            opensea.io/assets/ethereum/0x999ce0ce8c5f7661e0c74a568ffe27ceb9177bdb\n  X                  @swarmpepes\n  The swarm itself   explorer.imd.fun, imd.fun/docs\n\nRead the verified source of both contracts before you write a single idea. Call\ntokenURI on a live token and look at what it actually returns. Check the current\ntotalMinted, how many are revealed, and the allowlist mechanics.\n\nTHE HARD CONSTRAINT, do not propose anything that violates it:\n\nBoth contracts are deployed and immutable. There is no proxy and no upgrade path.\nThe owner can do exactly four things: grant allowlist slots, open or close the\nmint, change the royalty receiver, transfer ownership. Nothing else. MAX_SUPPLY\nand MAX_PER_WALLET are constants. The renderer address is immutable.\n\nSo any idea that needs new contract behaviour means a SECOND contract that reads\nthe first one. Say so explicitly when that is what you mean, and explain what the\nnew contract would read and why the original stays untouched.\n\nWHO IS EXECUTING\n\nOne person, no team, no budget worth mentioning, with access to this swarm.\nAn idea that needs a designer, a community manager or ten thousand dollars is\nnot an idea for this project. Say plainly which ideas need money and how much.\n\nFOR EACH OF THE FIVE IDEAS, in this order:\n\n  1. what it is, in two sentences\n  2. what already exists that makes it possible, pointing at the specific\n     contract function, event or API endpoint\n  3. what has to be built, and whether that is a second contract, a page, a\n     script, or nothing at all\n  4. rough effort: hours, days or weeks, for one person with a swarm\n  5. the one number that would tell us it worked, and how to read that number\n     off chain or off a public API\n  6. the strongest argument against doing it\n\nRank them. Put the one you would do first at the top and say why.\n\nThen kill your own weakest idea: name which of the five you would drop entirely\nif you could only keep four, and explain what is wrong with it. An answer that\ndefends all five equally is a failed answer.\n\nPLUS ONE VIDEO IDEA, separate from the five\n\nOne concrete concept for a short video about the collection, 20 to 40 seconds.\nGive a beat sheet with timings, what is on screen at each beat, and where the\nvisual assets come from. The art must come from the collection's own renderer\nor from tokenURI, never invented. Say what makes this video different from a\ngeneric NFT trailer, in one sentence.\n\nRULES\n\nGround every claim in something you checked. If you did not verify it, say so.\nNo growth-hacking boilerplate, no \"partner with influencers\", no \"build a\ncommunity\", no roadmap language. Specific or nothing.\nDo not propose anything that needs a person's real identity, wallet clustering\nor deanonymisation.\nState the block height for every on-chain number you quote.",
+  "publisherVersion": "0.1.0+bb39ded9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
