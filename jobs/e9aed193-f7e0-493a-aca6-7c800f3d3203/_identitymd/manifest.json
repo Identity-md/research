@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "1ac7352f3d5da89b40b590df0ad49440544a865345099db67b3e8231493b66d7",
+  "artifacts": [
+    {
+      "bytes": 30466,
+      "hash": "517c5fc6a7ae19dab9f5df025203254a4fd6285db32f232e0255a9796ae495e0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "0cc9d64988f9f9aafdf5334fe169dc83032d446ebf8043889754f37a8fdf6771"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "88695e29f6287304c05035dfbd8b9187792a2d9c32ff1a9b8e5c70b9bba94388",
+      "changedPaths": [],
+      "deviceKey": "03767c188b888beda9893a2847d2c91746975483097ec824e3bc7137f3b44cd6",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "0cc9d64988f9f9aafdf5334fe169dc83032d446ebf8043889754f37a8fdf6771",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ff982c0f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e9aed193-f7e0-493a-aca6-7c800f3d3203",
+  "objective": "https://x.com/Natan_benish/status/2104014301023330705?s=20\nhttps://x.com/Ian_Unsworth/status/2103551873441759495?s=20\nhttps://x.com/Natan_benish/status/2102937546007495081?s=20\nhttps://x.com/longdotxyz/status/2102701113883402357?s=20\nhttps://x.com/okay_lets_ride/status/2098082744899190788?s=20\nhttps://x.com/okay_lets_ride/status/2099823698530246668?s=20\nhttps://x.com/okay_lets_ride/status/2101005977931641249?s=20\n\nUse publicly available information, dune mcp (read) for LONG ecosystem analysis and other relevant/available tools, write me a thesis driven analysis strategic report on LONG ecosystem, specifically answer the below questions with evidence backing.\n\n1. Highlights/General overview on the current LONG ecosystem trends, growth\n2. What are their focus points past 30 days, any major trends/strategic shifting?\n3. What are the strengths and weaknesses for LONG ecosystem compare to such as Pons family.\n3. If you were an advisor/consulting firm to LONG ecosystem, what strategic recommendations that you can propose to LONG in order to achieve its onchain Blackrock liquidity blackhole vision, and why?\n4. Protocol health, key KPI metrics to meet, projected growth trajectory, strategic direction case studies and analysis. \n5. Additional comments, valuable insights etc.\n\nReport format\n- Consulting style header: action title\n- page number\n- Professionally rendered cover page, fonts, color scheme similar to long.xyz theme, Consistent use of brand fonts, restrained color palettes\n- Pyramid Principle: Conclusions and primary recommendations are stated first, followed by supporting arguments and data, and structured grids\n- Data Integrity: Clear source notes, footers, and structured data visualizations (waterfalls, process flows, and disciplined charts).\n\nOne launchpad internalize liquidity as moat + its sector/function advisory arms. (I believe this is LONG ecosystem)\n\nOne launchpad externalize liquidity as moat to ecosystem partner + form independent sector/functional partner branches. (I believe this is Pons ecosystem)\n\nPons v3 externalizes some of the \"functions/arms\" to its ecosystem partners.\n\nLiquidity as a moat: net integration for LP compounding + fomo net advance integration.\n\nv4 Hook: hookr to integrate or offer its partnered services to Pons v3 on hook designs. \n\nAI swarm managed market launch: bundlecat\n\nLiquidity/LP fee engine as a service: shroom\n\nAgentic finance/Inference capital market: Orbio",
+  "publisherVersion": "0.1.0+bb39ded9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
