@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "9e7c685c8ebfcf62ed7c4513d02cdc993dbcb75eb248a9c2cb3678ed21f4d75f",
+  "artifacts": [
+    {
+      "bytes": 13065,
+      "hash": "0abed0030d70865c93a206e0d63db1ea9eb979db0bf72e50c986885d737bd463",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "41c490af950c60f8c7c232f8e3505321ae9d72a082d7958c2bcdd57e5a38c771"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "41c490af950c60f8c7c232f8e3505321ae9d72a082d7958c2bcdd57e5a38c771",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+6d07d12b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f449e13f-c4e5-4d86-8270-32616aee373c",
+  "objective": "Goal- Research the cause of the below listed automated pets in the game Fren Pet failing to start Training Camps even though they have met the pre-resequites to do so. Describe the problem, its root causes, any underlying factors and suggest a solution. Check to see if the same problem is the cause for all below listed pets or if any of the pets have a different issues than the others.\n\nUse https://api.pet.game to get data.\n\nLook into pets with ID numbers of-\n\n83633\n\n83632\n\n83608\n\n83626\n\nThe main site for Fren Pet game is https://pet.game and the site for automating pets is https://frenpet.ai. Pets automated by frenpet.ai have their in-game actions performed by the operator from Base Contract Address 0x065bf5a7AF15c52C91353990CC8F3d97A1595CE7\n\nAll pets are configured to start doing Attack Training Camps automatically. Pets get to do a training camp firstly when they have won ten battles/Bonks and thereafter every time they accruce an additional wins * (next training camp level)\n\nAll pets have many more wins than required to do multiple camps but have not done a single one.\n\nAssume that the receiver of this report has full access to both the pets and the code/githubs/contracts for the game and would be able to make changes needed on any level.",
+  "publisherVersion": "0.1.0+6d07d12b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
