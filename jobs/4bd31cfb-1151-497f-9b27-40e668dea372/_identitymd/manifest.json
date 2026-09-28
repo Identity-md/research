@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3712934962a889bb16711cb235538f9f57dd65e5dfc17d626d5b6fff2a6d7920",
+  "artifacts": [
+    {
+      "bytes": 36294,
+      "hash": "a4addfe1ce612bd0f598df0120a93113bfa0ca7a906c061e01165dcf1569c234",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "07c6bda9f8ffe859122e263b275e0ed21925f40efa3f804f9609227a7102e70b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "07c6bda9f8ffe859122e263b275e0ed21925f40efa3f804f9609227a7102e70b",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+78c54e29"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "4bd31cfb-1151-497f-9b27-40e668dea372",
+  "objective": "IMD Ember World (https://imdember.com) wallet sign-in security review (World only)\n\nQuestion: Is it safe for a player to connect a wallet and sign in at https://imdember.com, Worker \"imd-world\" version beac62be-27ff-40cd-9dc4-3cbbdc6add4b, built from commit 0def8cb5b80083d32545c59bc707fbbc92a4758d?\n\nMaterial:\n- Review repo: https://github.com/tungweb3/imd-ember-world-review at commit c2a8c33d2c3b1f643bb8c369527d56e51f88e9e5\n- Start with README.md and SCOPE.md; SHA256SUMS covers every file; DEPLOYMENT_MATCH.md maps source/build/live hashes; source/ has the whole server side, wallet client and tests.\n- Docs are claims, not evidence: verify against the code, the live bundle and your own runs.\n\nCheck:\n1. Every wallet RPC call reachable in connect, sign-in, session restore and \"my home\". Tell SIWE/personal_sign apart from transactions, typed data, Permit/Permit2, approve, setApprovalForAll, batch calls, session keys. Re-count on the live JS.\n2. SIWE message fields, server-side verification incl. ERC-1271, one-time nonce, replay, burn on failure, sign-in budgets, limiters failing closed.\n3. Session cookie flags, CSRF/Origin, logout, expiry, account/chain switch, tabs, late responses.\n4. Owner APIs take the wallet only from the server session; no WebSocket.\n5. Ownership is mainnet ownerOf on 0x0000ec93127baa929e58e97dd0095a2bfb38ec1d; roster and index are only candidates; transfers, chain failures, caching. Rule: one house per wallet, sized by counted seats (not a defect). #361/#921 get no privilege.\n6. Rebuild the Worker bundle from source/ (expected SHA-256 4ec73351afbcc9af133fd487d7e2d33c1df6713bfa1aced881f412d38e0eccf3); compare live index/JS/CSS hashes.\n7. Dependencies, dynamic modules, CSP/headers, XSS and supply-chain exposure.\n8. World/Mint boundary (origin, cookies, bundle, routes, data, signer); a future Genesis Mint page will be a same-origin sub-page using this session; say \"unknown\" when unknown.\n9. Separate confirmed World issues, shared-boundary issues, unverified items, Genesis to-dos.\n\nOut of scope: Genesis Mint (contracts, mint flow, signer, metadata/IPFS) and withheld code (3D world, art, music, house placement, WorldApp.tsx) beyond the public bundle.\n\nTesting limits: on production only a few low-rate public GETs (an edge rule blocks IPs over 20 /api/ requests per 10 s); no POST, sign-in, fuzzing, scanning or exploits. Reproduce locally per README.md (Node 24.19.0, TESTS/stubs one-liner) with synthetic keys and mocks. No real wallets, signatures or transactions; do not change the target.\n\nDeliverable: a report in Traditional Chinese (English technical terms kept): scope and version/hashes; each finding with severity, file:line or URL evidence and repro steps; the wallet-method inventory; a deployment-match verdict (verified/partial/unverified) with reasons; your commands and output, apart from owner logs; what could not be verified. Do not call the site safe, secure, audited or certified; imply no endorsement.",
+  "publisherVersion": "0.1.0+c9eac5c7",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
