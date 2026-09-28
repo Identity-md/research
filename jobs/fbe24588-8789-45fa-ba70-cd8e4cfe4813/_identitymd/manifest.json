@@ -1,0 +1,47 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "940bd2f296f53c424305662db3ddd2f5c33bdbfe7fea4e99f829f0b850ecfccf",
+  "artifacts": [
+    {
+      "bytes": 20520,
+      "hash": "207e6b836a6c63d5f9ec206854df30ca92e721733634c144b6008188520ca4fd",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "1295c82fb0a777a70f6c4a283461f0558ef7abbcb5b47796411a0c4667415dca"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "43fafa0b87803e62c50d35856e63a1669e5c13f1c7eee8f2f3f8e5af71d3a721",
+      "changedPaths": [
+        "4626-imd-review/test/imd/IMDBase.sol",
+        "4626-imd-review/test/imd/IMDRewards.t.sol",
+        "4626-imd-review/test/imd/IMDRights.t.sol",
+        "README.md"
+      ],
+      "deviceKey": "00d95fd75f8b224cbade9810011b337d6448b20f22483c8826ccb3772627a4eb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "1295c82fb0a777a70f6c4a283461f0558ef7abbcb5b47796411a0c4667415dca",
+      "treeHash": "46300a7f682f71ebc04ce1b0a1e413c66fe44e90",
+      "verifiedTreeHash": "46300a7f682f71ebc04ce1b0a1e413c66fe44e90",
+      "verifierVersion": "0.1.0+d91998ca"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "fbe24588-8789-45fa-ba70-cd8e4cfe4813",
+  "objective": "Review 4626 governance and weekly voter rewards at\nhttps://github.com/4626fun/4626\nCommit: f67e3733deba8196b68c7fdf7d8e8065bd07b3d4\n\nThe target is IMD_REVIEW_ARCHIVE.b64, not the older contracts on public main. Follow IMD_REVIEW.md to verify and unpack it, then read submission/BRIEF.md and README.md. Independently test the simultaneous full ve33, veLottery, and governance rights; voting and epoch boundaries; reward solvency, claims, and recycling. Report reproducible findings with severity, exact locations, commands, impact, fixes, and coverage gaps. State clearly if tests could not run. Do not deploy or change production contracts.",
+  "publisherVersion": "0.1.0+d91998ca",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
