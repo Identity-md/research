@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7f5e9f0f762de4cb62840deac2c3812be096deb04778dd5bcea639d020df8a14",
+  "artifacts": [
+    {
+      "bytes": 10759,
+      "hash": "4959238c67453b6066b0f7e5a9bab904ad6f3e4fa18c01042e1675265d08bf59",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "cfedb450fd1cdfa1bb46002b68c74dfc741facc21a690e4815b82e55aefee8d5"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "43aa7ae72a45379a5c80cc0d244efb28b02c5a104029e89a31466ddea98ca510",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "004eae350f695d245826531db32b1473b31cd003c574c1edba57290e30e8722a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "cfedb450fd1cdfa1bb46002b68c74dfc741facc21a690e4815b82e55aefee8d5",
+      "treeHash": "754a00dcfbd63ab054886b59fc934954f0807486",
+      "verifiedTreeHash": "754a00dcfbd63ab054886b59fc934954f0807486",
+      "verifierVersion": "0.1.0+ed840305"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "33161e6b-5a62-440a-bd2f-54a8a612e59c",
+  "objective": "Make a report about best NFT collections on ETH Mainnet.\n\nThe period: All Time",
+  "publisherVersion": "0.1.0+ed840305",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
