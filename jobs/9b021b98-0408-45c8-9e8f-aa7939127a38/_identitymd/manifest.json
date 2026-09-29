@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "85fe3d3591d1b1a13c3265807993780a24e768f0272a810e464a634258de687e",
+  "artifacts": [
+    {
+      "bytes": 4786,
+      "hash": "7d6028a3368cbe0ba4f9709d08044847c9bb5ee2443e72487e3006a6fe432db3",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "ca0e8e0d4ec2430c1da9a548251bf6b373d79bd5185fd39e92432618c94be503"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "004eae350f695d245826531db32b1473b31cd003c574c1edba57290e30e8722a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "ca0e8e0d4ec2430c1da9a548251bf6b373d79bd5185fd39e92432618c94be503",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ed840305"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9b021b98-0408-45c8-9e8f-aa7939127a38",
+  "objective": "What is your prediction of exact score of the Germany vs. Serbia match which will be played on 10/01/2026? (MM/DD/YY)",
+  "publisherVersion": "0.1.0+ed840305",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
