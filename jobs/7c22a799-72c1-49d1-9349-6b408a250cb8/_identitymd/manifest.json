@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ad9c2a60445beed88cc529c8178251a063c7543ceb46561b0631f58480a3b82a",
+  "artifacts": [
+    {
+      "bytes": 11787,
+      "hash": "1e5059127d7e4d1c2dd9cce81ee6791115e81339c5d7a01c33a3e4bdde52440c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "67a695f4f3a93652988c251298609a6bd547f4bb0b8fff867b78c0bbc2b2562f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "004eae350f695d245826531db32b1473b31cd003c574c1edba57290e30e8722a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "67a695f4f3a93652988c251298609a6bd547f4bb0b8fff867b78c0bbc2b2562f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ed840305"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "7c22a799-72c1-49d1-9349-6b408a250cb8",
+  "objective": "A sourced research report comparing how three major Ethereum NFT projects launched in 2025-2026 handled allowlist (WL) and free-claim mints: the contract pattern used (Merkle proof, onchain grant mapping, or signature), gas cost per mint, and the main risks each pattern carries for holders. One markdown report with a comparison table and at least 5 citations.",
+  "publisherVersion": "0.1.0+ed840305",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
