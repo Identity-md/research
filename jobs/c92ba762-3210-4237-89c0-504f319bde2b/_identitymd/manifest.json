@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "228ad9681aad5d2068a69a1ae062d7a196fc097c725b9962e35537e1e61e8ee0",
+  "artifacts": [
+    {
+      "bytes": 3302,
+      "hash": "760e8f583d0e0f9c6c2032a2582d4163e618efbbfd9a3f118c12918706ee3d64",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "219a5b9eb746d5c750ac4ea758fbed97fb032082c2beff085c4ec65f38f616c7"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "004eae350f695d245826531db32b1473b31cd003c574c1edba57290e30e8722a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "219a5b9eb746d5c750ac4ea758fbed97fb032082c2beff085c4ec65f38f616c7",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ed840305"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c92ba762-3210-4237-89c0-504f319bde2b",
+  "objective": "What will be the exact score of the Denmark vs. Portugal match which will be played on 10/01/2026?",
+  "publisherVersion": "0.1.0+ed840305",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
