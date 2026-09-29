@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "b6827bd1db0fd8f4215936e22f3f6c3cbd7eba2a7d53a60479bec9814d8ef439",
+  "artifacts": [
+    {
+      "bytes": 11035,
+      "hash": "b4eab5d5bd8ef656a784b3f12ed0e626c90ad6d06e72d1188b40757af05ac0ec",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "343ef523f43e39ebf7e82c8ee33931267cdde586d2d9afabb36901c70c1fe755"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "004eae350f695d245826531db32b1473b31cd003c574c1edba57290e30e8722a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "343ef523f43e39ebf7e82c8ee33931267cdde586d2d9afabb36901c70c1fe755",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ed840305"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9dc8e116-458e-4b9d-b282-08d1a8233735",
+  "objective": "Can you gather the latest data on the token at https://www.coingecko.com/en/coins/frenpet: who recently made a large purchase of it and added it to their project? How is it connected to the IMD token<a href=\"https://pool4.imd.fun/docs\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"></a>? Also, assess the sentiment on Twitter regarding these developments.",
+  "publisherVersion": "0.1.0+ed840305",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
