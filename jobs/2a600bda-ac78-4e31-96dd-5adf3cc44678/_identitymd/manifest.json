@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "caf698982920a206dd30ed259afc81982dd928ff7c5149be7903e779fe4d6645",
+  "artifacts": [
+    {
+      "bytes": 5538,
+      "hash": "38a5de3c8e68e93e48e471b69022253fd5675d824944fac1d1cf571cb9c8edeb",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "5ab1486fed5d09cf89a8faf90e48c04b5c0a1cab155658c3f697a586b0966731"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "02a7451bfdfa1a37e0a513b1f07873cf4b57efc93ca97cf6121cb5ab17312bae",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5ab1486fed5d09cf89a8faf90e48c04b5c0a1cab155658c3f697a586b0966731",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+29a9c29b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2a600bda-ac78-4e31-96dd-5adf3cc44678",
+  "objective": "Create a report about current stock market.",
+  "publisherVersion": "0.1.0+29a9c29b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
