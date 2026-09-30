@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d37a89b976c0e792b119dbbbd513a98ce8a79198ac04fb05b5f25c66efb8ab9e",
+  "artifacts": [
+    {
+      "bytes": 3908,
+      "hash": "079e62218d3617c91253c8e8927b57205fdd431f95dedbb0a1c3662cd8904847",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "5aa5a5d01898d1e0cba315e34f406f75a0c92a0cd3bc176ba7578993cead4d4a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "06cf148faa51546b6691fcf4e5cb7120107e4d41cafda5038d0cb4ebe169d53f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-luna",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5aa5a5d01898d1e0cba315e34f406f75a0c92a0cd3bc176ba7578993cead4d4a",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+29a9c29b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "bbb1f722-da00-4e87-aab5-8df57ad700f7",
+  "objective": "Read Swarm Pepe NFT contract 0x999ce0ce8c5f7661e0c74a568ffe27ceb9177bdb on Ethereum and its PixelArt renderer 0x07Fd9841eEB6a359EfB30f861D59bFa1f6B03FcA.\n\nFor tokenId 1043:\n1. Decode on-chain traits from tokenURI / renderer (skin, eyes, mouth, hat, accessory).\n2. From the contract’s trait weights / MAX_SUPPLY, compute:\n   - probability of this exact 5-trait combo\n   - expected count in a full 5000 mint\n   - probability and expected count of Gold+Crown only (ignore other traits)\n3. Rank Gold+Crown vs every other 2-category floor pair by rarity.\n\nDeliver a short markdown table with numbers only. Cite the exact functions / weights you used. No OpenSea rarity rank unless you also show the on-chain math that matches it.",
+  "publisherVersion": "0.1.0+29a9c29b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
