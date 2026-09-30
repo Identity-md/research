@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "df001875705a55b2db7337f63ed59e51575350eecfd0926b5563f7995400e909",
+  "artifacts": [
+    {
+      "bytes": 6214,
+      "hash": "0119a07f00b7431f0ea3fbb485ccdd051099e62c4dd8f2b36447d9ab8de38d74",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2447f09184c0fa6a50b0c630c4c96522d7b942c4f356d8ad4cadba29b0c3ea96"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "643b7a558a7b4257f1702993e20635627f8942ae2b5e712ce99559f985d31bf5",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "0b2cef729c75eb269e0c8495e14a79510031d642dc1a8d4d6948615e8e42f632",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "2447f09184c0fa6a50b0c630c4c96522d7b942c4f356d8ad4cadba29b0c3ea96",
+      "treeHash": "5c329410fa98f3c43c97d36c075540bd8e51e9df",
+      "verifiedTreeHash": "5c329410fa98f3c43c97d36c075540bd8e51e9df",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d2dfce9f-827e-4991-bbf5-b5632311de57",
+  "objective": "how many people from ethereum labs or ethereum foundation are following https://x.com/surfcoderepeat",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
