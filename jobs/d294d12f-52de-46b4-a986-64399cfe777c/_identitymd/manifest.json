@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "9d2353576788477d437f2139d686a20987a301461dc97010d48841c596f088ca",
+  "artifacts": [
+    {
+      "bytes": 7575,
+      "hash": "fc05698c69ddeb91f458a31e13e1e073cafec7d7b23158faafab877f59886f59",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "4acfa0097d8bd1e99872f6e24125ffa823737711cbbb984c9ff48c524c678b9d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0e3b71e2ffcd200ba549914774d84233f9b103c5a0c25615caef3d52db60e7d9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "4acfa0097d8bd1e99872f6e24125ffa823737711cbbb984c9ff48c524c678b9d",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d294d12f-52de-46b4-a986-64399cfe777c",
+  "objective": "List of twitter accounts that are tweeting about Identity MD and $imd the most often",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
