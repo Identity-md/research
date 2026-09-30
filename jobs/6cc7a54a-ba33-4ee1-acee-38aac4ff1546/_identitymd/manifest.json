@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "5e0c386de4c2a48de5cb8482531b9989a0a350839fc0754f3096c79599a0d825",
+  "artifacts": [
+    {
+      "bytes": 9004,
+      "hash": "4755468769c9d513495fbe961614f039c70804f3af0fef9939d2876df8c70e04",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "6146b803c4c81ac90d590ca54562aac34b413a1c1dd2928d2dcc88235f9bb44f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "122da089eb5653155bc20b391360844b4951d06d57a042b956435557c5051c50",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "004eae350f695d245826531db32b1473b31cd003c574c1edba57290e30e8722a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "6146b803c4c81ac90d590ca54562aac34b413a1c1dd2928d2dcc88235f9bb44f",
+      "treeHash": "31b56c90edce11c7521ba1bf288fbca85457bce6",
+      "verifiedTreeHash": "31b56c90edce11c7521ba1bf288fbca85457bce6",
+      "verifierVersion": "0.1.0+a6d60331"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "6cc7a54a-ba33-4ee1-acee-38aac4ff1546",
+  "objective": "Analyze hodlers of token $HIVE 0xCdaE63D95D6dd4f89f6e508c77bD4388b4e5C8Ab and current trading activity and in % tell how likely is to token reach $1m FDV based on onchain activity",
+  "publisherVersion": "0.1.0+a6d60331",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
