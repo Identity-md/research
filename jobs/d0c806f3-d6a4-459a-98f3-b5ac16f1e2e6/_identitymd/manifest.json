@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "30f0ef2ee987d6a32c4a7f0932ecb5ee03efdef95f8d604b6052a5058d3c20ac",
+  "artifacts": [
+    {
+      "bytes": 18429,
+      "hash": "119adb83df5447bf2fbfd75a8043144a7356bb429dd5ba7dd93ba8c5216c540f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "14bd2f8195c1817b326e100de6e647b8e02cfb6133b1d9908ead41e6a2f5e295"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0d3a91a6089edc688fde0266931ef47e0ab6251d9866b963708b14c0489d53ec",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "14bd2f8195c1817b326e100de6e647b8e02cfb6133b1d9908ead41e6a2f5e295",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d0c806f3-d6a4-459a-98f3-b5ac16f1e2e6",
+  "objective": "which projects have added the most value to the ethereum ecosystem",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
