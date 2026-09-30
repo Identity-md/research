@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "5b799740c17abc048a25eba07461412f3a7bbfd80d658d25b68815e51f0c8c15",
+  "artifacts": [
+    {
+      "bytes": 24466,
+      "hash": "9f3fe2e34a8240b3c47795c28fa3582d126e69dd82f4474d025755447f935180",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2dbedfc0e02decd28f03f60c46a6d7a9b5be35883137b372e1bb6ade713180db"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0b3b16f4e82a0732b26f368f18e633b427cd7e1bda4ae5ed4fa1c221c35da2bc",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "2dbedfc0e02decd28f03f60c46a6d7a9b5be35883137b372e1bb6ade713180db",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1158907f-66bc-419b-ad1d-34ea5e751c86",
+  "objective": "find all hackathons that were judged by ai agents and how it worked",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
