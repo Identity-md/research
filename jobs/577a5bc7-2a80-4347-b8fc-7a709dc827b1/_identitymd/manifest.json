@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "479f329c514bc1b5ae52216fca77fecaa2f49972e7a56ab84e3c8de2d1a8bcd4",
+  "artifacts": [
+    {
+      "bytes": 17180,
+      "hash": "a5c81564eed0917298dc310993c28c9403f0a4461de03ae67095759c01a8a59a",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "6cc76146734dbd5459c60eccdef125ff2d20ef4dc4eb005637ed926e0ccaf024"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0cf632e317dfab7a3dcf74332a745707a132e8f51b69aa7a837a4c2bab2d7a9f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "6cc76146734dbd5459c60eccdef125ff2d20ef4dc4eb005637ed926e0ccaf024",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "577a5bc7-2a80-4347-b8fc-7a709dc827b1",
+  "objective": "what categories is vitalik most bullish on, use this as source https://vitalik.eth.limo/snowmoon/",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
