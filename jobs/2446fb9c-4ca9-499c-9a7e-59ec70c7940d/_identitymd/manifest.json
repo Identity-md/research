@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "17001d08d78a26e9ecb40a23b687b07cc7542e1d1959f1048c79ecb2a5f1527e",
+  "artifacts": [
+    {
+      "bytes": 16035,
+      "hash": "43f00a0d3a93228b707d05a87da252426a9a4a3048ad10bca8d2e1f76fd88078",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "00e64cfc85e3139728eef3be2300be141a2570593d9fcc671a4144321431b12a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0476c44a80aa9574a3121027b06e9d96aa0536075373ba287ec42f00e433320e",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "00e64cfc85e3139728eef3be2300be141a2570593d9fcc671a4144321431b12a",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+29a9c29b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2446fb9c-4ca9-499c-9a7e-59ec70c7940d",
+  "objective": "Create a report about current crypto market.",
+  "publisherVersion": "0.1.0+29a9c29b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
