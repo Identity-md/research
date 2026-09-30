@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6bff11eae7c8b622756af8ded437a1f51ead3eb27e02480513d08f0600d55ab7",
+  "artifacts": [
+    {
+      "bytes": 8728,
+      "hash": "c1f6b4505453fbb8abee42da5903d9973eb90eeab5d21b3fafec34d46c31cf89",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "111dd76e4c9de0f98b3a858c32394d046c7542f539ba05ed423daf90ced8c9c7"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0db9dd6ea32a69f26e9d3375e31452fa6ac3584707a0e721b4c73bd0c516e070",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "111dd76e4c9de0f98b3a858c32394d046c7542f539ba05ed423daf90ced8c9c7",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ccc55191-a95a-4073-8058-ed09030649a4",
+  "objective": "Report on what the Ethereum ecosystem thinks about ai agents, specially vitalik.",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
