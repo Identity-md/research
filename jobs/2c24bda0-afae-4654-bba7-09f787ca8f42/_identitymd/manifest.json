@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "081fec84f726b133924144033b9277488bbc3837c0c3f0d544766026284b8795",
+  "artifacts": [
+    {
+      "bytes": 9741,
+      "hash": "e082136673235da3ce4e4a674db9a4a84fd3f7fadcbf6b2781e9e82374ade354",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "148829e95ed9f9738735f27d5e721751730bad372aa9bea597d7e68f866ffd94"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0cd01c5082189cbf7af485be2c601e5e378f5eea6ad6ce008267a256f85c2a2f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "148829e95ed9f9738735f27d5e721751730bad372aa9bea597d7e68f866ffd94",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2c24bda0-afae-4654-bba7-09f787ca8f42",
+  "objective": "compare polymarket and kalshi, which is overvalued",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
