@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "a6ced1bea9a75a4ccbca594fd6c8627517692c13f1d8194c6d7887de9a8646e6",
+  "artifacts": [
+    {
+      "bytes": 22086,
+      "hash": "2a50b02001783da0c6eb6561690670183ddd7618b288794826b1d26162873193",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "fda9a5cd337cafee4e453b98ccc3ef7581c3a0680eda6b9484a7c3e79c2acaa4"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "dec7ed1ef5857186f414d265cbf0c8f8b965be1a66d66240a1954f0fbe075bc3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "99cb78ab515874997ac9ae3bbe49335a5f61b7f438431d9ea4328ac966497a52",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "668660d80de55c4c79cab9bed21af59c55610cbdfa2380fcf6a77aeccce90d1f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c458b794ec79f67bd421a800d6b0b56f4c653a5eb0fc13a1e315c8f4beb8a7c1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bb0a3bf63233e5e5722f6eae6cd08dc581298f894dd83aa00d8a87a846a28c34",
+      "evaluation": null,
+      "findings": 7,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "fda9a5cd337cafee4e453b98ccc3ef7581c3a0680eda6b9484a7c3e79c2acaa4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "8c3aea2e-26bc-4bff-bf5d-52d10f79ec9b",
+  "objective": "IMD Ember World (https://imdember.com) - re-audit of wallet sign-in, sessions and home authorization after the fixes for audit 519db624 (World only)\n\nPlease read this first: this repository contains NO Solidity and no smart contract. It is a TypeScript Cloudflare Worker (the server) and the TypeScript/React client code for wallet sign-in (SIWE, EIP-4361). The site never asks a wallet for a transaction, a token/NFT approval, a Permit/Permit2 or typed-data signature; the only signature is personal_sign of a server-built SIWE text. The team states there is no \"loss of funds\" path by design (please verify rather than assume it). Rate findings by what an attacker could do to a player through this code: sign in as an address without its key, keep or revive a session after revocation, end another address's sessions, get owner rights for seats or a house that are not theirs, make the page ask the wallet to sign anything other than the site's own sign-in text, leak data, or deny sign-in (availability is in scope). If your checklist is Solidity-only, say which parts you could not apply rather than forcing them.\n\nRepository: the public review snapshot pinned at the commit shown when \"Read\" was clicked: the newest commit, whose parent is b6e986be6d1c85a720a3b8231feb3adf1ab2b780 (the version audit 519db624 reviewed; c2a8c33 before it). Code is in source/. Root docs are in Traditional Chinese and are the team's claims; the code is the reference. README.md maps each earlier finding (A-1..A-8 of audit 519db624, W-1..W-3/S-1/S-2 of Report e48d0a96) to what changed and what remains; none of these fix statuses has been re-reviewed.\n\nFacts you cannot check without network (team statements, from the deploy record and read-only GETs on 2026-09-30):\n- Live: Cloudflare Worker \"imd-world\" version 1a0dd495-35e7-4052-ba84-332e787f864d, built from private commit 4321bb4da3826276919ed60ecc2018139dcaeacc (source/ is taken from a later commit that differs only in one doc and one test, plus two added evidence pages).\n- Rebuilding the Worker from source/ alone (wrangler deploy --dry-run) gives SHA-256 1018f02a98ccb7de5b91434613d5e38047925a463df8d892b6cd9439d9a2078c (274,961 bytes), equal to the deploy record (manifests/).\n- D1 migrations 0001-0004 applied (0004_index_candidates before this code); rate-limit bindings as in source/wrangler.jsonc; an edge rule blocks an IP sending over 20 /api/ requests in 10 s.\n\nEntry points: source/worker/app.ts routes /api/* to server/auth.ts handleAccountApi (line 473), then server/world-api.ts, else static assets.\n- POST /api/auth/challenge (challenge, auth.ts:339; INSERT_CHALLENGE :129), POST /api/auth/verify (verify :365; verifySignature :290), POST /api/auth/logout (:438) and /api/auth/logout-all (:451), GET /api/auth/session (:431; readSession :326).\n- GET /api/me/home (owner data from the session's address only; server/ownership.ts class Ownership :191, ownerOf via Multicall3), GET /api/wallet/:address/assets (public), GET /api/world/* (public data; server/gateway.ts now also keeps a shared copy of the upstream snapshot in the Cache API, worker/app.ts:40-58).\n- Cron: server/presence.ts (presence rows, cleanup, and the new index_candidates prune).\n- Client: src/world/auth.ts (AuthClient; statusOf :54), siwe.ts (checkSignInMessage :16 before personal_sign at auth.ts:247), homeEntry.ts (enterGate :11, enterableHome :21), walletView.ts / WalletPanel.tsx, moves.ts.\n\nWhat changed since b6e986b (please verify each fix, then look for what the fix itself broke):\n- A-1: a contract address whose per-address ERC-1271 share is spent still gets one check a minute per network (CLAIM_LANE auth.ts:154, key chain:erc1271:lane). Can junk from a few networks still hold a real Safe owner out? Can the lane be used to exceed the chain:erc1271 budgets?\n- A-2: the last NFT-index answer per address is kept in D1 (migrations/0004, ownership.ts KEEP_INDEX :153, keptIndex :166) and reused as candidates when chain:index is refused or fails; ownerOf proves every one. Can a kept row grant or leak seats, be written for another address, or replace a newer answer?\n- A-3: the client keeps only the latest /api/me/home read (src/world/auth.ts around :190). Any ordering left where an older answer restores owner mode or Enter?\n- A-4: candidates ranked (seats that can count first, ownership.ts :138, :212) and a cut list reported as partial, never as \"owns nothing\" (:232).\n- A-5: challenge and verify read the clock only after the body has arrived (clock :245, readJson :247); there is no separate body timeout, and the per-IP limiter is still asked at request start (stated trade-off). Can a slow body still date a check into an earlier minute or past its challenge's window?\n- A-6: the per-(address, network) challenge cooldown is gone; one address asked from many networks writes audit lines (ADDRESS_SURGE). Does removing it open a new cost or lock-out path?\n- A-7: 20 of the global 60-per-6-s valve are kept for networks with no challenge in the last minute (INSERT_CHALLENGE, FRESH_NETWORK_RESERVE :118). Can a few networks still close sign-in for everyone?\n- A-8: the page says the chain check could not be completed instead of \"no seat\" (walletView.ts).\n- Report follow-ups: W-1 owner mode, move and Enter end at the session's expiresAt on the device clock; the old SIWE statement allowance removed; undici pinned (package.json overrides).\n\nPlease look hardest at, as before: signature verification (message re-read from D1 only; domain, URI, chain id 1, version, statement, Issued At, Expiration Time equal to the stored row; ERC-6492 refused; ERC-1271 needs code and exactly the magic word; one check per challenge; burns on failure except 503/409 as SIWE.md states), session issuance and revocation (one session per nonce, token stored as SHA-256, __Host- cookies, 7-day expiry, logout-all only by a live session), limiters failing closed (permit :239, LimiterMissing), ownership only from ownerOf and the session address, and the page-side check (nothing but this site's exact 11-line message for this account and nonce reaches personal_sign; it does not stop injected script or a phishing page: known limit).\n\nTests: source/tests (node --test; TESTS/README.md: copy source/ into its own git repo, npm ci, add the two stubs from TESTS/stubs). Real handler, migrations on node:sqlite, synthetic keys; only npm ci needs network. Recorded outputs are in TESTS/. Snapshot run: 171 tests, 167 pass, 4 fail: three need withheld house geometry or interior code, one (tests/deploy-evidence.test.mjs) needs the team's git history. The three \"group 5\" Enter-gate tests pass. The A-n and W-n tests are named after the finding ids.\n\nOut of scope: Genesis Mint (no Mint code here; a future Mint page on this origin will be reviewed separately; see source/docs/security/MINT_BOUNDARY.md), withheld files (3D world, art, music, house placement, interior rendering, WorldApp.tsx; listed by hash in manifests/).\n\nReport each finding with severity, file:line, the attacker's preconditions and the impact on a player, and a reproduction or a clear argument; say which earlier finding it relates to, and list what you could not check. This is a code review record, not a certification: please do not call the site safe, secure, audited or certified.",
+  "publisherVersion": "0.1.0+29a9c29b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "ae1d41a30363ad04711083465501680469400d2f",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
