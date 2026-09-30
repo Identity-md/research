@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "f16ed060b18586c68b05a2fd08326cf74a024bba59cf749c1234f3f98dbeae0c",
+  "artifacts": [
+    {
+      "bytes": 4652,
+      "hash": "f302fe0b43b58b92a96479a00a10d5944b0fe7f5162a3738bb37c80b8392e88a",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "5f6b866b4a106d54a35ccfbe6da0bc5ac68ac0d805d048a484ec31afe85c42bd"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0df32ad47eb953fc5daeb203fe004a3a28069d8debcd49ae51a5982b70b1ad7f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-luna",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5f6b866b4a106d54a35ccfbe6da0bc5ac68ac0d805d048a484ec31afe85c42bd",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "679e1fac-3a5b-4279-85b3-a622b29df632",
+  "objective": "Based on this article, where does Identity MD fit in https://x.com/joechalom/status/2102729939543863754",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
