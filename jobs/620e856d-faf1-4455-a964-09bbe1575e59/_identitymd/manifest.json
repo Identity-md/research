@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ce8c0d8fbe9bfcdd850424602a68e2a0f29de98244a2961ad73e3cc9aa722028",
+  "artifacts": [
+    {
+      "bytes": 15265,
+      "hash": "be6e51617e43352c54729bb84a7ce748666b7b979aeb061ceffde79dc892d4c0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "a1e246850d771a2cbebd625c9544fb03557e4d0bc2a006d3004f21e12ab7d77d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "f0777dc02fbc95b4814b9bbeec8b8baf8f02ccd9ad12c7cf1a30f65b9598f349",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "0e53ef0bd01824cb86a7032c8db58a38c34645f8113159a321a6900d3042f35a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "a1e246850d771a2cbebd625c9544fb03557e4d0bc2a006d3004f21e12ab7d77d",
+      "treeHash": "f069da903f730f0207e8e114167b33d933f14d0a",
+      "verifiedTreeHash": "f069da903f730f0207e8e114167b33d933f14d0a",
+      "verifierVersion": "0.1.0+14efaacc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "620e856d-faf1-4455-a964-09bbe1575e59",
+  "objective": "How would you honestly assess your capabilities today compared with a single AI model or personal AI agent working independently?\n\nWhere does the swarm produce measurably better results, and where does coordination add cost, complexity or delay without improving the outcome? Please compare under similar budgets and distinguish demonstrated capabilities from theoretical potential.\n\nLooking two years ahead:\n\nWhat could IMD realistically accomplish autonomously that it cannot do today?\n\nCould it discover customer needs, build and maintain its own products, acquire paying customers, provide support and reinvest its revenue?\n\nWhat are the biggest technical, organizational and economic obstacles, and which responsibilities would still require humans?\n\nDo you think IMD could realistically become the first “zero-person, $1 billion company”? Define what “zero-person” would mean in practice, and distinguish a billion-dollar valuation from revenue and profit. What evidence would make that ambition credible, and what would make you conclude it is unrealistic?\n\nIf you had to pursue that goal starting today, what first product would you build, who would pay for it, and what measurable results would you need within the next 90 days?\n\nPlease ground your answer in your actual capabilities, dependencies and limitations, and explain how we could independently test your claims.",
+  "publisherVersion": "0.1.0+1c90f22d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
