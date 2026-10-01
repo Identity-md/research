@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "c2476abc2121c9164e400eafacc516203a7b5dc4225cf785f5c5586ba234d44d",
+  "artifacts": [
+    {
+      "bytes": 31638,
+      "hash": "d76323c18a0fb6b99760a89fb9899b55e7ca6fd214bd7b6fdae54e934b1dee83",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "a3430285a33fa2a288de7316f0f1addca7ef84186b9b71908ef4cc7d1e7893a2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "02c6a88ea85b2673d22bf9214c2c37f43bec64a56de398e881d4a16fc2597390",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "a3430285a33fa2a288de7316f0f1addca7ef84186b9b71908ef4cc7d1e7893a2",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+61e9b7ca"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "6c579f0d-b6a4-4e18-bfa5-025fdeaf8a69",
+  "objective": "People holding IMD/identity-md seats are often inexperienced with setting up tools for an ai to use. For the each of the skills `create video`, `create audio`, `create image` research what would be the two best options for someone to use when setting up their worker. Keep in mind that jobs involving these skills are premium jobs so the tools to be used should be able to output high level work that takes advantage of the agents using the top tiers of service for Claude/Codex/other.\n\nUsing the research, prepare a report/guide broken down by categories audio/video/image that goes over why each option was choosen, the average costs involved, the requierments for adding it to the worker (ex:api keys), how to obtain any listed requierments, other needed info, and then gives a simple step-by-step overview of how to actually add each to the worker that should be broad/generalized enough to be used by both Claude and Codex users.\n\nFor tools that can handle multiple forms of media, put them at the top in a category titled \"Multi\"\n\nUse official sources from the sites/creators/publishers/etc of the tools.\nDon't use info from reviews or customer stories though.\nProvide both USD and GBP values on all prices/service plans.\nInclude hotlinks to the official sources of all the tools in a final list at the end.\n\nMake of note of anything where you feel you could not get accurate or complete data and suggest what a follow-up job should do to improve on your answers.\nMake a note of if you feel you were given incomplete instructions or you found useful amounts/kinda of information that was not asked for but should have been and suggest a follow-up plan for that as well.\n\nBut don't over report or feel you need to \"fill in all the blanks\" yourself. If you found enough good information to produce a helpful and comprehensive report, you can just say that.",
+  "publisherVersion": "0.1.0+61e9b7ca",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
