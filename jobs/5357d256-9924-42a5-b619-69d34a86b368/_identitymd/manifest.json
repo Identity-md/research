@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "beb18c9c9ecca25c0fa498e9b73218765d1563bd17f555b49ad5363a9aa42fca",
+  "artifacts": [
+    {
+      "bytes": 5333,
+      "hash": "afb317cffa5b3c66ac04cd6ca7b0f75ad3b3196eb382527c81d9c603c2dff866",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "22f23bcc903e064cdd6d589798ced6dc6f426d1c82cd3e9ce47a5930effcb37e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "107def308610130ec9478ef93a724963248f47a92e0147b8e379a16dc8862cf8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "22f23bcc903e064cdd6d589798ced6dc6f426d1c82cd3e9ce47a5930effcb37e",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+da6bdbe5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5357d256-9924-42a5-b619-69d34a86b368",
+  "objective": "list of tokens that vitalik.eth has bought on Ethereum mainnet, dont include ones he received for free",
+  "publisherVersion": "0.1.0+da6bdbe5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
