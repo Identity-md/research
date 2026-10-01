@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "9f1ae34091601ddc079afe44a98685f085c4cbde4b53f1f49f776d85e76c03f5",
+  "artifacts": [
+    {
+      "bytes": 18254,
+      "hash": "900386f752881e49abe3ebfc9a36b66b19030e40544f444cb3d63ed3c48ada71",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2d2dc8c58cec3412023235ab77f79e918f38dbe28dc0e1c175f1b39d78f2c3d1"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0e78515c4d95885a1154d97259bed6633518fe189ba70bc590fc635d6a018193",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "2d2dc8c58cec3412023235ab77f79e918f38dbe28dc0e1c175f1b39d78f2c3d1",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+9f8ef295"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e9140402-d83d-4d90-9d98-c0582a8d8258",
+  "objective": "A short report comparing how three live Uniswap v4 hooks set dynamic LP fees: the rule each uses, what it protects against, and its known weaknesses, with sources.",
+  "publisherVersion": "0.1.0+9f8ef295",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
