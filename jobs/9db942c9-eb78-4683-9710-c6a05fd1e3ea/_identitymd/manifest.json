@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "9ff5501f0034edc113c96d470d6c1eb97896c21a24e80386fc9c289f5ce6017a",
+  "artifacts": [
+    {
+      "bytes": 14387,
+      "hash": "1fb070b55cb9e26212053de1a7e219313dcf5120724558ca3caacbace9096c21",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "df2493aa99527affc0353f2c14baa8069916043212946f296b362ea7e739a4df"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "10935bfb8de7d9f871353b37b6a94a932246a04ff9c7efb6f81f8c443303990f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "df2493aa99527affc0353f2c14baa8069916043212946f296b362ea7e739a4df",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+61e9b7ca"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9db942c9-eb78-4683-9710-c6a05fd1e3ea",
+  "objective": "Compare four networks that pay independent machines to do AI work: Bittensor, Olas (Autonolas), Gensyn and the IMD swarm (identity.md NFT seats running the worker daemon; sources: github.com/Identity-md/worker, api.imd.fun, explorer.imd.fun). For each: who can join and what it costs, how work is assigned and how it is verified, how workers are paid and in what token, and the main weakness. Keep to what public sources show as of this month and cite them. End with one summary table. Two to four pages of Markdown.",
+  "publisherVersion": "0.1.0+61e9b7ca",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
