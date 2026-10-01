@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "6f4eebceddde809929443a04b8e0e739cf69fc18ae920507d49dd1f0e37759fe",
+  "artifacts": [
+    {
+      "bytes": 36055,
+      "hash": "5eae839554f62b26a6e89165f538fe0ad7d649e9838ce19b8df50640eb2eabf7",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "b6eebc8c6ac6367a6b3ba803aeac1c8713a1772a85d4126ab47ede177f21c6fd"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c03ca6e6f0afa28082b5f9b1e827c686460b2d35f6e978bcf294a398188d4e89",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "30a6c1a419ef4f9c0b7b9345d1843aaf4945ad583f614ed8027cb22761e6f96c",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "cf46254c9800cd72d467e153272e253f0c35f213529fc39f6861e530fb08966d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c7630b22a73c1fb36d7cccb511d3c400a92c46f4065d9046a3f71b9ce3aa6be",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7ce0aa559082e89fc219f7014c7619df1467487ebf7051e216deb60ce5fa6c00",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b6eebc8c6ac6367a6b3ba803aeac1c8713a1772a85d4126ab47ede177f21c6fd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "03f15d1296244279ebdd0e54df271264fe51f911902957fe042ff85c368f0173",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2c59f2edb919ee29db889e1cb03c23bec5951da4ca4d9ddee67ec624e4089f54",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "46a0c47b-d3ad-4c50-973e-369203a488ce",
+  "objective": "Audit the Pepes token (0xE2C46c7068566740A33A4C93f5445B07BCfE5644, Robinhood Chain), an instance of contracts/src/PadToken.sol launched by the PepesFamily v1 launchpad (0x2d7689E48Fd71D9A0f225C673D7b8F8A693368CC). This branch is the v1 code exactly as deployed and verified.\n\nWhat it is: a fixed-supply (1B) token. The whole supply is locked as Uniswap v4 liquidity that can't be removed, and the launchpad's v4 hook takes 4% of every swap (1% protocol, 3% to holders). No mint, no owner, no admin functions.\n\nGoPlus/GMGN show three warnings. For each, tell us if it's a real risk or a false positive:\n\nPossible honeypot: can anyone block selling?\nOwner can change balance: can any privileged address change or move holders' balances?\nHas suspicious function: does any non-standard function give someone special power?\nLook hardest at:\n(1) PadToken.transferFrom skipping the allowance when msg.sender is the immutable v1 router. We think this triggers warnings 1 and 2. Confirm every router path (buy, sell, launch, unlockCallback) can only pull from its own caller.\n(2) Every non-standard token function (claim, distribute, isExcluded, the reward getters, receive). Confirm none is privileged, and identify which one scanners likely flag.\n(3) Whether any owner action or third-party call can make sells or claims revert.\n(4) Reward accounting never paying out more than was distributed.\n\nFull list of functions and details are in AUDIT.md.\n\nWhat's new in the branch's AUDIT.md:\n\nAll three warnings listed, each with a request for a \"real risk or false positive\" verdict.\nEvery non-standard function the token has, grouped and explained, with a request to confirm none is privileged and to say which one scanners likely flag:\nHolder rewards: claim, distribute and the read-only reward getters.\nInfo: isExcluded, metadata, pad, router, poolManager, quote, creator.\nreceive().\nA note that we believe one pattern triggers both the balance warning and the honeypot warning: the router's approval shortcut.\nThe branch is now at commit 8c1869c. If the audit tool reads it at check time, it picks up this version automatically.",
+  "publisherVersion": "0.1.0+da6bdbe5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "8c1869c1af94cfea5b4b5c40bd2178c3b4c08a0c",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
