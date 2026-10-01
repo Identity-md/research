@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "3b9c06cfa83a40d9c62851439dec9f87cb46235fbe6e17a0e3c4bf877d50a71d",
+  "artifacts": [
+    {
+      "bytes": 33462,
+      "hash": "146d08deffbc125b64af073da42f3c5725b6f2c78a9719860728b50696555eb2",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "78c90a43bb866b9041081865ac7bbee72d7b65c14bb46fc8fbef02c14730b2e1"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "35e81b1f74ab316acb96b42dbc65cc9d6e051895660a3b9538639ceea3a79263",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "04218bbe3bfab6a117b2b8ab168eaa52f269f0d2687ea723a3f0588b9ae0bd48",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c7630b22a73c1fb36d7cccb511d3c400a92c46f4065d9046a3f71b9ce3aa6be",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "78c90a43bb866b9041081865ac7bbee72d7b65c14bb46fc8fbef02c14730b2e1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "03f15d1296244279ebdd0e54df271264fe51f911902957fe042ff85c368f0173",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2ab9cd5223ddcd25bf490bc86f933df709953e72de575e337f28a179e0346bae",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "361c61d81fa7d5a1d5f2b217dc037ebb524f111bd12ae5123dfc2e08e388594c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a3e708e2-fb57-43ea-a163-d93b916694a2",
+  "objective": "What the contracts are for\n\nPepesFamily is a token launchpad on Robinhood Chain (chain ID 4663), built on Uniswap v4.\n\nAnyone can launch a token with a fixed supply of 1B, paired with ETH or IMD.\nAt launch, the whole supply becomes single-sided liquidity in a new v4 pool. The launchpad contract owns that position and has no way to remove it, so liquidity is locked forever.\nThe launchpad is also the pool's v4 hook. It takes 4% of the quote side of every swap, through any router: 1% to the protocol, and 3% to the token's holders pro rata, which they claim.\nTokens have no mint, no owner (owner() returns 0x0 in v2) and no admin functions. Nothing is upgradeable.\nThe launchpad owner can only change where the protocol fee goes and the starting price for future launches.\nContracts\n\nv2 (current):\nPepesFamily.sol: launcher, hook, fee vault\nPadToken.sol: the launched ERC-20, with holder rewards and EIP-2612 permit\nPepesFamilyRouter.sol\nPepesFamilyEthRouter.sol: trades IMD pairs with ETH via the v4 IMD/ETH pool\nlib/SafeTransfer.sol\ndeploy scripts\nv1 (still live with real liquidity): src/v1/PadTokenV1.sol, plus the v1 launchpad and routers at commit a549093. The main difference from v2: the v1 router can pull tokens without an allowance, but only from its own caller.\nAbout 1,340 lines of Solidity in total. Uniswap v4-core is out of scope.\nWhat to look at hardest\n\nHook fee accounting: delta signs for exact-in and exact-out in both currency orders; the transient-storage handoff between beforeSwap and afterSwap; fees on partially filled swaps.\nFee claims and payouts: fees are held as Uniswap claim balances and paid out by flush and collectProtocolFees. Anyone can call those while the pool manager is mid-transaction for another contract. Can that ever drain the pool manager or break our accounting?\nLaunch liquidity math: rounding, both token orderings, extreme starting prices.\nHolder reward accounting: overflow bounds, the excluded-address list, reentrancy on claim, and that payouts can never exceed what was distributed.\nPermit and the routers: EIP-712 correctness, front-run handling, msg.value and refunds, the two-swap ETH route.\nThe v1 router's approval shortcut: confirm nobody can move another holder's tokens. GoPlus flags v1 tokens as a honeypot because of it, and we believe that's a false positive.\nInvariants to verify\n\nLiquidity can never be removed.\nEvery swap pays exactly 4%.\nFee claims and reward payouts are always fully backed.\nSupply is fixed.\nRouters only spend the caller's funds.\nNobody can block selling or claiming.\nThe full list, the known accepted behaviour and the test instructions (38 tests, including mainnet fork tests) are in AUDIT.md.",
+  "publisherVersion": "0.1.0+9f8ef295",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "d1ad57886d66570471fa11e23cf2b62f3e5aa7e8",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
