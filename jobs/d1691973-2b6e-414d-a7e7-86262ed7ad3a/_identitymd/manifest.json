@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "f51a2ea0ca45e88e7e5f790e519532ade21e7e44d213e524774c845daf576246",
+  "artifacts": [
+    {
+      "bytes": 36208,
+      "hash": "485ddbaff5adec336af233a4bbef33e4bc6e7e91c68f71ba1ea33611dd5ab529",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "1a2e4c544573ae32934808dfd48737c9993b222af323c3f9ad4c05dfda6cded8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a5d68f89de314cb9fc6a74a6a878dd2186cb871d8796ca28b36951267c8ca04",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "dc7e921a9fe873eddb8282c5fbde399bdfadd5fb3ee269acbd700465d3825cf8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3b260b68e9ad6a3750b0685b623c35ec00b819afbafb6596714f96b33d486592",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c1dc97bae129bcb90c9de12c4d606bb2b02f096ce77376350062fdbb06445bbc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "03f15d1296244279ebdd0e54df271264fe51f911902957fe042ff85c368f0173",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4d286f64985681ddc15cc4fae075d87ed20299844a02f075beec3e963c1c5d1f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d2d5a117dd72f6b494e7d6b85148b6761d36cc6060a026a69eb7e94c2411ddf1",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a51967a5bb67c939ffb3882aeab07ffa830de5a3ebe61f70a4c13df037235b85",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca080fd3063996699e20c7e6f185c60d7926b45bca9b079ae2d367ddad7a3eb9",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1a2e4c544573ae32934808dfd48737c9993b222af323c3f9ad4c05dfda6cded8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d1691973-2b6e-414d-a7e7-86262ed7ad3a",
+  "objective": "Audit the contracts as they are, with special attention to whether a caller's on-chain track record (hits, misses, streaks) can be gamed, and to any power the owner has over results.",
+  "publisherVersion": "0.1.0+61e9b7ca",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "9193559f26fd5541b7a1a959a57a85929baea01c",
+    "repoUrl": "https://github.com/identity-md-launches/launch-376-callbook-on-chain-tamper-proof-track.git"
+  }
+}
