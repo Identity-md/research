@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "24d4cb277c00ab682f2dc3144dd4a35be21a5849fe1287c0fa62541750857795",
+  "artifacts": [
+    {
+      "bytes": 38621,
+      "hash": "6dd8a4d0eaf37fe067a2e091281021ec36a7160be2fcdf400e0a5e66a9eb1321",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "a6e287d8833f87ab4dc2dda80167175ee9aae09b0dcecf28a58ca65d8a5d095d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "30a6c1a419ef4f9c0b7b9345d1843aaf4945ad583f614ed8027cb22761e6f96c",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7a16b742ccafdf938bea65f8364ad7ddb9958dbb08622e2224b30f84493e4256",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e579f47994ccab644b68b9d086ea218d06af37b91c959a58a30bc32dd9206b9e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ab30b4aad568e60f619d0a1e833328ad68d7240bacb3077e7f1e4878f07d1562",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "03f15d1296244279ebdd0e54df271264fe51f911902957fe042ff85c368f0173",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "96bcef5458a9f3d00b49c7bbbd3a6db7bda3818a47972c4afd764ee10aa14734",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a6e287d8833f87ab4dc2dda80167175ee9aae09b0dcecf28a58ca65d8a5d095d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1ef8e8a6-4297-4ff8-b869-2d9b91445d82",
+  "objective": "IMD Ember World (https://imdember.com) - re-audit of wallet sign-in, sessions and home authorization after the fixes for audit 8c3aea2e (World only)\n\nPlease read this first: this repository contains NO Solidity and no smart contract. It is a TypeScript Cloudflare Worker (the server) and the TypeScript/React client code for wallet sign-in (SIWE, EIP-4361). The site never asks a wallet for a transaction, a token/NFT approval, a Permit/Permit2 or typed-data signature; the only signature is personal_sign of a server-built SIWE text. The team states there is no \"loss of funds\" path by design (please verify rather than assume it). Rate findings by what an attacker could do to a player through this code: sign in as an address without its key, keep or revive a session after revocation, end another address's sessions, get owner rights for seats or a house that are not theirs, make the page ask the wallet to sign anything other than the site's own sign-in text, leak data, or deny sign-in or the owner's house (availability is in scope). If your checklist is Solidity-only, say which parts you could not apply rather than forcing them.\n\nRepository: the public review snapshot pinned at the commit shown when \"Read\" was clicked: the newest commit, whose parent is ae1d41a30363ad04711083465501680469400d2f (the version audit 8c3aea2e reviewed). Code is in source/. Root docs are in Traditional Chinese and are the team's claims; the code is the reference. README.md maps each finding of audit 8c3aea2e (N-1..N-7) to what changed and what remains; none of these fix statuses has been re-reviewed.\n\nFacts you cannot check without network (team statements, from the deploy record and read-only GETs on 2026-10-01):\n- Live: Cloudflare Worker \"imd-world\" version bbf24001-7eec-4f93-b312-a22e299ab275, built from private commit 2e4e830b367f651e3c880587c1a4b465d1bfcd91 (source/ comes from a later commit that differs only in two docs and one test, plus one added evidence page).\n- Rebuilding the Worker from source/ alone (wrangler deploy --dry-run) gives SHA-256 018df7b35117bf612cd9311a800de75964b07f9d74f2c2f1ae545b26894cf62c (280,605 bytes), equal to the deploy record (manifests/).\n- D1 migrations 0001-0005 applied (0005_lanes_and_subnets before this code); rate-limit bindings as in source/wrangler.jsonc; an edge rule blocks an IP sending over 20 /api/ requests in 10 s.\n\nEntry points: source/worker/app.ts routes /api/* to server/auth.ts handleAccountApi (:571), then server/world-api.ts, else static assets.\n- POST /api/auth/challenge (challenge :423; INSERT_CHALLENGE :169), POST /api/auth/verify (verify :452; verifySignature :374), POST /api/auth/logout (:536) and logout-all (:549), GET /api/auth/session (:529, now says expired:true for a cookie whose session ran out; readSession :410).\n- GET /api/me/home (owner data from the session's address only; server/ownership.ts class Ownership :202), GET /api/wallet/:address/assets (public), GET /api/world/* (public data; shared Cache API copy, worker/app.ts edgeCopy :51).\n- Cron: server/presence.ts (prunes challenges, sessions, index_candidates and the new index_lanes).\n- Client: src/world/auth.ts (AuthClient; statusOf :62; personal_sign :278 after siwe.ts checkSignInMessage :16), homeEntry.ts (enterGate :11), walletView.ts, WalletPanel.tsx.\n\nWhat changed since ae1d41a (please verify each fix, then look for what the fix itself broke):\n- N-1: session reads carry a sequence (auth.ts sessionReads :121, :189); a superseded read's answer, error or parse failure changes nothing; a click waits for the newest read (:244). Any ordering left where an older read clears or restores a session?\n- N-2: after the challenge body, gen, the active provider and account are re-checked before the prompt (auth.ts :266-271). Can a cancelled, switched or torn-down flow still reach personal_sign or verify?\n- N-3: past the 256-candidate cap the rank uses the counting rule incl. owner-bound 24 h sightings (ownership.ts counts/rank :143-148). Can an attacker still push the one counting seat out, or make the extra read unbounded?\n- N-4: claims record called_via 'pool' or 'lane' (CLAIM_CONTRACT :197, CLAIM_LANE :212; migration 0005). Can the lane now be used beyond its stated budget, or the owner still be held out cheaply?\n- N-5: IPv6 shares nest: each /64 at most a /24's share, each /48 at most NET6_SCALE=2 (:158; worker/app.ts networkKey :74, subnetKey :82; login_challenges.sub). Can /64 rotation exceed the stated bounds? Does code deployed before 0005 fall back safely (the *_0004 statements)?\n- N-6: a refused first NFT-index discovery takes the network's discovery lane (INDEX_LANE :234, key chain:index:lane; ownership.ts :283-287). Does the lane open an unbounded upstream cost, or a seat granted without ownerOf?\n- N-7: the end of a session is 'expired', 'revoked' or 'signed-out' (auth.ts :204, :227; walletView.ts endedText :59). Does the session route's new expired flag leak anything?\n\nPlease also re-check, as before: signature verification (message re-read from D1 only; domain, URI, chain id 1, version, statement, Issued At, Expiration Time equal to the stored row; ERC-6492 refused; ERC-1271 needs code and exactly the magic word; one check per challenge), session issuance and revocation (one session per nonce, token stored as SHA-256, __Host- cookies, 7-day expiry, logout-all only by a live session), limiters failing closed (permit :323), ownership only from ownerOf and the session address, and the page-side check (only this site's exact 11-line message for this account and nonce reaches personal_sign; it does not stop injected script or a phishing page: known limit).\n\nTests: source/tests (node --test; TESTS/README.md: copy source/ into its own git repo, npm ci, add the two stubs from TESTS/stubs). Real handler, migrations on node:sqlite, synthetic keys; only npm ci needs network. Snapshot run: 216 tests, 212 pass, 4 fail (three need withheld house geometry or interior code, one needs the team's git history); the N-1..N-7 tests (node --test --test-name-pattern=\"^N-\") 43/43. Recorded outputs are in TESTS/.\n\nOut of scope: Genesis Mint (no Mint code here; reviewed separately; see source/docs/security/MINT_BOUNDARY.md), withheld files (3D world, art, music, house placement, interior rendering, WorldApp.tsx; listed by hash in manifests/).\n\nReport each finding with severity, file:line, the attacker's preconditions and the impact on a player, and a reproduction or a clear argument; say which earlier finding it relates to, and list what you could not check. This is a code review record, not a certification: please do not call the site safe, secure, audited or certified.",
+  "publisherVersion": "0.1.0+da6bdbe5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "8cad017fad58bac89d88fa72d530d3c56160009b",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
