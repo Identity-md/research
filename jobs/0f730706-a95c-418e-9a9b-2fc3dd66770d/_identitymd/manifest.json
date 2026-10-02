@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "259899a451016b4b75b7bd85b776b9f45aea2396ec8047a1edbf6a806caedc03",
+  "artifacts": [
+    {
+      "bytes": 3383,
+      "hash": "34712ca4dfb36a76fcc6d55c70b113a7fc3a07d35b75447fe1c0697bc9861d5f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "5a99f3f9af80bd6f446b543528b36c63a4fde23ee1ede30546bdc8d17993c498"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "6cafa99bc58dd3f950b90bbc53c4c9279334d8b1dcd90b4667fdab39c3811068",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "11df27658f46aa9d59cda30411cf3fac76069d78bf72ffe60c2d556e5a2d3b9b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5a99f3f9af80bd6f446b543528b36c63a4fde23ee1ede30546bdc8d17993c498",
+      "treeHash": "a25206df02afd655a69d2c8142f4ec3852c74a7e",
+      "verifiedTreeHash": "a25206df02afd655a69d2c8142f4ec3852c74a7e",
+      "verifierVersion": "0.1.0+68ddf5e4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0f730706-a95c-418e-9a9b-2fc3dd66770d",
+  "objective": "What is the latest answer of the Chainlink ETH/USD price feed at 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419 on Ethereum mainnet, in USD (8 decimals), as read at the latest block when the question is answered, rounded down to whole dollars?",
+  "publisherVersion": "0.1.0+68ddf5e4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
