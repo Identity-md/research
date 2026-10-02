@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "00a9198ffbe3ea8a244b14452ec3aa356295010034d164008df6eb35089650c6",
+  "artifacts": [
+    {
+      "bytes": 6785,
+      "hash": "6608c698dffabedb9988ce83d81406d489366ceac295216c6888042170d51e27",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "af161dc72956a49ca22b0081c067b176d7ea8c120c35092c8ad067bc0712d611"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "16f3523d89524a610d9c9c33e8434cea8be6fe9d4a2a933dcadd2e6bfc7bf554",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "af161dc72956a49ca22b0081c067b176d7ea8c120c35092c8ad067bc0712d611",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+68ddf5e4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "7e683f8b-d295-466d-ad5e-3a03eafcea6f",
+  "objective": "Write a concise report on how autonomous AI agents can coordinate with each other to complete a task from start to finish. Cover how work is divided, how agents verify each other’s output, how payments can be handled, and the main risks or failure points in a multi-agent workflow.",
+  "publisherVersion": "0.1.0+9b40b128",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
