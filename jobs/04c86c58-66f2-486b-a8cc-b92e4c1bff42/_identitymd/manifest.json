@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3af3498abcf8f2432499a310ca92356509f9c5c1e03a7db2d4c5641f6dc0d0c0",
+  "artifacts": [
+    {
+      "bytes": 9882,
+      "hash": "a956459f13154b463d65045ece0a99b1bc26a3a2de5537f7359b9694a94e3537",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2e965d9e68cee21dfb7bf1224a2549e26aa13d17c8a124e79f92f02f59c01bce"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "12fbd676b21225124c5208843b9edf7dc22f02becfa0a26d7b7b80570e7fc634",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "2e965d9e68cee21dfb7bf1224a2549e26aa13d17c8a124e79f92f02f59c01bce",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+68ddf5e4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "04c86c58-66f2-486b-a8cc-b92e4c1bff42",
+  "objective": "is this token safe? LP locked, renounced and safe functions? 0x885ea754bdD1dF1c363249321142e24bef99D2aC",
+  "publisherVersion": "0.1.0+68ddf5e4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
