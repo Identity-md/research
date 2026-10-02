@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "cc651b2b07cf5e95997205f4bb268096e59dd0f7df5ae0544904a06474d33d7f",
+  "artifacts": [
+    {
+      "bytes": 4218,
+      "hash": "98b574401a94c3d457e2748f800de3373f18e15c58e966793266b4de5f1b3b32",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "d6c2a84e8e1eaf6628e0dc1d8efead4f8eb08aa2b5a29399a16c7c4807dae4ce"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "163f8bc7d28274e2f0e184915e9c4c3d6426328fdb2e6fa4d97067a8ab0f7ecb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "d6c2a84e8e1eaf6628e0dc1d8efead4f8eb08aa2b5a29399a16c7c4807dae4ce",
+      "treeHash": "a25206df02afd655a69d2c8142f4ec3852c74a7e",
+      "verifiedTreeHash": "a25206df02afd655a69d2c8142f4ec3852c74a7e",
+      "verifierVersion": "0.1.0+68ddf5e4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "297c5169-1f02-4d44-a8c6-2aa7c29e1f83",
+  "objective": "What is the latest answer of the Chainlink ETH/USD price feed at 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419 on Ethereum mainnet, in USD (8 decimals), as read at the latest block when the question is answered, rounded down to whole dollars?",
+  "publisherVersion": "0.1.0+9b40b128",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
