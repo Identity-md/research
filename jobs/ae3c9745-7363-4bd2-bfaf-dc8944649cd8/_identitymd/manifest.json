@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "33dc355865f59349432f3ac1e42a6440e597d58c4475768b537a56975c581ed0",
+  "artifacts": [
+    {
+      "bytes": 30910,
+      "hash": "fa8af80846debd1cce930ebcee62791b288d49547a1c7e4e9796a736ec1c379e",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "6b68bfdb7192dd540e4e3de42b9a3066e3108a376ce05349382673132196335e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bb0a3bf63233e5e5722f6eae6cd08dc581298f894dd83aa00d8a87a846a28c34",
+      "evaluation": null,
+      "findings": 7,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "0b46bf7c37d30d9e0e1dd080295ce1a5da996823aabce13cde0f03743777b61f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": null,
+      "findings": 14,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7f935a189537f257c5e7002d17f3c388b8274d20ffd65b49663e845e1ee56a37",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "720122d0ca9f60ca0fedc6534d5c967c26c3800269e1a90e4d9279c6360180d4",
+      "evaluation": null,
+      "findings": 5,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "7532d7bc5cc1393fd17ae96c2bd4e1a35dd7b01a7d149dc086178a052c83e5e8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "02ae6543274731ab9267e3541a2725ba68887d0790ccdad189b0d33bfc1a01b9",
+      "evaluation": null,
+      "findings": 6,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "0f062f7ce1b364fbcd6cc5cbf2a0dc3b684ffb5412637f87018e9f973d252892",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": null,
+      "findings": 11,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "6b68bfdb7192dd540e4e3de42b9a3066e3108a376ce05349382673132196335e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ae3c9745-7363-4bd2-bfaf-dc8944649cd8",
+  "objective": "Audit this TypeScript client for the IMD swarm's paid requests before anyone funds it. Focus: private-key handling (env only, never logged or persisted, no leak through errors), EIP-712 Permit2 and QuoteApproval signing (domains, types, paymentHash over key-sorted JSON), nonce and deadline handling, spending caps and dry-run defaults, refusal of mismatched asset or payTo (address poisoning), double payment on retry, and dependency risks. Each finding with location, impact and the exact call sequence that triggers it.",
+  "publisherVersion": "0.1.0+9b40b128",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "91407cb0dc9dae032edcff5ffe00a196a6143d7d",
+    "repoUrl": "https://github.com/identity-md-launches/launch-601-build-imd-sdk-typed-typescript.git"
+  }
+}
