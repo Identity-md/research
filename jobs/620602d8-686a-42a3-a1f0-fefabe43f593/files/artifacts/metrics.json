@@ -1,0 +1,144 @@
+{
+  "dataset": {
+    "rows": 100,
+    "csv_sha256": "7f63e71d7cce724e476319e4398c125672a1ad2319946c55af98d05e14505b55",
+    "id_order": "the 100 supplied UUIDs, in supplied order",
+    "oracle_request_id_null": 100
+  },
+  "job_states": {
+    "completed": 97,
+    "blocked": 3,
+    "failed": 0,
+    "superseded": 0
+  },
+  "outcomes": {
+    "completed": 96,
+    "blocked": 4,
+    "failed": 0,
+    "superseded": 0
+  },
+  "cohorts": {
+    "evm_project": {"admissions": 35, "stated_cost_imd": 17.5, "workflow_completed": 35, "workflow_blocked": 0},
+    "univ4_hook": {"admissions": 35, "stated_cost_imd": 17.5, "workflow_completed": 34, "workflow_blocked": 1},
+    "standalone": {"admissions": 30, "stated_cost_imd": 15.0, "workflow_completed": 27, "workflow_blocked": 3}
+  },
+  "fees": {
+    "stated_per_admission_imd": 0.5,
+    "stated_batch_total_imd": 50.0,
+    "allocation_to_workflow_completed_imd": 48.0,
+    "allocation_to_workflow_blocked_imd": 2.0,
+    "allocation_per_workflow_completed_imd": 0.52083
+  },
+  "rates_percent": {
+    "workflow_completed_overall": 96.0,
+    "evm_project": 100.0,
+    "univ4_hook": 97.14,
+    "standalone": 90.0
+  },
+  "admission_window": {
+    "first_created_at": "2026-09-27T05:08:17.792Z",
+    "last_created_at": "2026-09-27T06:16:43.506Z",
+    "elapsed_minutes": 68.428567
+  },
+  "source_collection": {
+    "first_fetched_at": "2026-10-02T18:40:31.641403+00:00",
+    "last_fetched_at": "2026-10-02T18:45:09.860863+00:00",
+    "parent_api_http_200": 100,
+    "explorer_http_200": 30,
+    "explorer_http_404": 70,
+    "workflow_api_http_200": 70,
+    "frontend_api_http_200": 70
+  },
+  "deliverables": {
+    "distinct_repository_urls": 164,
+    "parent_repository_urls": 94,
+    "frontend_repository_urls": 70,
+    "live_launches": 70,
+    "named_sites": 70,
+    "passed_validations": 69,
+    "failed_validations": 1,
+    "deployed_addresses": 140,
+    "chain_id": 11155111,
+    "chain": "Sepolia",
+    "parent_rows_without_repository_url": 6,
+    "standalone_completed_rows_with_repository_url": 24
+  },
+  "timings": {
+    "all": {"n": 97, "min": 3.583117, "median": 25.059517, "p90": 47.454933, "max": 147.31485},
+    "evm_project": {"n": 35, "min": 12.82775, "median": 22.44605, "p90": 29.57745, "max": 36.965983},
+    "univ4_hook": {"n": 35, "min": 18.430017, "median": 34.900783, "p90": 53.670033, "max": 147.31485},
+    "standalone": {"n": 27, "min": 3.583117, "median": 19.203983, "p90": 31.605533, "max": 46.473583}
+  },
+  "workflow_completion": {"n": 69, "min": 688.400717, "median": 778.393067, "p90": 824.15075, "max": 832.619417},
+  "site_naming": {"n": 70, "min": 45.551617, "median": 100.429033, "p90": 136.140367, "max": 827.783367},
+  "repo_delivery": {"n": 94, "min": 3.97535, "median": 30.3108665, "p90": 73.841283, "max": 788.2235},
+  "frontend_completion_since_admission": {"n": 70, "min": 43.515683, "median": 90.7399, "p90": 125.947633, "max": 821.1051},
+  "validation_after_site_naming": {"n": 69, "min": 4.747617, "median": 671.316033, "p90": 735.56805, "max": 755.989683},
+  "extrema": {
+    "fastest_parent_minutes": 3.583117,
+    "fastest_parent_job_id": "97804d2b-86b7-47a6-a558-34ca31c469d9",
+    "slowest_parent_minutes": 147.31485,
+    "slowest_parent_job_id": "8032cc13-2cfa-4bc0-8766-5f7639be3497"
+  },
+  "nodes": {
+    "parent_total": 312,
+    "parent_accepted": 309,
+    "parent_failed": 3,
+    "frontend_total": 70,
+    "frontend_accepted": 70,
+    "observed_total": 382,
+    "observed_accepted": 379,
+    "observed_failed": 3,
+    "final_failed_parent_nodes_are_documentation": 3
+  },
+  "retries_and_revisions": {
+    "parent_nodes_attempt_above_one": 20,
+    "jobs_with_parent_retry": 19,
+    "parent_attempts_above_first": 24,
+    "retried_parent_nodes_accepted": 17,
+    "retried_parent_nodes_failed": 3,
+    "frontend_jobs_with_retry": 1,
+    "jobs_with_nonzero_parent_revisions": 2,
+    "parent_revisions": 7,
+    "parent_judge_revisions": 0,
+    "retried_nodes_by_key": {
+      "adversarial_review": 8,
+      "build_contract_project": 3,
+      "gas_and_size_report": 2,
+      "write_readme_and_docs": 2,
+      "docs": 1,
+      "impl": 1,
+      "fix_findings": 1,
+      "write_foundry_tests": 1,
+      "deploy_script": 1
+    },
+    "revision_nodes_by_key": {"adversarial_review": 2, "build_contract_project": 2, "manifest": 2, "gas_and_size_report": 1}
+  },
+  "visible_failure_history": {
+    "documentation_rejected_attempts": 9,
+    "other_recovered_rejected_attempts": 3,
+    "at_least_visible_rejected_attempts": 12,
+    "blocked_job_times_minutes": {
+      "02f34926-72de-4714-8390-faa3b7e67f77": 8.98675,
+      "24a7dfa9-61f6-4365-a700-befa84a8c691": 16.617467,
+      "c2ba5413-a0fe-4e9a-9915-0e521c5bea2c": 0.266667,
+      "035dfaac-976b-4e98-894a-71e3f4b2fe1a": 734.307617
+    }
+  },
+  "validation_attempts": {"1": 16, "2": 12, "3": 17, "4": 16, "5": 5, "6": 2, "7": 1, "19": 1},
+  "validation_attempt_summary": {"one_attempt": 16, "more_than_one_attempt": 54, "maximum": 19},
+  "explorer_status": {"200": 30, "404": 70},
+  "unique_repos": 164,
+  "supersession_observations": {"project_versions_with_superseded_state": 0, "frontend_sites_with_superseded_by": 0, "frontend_sites_with_superseded_at": 0},
+  "calculation_method": {
+    "general": "All counts are row counts or counts of matching nonblank fields in data-v2.csv. Blank fields are not zeros.",
+    "outcomes": "Use workflow.status for rows with workflow_id; otherwise use job_state. Parent states use job_state directly.",
+    "fees": "Multiply 0.5 IMD by admissions; allocation fields multiply that stated total by the workflow-aware status counts and divide by 96 for the per-completed-status ratio. These are not payment receipts.",
+    "timings": "For each eligible row, subtract created_at from updatedAt for the relevant level, or use the explicit delivery/naming/validation timestamps. Exclude blanks; report min, median, nearest-rank P90 and max in minutes.",
+    "rates": "Workflow-aware completed count divided by admissions, multiplied by 100 and rounded to two decimal places where shown in the report.",
+    "nodes_and_retries": "Parse the JSON node columns; count nodes, failed states, attempt values above one, and revision counters. Old attempts are not additional nodes.",
+    "deliverables": "Count distinct nonblank repository URLs, matching launch/site/validation status values, and contract entries in the JSON handoff column.",
+    "source_collection": "Count source-response status fields and take the earliest and latest stored fetched_at timestamps.",
+    "uncertainty": "HTTP 404/429 statuses, missing fields, worker explanations and validation scope are reported as observations or limits, not recoded as job failures or success."
+  }
+}

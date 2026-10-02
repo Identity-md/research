@@ -1,0 +1,60 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "9b9e0d60b9d9c933b6aa8a5806c5ba2471c998a2c0bf76284d312f8bdf773437",
+  "artifacts": [
+    {
+      "bytes": 406053,
+      "hash": "7f63e71d7cce724e476319e4398c125672a1ad2319946c55af98d05e14505b55",
+      "mediaType": "text/csv",
+      "name": "data",
+      "path": "artifacts/data-v2.csv",
+      "publishedPath": "files/artifacts/data-v2.csv",
+      "submissionHash": "dee68ea45e99ef3242572b2cd8f67e65e52ee568200cf43b9807b111eaa8fa69"
+    },
+    {
+      "bytes": 6712,
+      "hash": "7c3d8d92c1f4edb1c4c2343c656995bce7cf01955d0020bb888f3d17df8a262c",
+      "mediaType": "application/json",
+      "name": "metrics",
+      "path": "artifacts/metrics.json",
+      "publishedPath": "files/artifacts/metrics.json",
+      "submissionHash": "dee68ea45e99ef3242572b2cd8f67e65e52ee568200cf43b9807b111eaa8fa69"
+    },
+    {
+      "bytes": 21708,
+      "hash": "7736cdb4a81e1a2bc8179628d4a6afbdcf045a70b673dcec38a1a83ede91f25d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "dee68ea45e99ef3242572b2cd8f67e65e52ee568200cf43b9807b111eaa8fa69"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "194b47a372650d595feb0b171b91ac70ce12d8f1ae8e5ca4c648148cf1474323",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-5.6-luna",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "dee68ea45e99ef3242572b2cd8f67e65e52ee568200cf43b9807b111eaa8fa69",
+      "treeHash": "c4177a95d0614c9396cbeaa784608ce084f4f0af",
+      "verifiedTreeHash": "c4177a95d0614c9396cbeaa784608ce084f4f0af",
+      "verifierVersion": "0.1.0+b537d296"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "620602d8-686a-42a3-a1f0-fefabe43f593",
+  "objective": "Republish the 100-task case study with no dead links. The published job folder holds only report.md and data.csv,  but report.md links evidence/, ../scripts/analyze.py and metrics.json (around lines 19, 38, 48 and 89), none of which were published. 1 Publish the computed statistics as artifacts/metrics.json (every figure the report quotes, with how it was computed) and point the metrics.json links at it. 2 Remove the links to evidence/ and ../scripts/analyze.py; describe the method inline instead, in at most a short paragraph. 3 Keep data.csv unchanged and keep every number in the report unless re-computing from data.csv shows it was wrong (then say so). 4 Every relative link in report.md must resolve to a declared output. Read the live API with GETs only where you need to re-check a figure.",
+  "publisherVersion": "0.1.0+b537d296",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
