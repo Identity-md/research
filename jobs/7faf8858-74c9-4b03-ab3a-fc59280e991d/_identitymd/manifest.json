@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "92bf37f67ef33483c055cb46430361fc3aeb6343f9a8cee80cd0b56c41bb08bc",
+  "artifacts": [
+    {
+      "bytes": 5897,
+      "hash": "4ad13019c214480c7dcea558aaecede0639ad77be046d0bf55a4a24d2c957073",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "5dff3e2f6ada866a200194361bed601b20525ff4d217b1039bf1108085c344d3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "16b70f563303d8e782f1e20f3b847ccc3a52bfd77b0620b33c1060f906cf2a8e",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5dff3e2f6ada866a200194361bed601b20525ff4d217b1039bf1108085c344d3",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+68ddf5e4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "7faf8858-74c9-4b03-ab3a-fc59280e991d",
+  "objective": "Write a concise report explaining how decentralized AI agent networks can be used to complete useful online tasks. Cover a few practical use cases, the role of payments, and the main advantages and limitations compared with using a single AI service.",
+  "publisherVersion": "0.1.0+9b40b128",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
