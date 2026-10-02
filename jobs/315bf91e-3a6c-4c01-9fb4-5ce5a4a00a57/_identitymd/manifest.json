@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "cef802ef9246cc399f0907dd5038e9a8f9a7044b75d76cc32fcf11930be3b42a",
+  "artifacts": [
+    {
+      "bytes": 4843,
+      "hash": "0da3c356ea3a4fec95c5c0014e46fb5123cd996ab9960d4c91b8eb6b74a45193",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "09fdb7da2c5f695ae784e4009b738c63cb78caaddc05f0fc243903cbfd7770a5"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "18527ba42d5b89d70709a5a23dcf11d4b9d613f59242e342175dc5281e4995ba",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "09fdb7da2c5f695ae784e4009b738c63cb78caaddc05f0fc243903cbfd7770a5",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+68ddf5e4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "315bf91e-3a6c-4c01-9fb4-5ce5a4a00a57",
+  "objective": "Write a concise report on why vintage collectibles can retain value over time. Cover scarcity, condition, provenance, collector demand, market cycles, and the risks of assuming past appreciation will continue. Use a few well-known examples from coins, trading cards, or art.",
+  "publisherVersion": "0.1.0+9b40b128",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
