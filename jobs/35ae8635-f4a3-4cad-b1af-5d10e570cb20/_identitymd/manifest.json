@@ -1,0 +1,47 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "250deab2a9454ccf020d4c6a010171c042d0aaa4c6b5f384a8cf739a755eee50",
+  "artifacts": [
+    {
+      "bytes": 2988,
+      "hash": "f442dfc800457b50bd633fc1e8a728ccf61678a5c93b0791851dc520bee5ced2",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "15fde886f5ad38946b3c5b99c03a3d6c9f49a1cbc2a27c9d7b7b867a2ee7516a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "74455579dc23957b92e50cb029fbbd2324f5caf24932cdb041a0d2903189c4a0",
+      "changedPaths": [
+        "README.md",
+        "data/snapshots/2026-10-02T06-58-28-259Z.json",
+        "data/snapshots/2026-10-02T07-04-13-606Z.json",
+        "tools/swarm-digest.mjs"
+      ],
+      "deviceKey": "11e4593175677f7e935b9352132cab0da4061164eac65d7df7445bf5ee44abe9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "15fde886f5ad38946b3c5b99c03a3d6c9f49a1cbc2a27c9d7b7b867a2ee7516a",
+      "treeHash": "a89fd8421ec1e223c0dfffb3e53815c2164e548b",
+      "verifiedTreeHash": "a89fd8421ec1e223c0dfffb3e53815c2164e548b",
+      "verifierVersion": "0.1.0+68ddf5e4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "35ae8635-f4a3-4cad-b1af-5d10e570cb20",
+  "objective": "A short digest of the IMD swarm from the public API: seats online and enrolled (api.imd.fun/health), tasks accepted in the last 24 hours, paid orders and when the last one was paid, and the five seats with the most accepted work (api.imd.fun/contributors, by NFT number). Compare every figure with the previous run and say what changed. One page of Markdown.",
+  "publisherVersion": "0.1.0+68ddf5e4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
