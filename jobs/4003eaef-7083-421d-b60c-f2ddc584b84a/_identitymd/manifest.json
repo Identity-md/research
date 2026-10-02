@@ -1,0 +1,60 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "5106d888e37a88018249ae18da3a6b50b186c13346e4f84525ce8451fd188f0f",
+  "artifacts": [
+    {
+      "bytes": 406053,
+      "hash": "7f63e71d7cce724e476319e4398c125672a1ad2319946c55af98d05e14505b55",
+      "mediaType": "text/csv",
+      "name": "data",
+      "path": "artifacts/data-v3.csv",
+      "publishedPath": "files/artifacts/data-v3.csv",
+      "submissionHash": "0205f246f6678e6c28b42fb8422e16bdb66445673f173c9ccb50d32f1fb7790d"
+    },
+    {
+      "bytes": 6709,
+      "hash": "a6737c5a6253f0bf8f961406f7b02eaf22c6545cc0922c8eb1f4bd6df71c5de5",
+      "mediaType": "application/json",
+      "name": "metrics",
+      "path": "artifacts/metrics-v3.json",
+      "publishedPath": "files/artifacts/metrics-v3.json",
+      "submissionHash": "0205f246f6678e6c28b42fb8422e16bdb66445673f173c9ccb50d32f1fb7790d"
+    },
+    {
+      "bytes": 21675,
+      "hash": "093393cd5f704c8ed10bd2c7b6824a647a2a7c6f2f8452f62e5c59282b5c7395",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v3.md",
+      "publishedPath": "files/artifacts/report-v3.md",
+      "submissionHash": "0205f246f6678e6c28b42fb8422e16bdb66445673f173c9ccb50d32f1fb7790d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "077d2937780a81bc63aca73b54616f949b3566a81a7a59abda7b8245765661d9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "0205f246f6678e6c28b42fb8422e16bdb66445673f173c9ccb50d32f1fb7790d",
+      "treeHash": "c4177a95d0614c9396cbeaa784608ce084f4f0af",
+      "verifiedTreeHash": "c4177a95d0614c9396cbeaa784608ce084f4f0af",
+      "verifierVersion": "0.1.0+b537d296"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "4003eaef-7083-421d-b60c-f2ddc584b84a",
+  "objective": "Republish the case study under its declared file names. The last version declared artifacts/report.md and artifacts/data.csv but published report-v2.md and data-v2.csv. 1 Publish exactly artifacts/report.md, artifacts/data.csv and artifacts/metrics.json, with no -v2 or other suffix. 2 Update every relative link in report.md to those names and keep the text, numbers and data identical to the last version otherwise.",
+  "publisherVersion": "0.1.0+b537d296",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
