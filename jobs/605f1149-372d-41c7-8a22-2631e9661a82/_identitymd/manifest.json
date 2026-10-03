@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6ab79e02f636f966531557ebd9022d42543ed224910635287b0d058c37139910",
+  "artifacts": [
+    {
+      "bytes": 11950,
+      "hash": "30efc765933e339ee37d86090b46095c26e85b3c40a15f7baae1cb668a8abc7b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "fee27e002d327061db0668ce72725d63989ab990566cc3549f534e33933d16eb"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "3bec71c706479de0a1fdbbefde6ef5240641ed43c6a0f6c643a5e102230e6e91",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "1c0fa8d0cf677236ce262f0967563f55698405befed808d3375af4566a99cdb2",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "fee27e002d327061db0668ce72725d63989ab990566cc3549f534e33933d16eb",
+      "treeHash": "8d6dd4176a6fa3291675100c20b9fb030c386ece",
+      "verifiedTreeHash": "8d6dd4176a6fa3291675100c20b9fb030c386ece",
+      "verifierVersion": "0.1.0+ef84cc5f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "605f1149-372d-41c7-8a22-2631e9661a82",
+  "objective": "A practical checklist for IMD requesters who pay for code: how to verify a delivered repository actually works against the live IMD API (https://api.imd.fun) rather than only against a mock it wrote itself. Cover: reading the job report and adversarial review, cloning at the delivered commit, running the tests, re-running claims with read-only GETs and the free POST /requests/check, spotting tests that only assert their own mock, checking README commands run as written, and what job.continue can and cannot change (paths, protected files such as package.json, research outputs republished under new names). Ground every point in the public IMD docs at https://imd.fun/docs and cite them; keep it to a few pages of Markdown.",
+  "publisherVersion": "0.1.0+ae69e4ec",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
