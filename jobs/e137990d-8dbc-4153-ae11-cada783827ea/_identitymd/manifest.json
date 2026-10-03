@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "3290e086c7b197c92827d7c9e59e27a339de30807048f24669212fd9c3d044e1",
+  "artifacts": [
+    {
+      "bytes": 19816,
+      "hash": "93868411e170b03b349d7da7982293e96b8fceef6a36cfd32752c7284984aaab",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "b45aa8371d2248415df083f8be3ca4fb4a8c4522211e28f7d1b0f13627057c07"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "01923f9af3baf44414c80f5115a227c2254fc0135a88503f1d173a207032ce8d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "e81691a6634efc358d3da7fd3adf60993c7fb9712a1660bfaed9b53cefc11eb7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "147e0f4fb81c84e94463bbfca59e35cee0cb03d0afbab29b8bb53dcc8822e0e5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "469136343127864bee65e8799cec197e87f29830e382c3829b92651485bdc2c0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "720122d0ca9f60ca0fedc6534d5c967c26c3800269e1a90e4d9279c6360180d4",
+      "evaluation": null,
+      "findings": 4,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "b45aa8371d2248415df083f8be3ca4fb4a8c4522211e28f7d1b0f13627057c07",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e137990d-8dbc-4153-ae11-cada783827ea",
+  "objective": "IMD Ember World - fifth offline audit of R4/AUD4 and Member M1 (World only)\n\nUnofficial project; NO Solidity. TypeScript Cloudflare Worker/React SIWE; M1 writes persistent public profiles, so World is not wholly read-only. Offline source/local synthetic tests only: no live requests, real wallets/signatures, transactions, production writes/deploy.\n\nPIN: https://github.com/tungweb3/imd-ember-world-review at 357668f37c75317f79ff2266795636597a707c04; actual parent 6e307dea76e763936fc4ac86e54c9f5d558f58c4. Published baseline: 6e307dea76e763936fc4ac86e54c9f5d558f58c4. Use immutable history, not branch head. Private repair 54410b2f8dece71bdb2fd999c94feea6454ecfcd; private history withheld, provenance is a team claim.\n\nRead README, R5/TEST_RESULTS.md, R5/BUILD_EVIDENCE.md; source/docs/security/AUD4_REMEDIATION.md, AUD4_MEMBER_POLICY.md, AUD4_DISCOVERY.md. Old root docs remain historical. Read R5/PRIOR_AUDIT_f3e7cfc7.md (job f3e7cfc7-0b43-473a-9c0f-6931cf278c56) and R5/PRIOR_REPORT_1dbe2282.md (job 1dbe2282-d61a-42a8-9823-2b24e48d29c1). Eight Audit findings plus Report-only M1-R2 are NINE unique fixes; M1-R1 overlaps Audit #5. M1-R2 MUST have a separate verdict.\n\nTEAM/LOCAL: private 1087/1087, tsc/frontend build pass. Fresh local Wrangler D1 final 0008: five accepted, sixth trigger refused, recheck five; not production concurrency proof. Public tests (run/pass/fail): no-stub 239/235/4; FIRST with-stub 419/414/5. Failures: withheld geometry/preview/history plus first-run presence timing; timing-only 1/1 rerun does not erase first failure. Public tsc: 16 diagnostics/exit 2; no public full frontend build. Focused R3/AUD3/ADV 83/83, N 42/42, Enter 3/3, Member+AUD4 including M1-R2 111/111. Public/private Worker identical 309594 bytes, SHA256 c7d7c0fbe49ce601a187bafdf7480c40d64ceda7bcfde64b9aea3f63f809811c. Public source 100 = 16 masked + 84 exact against 54410b2; 3D/textures/scenes/WorldApp/interiors/history withheld. No full UI/browser proof; stubs are fixtures.\n\nTEAM deployment: Worker e491cb71-60ec-4cfe-9db7-b88e52d78ce9 (100% traffic checked); deployed source 54410b2f8dece71bdb2fd999c94feea6454ecfcd; record R5/BUILD_EVIDENCE.md (record 20261003T174551Z-54410b2); production migration status 0001-0006+0008 applied; six schema SQL definitions read back/matched; no 0007 (R5/PRODUCTION_D1.md); live comparison five GETs 200; four static hashes/24 headers match; anonymous signedIn:false/no-store; no Set-Cookie. No live Audit verification; old acdbb2bd/ddb10e2 records do not prove this repair deployed.\n\nNINE REQUIRED RETESTS; seek new regressions:\n1. R4-01/AUD4-01/Audit #1: display A/shared cookie B logout-all must 409 ACCOUNT_CONTEXT_CHANGED before revoking either. Reread without false all-device success; matching/absent/forged/expired cookies retain session authority. expectedAddress is consistency, not authority.\n2. R4-02/AUD4-06/Audit #6: verify cookie committed, body lost/truncated/malformed. Session unknown; readback before another personal_sign. Failed read stays unknown; confirmed absence permits new flow. Test switch/teardown and nonce/flow cleanup versus newer installed session AND pending challenge. Neither may be destroyed. Count prompts/sessions; late browser Set-Cookie remains a limit.\n3. R4-03/AUD4-02/Audit #2: only server EOA AND ECDSA permits persistent bootstrap/PUT/GET last_login writes. CONTRACT/ERC1271/unknown fail closed (write 403 CONTRACT_WRITE_NOT_ENABLED); login/existing reads without touch remain. Test arbitrary-accepting and legitimate smart-wallet sessions; temporary restriction has usability cost, not complete contract authority.\n4. R4-04/AUD4-05/Audit #5+M1-R1: 0008 trigger atomically caps five recorded attempts/member/rolling minute. Test 6/12/20 natural/controlled races: success, reserved-name refusal, cooldown, stale/locked, no-op. Outcome/mutation roll back together; fallback refusal recording returns 429/503 on quota/storage failure. Same-ID/same-payload retry at full quota adds no record/version/history/cooldown; changed payload conflicts. New same-name no-op consumes one attempt, no mutation, guarded against parallel rename/moderation. Separate recorded attempts from all HTTP/early-invalid/IP costs.\n5. R4-05/AUD4-04/Audit #4: expired refusal rows cleaned without later rename. Requests 1 day/history 180 days are deletion eligibility, not hard deadlines. Indexed cron 200/table, write prune 10/table. Preserve unexpired retries/current profile; test backlog, missing 0008/indexes/errors. Probe cron bounded independently of M1 readiness.\n6. R4-06/Report M1-R2 ONLY: GET(v0) starts -> SAVE(v1) accepted -> old GET(v0) arrives: client/DB retain v1. Test GET2-before-GET1, late 401/error, GET(v2) before PUT(v1) reply, account switch. Sequence/generation/highest accepted version prevent regression. Separate mandatory verdict; stale UI is not DB rollback.\n7. R4-07/AUD4-07/Audit #7: committed PUT, lost/invalid/endless body. Fetch+body 15s deadline; retry once exact original ID/body. Both unknown: retain per-wallet operation, saving=false, reread, allow only original retry. Test early 401/429/503 and logout/switch/return; one mutation/history/cooldown. Refusal before outcome lookup does not prove original failure.\n8. R4-08/AUD4-08/Audit #8: server-calibrated cooldown refresh/re-enable at expiry; switch/teardown cancel timers. Browser clock cannot bypass server.\n9. R4-09/AUD4-03/Audit #3/AUD3-02: four sessions x20 refusals over 80 /24s at colo A then buyer B: zero admitted rows/index calls from refusals; B discovers. Bounded READY -> atomic separate probe -> limiter -> fresh-clock atomic admission -> index. Probe 30s backoff (/24,/64 one;/48 two), global 60/6s and 61-admission races; prune 2 opportunistic/200 cron. Test missing schema/index fail-closed, old released rows, slow/uncertain replies and refusal-counted/free models. Probes do not pollute admitted cap; no global probe-storage ceiling. Retain 10-versus-9 /24 local availability, shared networks, influx/cost/backlog.\n\nRecheck R3-R1/AUD3-01..09, N/ADV, Enter/Home; stored SIWE equality, nonce/session/cookies/logout. House authority remains session address plus Ethereum mainnet ownerOf/eligibility, never names/roster/candidates/publicMemberId. Only eth_accounts, eth_requestAccounts, exact server-SIWE personal_sign; verify no transactions, approvals, Permit/Permit2, typed data, delegated permissions, session keys or wallet batches. Out of scope: Genesis Mint, Solidity, Coin E1/0007, check-in/rewards/economy, withheld content.\n\nOUTPUT: nine-row verdict matrix, M1-R1 overlap and separate M1-R2. Classify fixed locally/partly/open/unknown; each finding severity, blocking, pinned file:line, prior ID, preconditions, player impact, reproduction/argument. Show event/timestamp order, DB rows/version/history/outcomes, client state, prompts and created/live/revoked sessions/cookie effects (N/A with reason). Record tests/failures/skips; separate measured fact, inference, team claim and unavailable checks. Preserve AUD3-05 partly, AUD3-09 review-limit, missing provider events, late shared-cookie responses, ERC1271 login truth, phishing/same-origin EOA writes, production D1/bindings/WAF/limiter/upstream and full-browser limits. Completed/accepted or Low/Info findings are not certification, approval, zero vulnerabilities or fund-safety proof.",
+  "publisherVersion": "0.1.0+ae69e4ec",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "357668f37c75317f79ff2266795636597a707c04",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
