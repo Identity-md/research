@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "05c11fffe2b99330681ce048b6ec1391ec654561e057202adf703fdcc747f87b",
+  "artifacts": [
+    {
+      "bytes": 24518,
+      "hash": "fec8775083eb8c59d60ff00205355dbb9b6caf9716a42e88d2adc7cb1dc7e438",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "1abb3575e441b60f4e5bc27de84ef1fa88856dfcda5b1c47709283d108f0a5cc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c61a367aba54d3f174ab37b5dbce5d3974ccf39a83a099ab910749b560192971",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c7630b22a73c1fb36d7cccb511d3c400a92c46f4065d9046a3f71b9ce3aa6be",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0e3196e00ec629b22da53a79a71b3df7a202b21962c324f619d7449133f246f9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "30a6c1a419ef4f9c0b7b9345d1843aaf4945ad583f614ed8027cb22761e6f96c",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "aff255cf0071d9e2b81fa42a049adc6f1baf26cf686ce4fa1f7d763dacf26a66",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": null,
+      "findings": 6,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "e937fb6a25ec56f94f2f961fa1b8a35b82e309b88e177d1a35a56009d2a7369d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": null,
+      "findings": 8,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "1abb3575e441b60f4e5bc27de84ef1fa88856dfcda5b1c47709283d108f0a5cc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f3e7cfc7-0b43-473a-9c0f-6931cf278c56",
+  "objective": "IMD Ember World (https://imdember.com) - re-audit after Audit 1ef8e8a6/Report dcf922ca, plus first review of member layer M1 (World only)\n\nPlease read this first: this is an unofficial community project. This repository contains NO Solidity or smart contract. TypeScript Cloudflare Worker and TypeScript/React SIWE (EIP-4361) client. The team claims the World site asks only eth_accounts, eth_requestAccounts and personal_sign of server-built SIWE text: no transaction, token/NFT approval, Permit/Permit2 or typed-data signature. Verify this, including changed client code. Rate by attacker preconditions/player impact: impersonation, session revival or cross-address logout, false house rights, unintended prompts, disclosure/poisoning, and availability. Verify the claimed absence of fund-loss paths. Identify inapplicable Solidity checks.\n\nRepository: https://github.com/tungweb3/imd-ember-world-review at 6e307dea76e763936fc4ac86e54c9f5d558f58c4, as shown by READ. Its parent must be 8cad017fad58bac89d88fa72d530d3c56160009b (Audit 1ef8e8a6, Report dcf922ca). Code is in source/. Traditional Chinese root docs are team claims; code is the reference. README maps R3-R1 and AUD3-01..09 to changes and residuals. These fixes have NOT been externally re-reviewed. The member layer M1 is new and has NEVER been reviewed by Swarm.\n\nDeployment facts (team claims; Audit has no network):\n- Live Worker imd-world: acdbb2bd-8add-4b15-bfa6-a31266c83520, deployed from ddb10e28a867998323164e7585635efedfcf7788. source/ is from main c491ff3c9edf9d0eb39a9233ccfff101a7c8133c: only one status document and one added evidence page differ; neither enters a build.\n- Rebuild from sanitized source/ alone: expected Worker SHA-256 cf720c698417726ce75cd3b4740314489ed816ba98a763e74d8118b8be136518, 303,128 bytes. See DEPLOYMENT_MATCH.md/manifests.\n- D1 migrations 0001-0006, including new 0006_members.sql; sessions schema unchanged. Bindings as in source/wrangler.jsonc. Stated edge rule: over 20 /api/ requests from an IP in 10 s are blocked.\n- Recorded GET date: 2026-10-03T13:01:16Z-13:01:40Z. Report must use curl/browser User-Agent: Python-urllib got 403 last time (deployment match partial). No other block bypass; Audit stays code-only.\n\nEntry points (all paths below are inside source/):\n- worker/app.ts handleMemberApi dispatch :139 precedes server/auth.ts handleAccountApi :639, then server/world-api.ts and static assets.\n- server/auth.ts: POST /api/auth/challenge :482, verify :511, logout :603, logout-all :617; GET /api/auth/session :596; GET /api/me/home :683 (session address only; server/ownership.ts :280).\n- Public GET /api/wallet/:address/assets and /api/world/*; shared cache. Client: src/world/auth.ts signIn :280, siwe.ts checkSignInMessage, homeEntry.ts enterGate, WalletPanel.tsx, member.ts and MemberPanel.tsx.\n\nChanges since 8cad017: check each against your own expected result and look for regressions.\n- R3-R1: src/world/auth.ts accountEvents :396 guards connect/eth_accounts and wallet changes during personal_sign. Can a late answer restore, prompt or verify an older account? Only synthetic wallet ordering was tested; a wallet returning a stale account without accountsChanged is a stated limit.\n- AUD3-01: server/ownership.ts :292 preserves the first proof when lane rebuilding fails, returning limited data. Any remaining 503 or seat granted without ownerOf?\n- AUD3-02 (team: partly fixed): server/auth.ts INDEX_LANE_RELEASE :279 releases refused claims (30 s retry; at most 20 releases per 6 s globally). Stated residual: about 80 claims in one 6 s slice at one location still fill the global ceiling. Probe locally.\n- AUD3-03: server/auth.ts RELEASE_CONTRACT :297 releases a refused ERC-1271 claim. Can that buy an extra eth_call or revive a burnt challenge? AUD3-02/03 rely on refused Cloudflare limiter calls costing nothing; this is unconfirmed.\n- AUD3-04: src/world/auth.ts loggedOut :426 invalidates reads begun before this page's confirmed logout.\n- AUD3-05 (team: partly fixed): src/world/auth.ts :256 drops a mismatched house; the prior session remains displayed without owner mode until a session read succeeds. Probe this residual.\n- AUD3-06: server/auth.ts session reads, home 401 and refused logout-all send no Set-Cookie (:596). src/world/auth.ts :290 waits at most 5 s for this page's logouts before a wallet prompt. Cross-tab late explicit logout can still clear a newer cookie.\n- AUD3-07: src/world/auth.ts logoutAllRequest :434 distinguishes expired/stale and re-reads a refused logout-all, including after a newer flow.\n- AUD3-08: worker/app.ts rateLimitKey :82 parses full IPv4/IPv6, maps IPv4-mapped addresses to IPv4 and other input to ip:unknown.\n- Follow-up: src/world/auth.ts revokeAbandoned :411 logs out a late session on that verify response's headers. Can waiting/abandonment/re-read paths be held open, skipped or end in the wrong account?\n\nNew, NEVER Swarm-reviewed: server/member.ts handleMemberApi :81; migration 0006. POST /api/me/bootstrap creates the session address's member; GET/PUT /api/me/profile reads/sets its name; public GET /api/world/names/:address returns name/null. Writes: DB availability, Origin, member limiter, body/session, actor context. AUTH_LIMITER member:+rateLimitKey: 20/min/IP/location, closed on error; missing binding 503. Can an unsigned/different address write, any route set/clear cookies, or M1 weaken sign-in/spend another budget? GET profile's hourly last_login_at write uses a fail-open read limiter; early PUT refusals are outside the recorded 5/member/min cap. Probe race/idempotency/version/cooldown/name claims and budget effects. node:sqlite does not verify production D1 batches. Address-to-name disclosure is intentional; what else is exposed?\n\nRe-check prior findings, stored SIWE-field equality, ERC-6492 refusal, ERC-1271 code/magic word/one check per challenge, nonce/session issuance, hashed tokens, __Host-/7-day cookies, live-session logout-all, closed write limiters, ownerOf/session address and exact client SIWE gate. That gate cannot stop injected script/phishing.\n\nTests: follow TESTS/README.md (isolated source/ git repo, npm ci, two documented stubs). Real handler, node:sqlite, synthetic in-memory keys. New snapshot result: no stubs 161 run/157 pass/4 fail; with stubs 341/337/4 (3 withheld UI/geometry, 1 history-dependent deploy-evidence check). Focused R3-R1/AUD3/ADV: 90/90; M1 server/client 33/33; N tests: 43/43; Enter gate: group 5 3/3. Dependency check: npm audit: 0 production, 0 all vulnerabilities. Distinguish package omissions from defects. Public client imports withheld World/layout/interior code: this is NOT a complete reproducible UI or full application build.\n\nOut of scope: Genesis Mint, Coin E1/0007/check-in/economy routes, withheld 3D/art/music/placement/interior/WorldApp (hashes only). M1 zero economy/life fields are placeholders, not Coin. Fixtures/static scans do not establish complete UI or real-wallet behavior.\n\nFor each finding give severity, file:line, preconditions, player impact, reproduction/argument, prior finding link, and what you could not check. AUD3-09 is a review-limit record, not a fix. This is a code review record, not a certification: do not call the site safe, secure, audited or certified.",
+  "publisherVersion": "0.1.0+ae69e4ec",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "6e307dea76e763936fc4ac86e54c9f5d558f58c4",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
