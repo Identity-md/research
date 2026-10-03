@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "e4ae714c95ab29c5bb04074c0a14fc85cc6ac2c4daccc93ca856cde54c8f9889",
+  "artifacts": [
+    {
+      "bytes": 30941,
+      "hash": "5a905a34842b1f6a1fd003c923458f18fc0bfef1d6385b939c1e54f2404f394c",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "2ee49d656abb43c155aaabefe088979d2f00a69aa6ccf7d3b98ce52dc34aa53e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "d64c341997723221c9332e627e8dc1956514e8f37e526eb91d53ff3883a08fa0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "e9324e1d3f9e64a835734d2598acb98e716c9b8aa76f0ce8726b5761e7d4b3f7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "720122d0ca9f60ca0fedc6534d5c967c26c3800269e1a90e4d9279c6360180d4",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "6f02e7d74442098fc64452f991a61efda20883c4714e8c1b437a0974bef0d957",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "2f5960673b56d589a930922e078500dd94afaf937f5630cbb6718564d4bb26c2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c7630b22a73c1fb36d7cccb511d3c400a92c46f4065d9046a3f71b9ce3aa6be",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2ee49d656abb43c155aaabefe088979d2f00a69aa6ccf7d3b98ce52dc34aa53e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "09062f1d-1a0b-49cb-af81-e55978798576",
+  "objective": "IMD Ember World: targeted independent review of fifth-Audit four Low repairs.\n\nSUBJECT: unofficial TypeScript Cloudflare Worker/React World/Auth/Member M1. NO Solidity: inspect TypeScript/SQL/lifecycle, not invented contracts. If unsupported by the Audit tool, report unsupported/unknown scope. M1 persists public profiles; World is not wholly read-only.\n\nPIN: https://github.com/tungweb3/imd-ember-world-review/tree/445747d6a4d4fb6fa4eaa9c67b74e3e2bd9c1703; parent 357668f37c75317f79ff2266795636597a707c04. Use immutable commit. Full local source 1cc61b68b2dc14af83bf5178c9fe057452ba9b46, parent 54410b2f8dece71bdb2fd999c94feea6454ecfcd. Private tree/history and 3D/textures/scenes/WorldApp/interior assets withheld. Check public fingerprints/masks; private provenance/full-suite counts are team evidence.\n\nRead R6/PRIOR_REVIEWS.md: fixed hashes/official sources for fifth Audit e137990d-8dbc-4153-ae11-cada783827ea and Report 0860e448-e960-43af-9a1c-5eed9019ef04 at parent pin. Acquire originals via those sources; four Audit Low need independent closure despite Report aggregate. Read README; R6/TEST_RESULTS.md, R6/BUILD_EVIDENCE.md, R6/PRODUCTION_DEPLOYMENT.json, R6/LIVE_MATCH.json; source/docs/security/R5_LOW_REMEDIATION.md and its sibling AUD4_REMEDIATION.md, AUD4_MEMBER_POLICY.md, AUD4_DISCOVERY.md. Old R4/R5 records are historical.\n\nTEAM EVIDENCE: 96 new cases (Auth 49, authority 36, cooldown 11); private and formal deploy gates each 1183/1183, zero skipped, tsc/Vite pass. Earlier dry-run exit 1: sandbox Wrangler path refusal after passed gates; isolated compiler retry exit 0, no upload. Preserve both. Parent 54410b2 fails four main Auth probes and backward-clock Member probe. Real Worker/routes/migrations + node:sqlite; generated EOA keys sign synthetic SIWE. Public subset/fixtures are separate from private counts/UI proof.\n\nPUBLIC: read R6/PUBLIC_SOURCE_VALIDATION.json and R6/TEST_RESULTS.md. Seven no-scene-stub files: 212/212 (96 new + 116 existing), not private 1183. Public tsc exit 2/16 diagnostics; full frontend withheld/unbuilt. First Worker compile denied; deeper layout differed 399B/133 labels; same-depth raw rebuild matches deployed 314447B/SHA. Empty ASSETS fixture, no normalization; arbitrary checkout/npm-ci layouts may differ.\n\nTEAM DEPLOYMENT: source 1cc61b68b2dc14af83bf5178c9fe057452ba9b46; record 20261003T214856Z-1cc61b6; Worker 5022cd62-6f1f-444c-af94-3b68ec359b94, 100% checked; 314447 bytes, SHA256 3977c6db6cbff23e9f6aec87092a236c603eac8bf64a7ce0c825d400dd1ad7dd. Five GETs UTC 2026-10-03T21:51:47.506Z-21:52:11.967Z: 5/5 200, four static hashes/24 headers match, session signedIn:false/no-store/no cookies. D1 pre/post metadata same: 0001-0006+0008, no new migration. Byte/GET comparison is partial, not repaired-flow/concurrency/wallet/UI proof; old R5 deployment is historical.\n\nMETHOD: offline pinned source/local synthetic tests. Optional <=5 anonymous GETs, >=5s apart: https://imdember.com/, record-listed index JS, InteriorView JS, CSS, /api/auth/session. No cookies/credentials; record UTC/status/hash/headers; stop on denial, no bypass. No live login/signature/POST/PUT, transactions, scan/fuzz/flood, D1 changes or deploy. Local synthetic POST/PUT allowed.\n\nREQUIRED FOUR-LOW RETESTS, each with original counterexample and before/after/control:\nLOW-1 (R4-02/AUD4-06): A verify committed but recovery uncertain; shared jar now holds B/newer A plus pending flow. Account/provider switch must preserve them. Automatic cleanup uses retained nonce, otherwise displayed expectedAddress; no assertion means no automatic logout. Test stale A/failed read/switch C, pending-only replacement, pruned original and delayed same-address/expiry session. Session revocation needs token+nonce; address fallback needs live matching cookie and derives original flow. Pending-only needs NO token + original flow cookie + exact pending/unexpired nonce; any token forbids fallback. Missing/forged/dead/mismatch changes no rows/cookies; both assertions 400. Explicit /logout {} retains current-cookie semantics.\nLOW-2 (R4-02/AUD4-06): teardown during uncertain recovery must execute conditional cleanup while JS can run. Test failed verify/read, UNKNOWN idle/repeated reads, switches, stop/restart and late body/204. Old lifetime cannot update new UI/channel/hint/timer or rearm expiry. Accepted PRESENT clears responsibility: normal stop must not revoke it; ABSENT permits one new flow. Preserve newer session/pending challenge without cross-token revocation.\nLOW-3 (R4-02/AUD4-06/CORR-02): confirm only signedIn===false (optional boolean expired), or signedIn===true + valid address + positive safe-integer expiresAt. Missing/null/array/wrong type/bad address/expiry/NaN/infinity/truncated JSON and 429/503/network/timeout rejection stay UNKNOWN. Next click GETs first; one prompt/session while unknown. PRESENT restores without prompt; ABSENT permits one flow. Synthetic timeout rejection is not an auth deadline.\nLOW-4 (R4-08/AUD4-08): serverTime + monotonic performance.now() replaces Date.now(). Independent clocks: backward/forward wall jumps, early/late callbacks. Deadline GETs profile; only valid server confirmation unlocks. Failure stays cooling, positive 60s retry. Stop/switch/stale callback/response cannot affect new account. Simulated throttling is not real browser/OS suspension proof.\n\nR5-01..09 MATRIX (not nine findings): 01 account-switch preservation; 02 provider-switch session/challenge; 03 teardown cleanup; 04 malformed UNKNOWN; 05 invalid positive schema UNKNOWN; 06 GET before personal_sign; 07 no duplicate session/prompt; 08 backward clock; 09 timer server reconcile. Map Low/code/test file:line/outcome/gaps/verdict; separate four-Low closure matrix.\n\nREGRESSIONS: R4-01 display A/cookie B logout-all stays 409 before revocation; expectedAddress is assertion, cookie authority. Matching/absent/forged/expired cases must avoid false all-device success. R3-R1/AUD3/N/ADV/Enter/Home; M1-R2 old GET/new PUT version; atomic five-attempt quota, no-op/idempotency, bounded retention/probe cleanup, uncertain-save timeout/retry. Stored SIWE equality; house authority = session address + Ethereum mainnet ownerOf/eligibility, never names/roster/publicMemberId. Only eth_accounts, eth_requestAccounts, exact server-SIWE personal_sign. No Mint/Solidity/E1/0007/rewards/transactions/approval/Permit/typed-data/batching/delegation.\n\nKEEP LIMITS: R4-03 smart-wallet write policy partly; R4-09 availability partly; AUD3-05 partly; AUD3-09 review-limit. No A token after B replaces it means nonce cannot revoke A; A may live until authorized logout/expiry. Address-only fallback cannot distinguish same-wallet renewal. Already emitted old Set-Cookie clear may arrive after a new cookie; new session row is not revoked, readback withdraws stale owner. Cleanup is best effort in running JS, not guaranteed after termination/offline. Auth fetch still has no new bounded deadline. Production D1/bindings/WAF/limiter/upstream, real wallet/browser and withheld content are unknown unless actually checked.\n\nOUTPUT: independent four-Low verdict, R5 matrix, regression gaps: fixed locally/partly/open/unknown. Each issue: severity/blocking/prior ID, pinned file:line, preconditions/impact, reproduction/argument, event/time order, prompts/cookies, created/live/revoked sessions, pending/used/invalidated challenges, UI/channel/timers (explain N/A). Separate reviewer measurements, team logs/claims, inference, unavailable checks; record commands/failures/skips/shims. Seek any-severity regressions, not a no-Critical guarantee. Tests, Low labels or Completed/accepted do not certify approval/fund safety.",
+  "publisherVersion": "0.1.0+6698e07d",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "445747d6a4d4fb6fa4eaa9c67b74e3e2bd9c1703",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
