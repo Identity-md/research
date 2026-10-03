@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "2fb8c6828c1539ac742d4e209cd7fc14639689665aff32666bd301cb40bc879d",
+  "artifacts": [
+    {
+      "bytes": 20930,
+      "hash": "4e0e94bcead4667c26cfb2b3cbad0173a5c0cd565658fd3fd9fceb03224c8e82",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2b938e1f7eb7c16386130e695afdc487f782faba963900115cbf56fb54917305"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "19ed076a8c002c034a98274d951239069f8cdf1ce40d6f166faa0fa1249abfde",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "2b938e1f7eb7c16386130e695afdc487f782faba963900115cbf56fb54917305",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ef84cc5f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a48a820c-63db-4456-bbec-16de1342d2be",
+  "objective": "Research request: evaluate feasibility and design of an NFT fee-sharing token for Swarm Pepes, to be built by the IMD swarm itself.\n\nCONTEXT\nSwarm Pepes is a fully onchain NFT collection on Ethereum mainnet (contract 0x999ce0ce8c5f7661e0c74a568ffe27ceb9177bdb, max supply 5000, no transfer hooks, standard ERC-721). We want to launch a new ERC-20 token whose trading fees flow to Swarm Pepe NFTs.\n\nPROPOSED DESIGN\n1. Token: launched from zero with single-sided liquidity (token only, range above current price). ETH comes from the first buyers. One pool only, so routers cannot bypass the hook.\n2. Uniswap v4 hook: takes 2.5% on every buy and every sell, always collected in ETH (input side on buys, output side on sells). All collected ETH goes to a distributor contract.\n3. Anti-sniper launch fee: at launch the fee starts high and decays by 1 percentage point per minute until it reaches 2.5%. Fees collected during this phase also go to the distributor (snipers pay the pepes).\n4. Distributor: ETH accrues per tokenId (not per holder) using an accumulator, no loops:\n   accEthPerNft += newEth / activeCount\n   pending(id) = accEthPerNft - debt[id]\n   activeCount = minted NFTs minus NFTs currently in auction. Accrued ETH travels with the NFT on normal transfers.\n5. Exit: a holder hands the NFT to the contract and instantly receives all ETH accrued on it. activeCount decreases.\n6. Auction: the contract immediately lists that NFT in a Dutch auction priced in the new token. Start price = 10x the last auction sale price (self-calibrating, no oracle). Non-linear decay over 24-48h, floor at zero, always sells. 100% of auction proceeds are burned. The buyer gets the NFT with zero accrual. activeCount increases.\n7. Creator share: a basis-point cut of incoming ETH, with a hard cap in code.\nTarget chain: Ethereum mainnet (same chain as the NFTs).\n\nQUESTIONS (answer each by number)\n1. Can the swarm build, test and audit all contracts for this (token, v4 hook, distributor with exit, Dutch auction)? What parts are hard or risky?\n2. Is the 2.5% fee in ETH on both sides (buy input, sell output) cleanly implementable in a v4 hook? Any routing/aggregator issues or ways to bypass the hook?\n3. Anti-sniper decay: what start value and decay curve do you recommend (we proposed -1% per minute)? Is per-minute decay safe against block timestamp games and MEV bundles?\n4. Distributor math: any precision, rounding or griefing issues with the accumulator and a changing activeCount (exits and auction buys)? Edge cases when activeCount is very small?\n5. Auction: is \"start at 10x last sale price, decay to zero, burn 100% of proceeds\" sound? What happens on the very first auction, and can it be manipulated by a wash sale?\n6. Exit + auction loop: can someone farm the system (e.g. buy NFT, exit, rebuy from auction cheaply, repeat)? Recommend guards if needed.\n7. Gas: estimated cost per swap with the hook and per exit on mainnet. Is mainnet viable, or what would you change?\n8. Overall: would you build it as described? List the top 3 changes you'd make, and any legal/disclosure notes about the creator fee.\n\nDELIVERABLE\nA concise report with a yes/no feasibility verdict, answers 1-8, a risk list, and a suggested parameter set. No deployment, research only.",
+  "publisherVersion": "0.1.0+ae69e4ec",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
