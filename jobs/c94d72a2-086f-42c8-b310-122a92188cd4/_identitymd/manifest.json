@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7b83af9b746bd01d9344cfd7437b3928b32459adfd0c4a104c556d1d205c38fb",
+  "artifacts": [
+    {
+      "bytes": 13430,
+      "hash": "1f58a0d3926f0246c5798ae11d44db6a54af71dd38a9207df27712d66e2c4262",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "bf64a6004303fa49d841511004df112475c83ed547331b64fc3d1a6eb3a6d8ac"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1aabf616dd57561c931736c421930ce9a443d17eb20978857600eda74e0096ac",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "bf64a6004303fa49d841511004df112475c83ed547331b64fc3d1a6eb3a6d8ac",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ef84cc5f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c94d72a2-086f-42c8-b310-122a92188cd4",
+  "objective": "Research request: growth plan for Swarm Pepes.\n\nCONTEXT\nSwarm Pepes is a fully onchain pixel-art Pepe NFT collection on Ethereum mainnet (contract 0x999ce0ce8c5f7661e0c74a568ffe27ceb9177bdb). Max supply 5000, max 3 per wallet. Mint is free: allowlisted wallets mint by sending a 0 ETH transaction to the contract. The owner grants allowlist slots with grant(address[], uint256). Art is revealed onchain via a 27-hour reveal window; tokens that miss it stay \"ghosts\" forever. Rare traits: Gold skin (1%), Crown hat (3%). Royalties are 10% but not enforced. Website: swarmpepe.xyz. The collection is closely tied to the IMD swarm community: the allowlist so far went to IMD seat holders and wallets that paid for swarm jobs.\n\nQUESTIONS (answer each by number)\n1. Top 5 ideas to grow the collection: holder utility, onchain mechanics, partnerships, events. For each: what it is, effort, expected impact.\n2. Top 5 groups of wallets to add to the allowlist next. For each: why they fit, how to find them onchain (which contracts or events to read), rough wallet count, and any sybil/bot risk.\n3. Top 5 short video ideas (15-30s, vertical) in our existing style: retro 8-bit pixel art, dark background, neon green CRT glow, scanlines, chiptune. For each: one-line hook, beat-by-beat outline, ending text.\n\nDELIVERABLE\nA concise report with numbered answers 1-3, ranked best first within each list. Research only, no deployment.",
+  "publisherVersion": "0.1.0+ae69e4ec",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
