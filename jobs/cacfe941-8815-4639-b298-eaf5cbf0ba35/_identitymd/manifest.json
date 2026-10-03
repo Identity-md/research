@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "e95c36931b25f25f06d46d93e8b1f14aaafc728243bd82fd4421811ace80a4a7",
+  "artifacts": [
+    {
+      "bytes": 32669,
+      "hash": "5053a73b2817221f5e6c68dfc0f99538156c2f663ddca8b58c73b162f1548b44",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "cf557e2cf2f6c7aea17f9ef9970f76db38ddada884959a7ae6f994d5993a1d69"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a9662a76cb5f51d178c6d5ff9e9a5da33ad63feb5a9ef85547ee127dbf9fd6f",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "eea8e9b3724535500f0a740ec5192c977d0866577b0a8ef7e437725ab36cce51",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3ae91f8eef3fcfd655e0f187cdd7bb5f1aa9472fcefa5bff6dc94de75c58fe14",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0238a59bba7222372009ab205c0c51a5a37380b7e12f07c8a62b5f2a0dc30ae4",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d214358b6d8b5827af05a8a1ebd4dec2588ba511bfba4b013c816020642cce02",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f91b58cf7cd2d45e4d1e4594b1da9cc601a40bc07fa1e52580901572c5b342c",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "cb4e73fce015515b118a0cf301c73ca9a17a62effe0d211566ee950d12c84edc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "cf557e2cf2f6c7aea17f9ef9970f76db38ddada884959a7ae6f994d5993a1d69",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "cacfe941-8815-4639-b298-eaf5cbf0ba35",
+  "objective": "Audit request: PepesFamily wallet safety (website, repository, claim flow)\n\nRepository: https://github.com/0xtenang/PepesFamily (branch main)\nLive site: https://pepesfamily.fun, deployed from web/ on main via Vercel\nChain: Robinhood Chain (chain ID 4663)\n\nBackground\nHolders earn rewards in IMD or ETH from a 3% fee on every trade and withdraw them with claim(). Many holders don't claim because they're afraid that connecting a wallet to the site, or claiming, could drain it. We want an independent check of whether that's possible, and a clear answer we can share with the community.\n\nThe main question\nCan anything on pepesfamily.fun, or in the contracts it calls, take funds or tokens from a holder's wallet beyond what the holder knowingly approves in a single action?\n\n1. Website (web/index.html, one file)\nPlease list every request the site makes to a wallet, and confirm for each one:\n\nwhat the user is asked to sign;\nwhich contract it goes to;\nhow much it can spend, and whether the amount is exact or unlimited;\nwhether it could be abused later.\nThe requests we know of:\n\nAction\tWallet request\tWhat to check\nConnect\teth_requestAccounts, wallet_switchEthereumChain, wallet_addEthereumChain\tNo signatures and no approvals. EIP-6963 wallet picker.\nClaim rewards (token page and #/rewards)\tclaim() to the token contract, 0 ETH\tNo approval of any kind; rewards go only to the signer.\nBuy with ETH\tbuy / buyWithEth on our routers, with ETH value equal to the amount typed\tThe value sent equals the amount shown.\nBuy with IMD\tapprove(router, amount) on IMD, then buy\tThe approval is for the exact amount, never unlimited.\nSell (v2 and v3 tokens)\tEIP-2612 Permit signature (signTypedData), with an approval fallback\tSpender is our router, value is the exact amount, deadline is 10 minutes.\nSell (v1 tokens such as Pepes)\tsell on the v1 router, no approval\tSee the router exemption in section 2.\nLaunch\tlaunch on the router, with optional ETH value\t\nAdmin page\tcollectProtocolFees, flush, distribute\tFunds can only go to the fixed fee address or to holders, whoever signs.\nPlease also check:\n\nThe page never requests eth_sign, personal_sign, unlimited approvals, setApprovalForAll, Permit2, or any signature beyond those listed above.\nSupply chain: the only external script is ethers 6.13.4 from cdnjs, pinned with a Subresource Integrity hash. There are no other scripts, trackers or analytics.\nContent Security Policy:\nin the page: script-src allows only 'unsafe-inline' and cdnjs; connect-src https:;\nin web/vercel.json: frame-ancestors 'none', plus HSTS, nosniff and no-referrer.\nIs anything too permissive? For example, could 'unsafe-inline' or connect-src https: be abused?\nInjection through user content: token names, symbols, descriptions, image links and social links are written by token creators and stored on-chain. Confirm they're always escaped (esc()), that links are limited to https:// and ipfs:// (safeUrl, ipfsPath), and that no inline event handlers are used.\nAddress and contract integrity: all contract addresses are hard-coded in CONFIG at the top of the file. Can a visitor be tricked into sending a transaction to a different contract, for example through URL parameters (#/t/<address>, #/rewards/<address>) or a fake token page?\nClickjacking: confirm the site can't be framed by another site.\n2. Contracts a holder touches\nPaths are in contracts/src/:\n\nclaim() in PadToken.sol (v3), v2/PadTokenV2.sol and v1/PadTokenV1.sol: confirm it can only pay the caller, can't move the caller's tokens, and can't be used by anyone else to take a holder's rewards.\nv1 router exemption: in v1/PadTokenV1.sol, transferFrom lets the v1 router move tokens without an allowance, so selling takes one step. Confirm the router (PepesFamilyRouter, v1 at 0xA73604EA3C393B47573986ff9Ce5A9EAb61883dC) can only ever pull tokens from its own caller, and that no function or sequence lets one user move another user's tokens.\nRouters (PepesFamilyRouter.sol, PepesFamilyEthRouter.sol): confirm no function can pull a user's tokens or IMD beyond the allowance or permit that user gave for that trade, and that leftover approvals can't be used by anyone else.\nAdmin powers: confirm the owner can't move holder funds, change balances, or redirect rewards in any version.\n3. GitHub repository and deployment\n\nWhat could an attacker change? Anyone who can push to main changes the live site automatically. Please describe the risk, and what protections you'd recommend: branch protection, required reviews, signed commits, 2FA, Vercel settings.\nThe workflow .github/workflows/verify-tokens.yml runs every 15 minutes with permissions: contents: read and runs contracts/script/verify-tokens.sh. Confirm it can't be used to modify the repository or leak secrets.\nSubmodules: forge-std and v4-core are pinned to fixed commits.\nDeployed contracts (all source-verified)\n\nv3: launchpad 0xC5a1f48C03635b83D79667463785bC2c6BcE28cC, router 0x8A9b6A990d13f25F6393aCacfB013F980c763a27, ETH router 0x891B710b36D0bDb1D6B53CB979696EbE43c2d129\nv2: launchpad 0x072Fb5A1B65F30d59BcD11BEeD99803675bCE8CC, router 0x85D6695CBE0BaF221a4BBd39F0b368B893e70D4b, ETH router 0xce3540Bf1D4b219B7B2055508A83B09A0e1df9eF\nv1: launchpad 0x2d7689E48Fd71D9A0f225C673D7b8F8A693368CC, router 0xA73604EA3C393B47573986ff9Ce5A9EAb61883dC, ETH router 0x79eeE0C12C1284bc046e4494Eea6180695F5028A\nPepes token (v1): 0xE2C46c7068566740A33A4C93f5445B07BCfE5644\nWhat we'd like back\n\nA plain-language answer to the main question that we can share with holders: \"Can connecting or claiming drain a wallet? Yes or no, and why.\"\nEvery finding, with a severity and a suggested fix.\nA list of exactly what a user should expect to see in their wallet for each action, so holders can check for themselves.",
+  "publisherVersion": "0.1.0+ae69e4ec",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "c726b0856d1ecb6250ea388fcf0f6b96a9b60a20",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
