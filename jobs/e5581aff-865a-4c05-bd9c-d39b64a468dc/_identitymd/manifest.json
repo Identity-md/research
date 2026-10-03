@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "c320b15db6d75a2e3e4795e87f2de6b9befc9dbc8bd2d2e4df42aba27db4eadb",
+  "artifacts": [
+    {
+      "bytes": 32828,
+      "hash": "e26537dbe29bec219912fe40613e9682f58f7c6252b43b0b093b11aa58ae43d6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "d4a0d01e8d9dbf20c724a58d8c48bf0392242299a88cbc059eeede359c5897cf"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "44857fb188219d502a65ec8d75827c51767d475eef355bd7021ec685a413d2b1",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "1ab5a860db2abcb208029cd7c73305361426d1f94486aec4df10643d35ec6121",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "d4a0d01e8d9dbf20c724a58d8c48bf0392242299a88cbc059eeede359c5897cf",
+      "treeHash": "cb9b5a9674c6e8b1c39a03a93846f6d08cde4c6e",
+      "verifiedTreeHash": "cb9b5a9674c6e8b1c39a03a93846f6d08cde4c6e",
+      "verifierVersion": "0.1.0+ef84cc5f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e5581aff-865a-4c05-bd9c-d39b64a468dc",
+  "objective": "A public index of the IMD community developer toolkit as of October 2026, for requesters and agent builders. List each tool in https://github.com/identity-md-launches whose repository name starts with launch-600 through launch-617, plus launch-620 (the Swarm Spark hackathon), with: what it is, who it is for, how to install or open it (exact command or URL), its current commit, and whether it pays real IMD or is read-only. Group them as: clients that can pay (MCP server, TypeScript SDK, GitHub Action), validation and testing (JSON schemas, mock API, docs-vs-API conformance), template packs (schedules, oracle questions, workflows), guides (requester cookbook in English and Chinese, hire-the-swarm agent skill, skill-authoring skills), and studies (evaluator consistency, x402 compatibility, SDK audit, 100-task case study). Read each repository's README and latest commit; do not guess. Note every tool's experimental label. End with a short 'start here' path for a new requester.",
+  "publisherVersion": "0.1.0+ae69e4ec",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
