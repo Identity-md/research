@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "c6cf647162cd62da223ca1f8c78e426bc772b49e4f22033a38b3bba92082193e",
+  "artifacts": [
+    {
+      "bytes": 27868,
+      "hash": "75c37c0a4d7c1c5306231aea27e9edd7066496b109a7c96b8381000c8f3b2b1b",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "2f104a270c5ce2a6c58113d932ea9285ae533d519cd891949f31184b82609996"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca080fd3063996699e20c7e6f185c60d7926b45bca9b079ae2d367ddad7a3eb9",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "00f999777a6f5c5f2fe5e83d7bee589b48260abe93d37bea0b884f6903597287",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "30a6c1a419ef4f9c0b7b9345d1843aaf4945ad583f614ed8027cb22761e6f96c",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "86f759b58dbd93417b9694424ed1b3b15005dfc6f01825cd0c1c93b90f784bf3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0256823ae36e790079c99eb46fcdaa245ca2fdeeb213e0b3a63c8e85afb04046",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "5bf562f9e8a4958db68136b43db8bb3823a8d1ee789765917fc1ca06314dca48",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7271bd2428d32750f0721b8bda912884722be77b5ba140b38c13e9fc43b6e405",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0238a59bba7222372009ab205c0c51a5a37380b7e12f07c8a62b5f2a0dc30ae4",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2f104a270c5ce2a6c58113d932ea9285ae533d519cd891949f31184b82609996",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e6eda4d8-f50d-47cd-9464-9a272283ccd3",
+  "objective": "Audit request: Pepes Earn IMD (NFT collection with IMD holder rewards)\n\nRepository: https://github.com/0xtenang/PepesFamily\nCommit: 9c00fa216b38dda7b6a05936d47468d19637e586\nChain: Robinhood Chain (chain ID 4663), Uniswap v4\nStatus: not deployed yet; this audit is before deployment\n\nScope (new code)\n\ncontracts/src/earn/PepesEarnIMD.sol: pool owner and Uniswap v4 hook\ncontracts/src/earn/PepesEarnToken.sol: $EARN, a DN404 base token with holder rewards, 30-day expiry and $Pepes buyback\ncontracts/src/earn/PepesEarnMirror.sol: the ERC-721 side (DN404 mirror) with an ERC-2981 royalty\ncontracts/src/earn/PepesEarnRenderer.sol and LibEarnString.sol: on-chain SVG art, JSON and Base64\nContext (already audited, reused unchanged): PepesFamilyRouter.sol, PepesFamilyEthRouter.sol, lib/SafeTransfer.sol, and the hook logic from PepesFamily.sol (v3). DN404 is the upstream library at contracts/lib/dn404, commit 3397cb1. Please review how we integrate with it, not DN404 itself.\n\nTests: contracts/test/PepesEarn.t.sol (22 tests) and contracts/test/PepesEarn.fork.t.sol, a mainnet-fork lifecycle test. Run the fork test with FORK_RPC=https://robinhood.drpc.org forge test --mc PepesEarnForkTest.\n\nWhat it does\n\nSupply: 2,000 $EARN tokens. Each whole token shows as one on-chain NFT (DN404). Wallets get NFTs; contracts don't. EIP-7702 delegated wallets count as wallets.\nPool: PepesEarnIMD.openPool(token) (owner, one-time) puts the whole supply into a $EARN/IMD Uniswap v4 pool as single-sided liquidity owned by the hook, which has no way to remove it.\nFee: every swap pays 4% of its IMD side, the same hook as PepesFamily v3: 1% to feeRecipient and 3% to $EARN holders pro rata. Holders claim manually with claim().\nMarketplaces: NFTs can be traded on marketplaces. The mirror reports a 4% ERC-2981 royalty paid to PepesEarnIMD in ETH. convertRoyalties(minOut) (owner) swaps it to IMD on the IMD/ETH pool and splits it 1% / 3% in the same way.\nExpiry: if a wallet neither claims nor moves any $EARN for 30 days, its unclaimed rewards expire, except what it earned during those 30 days. Anyone can call recycle(holder) to move expired rewards into buybackReserve.\nBuyback: the reserve can only be spent through buybackAndBurnPepes(imdIn, minOut, deadline) (owner), which buys $Pepes through the PepesFamily v1 router and sends all of it to 0x…dEaD.\nNo owner on the token: owner() returns address(0). DN404's default infinite Permit2 allowance is disabled.\nTrust model (please confirm or break)\n\nThe PepesEarnIMD owner can only:\nchange feeRecipient;\ntransfer ownership (two-step);\nopen the pool once;\nconvert royalties, choosing the minimum output;\ntime buybacks, choosing the minimum output.\nThe owner must never be able to take holders' tokens, rewards, the buyback reserve, the pool liquidity, or royalty IMD meant for holders, or change fees.\nNobody but a holder can claim that holder's rewards. Recycling can only move rewards that have expired, and only into the reserve.\nPlease look hardest at\n\nDN404 integration with reward accounting. Rewards are updated in _moved(), called after _transfer (ERC-20 side) and _transferFromNFT (NFT side, which changes balances directly).\nIs any other path able to change balances without updating corrections, eligibleSupply or lastActive? Consider mirror operations, setSkipNFT, initialisation, and transfers to and from excluded addresses.\nCan any sequence make eligibleSupply or the corrections inconsistent, or let rewards be claimed twice?\nExpiry maths (expiredRewardsOf, recycle, magAt, _checkpoint).\nThe design assumes a holder's balance is unchanged since lastActive, because every balance change updates it. Can that assumption be broken?\nCan recycling ever take rewards earned in the last 30 days, or more than the holder's withdrawable amount? Check rounding: \"recent\" rounds up in the holder's favour.\nIs the checkpoint array (one entry per second with distributions, binary search) correct and safe from gas problems over years of use?\nAccepted by design: sending someone a dust amount resets their timer. That only delays expiry.\nAccounting invariant. The token's IMD balance should always be at least accountedBalance + buybackReserve, and distribute() must never hand out the reserve. Check every path: claim, recycle, buyback, royalties, donations, and the first buy before any holder exists.\nFlash-borrowed pool tokens (the v3 audit finding).\nWhile the PoolManager is unlocked, only the hook may distribute.\nflush mid-unlock only distributes when called by our routers.\nconvertRoyalties distributes inside the hook's own unlock. We believe no one else can hold borrowed $EARN there; please verify.\nBuyback and burn. Owner-only, limited to the reserve, approval reset to 0 afterwards, burned amount measured by balance difference, nonReentrant. The $Pepes token and v1 router addresses are fixed at deployment. Any way to misuse or redirect the reserve?\nRoyalty conversion. receive() accepts any ETH. Check the ETH settlement amount, the 1/4 vs 3/4 split, minOut, and whether stray ETH could break anything.\nHook and pool. It's a copy of v3 with a single token and openPool validation (the token's hook, routers, PoolManager and IMD must match, and the full supply must be held by the hook). Anything new compared with v3?\nNFT gas. Buying N whole tokens mints N NFTs in one transaction. Is there a buy or sell size, or a sequence, that runs out of gas or traps funds? Is the router path (transferFrom and take with DN404) safe?\nThe _skipNFTDefault override: the EIP-7702 check (code.length == 23 && bytes3(code) == 0xef0100). Any address type it misclassifies in a harmful way?\nRenderer. tokenURI gas is about 2.8M typical and about 9M maximum. There's no user input, so no injection. Please confirm the Base64 assembly is memory-safe.\nKnown and accepted (no need to report unless you see more impact)\n\nPartial fill: the hook charges 4% of the requested amount when a third-party swap with a tight price limit only partly fills (same as v3, medium finding). Our routers always fill fully.\nFirst-buy rebate: the first buyer's own 3% waits in the token and goes to whoever holds at the next distribution, which can be that buyer (same as v3, info).\nOptional royalties: marketplace royalties depend on the marketplace; only pool trades are guaranteed to pay 4%.\nNo editable OpenSea collection page: owner() is zero on the token and mirror, so nobody can claim the collection page on OpenSea. This is intentional.\nPlanned deployment parameters\n\nPoolManager 0x8366a39CC670B4001A1121B8F6A443A643e40951\nIMD 0x5F7Bb59365ce557C26dbcAa4EE9d39A4b95B7127\nIMD/ETH pool: fee 10000, tick spacing 100, no hooks\nStarting market cap: about 2,000 IMD (1 IMD per NFT)\n$Pepes 0xE2C46c7068566740A33A4C93f5445B07BCfE5644\nPepesFamily v1 router 0xA73604EA3C393B47573986ff9Ce5A9EAb61883dC\nFee recipient and owner: 0x3c8A4d94B3219F6633F2cC94094f4765b30c691C\nWhat we'd like back\n\nA plain-language answer: Can anyone, including the owner, take holders' NFTs, tokens or rewards? Can the expiry ever take rewards earned in the last 30 days?\nAll findings with severity, a reproduction and a suggested fix.\nAnything that should change before deployment, since the contracts can't be changed afterwards.",
+  "publisherVersion": "0.1.0+8df7996c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "9c00fa216b38dda7b6a05936d47468d19637e586",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
