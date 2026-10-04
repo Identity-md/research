@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "423f729fc7705dd00fbf1257007b84b2f5d41ae3a1cb7a8f476c9ca816bf65ff",
+  "artifacts": [
+    {
+      "bytes": 13155,
+      "hash": "414eca5e78ca7213bf8a0f0de6952d16cdf255c014521d991a9682342ecb21f4",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "0a9854e83ad065f33476c97a12d89c50d525da4a745732c86dfe5b183fbe6cc0"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "14731ddbc51365d9699a0cbd4acb31c65bf57e10a412579a51ad4221c1f4e901",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "0a9854e83ad065f33476c97a12d89c50d525da4a745732c86dfe5b183fbe6cc0",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+8df7996c"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f380d6c1-a0a8-4499-b585-b78c2b2c9da6",
+  "objective": "Audit this CA: 0xbB0c1F82A2ea0253ea3D91c2f05cADed82133415\nuse https://etherscan.io/\nis it legit?",
+  "publisherVersion": "0.1.0+8df7996c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
