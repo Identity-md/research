@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "ef8e80bf4f22ae3bd8f4041f4d9d49e6f80d3cddd300c80f0b56a59054ff1471",
+  "artifacts": [
+    {
+      "bytes": 15347,
+      "hash": "4f46663b677fd1ac11959b37db1a2407afc777c6d458bbcafaf7d655b0fb6450",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "e42474cbcb5c03e482f211ff3c8766af2586ea2047053abef5b6a8571f36ab49"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca080fd3063996699e20c7e6f185c60d7926b45bca9b079ae2d367ddad7a3eb9",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ac1c05c36202858e9d871ebcf7840ee88cb5450339fa48493bff9f76b9817cad",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0238a59bba7222372009ab205c0c51a5a37380b7e12f07c8a62b5f2a0dc30ae4",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "342187b549d98f13d312e41ecd8c5fc157f3be9ec7e3d25f5231f072e8ef8e6e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5b55e4db0411372b7d13369f4e891e3d018dbda3a363d58cb273ed7b2457c75a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9416d28ab9df6dba14bd8bc6c8765381e757895edc6e1e18e90d14ddcbdcca86",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5739ce0d803a43cdf1c1f07f89068041652b5527d38c46f74bacb730a95973e7",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e42474cbcb5c03e482f211ff3c8766af2586ea2047053abef5b6a8571f36ab49",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a58eb2c6-bfc3-441e-86d8-432c2ab15114",
+  "objective": "Final check: Pepes Earn IMD. Repository https://github.com/0xtenang/PepesFamily, commit b686e0e2e0735d794da97378da595ea232b99773, scope contracts/src/earn/. Your re-check (https://explorer.imd.fun/jobs/f6d3cd0e-8371-417b-80d6-7b99fc9efa0c) at 7bb7a90 found 1 high, 2 low and 2 info. Changes since:\n\nRoyalty conversion removed entirely. The ERC-2981 royalty is 1% to PepesEarnIMD.feeRecipient() (read live by the mirror). The hook holds and swaps nothing and has no receive(). This addresses the high, low 3 and info 4–5.\nLow 2: in _moved, the recipient's lastActive is only set for buys (from an excluded address), transfers it initiated (actor == to), or a first-time holder.\nPlease confirm these are fixed and check for any new issues, especially in _moved (expiry correctness when an incoming transfer isn't recorded) and in buybackAndBurnPepes / maxBuyback. Tests: contracts/test/PepesEarn.t.sol, and the fork test FORK_RPC=https://robinhood.drpc.org forge test --mc PepesEarnForkTest.",
+  "publisherVersion": "0.1.0+8df7996c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "b686e0e2e0735d794da97378da595ea232b99773",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
