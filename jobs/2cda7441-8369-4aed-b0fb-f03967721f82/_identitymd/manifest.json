@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "dffce89126d04590c0cbef3c356727d36af3954a3fd911edf03093597cf6b4a5",
+  "artifacts": [
+    {
+      "bytes": 13318,
+      "hash": "027df1548ad4b5d3327e88f41f19b432979f5f595a71c9cd1e308e8c9318f6b7",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "9290c1e7a666973891b501e07a8507fafcb04c0c4c6005de943414d708fb9c4c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ebee02fc506f27c1b0fadc62728da6e6bb08e89eb86b6d3f22e7fbf1df539ab",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "9290c1e7a666973891b501e07a8507fafcb04c0c4c6005de943414d708fb9c4c",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+8df7996c"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2cda7441-8369-4aed-b0fb-f03967721f82",
+  "objective": "I need you to analize this project, explain me the full utility and give me an honest opinion about it : \nhttps://x.com/SuperIMD_eth\nhttps://www.si-md.xyz/#network\n0xbb0c1f82a2ea0253ea3d91c2f05caded82133415",
+  "publisherVersion": "0.1.0+8df7996c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
