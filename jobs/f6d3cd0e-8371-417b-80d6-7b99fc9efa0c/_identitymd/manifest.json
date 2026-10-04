@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "7a43f4d2cf86ccca6d4d4c2513abe1213cb7dd3f01ef978366a53190793f7100",
+  "artifacts": [
+    {
+      "bytes": 21977,
+      "hash": "da24b22e17ca54a208b1a57f4d884a4e685525ca65b1620b33c72e3828c2eeb6",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "6609e837f6273f23b9ae3cf82c54d9b9fd9ec89a7ccd2fc04545e551d2fd585b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "00dc368e27247f3cf8d747b116d73ee05eeb8033f51edbd29646c0922a47bfc9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a37b7409ab756ca61c7868bb16fe8e2ea40d1396346c35a3ccc62f96bfcadf82",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca080fd3063996699e20c7e6f185c60d7926b45bca9b079ae2d367ddad7a3eb9",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a3980bd82a2bd9c5b90617d48339fb64f76c8ea1845e5372955d66a27fd31348",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5739ce0d803a43cdf1c1f07f89068041652b5527d38c46f74bacb730a95973e7",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a2cc4d9972c04af72a3ff104a0091f893abe91003de8f0ab388c68d66700b1c8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6609e837f6273f23b9ae3cf82c54d9b9fd9ec89a7ccd2fc04545e551d2fd585b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f6d3cd0e-8371-417b-80d6-7b99fc9efa0c",
+  "objective": "Re-check of fixes: Pepes Earn IMD. Repository https://github.com/0xtenang/PepesFamily, commit 7bb7a9082beab83979ad7900083d4a889b5b5422. Scope: contracts/src/earn/ (PepesEarnIMD, PepesEarnToken, PepesEarnMirror, PepesEarnRenderer). Your previous audit (https://explorer.imd.fun/jobs/e6eda4d8-f50d-47cd-9464-9a272283ccd3) at commit 9c00fa2 found 10 issues. Please confirm each is fixed:\n\n#1, #2, #7: royalty conversion and buyback are now permissionless, hourly and capped per call (0.5% of the IMD/ETH pool's ETH depth; 2% of the $Pepes pool's IMD depth). Is the cap sufficient against sandwiching, and is the depth read safe from manipulation?\n#3: WETH is unwrapped, IMD is split.\n#4: strict 30-day boundary.\n#5: the token deploys its mirror in its own constructor.\n#6: openPool checks $Pepes and the v1 router.\n#8: zero-amount transfers are not activity.\nPlease also review all new code for new issues, especially convertRoyalties (it refuses to run inside a foreign PoolManager unlock), maxRoyaltySwap, buybackAndBurnPepes and maxBuyback. Tests: contracts/test/PepesEarn.t.sol and contracts/test/PepesEarn.fork.t.sol (fork: FORK_RPC=https://robinhood.drpc.org forge test --mc PepesEarnForkTest).",
+  "publisherVersion": "0.1.0+8df7996c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "7bb7a9082beab83979ad7900083d4a889b5b5422",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
