@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "28f49c73f83f58fe1879d7b26f73294896b3ec4ab08ca58fa26583aab30cca9c",
+  "artifacts": [
+    {
+      "bytes": 16188,
+      "hash": "bc58305a29afb0e372be55e38f51c054d19e8987403bf9624edd15b04f3badbc",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "396c023dfc07c242302d84d73ea72f61c07700cd94e694283e5a880bf8d64684"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4d50dea083421d70a5de9dd7469ec00e9d3b65ae9a4ed188e244b6dbd191550a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "396c023dfc07c242302d84d73ea72f61c07700cd94e694283e5a880bf8d64684",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+8df7996c"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "347ea19a-7d70-407f-b793-59b85a15f3d5",
+  "objective": "Research and produce a concise, technically accurate guide to ERC-8004 for developers building or integrating Ethereum-based AI agents.\n\nAnswer the following question: What is ERC-8004, what problem does it solve, and how can a developer practically use its identity and reputation mechanisms when building an AI-agent application?\n\nCover:\n\nWhat ERC-8004 is designed to solve.\nHow agent identities are registered, discovered, and resolved.\nHow reputation and feedback mechanisms work.\nHow a user or application can verify an agent's identity and reputation.\nA practical example of how ERC-8004 could be used.\nRelevant contracts, interfaces, tools, and implementation examples.\nCurrent limitations, security considerations, trade-offs, and open questions.\n\nUse primarily authoritative and primary sources, including the official ERC-8004 specification, Ethereum/EIP documentation, official repositories, and relevant implementation documentation.\n\nInclude direct links to all important sources used. Clearly distinguish between what is defined by the ERC-8004 specification and features specific to individual implementations.\n\nOutput the result as a well-structured research document with its sources. Keep it concise and practical rather than producing an exhaustive academic paper.",
+  "publisherVersion": "0.1.0+8df7996c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
