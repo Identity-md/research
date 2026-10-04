@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "e81d10b0dac3a423ad4023e0669d9c7717f5713b517885f2095eb8148b8d5a00",
+  "artifacts": [
+    {
+      "bytes": 37332,
+      "hash": "c15eb0cc7b0c696a1ffca5e62796c0ec83b05314296573a28529b07a3bc26215",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "f0e9d4684854101c5f3681c553bb99738056393248d486877ffb343804541182"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca080fd3063996699e20c7e6f185c60d7926b45bca9b079ae2d367ddad7a3eb9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2137fbb3a1378331f3f3032735555d29b7617bcf3121df2e1fa4a717d415cf11",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "30a6c1a419ef4f9c0b7b9345d1843aaf4945ad583f614ed8027cb22761e6f96c",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9fa9133898f76e149df286c4aa373177e86e04fbbadc59a8270c859c940b527d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0238a59bba7222372009ab205c0c51a5a37380b7e12f07c8a62b5f2a0dc30ae4",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "dfd88b1eb021a04128bd55ad10f941978b8791fdd8a5cacc43603e518fee67d6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72b617d4b615473ad3b763b0e3d0fbbe45ab980941c095e9f4ea11e135554beb",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3c5abe43df78d055a28e804947b55800192cf8b17b4d1aeed976e3bd02cb9c87",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f91b58cf7cd2d45e4d1e4594b1da9cc601a40bc07fa1e52580901572c5b342c",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f0e9d4684854101c5f3681c553bb99738056393248d486877ffb343804541182",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2abde7c7-c84a-4a64-a693-f83754bccd91",
+  "objective": "IMD Ember World: post-remediation independent Audit of the sixth-round results (package R7).\n\nSUBJECT: unofficial TypeScript Cloudflare Worker/React World/Auth/Member M1. NO Solidity; inspect TypeScript/SQL/lifecycle, not invented contracts. If unsupported, report unsupported/unknown. M1 persists public profiles; World is not wholly read-only.\n\nPIN: https://github.com/tungweb3/imd-ember-world-review/tree/c4f451b015abdaced6c35a717b29f5bb1cb351c0 ; parent445747d6a4d4fb6fa4eaa9c67b74e3e2bd9c1703. Review immutable commit. Auth ff6bed81 and deployed e48a94f have identical supplied scope; exact IDs in R7. Private history, models/3D/textures/media/full scene/WorldApp and unrelated avatar/selfie UI/tests withheld; do not request or publish them.\n\nREAD: README; R7/PRIOR_REVIEWS.md, AUTH_REMEDIATION.md, TEST_RESULTS.md, PUBLIC_SOURCE_VALIDATION.json, BUILD_EVIDENCE.md, PRODUCTION_DEPLOYMENT.json, PUBLIC_CONTENT.md; manifests/r7-published-source.json, SHA256SUMS; source/docs/security/AUTH_STATE_MACHINE.md. R5/R6 and earlier source/docs/security remediation records remain historical controls, not new verdicts.\n\nORIGINALS: previous sixth Audit 09062f1d-1a0b-49cb-af81-e55978798576 and Report 816968c0-8ff9-40a9-8e08-0e0bc4f2aef1 reviewed parent445747d. Acquire official originals via R7/PRIOR_REVIEWS.md and verify listed SHA256. Audit: https://github.com/Identity-md/research/blob/main/jobs/09062f1d-1a0b-49cb-af81-e55978798576/files/AUDIT.md . Report: https://github.com/Identity-md/research/blob/main/jobs/816968c0-8ff9-40a9-8e08-0e0bc4f2aef1/files/artifacts/report.md . Four Low + cache Info require new independent closure. Report R6-I1 duplicates Audit #2: count once. Audit #6 is a verdict matrix, not a sixth defect.\n\nPUBLIC:111 source files:95 exact,16 redacted/57 lines. Actual386/386, zero failures/skips,11 files/no scene stubs; command/UTC in PUBLIC_SOURCE_VALIDATION.json. Real Worker/SQL over node:sqlite, synthetic EOA/SIWE/provider/cookies/clocks. Public tsc exit2/16 missing-dependency diagnostics; full frontend withheld/unbuilt. First Worker compile denied; retry exit0, raw314508B/SHA256 afd82f506aceb57ca85ce44ff6c7e65146546d383ae2e2b2b7feca72bd23e92a. Exact hash depends on recorded same-depth junction/lock; empty ASSETS fixture is not frontend. Preserve failures, no bundle normalization or geometry stubs.\n\nTEAM (not reviewer/public execution): private Auth1357/1357, deployed1392/1392/TSC/Vite/pipeline pass. Same-evaluator lifecycle33/55->55/55, server/cache26/40->40/40, model79/79. Record20261004T031821Z-e48a94f; Worker6c505065-798d-4890-b7c7-0c6063d1ae9b,100% checked, UTC2026-10-04T03:20:14.463Z. Five anonymous GETs/four static hashes/24 headers/three anonymous views passed; session200/signedIn:false/no-store/no Set-Cookie. No new migration/config/header change. Deployment match partial, not Auth/wallet/D1/full-feature proof.\n\nMETHOD: offline pinned source/local synthetic tests; auth-r7-fixtures.mjs, independent controller AND real AuthClient. Optional <=2 anonymous GETs >=5s apart, only https://imdember.com/ and /api/auth/session; no cookies, record UTC/status/headers/hash, stop on denial. No live login/signature/writes/scan/fuzz/transactions/D1 changes/deploy or omitted asset downloads. Local synthetic POST/PUT allowed.\n\nRETEST ORIGINAL COUNTEREXAMPLES + BEFORE/AFTER + CONTROLS:\n1 Audit#1 Low (original46-68, priorLOW-2/R4-02/AUD4-06): committed malformed verify -> trusted PRESENT -> held home -> stop -> late home. Terminal RELEASED BEFORE home wait: accepted row/cookie survive, no abandoned logout/post-stop UI/channel/timer write. Test valid-body control, lifetimes/late callbacks; separate expectedAddress context cleanup from revival of verify owner.\n2 Audit#2 Low (70-93), Report R6-I1 Info (113-121): dead token+own nonce refuses, no row/challenge/cookie changes; held reply after newerB/A2+pending. Require live token+nonce, revoked_at IS NULL, expires_at>now. Test missing/empty/forged/malformed/mismatch, retained/pruned challenge, live controls. ANY token forbids pending-only fallback; no-token requires original flow cookie+exact pending/unexpired nonce. Both assertions refuse; user /logout {} stays current-cookie. Separate already-live-authorized late Set-Cookie race remains.\n3 Audit#3 Low (95-117, priorLOW-2): pre-commit ABSENT generated during verify -> headers/body stalled -> stale read delivered -> stop. Retain owner, no stale knowledge overwrite/lost cleanup. Fence=latest sessionReadSeq at RESPONSE/TRANSPORT OBSERVATION, not VERIFY_START; only causally later trusted PRESENT/ABSENT releases. Old PRESENT/ABSENT after new PRESENT ignored; malformed/network/429/503 stay UNKNOWN. One owner/in-flight attempt; EARLY-dispatched refusal delivered after fence retains owner and drains one later attempt. Test late body/204, stop/restart/old listeners; terminal RELEASED/CONSUMED never revives.\n4 Audit#4 Low (119-139, priorN-2/R3-R1/ADV): held preflight clickA -> accountB -> late read. Account/provider/gen/lifetime click lease prevents B challenge/prompt/verify. Test provider/lock/stop/restart, challenge/signature stage changes, same-account and event-free initial-connect controls. Fresh explicit click recovers; UNKNOWN never signs.\n5 Audit#5 Info (141-155): publicName AND lookupName negative age expires. Test backward/repeated jumps, zero/positive/exact TTL, pending/debounced/close-before-delay/failure/fresh controls. Names never authorize; distinct from monotonic rename cooldown.\n\nREGRESSIONS/MATRICES: independent original sixth#1-5 verdict plus prior fifth four-Low closure; retain R5-01..09 (not nine defects):01 account switch,02 provider/session/challenge,03 teardown,04 malformed UNKNOWN,05 invalid positive schema,06 GET-before-sign,07 no duplicate prompt/session,08 backward clock,09 server cooldown reconcile. Positive session requires valid address+positive safe-integer expiresAt; absence signedIn===false with optional boolean expired. Member cooldown uses serverTime+performance.now; failure remains cooling/positive60s retry; stale timer/read cannot unlock new context. R4-01 displayA/cookieB logout-all409 before revocation; stored SIWE equality, M1 old GET/new PUT version, atomic5-attempt quota, no-op/idempotency, bounded retention/probe cleanup, uncertain-save retry/expiry. House authority=session address+Ethereum-mainnet ownerOf/eligibility, never name/roster/publicMemberId.\n\nLIMITS: R4-03 smart-wallet write policy partly; R4-09 availability partly; AUD3-05 partly; AUD3-09 review-limit. No added bounded auth-fetch deadline. Cleanup requires running JS/delivery, best effort after offline/termination. Lost A token cannot revoke A after B replaces it; expectedAddress cannot distinguish same-wallet renewal. A live-authorized Set-Cookie clear may arrive late and remove newer browser cookie without revoking its row. Real browser/provider/OS, D1 races/cron, WAF/limiter/upstream and withheld frontend remain unknown. Only eth_accounts/eth_requestAccounts/exact SIWE personal_sign; no Solidity/Genesis Mint/CoinE1/0007/rewards/token transaction/approval/Permit/typed-data/batch/delegation.\n\nOUTPUT: fixed locally/partly/open/unknown per finding, fifth-four-Low and R5 matrices, and any new regressions. Each: severity/blocking/prior IDs, immutable file:line, preconditions/impact, reproducible command/argument, event/time order, prompt/cookie counts, created/live/revoked sessions, pending/used/invalidated challenges, UI/channel/timer/knowledge/cleanup ownership (N/A explained). Separate reviewer measurements, team claims, inference, unavailable checks; list failed/skipped/shimmed tests. Seek any-severity defects. Completed/accepted/test counts/Low labels are not certification, approval, zero vulnerabilities or fund-safety proof.",
+  "publisherVersion": "0.1.0+8df7996c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "c4f451b015abdaced6c35a717b29f5bb1cb351c0",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
