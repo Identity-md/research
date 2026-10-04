@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "223a6f96a6b42316d0eb9b8bb5668ab6493694e3e1546514922233148866ef37",
+  "artifacts": [
+    {
+      "bytes": 9940,
+      "hash": "ab7ad4d950fccf8324475b4b75512140bc839bcc5822598bee5236da25c29742",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "cba3408a9b46bf241b3e3ff2cac841baaa0acbfbf4b090ed0b89f4acce7f9bd8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "edb46dd1ba05cd8b3c9f42a7b922833716eebff832943d00f945b19bfec33ea0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "720122d0ca9f60ca0fedc6534d5c967c26c3800269e1a90e4d9279c6360180d4",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "31925e02a2a81e9743f7ac76c4e3d9624e6ee5cfaf21fa306e7930645c254cea",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "004eae350f695d245826531db32b1473b31cd003c574c1edba57290e30e8722a",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "cba3408a9b46bf241b3e3ff2cac841baaa0acbfbf4b090ed0b89f4acce7f9bd8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "f2ac3cf616171924033d550ace54843599120f5545a441f020940dde1137011a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bb0a3bf63233e5e5722f6eae6cd08dc581298f894dd83aa00d8a87a846a28c34",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "6dc8376d6243ecb079c11f1e93f795dd31a137180e06d3385cd968e4a18e454d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "22f2418a-3937-4933-b153-9ddbfd5eae58",
+  "objective": "Audit the SigilNFT contract in this repository (src/SigilNFT.sol, 142 lines, Solidity 0.8.26, OpenZeppelin v5 submodule lib/openzeppelin-contracts at fcbae5394ae8ad52d8e580a3477db99814b9d565, forge-std at bf647bd6046f2f7da30d0c2bf435e5c76a780c1b). It is the \"Illuminati.Earth Magik Sigil\" ERC-721 collection (name constant \"Illuminati.Earth Magik Sigil\" in script/DeploySigilNFT.s.sol; confirm the README, deploy script, tests and integration guide all use exactly that name), intended for a real Base mainnet deploy: 2,300 max supply, free mint (gas only), fixed 10% EIP-2981 royalty to a treasury set once at deploy, mint and rework gated by EIP-712 vouchers signed by an owner-rotatable signer. Write nothing to the repository; deliver report.md. REPORT BRANDING: this review is published as part of Illuminati.Earth marketing. Title report.md \"Illuminati.Earth Magik Sigil: Contract Review\" and call the collection \"Illuminati.Earth Magik Sigil\" (exactly that spelling and capitalisation) everywhere in the report. Keep the tone factual and plain: no hype, no claims of safety beyond the evidence, no investment language, and no statement that the contract is \"audited\" or \"secure\".\n\nSCOPE: src/SigilNFT.sol, script/DeploySigilNFT.s.sol, test/SigilNFT.t.sol (27 tests), README.md and docs/INTEGRATION.md. Check that the README and integration guide match the code exactly.\n\nHARD QUESTIONS (answer each with a verdict and evidence, a reproducible test where possible):\n1. Voucher replay and binding: can a mint or rework voucher be redeemed by anyone except the named caller? Across chains, across contract deployments, or after a signer rotation? Is the EIP-712 domain (name \"SigilNFT\", version \"1\", chainId, verifyingContract) correct, and are the MINT and REWORK typehashes exactly consistent with the encoded structs, including the dynamic string tokenURI hashed with keccak256(bytes(...))? Any signature malleability or ECDSA edge case (zero address recovery, s-value, 65 vs 64-byte signatures)?\n2. Supply and sigil mapping: can supply exceed MAX_SUPPLY (2300)? Is the ordering of the _nextTokenId check, the tokenOfSigil check and the writes safe? Can a sigilId be minted twice, or a token be reissued after transfer? Is tokenOfSigil == 0 a safe \"unminted\" sentinel given token ids start at 1?\n3. Reentrancy: _safeMint calls onERC721Received on the recipient. State is written before the call; confirm no reentrant path through mint or rework can mint extra supply, reuse a voucher, or corrupt tokenVersion or tokenURI.\n4. Rework logic: tokenVersion strictly increases; can a version be skipped or reused to brick or hijack a token's metadata? Does the holder-only check (_ownerOf) behave for non-existent tokens? Is MetadataUpdate (ERC-4906) emitted on mint and rework, and does supportsInterface advertise ERC-4906, ERC-2981 and ERC-721 correctly through the multiple-inheritance override?\n5. Owner and signer powers: confirm owner can only call setSigner, ownership transfer and renounce behave as OpenZeppelin v5 Ownable2-less Ownable (single-step) and the risks that creates; the signer cannot touch tokens it does not hold. State what a compromised signer can and cannot do.\n6. Royalty: _setDefaultRoyalty(treasury, 1000) with an unchecked treasury argument; what if treasury is the zero address (it reverts in ERC2981, confirm). Any way to change royalty after deploy?\n7. Deadline and timing: block.timestamp > deadline comparison, voucher expiry edge cases, deadlines near uint256 max.\n8. Gas and DoS: unbounded strings (tokenURI length), large calldata, any griefing of mint for other users.\n9. Deploy script and tests: does the deploy script pass the right arguments, does the test suite genuinely cover the risks above, and what is missing?\n\nMETHOD: use the Pashov methodology and specialties. Reproduce every finding against the code; discard unreproducible claims. Rate each finding by severity and likelihood, give a concrete fix, and separate real defects from design trade-offs already documented in the README threat model. Do not claim this review is a substitute for an independent human audit.",
+  "publisherVersion": "0.1.0+3906ad8b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "e466fcb14c1c7d53b39b2c01a5dc742dc216a62f",
+    "repoUrl": "https://github.com/ToknWrks/magik-sigil-nft.git"
+  }
+}
