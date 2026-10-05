@@ -1,0 +1,490 @@
+{
+  "baseline": {
+    "observedAt": "2026-10-05",
+    "sources": [
+      {
+        "id": "C1",
+        "url": "https://claus.si/about.json",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Official token, current hook directory, historical journal directory; revision website:d412121f6fcb8dd18ecd31b0b359674758943028422f419f36ff660fd79de302",
+        "retrievedSha256": "0bc843b6cf168ad52e3fc702a12a0692e7afb4654a23a471b53a7a8b8bfd07bd"
+      },
+      {
+        "id": "C2",
+        "url": "https://claus.si/read/Hooks/Funding",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Current individual Funding page; reader representation of canonical /Hooks/Funding",
+        "retrievedSha256": "e260e0bb2b51e1d090a05c9a691a2712fd13c61b2fd1559d1b06d15de012cf40"
+      },
+      {
+        "id": "C3",
+        "url": "https://claus.si/read/Hooks/Burn",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Current individual Burn page; reader representation of canonical /Hooks/Burn",
+        "retrievedSha256": "0b8ec0c44b9766c236996c03d17ce34f137d20672239a7bb40089fd409bfbd58"
+      },
+      {
+        "id": "C4",
+        "url": "https://claus.si/read/Hooks/Liquidity",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Current individual Liquidity page; reader representation of canonical /Hooks/Liquidity",
+        "retrievedSha256": "24c9072f96704d7d15e965dac65b36a81e463d9c869e9250aefec979036552ff"
+      },
+      {
+        "id": "C5",
+        "url": "https://claus.si/read/Hooks/Weather",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Current individual Weather page; reader representation of canonical /Hooks/Weather",
+        "retrievedSha256": "2c83c96ee0e6e24079fd81e68ca2c995edd1ea01ea375f2f2869de41ee9c5fed"
+      },
+      {
+        "id": "C6",
+        "url": "https://claus.si/read/Hooks/Buybacks",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Current individual Buybacks page; reader representation of canonical /Hooks/Buybacks",
+        "retrievedSha256": "29252f13e24b86739d9fc9fa85143fdaaea3a047ccd51e7143902a7f5723cb40"
+      },
+      {
+        "id": "C7",
+        "url": "https://claus.si/read/Hooks/Name",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Current individual Name page; reader representation of canonical /Hooks/Name",
+        "retrievedSha256": "52d33a3579babaca9b3c53718f039887e4c3a215ef8504346ba5eda478aae0ca"
+      },
+      {
+        "id": "C8",
+        "url": "https://claus.si/read/Hooks/Arena",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Current individual Arena page; reader representation of canonical /Hooks/Arena",
+        "retrievedSha256": "bf757c03e0d9a94c99edd5071e297e4fd1aa2e538b63f301d576b630fcf23b0f"
+      },
+      {
+        "id": "C9",
+        "url": "https://claus.si/fee-state.json",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Website reports implementation, fees, expired weather fallback at block 26127666; not independently RPC verified",
+        "retrievedSha256": "b146a4f7c546a325cf20ef4fff0084af31d4bc1fba8fde57a781aaf571178373"
+      },
+      {
+        "id": "C10",
+        "url": "https://claus.si/hook-stats.json",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Pool id and cumulative hook deposits, not live reserves or profit",
+        "retrievedSha256": "b93ad345b03539b9ceb009383a40d53d23261fd064ac8f04d6f7e6e9d61a44f9"
+      },
+      {
+        "id": "C11",
+        "url": "https://claus.si/read/Journal/journal%3Aimd-seat-1032-20261005",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "NFT acquired; worker still needs setup",
+        "retrievedSha256": "641ed498720e18fd15fe19ed50b118f966d9a18c465c2189f782442485465c06"
+      },
+      {
+        "id": "C12",
+        "url": "https://claus.si/read/Journal/journal%3Aclaus-arena-singleplayer-20261005",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Existing singleplayer game and bounded trade waves; no new upgrade for singleplayer conversion",
+        "retrievedSha256": "6317f123fe7c0da4618010e3c7ff5ba1aa5f97ff494bf8e9ac8a7dfdf34290c7"
+      },
+      {
+        "id": "C13",
+        "url": "https://claus.si/read/Journal/journal%3A99e477a5-f5e0-4bc8-b3e4-4e2d516aa3a0",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Weather implementation history",
+        "retrievedSha256": "aecc99945c4f426bf78168c9f13273db9aef16774f1cba3bc9d6538c1b96af5f"
+      },
+      {
+        "id": "S1",
+        "url": "https://sourcify.dev/server/v2/contract/1/0xFBF8A66314e1B67c9131ab320584Fe31EB34D97d?fields=all",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "source-inspected",
+        "supports": "Exact-match FeeArenaHook, IMDWeather, ArenaTide and reserve sources; indexed verification date 2026-10-05T12:11:08Z",
+        "retrievedSha256": "e223ed33af9354a4075ab1136d6dfa0a359c866c235326397e22076f46f0d592"
+      },
+      {
+        "id": "S2",
+        "url": "https://sourcify.dev/server/v2/contract/1/0x37Bfb8AC7C960E558657871D41Ca70E07e7DbfFf?fields=all",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "source-inspected",
+        "supports": "HookProxy source; indexed proxyResolution reports expected implementation. Indexed deployed-state check, not direct RPC",
+        "retrievedSha256": "5bcf328356ad22838bbd60c4e7a46ad1050c2588d704b56e4f275c1604f3b8d9"
+      },
+      {
+        "id": "U1",
+        "url": "https://raw.githubusercontent.com/Uniswap/v4-core/main/src/libraries/Hooks.sol",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "source-inspected",
+        "supports": "Address permission bits, callback dispatch and delta-return semantics",
+        "retrievedSha256": "297d577998cdede64d48b47b12f15e4f442eea032fbb9676bb3c2f89da89b83c"
+      },
+      {
+        "id": "U2",
+        "url": "https://raw.githubusercontent.com/Uniswap/v4-core/main/src/PoolManager.sol",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "source-inspected",
+        "supports": "Unlock, currency settlement, dynamic fee changes, self-hook callback skipping",
+        "retrievedSha256": "3b6ab111dadf613e3cfd617e4b1c6ab75b5445cd15cbe52d7c6207fc02449717"
+      },
+      {
+        "id": "I1",
+        "url": "https://imd.fun/docs/",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Paid requests, asynchronous oracle v2 EIP-712, schedules, chain reproduction recipes; control-plane docs checked against 3b96b1cc, page reports running bb1c0c94",
+        "retrievedSha256": "1f1b3358addd3954a49edef7346a666f62f51bb3ab3568b9dde870a573a317c2"
+      },
+      {
+        "id": "I2",
+        "url": "https://api.imd.fun/requests/capabilities",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Fetched live API: 0.5 IMD each job/oracle action, schedule per-run pricing, panel and cadence limits",
+        "retrievedSha256": "56da5c0c4307c611c6a94fe951b1ce58338088b0f7f812368521087826d5f12a"
+      },
+      {
+        "id": "I3",
+        "url": "https://api.imd.fun/publications",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Public catalog fetched; request titles are proposals, not proof of completed or deployed mechanisms",
+        "retrievedSha256": "22a71a943f205cbffcb3fe835c79b0d756b115164a36e3fcb49173ab99f8aeb9"
+      },
+      {
+        "id": "I4",
+        "url": "https://github.com/Identity-md/worker",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "source-inspected",
+        "supports": "README fetched from main: worker requires runtime, enrollment and online operation; NFT is not earnings",
+        "retrievedSha256": "a0dc06e3ce5d417e5aa7a7542cee796f00f462d0c38f1165fa396d5282eeefb0"
+      },
+      {
+        "id": "P1",
+        "url": "https://www.whatthehook.io/",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Two-pool price-gap capture and positive-profit sharing; not audited here",
+        "retrievedSha256": "c4537f696e7a051b2b69b0ff6bf683f4832dd733edf1e76bfe1740774582199a"
+      },
+      {
+        "id": "P2",
+        "url": "https://www.whatthehook.io/docs",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Primary technical documentation retrieved; not proof of net revenue or CLAUS compatibility",
+        "retrievedSha256": "27199364edcb74ba679a13e78da8c911555658c1ffab3b57a26fd7f2b0ebcc7a"
+      },
+      {
+        "id": "P3",
+        "url": "https://spec.fun/",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "Solana extension configurator advertised; SPA bundle fetched, no deployed execution verified",
+        "retrievedSha256": "69d54bdb0e62cb99651566e59f007f1a9bc718be8e899d13aad61ffeee1b3c68"
+      },
+      {
+        "id": "P4",
+        "url": "https://raw.githubusercontent.com/cowprotocol/contracts/main/src/contracts/GPv2Settlement.sol",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "source-inspected",
+        "supports": "Orders settled at clearing prices, limit and execution accounting; inspiration for collective clearing, not an integration commitment",
+        "retrievedSha256": "6a84f5494a012a0196f61b92f61804bd6138c21e30dc0390dc8a11d51b067a66"
+      },
+      {
+        "id": "P5",
+        "url": "https://github.com/darkforest-eth/darkforest-v0.6",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "source-inspected",
+        "supports": "Public README describes onchain game, extensible client and SNARK development; no current deployment audited",
+        "retrievedSha256": "102b625a9d16e32887873546cdfe761161ba4bb9d04dc5fbcdebf528a16714e1"
+      },
+      {
+        "id": "X1",
+        "url": "https://x.com/contractclaus",
+        "observedAt": "2026-10-05",
+        "evidenceLevel": "advertised",
+        "supports": "HTML retrieved; no independently authenticated post used to establish contract behavior",
+        "retrievedSha256": "c686807eb18946f4a1f17f8990a8bf868c7e404386ea9ddb51cd843d282758e5"
+      }
+    ],
+    "live": {
+      "token": {
+        "chainId": 1,
+        "name": "claus",
+        "ticker": "CLAUS",
+        "address": "0x1b54E762aa34CF6E28E9C082F2848e28E45DA6b8",
+        "evidence": [
+          "C1",
+          "C7"
+        ]
+      },
+      "proxy": "0x37Bfb8AC7C960E558657871D41Ca70E07e7DbfFf",
+      "implementationReported": "0xFBF8A66314e1B67c9131ab320584Fe31EB34D97d",
+      "stateVerification": "Website and Sourcify index agree; direct RPC returned HTTP 403 on publicnode and alternatives. No direct deployed-state claim.",
+      "mainPair": [
+        "native ETH",
+        "CLAUS"
+      ],
+      "poolIdReported": "0xfaa42866f7667e3a1a10d783f3b629171febd45f056336b8df766d74afc0f0f7",
+      "feesPpmOfGrossETH": {
+        "project": 20000,
+        "wallet": 13500,
+        "fomo": 1500,
+        "burnLiquidityCombined": 5000,
+        "fallbackBurn": 2500,
+        "fallbackLiquidity": 2500,
+        "platformSeparate": 3000
+      },
+      "weather": {
+        "rainBurnLiquidity": [
+          3500,
+          1500
+        ],
+        "dryBurnLiquidity": [
+          1500,
+          3500
+        ],
+        "staleBurnLiquidity": [
+          2500,
+          2500
+        ],
+        "maximumObservationAgeSeconds": 21600,
+        "cadenceAdvertisedHours": 4,
+        "currentModeReported": "fallback"
+      },
+      "lpFee": "Zero set after initialization and zero override before swaps, source-inspected; no direct current slot0 read",
+      "alreadyExists": [
+        "buyback/burn",
+        "approximately $500 liquidity batches",
+        "Fomo buybacks",
+        "mutable metadata",
+        "signed London weather",
+        "singleplayer Arena bounded waves"
+      ],
+      "nft": {
+        "collection": "0x0000ec93127baa929e58e97dd0095a2bfb38ec1d",
+        "tokenId": 1032,
+        "ownership": "Project-reported; not directly verified",
+        "worker": "Journal explicitly says worker still needs setup; present enrollment and earnings unknown"
+      },
+      "noticeCommitment": "Preserve brief\u2019s public one-hour release notice; not independently located in fetched pages"
+    },
+    "proposed": {
+      "mechanismsLive": false,
+      "shortlistMeaning": "Research priority only; no deployment selection",
+      "funding": "No committed experiment budget; cost figures hypothetical",
+      "newToken": false
+    },
+    "unavailableEvidence": [
+      "Etherscan source page HTTP 403",
+      "Uniswap concepts page HTTP 403; primary v4-core code read instead",
+      "Direct Ethereum RPC HTTP 403",
+      "Legacy Sourcify full_match metadata URL 404; v2 exact-match API successful"
+    ]
+  },
+  "ideas": [
+    {
+      "id": "claus-market-loom-v1",
+      "title": "Market Loom",
+      "mechanism": "Opt-in executed swaps apply signed, bounded rewrite rules to a shared persistent cellular world; collective paths open nonfinancial capabilities for all visitors.",
+      "novelty": "Trades compose lasting transformations and unlock executable world rules, rather than producing independent Arena waves or a cosmetic chart.",
+      "rationale": "A market can become a public instrument people learn to play together, without rewarding volume or manufacturing yield.",
+      "status": "proposed",
+      "sources": [
+        "S1",
+        "S2",
+        "U1",
+        "U2",
+        "C8",
+        "C12",
+        "P5"
+      ],
+      "constraints": [
+        "Existing fees and allocations unchanged",
+        "No prize, token issuance or balance transfer",
+        "Authenticated user intent, not router sender or tx.origin",
+        "Bounded constant-time automaton; finalized replay",
+        "Primarily external app in first version"
+      ],
+      "openQuestions": [
+        "Does collective authorship attract repeat nontrading visitors?",
+        "Can signed hookData be safely supported by real routers?",
+        "Does shared onchain state justify its gas cost over public log replay?"
+      ]
+    },
+    {
+      "id": "claus-commons-crossing-v1",
+      "title": "Commons Crossing",
+      "mechanism": "Optional signed traders submit complementary buy/sell intents to a bounded epoch auction; sponsor-funded execution activates only if a two-sided participation threshold and every signed limit are satisfied. The smallest version executes each order through the existing main pool and grants a shared nonfinancial unlock.",
+      "novelty": "A collective assurance condition coordinates multiple willing trades and shared consequences; it is not a standing limit order, lottery or per-trade discount.",
+      "rationale": "Test whether traders prefer making a move together and reducing unilateral exposure rather than acting alone.",
+      "status": "proposed",
+      "sources": [
+        "P4",
+        "U2",
+        "S1",
+        "I1",
+        "I2"
+      ],
+      "constraints": [
+        "Never force a trade or trap selling",
+        "No assumed LP revenue or cross-pool arbitrage profit",
+        "Existing main-pool fees apply to each executed swap",
+        "Bounded order count, refunds, deadline, explicit custody",
+        "External auction/router dominates implementation"
+      ],
+      "openQuestions": [
+        "Can sequential pool execution satisfy all limits without privileged ordering?",
+        "Do thresholds reduce failures or simply delay execution?",
+        "Can crossing later be priced transparently without undermining project funding?"
+      ]
+    },
+    {
+      "id": "claus-liquidity-creature-v1",
+      "title": "Liquidity Creature",
+      "mechanism": "A separately funded same-token experimental pool moves sponsor-owned liquidity among a small set of habitats according to a persistent, bounded memory of actual price traversal; trades change future executable depth.",
+      "novelty": "The market has path-dependent inventory behavior and a collective ecology, not a visual pet or an ordinary LP optimizer.",
+      "rationale": "Explore whether a market with memory creates understandable cooperative and adversarial play while preserving free exits.",
+      "status": "proposed",
+      "sources": [
+        "U1",
+        "U2",
+        "S1",
+        "P1",
+        "P2",
+        "P5"
+      ],
+      "constraints": [
+        "Separate PoolKey and explicitly funded liquidity",
+        "Only sponsor principal moves; no existing LP principal used",
+        "No guaranteed liquidity or LP fee revenue",
+        "Hard inventory and rate bounds; swaps never wait for keeper",
+        "No second project token, confiscation or selling gate"
+      ],
+      "openQuestions": [
+        "Can any transition improve discovery or execution after adverse selection and gas?",
+        "How easily can a trader farm predictable rebalance inventory?",
+        "What minimum funded depth makes the experiment useful?"
+      ]
+    },
+    {
+      "id": "claus-trade-archaeology-v1",
+      "title": "Trade Archaeology",
+      "mechanism": "An opt-in swap commits a public experiment hypothesis hash; an independently checked later observation resolves a permanent museum record comparing intention with outcome, without a wager.",
+      "novelty": "A falsifiable participant prediction is bound to an actual settled action and public evidence, rather than a generic paid report.",
+      "rationale": "Could teach market behavior and build a reusable dataset.",
+      "status": "deferred",
+      "sources": [
+        "I1",
+        "I2",
+        "U1"
+      ],
+      "constraints": [
+        "No outcome payout",
+        "Participant labels remain untrusted",
+        "No private trader profiling"
+      ],
+      "openQuestions": [
+        "Would it be more than a journal app?",
+        "Which hypotheses have objective, reproducible definitions?"
+      ],
+      "deferralReason": "Useful evidence tooling, but weaker dependence on programmable market state than shortlisted concepts; revisit with a specific reproducible experiment."
+    },
+    {
+      "id": "claus-counterfactual-reserve-v1",
+      "title": "Counterfactual Reserve",
+      "mechanism": "Publish paired fixed-budget shadow strategies driven by the same actual swap history; only a separately funded tiny pilot executes the winning hypothesis after preregistered evaluation.",
+      "novelty": "A controlled live-versus-shadow intervention measures causal inventory costs, not an AI trading dashboard.",
+      "rationale": "Could prevent claiming profit from price marks or internal transfers.",
+      "status": "research",
+      "sources": [
+        "S1",
+        "U2",
+        "I1",
+        "I3"
+      ],
+      "constraints": [
+        "Shadow results cannot establish executable yield",
+        "No LP principal budget",
+        "Out-of-sample evaluation required"
+      ],
+      "openQuestions": [
+        "What counterfactual is actually identifiable?",
+        "Can the pilot alter its own measurement?"
+      ]
+    },
+    {
+      "id": "claus-gap-commons-v1",
+      "title": "Gap Commons",
+      "mechanism": "Same-token separately funded second pool auctions the right to close an independently measured gap and escrows only realized surplus for public experiments.",
+      "novelty": "Transparent competitive surplus allocation, rather than claiming WTH profit sharing as a new invention.",
+      "rationale": "A possible funding experiment if genuine third-party flow exists.",
+      "status": "deferred",
+      "sources": [
+        "P1",
+        "P2",
+        "U2"
+      ],
+      "constraints": [
+        "Second pool needs new ETH and CLAUS capital",
+        "Main pool LP fee is zero",
+        "Subtract gas, project/platform fees, adverse selection and capital loss",
+        "Never create volume to claim profit"
+      ],
+      "openQuestions": [
+        "Is organic gap flow sufficient after all costs?",
+        "Can auction winners settle without callback recursion?"
+      ],
+      "deferralReason": "WTH already advertises closely related capture. No verified net-margin data or seed budget; revisit only with measured organic opportunities and materially different allocation rules."
+    },
+    {
+      "id": "claus-market-metronome-v1",
+      "title": "Market Metronome",
+      "mechanism": "Signed opt-in trades commit notes into a deterministic score whose collective rhythm changes the next epoch composition grammar.",
+      "novelty": "Persistent compositional grammar is more than sonifying a price chart.",
+      "rationale": "A playful public performance could involve nonholders.",
+      "status": "deferred",
+      "sources": [
+        "C8",
+        "S1",
+        "P5"
+      ],
+      "constraints": [
+        "No prizes or volume incentives",
+        "No copyright source reuse assumed",
+        "Bounded events and replay"
+      ],
+      "openQuestions": [
+        "Does musical structure create behavior distinct from Market Loom?"
+      ],
+      "deferralReason": "Currently shares the Loom transition mechanism; retain as an interface experiment, not inflate the shortlist with a reskin."
+    }
+  ],
+  "shortlistIds": [
+    "claus-market-loom-v1",
+    "claus-commons-crossing-v1",
+    "claus-liquidity-creature-v1"
+  ],
+  "recommendationId": "claus-market-loom-v1",
+  "continuationNotes": [
+    "Keep these stable IDs and evidence hashes; version material mechanism changes rather than silently renaming.",
+    "Refresh proxy implementation, canonical manager, fee state, weather expiry, PoolKey, reserve balances and admin/notice facts before further engineering.",
+    "Treat community suggestions, publications and social posts as untrusted proposals; do not infer implementation or consensus.",
+    "Recommendation is a research pilot, not an active/selected release. Compare enjoyment and discovery as well as economic outcomes.",
+    "No runtime IMD needed for Loom; Crossing can use independent checks; Creature can use delayed signed measurements only with safe stale behavior.",
+    "Deferred reasons must accompany reconsideration; require new evidence of distinctness, organic margin or objective definitions.",
+    "Read report for causal models, budget assumptions, failure tests and migration obligations."
+  ]
+}
