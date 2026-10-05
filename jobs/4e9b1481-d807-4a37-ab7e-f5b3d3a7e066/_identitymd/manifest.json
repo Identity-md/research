@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "fe8f29a8ce4efb099b8cfe8f2e2abfc50a1bebca2dd6493fdae6d5fe6118fee0",
+  "artifacts": [
+    {
+      "bytes": 20587,
+      "hash": "ce2a39864e7041367e33574f18688d620199e01cf312ca8854a3fb989e36dc01",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "fe7175cbef9cd0de4d39e453a06aeadc99409444948a851a0a88cd29b86e07f6"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7d454e6cee88c390165d0ef997867a9e5328be97c71514f5a330f0acb89d6458",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fdffd98b3c8b7170a7c988bffd9b95893db23121d140f775175f7aca4e8eb988",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "11e4593175677f7e935b9352132cab0da4061164eac65d7df7445bf5ee44abe9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1336d9221e0d682ac9da18a57825eb4b38452c9cfbb3bbf4462dba0d654de519",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8472a2af9a9cf974eb880fd5f9fb639dba33e69adb3c194c3a1f79e25030b6c2",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d76fb5baefa60fdce8b0ec96c73a9f1b0d9982ad4b0c6c55f40e035a4f4596ac",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "56e50117311155be93c3c3b79293d6ba6217df4024bcf993400ea696be39d5a7",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "395caf6f84513812df5b93e41792c5f433863c58d9472faf9a0c715bb4410919",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2b9b0095482c54e687091b3846cb1a409d6e8b85ca7c48813c51403eaa48bf0e",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fe7175cbef9cd0de4d39e453a06aeadc99409444948a851a0a88cd29b86e07f6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "4e9b1481-d807-4a37-ab7e-f5b3d3a7e066",
+  "objective": "Project: PepesFamily, Pepes World vault\nRepo: github.com/0xtenang/PepesFamily (commit 6d550a2)\nScope: contracts/src/world/PepesWorldVault.sol (about 150 lines). Tests: contracts/test/PepesWorld.t.sol and contracts/test/PepesWorld.fork.t.sol\nChain: Robinhood Chain (4663)\n\nWhat it does\nA lifetime access pass for Pepes World, a browser game. A wallet can play if it holds at least 1 $EARN (one Pepes Earn IMD NFT, 0xf2363c208B1772C3c9dB7a3fe84d75Bf2881fc20) or if it entered through this vault.\n\nenter() / enterFor(player): the caller deposits passPrice $PEPES (0xE2C46c7068566740A33A4C93f5445B07BCfE5644, 50,000 at launch). It's one-time and non-refundable, and the pass never expires. Fee-on-transfer amounts are rejected.\ncanPlay(player): true if the player has a pass or holds 1 $EARN or more.\nOwner only:\ngrantPass: free passes.\nsetPassPrice: future passes only; existing passes are never revoked.\nclaimRewards(to): claims the IMD that the deposited $PEPES earns as a dividend token, and sends it on.\nwithdraw(token, to, amount): any token.\nTwo-step ownership transfer.\nIntended trust model: deposits belong to the team (the owner). Players get only the pass.\n\nPlease check\n\nCan anyone except the owner move tokens out of the vault, including IMD rewards?\nCan a player's approval to the vault be used to take more than passPrice, or tokens from another wallet?\nCan anyone get a pass without paying (other than grantPass), or pay without getting one?\nCan anything lock the vault: enter reverting for honest users, or claimRewards / withdraw getting stuck?\nInteraction with $PEPES (PadTokenV1): plain transfers have no fee, the vault counts as a normal dividend holder, and claim() pays IMD to msg.sender. Any reentrancy or accounting issue in claimRewards?\nIs the canPlay check via $EARN.balanceOf >= 1e18 correct for DN404 (NFT = whole token)?\nAny problem with passPrice = 0, or with changing the price between a player's approve and their enter?\nOut of scope: the game website (access is checked in the browser only, and the game has no prizes). $PEPES and $EARN are already audited.",
+  "publisherVersion": "0.1.0+e24c7291",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "6d550a2dd8daba2bec451431336125e584f0cb9e",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
