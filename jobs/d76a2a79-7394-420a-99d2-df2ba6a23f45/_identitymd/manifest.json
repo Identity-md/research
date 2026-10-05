@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "3bc06d5c332c32f5837cc3c29607895557977a2127b4227b053e8dece53a2cb4",
+  "artifacts": [
+    {
+      "bytes": 35419,
+      "hash": "8b71346eaeb6b6abdb6e50f1290d3ceaf368eb1e28e32e138c4ad603a94bb0b0",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "73463325b9200243ae7bc76d4ee79e7ee7d478a7b98a33f740762078451ecf87"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "381cad4126e6ec642091cbc7efcac716f6cf6f66ade2958adccb6895e666934c",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "e3896314076881081b43f71b8067b48418f6ff382dc9c86302db922a9c69ddf4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5dc170d977094c92852bffdca7c9a128498e9ec1f07e7248e1709d562d0a03d0",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "0cd092863d7fc9b439422d320bf769d43aa1da6715daab3ebff653de6b19f4fd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7989aa5d838d11d9858c19c0f47e3c24fc17f124f9e9c78fe1c9d4afa8ae9ae2",
+      "evaluation": null,
+      "findings": 5,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "73463325b9200243ae7bc76d4ee79e7ee7d478a7b98a33f740762078451ecf87",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "74db3e88f3c65478418bb70ef02552b0c063bea9c57144a2539529eef1a8af3a",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "df0892ab0164d201183f36b5d09aa14500f1c13ea24970ead80248b5993efba1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "699fb03b7f482edbb7317374b1077beb3cf2e71f423f60e9ea332cee92b0d450",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "1f054b575f831f7721e3d25b8b1d5af449cd171b349155cc969e36d93e366326",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d76a2a79-7394-420a-99d2-df2ba6a23f45",
+  "objective": "IMD Ember World — ninth offline audit / closure of the latest Audit8 findings (World / Member M1 only).\n\nQuestion: Does this exact candidate close the three Low and two Info findings from the latest eighth Audit, with bounded regression evidence? Seek new or reopened findings of any severity; do not promise a pass or zero findings.\nPeriod: latest Audit8 through the source-freeze and release measurement timestamps in this pinned snapshot, as of 2026-10-05. Length/format: Markdown finding table, precise reproductions and unlimited evidence appendix; preserve code, hashes and URLs.\n\nExact public snapshot: https://github.com/tungweb3/imd-ember-world-review/tree/347268a7ecae700088547c2402db9a3eb07a6fd2\nPrevious public: 88c130283efc45260f9e00da8d2d3055c38483bd\nPrivate source provenance: 8c3b60171a22b3ce71854f12282e629bbf5ca06f (not a public checkout URL).\nTEAM measured current Worker: 06cbc8fe-112f-4a11-b84f-42907179afff, 100% traffic; record 20261005T011008Z-8c3b601.\n\nRead Submission9/README.md, REVIEW_INPUTS.md, PRIOR_REVIEWS.md, FinalClosure/ closure/test/artifact/build/served/reviewer evidence, SERVED_EXPECTATIONS.json and manifests/submission9-published-source.json. Use this exact pin; older namespaces are historical.\n\nUnofficial TypeScript Cloudflare Worker/React SIWE; NO SOLIDITY. M1 writes persistent profiles. Scope Auth/server authority, ownership/index/budget/freshness and artifact/runner. Exclude Genesis/Mint, Ember Coin, Fren Pet, full 3D/scene/media/avatar/selfie and private backups. Public141 sources:125exact,16redacted/57masked lines; no private Git/full frontend. Unavailable full compilation is not a pass.\n\nOffline/local synthetic tests only. Public source/prior-document GETs and fresh dependency downloads are permitted. No live site/API tests or writes, real wallet signatures/logins, approvals, transfers, minting, payments, job submissions or deployments. Never request owner credentials/private databases.\n\nFresh public checkout, Node 24.x, then in source/: npm ci --ignore-scripts; node scripts/review-tests.mjs --check; npm run test:review; node scripts/verify-artifact-closure.mjs. Use real locked viem 2.56.9 and all 23 selected test files. No missing-module stubs, private source selectors, substitute crypto/Worker/SQLite, omitted failing files, hidden skips or leaked outputs. Windows file-symlink controls require real capability; report actual environmental failures honestly. Artifact default creates no saved scheduler output; opt-in sanitized artifacts remain under the explicit private source/tmp policy.\n\nTEAM final exact-source measurements: Node 24.19.0; private full 1663/1663, supported runner on private source 613/613, fresh clean private-source checkout 613/613, real filesystem artifact suite 18/18, standalone and clean verifiers 13/13; all acceptance runs have zero fail/cancel/skip/todo. These are NOT a direct runtime rerun of the filtered public-byte checkout; selected-source correspondence is verified separately. Independently run the public runner. Historical failures and vulnerable-baseline expected exit 1 remain in TEST_RESULTS.json. Core 500 campaigns /428 distinct digests and additional 90 /54 are separate identities, not 590 unique proof cases or exhaustive state-machine proof.\n\nLatest Audit8 job7716c3f5-5d6c-4953-a643-141da678d051 reviewed public88c130..., completed2026-10-04T19:26:33.961Z, published19:26:58Z. Immutable original: https://github.com/Identity-md/research/blob/d7f6e26bf449d9c5ea3a1ecb6557ca3adbd23632/jobs/7716c3f5-5d6c-4953-a643-141da678d051/files/AUDIT.md ; SHA2568c9baaa6838e8b0137baa44282d1fcc2704834d68c92dafcd4426a882905bcfc. Earlier Report8 job38438c89-b34c-4d38-8ae8-027c9d175fb1 completed19:13:53.530Z and does not supersede the later Audit.\n\nReview the five mechanisms hardest, including reverse controls:\n1. Post-D1 ownership proof expiry: strict proof age must be rechecked after all awaits. Test29999/30000/30001ms, sold seat, enrichment delay, refused/failed refresh lane, rollback/NaN/Infinity and latest recovery. Expired/unavailable is not complete-empty/not-owned authority. Do not extend producer checkedAt or renew authority on same-block deltas.\n2. First locked-provider account event: CookieA + provider[] + first accountsChanged(B), without actual observedA, must not revoke sessionA. Cookie identity is not an earlier wallet observation. Genuine observedA-toB, A-lock-B, explicit selection/grant, passive replacement after observedA, restart/stop and delayed cleanup must retain correct context/nonce/address fencing.\n3. Slow fresh overlap: twenty early joined same-context fresh requests with four pages at7475/7500ms share one admitted cycle/four pages/one budget/one proof/one epoch while that proof remains fresh. Different/late intent or changed roster re-evaluates after success/failure. Preserve strict proof TTL, original producer/index timestamp, bounded failure and later retry. This is not a global RPC ceiling or cross-isolate lock.\n4. Dangling artifact final-link escape: exercise actual dangling/existing final file links, directory links, nonregular targets, parent/target substitution and safe hardlink replacement. No outside-root writes. Review lstat identities, exclusive regular sibling temp, fsync and validated replacement. Respect documented locally controlled private-root assumption; portable Node does not prove hostile concurrent ancestry-swap or SMB/NFS safety.\n5. General diagnostic path redaction: actual persisted nested strings must mask arbitrary POSIX, Windows, UNC and file URLs, including spaces/parentheses, C://, D:/// and rooted backslash forms. Preserve network URLs, relative identifiers, structured actions/events/nonces and actual saved-trace replay. Assess conservative same-line masking policy without treating deliberately synthetic test paths as machine leaks.\n\nOnly authenticated-address ownerOf grants ownership; index/roster/D1/name are candidates. Keep original Auth lifecycle cleanup and strict authority boundaries, retained verify/lock503/later-valid controls, nonce ownership, one primary cleanup plan per event and no old-flow cross-revocation. Do not infer production concurrency or real-wallet correctness from offline client/Worker/SQLite fixtures.\n\nFor every finding give severity, blocker rationale, pinned location/prior link, exact event order, actual relevant database rows, prompt/challenge/verify/logout/hint/index/budget/RPC counts, reproduction/exit/hash or argument, fixed/partial/open/accepted limit/policy/unknown and what could not be checked. Separate fresh REVIEWER measurements, TEAM observations, inherited historical evidence, inference and unknowns.\n\nRequest separate SOURCE-CLOSURE PASS/BLOCKED/UNKNOWN and RELEASE-READINESS PASS/BLOCKED/UNKNOWN verdicts. Production upload/build/record persistence and verification are distinct. Current stage-separated deployment consumed exact prior privileged local full-suite receipts; canonical npm run deploy was NOT invoked. The older canonical overall exit1 after successful upload remains historical. Deployment evidence is TEAM readback, not your authenticated production measurement. Completed/accepted and Low/Info labels do not certify approval, endorsement, zero vulnerabilities or fund safety.",
+  "publisherVersion": "0.1.0+3368e34a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "347268a7ecae700088547c2402db9a3eb07a6fd2",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
