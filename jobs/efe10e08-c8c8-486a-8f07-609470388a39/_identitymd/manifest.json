@@ -1,0 +1,49 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7066bf4794503104e0045409dc39980eea5536f1d834eb3d2168f6eaca081337",
+  "artifacts": [
+    {
+      "bytes": 15693,
+      "hash": "2d11ba029dc42d4b71acaab86545207937bb7065ce40c6c284785cf950f64a78",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "00134487286cf5b8bee335ab5ef34d183ac6d75d744155f96ee50ac359ad51dc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "129fb96cc57805fc71967bebe7690541f42c6f2517d88207cc63941c88e1af53",
+      "changedPaths": [
+        "AUDIT.md",
+        "README.md",
+        "test/fork/IMDSTRFork.t.sol",
+        "test/unit/AuditDistributor.t.sol",
+        "test/unit/AuditOracleNFT.t.sol",
+        "test/unit/AuditTreasury.t.sol"
+      ],
+      "deviceKey": "a98849c24da2bfc2bffef97410138634abccdb04be977f2efdc4ae2c8f247f7b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "00134487286cf5b8bee335ab5ef34d183ac6d75d744155f96ee50ac359ad51dc",
+      "treeHash": "7cb7c0b67653a12c0688fbd08a7ee06c38309baa",
+      "verifiedTreeHash": "7cb7c0b67653a12c0688fbd08a7ee06c38309baa",
+      "verifierVersion": "0.1.0+b4c7ae3a"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "efe10e08-c8c8-486a-8f07-609470388a39",
+  "objective": "$ADAM — official X: https://x.com/IaMaDamIMD — independent security audit of the ADAM project (continue from parent job). Single job, do NOT ask clarifying questions.\n\n## Scope\n- All first-party contracts at the current head (PR #2): LaunchToken, AdamHook, AdamTreasuryV2, AdamDistributorV2, AdamSplitOracle, NFTClaim, plus script/DeployAdam.s.sol (hook-only mode) and script/DeployAdamExtension.s.sol.\n- Intended mainnet setup: fresh ADAM token → DeployAdamExtension (oracle, DistributorV2, NFTClaim funded with 110,000,000 ADAM, TreasuryV2) → DeployAdam hook-only with TreasuryV2 → single-sided ETH/ADAM v4 pool. Legacy V1 Distributor/Treasury will NOT be deployed on mainnet.\n\n## Process\n- Independent reviewers (not the original author), each focused on: math/accounting, access control & immutability, economic/MEV attacks (process(), keeper bounty, reward legs, price floors, reroute), oracle verification (IMD Oracle v2 EIP-712 attestation, signer, questionHash, quorum, freshness, replay, clamps, fallback), NFTClaim (per-tokenId unlock, ownership checks, transfers mid-vesting, batch, claimAndStake, burnUnclaimed), IMDSTR buy-on-claim + one-time direct switch, deploy scripts (ordering, funding, hook mining, pool init, LP ticks).\n- A judge consolidates findings.\n- Fix every Critical / High / Medium finding with a regression test. Do NOT add features or change economics (fees, splits, allocations, unlock schedule, bounds).\n\n## Deliverables\n1. AUDIT.md: findings by severity with status (fixed / acknowledged + reasoning), and a mainnet deployment checklist with exact constructor parameters to verify.\n2. Fixes + regression tests (unit, fuzz, mainnet fork). All tests green.\n3. README updated only where behavior changed.\nNothing is broadcast; deployer signs manually.",
+  "publisherVersion": "0.1.0+b4c7ae3a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "785edda603f9ed41364e08d46ecea440bcc0d6e2",
+    "repoUrl": "https://github.com/identity-md-launches/launch-713-task-single-job-do"
+  }
+}
