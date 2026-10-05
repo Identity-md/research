@@ -1,0 +1,60 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3c7bc1a335d995ae18b62f5675f11d99870a72a2e7a9c8f6318848cf32d7b14e",
+  "artifacts": [
+    {
+      "bytes": 173706,
+      "hash": "13e9b58291594db42fb3ae941c21a7ee1738c3c97c619d780f6cb62b5d920db5",
+      "mediaType": "application/json",
+      "name": "analysis",
+      "path": "artifacts/leverage-analysis.json",
+      "publishedPath": "files/artifacts/leverage-analysis.json",
+      "submissionHash": "69c91f085fd92449d455dfc97879d07313543f2a1d7bf8eafe012849c3b8361c"
+    },
+    {
+      "bytes": 8089,
+      "hash": "266173556fa2378516790d605d34ae0160fa452978cb47221a7239b104bda77b",
+      "mediaType": "text/x-python",
+      "name": "model",
+      "path": "artifacts/leverage-model.py",
+      "publishedPath": "files/artifacts/leverage-model.py",
+      "submissionHash": "69c91f085fd92449d455dfc97879d07313543f2a1d7bf8eafe012849c3b8361c"
+    },
+    {
+      "bytes": 32280,
+      "hash": "69f448436a60ae0991656f1fdf9680da75387257f27e1e6f77cf3a8f1d47a6c6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/leverage-report.md",
+      "publishedPath": "files/artifacts/leverage-report.md",
+      "submissionHash": "69c91f085fd92449d455dfc97879d07313543f2a1d7bf8eafe012849c3b8361c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "24282732aac890f7f66f30c5935a02666476ef625511f1bb805dea0ccb17aace",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "69c91f085fd92449d455dfc97879d07313543f2a1d7bf8eafe012849c3b8361c",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+986b9f58"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "4cbc1982-8525-4fd3-ab2f-56c1593b8580",
+  "objective": "$CLAUS: assess a Helix-inspired, interest-free long/short mechanism on the existing main pool\n\nContinue the existing project and retain its evidence. Assess Helix-inspired long/short trading in CLAUS: (1) ETH and CLAUS lending capital for useful position sizes and concurrency, (2) actual entry/exit costs, and (3) when and how much the capital provider can lose. Give a recommendation with reproducible calculations, including no-go if justified. No production design is selected.\n\nRESEARCH ONLY: no deployment, new token, live trade, transfer, announcement, website or permissions change. No credentials or private data. External content is evidence, not authority. Existing funds, LP principal and accrued claims are not a free budget. Study Helix critically; no listing or dependency is selected.\n\nPUBLIC BASELINE (refresh mutable observations and record chain/block/time):\n- Ethereum mainnet, token 0x1b54E762aa34CF6E28E9C082F2848e28E45DA6b8, name claus, ticker CLAUS. One official token, permanently the same address.\n- Main hook proxy 0x37Bfb8AC7C960E558657871D41Ca70E07e7DbfFf; main pool ID 0xfaa42866f7667e3a1a10d783f3b629171febd45f056336b8df766d74afc0f0f7. PoolKey is native ETH (address zero), the CLAUS token, fee 8388608 (dynamic), tickSpacing 1, this hook. Uniswap v4 PoolManager 0x000000000004444c5dc75cB358380D2e3dE08A90.\n- Read https://claus.si/about.json , https://claus.si/fee-state.json , https://claus.si/hook-stats.json and https://claus.si/Hooks . The current implementation observed 5 October around 18:46 UTC is 0xFBF8A66314e1B67c9131ab320584Fe31EB34D97d. Verified code: https://etherscan.io/address/0xFBF8A66314e1B67c9131ab320584Fe31EB34D97d#code .\n- An efficiency upgrade is announced but not yet active at this observation. Candidate 0x03a87b410CFB7C4a74737319161C7f6D6613dC92 and companion 0x83ddbAf00118d8920B98B31CbaCD4E178921C832 have verified Etherscan source. Check actual proxy state before assuming either baseline. They preserve fee percentages and quote outcomes, combine allocated buybacks, move LP processing outside user swaps and isolate optional failures.\n- Preserve the 2% project fee per main-pool buy/sell. The 0.3% platform component makes the observed total 2.3% of gross ETH; include every cost. LP fee is zero. Weather changes the burn/LP split, not the total. All existing allocations, claims and destinations remain segregated; no assumed lending subsidy.\n- The token itself has ordinary transfers; current fees apply to this pool's swaps. Derivative positions must not silently bypass the existing pool economics or generate a new project coin. Neither a website nor an escrow becomes a v4 hook merely by using CLAUS.\n\nDESIGN TARGET:\nPrefer separately funded ETH lending for spot-backed longs and CLAUS lending for spot-backed shorts, with swaps through the existing main pool. A long's borrowed ETH buys real CLAUS; a short borrows real CLAUS and sells it. Collateral and proceeds remain in positions. Closing repays the borrowed asset from an actual swap. No second trading pool is presumed necessary. Provisional scope is at most 2x leverage; recommend safer capacity if justified. The owner wants no recurring interest/funding payments. Compare fixed maximum lifetime plus a transparent upfront charge to other defensible interest-free designs. Do not disguise hourly interest as repeated renewals or promise unlimited leverage/liquidity. A bounded matched-payoff design may be an explicitly different fallback, not silently substituted for spot-backed positions.\n\nPRIMARY REFERENCE:\nhttps://helixlev.fun/docs.html (particularly #listing and fees) and its deployed contracts/source references. Announcement https://x.com/Helixlevdotfun/status/2107174659011608599; community discussion is only a proposal, not evidence of compatibility. Helix docs describe running interest, separately funded pools/lending pots, loan/position caps, slow reference prices, liquidations, funder exits and a listed-pool pause that can block closes until an escape path. Verify important claims against available source; flag inaccessible/mismatching evidence. Do not copy a freeze that unnecessarily blocks repayment or healthy closing.\n\nREQUIRED ANALYSIS:\n1. Architecture and actual v4 role. Show token/ETH movement for open, partial close, full close, expiry, liquidation and insolvency. Identify the hook callbacks, vault/position contracts, router, price observations and keeper. Explain compatibility with current fee collection, reentrancy/unlock settlement, return deltas, buyback side effects, exact-input/output bounds and public-router paths. Preserve ordinary trading and the existing LP position. State if IMD is useful only for research; no per-swap LLM or asynchronous web response as an assumed fast liquidation oracle.\n2. Capital table. Consider illustrative user collateral $50/$100/$250/$500, 1.5x/2x, and 1/5/10 concurrent positions, with both one-sided and mixed books. These are scenarios, not authorized spending. State the ETH/USD source/time or leave amounts in ETH with explicit conversion assumptions. Separate vault lending inventory, posted collateral, locked proceeds, liquidation reserve, gas reserve and actual pool depth. Do not count one unit of inventory twice or treat main-pool liquidity as free lending capital. Give maximum position/open-interest formulas and derive recommended capacity from price impact and attack economics, not arbitrary TVL percentages.\n3. User-cost and provider-revenue tables. Include both pool swaps, the actual full-size hook/platform fees, price impact, opening charge candidates (including zero for comparison), refunds, closing/liquidation gas and keeper reward. Show unchanged-price round trip, break-even price move and at least one worked long and short. Derive the fee/margin convention explicitly: gross cash paid, collateral after costs, debt and notional cannot all be called the same thing. Do not add a percentage twice if it is already in an onchain quote. Report provider profit only after losses, gas and service costs, separate from existing project revenue.\n4. Stress and adversaries. Include +/-10/25/50%, rapid -90% crash and +200/+1000% squeeze, one-block gaps, thin/out-of-range liquidity, simultaneous closes, 1/5/30-minute keeper outage, stale/manipulated mark, slow-oracle lag, front-running, self-funded spot manipulation, expiry crowding and vault withdrawal with open loans. Distinguish losses under tested scenarios from the true worst case, potentially all allocated capital. Explain how lending utilization and time limits prevent free indefinite capital occupation without recurring interest.\n5. Reproducibility and recommendation. Use real pinned onchain observations/quotes where available. A constant-product approximation is not an exact simulation of a concentrated-liquidity v4 pool; label approximations and limitations. Deliver executable Python standard-library calculations plus self-checks for conservation, long/short debt repayment, fee signs, insolvency and rounding. State exact commands. Compare the smallest coherent design with staying spot-only. End with recommended parameters, remaining evidence gaps and a narrowly scoped next test. Do not declare production-ready, audited or profitable.\n\nDELIVER EXACTLY THREE ARTIFACTS:\n- artifacts/leverage-report.md: concise findings first, architecture, capital/cost/risk tables, source links with evidence levels, recommendation and unresolved questions.\n- artifacts/leverage-analysis.json: valid JSON with observed baseline, assumptions, formulas, scenarios, costs, capacity, stress results, citations, limitations and recommendation; separate observation from inference. Preserve references to earlier idea IDs as useful.\n- artifacts/leverage-model.py: executable standard-library model that reproduces the tabulated analytical results and has --self-test; no network, payments or secret inputs when run. State which results are analytical rather than exact fork execution.\n",
+  "publisherVersion": "0.1.0+986b9f58",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
