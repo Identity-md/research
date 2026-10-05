@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "b1d50d9f0afeefaad5c7156fb01595d0a2a6b54caf6e6a6547de798ae55bbefd",
+  "artifacts": [
+    {
+      "bytes": 28457,
+      "hash": "37c079cf5da5ec71dabb16023372b0dd2b6e8adf645384e40ed239e2ef5dac3e",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "fca579e45543c94ad3690021b52023d9bd739a3d50e1883aa318572ac4b6c97f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2565f234b0a569e9052bccf27e7929a123a638c6fb37601ec4fa0fc25bbb2723",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3d054d7bc3133cd6ad06d1a167bb521c7537030c95893925247046af424375bc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1507f63d3f1b973a93ee467f9c3eeb74d74589571fa5072d45112deb2949dddc",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "587c2bb0fa53eba16d118c902974910ebecefe13e53b3db19b7f00e38be835f7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "04cf70660d4946e60863b5f50b744ac69f42c02df8d09f7362e8876791f6851a",
+      "evaluation": null,
+      "findings": 4,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "fca579e45543c94ad3690021b52023d9bd739a3d50e1883aa318572ac4b6c97f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4199bf0c80a9d6cf8ebddcc4323ec454ba4ea03ae2398d81fd3fec4d47f8be2a",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "41e109aa23fe84bd87233adbafb58ac75449a1d2f769d21ef182cd18b5313708",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ebee02fc506f27c1b0fadc62728da6e6bb08e89eb86b6d3f22e7fbf1df539ab",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "aae9853b35bbeda2720212264accac1e66de000b6938e741ce2f0099f5b20a93",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e817a62e-1b9f-4469-90d7-7a761579af81",
+  "objective": "IMD Ember World - tenth offline Audit9 source-closure audit (World/Member M1).\nLength/format: Markdown five-row closure matrix, concise summary and separate source/release verdicts; evidence appendix with commands, errors, reproductions and immutable source/line links.\n\nQuestion: Does this exact candidate close Audit9's 3 Low + 2 Info source blockers and the two adjacent counterexamples without reopening prior Auth/ownership/artifact boundaries? Seek any-severity findings within these mechanisms; do not assume a pass.\nPeriod: latest Audit9 completed 2026-10-05 04:30:23.485 UTC; candidate source frozen 10:07:04 UTC; frozen TEAM measurements completed 14:04:44 UTC that day. Earlier Report9's bounded pass does not overrule Audit9.\n\nCandidate: https://github.com/tungweb3/imd-ember-world-review/tree/c2f21a9ef9e1a093ed2c5808f8a99e4751fde643\nOriginal Audit9: https://github.com/Identity-md/research/blob/911652a2b1a7ab7be7d16bc37d97ab9376028fe6/jobs/d76a2a79-7394-420a-99d2-df2ba6a23f45/files/AUDIT.md\nRead Submission10/REVIEW_INPUTS.md and FinalClosure/{CLOSURE_MATRIX.md,TEST_RESULTS.json,ARTIFACT_CLOSURE.json,SOURCE_MANIFEST.json}, plus manifests/submission10-published-source.json. FinalClosure paths are under Submission10/. Historical namespaces are context.\n\nScope: unofficial TypeScript Cloudflare Worker/React SIWE World + Member M1; no Solidity. M1 persists public profiles, so World is not wholly read-only. Selected sources:143 (127 raw exact;16 historically masked files/57 lines). Exclude 3D/scene/media/avatar/selfie/UI/full frontend, private Git/backups/databases, Genesis/Mint, Ember Coin and Fren Pet. Missing full frontend inputs mean unavailable build evidence, not a pass.\n\nOffline/local synthetic tests only. Public repo/prior-report GETs and locked dependency downloads allowed. No production endpoint tests/writes, real wallets/login/signatures, asset actions, approvals, claims, bridges, payments, deployment or new jobs. Never request private credentials/databases.\nFresh exact public checkout, Node24.x; in source/ run:\nnpm ci --ignore-scripts\nnode scripts/review-tests.mjs --check\nnpm run test:review\nnode scripts/verify-artifact-closure.mjs\nUse locked real viem2.56.9, actual AuthClient/Worker and migration-backed SQLite. Run all supported files; no private-source selector, global-module substitute, crypto/Worker/SQLite shim, dropped failing test or hidden skip. Record commands/exits/errors/skips/cancel/todo/retry reasons. Real Windows file-symlink EPERM is failure/unavailable evidence, never an assertion pass. Separate environmental failures from source defects.\n\nReview these five mechanisms and reverse controls:\n1 Low1: use live post-await clocks for final eligibility and admitted/refused no-eligible lane. Test24h-1/24h/24h+1ms, D1 delays0/1/2/5000ms, both enrichment reads, refused/failed/successful refresh, strict ownership proof29999/30000/30001ms, sale, rollback/NaN/Infinity and later recovery. Preserve original proof.checkedAt/index/producer timestamps. Expired/unavailable cannot become complete-empty/not-owned authority; no index/budget/RPC amplification.\n2 Low2: same-client stop/restart A-to-B, locked[] or no-provider clears stale public identity and reconciles first observation independently of cookie A; passive first observation must not logout. Retain actual B-to-A/current address cleanup, explicit grants, binding/account-event fences and passive provider replacement. Adjacent early-click: hold restarted eth_accounts(B) or[], restore cookie A, click before reply, release it. Prior-life A must not enable a stale same-session fast path; late[] must not erase a newer explicit grant.\n3 Low3: B verify commits with response/nonce cleanup held; stop; other context installs cookie A; restart provider[]; restore A; first accountsChanged(C). B's old lifetime must not cause expectedAddress=A logout/A-row revocation. Preserve B's nonce-specific cleanup, actual current C-to-D cleanup and held-completion fencing. Separate A's live SQLite row from shared cookie after delayed clear-cookie headers; old callbacks cannot install B into new UI.\n4 Info4: actual replay CLI --minimize uses validated artifact writer. Test dangling/existing final file links, nonregular outputs, unsafe parent links/junctions, outside-root/namespace attempts, safe regular replacement and default replay without persistence. Preserve input bytes. Adjacent input-parent junction alias: differently spelled input/output paths resolving to the same input must be rejected; safe separate output through that alias preserves both input views. For deliberate invalid HARNESS-CAUSAL witnesses, child exit1 alone proves neither rejection nor an Auth vulnerability: inspect ARTIFACT_REJECTED, bytes/existence/hashes. State locally controlled-root assumption; no hostile concurrent ancestor-swap or SMB/NFS guarantee.\n5 Info5: read back persisted nested quoted/bare route-prefix filenames/suffix variants: /api/auth/session.log, /api/auth/verify.backup, /api/me/home.private.json must be masked. Preserve exact allowed routes/query/subroute tokens, network URLs, relative IDs, nonce/action/event identities and replay structure. Exact routes cannot exempt arbitrary filename prefixes. Synthetic filenames do not demonstrate production data leakage.\n\nTEAM claims to verify independently:25 supported files; review659/659; artifact28/28; verifier19/19; fresh private/public review659/659; private full1709/1709. Positive runs exit0, zero fail/cancel/skipped/todo. Same-evaluator vulnerable baseline64:40 pass/24 assertion fail; baseline verifier19:14 pass/5 assertion fail, exit1, no EPERM/setup failures. Prior EPERM/setup retries are documented. Use current TEST_RESULTS.json; historical613/613 and13/13 are not current totals. Tests are bounded, not exhaustive state-machine/global RPC/concurrency proof.\n\nFor every finding and adjacent case: severity, exact source location/event order, expected/actual, relevant synthetic SQLite rows, prompt/connect/challenge/verify/logout/hint/broadcast/index/budget/RPC counts, command/exit/hash, and CLOSED/PARTIAL/OPEN/accepted-limit/UNKNOWN with rationale. Cite exact-pin sources/lines beside claims. Separate REVIEWER reproductions, TEAM measurements, history, inference and unavailable checks.\nReturn separate SOURCE-CLOSURE and RELEASE-READINESS verdicts: PASS/BLOCKED/UNKNOWN. Release baseline remains UNKNOWN; this source was not deployed. Offline closure does not measure production Cloudflare/browser/provider/cookies/ERC1271/M1 authorization/D1/WAF/limiter/upstream/process-death/cross-isolate behavior. Bound accepted limits; UNKNOWN is not a demonstrated source defect. Completed/accepted, passing tests or Low/Info labels are not certification/endorsement/zero vulnerabilities/fund-safety proof.\n\nPublication provenance: private source a2e6aca828858730cfb6b60931abea20ba9b6ab6. Final pin directly extends official public347268a7ecae700088547c2402db9a3eb07a6fd2. All143 source bytes match tested local projection59dfc4a90a52de181c1420f0babe6170c1dc08d7; differences are docs/checksums only. Intermediate local Git history is private, not published. Privacy-gate receipt is private; publication checks are not independent source review.",
+  "publisherVersion": "0.1.0+b4c7ae3a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "c2f21a9ef9e1a093ed2c5808f8a99e4751fde643",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
