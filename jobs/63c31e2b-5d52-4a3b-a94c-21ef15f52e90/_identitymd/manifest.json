@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "885c4f4d227b41d5572b94e4fda30f72b77887cc1b5510caee9f81c96150ec7c",
+  "artifacts": [
+    {
+      "bytes": 18172,
+      "hash": "af016f6ec1e8239bb5ce92adf86e0ff0f4d74f74d4e0755ef248e5667cbd42cc",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "5b89f643d041f9b8bf008bbcd3a227eb910941e149ae93ec99e69999871500e2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "24282732aac890f7f66f30c5935a02666476ef625511f1bb805dea0ccb17aace",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "cefd409fd5dde6f8151574febcb2cef40277287545da21e820c3d4a9d73002a3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "163f8bc7d28274e2f0e184915e9c4c3d6426328fdb2e6fa4d97067a8ab0f7ecb",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "daec9d289214d5dc5a09c0a2878c014875aec8db8a6264d7228ccaa991b4109d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9ef5559b56f3a7a2ec8a9896819d9168ac4eee992eae221a5be37d5ff536c38f",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "33355d835cc16a9ea9c35228ea4ddb925e7d5e8eb70520f6020207792f28c758",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bc1e515ca5c78ac4464bc081a0c98eeab32c5b324cceb6b72b670b40ef2e5b5d",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5b89f643d041f9b8bf008bbcd3a227eb910941e149ae93ec99e69999871500e2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4a019e19ac09689485d0cd4c9a1c6b7fd7bd76639e9e7dbac12944477a9681d0",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "ad8e427da9125a7e0906adeaf62ab1641d5b3cf9667352b4e1feca5f0bf408fe",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "63c31e2b-5d52-4a3b-a94c-21ef15f52e90",
+  "objective": "IMD Ember World - Audit11 narrow source closure of Audit10 / Report10\n\nQUESTION\nDoes this exact candidate close all six open Audit10/Report10 source issues (1 Low + 5 Info/test-reliability issues), including the same-invariant neighbor cases, without reopening prior Auth, ownership, artifact or Member M1 boundaries? Seek any-severity defects within these mechanisms. Do not assume PASS from local test counts.\n\nPERIOD AND SOURCES\nReview the latest Audit10/Report10 findings finalized 2026-10-05 and the remediation frozen 2026-10-06 Asia/Taipei. Use the submitted immutable pin and its recorded freeze/measurement times; historical namespaces are context, not current evidence.\nCandidate: https://github.com/tungweb3/imd-ember-world-review/tree/35ace952824ebf711fd9fa6cb7ea1cc83b75cd6a\nAudit10: https://github.com/Identity-md/research/blob/d2bbc2713f0c15d7542bc8afa09bafc4bf12ef12/jobs/e817a62e-1b9f-4469-90d7-7a761579af81/files/AUDIT.md\nReport10: https://github.com/Identity-md/research/blob/7701ce0c6d860ba50616629d0a3a60e644135fe4/jobs/a3ec7191-f1ab-400e-bb5f-dfa858c6da65/files/artifacts/report.md\nRead README, Submission11/REVIEW_INPUTS.md, then Submission11/FinalClosure/{CLOSURE_MATRIX.md,TEST_RESULTS.json,ARTIFACT_CLOSURE.json,REVIEWER_EVIDENCE.json,LATEST_AUDIT_IDENTITY.md,FINAL_AUDIT_MAPPING.md}. Verify manifests/submission11-published-source.json and SHA256SUMS. Inspect the actual changed source, not just descriptions.\n\nSCOPE\nUnofficial TypeScript Cloudflare Worker / React SIWE World and Member M1; no Solidity. M1 writes persistent public profiles, so World is not wholly read-only. Review only the six mechanisms below and directly affected prior invariants. Exclude feature development, 3D/scene/media/avatar/selfie/full UI, Genesis/Mint, Ember Coin, Fren Pet, private databases/backups/credentials. Missing frontend inputs are unavailable build evidence, not a successful full-site build.\nUse local synthetic fixtures and locked real viem, actual AuthClient/Worker and migration-backed SQLite. Public repository reads and locked dependency downloads are allowed. No production endpoints or writes, real wallets/signatures, asset actions, approvals, claims, bridges, payment, deployment or new jobs. Do not request private credentials or databases.\n\nSIX CLOSURE ROWS\n1. A10-L1 (Low): passive provider discovery must not replace stop/context-switch nonce cleanup with lock-reconcile. Reproduce held B verify, first nonce logout failure before Worker, stop/restart, discovery C, then late verify; also replacement cookie A and same-life genuine switch. Keep old-lifetime nonce responsibility and UI fencing; no expectedAddress=A logout from passive first observation. Preserve true current C-to-D cleanup and lock-to-stop promotion. Neighbor controls: repeated transport/503 uncertainty retains the owner without an immediate retry loop; later existing lifecycle trigger retries the same nonce; 2xx revokes or post-fence nonce 409 conclusively refuses, preserving foreign A. A fresh current-life canonical PRESENT may coexist with pending cleanup; old verify callbacks cannot install it. Separate database-row safety from delayed clear-cookie effects and preserve same-address newer sessions.\n2. A10-I1 (Info): after awaited owner sightings, sample one live ranking clock before the 256-candidate cut/keepIndex. With 257 registered seats, seats 1..256 expire during the await while 257 remains eligible: 257 must be retained, eligible=1, size=s, still partial where required. Preserve index read_at and proof producer timestamps, ID tie-breaks, cap, RPC/index/budget limits.\n3. A10-I2 (Info): public assets status uses a live display clock after all relevant awaited enrichment, including later character I/O. Test delays 0/1/2/5000ms around inclusive 24h boundaries; initial and subsequent responses agree. Preserve fetchedAt/presence producer data. No added index, budget or RPC requests. Public display hints are not verified ownership authority.\n4. A10-I3 (Info): persisted nested/quoted/bare '/api/auth/session private.log', '/api/auth/session dir/file.ts' and '/api/auth/session (private)/x.ts' must be masked as local paths. Preserve complete allowed route/query/subroute tokens, real network URLs, relative test identifiers and nonce/action/event/replay structure. Read back persisted bytes; do not rely solely on an in-memory sanitizer result. Recheck prior replay writer containment and real symlink/junction controls.\n5. R10-N1 (Info): NaN/Infinity/-Infinity must fail closed before lane/probe persistence, including clocks becoming invalid after awaits. Inspect actual index_lanes and index_lane_probes rows, not only HTTP status. No nonfinite durable values or stuck lane. An existing finite probe keeps its bounded 30-second backoff, without refund or timestamp refresh; finite requests recover at +10m/+60m. Include finite/rollback controls, no extra upstream/budget calls and no proof/producer timestamp renewal.\n6. R10-N2 (Info/test reliability): the genuine B-to-A LOW2 regression waits for semantic logout completion and notification, not a fixed flush/sleep. Preserve all original response, SQLite, prompt, logout and broadcast assertions. Verify the recorded 50 targeted and 10 full stability runs; independently repeat where feasible and disclose exact repeats/unavailable checks. Do not replace failed tests or change the reference oracle to fit candidate behavior.\n\nVALIDATION\nFresh exact public checkout, Node24.x; in source/:\nnpm ci --ignore-scripts\nnode scripts/review-tests.mjs --check\nnpm run test:review\nnode scripts/verify-artifact-closure.mjs\nRun all supported files with current dynamic totals. No private-source selector, shim, global module substitution, hidden skipped failure or copied node_modules. Distinguish real assertion failures from Windows symlink EPERM or setup failures; neither is an assertion PASS. Check causal same-evaluator baseline failures, positive regressions, reverse controls and unchanged original tests. Local TEAM author/reviewer checks are not external Swarm verdicts. Record commands, exits, totals, failures, cancellation/skips/todo, retries and reasons.\n\nLENGTH AND FORMAT\nReturn Markdown: short summary, six-row closure matrix (ID/severity, exact-pin location, reproduction, measured fix/control result, CLOSED/PARTIAL/OPEN/UNKNOWN with rationale), then a concise evidence appendix. Cite immutable source/line links beside claims. Record key auth rows/nonces and prompt/connect/challenge/verify/logout/hint/broadcast/index/budget/RPC counts where relevant; no tokens or private secrets. Distinguish independent reproduction, TEAM evidence, historical results, inference and unavailable checks.\nGive separate SOURCE-CLOSURE and RELEASE-READINESS verdicts: PASS/BLOCKED/UNKNOWN. Source closure concerns this bounded candidate only; release readiness remains independently unmeasured. Offline tests do not establish production Cloudflare/browser/provider/cookie/ERC-1271/M1/D1/WAF/limiter/upstream/process-death/cross-isolate behavior or deployed source identity. Completed/accepted, passing counts and Low/Info labels are not certification, endorsement, zero vulnerabilities or fund-safety proof.",
+  "publisherVersion": "0.1.0+986b9f58",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "35ace952824ebf711fd9fa6cb7ea1cc83b75cd6a",
+    "repoUrl": "https://github.com/tungweb3/imd-ember-world-review.git"
+  }
+}
