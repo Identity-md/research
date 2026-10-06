@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "a57ed013c7701094fc291a9b888a7b77a9081e7b2601030384bdf32a2cfcf474",
+  "artifacts": [
+    {
+      "bytes": 24453,
+      "hash": "a5e9276fb4d4bc8c45a8777ed01287a36a9e969a4ae48cbb6dbe489a80e98745",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "48b60bb7461d72cfad96225b560f73dd41e9e5497248e109e4cbf6f3009374d2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b29f0968f2df07a002bfba3f8fb88c0e5957e7b1641bb6f355c86332c5a00f9f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "48b60bb7461d72cfad96225b560f73dd41e9e5497248e109e4cbf6f3009374d2",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+7471272e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "898e7e39-1bab-4e6d-ad27-50bae407d6aa",
+  "objective": "**IMD Viral Wars — Research and Project Design**\n\nAnalyze this idea as a project powered by the IMD agent swarm. Deliver a feasibility assessment and actionable specification. Scope: research, economic modeling and design.\n\n**Core concept**\n\nTwo rival teams, Team Red and Team Blue, each have a token paired with $IMD: RED/IMD and BLUE/IMD. Each team operates its own TikTok and/or YouTube Shorts account and publishes one short video daily, created through IMD.\n\nHolders may propose and vote on prompts and scripts. Both teams receive equal production budgets.\n\nEach round compares the two videos over equal viewing windows. The team with more eligible views wins. Trading taxes from BOTH tokens fund a shared treasury. A defined portion pays for IMD jobs and operating costs; ALL remaining funds allocated to that round buy and burn the winning team's token. Winners can change daily; alternation is not forced.\n\nGoal: entertaining rivalry, audience growth, community participation and recurring IMD usage.\n\n**1. Product and competition**\n\nRecommend the format and initial platform. Define publication timing, viewing windows, eligible views, ties, failed uploads, deleted videos and disputed results. Define cross-platform scoring if needed. Address the advantage of an established audience and how the losing team remains worth supporting.\n\n**2. IMD integration**\n\nCheck current IMD documentation, skills, capabilities and launch policies. Map the daily lifecycle to supported IMD components. Assess create-video, off-chain oracle panels and signed attestations. Explain how new video IDs enter recurring jobs despite frozen schedule inputs. Identify external adapters, account permissions, transaction executors and human responsibilities. Verify supported chains, IMD pairings, launch allocations and current fees.\n\n**3. Views and settlement**\n\nUse permitted platform data. Define exact video IDs, metric, observation time, stored evidence, panel agreement and finality. Multiple agents agreeing on a counter does not prove organic attention. Address bots, purchased views, paid promotion, API delays and malicious reports targeting opponents. Explain trust in data collectors and the attestation signer, plus contract checks for the correct round and prevention of duplicate settlement. Unverifiable outcomes must not trigger a burn.\n\n**4. Token economics**\n\nRecommend tax implementation, rates, treasury denomination, operating reserve, initial liquidity and buyback execution. Distinguish trading taxes from protocol or liquidity-provider fees. Model low, medium and high activity, prolonged losing streaks and falling volume. Include production, oracle, integration and transaction costs. Calculate break-even trading volume and sensitivity to assumptions. Assess manipulation profits, wash trading, front-running and price impact. Burning tokens does not guarantee appreciation.\n\n**5. Community and content**\n\nDesign simple holder voting with balance snapshots, moderation and fallback prompts. Address large-holder control and ownership of both tokens. Propose team identities and sample videos appealing to viewers without tokens.\n\n**6. MVP and adversarial review**\n\nPropose a 30-day pilot, initially using one platform. Include a dashboard for videos, voting, results, treasury spending and burn proofs. Define measurable success criteria and failure conditions. Challenge key assumptions independently before consolidating findings.\n\n**Deliver one coherent report containing:**\n\n- Executive verdict: proceed, revise or reject, with reasons.\n- Recommended rules and parameters.\n- Architecture, daily lifecycle and explicit trust boundaries.\n- Economic scenarios with reproducible calculations.\n- Ranked risks, mitigations and unresolved dependencies.\n- Phased implementation plan, cost estimates and acceptance criteria.\n\nSeparate verified capabilities, assumptions and extensions. Cite primary sources. Give concrete recommendations while preserving the two-team competition.\n\n\nAdditional research requirements:\n\nTimeframe: Assess feasibility using information current as of the execution date. State that date in the report. Design the proposed 30-day pilot and model its operating costs and funding needs.\n\nSources: Use official IMD documentation at https://imd.fun/docs/ and the current skill catalog, capabilities and launch policies available through https://api.imd.fun. Use official YouTube and TikTok developer documentation for publishing, analytics access and platform restrictions. Cite sources beside relevant claims. Clearly distinguish documented capabilities from verified behavior, assumptions and proposed extensions.\n\nFormat: Deliver one structured report in English, approximately 2,000–3,000 words excluding tables and references. Begin with an executive recommendation, then cover competition rules, IMD integration, view verification, token economics, risks and the implementation roadmap.\n\nInclude a capability matrix showing what IMD currently supports, what requires external integration and what requires human operation. Include low-, medium- and high-activity economic scenarios with explicit assumptions and reproducible calculations.\n\nEnd with the recommended MVP, unresolved blockers and a prioritized sequence of follow-up tasks suitable for submission to the IMD swarm.",
+  "publisherVersion": "0.1.0+4124d5bb",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
