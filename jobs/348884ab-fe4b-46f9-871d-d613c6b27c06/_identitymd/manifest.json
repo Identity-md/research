@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "2c244fc68f420ec31ff1087419fc114800744fa0a67769d88eb7566b47c7c22c",
+  "artifacts": [
+    {
+      "bytes": 35144,
+      "hash": "44f8eb08424bb125f2b66891263b30539f4e01ad5efb6f4f13113fe3be202215",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "042ae79d6377b3919646e9f0ac77b3a512d8953143f58619c628d538041d46c4"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1731fbfe0c4574fb6e59405e92715a96ebaf28ae80246f080a0c3368e4023bf8",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5695cb02ac1fef2971b2ccaf2fcbb2d4fa1216ffecd1891d2712de7d0316d11a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3a40eaafbd83a6bc57b859dab02a7e0ae1fcd12ca7afee73c0d6c380b94178e9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "42c45a075fb6d48edbf90d60a39b0809b1bf820a897ba469b6ef23152719e9e8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2c968e88904ec22bd5b436e37ebea0b565f7548d84ab140bb65b0acd2c0b7d42",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8b2a82be9ba54e7dd2284ddd6cd944cdb3b61113f6d5e97c7e49c7b918033873",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "27168b1ff68f84d222c33c9caedd445b1ce14d8429cb7647d95146490b6d392c",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "405bf224b484384cda5b00ccaa4bdd39e923c65de98e8eb1661d48200b797c12",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7591760a616c6429719f71d890030c12b4d6f905aa1e8dd2b1937fd710e32bb5",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "042ae79d6377b3919646e9f0ac77b3a512d8953143f58619c628d538041d46c4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "348884ab-fe4b-46f9-871d-d613c6b27c06",
+  "objective": "Project: PepesFamily launchpad v4, final check after re-check b803125e\nRepo: github.com/0xtenang/PepesFamily (commit 2560653)\nScope: contracts/src/PepesFamily.sol, contracts/src/PadToken.sol, contracts/src/PepesBuyback.sol, and contracts/src/PepesFamilyEthRouter.sol (now passes hookData)\nTests: contracts/test/PepesFamily.t.sol, contracts/test/PepesBuyback.t.sol, contracts/test/Fork.t.sol\n\nChanges since b803125e\n\nFindings 1, 2 and 5: the reference follows only each buyback's own impact (ref × sqrtAfter / sqrtBefore). Otherwise poke() moves it toward spot by at most 2%/day (in price), at most 1 day counted per call. poke is permissionless and runs inside every buyback, and from PadToken.recycle via a low-level call. The guard is a flat 2% band. Minimum buyback is 0.1 IMD. Your proof scenarios are in test/PepesBuyback.t.sol: test_pacedPreBuysDoNotPay, test_idleTimeDoesNotLoosenTheGuard, test_dumpBracketDoesNotStall.\nFinding 3: receipts count as activity only when msg.sender == to or it's the first receipt.\nFinding 4: PepesFamilyEthRouter passes abi.encode(user) as hookData on the token-pool swaps. The hook decodes hookData when sender is router or ethRouter.\nPlease check\n\nCan the ratchet be gamed: repeated pokes during a pump, poking around a dip, or the residual after a genuine crash (reference above market)?\nIs the low-level poke call from recycle safe? It should never block recycle.\nDo the ETH-router hookData changes affect anything else, for example the IMD/ETH pool or the Trade event?\nAny regression of earlier findings, or of v3 guarantees.",
+  "publisherVersion": "0.1.0+e6140b7a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "25606530e1ef2f5f1b405e743067a6050a646808",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
