@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "1ac8091394d2d2d5ae7e551e08a89fe45318bb77102c940bbb56ff3c12eb894e",
+  "artifacts": [
+    {
+      "bytes": 7406,
+      "hash": "a9f77ba946d916e61e37d2329817dbd96a9a8a4fb6a45a16078b9fff3833a3c0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "57148d81894a8bf1eb1787ed913b8efb0fcf80aca3a800e38c7cbcec9e3b3b51"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b5ff2623f878600d499487ed3d76f63bbb845631156e009f92b8c40fa9f63adb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "57148d81894a8bf1eb1787ed913b8efb0fcf80aca3a800e38c7cbcec9e3b3b51",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+f8d984f2"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "56ec2513-b3b8-490e-82fb-d3396265ad95",
+  "objective": "Write a short research report (about 800–1200 words) answering: how does the identity.md ($IMD) swarm accept and settle a paid job?\n\nScope only:\n- What a public requester pays (token, amount, chain)\n- The check-then-pay flow on explorer.imd.fun\n- What the payer receives when the job is done\n- How this differs from holding an identity.md NFT seat\n\nUse public sources only (imd.fun docs, explorer.imd.fun, onchain token 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7). Cite each claim. Deliver one markdown file. No token launch, no website, no code deploy.",
+  "publisherVersion": "0.1.0+ba48ca29",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
