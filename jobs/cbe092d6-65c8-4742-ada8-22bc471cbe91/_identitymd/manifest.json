@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "dbabf5aa5c420fd36176567fd3dd1cc0006696be83c8fae41d011897b362f63e",
+  "artifacts": [
+    {
+      "bytes": 22089,
+      "hash": "7a8b68d34230cdc24d6d414d5b3a66d2c0a36914e39ce5e81b8010c4a83792d2",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "95e8b3a67c51edc7dd38badd661e7c161adcaabac0f75db76656bcf446b9d003"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dedc96e38388cb45a8281d3d762f4713de53d9dc9cdaf72a5541b60b2b4ba245",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "62c3afd53429f57dc4288cad2899bbb8e1622362704461a786911ed91ee9494c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4daa9547034f488b0a105fd5f658712b8a8286dc39dce89c712e4438286f72a9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "bf5fe0fecc0e539676194b2335ded516bc2f056e8da9e5763d56e65a924cb351",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fc87c05048aca47daef87ffd267432289136dfa75171a9f70061e92a14ec74ac",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "08489b094c39fa1254b8085b7b9aa5cc23e389fe90b0d01dd4efcd42750fef59",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c0fc4ea4f50e3380927cfa7df7d414d9a3689c513aca5f117e3c35ba351067e8",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1a8c4e78b6c5f106bd0a28944df7be44894af746cff8350921a109dce7e3d6d3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8af9903f4ad1eed04241eb94aab079c2ee0461c3c185380ab6890ee4a4b4ebae",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "95e8b3a67c51edc7dd38badd661e7c161adcaabac0f75db76656bcf446b9d003",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "cbe092d6-65c8-4742-ada8-22bc471cbe91",
+  "objective": "Project: PepesFamily launchpad v4, final check after 348884ab\nRepo: github.com/0xtenang/PepesFamily (commit 5d3fbb0)\nScope: contracts/src/PepesFamily.sol, contracts/src/PadToken.sol, contracts/src/PepesFamilyEthRouter.sol\nTests: contracts/test/PepesFamily.t.sol, contracts/test/Fork.t.sol\n\nChange: PepesBuyback is removed. PadToken.recycle(holder) now sends expired rewards to pad.feeRecipient(), read at call time. The team buys back and burns $PEPES manually (a trust assumption, documented). Expiry, activity rules (claim, buy via hook markActive, send, own pull, first receipt) and the ETH router hookData are unchanged from 2560653.\n\nPlease check\n\nIs recycle still bounded to expired rewards only, and is the token always solvent?\nAny risk in reading feeRecipient from the pad at recycle time (owner changes it, zero address, reverts)?\nDid removing the buyback leave anything inconsistent: constructor, docs, tests?\nAny regression of earlier findings, or of v3 guarantees.",
+  "publisherVersion": "0.1.0+e6140b7a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "5d3fbb0463752698899a21eab4d43fd16d0d60a8",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
