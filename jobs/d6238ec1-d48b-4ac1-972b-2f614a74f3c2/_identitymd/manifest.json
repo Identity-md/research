@@ -1,0 +1,61 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6341094852dc3a43b0f61d957798f4bba08412f063b24de8def39d15e2bb4e35",
+  "artifacts": [
+    {
+      "bytes": 37951,
+      "hash": "f65a0f97cb105320881adda31c92551510bee4d8126ecd153fa6aa7efe763290",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v3.md",
+      "publishedPath": "files/artifacts/report-v3.md",
+      "submissionHash": "73c151acfdc99f2e7b3f4e9440accbfa7bd331043a218cd2f9d2942f7c3f9afa"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "de8edb4ea8fd4c5c66d8b2e26190ba97d51bbd6b96ae4c00a5d6b6218d41467a",
+      "changedPaths": [
+        "README.md",
+        "evidence/v3/SHA256SUMS",
+        "evidence/v3/blockscout-modifyliquidity-launch737.json",
+        "evidence/v3/blockscout-modifyliquidity-launch740.json",
+        "evidence/v3/blockscout-modifyliquidity-launch812.json",
+        "evidence/v3/dexscreener-imd-token.json",
+        "evidence/v3/dexscreener-zto-imd-pair.json",
+        "evidence/v3/funds-flow-model-output.txt",
+        "evidence/v3/imd-check-red-evm_project-mainnet-imd.json",
+        "evidence/v3/imd-check-red-univ4hook-mainnet-imd.json",
+        "evidence/v3/imd-launch-policies-2026-10-06T2340Z.json",
+        "evidence/v3/imd-requests-capabilities-2026-10-06T2340Z.json",
+        "evidence/v3/imd-version.json",
+        "evidence/v3/onchain-claimfees-raw.json",
+        "evidence/v3/onchain-launchfees-claims.json",
+        "evidence/v3/report-v2.md",
+        "scripts/capture_v3_evidence.py",
+        "scripts/funds_flow_v21.py"
+      ],
+      "deviceKey": "c0fc4ea4f50e3380927cfa7df7d414d9a3689c513aca5f117e3c35ba351067e8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "73c151acfdc99f2e7b3f4e9440accbfa7bd331043a218cd2f9d2942f7c3f9afa",
+      "treeHash": "acb0ef1eb615bfa2aae089b099b6ac8071cc157c",
+      "verifiedTreeHash": "acb0ef1eb615bfa2aae089b099b6ac8071cc157c",
+      "verifierVersion": "0.1.0+7471272e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d6238ec1-d48b-4ac1-972b-2f614a74f3c2",
+  "objective": "Prepare a targeted v2.1 correction and the smallest practical validation plan for IMD Viral Wars.\n\nResolve these issues:\n\n1. Preserve the original reward rule: fees from both teams, after operating costs, fund the winner of that round. Section 4.5 currently retains the losing token for a future victory, which changes this rule. Evaluate converting collected fees into IMD before allocation, including conversion costs and price impact. Clearly identify any alternative as a change to the product.\n\n2. Reconcile treasury accounting with the economic model. The model allocates 20% of all fee revenue to operations, while section 4.5 applies this only to IMD receipts. Model mixed-currency receipts and distinguish accrued fees, claimed funds and spendable operating funds.\n\n3. Define non-overlapping fee collection periods and assign each period to exactly one round. Specify treatment of draws, no-contests, delayed claims, unused buyback budgets and season-end balances.\n\n4. Correct the measurement window. An opening snapshot at publication plus 15 minutes excludes those initial views. Specify the actual scored interval, deterministic selection of opening and closing snapshots, and missing-data rules. Distinguish response timestamps from the freshness of the underlying counters.\n\n5. Provide accessible evidence for the claimed native fee split and launch configuration. Separate dry-run acceptance from demonstrated execution. Design a minimal check of fee currency, collection rights, claim mechanics and treasury-wallet compatibility, using the actual intended contracts and policy.\n\n6. Clarify that seven daily balance snapshots do not prove continuous seven-day holding. Assess temporary borrowing around predictable snapshots.\n\nDeliver corrected sections, an updated funds-flow example covering RED, BLUE and IMD receipts, and a short validation checklist with pass/fail criteria. Prioritize the checks that determine whether the original two-token, winner-funded burn mechanism can operate as intended.",
+  "publisherVersion": "0.1.0+4124d5bb",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
