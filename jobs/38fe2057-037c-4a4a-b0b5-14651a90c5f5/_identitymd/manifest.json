@@ -1,0 +1,53 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ddc04403e85f1ae71dbba65cb3e5f6fc96a0e69497d8ea987b9fa5f2f1779f8f",
+  "artifacts": [
+    {
+      "bytes": 40838,
+      "hash": "e58c68ef0250a62c1d3ec70a93460805a5c11fee1304f6931aa7529aff947753",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "a42979dd18d297a59746d8470680d32a9c71fd78c36d23ec3ea0c940e6f32776"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "cdff4e7bdeeb9f064a07241a7b5c22fee164722654f6c0700e0ea019909cf706",
+      "changedPaths": [
+        "README.md",
+        "evidence/SHA256SUMS",
+        "evidence/imd-check-custom-token-fee.json",
+        "evidence/imd-check-schedule-30-runs.json",
+        "evidence/imd-check-univ4hook-mainnet-imd.json",
+        "evidence/imd-create-video-job-result-sample.json",
+        "evidence/imd-launch-policies.json",
+        "evidence/imd-requests-capabilities.json",
+        "evidence/imd-skills.json",
+        "evidence/original-report-v1.md"
+      ],
+      "deviceKey": "b4e34f9d3c724992e2ab9f7f3bac398313404a93f1fc7aa5c63eab96b07ce1d2",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "a42979dd18d297a59746d8470680d32a9c71fd78c36d23ec3ea0c940e6f32776",
+      "treeHash": "a3eeba48614b9276b1fff1e4c930189b27d4a2f5",
+      "verifiedTreeHash": "a3eeba48614b9276b1fff1e4c930189b27d4a2f5",
+      "verifierVersion": "0.1.0+7471272e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "38fe2057-037c-4a4a-b0b5-14651a90c5f5",
+  "objective": "Review and correct the following report before it is used as an implementation specification:\n\nhttps://github.com/Identity-md/research/blob/main/jobs/898e7e39-1bab-4e6d-ad27-50bae407d6aa/files/artifacts/report.md\n\nDeliver a revised report and a concise correction log. Independently verify the following findings:\n\n1. Recalculate all economics. Under the stated assumptions, $1,950 / (30 × 0.01 × 0.20) equals $32,500/day, not $325,000/day. Correct the sensitivity scenarios and distinguish the assumed cash budget from additional IMD costs.\n\n2. Rebuild the IMD budget from an explicit job inventory covering every video, oracle request, setup task and recurring execution. Explain whether videos are separate jobs or grouped outputs. Avoid double-counting prepaid schedule executions. Justify the additional $15-per-video assumption and identify what it purchases beyond IMD fees.\n\n3. Fix the calendar. Days 15–30 cannot contain 27 daily rounds. Separate setup from the competition and account for the final 48-hour observation windows and dispute periods.\n\n4. Define an exact measurement cutoff. Later reads of a mutable counter cannot reconstruct an earlier value automatically. Specify snapshot timing, permitted delays, evidence provenance and fallback rules. Explain what evidence hashes prove and what they do not prove.\n\n5. Reassess TikTok using the appropriate authorized-account API. Do not generalize Research API delays to other APIs without evidence.\n\n6. Correct the tax specification: a condition checking only whether the recipient is a pool does not describe both buys and sells. Verify compatibility with the selected DEX and IMD launch policy.\n\n7. Resolve the contradictory voting rule: “one-wallet-one-vote” versus “10 votes per address.” Explain eligibility and resistance to users splitting holdings across wallets.\n\n8. Preserve the intended product: two IMD-paired tokens, community-directed videos and a shared fund buying and burning the winner’s token. Distinguish what a simulation validates from what requires a token-enabled pilot. Specify measurable conditions for progressing between them.\n\nUse current primary sources, label untested assumptions, and update the feasibility recommendation after correcting these issues.",
+  "publisherVersion": "0.1.0+4124d5bb",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
