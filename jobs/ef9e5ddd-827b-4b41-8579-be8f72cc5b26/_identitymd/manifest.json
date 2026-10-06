@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "771be76bbe0a029ff6bb29088867ee1464967b28f9f34a595a1c973eff4493dd",
+  "artifacts": [
+    {
+      "bytes": 6638,
+      "hash": "aaa07c452a013b290f9ae265d4ba4364304db23cf6ddcda3d98d3753217ac89f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "855212d05c15e38377f14060b9cd70f9c99d97313a4c8377f051f9263053b095"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b94d8a9fa9123fb17749c3be6d28e190273f1cd7570a5fb43a995daa4da92e07",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "855212d05c15e38377f14060b9cd70f9c99d97313a4c8377f051f9263053b095",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+5dba5e5e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ef9e5ddd-827b-4b41-8579-be8f72cc5b26",
+  "objective": "Write a short research report (about 800–1200 words) answering: what is an identity.md NFT seat, and what can its holder do that a normal $IMD holder cannot?\n\nScope only:\n- Supply, contract 0x0000ec93127baa929e58e97dd0095a2bfb38ec1d, and what a seat represents\n- Steps to put a seat to work (ERC-8004 registration, worker client, model)\n- What paid public jobs cost (0.5 IMD, Ethereum mainnet, x402/Permit2) versus holding a seat\n- Whether selling the NFT removes the right to finish assigned work\n\nUse public sources only (imd.fun docs, explorer.imd.fun, OpenSea collection identitymd). Cite each claim. Deliver one markdown file. No token launch, no website, no code deploy.",
+  "publisherVersion": "0.1.0+ba48ca29",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}

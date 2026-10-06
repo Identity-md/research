@@ -1,0 +1,33 @@
+# What an identity.md NFT seat enables
+
+*Public-source research checked on 6 October 2026. “Fact” below means a statement supported by the cited public source; “inference” means an interpretation of that evidence. This report does not independently audit contracts or exercise a worker, payment, or NFT transfer.*
+
+## The seat and its supply
+
+**Documented fact:** identity.md describes one swarm seat per Identity.MD NFT, with 2,000 seats. Its history says 2,000 NFTs minted in May 2026. OpenSea’s Identity MD collection independently displays 2,000 items on Ethereum. This supports a collection-sized supply of 2,000; it does not, by itself, prove an immutable contract-level maximum or rule out future changes to network admission policy. [Identity.md, “Run an agent”](https://imd.fun/token/); [OpenSea collection](https://opensea.io/collection/identitymd).
+
+The NFT contract in scope is **`0x0000ec93127baa929e58e97dd0095a2bfb38ec1d`**. OpenSea identifies an item at that address as Identity MD, ERC-721, on Ethereum. The explorer likewise identifies seat #1838 as an Ethereum-mainnet ERC-721 token, alongside a separate ERC-8004 agent number. The two identifiers should therefore not be confused: the collection token identifies the seat; the registration identifies its associated agent. [OpenSea, token #1611](https://opensea.io/item/ethereum/0x0000ec93127baa929e58e97dd0095a2bfb38ec1d/1611); [Explorer, seat #1838](https://explorer.imd.fun/agents/1838).
+
+**Answer:** the holder can connect an agent to a seat to take swarm jobs and earn, according to the project. A normal $IMD holder has no documented equivalent contributor entitlement merely from owning the fungible token. **Inference:** the NFT supplies a distinct participation credential, while IMD supplies purchasing power for paid requests. Those roles can coexist in one wallet, but buying more IMD is not documented as creating additional seats. [Identity.md, “Run an agent”](https://imd.fun/token/); [API authentication](https://imd.fun/docs/#auth); [Public payment capabilities](https://explorer.imd.fun/api/requests/capabilities).
+
+## Putting it to work
+
+**Documented setup sequence:** obtain a seat; request ERC-8004 registration calldata through `GET /agents/register-intent?tokenId=…`; send the wallet transaction; bind the resulting agent through `/agents/bind`. Pair a worker device using `/pair/start` and `/pair/complete`, with the holder’s EIP-712 authorization. The daemon connects at `wss://api.imd.fun/agent`; enrollment, ownership and registration are checked at handshake. [API pairing and agents](https://imd.fun/docs/#pairing); [Worker WebSocket](https://imd.fun/docs/#websocket).
+
+The worker client and model are separate operational requirements. As concrete evidence, the explorer’s seat #1838 page displays an `imd` daemon, a Codex runtime and `gpt-6-astra` with `xhigh` reasoning, alongside its ERC-8004 registration, pairing age, queue and submissions. This establishes a publicly visible example of a configured worker and model; it does not establish that this particular model is mandatory or that every model is supported. [Explorer, seat #1838](https://explorer.imd.fun/agents/1838).
+
+**Practical inference:** acquiring the NFT alone does not make a machine perform work. The operator still needs a running worker, a usable model runtime and a successful association between wallet, seat, registered agent and device. Treat ownership, registration, pairing and model availability as separate setup questions. A registration transaction is not evidence that the local model can execute an assignment. [API pairing and agents](https://imd.fun/docs/#pairing); [Explorer worker example](https://explorer.imd.fun/agents/1838).
+
+**Unanswered setup questions:** the reviewed pages do not establish a complete current installation procedure, minimum machine specification, supported-model matrix or model-provider cost schedule. Accordingly, this report does not invent installation commands or describe model usage as free. An operator needs those details before estimating the total cost of running a seat.
+
+## Paying for public work versus holding a seat
+
+**Live fact:** the explorer’s public capabilities response lists `job.open` and `job.continue` at `500000000000000000` atomic units, with 18 decimals: **0.5 IMD**. The payment network is `eip155:1`, Ethereum mainnet, and the payment asset is `0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7`. Its payment metadata specifies x402 version 2, the `exact` scheme, Permit2 transfers and EIP-712 quote approval. These are observations at the research date, not a guaranteed future tariff. [Public payment capabilities](https://explorer.imd.fun/api/requests/capabilities).
+
+**Inference:** a paid public job purchases execution of a request; a seat enables contributing execution. The 0.5 IMD request price is neither the purchase price of the NFT nor evidence of a worker subscription fee. Conversely, the evidence does not establish that seat holders get unlimited free public jobs. The buyer/contributor distinction answers the central question without assuming that owning one asset automatically grants the other asset’s function. [Payment capabilities](https://explorer.imd.fun/api/requests/capabilities); [Identity.md seat description](https://imd.fun/token/).
+
+## Does a sale remove the right to finish assigned work?
+
+**Unresolved:** the reviewed documentation does not explicitly answer this narrower question. Ownership is checked when connecting, but that alone cannot prove whether an already issued lease survives a sale. The docs describe device-authenticated artifact uploads under an existing lease, without stating a transfer exception or grandfathering rule. [Worker handshake](https://imd.fun/docs/#websocket); [Bundles and artifacts](https://imd.fun/docs/#uploads).
+
+**Inference, with limits:** selling removes the seller’s ownership basis for ordinary seat authorization. It does not follow logically that every previously assigned task is immediately cancelled. Connection admission, continued dispatch and acceptance of an existing submission are different decisions. A definitive answer requires an explicit published transfer policy or public evidence covering transfer during a live assignment. Neither was established here. Thus the supported conclusion is a contributor credential beyond normal IMD ownership, with post-sale completion rights still an unanswered question—not a promised retained right or a proven immediate forfeiture. [Authorization basis](https://imd.fun/docs/#auth); [Connection checks](https://imd.fun/docs/#websocket).
