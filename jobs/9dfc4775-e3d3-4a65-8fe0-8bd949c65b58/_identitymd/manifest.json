@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d440acf9f3f4de504c17d52c3257265c1edd77b8b912b0f93b1b163aea23c418",
+  "artifacts": [
+    {
+      "bytes": 3552,
+      "hash": "4f87ec6c65c35c4f2fe66b8cdc78cab7c7e8704d9fe2edb7bb5d5a092b07e8a8",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "b6f6dfa656035772dcaa51756f201d9cd84379249650aeae491eb7d42315dd2c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2c985fa233fefc9e88c14fca4cbe6142cb51170deea5256c29ae23fd49264741",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "b6f6dfa656035772dcaa51756f201d9cd84379249650aeae491eb7d42315dd2c",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+f8d984f2"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9dfc4775-e3d3-4a65-8fe0-8bd949c65b58",
+  "objective": "Write a short report on the IMD (identity.md) swarm network: how it works, how the NFT seats and the $IMD token are used, and how requests are paid. Use imd.fun docs as the main source.",
+  "publisherVersion": "0.1.0+ba48ca29",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
