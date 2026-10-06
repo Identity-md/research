@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "45884958daed2abd33e108e7df43eaa6b5e983a14b3e139421019a0c1cfb01cd",
+  "artifacts": [
+    {
+      "bytes": 31566,
+      "hash": "610a0735fac81955221e5bb7021974b0e20002e7b20816021477dc55d1f32021",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "51451fee74048e31b8ab1cf9718275cd09160e371bc9fea0d3ad491c86c6c3ba"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "82692ab5f7f7e54e7f26fc3f02e1839a2354350fffd95dfb5b1c3d578aebb3c1",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "cfd055897e306903907cce12aa0ef87dae59682e43db70788c732c8fc995b5fd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bd7adba3a80458536c80f1f3abca218143308f2a67acbdf6148524561ea3eaed",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "51451fee74048e31b8ab1cf9718275cd09160e371bc9fea0d3ad491c86c6c3ba",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa99051b60a858d6533e33c4be9c9d3ea61bf5edfa7172a85df49806181ab49f",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6969abddc6a6d41fcf8778ed0bfb595c3b141e9335ed55f88aec95ac923382e2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f9cb4fd544aa3c686146f6a5cd2d7c0fc4d64bd16839e218b8cb752ea0ba94f7",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ba7f69062ff57002a440221fc237de46e4148b00bd28099ac4acfec45a8efa15",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e8816d4386532a666ded78d4345254a19a42c8c34ad865711f59dae4256653f3",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4981c57cb08e750fb00f77300b56ccfb4a22f8b7ffa9b5347833dd708eb79944",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ec4e3ea7-9b37-4113-ae4d-8cdd5ea19424",
+  "objective": "Project: PepesFamily launchpad v4\nRepo: github.com/0xtenang/PepesFamily (commit 9a32f89)\nScope: contracts/src/PepesFamily.sol, contracts/src/PadToken.sol, contracts/src/PepesBuyback.sol. The routers are unchanged from v3 (audited).\nTests: contracts/test/PepesFamily.t.sol, contracts/test/Fork.t.sol, contracts/test/EthRouter.fork.t.sol\nChain: Robinhood Chain (4663), Uniswap v4\n\nWhat changed from v3 (v3 audit: job a3e708e2)\n\nIMD-only launches.\nReward expiry in PadToken. A wallet is active when it claims, sends, pulls tokens itself, receives ≥ ACTIVITY_MIN (10,000 tokens) or receives for the first time. After more than 7 days of inactivity, unclaimed rewards expire, except those earned in the last 7 days. This is computed with time checkpoints of magnifiedDividendPerShare, the same design as our audited $EARN token (jobs e6eda4d8, f6d3cd0e, a58eb2c6). Anyone can recycle(holder), which only moves expired rewards to PepesBuyback.\nPepesBuyback: one ownerless contract shared by all v4 tokens. Anyone, at most once an hour, at most 1% of the $PEPES pool's IMD depth per call, buys $PEPES via the PepesFamily v1 router and sends it all to 0x…dEaD.\nPlease check\n\nCan recycle ever take rewards earned in the last 7 days, or more than a holder is owed? Is the token always solvent (IMD balance ≥ accountedBalance)?\nCan anyone reset another wallet's timer cheaply, or make an active wallet look inactive?\nInteraction with the v3 flash-borrow guard: can flash-held pool tokens affect expiry, recycling or distribution?\nCan the buyback be sandwiched profitably, including together with the $EARN buyback (2% cap, separate contract) in the same transaction?\nCan IMD leave PepesBuyback any way other than the burn swap? Can it be locked or griefed (e.g. maxBuyback returning 0, the v1 router reverting)?\nGas and limits: checkpoints grow with every distribution. Is the binary search safe for long-lived tokens? Can recycleMany be abused?\nAnything in the IMD-only or constructor changes that breaks v3's guarantees: locked liquidity, the 4% fee on every router, routers compatible.",
+  "publisherVersion": "0.1.0+e6140b7a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "9a32f8964a3e455bae7aee717cbe55de97186f4e",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
