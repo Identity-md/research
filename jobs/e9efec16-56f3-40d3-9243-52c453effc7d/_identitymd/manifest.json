@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "1fa0801f4a348295a6506231fc663e53ae88bd3d8ef177f5d5f6ab0b5dde0449",
+  "artifacts": [
+    {
+      "bytes": 6767,
+      "hash": "4c2e1b12202b17a91d51006ea9f81a26868418c3db3f9f2242063b0748edac53",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "070eb28667d2284eab970b884eed740e0d467d143571e2859ca3d9fa3c10534f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "26d42bb29b53b9d8a6c67793d2771258167938774a394d78aafaf17b58fda905",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "070eb28667d2284eab970b884eed740e0d467d143571e2859ca3d9fa3c10534f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+e6140b7a"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e9efec16-56f3-40d3-9243-52c453effc7d",
+  "objective": "Design a hackathon for identity MD, with $10k in the prize pool and 1 IMD NFT for the number 1 winner. The hackathon will be partly judged by IMD AI agents, for example, winners 5 to 15 are judged by ai agents and winners 1 to 5 are selected manually. Report should include, how long it will last, criteria for hackathon and number of winners and any other necessary details. Entries must launch tokens using v4 hooks or contract, not plain tokens. Use the feedback below to put the report together. Keep it simple.\n\nFeedback 1)\nDuration: 2 weeks oct 5 - oct 19 to submit Winners announced 23 oct\nCriteria: Launched token. Project has its own x. Dev has personal account\nWinners: 15 winners. $500 to 10. $750 to 4 & 5, $1k to 3 & 2, and $1.5k to 1 + imd NFT\nMore: IMD swarm picks winners 5 to 15. IMD holders pick 1 to 5.\n\nFeedback 2)\nDuration: 3 weeks of building + 1 week to review and final decision. Starting in October and last the whole month\nCriteria: devs who have launched projects through IMD protocol following the suggested guidelines and deadlines.\n\nFeedback 3)\nWinners receive IMD, not USDT\n\nFeedback 4)\nDuration: 2 weeks\nCrerttia: human juries (adams + bankless bros?) + IMD swam if possible\nWinners: 3\n\nFeedback 5)\nDuration: 2 weeks\nCriteria: For the judging, I think the strongest approach would be to combine an agent jury with a small human jury made of people who actually have skin in the game and real legitimacy in the ecosystem.\nThe agents could handle the more objective side: technical due diligence, functionality, security, reproducibility and how deeply the project actually uses IMD. Human judges would then focus more on originality, product sense, ecosystem value and whether the project is genuinely worth building.\n\nWinners: 10 winners, 1st $2,500. 2nd $1,600. 3rd $1,200. 4th $900. 5th $800. 6th $700. 7th $650. 8th $600. 9th $550. 10th $500. Special prize if doable of 1 imd nft (value 2.2eth at this date for the most innovative project / most innovative build)\nMore: Maybe define more  what “building on IMD” actually means before the hackathon starts. I’d establish a minimum meaningful integration requirement, while still leaving builders freedom on how they use the network.\n\n\nFeedback 6)\nDuration: 2 weeks\nCriteria:\nWinners:\nMore: Winners receive IMD\n\n\nFeedback 7)\nDuration: 2 weeks\nCriteria: Reward creativity and the projects which showcase IMD strengths the most / use the tech in interesting ways. For the judging I think notbad’s idea sounds great.\nWinners: 10 to 12 winners\nMore: Winners can choose between getting IMD or USD. Maybe cap the $ value of the first hackathon and in the future we can do another one, but not sure.\n\nFeedback 8)\nDuration: 1 week\nCriteria: Project quality: what does it solve? (human + ai review). public engagement (organic reach). token mc (optional)\nWinners: top 3. 5 honourable mentions\nMore: Keep things simple.\n\nFeedback 9)\nDuration: 2 weeks\nCriteria: Human review:\n1/ Scale of potential rewards to both NFT and token holders - does the solution contribute to rewards to IMD holders (token + NFT)? are these rewards comparable/ better than their current rewards?\n2/ Scale of potential number of users of the project - is the solution capable of attracting many users to use it? and how frequently will they use it - daily/ weekly / arbitrarily?  \n3/ Institutional traction and application - does it attract institutions to build on this solution or use it off the shelf?\n4/ Innovation and originality of the project - is the solution innovative and creative in its idea and application, and not a duplicate effort of another solution?\nWinners: 10 winners, 1st $2,500. 2nd $1,600. 3rd $1,200. 4th $900. 5th $800. 6th $700. 7th $650. 8th $600. 9th $550. 10th $500. Special prize if doable of 1 imd nft (value 2.2eth at this date for the most innovative project / most innovative build)\n\nMore: Winners receive USDT (could be imdUSD if that is ready by then)",
+  "publisherVersion": "0.1.0+e6140b7a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
