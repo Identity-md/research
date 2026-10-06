@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "49a5ca703e561510578ea762ade6ef92c97ed13bfe4c40648852a2986e7073b8",
+  "artifacts": [
+    {
+      "bytes": 18409,
+      "hash": "f166525ae17b4b58c14bbda0915a75c2d27d78fdd8fc212394ef9d5c847e431e",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "e59d06111e1fde5199f0632b9627cb4dabb6a690ee7e2e3f2ac68e8ae8df2dd9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c1fc321231608a52b6dc076ebeeaca19618b427a5532466d539509fc92179791",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "e59d06111e1fde5199f0632b9627cb4dabb6a690ee7e2e3f2ac68e8ae8df2dd9",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+e6140b7a"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3b4101c3-0b24-4c19-ba9f-06eaf9a8b541",
+  "objective": "Report only: do NOT write deployable code, do NOT deploy anything. Analyse the design below, judge whether it is realistic, design its economics properly, and propose your own improvements.\n\nContext: a new token for an existing NFT collection on Ethereum mainnet: Swarm Pepe (SPEPE), 0x999ce0CE8C5f7661e0c74a568FfE27CEB9177bDB. The collection contract cannot be changed and has no transfer hooks. What we already see onchain (verify it yourself): ERC-721, maxSupply 5000, minting is still open (tokenIds 1 to ~1239 exist and new ones are still being minted), and totalSupply() does not return the minted count, so do not rely on it. Also check the mint price and holder distribution.\n\nProposed design:\n1. Token. Launched from zero with no team capital. Single-sided liquidity: only the token goes into the pool, in a range above the current price. ETH comes from the first buyers.\n2. Uniswap v4 hook. Takes 2.5% of every buy and every sell, always in ETH (from the input on buys, from the output on sells). All collected ETH goes to the distributor. Only one pool, otherwise routers bypass the hook.\n3. Distributor. ETH accrues per tokenId, not per holder, with an accumulator and no loops:\n   accEthPerNft += newEth / activeCount\n   pending(id) = accEthPerNft - debt[id]\n   The accrual travels with the NFT on transfer, so an NFT sells with its prize inside.\n4. Exit. A holder hands the NFT to the contract and instantly receives everything accrued on it in ETH. activeCount decreases.\n5. Auction. The contract immediately lists that NFT in a Dutch auction priced in the token. Start = 10x the previous sale price (self-calibrating, no oracle), non-linear decay over 1-2 days, floor zero, always sells. All proceeds are burned. The buyer gets the NFT with zero accrual and starts fresh. activeCount increases.\n6. Team share: a fixed basis-point cut of every incoming ETH, with a hard cap in code.\n7. Three activation levels. An NFT earns nothing until its holder activates it by buying and burning the token. Level 1, 2 and 3 cost more to reach and earn a larger share of the fees. Design the levels: costs, weights, how cost is set without an oracle, whether levels travel with the NFT, what happens to the level on exit and on auction purchase. Because minting is still open, activeCount must count activated NFTs only, never minted ones: a freshly minted NFT earns nothing until its holder activates it. Compare the cost of minting a new NFT plus activating it with the cost of buying an already activated NFT on the secondary market, and set activation costs so the two stay balanced.\n\nWhat the report must cover:\n- Is this realistic on mainnet? Gas per action, total complexity, the parts most likely to break.\n- Economics: model fee income at several daily volumes (e.g. $10k, $50k, $200k), the yield per NFT at each level, and the token's buy and burn pressure from activations and auctions. Is the loop sustainable or does it depend on constant new buyers?\n- Weighted accumulator: how to do accrual per weight instead of per NFT so levels work without loops, and how to handle fees that arrive while nothing is activated (a backlog that streams out later, not a windfall to the first activator).\n- Exploits: exit/re-buy arbitrage when accrued ETH exceeds the NFT's market price, sniping the auction near its floor, wash trading to farm fees, extra pools bypassing the hook, new mints entering the active set cheaply, MEV around activation.\n- Whether 2.5% each way is the right fee, and whether the team cut should be lower or zero at launch.\n- Your own ideas: simpler or stronger variants, things to drop, things to add.\n- A final verdict with the recommended parameter set.",
+  "publisherVersion": "0.1.0+e6140b7a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
