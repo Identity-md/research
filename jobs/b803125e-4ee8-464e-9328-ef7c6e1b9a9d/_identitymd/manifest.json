@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "bcfd353b3a2a4f07cc17b892e9ec662ff2a61d95fda67cd2ebedaaacd1ef908a",
+  "artifacts": [
+    {
+      "bytes": 50816,
+      "hash": "55b7e81fd844a93eb44f746947b2ee65f6a2a4427c1140be7143fd38a146e67b",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "2609af5a3f9b907084d0269338f6b2fbaef2d8a1d76071f49d03cd3c74f87943"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "934ef01306a3cc89443b4e73240a28d426adaef97058a4f8b2121bd94d724fb6",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "289eff1626e4cd587c3f2a85b58cb69b32ba6e50953a0115a67f70b7609f76d2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "af9a875696459139756b5a16efcdee817ccc15898ff6b2c8e1503c0b028af533",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9dba96e6bc81725c5dbde410e6e81c60032c59b6c2f6ad120c8c97b93bcd63c1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5835e48821d8827d829e68c18ac2dac504d90dd3e5de287b6e40fde5547aa463",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e8041970019620cd1adfc92ef2e07d406689b83f6f21a26bc9a807c0b6ebb479",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9df7d5d52e83c572b70087c7652483d3122e52c488658420d6495d446820a289",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7db544583dd7f39435f24842bdb347e679da900eb59f46177738422f231e3ed5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "559cfaaab2c0d01334efc1aa9717eec5a6448a69f31468adc77273f21ccd7eac",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2609af5a3f9b907084d0269338f6b2fbaef2d8a1d76071f49d03cd3c74f87943",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b803125e-4ee8-464e-9328-ef7c6e1b9a9d",
+  "objective": "Project: PepesFamily launchpad v4, re-check after audit ec4e3ea7\nRepo: github.com/0xtenang/PepesFamily (commit 2097cf2)\nScope: contracts/src/PepesFamily.sol, contracts/src/PadToken.sol, contracts/src/PepesBuyback.sol\nTests: contracts/test/PepesFamily.t.sol, contracts/test/PepesBuyback.t.sol, contracts/test/Fork.t.sol\n\nChanges since ec4e3ea7\n\nFinding 1: PepesBuyback adds a price guard. It records the pool sqrtPrice after each buyback (at deployment before the first) and only buys while the $PEPES price is ≤ 2% above it + 2% per day elapsed (priceRiseBps, allowedPriceRiseBps). Your proof scenario is test_pacedFrontRunStallsTheBuyback.\nFinding 2: burns the whole $PEPES balance.\nFinding 3: the hook calls PadToken.markActive(trader) on every buy. trader is the router-reported user when sender == router, otherwise tx.origin. The pad is the only caller allowed. A transfer the recipient didn't start counts as activity only if amount × 10 ≥ recipient's prior balance. ACTIVITY_MIN is removed.\nFinding 5: the buyback constructor resolves the $PEPES pool through pepesRouter.pad().poolKey(pepes) and requires an initialised IMD/$PEPES pair. Otherwise it reverts with BadWiring.\nFindings 4, 6, 7: comments and README corrected, and tests added.\nPlease check\n\nCan the price guard be gamed? For example: pushing the price down before a buyback to set a low reference, stalling buybacks forever (griefing), or a profitable series within the 2%/day allowance.\nIs using tx.origin in markActive safe? Can anyone make a buy mark another wallet active? Any problem with markActive being called during afterSwap?\nDoes the 1/10-of-balance gift rule have edge cases (self-transfers, transfers from excluded accounts, first receipts)?\nDid any fix break v3 guarantees or the earlier findings?",
+  "publisherVersion": "0.1.0+e6140b7a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "2097cf2d952521d12b39a4b8148ed269345222ba",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
