@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d5369ab8f3a253f7444a2c3838da507ab6be163c70c7cf25ef76294362661bae",
+  "artifacts": [
+    {
+      "bytes": 37365,
+      "hash": "e399fdfb22e512448e855ca9aa2f2ca77536e4c95ecf6f600d220ec2e162937b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "b14e53c9796b96e6bd7ca96d129687ee78156baa1eed57e9841485ba4d5afdc1"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca075d17c94a854b1fe62aca56a0429037b7c1243b841fe919215375b710a27a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "b14e53c9796b96e6bd7ca96d129687ee78156baa1eed57e9841485ba4d5afdc1",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+be003835"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f706b348-d95a-47b7-b6e5-fe303af50a92",
+  "objective": "Review EmberEvo ($EMVO) v3.3 ReviewFix1 ONCE, WITHOUT DEPLOYMENT. Report in Traditional Chinese; retain technical identifiers in English.\n\nREAD-ONLY INPUT\nRepo: https://github.com/tungweb3/emvo-review\nExact NEW commit: 902075d1dfb772738a074f06f56f7aeea9240fd8\nFetch https://raw.githubusercontent.com/tungweb3/emvo-review/902075d1dfb772738a074f06f56f7aeea9240fd8/INPUT_MANIFEST.json\nExpected manifest SHA-256: 4be0ee3d9529828d4f0fb7dbb6ed1ce177ee9502c5aec5d1981a9792b54b69df\nRead README.md and all FOUR manifest-listed Markdown files in full at that commit. Compute raw-byte hashes; return INPUTS_READ with URLs, coverage, truncation and mismatch status. Stop on INPUT_MISSING/MISMATCH. Old files are historical. This is a specification review; no production code is supplied.\n\nDECISION BASELINE\nEmberEvo / EMVO; Ethereum target; official standard launch. EMVO/IMD preferred; no silent ETH fallback. Historical policy figures are not an approved quote. IMD-only fee receipt is desired, unverified. The paying-wallet 2% allocation has no extra vesting and may be sold. Separate human-confirmed decisions from document assertions and engineering proposals; do not infer authority from an AI-written file.\nPaid Genesis intends BURN_NOT_TREASURY: exact cost burned atomically with mint; zero project receipt, no delayed burn, creator cut or redemption. Free Claim/valid Remediation consume zero EMVO. Supply F/R/P, burn price and qualification remain TBD. ERC-20 does not guarantee burn. Assess the proposed L HOLD while required true-burn template capability is unknown/incompatible. Do not silently change token, collect the cost or call a sink true burn; alternatives require a separate Owner decision.\nResearch covers crypto tokens and NFTs beyond IMD/AI tokens. Preserve Ecosystem Hall, Genesis identity/accessories/Pets and IMD-anchored Dream Hall. Services/quotas and finite recurring batches are proposals, not enabled or priced. No staking/yield/backing, automated trading or AI financial authority.\n\nPRIORITIES\n1. Live official policy/chain/pair/Factory; quote/payment safety; Token/Hook/LP/collector/distributor powers; fee asset and actual recipient. Separate template evidence from a future EMVO instance.\n2. True-burn and mint rollback; totalSupply reduction; zero Treasury receipt; allowance/return values; capacity, claimed/current-owner/remediation and price freeze. No source means SPEC_ONLY, not code audit.\n3. Identity by chain/address; token-NFT relationship and money/rights; units/time/source coverage; corrections/reorgs/claim invalidation; evidence versions; private notes, quota transfer abuse and sponsorship. Hall/fast pages share validated data; no fictional world evidence.\n4. Budget/idempotency/pending orders/stop controls; Research versus Creation Mode; human publication. No auto-topup or financial signer in AI tools.\n5. Keep hackathon proposals separate from verified final rules and existing-project eligibility. ReleaseRegistry is a candidate; unfinished nonessential features do not automatically block Token launch.\n\nOUTPUT\nINPUTS_READ; separate R/Q/L/V/G/D/I/H verdicts; evidence/test/severity/gate tables; fee/authority matrices; actual burn and I-01..I-15 tests or NOT_RUN; minimal fixes with closure evidence; PATCH_PLAN; pending Owner inputs and limitations. Missing exact quote/key evidence leaves L NOT AUTHORIZED. No fabricated PASS or certification.\n\nPERMISSIONS\nPublic read-only research and isolated non-broadcast local analysis only. No credentials, signatures, transactions, swaps, approvals, fee distribution, deployment, input-repository/production writes, paid child jobs or schedules. Owner may separately pay THIS report only. Platform output delivery grants no input-repository write authority.",
+  "publisherVersion": "0.1.0+be003835",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
