@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "2ab2d870bc5e5455a160b0bb56ad77b47675a2d6a7038851e1008c71ab26d94e",
+  "artifacts": [
+    {
+      "bytes": 23965,
+      "hash": "30c187956efe9ab6d26976074d07679e3b937077a9387668df1bd288d5e5489d",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "37ea3a97aed907216baab81f4fc277e8f91920de1a70bf5d02dfd768080ca2a6"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "11e4593175677f7e935b9352132cab0da4061164eac65d7df7445bf5ee44abe9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "24605a4370e1eeee3c0e453e56e32d044410e38499730c1ad85915b24f275968",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "56e50117311155be93c3c3b79293d6ba6217df4024bcf993400ea696be39d5a7",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "89a0fe710cade425876bd204da89047ec2168a02dd4cd1420803e3cacb46cd74",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2b9b0095482c54e687091b3846cb1a409d6e8b85ca7c48813c51403eaa48bf0e",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e4e3485399f8cb648af980c7a3f986bc834fb008521c1da106e7676cd65d72c7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3bed38612db34f328e6e2bf3e06a52b95ccef2145dee8aa1006f50c85517964a",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "37ea3a97aed907216baab81f4fc277e8f91920de1a70bf5d02dfd768080ca2a6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "45aa937328087de32ace0ccca4ca5ffecee6a239f16a12cf4e3fdd3ee3548623",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "05be0a6749979c0193c16dfbca0c4f0bd2f4c79363542bc17b47090c73e92951",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "dddb75ec-5081-49b8-9204-f4de1725ca03",
+  "objective": "Final check 4 for The Zero Person Billion Dollar Company ($COMPANY) on Robinhood Chain (4663), after IMD Swarm audit 78c00339, re-check f1d5def3 and final checks 363ab052, 882666b4 and 986abba2. AUDIT.md sections 4 to 8 map every finding to its fix and its test.\n\nWhat the contracts are for: CompanyToken is a fixed 1,000,000,000 supply ERC-20; its ownership is renounced in the constructor. CompanyHook owns the token's only Uniswap v4 pool, paired with IMD, with liquidity locked forever, and takes 4% of every swap in that pool: 1% to the protocol, 3% to holders. Holder fees are split 50% IMD and 10% each to NVDA, GOOGL, AAPL, GME and MSTR Robinhood stock tokens, bought IMD -> USDG -> stock at the start of every claim(). Only wallets holding at least 100,000 earn. If a wallet goes more than 7 days without claiming, buying, selling or sending, its unclaimed rewards older than 7 days expire.\n\nChanged since 986abba2; review these hardest:\n1. The IMD -> USDG hop is now checked too: minUsdOut(imdIn) prices IMD via the IMD/ETH pool (fee 1%, spacing 100, no hooks) and Chainlink ETH/USD and USDG/USD, less the IMD/USDG pool fee and IMD_TOLERANCE_BPS (10%); unlockCallback reverts PriceOff below it and the stock is skipped. Can a round still sell at a made-up price, or can the check be pushed (the IMD/ETH spot is read in the same transaction) to block or force anything? The 10% reflects IMD's two pools drifting about 5.6% apart after a 2 ETH buy on a fork.\n2. One stuck rule replaces the dead-feed and empty-pool clocks: waitingSince[stock] starts when a reserve fills from empty (distribute), moves to now on every successful purchase (convertStock), clears when the reserve empties; a stock waiting more than DEAD_AFTER (30 days) is paid as IMD one capped round at a time, whatever blocks it (stale or unusable feed, empty IMD/USDG pool, PriceOff). Can anyone trigger it early on a healthy stock, or keep a stuck stock from ever falling back?\n3. claim() now handles expiry (_recycle, lastActive) before flush and _convertAll; from-pool tags lapse after any distribution in the transaction (transient epoch bumped in _credit).\n4. The IMD/USDG pool counts as empty below 1% of a full round; then nothing is swapped and only stuck stocks fall back.\n\nPlease confirm these, check that nothing broke the solvency of the six reward assets, the flash-borrow guards, the 100,000 minimum, expiry or the scanner-relevant properties (no external calls in transfers), and report anything new.\n\nTests: cd contracts; git submodule update --init --recursive; forge test. Fork test (live Chainlink feeds and pools): FORK_RPC=https://robinhood.drpc.org forge test --mc CompanyForkTest.",
+  "publisherVersion": "0.1.0+be003835",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "9a4c33825cbecaa07c59e2994ec8f9c3191ea28e",
+    "repoUrl": "https://github.com/imdmaxi/IMDINDEX.git"
+  }
+}
