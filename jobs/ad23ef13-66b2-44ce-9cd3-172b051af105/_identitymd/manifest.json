@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "9561f505c0916ad6b1638a363a7d56f6f7e27e9374e7148c68e5d37a5b59fff2",
+  "artifacts": [
+    {
+      "bytes": 54216,
+      "hash": "f6763cc2d4da022e004d586fe5ed0b14e43830b6437e07285dcd3a61467e15bf",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "fdd3c5d961775cf5cb2e74e52cdbaad3ffa74200652321bf8c751bbf04c9ed6d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ce6eaff570c608abbfeb1a4eba8a73eb65978b8cd30807e47a937d1e068e2ad8",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3c0f36b4f9e0fe42c77c1ee73e26a6bb4973dc2bf8b2169fb719a87681711f9f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6ef494db85781eec11af6ed42b4e455faba3a2395fa3fe3ca47b4b5fc8708369",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "15b597092c94f916bc2b0273727540ff014409a10ef534ef258d764b74ac9188",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ce319efac2b76da09c3de3a5a268828d84eaf0260d8cc81e3bf92515a1bfd7af",
+      "evaluation": null,
+      "findings": 13,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "04094c830ead872f5942a56b10cca2afaf7d9bfd22424685dabb6b8b5bf6e51c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c35be49d2f8f8def53d127cb1fdf58d1200d2c513d0ef92d905319810c41e5c6",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "97744c8c518405761518f64ea8279a09e0d420ed10fa9eb36f0eb2f8c21d704c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a9662a76cb5f51d178c6d5ff9e9a5da33ad63feb5a9ef85547ee127dbf9fd6f",
+      "evaluation": null,
+      "findings": 16,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fdd3c5d961775cf5cb2e74e52cdbaad3ffa74200652321bf8c751bbf04c9ed6d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ad23ef13-66b2-44ce-9cd3-172b051af105",
+  "objective": "Audit the three Ponzinomics contracts in src/pimd: PimdToken, a fixed-supply ERC-20 of exactly 1,000,000,000 at 18 decimals with no owner, no mint and no burn; PimdHook, a Uniswap V4 hook that taxes every trade in IMD (2.4% on buys, 5.6% on sells) split 75% to holders and 25% to the team, taking fees as ERC-6909 claims on the quote currency; and PimdEngine, which pushes the holders' IMD into wallets weighted by balance times hold-streak across paged tally and pay calls. The hook is deployed by the IMD launch factory, which constructs it with only the pool manager and the token and opens the pool itself, so everything else is a source constant. Five things deserve the hardest look. First, beforeRemoveLiquidity is the entire safety case for letting the launch factory hold the liquidity position: it must refuse every negative liquidityDelta forever, from any caller including the position's owner and including the hook itself, while allowing a zero delta so the pool's own fee collection still works. If any path can withdraw liquidity, that is the finding that matters most. Second, beforeAddLiquidity must allow exactly one add, the factory's seed, and refuse every subsequent one; check for any way to slip a second through, including reentrancy and the hook calling itself. Third, beforeInitialize is the only gate on the pool's shape: confirm it cannot be bypassed and that every assumption the tax maths makes is actually enforced there, in particular that the quote currency is currency0, since every fee calculation depends on it and the token's address is no longer mined. Fourth, the fee accounting: that claims minted in beforeSwap and afterSwap always equal holdersOwed plus teamOwed, that nothing can be double counted or stranded, and that flush cannot pay out more than was taken. Fifth, the engine must never read holder weights while the PoolManager is unlocked, which is where a flash borrower would stand, and one holder who cannot receive IMD must not be able to stall a batch. Note also that the engine pulls from the hook inside a try/catch, which has already hidden one breakage from us: say whether that pattern is safe here. Report findings rather than fixing them, and do not propose changes to the economics, the tax rates, the split or the tier ladder.",
+  "publisherVersion": "0.1.0+e892633c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "1b073dfcce039c4b0e3e0072c8dc01f495ccc0ba",
+    "repoUrl": "https://github.com/JJ-ME55/Ponzinomics.git"
+  }
+}
