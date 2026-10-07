@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "72ab175f0ca4a6ab82305180337ed5936eb458a189a8af423c79e04188b5c18e",
+  "artifacts": [
+    {
+      "bytes": 31866,
+      "hash": "355c429345a521c6f60d1efc50d882876ce38a2100ddba011d7aa42eb0298da2",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "8b23efd7b2c13a7d18e8dd40fe47b9231d3927b1d4801dea07b552c299abb0bf"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8af9903f4ad1eed04241eb94aab079c2ee0461c3c185380ab6890ee4a4b4ebae",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4cc8243f8d36d44f4fe7cc46c03dae0395715e479cdb982eae0fb7383d4da655",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "79373c79d1351ebabba8ddfcb60704409e0a1ce0c096820a1d978dc8768a4835",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "14e08e719f140f990a46b9d83f15fa917b46bd98148650c2dd43c08c1c32dc27",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f2101c240e0b52a9a895b2f1bed1165b5d6229ab73d5e4567dbc624667e96505",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5e88dbe52f838c4887e1d65ae63542dad47d563b06aac3ebebb17c5a382f635d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "918f8261a6fd589cb41cfa8a8105d9b1d139eed39376ccdc56150d01a5b0f39d",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8b23efd7b2c13a7d18e8dd40fe47b9231d3927b1d4801dea07b552c299abb0bf",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "759c614fdc84ff665ba450b6daba8b6ee6e829dc44de5308a44f3f880d107fa2",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "068a4c30afb9c516edde2a3d11405d35a968b424bb45089ad4da551e02de70b6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "882666b4-08cf-476b-ac4f-7c2e44399300",
+  "objective": "Final check 2 for The Zero Person Billion Dollar Company ($COMPANY) on Robinhood Chain (4663), after IMD Swarm audit 78c00339, re-check f1d5def3 and final check 363ab052. AUDIT.md sections 4 to 6 map every finding to its fix and its test.\n\nWhat the contracts are for: CompanyToken is a fixed 1,000,000,000 supply ERC-20; its ownership is renounced in the constructor. CompanyHook owns the token's only Uniswap v4 pool, paired with IMD, with liquidity locked forever, and takes 4% of every swap in that pool: 1% to the protocol, 3% to holders. Holder fees are split 50% IMD and 10% each to NVDA, GOOGL, AAPL, GME and MSTR Robinhood stock tokens, bought IMD -> USDG -> stock at the start of every claim(), with each purchase checked against Chainlink. Only wallets holding at least 100,000 earn. If a wallet goes more than 7 days without claiming, buying, selling or sending, its unclaimed rewards older than 7 days expire.\n\nChanged since 363ab052; review these hardest:\n1. _transfer now forfeits the expired rewards of a sender (or of a receiver that pulled with transferFrom) who has been inactive for more than 7 days, into recycledHeld, before the timer resets (bookkeeping only, no external call). Check solvency, the weight and correction order in _transfer, and that no transfer can revert or be blocked by it.\n2. claim() and recycle() revert while the PoolManager is unlocked.\n3. A feed dead or unusable for DEAD_AFTER (30 days), or an IMD/USDG pool with no liquidity at its price for 30 days (imdPoolEmptySince), now pays rounds as IMD. Can anyone trigger this early, or keep a healthy stock from converting?\n4. A stock pool that can take less than 1% of a round now counts as empty and the round is paid as IMD.\n5. minStockOut removes the pool's own fee before the 3% tolerance.\n6. A real buy is activity again: CompanyHook.afterSwap calls CompanyToken.markActive(trader) on buys (hook-only; trader = the user CompanyRouter/CompanyEthRouter report, else tx.origin), which forfeits already-expired rewards first and resets the timer. Receipts from the PoolManager alone still don't count (78c00339 finding 4). Can anyone mark another wallet active, or does this reopen any expiry bypass?\n\nPlease confirm these, check that nothing broke the solvency of the six reward assets, the flash-borrow guard, the 100,000 minimum, expiry or the scanner-relevant properties (no external calls in transfers), and report anything new.\n\nTests: cd contracts; git submodule update --init --recursive; forge test. Fork test (live Chainlink feeds and pools): FORK_RPC=https://robinhood.drpc.org forge test --mc CompanyForkTest.",
+  "publisherVersion": "0.1.0+be003835",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "331230c2d46e1d6079bcafb2caba8ce288328a5b",
+    "repoUrl": "https://github.com/imdmaxi/IMDINDEX.git"
+  }
+}
