@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "330f61045caf07626589bb4ceeae71b078c4ad4d085f55d1eaf0aa4e5c7772ae",
+  "artifacts": [
+    {
+      "bytes": 3334,
+      "hash": "01ad433f6292bfd5edfc032a2159fe1ac427d1bdfca8684f8f0f6975e50b611d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2ca813edd1945fcbf2b8a15e2e1294f0f0a3f7e92522604977bad882690c3632"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0795519752b1383bb5bf3f5a36816883a4c2d46c0865e923c5aaac97ecab8b35",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "2ca813edd1945fcbf2b8a15e2e1294f0f0a3f7e92522604977bad882690c3632",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+e892633c"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "393c7a52-63a0-40b4-9c37-819a5246f849",
+  "objective": "Write a short sourced report that answers: what is the Identity.md (IMD) agent swarm on Ethereum, and how does a paid job get opened and settled?\n\nScope only:\n- What an IMD seat/agent is\n- How a public job is opened (quote, 0.5 IMD payment via x402/Permit2, server pays gas)\n- What the swarm returns (a report or other artifact, recorded on the explorer)\n- Keep it under 600 words, plain English, at least 3 citations from imd.fun or explorer.imd.fun\n- No token advice, no price predictions, no contract deployment",
+  "publisherVersion": "0.1.0+e892633c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
