@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "1a86041eb4079d28cd917a61da78a722507f93c77840a75205fc38f959c7b918",
+  "artifacts": [
+    {
+      "bytes": 16607,
+      "hash": "a142eae61a74d48b276a2244a139f9e984a8fd31f796e98ad3a9dc9395ce8b55",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "ffece18c9a8470ff5a4208fd9fbcceef2f126aa1046a23818c76acad116a7880"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9841ca91054c407d96ed3f6668635c09656c28965664edb80eaa5973259b288b",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "61ad6f04b8c5b9d78e7e0d2bc047ab30bcb69a4ce6a31ae4cd186ac467032466",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a5c5e95a2ed071177dd13377fd9b133a5b9eca71664404e1b002dffa10748164",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "de77db0f368abf5bf243e3c7c44c6d4c8de846d5de928ba1b759bc380fb4dc79",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e250de394555c13290d0667bc2fc77a2bfff25e524f16eab251047e16fb1f6bb",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c91db0a3642934ecc8f3e888946fcd6e353cfa85abefad6b9ae65cdd4de1edc6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d63429bf439b43f1963f518fde62ae84390582006e4d6fb04781d25bf98b4fce",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4849c62f33c4d31df0b2eb4fc014060ba69958880b86dec825bbca8c45659adf",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bdd9b74dce66953d980cc1c0cfe15f99b1c1ffde3719dbe7e0d5dec4e3e7a8eb",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ffece18c9a8470ff5a4208fd9fbcceef2f126aa1046a23818c76acad116a7880",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "986abba2-68de-47d2-be7e-4c68f5525e3b",
+  "objective": "Final check 3 for The Zero Person Billion Dollar Company ($COMPANY) on Robinhood Chain (4663), after IMD Swarm audit 78c00339, re-check f1d5def3, final check 363ab052 and final check 2 882666b4. AUDIT.md sections 4 to 7 map every finding to its fix and its test.\n\nWhat the contracts are for: CompanyToken is a fixed 1,000,000,000 supply ERC-20; its ownership is renounced in the constructor. CompanyHook owns the token's only Uniswap v4 pool, paired with IMD, with liquidity locked forever, and takes 4% of every swap in that pool: 1% to the protocol, 3% to holders. Holder fees are split 50% IMD and 10% each to NVDA, GOOGL, AAPL, GME and MSTR Robinhood stock tokens, bought IMD -> USDG -> stock at the start of every claim(), with each purchase checked against Chainlink. Only wallets holding at least 100,000 earn. If a wallet goes more than 7 days without claiming, buying, selling or sending, its unclaimed rewards older than 7 days expire.\n\nChanged since 882666b4; review these hardest:\n1. Root-cause fix for the flash-borrow expiry bypass (findings 1 and 2): _transfer records in transient storage the $COMPANY each address received from the PoolManager in the current transaction (FROM_POOL_SEED; moved along when forwarded, reduced when returned), and expiredRewardsOf leaves that amount out of the weight used for \"recent\" rewards. Can a borrowed balance still count, through any path (forwarding chains, system accounts, transferFrom, routers, markActive)? Can the tag ever make a transfer revert, or expire rewards an honest holder earned in the last 7 days?\n2. The IMD/USDG pool counts as empty while maxConvert() is below 1% of a full round (0.2 IMD), and the empty clock (imdPoolEmptySince) restarts unless re-confirmed within a day (imdPoolLastSeenEmpty).\n3. feedLastGood: an unusable feed (revert, answer <= 0) is dead only after DEAD_AFTER without a usable answer.\n\nPlease confirm these, check that nothing broke the solvency of the six reward assets, the flash-borrow guard, the 100,000 minimum, expiry or the scanner-relevant properties (no external calls in transfers), and report anything new.\n\nTests: cd contracts; git submodule update --init --recursive; forge test. Fork test (live Chainlink feeds and pools): FORK_RPC=https://robinhood.drpc.org forge test --mc CompanyForkTest.",
+  "publisherVersion": "0.1.0+be003835",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "3b09bc77b05166950f33681048e0fe2f0f59a854",
+    "repoUrl": "https://github.com/imdmaxi/IMDINDEX.git"
+  }
+}
