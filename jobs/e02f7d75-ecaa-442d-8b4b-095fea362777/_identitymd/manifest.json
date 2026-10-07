@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ea22d3b5f6b0b8fe40ea5b45fe2d329f82d0b930b6cd875ca2723bd638d612a1",
+  "artifacts": [
+    {
+      "bytes": 33746,
+      "hash": "421b4e07906cd6ed8115f2af88e677b674eceb32054c92124adfb70b196100f9",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "9b1929e57cd9b96ecfda7165d4e93cbc7f6c3792a4d2c942e7449114594bfe4a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca2eb76d92edd79d47f16ada1ea3c8026dd473144bab86e259a49a81214249b7",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "9b1929e57cd9b96ecfda7165d4e93cbc7f6c3792a4d2c942e7449114594bfe4a",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+be003835"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e02f7d75-ecaa-442d-8b4b-095fea362777",
+  "objective": "SECOND TOKEN REPORT: EmberEvo ($EMVO), R2 v1.1. One sourced Report in Traditional Chinese, technical IDs in English. R1 evidence gaps plus later owner decisions; no website, launch, market or hackathon work.\n\nPINNED INPUTS\nNEW commit: c2b7b49515a0bce41f05743f7221c778434cd3b2\nFetch https://raw.githubusercontent.com/tungweb3/emvo-review/c2b7b49515a0bce41f05743f7221c778434cd3b2/EMVO_R2_INPUT_MANIFEST.json\nExpected manifest SHA-256: 12f3ca6bc675f578fe33d7926f6d737c07abcbde271cda2501002b9566835a33\nRead ALL FIVE mandatory Markdown files fully, the evidence inventory and relevant evidence/reproduction sources. Ignore old root manifests. INPUTS_READ: URLs/commit/bytes/computed hashes/coverage/truncation. Missing/mismatched required inputs: INPUT_MISSING/INPUT_MISMATCH; no invented access/hashes. Missing external evidence: continue available analysis with gaps. File05: latest owner decisions and TEAM measurements, independently assess scope/reproducibility. Files03/04 unchanged history. Historical spec: targeted passages, not full-world audit.\n\nCURRENT OWNER INTENT\nEmberEvo/EMVO; Ethereum mainnet target; standard evm_project. Owner selected 86% Pool/10% Swarm/4% remainder of total initial supply. Explicit poolBps=8600; recipient/intended launch payer: 0x1C651928150DADDDA9C2C040a9D4901d862f8eC4. Address is not control proof or financial approval. 88/10/2 is historical UI default. 1B/18 decimals/official fee terms to verify. EMVO/IMD preferred, no silent ETH fallback. No added vesting/forced World use/Safe; owner may hold/transfer/sell/convert receipts. Accounting does not restrict use. No AI financial authority.\nPaid Genesis: exact EMVO payment to this wallet plus NFT mint atomically; no required/permanent/later burn, backing or redemption. Free/valid remediation zero EMVO. Price/F/R/P/qualification/self-payment/recipient mutability TBD. No staking/yield/custom trading hook. Mint receipts and pool fees separate. IMD-only pool fees desired; mixed fees not owner-approved.\n\nPRIORITIES\n1 F-01: burn prerequisite SUPERSEDED_BY_OWNER_DECISION, not technical PASS. Assess payment compatibility. TEAM fixture10 TAP/sample-runtime4 checks are local/synthetic, not EMVO/Final Genesis.\n2 F-02/05/06/07: UI88/policy defaults vs explicit86/10/4; free Check accepts it, no quote/deployment. Verify kind/version, denominator, recipients, explicit chain/pair, quote pinning. Q fields only, no request submission.\n3 F-03: source/runtime/functions for Token/Factory/Hook/proxy/collector/LP/distributor. Partial getters do not prove complete ownerlessness; fee beneficiary is not admin.\n4 F-04: buy/sell fee accrual/distribution/conversion/actual assets/trigger/gas/recipient changes. Launch737 logs: IMD+ZTO in ONE custom-token case; establish standard-EMVO comparability before generalizing. Pair=IMD alone proves nothing about fee asset.\n5 F-08/09: payment/gas, quote expiry/retries, actual Swarm locks; owner4% has no added lock.\nRefresh official docs/UI/capabilities/policies/OpenAPI/source/read-only chain evidence. Log URLs/times/hashes/blocks/errors/comparability. Separate facts/TEAM claims/inference/unknowns; mock PASS is not real-instance PASS.\n\nOUTPUT AND LIMITS\nFollow Brief: all F-01..09 dispositions; allocation/authority/fee matrices; independently run tests vs TEAM receipts/NOT_RUN; minimal corrections; exact evidence questions for IMD; separate R/Q/L/V/G. D/I/H NOT_REVIEWED_THIS_ROUND. No exact quote means L NOT AUTHORIZED; V EMVO and G Final Genesis unsupplied. No manufactured GO/certification.\nPublic read-only research/isolated non-broadcast tests only. No secrets/signatures/transactions/approvals/swaps/fee claims/quote submission/paid children/schedules/repo writes/production changes. Owner may separately pay THIS Report only. Use actual single-report output contract.\n\nPeriod: As of 2026-10-07; refresh evidence on the review date.\nLength and format: 4,000-6,000 Chinese characters, Markdown headings/tables and source links; appendices excluded.",
+  "publisherVersion": "0.1.0+be003835",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
