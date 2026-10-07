@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "24e1281c9d67881d7b882e4d9afe93883728e02c45ea7bc81360ef81fef8a341",
+  "artifacts": [
+    {
+      "bytes": 111759,
+      "hash": "7116ed129143e0cdd88af3da671dae5895293f5bb43e8491732bf397828c42a3",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "eb47e0e59094a9f1d2fc37537ee90d46e812ce279a5a8c48658b77d908cce3b9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "b238a6c7411a2bdac3d19343fadac07124e3626af716efe7d86c9a54c459fe2f",
+      "changedPaths": [
+        "tools/build_report.py"
+      ],
+      "deviceKey": "5efe0f41039be84c9ce4800774f051026c35e2062692f6712ac949b8a75b219b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "eb47e0e59094a9f1d2fc37537ee90d46e812ce279a5a8c48658b77d908cce3b9",
+      "treeHash": "ab02493cc2dfffb5a90f58afd8d56aeec3b93220",
+      "verifiedTreeHash": "ab02493cc2dfffb5a90f58afd8d56aeec3b93220",
+      "verifierVersion": "0.1.0+e892633c"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5a2e9028-2d66-4211-97f0-3b1d5af6fe9a",
+  "objective": "From public IMD explorer and docs only, list launched community coins and swarm jobs that name a project, with any link included in those records. Do not guess X profiles.",
+  "publisherVersion": "0.1.0+e892633c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
