@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "fbd6780f59504382d34c55e982bd8a2f6fdef92e86b051a5130627e472678cd6",
+  "artifacts": [
+    {
+      "bytes": 21626,
+      "hash": "9739b0c8bf05e9664bd39d762c2f75f4df6f10ad3254958d0ba803c8ffff32f6",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "a1223f180c24a6aae6982ff54de7078802186c677477b4c4a7c4f7726e95fb9f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e36579e0223ff9089799a22090fc216d86ace1a197c0cbb6df45e9518b86933e",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a1223f180c24a6aae6982ff54de7078802186c677477b4c4a7c4f7726e95fb9f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dc7103e773ea194aeb43ebfa0f295e081a9aeced51b271af6c73aa99451a394f",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4cb6c7a526c78913378a5a9c2b3562b3f5025161cee5297df54cf3874bf14714",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "74a99f640688d37b63f374b877ae00cab52ba26a36a09274c00338a6d8833f23",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "597f7a1ee897d389f4a978abbba8426d2a7abc9408477831b6b4efef9bbf698c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c722c2e9ac9aa0844d0c645fdb70fe9e6e139c9e0eb6d845666d11f4c86a049e",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b6b94cdb56b7eacabf4a483e02a9a6f2af4ec21d542f30ff77b032c271dcf664",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7c0191a32541eb746c94deddf06264811dcb25a6c776b6b15a4a6ef0ff78717d",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f326b46da449afc2c1455afa153bfa02dc70c0cae9e32e89335f1d3e5708d775",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "78c00339-8764-4684-920c-0958d23472c0",
+  "objective": "The Zero Person Billion Dollar Company ($COMPANY): a pre-launch audit of one token on Robinhood Chain (4663). Read AUDIT.md first; it lists the guarantees and the known, accepted limits.\n\nWhat the contracts are for:\n- CompanyToken: a fixed 1,000,000,000 supply ERC-20 with permit. Ownership is renounced in the constructor; there is no mint and no upgrade.\n- CompanyHook: owns the token's only Uniswap v4 pool, paired with IMD. All liquidity is locked forever. It takes 4% of the IMD side of every swap: 1% to the protocol, 3% to holders.\n- CompanyRouter and CompanyEthRouter: buy and sell with IMD or ETH.\n- Holder fees are split 50% IMD and 10% each to NVDA, GOOGL, AAPL, AMC and MSTR Robinhood stock tokens. The stock share is bought IMD -> USDG -> stock at the start of every claim() (or by anyone calling convert()). Each round spends at most 0.25% of the IMD/USDG pool's depth, each stock converts at most once a minute, and each stock runs in an isolated self-call.\n- Only wallets holding at least 100,000 $COMPANY earn. Unclaimed rewards expire after 7 days of inactivity and go to the fee recipient.\n\nLook hardest at:\n1. Solvency of all six reward assets: balances always cover what is owed and waiting to convert.\n2. Reward capture with flash-borrowed pool tokens, or from one's own trade.\n3. The conversion: can it be sandwiched profitably, pushed past its cap, or run more than once per stock in one block?\n4. Stock tokens have blocklists: a blocked stock or holder must never block claims, trades or the other assets.\n5. The 100,000 minimum: eligibleSupply must always equal the sum of weights, and crossing the line must never change rewards already earned.\n6. Expiry: recycle must never move more than expiredRewardsOf, and only to the fee recipient.\n7. Anything that would make a scanner flag a honeypot, hidden owner, owner-can-change-balance or a suspicious function.\n\nTests: cd contracts; git submodule update --init --recursive; forge test. Fork test: FORK_RPC=https://robinhood.drpc.org forge test --mc CompanyForkTest.",
+  "publisherVersion": "0.1.0+be003835",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "9fe5e93ea62d45be49fdbe9db13f91db8af17331",
+    "repoUrl": "https://github.com/imdmaxi/IMDINDEX.git"
+  }
+}
