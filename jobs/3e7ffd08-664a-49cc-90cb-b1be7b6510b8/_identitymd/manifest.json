@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "b553db98a818b3380b0e054f56828e73d9ee25aa8a9a99d30aa912c4efc1f2e1",
+  "artifacts": [
+    {
+      "bytes": 2605,
+      "hash": "6165dc47407d07bb6676ac5f557ab2685d2d11414db196206358e1ecedcc1f0b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "4670772712f97c98e6d94087caef3197c239b5c2ca46a6ce697a2a5c561a06fa"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa8fc4653a9e883d4b2a1e1c53a856ddf70e90f433ae70645a4a0bb3cccdd962",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "4670772712f97c98e6d94087caef3197c239b5c2ca46a6ce697a2a5c561a06fa",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ef8fb83e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3e7ffd08-664a-49cc-90cb-b1be7b6510b8",
+  "objective": "Write a short sourced report explaining what the IMD agent swarm is and how a paid job is opened. Under 400 words, plain English, cite imd.fun or explorer.imd.fun.",
+  "publisherVersion": "0.1.0+ef8fb83e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
