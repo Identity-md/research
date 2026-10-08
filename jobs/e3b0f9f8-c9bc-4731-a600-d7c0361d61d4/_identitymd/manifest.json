@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ce6fc68e2174f678cbac0fbec6a18cfc36a1f0593e2bd359543e087aa313bf7b",
+  "artifacts": [
+    {
+      "bytes": 57913,
+      "hash": "2b2485f3acc59f4892046cf63f5cd468913bf53cbb92bbc110973160d0187bf0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "dab931893c29242d08e7ab5316b974efbd9398cc541893d3a04450e393a1f72d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9a29c101a23c14cc1a27a875f2c1b5eceaf7ebad46ca78d581e333462a34af88",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "dab931893c29242d08e7ab5316b974efbd9398cc541893d3a04450e393a1f72d",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ad90ce4c"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e3b0f9f8-c9bc-4731-a600-d7c0361d61d4",
+  "objective": "Research Papertrade (docs.papertrade.xyz, read every page, plus papertrade.xyz, public contracts on HyperEVM, relayer or API docs) and find the most effective ways to farm PAPER, with a working solution that Swarm Pepe / OG holders can actually use. Use skill research-report. Output: artifacts/papertrade-farming-research.md (text/markdown). Research only: no trading, no deploys, no keys.\n\n1. MECHANICS (short, exact): BBO mid pricing, 0.2 bps deadband, asymmetric impact formula and launch params (baseRate 10%, rateMultiplier 15000, referenceNotional $100k, positionMultiplier BTC 814.598 / ETH 483.979), 2% win fee, loss-basis and liquidation mint rules, PAPER mint curve (100 per $1 below $2M tracked LP, then 100·(S/(S+H))² with S = $120M, one-way ratchet), payout queue and sideBucket, staker revenue (1% of PnL, half of fees, LP excess above $5M), OI caps, min margin, session keys, relayer, deposit routes and fees.\n\n2. FARMING STRATEGIES: search for every effective way to earn PAPER or USDC, including non-obvious ones, and rank them by cost per PAPER and risk. At minimum: hedged pair (long + short same size) vs move size, leverage, BTC vs ETH, close order, liquidation vs voluntary close; directional trading with the mint as rebate; timing (queue empty vs active, early flat-rate window, volatility); early staking rebate at 1%, 5%, 20% of total stake. Tables for moves 0.05% to 3% and leverage 10x to 1000x, formulas and worked examples.\n\n3. WORKING SOLUTION FOR HOLDERS: design something real where a holder sends ETH and farms, not just a calculator. Compare at least:\na) Non-custodial guided farming: the holder keeps their own Papertrade account; our site handles deposit (ETH to USDC to Papertrade), session key in the browser, one-click hedged pair, close-order automation and stake. Check if a third-party frontend can submit through the Papertrade relayer and what is needed.\nb) Pooled vault: holders deposit ETH into a contract, the vault farms as one Papertrade account, stakes the PAPER and pays USDC/ETH back pro-rata (or to activated Pepes). Check if a smart contract can be a Papertrade account (EIP-1271 signatures, session keys, relayer rules, CREATE2 deposit proxies), the bridge path Ethereum to HyperEVM and back, and the fact that PAPER is non-transferable at launch.\nc) Builder codes (planned 1% revenue share for frontends): how revenue could flow to activated Swarm Pepes through the OGDistributor 0xd450ea80aec46b8bffdf0c4f44d3964489b613f2.\nFor each: does it work now / at launch / never, exact steps and contracts needed, who holds funds, fees and bridge costs, expected cost per PAPER for a holder depositing 0.1, 1 and 10 ETH, risks, build effort. Recommend one to build first and write its spec so it can be built in a follow-up job.\n\n4. RISKS: queue lock while LP is near zero, upgradeable proxies and owner powers, BBO manipulation, non-transferable PAPER, anti-sybil or wash rules, relayer dependence, custody risk for pooled funds.\n\n5. LIVE STATE: if contract addresses are public, read tracked LP, queue length, PAPER supply and total staked from HyperEVM with the block number.\n\nEnd with a one-screen TL;DR: best strategy, cost per PAPER, recommended holder solution, top 3 risks.",
+  "publisherVersion": "0.1.0+ad90ce4c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
