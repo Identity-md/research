@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "8ebd4b06c375b2e06e2a521507b76342268c4351e5440207516492954c0dbd78",
+  "artifacts": [
+    {
+      "bytes": 21280,
+      "hash": "4e66cdc81211cc0937b0c737841a5e674649fc8d67cc87c5104329ba3e63ad58",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "126726f34a15ad2f299330a86b88e08c070924b1d64be5854adcf10e35fe1d4d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ef5038c1bdac3372a4e4752c9a7dd6416628a7dc0a05a31572dfd4bae12d0fbf",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9033211a57ea8fba0844aa6744be53eb306e681578ac991750d3ed8ef2ea3ded",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f768e94767a9dde3bfb3a7b0d4e7015be9266dc0da97d12cfe01eac2363dd7d9",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "126726f34a15ad2f299330a86b88e08c070924b1d64be5854adcf10e35fe1d4d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "589ef002581a53719d3af2622bb0d2ba58ea5f4139529f8b933806d6cb2e511d",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "763c9c473d4addf783a91de9327e7cab05cc12c0266e72e29f912979420dce27",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ddc5542bddcad225926acf93396c1dbbd124fbf864ca9131ce3fb3489688bf11",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5d40b5971ee2fe052b8a47b53fb62fc0c5019e12af370e00316d118b312e747c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f47f953f8e35921edd8ad15f032f1bad0d020522e57a1e043a63fdcd8639f678",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a98cc332dc5feb55c4f31e1126b64b794418c2878eed4941724ce4da3fd69fd8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "19b34b9b-94ef-4543-8d85-b05028860fcf",
+  "objective": "Courier ($STAMP), final check after IMD Swarm re-check ca28d248 (which read commit d5a04ed; this is commit ca016a4). Read AUDIT.md first: section 7 maps each re-check finding to its fix and test, section 6 does the same for the first audit ea514609, and section 1 describes the system.\n\nWhat it is: a game on Robinhood Chain (4663). Players put Courier NFTs on duty at post offices and earn $STAMP (21M cap), which trades in one Uniswap v4 pool against IMD; the hook takes 4% of the IMD side of every swap, rounded up, all to the protocol, and locks a single-sided launch allocation forever. Two launch stages from one wallet: stage 1 deploys the NFT for the mint; stage 2, only after the reveal, deploys the token, pool and post office, links them, freezes the art and renounces every owner.\n\nScope: contracts/src/StampHook.sol, StampRouter.sol, StampEthRouter.sol, StampToken.sol, PostOffice.sol, CourierNFT.sol, lib/SafeTransfer.sol, contracts/script/DeployMainnet.s.sol, DeployCouriers.s.sol, DeployLib.sol. Out of scope: the view-only art (CourierRenderer, CourierSVG, CourierTraits), the dev scripts (Deploy.s.sol, DeployFork.s.sol) and web/.\n\nChanges in this round, and what to check:\n1. StampHook: launch allocation must be at least 1 $STAMP (MIN_LAUNCH_SUPPLY) and at most 21M, start tick within +-400,000. Check that every input the constructor accepts gives a nonzero launch liquidity within v4's per-tick cap, so openPool always succeeds, in both $STAMP/IMD orderings.\n2. Stage 2 (_deployGame) requires the NFT's current renderer and DeployMainnet reads it from the NFT. Check that stage 2 can never leave a renderer, the NFT, the token or the hook with an owner, or freeze a renderer it didn't link.\n3. CourierNFT.setTreasury moves the ERC-2981 receiver along with mint payments (rate unchanged); renounceOwnership now also requires rendererFrozen. Check no ordering of owner calls before renouncing leaves funds or royalties pointing somewhere unintended, or the collection unrevealed, unlinked or unfrozen.\n4. Confirm the earlier fixes still hold: total minted never exceeds totalEmitted, the fee is never below 4% nor more than 1 wei over it in all four modes, sells stop at the launch price, and no admin power reaches user funds.\n\nTests: cd contracts; git submodule update --init --recursive; forge test (88 tests; the hook suite runs in both orderings). Fork: forge test --match-contract \"StampHookForkTest|LaunchStagesForkTest\" --fork-url https://robinhood.drpc.org (the second runs the real stage 2 after a renderer swap). Both launch stages with the real settings: ./script/deploy-mainnet.sh rehearse.",
+  "publisherVersion": "0.1.0+ad90ce4c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "633ab97b01461431f5ee449d98e9a43662744675",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
