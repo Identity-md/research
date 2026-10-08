@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "925160d5ef83f82f0fd215fe3022e74af43558dd10ebd9550575403b04a6c562",
+  "artifacts": [
+    {
+      "bytes": 25128,
+      "hash": "430c363fd868ebaed9b0db77a793fc1a114f763dc13c0ba853c4131b996de56c",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "334b2a757958b206e83e253dcc451557ed30eec8a02f5ac0db59078943d2200c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "723b11f958c65250254927fb63b68c61a0eb28311bd17fb1121a3cd9194b674d",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d9286af25c06e52af530c60805033f64c64da3f5ec17169688d6d59a8d5645f7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d20c1a95c50699ea48fe90f29fe3ef1c09d9612b7d9eeaa3a77d51ac017013eb",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "06f1fc4cf67d369a63cfbe1e6046358850254244f63fb3e00138a7d389aaadb4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3b9f88f55251764de70b4cb439f71dccf68bef0e9370c8b835b00bc381d6052f",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "334b2a757958b206e83e253dcc451557ed30eec8a02f5ac0db59078943d2200c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e2a4a53638df3fc6dce8d6f323df7160f7f280da87173f0cb0e41c8f708c525f",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4c68d19bddf8c8aad78ebc31ccf2fbbaa6139ff7adafe3bcb07e5e68d1b0b84b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8c9c4986ca881107d7876eb769dd6d86d2c20f3ed36edf1d61d01e4679622637",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "030e6ed404cf6fbe350cef44f159210ee43ccbfc0cc61b55c81576a25cae2b3b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1c006b6b-3525-4709-b840-10a20e1dd141",
+  "objective": "Audit the Sherwood Uniswap v4 hook (src/Sherwood.sol): a daily leaderboard game that takes a 5% pot fee on swaps, keeps points onchain, pays the daily top 3, handles Dice Protocol randomness for flips, referral earnings and a buyback reserve. Focus areas are in README.md under \"Where we'd like the most scrutiny\": swap delta accounting and the buyback unlockCallback, pot/prize/referral accounting including partial forfeits (ETH out can never exceed ETH in), the flip lifecycle, points and leader bookkeeping with negative scores, and anything that could block swaps, settlement or claims.",
+  "publisherVersion": "0.1.0+ad90ce4c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "1266778edc5697cb4b13442901e27bbe569a1e22",
+    "repoUrl": "https://github.com/MirakoolDev/sherwood.git"
+  }
+}
