@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "2b764bfd0766fa2d6770167f8e9a435ec72e3ae7569695aeaacab19bb0d54778",
+  "artifacts": [
+    {
+      "bytes": 44048,
+      "hash": "92a8a8d9476b1e3e902ea2034cd54665f86da60bee6ca177b0c777dfdfc8e280",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "51b6aa4fa89fc80bddd2070758bf17bb1550d4a0ed4f85fc893af9e3819a3779"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "75052237a39b6e1240106d4c537fd9b1cdacae7a0ac262da58b0451423d675f8",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "51b6aa4fa89fc80bddd2070758bf17bb1550d4a0ed4f85fc893af9e3819a3779",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "93ca4a1020037bf14e8df5a9b55e8c0f1f59899206c629487b6b52b3de8c5292",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b1a759df61b7ae1cb6d0d7b1c15b3a55ace3d2cd6f64653e446f9c17f0eb4c2f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7e929507773df6619d757326be2604c74de8e3555a8c9360167a777fe3ec2312",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "aaa2e1a218480b65fa48074fd8ac37e62736c5a279e1dbb9662c10d8098d5204",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a31e321b410aaa024ee81e908aad936beefa54fe7e98d9eed91e7b17e6bdea19",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "86e9f92ef5cdd453fb1969d9441dcc9c9b4988467145f0a324b23f59dca51e56",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8f08088e7a7f557fe4e4310cdebf34ba2465cce5a271da94a68526e60a206c2d",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1c8e8d99d596ce4f126a1a62ceae3c267816a921582e140e12bf4f5c00d0c2ea",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c7f92d5c-631b-4088-8a1c-328006a75089",
+  "objective": "Audit the three Ponzinomics contracts in src/pimd at this commit. PimdToken is a fixed-supply ERC-20: exactly 1,000,000,000 at 18 decimals, minted once in the constructor, no owner, no mint and no burn function (burning is a plain transfer to DEAD, so totalSupply never moves). PimdHook is a Uniswap V4 hook that taxes every trade in IMD, 2.4% on buys and 5.6% on sells with the pool's own 1.25% on top, split 75% to holders and 25% to the team, taking its fees as ERC-6909 claims on the quote currency. The IMD launch factory constructs the hook and opens the pool itself, so the team wallet, the engine address, the quote token and the opening tick (129,000, tolerance 300) are all source constants. PimdEngine pushes the holders' IMD into wallets weighted by balance times hold-streak, the tiers being zero under an hour and then 0.5x, 1x, 1.5x, 2x and 3x from fourteen days; tally weighs the whole set in one call and pay is paged. The holder-set logic is the part to look hardest at: it changed after your last audit of this repository and nobody outside has read it. Four things in particular. First, register probes an address with _isPool but can only see the code that is there at the time, so it now records a vettedCodeless bit and tally calls _shapeChanged, which takes all weight off an address once code arrives where there was none. Say whether that really closes the play of picking a CREATE2 address, funding it, registering it while it is still empty, letting the streak mature and only then deploying pair code into it, and whether it can be evaded from the other side by an address that carries code from the start. Second, _shapeChanged is blunt on purpose: any code arriving voids the verdict, a legitimate EIP-7702 delegation included, and prune drops a holder on that same test so the address can register again on what it now is. Confirm there is no reachable state in which a holder earns nothing and cannot be pruned, because the engine has no owner and that would be permanent. Third, prune now drops a holder on its shape as well as its size and is permissionless: confirm it cannot be aimed at a holder who should keep earning, and that the swap-and-pop is still right when the pruned holder is the last element. Fourth, the exclusion list at bind is the token, imd, the hook, the PoolManager, the engine, the team, address(0) and DEAD, plus whatever the binder names. Say whether anything else can hold PIMD, be registered, and then be unable to forward an IMD payout. Then the standing ones. Tally weighs the whole set in one call against min(bal, lastBal) so a single bag cannot be counted once per wallet it is moved through, which was the high you found last time: confirm it holds. The engine must never read holder weights while the PoolManager is unlocked, which is where a flash borrower would stand. One holder who cannot receive IMD must not be able to stall a batch. beforeRemoveLiquidity is the whole safety case for letting the launch factory hold the liquidity position: it must refuse every negative liquidityDelta for ever, from any caller including the position's owner and the hook itself, while allowing a zero delta so the pool's own fee collection still works. beforeAddLiquidity must allow exactly one add, the factory's seed, and refuse every later one, reentrancy and the hook calling itself included. beforeInitialize is the only gate on the pool's shape: confirm it cannot be bypassed and that every assumption the tax maths makes is enforced there, in particular that IMD is currency0. And the fee accounting: claims minted in beforeSwap and afterSwap must always equal holdersOwed plus teamOwed, with nothing double counted or stranded, and flush must not be able to pay out more than was taken. The engine pulls from the hook inside a try/catch, which has hidden one breakage from us already: say whether that pattern is safe here. Report findings rather than fixing them, and do not propose changes to the economics, the tax rates, the split or the tier ladder.",
+  "publisherVersion": "0.1.0+ad90ce4c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0fc1ff2556a8007f77b34fac39c83acaef957817",
+    "repoUrl": "https://github.com/JJ-ME55/Ponzinomics.git"
+  }
+}
