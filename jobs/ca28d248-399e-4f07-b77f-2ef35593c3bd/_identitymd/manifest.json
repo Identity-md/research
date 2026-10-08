@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "0fe37b8b22d3d7e5e1fac860fa84a18d21394bec0ecc66b39ae71666bca1ccf4",
+  "artifacts": [
+    {
+      "bytes": 16019,
+      "hash": "556fc65d5a4b0a8dfc42363c1b5af7bac716ba8061b3d63a274bbf7c2c13ec02",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "1bda366afbb9555d0558436367abb2e88c01a11d73cf1dad8b6d85eb8176be54"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e2a4a53638df3fc6dce8d6f323df7160f7f280da87173f0cb0e41c8f708c525f",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4bc752b6b144683df9c9aa3c2da31af3f38fa70411e3bda2f9c63324dd3001f0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d20c1a95c50699ea48fe90f29fe3ef1c09d9612b7d9eeaa3a77d51ac017013eb",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "be3fa69818364fd15d60591f401925b8a0c361339a8b4cc91c4fd1c9476b200b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7f1dec5ffcbde1d88ca607ac38ef7545b0eda84f10878188e9ed8c9138392f4c",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1bda366afbb9555d0558436367abb2e88c01a11d73cf1dad8b6d85eb8176be54",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5d667e4b0751bcb55515022399c1ba51448da54deb4eebc7503f9961c70cfde3",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "cc8f23b680f732d1e62226cdf5c62e1e59e98a254dbfae4f419087382f5e2a96",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ca9ed4f0937da89830a0ebc4138194d204c23116ac7ce5bf6be3985f50f0dc3",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0769f4d137bbc850b79033e3f018baf8a173f4584d54c82b9224542c44bceb67",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ca28d248-399e-4f07-b77f-2ef35593c3bd",
+  "objective": "Courier ($STAMP), re-check of IMD Swarm audit ea514609 (that audit read commit 0a2ce30; this is commit 312f6a9). Read AUDIT.md first: section 6 maps every finding to its fix and the test that reproduces it, and section 1 describes the system as it is now.\n\nWhat it is: a game on Robinhood Chain (4663). Players put Courier NFTs on duty at post offices and earn $STAMP (21M cap), which trades in one Uniswap v4 pool against IMD; the hook takes 4% of the IMD side of every swap, rounded up, all to the protocol, and locks a 2.1M single-sided launch allocation forever. It launches in two stages from one wallet: stage 1 deploys the NFT for the mint; stage 2, only after the reveal, deploys the token, the pool and the post office, links them, and renounces every owner, so nothing has an owner afterwards.\n\nScope: contracts/src/StampHook.sol, StampRouter.sol, StampEthRouter.sol, StampToken.sol, PostOffice.sol, CourierNFT.sol, lib/SafeTransfer.sol, contracts/script/DeployMainnet.s.sol, DeployCouriers.s.sol, DeployLib.sol. Out of scope: the view-only art (CourierRenderer, CourierSVG, CourierTraits), the dev scripts (Deploy.s.sol, DeployFork.s.sol) and web/.\n\nWhat changed, and what to look at hardest:\n1. PostOffice has no owner (costs, rates and tiers fixed) and refuses to deploy before the couriers are revealed; reward debt is now kept unscaled (power x accRewardPerPower) so each stretch rounds down once. Check that total minted can never exceed totalEmitted, under any order of assign, unassign, levelUp on duty and claims, and that the new claimable() view matches claim().\n2. Routers stop sells at the launch price (StampHook.sellPriceLimit); price() reports the launch price when the pool sits beyond it. Check both $STAMP/IMD orderings, partial sells, the ETH router's sell path, and that nothing else changed in the fee or settlement.\n3. The fee rounds up (mulDivRoundingUp) in beforeSwap and afterSwap. Check the PartialFill accounting still holds in all four modes and that no trader pays more than 1 wei over 4%.\n4. Start tick bounded to +-400,000 and launch to 21M: check that every accepted constructor input opens.\n5. CourierNFT: Ownable2Step; renounceOwnership reverts until the couriers are revealed and the game is set; mint payments go straight to the treasury; reveal ends the sale itself. PostOffice office payments go straight to the treasury.\n6. The deploy scripts: stage 2 must leave no owner on StampToken, StampHook, CourierRenderer or CourierNFT (it logs each), and must not be runnable before the reveal or from another wallet.\n\nTests: cd contracts; git submodule update --init --recursive; forge test (86 tests; the hook suite runs with IMD as currency0 and as currency1). Fork: forge test --match-contract StampHookForkTest --fork-url https://robinhood.drpc.org. Both launch stages against a fork with the real settings: ./script/deploy-mainnet.sh rehearse.",
+  "publisherVersion": "0.1.0+ad90ce4c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "d5a04ed5b1678b0ecc5d13fa14e95d55436ed7de",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
