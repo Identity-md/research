@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "ca2b1d964a51ede3c431119d54f7e8099c00b4ad73879e2e5a191c8df7584fc3",
+  "artifacts": [
+    {
+      "bytes": 33497,
+      "hash": "bd9b2c29d384a5a1c30018ef17011c73d635a1d3259cfdd669c20ee13cb0e5fa",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "54062dd39a90d3bd9924d3b73bce1c746b0c19db9eca81cfca67cb2bca931a53"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "559cfaaab2c0d01334efc1aa9717eec5a6448a69f31468adc77273f21ccd7eac",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "949cc8e781d2fb6a1db2de18d57d5ccbbe47aac8350af49923e98e199cdb7b94",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ea89e16822824c6f2a87d26cbd52d3a3bab2b7664b8d92898f6fb5bf24f419ec",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fe5ba8af9a2535686a46061d00829bd31a96687d623b47f3c735dff40a4d9721",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d11ea2b5e05fa7a87b4f93104e21f0e5d0435f2c729f01357ac11d3d92dc5d69",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5a5ea766034c79cc4c884b530fcf1126bdc9855d5ea769c5a94f638c9e0e399f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e36579e0223ff9089799a22090fc216d86ace1a197c0cbb6df45e9518b86933e",
+      "evaluation": null,
+      "findings": 12,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "54062dd39a90d3bd9924d3b73bce1c746b0c19db9eca81cfca67cb2bca931a53",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ee9fbaf2480d10346d554c2e7e9766dc8d44669b80643d967d9d3282595aed71",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "18d4bd5fb5a83ee5f25993d551082bc8b8df348a7dff515b1d29830e78bfb561",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ea514609-097d-4b62-a4f4-76f8f4e9594d",
+  "objective": "Courier is a game on Robinhood Chain (4663). Players buy post offices with ETH, put Courier NFTs on duty and earn $STAMP, which trades in one Uniswap v4 pool against IMD. Read AUDIT.md first: it describes the system, the guarantees, every admin power and the known, accepted limits.\n\nContracts (contracts/src):\n- StampHook: pool owner and v4 hook. openPool (owner, once) locks a 2.1M $STAMP single-sided launch allocation that can never be removed; every swap in the pool pays 4% of its IMD side to the protocol through return deltas, held as ERC-6909 claims until collectProtocolFees.\n- StampRouter, StampEthRouter: buy/sell with IMD (permit sells), or with ETH through the hookless IMD/ETH pool.\n- StampToken: $STAMP, 21M cap, only PostOffice mints, ownership renounced at deploy.\n- PostOffice: offices, couriers on duty, reward-per-power emissions with halvings, levels, $STAMP spending (75% burned), referrals.\n- CourierNFT: 3,333 NFTs minted for ETH, commit-reveal traits, couriers locked while on duty.\n- Deploy: contracts/script/DeployMainnet.s.sol, DeployLib.sol.\nOut of scope: the view-only art contracts (CourierRenderer, CourierSVG, CourierTraits), DeployFork.s.sol (dev only) and web/.\n\nLook hardest at:\n1. The fee: exactly 4% on every swap in the pool, through any router, direction and exact-in/out mode; never skipped, never overcharged; partial fills; the hook's IMD claims always equal pendingProtocolFees.\n2. Locked liquidity: nobody can remove it, add liquidity, open another pool on the hook, or block openPool.\n3. Supply: $STAMP can never exceed 21M; nothing can change balances, the minter or transfers after deploy.\n4. PostOffice accounting: never pays more than was emitted, or for time a courier wasn't on duty, including across halvings.\n5. Couriers: one on duty can't be transferred; traits can't be learned or influenced before the mint ends.\n6. Routers move only the caller's tokens and enforce deadlines and minimum outputs; no admin power reaches user funds (scanner flags: honeypot, hidden owner, owner can change balance).\n\nTests: cd contracts; git submodule update --init --recursive; forge test (43 tests). Fork test: forge test --match-contract StampHookForkTest --fork-url https://robinhood.drpc.org",
+  "publisherVersion": "0.1.0+ad90ce4c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0a2ce30357882180a87365514d7e9e6800700537",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
