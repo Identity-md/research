@@ -1,0 +1,56 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "75857b68ffa9bbc1d2818a81845461c81de1e5aa6547024038c17c419e68531a",
+  "artifacts": [
+    {
+      "bytes": 28379,
+      "hash": "10726ae3ab857bd65cef0a4719f2e523e68e7156a3656e3f17817c010264ee73",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "e3124f26797186f534f4a0ad81e4aa97fe334062e9bacc3d4bc0df59ef9dda14"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "2eee94e275301c0ab121859346e5e6691ca9ee62762830bbcf63cb35ec100546",
+      "changedPaths": [
+        "README.md",
+        "evidence/gamma-api/gold-missing-from-fort-knox.json",
+        "evidence/gamma-api/israel-x-hezbollah-ceasefire-extended-by-april-26-2026.json",
+        "evidence/gamma-api/microstrategy-sells-any-bitcoin-by-may-31-2026.json",
+        "evidence/gamma-api/trump-declassifies-ufo-files-in-2025.json",
+        "evidence/gamma-api/ukraine-agrees-to-give-trump-rare-earth-metals-before-april.json",
+        "evidence/gamma-api/us-x-iran-ceasefire-extended-by-april-22-2026.json",
+        "evidence/gamma-api/us-x-iran-permanent-peace-deal-by-june-15-2026-734-856-129.json",
+        "evidence/gamma-api/was-barron-involved-in-djt.json",
+        "evidence/gamma-api/will-nicolas-maduro-win-the-2024-venezuela-presidential-election.json",
+        "evidence/gamma-api/will-the-us-invade-venezuela-by-january-31-2026.json",
+        "evidence/gamma-api/will-zelenskyy-wear-a-suit-before-july.json",
+        "tools/polymarket_gamma.py"
+      ],
+      "deviceKey": "262346efaedbfe8b363bfb073902489328643383d97517018c07e2e407ce1421",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "e3124f26797186f534f4a0ad81e4aa97fe334062e9bacc3d4bc0df59ef9dda14",
+      "treeHash": "aa8261460a26da5e9497768e121ffe024be9fda6",
+      "verifiedTreeHash": "aa8261460a26da5e9497768e121ffe024be9fda6",
+      "verifierVersion": "0.1.0+c4d32abc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "712c5619-5274-4b63-a3fb-91b0d52522d5",
+  "objective": "Find the top 10 most controversial polymarket resolutions like suitgate. \nfind the exact question and the exact resolution criteria listed on polymarket",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
