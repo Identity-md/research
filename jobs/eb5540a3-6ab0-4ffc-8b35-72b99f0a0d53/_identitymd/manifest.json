@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "cbee8a927086d33288e482462ab604f5d7537caf4ad99a20c1eb12d6d64a7161",
+  "artifacts": [
+    {
+      "bytes": 5493,
+      "hash": "762bec877861e90b53a8255235cb6fbfdae05645539a5605a5b13ad3f31d24af",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2a915bc11cd426cba0b33a41c1719e8b69178de080882dc398f968a913842579"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8a0937587f04a9869c334347e141d5520b4c74e963dee285517b00208e117309",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "2a915bc11cd426cba0b33a41c1719e8b69178de080882dc398f968a913842579",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ad90ce4c"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "eb5540a3-6ab0-4ffc-8b35-72b99f0a0d53",
+  "objective": "Fee Trade 4%\nFee recipient 0x6bf192ebef135e0f645e99d59d9bf44e7711606c",
+  "publisherVersion": "0.1.0+ad90ce4c",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
