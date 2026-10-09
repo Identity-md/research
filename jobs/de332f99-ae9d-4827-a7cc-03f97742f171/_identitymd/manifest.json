@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "d1d2a3e3f53064a006851a6342ad4ce12b582a404430d13bd0b11298d47fb2c8",
+  "artifacts": [
+    {
+      "bytes": 26593,
+      "hash": "85f5d9b7d16aa59849963dec1bcd9ca637b84a01bdc6ca737e0d63076b944916",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "3e3434159e8f21f82b51d603eb8d4885e2456354f9b308a63dd268d78a4250c9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6b0a28df3d585600055efbf5af60f9a74c60e4b0c831789748389b5ca63b0ce9",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7847f6f361c897264707f524c052ec047fb099d5189c81c36478001149a9d5bf",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6b37e4ab6524670535ab5ca4790833b288ea8c4f498948e8435b4062d7544812",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ecedf1c3867052ced9a2761d2da48c60aa0ab455811da3a4d7b9d0046d2949e6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6b16b4979d22724158b8c5c0f0cc9ce06382153e865034e462fc689651022ada",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b7950a08fa07135e294a66b36fc3dcbef37e648b2d81cd44643cab8e0549dcd3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e2a4a53638df3fc6dce8d6f323df7160f7f280da87173f0cb0e41c8f708c525f",
+      "evaluation": null,
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "482a66c9a0f3b6b38031748aa66ca489d251a457703a919a03ce684bd5e36662",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b5e3297a04468fd381015897d86a8717fba81dce62eab7c744efbe88cb4c9185",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3e3434159e8f21f82b51d603eb8d4885e2456354f9b308a63dd268d78a4250c9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "de332f99-ae9d-4827-a7cc-03f97742f171",
+  "objective": "Audit the HiveSeatVault contract in src/HiveSeatVault.sol: a non-upgradeable custody vault holding Project Hive's identity.md seat NFTs (ERC-721 collection 0x0000eC93127BAA929E58E97dd0095A2BFb38ec1D). The owner is a 48h OpenZeppelin TimelockController; a scoped seatOperator hot key may pair and run the seats but must never be able to move them. The ERC-1271 WorkerAuthorization pairing (authorizeWorker, revokeWorkerAuthorization, workerAuthorizationDigest, isValidSignature) is lifted verbatim from the audited IMDSeatStrategy so IMD accepts this contract as a seat's signer; the EIP-712 domain is 'IdentityMD Worker' version 2, bound to the seat collection. The security of the whole design rests on one property and it deserves the hardest look. (1) isValidSignature must return the ERC-1271 magic value ONLY for digests inserted by authorizeWorker, i.e. well-formed WorkerAuthorizations whose wallet equals address(this) and whose tokenId the vault owns. There must be NO path by which the seatOperator, a hot key that may be compromised, can cause isValidSignature to accept an arbitrary hash, in particular the hash of a Seaport order that would list or sell a seat. Confirm authorizeWorker only ever stores the EIP-712 digest it computes itself from a structured WorkerAuthorization, that an attacker-chosen digest cannot be inserted into the mapping, and that no Seaport or marketplace order hash can collide with a WorkerAuthorization digest. Then the custody invariants. (2) A seat NFT must leave the vault ONLY via withdrawSeat, which is onlyOwner (the Timelock): confirm there is no other path that transfers, approves (approve or setApprovalForAll), or lists a held seat, and that the vault never grants NFT approval to anyone. (3) The seatOperator's only powers are authorizeWorker, revokeWorkerAuthorization and registerAgent: confirm none of them can move value or a seat, and that a leaked operator key can at worst grief (stop pairing), never steal. (4) sweepEarnings must be unable to move a seat: it uses the ERC-20 interface, reverts if the token is the seat collection, and sends only to the fixed rewardSink. Confirm there is no caller-supplied destination and no way to reach the ERC-721 collection through it. (5) withdrawSeat, setSeatOperator, setRewardSink and setEnsName are all onlyOwner: confirm there is no privilege-escalation or reentrancy path around the Timelock, and that onERC721Received cannot be abused to brick the vault or spoof an approval. (6) The contract is non-upgradeable with no delegatecall and no selfdestruct: confirm the rules cannot change silently. Also assess reentrancy on registerAgent (external adapter call) and sweepEarnings (token transfers), and whether a hostile ERC-20 passed to sweepEarnings can do anything beyond reverting its own sweep. New since the last round (fix for audit 41fa0208): (7) routeERC20(token, to, amount) is an onlyOwner (= 48h Timelock) ERC-20 exit for launch tokens that refuse a plain sweep to rewardSink; confirm it is onlyOwner, reverts on the seat collection and on to == address(0), cannot reach a seat by any path, and does not weaken any invariant above. (8) script/DeployHiveSeatVault.s.sol now supports a cancel-only guardian (temporary deployer admin, renounced in the same broadcast); confirm the deployer and proposer end with no DEFAULT_ADMIN_ROLE, the guardian can only cancel, and the comment's description of TimelockController self-administration is accurate. Report findings rather than fixing them. Do not propose changes to the 48h timelock design, the operator model, or the economics.",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "c1081ba0325699192f8c1029b0524dde619ee0db",
+    "repoUrl": "https://github.com/ProjectHive-IMD/hive-seat-vault.git"
+  }
+}
