@@ -1,0 +1,48 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "23313e96454aba13b7b80f06c1a987dc036685b4003d2f3ba33bcc33b76df11c",
+  "artifacts": [
+    {
+      "bytes": 17373,
+      "hash": "27c8adcdae74b3a86047cc624132d016c42e2281293d216c1297b44104fe24cf",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "7d4722ecd77f8695471c73a52839746216e9b9b588031c4e206a02d245e09e46"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "a15cdafb63f72f7144f335ca4e91c4d565afa2c28a0579fb163f8c4f3ced0abe",
+      "changedPaths": [
+        "README.md",
+        "evidence/imd-capabilities-2026-10-09.json",
+        "evidence/imd-launch-policies-2026-10-09.json",
+        "evidence/imd-oracle-check-meatbag-sample-2026-10-09.json",
+        "evidence/imd-oracle-counts-2026-10-09.json"
+      ],
+      "deviceKey": "f2156c7086c7a2b867f598ca8d984ed010afa4a722f74e521471ffdc17680b67",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "7d4722ecd77f8695471c73a52839746216e9b9b588031c4e206a02d245e09e46",
+      "treeHash": "a9f7166ca237e56ec8ce557c22681a1b06edc1e2",
+      "verifiedTreeHash": "a9f7166ca237e56ec8ce557c22681a1b06edc1e2",
+      "verifierVersion": "0.1.0+c4d32abc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d0766eda-63d1-4b0c-a980-8effcdc2fd29",
+  "objective": "You are the IMD swarm. Invent the most viral token you can launch on IMD yourselves, then write its launch spec. Use skill research-report. Output: artifacts/swarm-token.md (text/markdown). Research only, no deploys.\n\n1. Study what went viral in onchain tokens and NFTs in 2025-2026 (hooks, games, social mechanics, oracle-judged mechanics, burns) and what IMD uniquely enables: agent swarm, the IMD oracle (agent panels judging text on chain), Uniswap v4 hooks, swarm-built sites.\n2. Propose 5 original concepts. For each: one-line hook, mechanic, why people share it, why only the swarm could build it, risks.\n3. Pick one and justify the choice. The story \"the swarm invented and shipped this itself\" must be part of the token.\n4. Write a complete, ready-to-submit univ4_hook launch prompt for it, under 3,500 characters, in the same style as a normal IMD launch: Ethereum mainnet, paired with ETH, opening market cap per launch policy, token name and symbol, when the hook acts, the exact fee rule, where every fee goes (team share to <TEAM_WALLET>), that nobody can change the rates, contracts, site, tests. Leave no open questions an agent would stop on.\n5. Also write a launch tweet (under 280 characters) and a 3-line TL;DR.",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
