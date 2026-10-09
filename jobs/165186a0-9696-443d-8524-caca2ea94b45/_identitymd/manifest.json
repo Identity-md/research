@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "c765f9b0364d75ca2a11db96674a170a5c0b6a7bacae7b9a95bcc2c8a41a9765",
+  "artifacts": [
+    {
+      "bytes": 28669,
+      "hash": "c87f9c8f617ddf5c2058f72ac3dec7d5e806aa3e3ac47b871bc47612fd4f28a7",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "8bcf724b8c60f095422abab9df0e991f8de833985816b4db337879979bd4daa5"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "523ef565dd740e258967569a789ffae5b08d99a774b8ea6a2ecfb7478b5eba5d",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ad234af3d795964dfad935d03fc97b59397d5f8397346e98f3a7577a91cf1146",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "28e346843ec1553064c9e698cd0998a51bb9bb28850f04326398b9e08b2fc00a",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f7b35fc75b3fcf0fa76c73d7913388e4432f0e20afc23e5a1f723773e43f926e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3a40eaafbd83a6bc57b859dab02a7e0ae1fcd12ca7afee73c0d6c380b94178e9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ec93f962e95a622132c0412ea78017896aebb31481bdc32ab859b5bf6048cb80",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "09078b7cdfb673fe916742c4a47e1376917d0d103a5cef4a2220f3e2d761fa4c",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7b89427e2dcbaf2966d7e82c17c4db17c4f3d17c3d2b385c4ffe34aa83cc39cd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9c6767b941fcfedcae2a610505b38177d38a36966021511d8d6d2ee5e32e4ccf",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8bcf724b8c60f095422abab9df0e991f8de833985816b4db337879979bd4daa5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "165186a0-9696-443d-8524-caca2ea94b45",
+  "objective": "Audit the SOVRN.ONE / SVO launch contracts in this repository (Solidity 0.8.26, Foundry, Uniswap v4 vendored in lib/). Scope: src/SovrnHook.sol, src/LifeForceVault.sol, src/SovrnToken.sol, src/HookFlags.sol, src/Interfaces.sol, script/PrepareLaunch.s.sol, launch.json, README.md. Tests in test/ (175 tests, run in both currency orders, plus test/Fork4663.t.sol which runs against the real chain when FORK_4663_RPC is set) are evidence to check, not the object of the audit. Intended deployment: Robinhood Chain (chain id 4663), a Uniswap v4 pool of {IMD, SVO} where IMD is the ERC-20 at 0x5F7Bb59365ce557C26dbcAa4EE9d39A4b95B7127 and SVO is a plain fixed-supply token; every trading fee is paid in IMD to an immutable LifeForceVault that only accounts for it; a fixed Safe (0xEb57c52272B90F989C41B739e2ccc5f00bF7697C) withdraws by hand. Write nothing to the repository; deliver report.md. Tone: factual and plain; no claims of safety beyond the evidence; do not call the contracts audited or secure; no investment language.\n\nCONTEXT. This code was adapted from an accepted ETH-paired version (the first commits of the branch, where the fee was native ETH): the fee currency became IMD, the hook now handles IMD as either currency0 or currency1 (decided by address order, `imdIsCurrency0`), and the vault now derives its reserves from IMD.balanceOf. Review that diff with particular care: the ETH-to-IMD generalisation is where new defects are most likely.\n\nHARD QUESTIONS (answer each with a verdict and evidence, and a reproducible Foundry test where possible):\n1. Currency order. For both orders and for all four exact-input/exact-output modes, is `buy = (zeroForOne == imdIsCurrency0)` and `specifiedIMD = (buy == (amountSpecified < 0))` correct, are the IMD leg (amount0 vs amount1) and every sign in beforeSwap/afterSwap and their return deltas right, and does the fee always equal the stated percentage of the actual IMD leg? Can any price limit, tiny amount or rounding produce a fee that differs from the spec, a revert on a valid swap, or a fee larger than the amount?\n2. Quote mechanism. The hook measures the real IMD delta with a self-call that always reverts, then requires the real swap to match (QuoteMismatch). Can that be broken or griefed (reentrancy, the busy flag, transient state, protocol fees, an LP-fee override, a hook-less path, concurrent unlocks)? Can the quote leave state behind?\n3. ERC-20 fee path. Fees are taken with PoolManager.take(IMD, vault, fee), or minted as ERC-6909 claims (id uint160(IMD)) when the manager holds less IMD than the fee, then redeemed by the permissionless redeemFees(). Is the manager-balance check right, can claims be stranded or double-spent, can redeemFees be reentered, and what exactly happens if IMD reverts, returns false, takes a transfer fee, or calls back (ERC-777 style) during take or transfer?\n4. Vault accounting. The vault has no receive hook for an ERC-20, so _reserves() derives reserves from IMD.balanceOf with a checkpoint model, floor(x*3000/10000) to buyback, a clamp so reserves never exceed the real balance (shortfall reduces buyback first), sync(), and Safe-only withdrawals paid with a low-level call. Can the Safe withdraw more than it should, can anyone grief or steal, can reserves ever exceed the balance or underflow, are rounding and dust handled, is nonReentrant correct, and is the low-level transfer return handling safe for non-standard ERC-20s? What does a malicious or upgraded IMD change?\n5. Initialisation and addresses. beforeInitialize binds one pool: factory-only, exact currencies in address order, fee 12500, hooks == this, tickSpacing > 0. Is that complete? Hook flags 8396: does PrepareLaunch mine a valid address, can a hook with the wrong flags or a pre-initialised address slip through, does the constructor guard (block.chainid == 4663, IMD has code, token != IMD) hold, and is anything wrong with deploying the vault inside the hook constructor?\n6. Opening-price and launch risks. What can an attacker do between pool initialisation and liquidity seeding (empty pool zero-delta swap, price manipulation, sandwiching the first-hour decaying buy fee, block.timestamp use)? Is anything in the README wrong or missing about this?\n7. Trust and operational assumptions. IMD has an owner and unknown transfer rules; the pool manager has a protocol-fee controller; one Safe has custody of every withdrawal. State precisely what each can and cannot do to funds and trading, and whether the code or README understate any of it. In particular: what happens to trading if IMD blocks transfers to the vault?\n8. Token. Confirm SovrnToken is plain (no owner, mint, tax, pause, blacklist), name() is exactly \"SOVRN.ONE\" and symbol() exactly \"SVO\", supply 10^27, and burn() on the vault sends only to DEAD and only SVO.\n9. Tests and docs. Does the test suite genuinely cover the risks above in both orders (incl. mocks that misbehave), what is missing, and does every claim in README.md and launch.json match the code exactly (numbers, addresses, privileges, wording rules)?\n\nMETHOD: use the Pashov methodology and specialties. Reproduce every finding against the code; discard unreproducible claims. Rate each finding by severity and likelihood, give a concrete fix, and separate real defects from documented design trade-offs. Do not claim this review substitutes for an independent human audit.\n\nRE-AUDIT. An earlier audit of commit a939314 (job 26cf0d3a-2bd3-4602-8cb8-58ba9beb5c8a) found 6 low and 3 informational issues. This commit changes: (1) LifeForceVault checkpoints are only ever raised by sync() and the withdrawals, never written down on a shortfall, and withdrawals are bounded by the clamped view; (2) SovrnHook.afterSwap reads the manager's IMD balance only when fee != 0; (3) dead ETH code removed from Guard and the unreachable clamp line removed from the vault; (4) README and launch.json now describe the IMD owner's transfer gate, the 1-of-3 Safe, pay-first router ordering, the liquidity-operations fee bypass and the vault's balanceOf dependency. Verify that each change fixes what it claims, look for new defects introduced by the diff a939314..255cafb, and re-check the nine questions above against the new code.",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "255cafb8ac44f27895db086e7b3a6f06f4124451",
+    "repoUrl": "https://github.com/SovrnOne/sovrn-contracts.git"
+  }
+}
