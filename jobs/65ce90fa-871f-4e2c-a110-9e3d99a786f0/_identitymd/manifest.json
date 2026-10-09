@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "57d8e6fd10cb84a11ef081cefa4f51d78f8a605d0174446fd156af6ffd4d6bd6",
+  "artifacts": [
+    {
+      "bytes": 22094,
+      "hash": "c874bcb4e9f627e31886ee01c3f18e56742963008ce54c4ae57173a8f16550de",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "044779c644ea6595995b65aa1deadcd43c28e85c312469e48da45e3f74cd2c32"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c2e167266d13dcf4799e5339055687439f82b9c239967df30587a4703733486f",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7b8e82647ffd0c9128587f45261462a69e2aee4ceb6c54fbe1f572a58a46ec46",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "52c98c0dc01791cdcfe718724d7d7833e36a34895c930607652c624cb327daaf",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "86d0a2ec611b5cccc3ed4cfa444170ac602e5f7b887002cf89624ea9a58bea96",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bd7adba3a80458536c80f1f3abca218143308f2a67acbdf6148524561ea3eaed",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "044779c644ea6595995b65aa1deadcd43c28e85c312469e48da45e3f74cd2c32",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e12f98dda6acc55fefdb782611f82d3821f5e5656e36e1250fa61e88b46358c3",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ee40e1f6f09dfed24528bce13307cd9a44ddc1b17e714dce3f0b1c98894daade",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "82692ab5f7f7e54e7f26fc3f02e1839a2354350fffd95dfb5b1c3d578aebb3c1",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "351cd15167bbe79556a1824dffc7ca8c09fbaae5d5e79100719d0ac4b9a97fba",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "65ce90fa-871f-4e2c-a110-9e3d99a786f0",
+  "objective": "Audit the three Ponzinomics contracts in src/pimd at this commit. PimdToken is a fixed-supply ERC-20: exactly 1,000,000,000 at 18 decimals, minted once in the constructor, no owner, no mint and no burn function (burning is a plain transfer to DEAD, so totalSupply never moves). PimdHook is a Uniswap V4 hook that taxes every trade in IMD, 2.4% on buys and 5.6% on sells with the pool's own 1.25% on top, split 75% to holders and 25% to the team, taking its fees as ERC-6909 claims on the quote currency. The IMD launch factory constructs the hook and opens the pool itself, so the team wallet, the engine address, the quote token and the opening tick (129,000, tolerance 300) are all source constants. PimdEngine pushes the holders' IMD into wallets weighted by balance times hold-streak, the tiers being zero under an hour and then 0.5x, 1x, 1.5x, 2x and 3x from fourteen days; tally weighs the whole set in one call and pay is paged. Round 3, and the surface that matters is everything since the round-2 commit f182e9f. Your round-2 high is closed by taking the choice of read instant away: `tally` is now restricted to keeper addresses fixed in the constructor, while `fire`, `pay`, `register`, `prune` and `abortEpoch` stay open to anyone. Then four independent review passes found nine more things, all fixed here, and three of those were defects in the fixes themselves -- so treat the fixes as the least trustworthy code in the tree, not the most. In order of how much I would like a second opinion: (a) the keeper tip budget is now shared out by phase rather than first come, via `_tipTo(to, amt, floorBps)`, and inside `pay` each page may draw only its pro-rata slice of what is left, because reserving a share for the phase left the first page taking all of it and the tail unpaid -- attack the arithmetic, the paging, `abortEpoch` interactions, and whether any sequence leaves the budget or the pot inconsistent with what was paid; (b) `fireTip` is no longer paid by `fire` but recorded in `epochFirer` and paid by `tally`, only where the epoch weighs something; (c) `_shapeChanged` carves out EIP-7702 delegation stubs via new inline assembly in `_isDelegationStub`, which deliberately makes a guard return false where it previously returned true; (d) a full holder set now reclaims a dead slot through a bounded cursor sweep rather than refusing registration for ever; (e) `minInterval` is 15 minutes in production and the holder bound is 700 under a constructor ceiling of 800. Four things are accepted and documented rather than fixed, so please do not re-report them as defects: weight is balance times tier and a rented balance held across the tier-0 hour earns like any other; a contract that cannot forward IMD can be registered by a stranger unless named at bind; `fireTip` is a ceiling rather than a guarantee because the fire floor caps it at a tenth of the budget; and the tip floors order the draw without rationing between actors, so one party holding several roles collects every share, bounded only by the 5% `TIP_BUDGET_BPS`. Earlier rounds, for context: Since f182e9f this commit answers your high by taking the choice of read instant away -- `tally` is now restricted to keeper addresses fixed in the constructor, everything else stays permissionless -- and your finding 2 and finding 7 (the reclaim cursor could not survive the revert, and the 900 ceiling was measured with balances unchanged). Two independent reviews then found six more, all fixed here: an EIP-7702 delegation is carved out of `_shapeChanged`, a zero-weight epoch pays no per-holder tip, a deferred registration emits an event, `totalToTeam` is net of the tip, `Fired` moved after the early return, and the holder bound is 700 under a ceiling of 800. Attack the keeper split hardest: say whether a non-keeper can still reach engine state at a moment of its choosing through `register`, which writes `lastBal`, or through `_reclaimSlot`, which reads balances and removes entries. Note two things are accepted and documented rather than fixed, so do not re-report them as defects: weight is balance times tier and a rented balance held across the tier-0 hour earns (the NatSpec on `tally` says so), and a contract that cannot forward IMD can be registered by a stranger unless named at bind. Earlier context: flush no longer tips the engine, a full holder set now reclaims a dead slot instead of locking everyone out for ever, bind excludes the launch factory and register refuses precompiles, and the holder bound is 800 under a constructor ceiling of 900. Check each of those actually closes what you found, and say whether any of them opened something new -- the reclaim path in particular, which is permissionless and removes an entry. The rest of the holder-set logic is still only one audit old. Four things in particular. First, register probes an address with _isPool but can only see the code that is there at the time, so it now records a vettedCodeless bit and tally calls _shapeChanged, which takes all weight off an address once code arrives where there was none. Say whether that really closes the play of picking a CREATE2 address, funding it, registering it while it is still empty, letting the streak mature and only then deploying pair code into it, and whether it can be evaded from the other side by an address that carries code from the start. Second, _shapeChanged is blunt on purpose: any code arriving voids the verdict, a legitimate EIP-7702 delegation included, and prune drops a holder on that same test so the address can register again on what it now is. Confirm there is no reachable state in which a holder earns nothing and cannot be pruned, because the engine has no owner and that would be permanent. Third, prune now drops a holder on its shape as well as its size and is permissionless: confirm it cannot be aimed at a holder who should keep earning, and that the swap-and-pop is still right when the pruned holder is the last element. Fourth, the exclusion list at bind is the token, imd, the hook, the PoolManager, the engine, the team, address(0) and DEAD, plus whatever the binder names. Say whether anything else can hold PIMD, be registered, and then be unable to forward an IMD payout. Then the standing ones. Tally weighs the whole set in one call against min(bal, lastBal) so a single bag cannot be counted once per wallet it is moved through, which was the high you found last time: confirm it holds. The engine must never read holder weights while the PoolManager is unlocked, which is where a flash borrower would stand. One holder who cannot receive IMD must not be able to stall a batch. beforeRemoveLiquidity is the whole safety case for letting the launch factory hold the liquidity position: it must refuse every negative liquidityDelta for ever, from any caller including the position's owner and the hook itself, while allowing a zero delta so the pool's own fee collection still works. beforeAddLiquidity must allow exactly one add, the factory's seed, and refuse every later one, reentrancy and the hook calling itself included. beforeInitialize is the only gate on the pool's shape: confirm it cannot be bypassed and that every assumption the tax maths makes is enforced there, in particular that IMD is currency0. And the fee accounting: claims minted in beforeSwap and afterSwap must always equal holdersOwed plus teamOwed, with nothing double counted or stranded, and flush must not be able to pay out more than was taken. The engine pulls from the hook inside a try/catch, which has hidden one breakage from us already: say whether that pattern is safe here. Report findings rather than fixing them, and do not propose changes to the economics, the tax rates, the split or the tier ladder.",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "5bda20d8e3bbdd88eaa753c1f0fcb5053bc286da",
+    "repoUrl": "https://github.com/JJ-ME55/Ponzinomics.git"
+  }
+}
