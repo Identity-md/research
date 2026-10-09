@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "636b921a9cf8500f95a4f2ed743e9de506c3a3655404fc1ac63aa459abab62cb",
+  "artifacts": [
+    {
+      "bytes": 11380,
+      "hash": "67c21f092368b6dd27da5ac87373f2749da8b60296c65d0a796939954c18067b",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "17af39026248d7af87bb65570a84031b711b586323ac12adc783046ff40a0535"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a406deaac63a93b0cabe27b72ad5e03f107fdd08e4651a9233cdf1923e9aac93",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f2ae248c5e5944a29c3d8327bbe04d433ade9555651510ce0d9754bc8fab46b1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8d428b115b0ebd64045cefca6213be9167b1dd0d92925950f84c1df3ad60b83d",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "17af39026248d7af87bb65570a84031b711b586323ac12adc783046ff40a0535",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fe5e46fb044c6af1969272d2ad026d7c1211decd5df1bff0ea720a4ed442d97d",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5175f906644fec367673ebafb4c02afc3040e4a91a71d5d2d452e39efd990c9f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "df74f6c887684f20dcbba34ca43b3695ead3d868417ef65f4669f7b09f1215f8",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6d8ac86f0ad2763445438133a2cc463bad91b28537dbf6626bf09d0a827ac6cb",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d0653dc91b6e2259689c48678a76069799bcf9fc4239f5491a775162e81c2f6e",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3a82f193d205470b91ab3034566f1dc4ff876e7ebc69797eed81838d479320b4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f963ea4d-f3a8-4ff7-9f13-1d330a275035",
+  "objective": "Project: PepesFamily launchpad v5, re-check after audit 8f96baf6\nRepo: github.com/0xtenang/PepesFamily (commit 5e84e99)\nScope: contracts/src/PepesFamily.sol, contracts/src/PepesFamilyLens.sol, contracts/src/PepesFamilyRouter.sol\nTests: contracts/test/PepesFamily.t.sol (section “v5 audit (8f96baf6)”), contracts/test/Fork.t.sol\n\nChanges since 8f96baf6\n\nFinding 1: afterSwap reverts with PartialFill unless the pool traded the whole specified amount, net of the specified-side fee or burn taken in beforeSwap (FEE_SLOT + BURN_SLOT).\nFindings 2 and 3: _burn mints ERC-6909 claims of the token to the launchpad (pendingBurn). flush(token) burns those claims and takes the tokens to 0x…dEaD, then pays holder fees. Mid-unlock, only our routers may flush.\nFinding 4: creatorFee and holderFee are computed from their own bps; the protocol takes the remainder.\nFinding 5: lens paging uses limit > n - offset.\nFinding 6: marketCap moved to the lens, using supply minus totalBurned minus pendingBurn.\nFinding 7: creator payout is two-step: setCreatorPayout proposes (address(0) cancels), and acceptCreatorPayout must be called by the proposed address.\nPlease check\n\nCan the full-fill check be bypassed, or does it reject any legitimate full-fill swap? Think about rounding in exact-in and exact-out, and tiny amounts.\nAre the token claims always backed: claims of each token equal pendingBurn[token]? Does flush mid-unlock from our routers always have the tokens to take?\nCould pending burns be stuck or griefed? Does flush with no holder fees but a pending burn behave correctly?\nAny regression of v4 guarantees or of earlier findings.",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "5e84e99a980828ee6741c9300045b7c9be5bfd61",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
