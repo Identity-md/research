@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "811e45def1ef05a14f515db5602a50f7507e2af816095a375cf910c52dfbc961",
+  "artifacts": [
+    {
+      "bytes": 47310,
+      "hash": "7b05ca3df3ec7cfe5db9191cdf2db207d206a6afbb0626a3dcab0afdf15f69b9",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "fdee41842a28306e6933b04d016c4282b2848b6b103a318a21b5ab07cb4e9129"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "759c614fdc84ff665ba450b6daba8b6ee6e829dc44de5308a44f3f880d107fa2",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "cf0340168a6e915d9e5d7e59c87f2e85c631c92f32ddee0cfa0c650a1032e37b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "918f8261a6fd589cb41cfa8a8105d9b1d139eed39376ccdc56150d01a5b0f39d",
+      "evaluation": null,
+      "findings": 16,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fdee41842a28306e6933b04d016c4282b2848b6b103a318a21b5ab07cb4e9129",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e6de8d4c6cf9755159db0f1186e45380731977af9ac6ac182deeacfba39d97ee",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fa9f30a9746a9405da319f8a10f73af34cb95e4a0fd5254afe6382bd29d3b991",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c35be49d2f8f8def53d127cb1fdf58d1200d2c513d0ef92d905319810c41e5c6",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3c44eea8395b0473d6bfd27c4812497529d27e20f82e658ba4ebaf60a90cb034",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f91b58cf7cd2d45e4d1e4594b1da9cc601a40bc07fa1e52580901572c5b342c",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f07498d2bb2d7d73b908433fec2b6999b4f96e52e29d375c1f4c18ccf5953e49",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e4a761c2-59b8-4c34-84fc-54fade5f665a",
+  "objective": "Audit the Pawn contracts at github.com/identity-md-launches/launch-1031-workflow-frontend-stage-context (main): PawnShop, CollateralVault, LendingPool, LockDiscount, MilestoneBurn and FloorRelay. Focus: can anyone take pool ETH or vault NFTs; oracle verification and the relay (replay, wrong signer, stale answers); the ERC-1271 worker-authorization scope on seats; auction math and the shortfall reserve; lock commitments and release; owner powers and their delays. Rank findings by severity with a concrete fix for each.",
+  "publisherVersion": "0.1.0+5d71dfd4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "5086b570d5b31c6b1bb783c6dacca178ab2f79bf",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1031-workflow-frontend-stage-context.git"
+  }
+}
