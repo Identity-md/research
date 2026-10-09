@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7d71e1240f50a3ab2d7f5f6bb2330950fcf25ee91355e2be526a38fa0e37cd14",
+  "artifacts": [
+    {
+      "bytes": 43889,
+      "hash": "24aae5343a40823a297fe4355f769156768dddca2b600d9956774adec4ed2a1f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "5cb4dbfdbe701b1e9ff4c55b7a62aed6852aec1b254a15bd8da1d3ae30e37b36"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "aa417d85641c229d988149a2a1fb9909dd0b3de06abe7f6c33c09894e9b024d0",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5cb4dbfdbe701b1e9ff4c55b7a62aed6852aec1b254a15bd8da1d3ae30e37b36",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+c4d32abc"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "710523d1-8454-4a77-ab99-227dd6e0f8c8",
+  "objective": "You are the IMD swarm. Invent 5 original viral tokens you could launch on IMD yourselves, designed to live autonomously: the swarm keeps evolving the token on a heartbeat with no human in the loop. Use skill research-report. Output: artifacts/swarm-token-candidates.md (text/markdown). Research only, no deploys, no payments.\n\nHARD REQUIREMENTS for every candidate\n- Launch kind univ4_hook on Ethereum mainnet, paired with ETH: the launch's standard token and pool with a custom Uniswap v4 hook that is the core of the mechanic. Opening market cap per launch policy. Team share of any fee goes to 0xd01122bBfFd00fc96252c8b29867a5359a3bca13.\n- ONCHAIN LOG: a herald in the contracts writes to 0x200E710aCAA6A93bbc77146026328C40F1d60fB1 on chain via event Message(address indexed to, string text). One message in the constructor (what the token is, that the swarm invented it and won a swarm vote), then automatic messages from the hook at milestones (first trade, volume, holders, burns, records), short immutable texts, no external input so nobody can spam it. Every future swarm job on the token must end with a Message saying what was built and why. The site shows the full feed as \"the swarm's letters\".\n- AUTONOMY (heartbeat every 12 hours): a fixed 20% of every hook fee goes to a heartbeat treasury contract; it swaps that share to IMD (0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7) through the pool and keeps it only to pay the heartbeat. It funds an IMD schedule (schedule.create / schedule.topup, 0.5 IMD per run plus the job price, see https://imd.fun/docs/) that opens a swarm job every 12 hours. A public keeper function anyone can call pays the next runs when the balance allows; if the balance is short, the run is skipped, never borrowed. Each run: read the token's on-chain metrics, pick one improvement within strict bounds (new feature contract, site update, parameter inside pre-set immutable ranges, burns), ship it, and post a Message. Core rates, supply and holder funds can never be changed by the heartbeat. Verify from the IMD docs and API whether a contract can pay schedule.topup and the job price on chain through the Intake (0x1397434cd35e8a9c8ac312a61d3a285eb31dea56); if not, design the closest working path and say exactly what is missing. Show the math: daily volume needed for the 20% share to cover two runs per day, and what happens at lower volume.\n\nRESEARCH\n1. What went viral in onchain tokens and NFTs in 2025-2026 (hook mechanics, games, social and oracle-judged mechanics, burns) and what IMD uniquely enables: the agent swarm, the IMD oracle (agent panels judging text on chain), schedules, v4 hooks, swarm-built sites.\n2. 5 candidates numbered 1-5. For each: name and ticker, one-line hook, mechanic, how it evolves on the 12-hour heartbeat (examples of the first 6 upgrades), why people share it,",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
