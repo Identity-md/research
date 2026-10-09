@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "69fb150c2f4265e8d821e134d8d3120a73a362a1bf782d325ed2f87ac1154352",
+  "artifacts": [
+    {
+      "bytes": 26628,
+      "hash": "c18d7f4b0a10b482f6e9cae828ee037bed480df3a7821c207b39a3012a660c03",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "5530411083da71da2c94cf9b5a3f45c2642253a3dcf75c86291d3ca0a5e10032"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "47f3603854a893a3a92984b6f49200eaac390b9962bc0f815416207639e27b09",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8030c9cf2bffffde27f327a865a509586aa97ee938dcd5a38fd2e2ab5c5f22a7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dff6c0d3de4aa9136bb50e10fe63d467a75d1b379a902c7dc21e0dca0f4367d9",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "91f91d24a2409d231ee5d49bd4556f5f5c3dbc14e964abd8225ccdfa74fe1871",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d68ba89c0b30801cc4e85d6eeb132f21cc8cadee6a15ef0adb1a68d00542d19e",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a684128a640bd6026f341c1d5d8e4886135cdf402e73f8a78bdfecbf5d462f2e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "357c46e3781993d449f398d7eae2be8718b1cfa8deff2cc3661e944506942b5e",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c95308177c93f401cf86db0af345daad0bb43f824efd89f9c79d7a109526e84e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "00920b27421b9a80aeed74a23ad42a062ec72f51a48ab3599e30f3347e7416ea",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5530411083da71da2c94cf9b5a3f45c2642253a3dcf75c86291d3ca0a5e10032",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "8f96baf6-1313-4953-a6ef-e6426feaf795",
+  "objective": "Project: PepesFamily launchpad v5: creator-chosen split of the 3% fee\nRepo: github.com/0xtenang/PepesFamily (commit 6256451)\nScope: contracts/src/PepesFamily.sol, contracts/src/PepesFamilyLens.sol, contracts/src/PepesFamilyRouter.sol (new launchWithSplit; launch uses the default split). PadToken.sol is unchanged from v4 (audits ec4e3ea7, b803125e, 348884ab, cbe092d6).\nTests: contracts/test/PepesFamily.t.sol, contracts/test/Fork.t.sol\nChain: Robinhood Chain (4663), Uniswap v4\n\nWhat changed from v4\nEvery swap still pays 4%, with a fixed 1% protocol fee in IMD. The other 3% is split as the creator chose at launch: FeeSplit{creatorBps, holderBps, burnBps}, summing to 300, in steps of 50, with creator ≤ 200, immutable per token. Presets: 0/300/0 (default), 200/100/0, 0/0/300, or custom.\n\nIMD fee = (400 − burnBps) bps of the trader’s gross IMD: 100 protocol, creatorBps to pendingCreatorFees[token], holderBps to pendingHolderFees[token].\nCreator fees: collectCreatorFees(token) (anyone) pays creatorPayout[token]. setCreatorPayout can only be called by the current payout address.\nBurn = burnBps of the trader’s gross token amount, taken in the token and sent to 0x…dEaD via poolManager.take during the swap.\nWhere each fee is charged: the specified currency’s fee in beforeSwap (positive specified delta), the unspecified currency’s fee in afterSwap (hook delta), so a swap can pay IMD fees and burn together. Transient slots FEE_SLOT / BURN_SLOT pass the before-swap amount to afterSwap.\ngetTokenInfo / getTokens moved to PepesFamilyLens (deployed by the launchpad, lens()) to stay under the contract size limit. launch / launchFor were replaced by launchWithSplit / launchForWithSplit.\nPlease check\n\nFee math for all four swap kinds (exact-in/out × buy/sell) and both currency orders: protocol 1%, creator and holder shares of the gross IMD, burn share of the gross tokens. Is there any rounding or partial-fill case where a trader pays more or less than stated, or where toInt128 reverts unexpectedly?\nIs taking tokens to 0x…dEaD from inside beforeSwap / afterSwap always settled correctly? Consider swaps with a price limit that only partly fill, and very small or very large amounts.\nClaim backing: the launchpad’s ERC-6909 IMD claims must always equal pendingProtocolFees + Σ pendingHolderFees + Σ pendingCreatorFees.\nCreator fees: can anyone redirect or block them? Any reentrancy in collectCreatorFees or the unlock callback?\nSplit validation: can a token end up with a split that breaks the rules, or a creator above 2%?\nRegressions: anything that breaks v4 guarantees (locked liquidity, 4% on every router, the flash-borrow guard, holder expiry, router compatibility, the ETH router’s hookData).",
+  "publisherVersion": "0.1.0+21c4e407",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "625645162d0ce24946fd6c73316f8d9497452c76",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
