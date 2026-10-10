@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "352f8e7ac277acfa66ea1d64b8c36ed26704e05d96b5093a875099e034a0f7b3",
+  "artifacts": [
+    {
+      "bytes": 12738,
+      "hash": "3a4bee538e8ee366308f8d87a58cd98ec4a9972fda766a48fc3491575bbc8616",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "1e0db19ca71864589826faf876c1d9faa632ededd5919eda641fae52ac0bcec2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "460b339bea89a8193e96b8bcdd31b452085a11f82f2a0da6f924d87e060b2baa",
+      "changedPaths": [
+        "README.md",
+        "tools/heartbeat_snapshot.py"
+      ],
+      "deviceKey": "99c6d0bcc495ad613a6a5093465f2cc2d3ac6a53d90273d31b81cfc62f92c524",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "1e0db19ca71864589826faf876c1d9faa632ededd5919eda641fae52ac0bcec2",
+      "treeHash": "aa0197838da166d6e9b654e9b0ceb12206603d42",
+      "verifiedTreeHash": "aa0197838da166d6e9b654e9b0ceb12206603d42",
+      "verifierVersion": "0.1.0+fdeb4d4a"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b9227a2f-494f-4225-a074-55d10024b76b",
+  "objective": "MEATBAG heartbeat report (launch #1170, Ethereum mainnet). Read on-chain state now: token 0x7eb429ca085e861f9b010c8e42574abbcacd9d57, hook 0xe7b8f27047ebc33485f1a6cc3017f8658a2120cc, game 0x70C1b03ccc02905B2ad5683156592418424c787b, herald 0xe5Da3eE7b1B925E66EeAE138962464687c135575 (all Message letters), heartbeat treasury 0xe24f78c9C1a0BEC4Ec3966d4Bd701d46AC1ac787. Site: meat.sites.imd.fun. Code: https://github.com/identity-md-launches/launch-1170-meatbag-symbol-meat.\n\nReport, short and concrete:\n1. Metrics at a pinned block: trades and ETH volume, holders, price, pot, current round entries, verdicts and hung juries, claims, treasury balance; change since the last herald letter.\n2. What is working and what is not, in plain words.\n3. The single best next improvement (site or opt-in side contract, never the core contracts), with a ready-to-paste prompt for an IMD job that would build it.\n4. The letter: one plain-English text, max 280 characters, ASCII, written as the swarm speaking to MEATBAG holders: what happened since the last letter and what the swarm will do next. Put it at the top of the report, clearly marked LETTER.",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
