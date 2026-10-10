@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "7e8d257921854136a840ca11b8e8d69a37d52f0d5ec109a18f016bce15cec556",
+  "artifacts": [
+    {
+      "bytes": 26487,
+      "hash": "4879e8f7d3a2ed0968b61fd7c82584e9f55d4755a2c3463b6b77abdd706a5c67",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "7ed4f1eadc66759030d4cae1058ce92ed0ce512cd4a8ef56bb81f6ec03470634"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d20c1a95c50699ea48fe90f29fe3ef1c09d9612b7d9eeaa3a77d51ac017013eb",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2e4f7c6148794a3c01926f5513ccef6c200514421ea88a945c752361c37d5a0f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7f1dec5ffcbde1d88ca607ac38ef7545b0eda84f10878188e9ed8c9138392f4c",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5d2afdef07e25f1833e8ac3b57172d2d7e1e07eb043e7f2c167665c6d821f77e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e2a4a53638df3fc6dce8d6f323df7160f7f280da87173f0cb0e41c8f708c525f",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0dfdfffe3413a56d66099f1d357c4a0f980150ba9eb62c732e1222c42a336e39",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8af9903f4ad1eed04241eb94aab079c2ee0461c3c185380ab6890ee4a4b4ebae",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7ed4f1eadc66759030d4cae1058ce92ed0ce512cd4a8ef56bb81f6ec03470634",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ca9ed4f0937da89830a0ebc4138194d204c23116ac7ce5bf6be3985f50f0dc3",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4cb4a191e90dcfbd6f517ee30481563869873e5197d3d956488388ddfdea8c5c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "27aae9c4-e0db-4a83-b551-903d307b3205",
+  "objective": "Audit the SvoStaking contract system in this repository (Solidity 0.8.26, Foundry). Primary target: src/SvoStaking.sol. Also in scope: script/DeployStaking.s.sol (run() deploys; fund() is a separate step). Read for context: src/SovrnToken.sol (the staked SVO token), src/Interfaces.sol (reentrancy Guard), STAKING.md (design notes, trust assumptions, prior audit notes), test/SvoStaking.t.sol, test/DeployStaking.t.sol. Out of scope: src/LifeForceVault.sol, src/SovrnHook.sol and the launch contracts (separately audited). Build/test: forge build && forge test --match-contract \"SvoStaking|DeployStaking\". Optional real-chain test: FORK_4663_RPC=https://rpc.mainnet.chain.robinhood.com forge test --match-contract StakingForkTest. Write nothing to the repository; deliver report.md with a machine-readable JSON appendix. Tone: factual and plain; no claims of safety beyond the evidence; do not call the contracts audited or secure; no investment language.\n\nDEPLOYMENT CONTEXT. Robinhood Chain, id 4663. SVO = 0x7f7e9b8e9f754c3076e514852552019cb571461b (plain 18-decimal ERC-20, fixed 1B supply, no hooks). Reward token IMD = 0x5F7Bb59365ce557C26dbcAa4EE9d39A4b95B7127 (an ERC-20 with its own single-key owner, blocklist, transfer gate and LayerZero bridge: treat as untrusted). The funder is a Safe v1.5.0 at 0x589A639529220f66a2661A41753e3fd432f48DA0 on 4663 (2-of-3, no modules, no guard; owners 0xa71Fb297aa443aDfc22Ff74981D8C067ec3475Cb, 0x217C05f5D1D1E595BBae94534540B803bfC4563B, 0xb1eC9d1C36974d05eb9889eBf8A150b05791E559). It holds the 100,000,000 SVO founder allocation, will be the immutable funder, will call approve + fund() as a batch and, after 365 days, may call reclaim(). The IMD rewards come from a different Safe (the immutable LifeForceVault's refuel Safe 0xEb57c52272B90F989C41B739e2ccc5f00bF7697C, 2-of-3).\n\nWHAT IT DOES. Stakers stake SVO and earn IMD. IMD is not minted: the refuel Safe sends Solomon's surplus IMD here and anyone calls notify(), which streams all IMD not yet accounted over 7 days, per second, pro rata by stake (Synthetix StakingRewards style). While a stream is running notify() accepts new IMD only if it is at least a tenth of what remains (otherwise it reverts and the IMD waits). Emission while nothing is staked rolls into the next stream. The funder deposits SVO once via fund() as a burn-match pool: matchBurn() is permissionless and burns the same amount again for SVO burned elsewhere (read from the token's totalBurned), limited to a linear 365-day vest, with unmatched burns carried forward. After 365 days the funder may reclaim() the unmatched remainder once (waiting burns are matched first), which closes the pool. unstake() moves only SVO, so a misbehaving IMD can block claim() but never principal. hasAccess(addr) = at least 1,000,000 SVO staked for at least 1 day (a top-up resets the age); an off-chain app uses it to grant 30-minute voice sessions instead of 10. No owner, no pause, no upgradeability; the funder is fixed at deploy.\n\nAUDIT SCOPE. (1) SECURITY: reward accounting (rewardsReserved vs the real balance, rounding and dust, undistributed/leftover double counting, lastUpdate before the first stream and after periodFinish, first/last-staker and zero-staker cases); theft, lock-up or griefing of staked SVO or earned IMD, including third-party donations and notify() timing, sandwiching and stream manipulation, and whether the tenth-of-remaining rule can itself be abused; burnSnapshot arithmetic (underflow, own-burn handling, forced over-matching, front-running reclaim, vesting boundaries); reentrancy and hostile reward-token behaviour (callbacks, fee-on-transfer, false-returning, reverting or blocklisting IMD, destroyed contract, rebasing), confirming staked SVO can never be blocked by IMD; access-tier gaming; funder-only functions including a Safe as funder; any path that moves SVO or IMD other than unstake, claim, matchBurn and reclaim; the deploy script (wrong-chain and wrong-token guards, funder handling, anything that could fund the wrong contract or amount). (2) COMPLIANCE: do code, comments and STAKING.md match behaviour; list every claim the code does not enforce (for example the contract cannot pull the surplus out of the vault, so the refuel Safe sending it is a trust assumption); the launch README (outside this scope) says SVO holders receive no payouts, rewards or returns and this contract changes that for stakers, so say what disclosures a project in this position usually needs (observations, not legal advice); flag centralisation powers (funder reclaim, refuel Safe discretion, IMD owner powers). (3) CODE QUALITY: NatSpec and event accuracy, custom errors, naming, dead code, gas, unchecked or low-level calls, and test gaps with the tests you would add.\n\nSTANDARDS. SWC Registry; Consensys Smart Contract Best Practices; Solidity Style Guide; OWASP Smart Contract Top 10; ERC-20 (EIP-20) behaviour including non-standard tokens, compared with OpenZeppelin SafeERC20 conventions; Synthetix StakingRewards / Uniswap staker reward semantics as the reference design (list each intentional deviation and judge whether it is safe).\n\nFIXED SINCE EARLIER REVIEWS (verify the fixes and try to break them). notify() could be called for free to stretch a running stream (now needs new IMD of at least a tenth of what is left). claim() now reverts if the reward token has no code. reclaim() has its own AlreadyReclaimed error and unmatchedBurns() is 0 after reclaim. The constructor rejects rewardToken == token. DeployStaking requires an explicit STAKING_FUNDER (no default) and fund() checks the chain, that the staking contract's token is SVO_TOKEN and that its reward token is IMD. STAKING.md now lists the trust assumptions. A prior external review of commit 8a3222d found no critical or high issues; its low findings were: fund() trusting STAKING_CONTRACT, two funded matchers matching each other's burns, the IMD owner freezing claims, rewardToken == token, stretching a stream for a tenth of the remainder, and weak token identity checks in the script.\n\nKNOWN AND ACCEPTED (do not report as new, but dispute them if you disagree). A burn made just before reclaim() forces the pool to match it, at a cost to the burner equal to the matched amount. With nobody else staked, a staker of any size earns the whole stream. Rewards assume an 18-decimal IMD (per-update rounding is at most totalStaked/1e18 wei and accumulates across updates). The same SVO can rotate across accounts to rent the access tier, about one new account per day. SVO or IMD sent by plain transfer (not stake, fund or notify) is stranded. Small notify() deposits during a running stream wait until the stream ends or the threshold is met. Restarting a running stream costs the donor a tenth of the remainder in real IMD and only delays rewards.\n\nREPORT FORMAT. 1) Summary: overall risk rating, finding counts by severity, top 3 issues. 2) Findings table sorted most severe first: ID | Severity (Critical/High/Medium/Low/Info) | Category (Security/Compliance/Quality) | Location (file:line) | Title. 3) Per finding: description, a concrete exploit or failure scenario with numbers or a call sequence (a failing Foundry test is ideal), impact, a suggested fix, and confidence (Confirmed / Likely / Possible). 4) 'Checked and found fine': the properties verified. 5) Assumptions and out-of-scope items relied on. 6) Machine-readable appendix: findings as JSON [{id, severity, category, file, line, title, status}]. No generic advice. If you ran code, include the commands or test files.",
+  "publisherVersion": "0.1.0+4ba55555",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "6a980ca8ba27066464df586a9298b8e3e025d319",
+    "repoUrl": "https://github.com/SovrnOne/sovrn-contracts.git"
+  }
+}
