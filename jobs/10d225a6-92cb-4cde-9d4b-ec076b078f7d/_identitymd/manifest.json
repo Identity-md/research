@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "569a6a5a8de4d1a8ef561a77a7c0cf0b48d065ac66ff5f5064e0d648441fb564",
+  "artifacts": [
+    {
+      "bytes": 52225,
+      "hash": "cd34576baf9021fc2bd1d6f12da420599bc2bf0355465b7ab0796eabfe6be64a",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "a51fb0ac1a40b18029e6996cbe725deed5eaf2350c84ad987c7d1cdafaf47c49"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "6b675366be84376c0f5710e98b511b0880eaaf0053f4cad0d3956a9dede795e0",
+      "changedPaths": [
+        "README.md",
+        "sim/blackout_sim_v2.py"
+      ],
+      "deviceKey": "c0fc4ea4f50e3380927cfa7df7d414d9a3689c513aca5f117e3c35ba351067e8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "a51fb0ac1a40b18029e6996cbe725deed5eaf2350c84ad987c7d1cdafaf47c49",
+      "treeHash": "debb3aeb83ffccefa57260bc6577a51748bc5f17",
+      "verifiedTreeHash": "debb3aeb83ffccefa57260bc6577a51748bc5f17",
+      "verifierVersion": "0.1.0+4ba55555"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "10d225a6-92cb-4cde-9d4b-ec076b078f7d",
+  "objective": "Second research pass on the Swarm Mining Farm economy. Start from the previous accepted report and simulation of IMD job b9e37680-814c-4f17-b4bc-68272b77304d (https://api.imd.fun/jobs/b9e37680-814c-4f17-b4bc-68272b77304d/result): keep its parameter table, contract spec and model, and extend them. Game name: BLACKOUT. Chain: Robinhood Chain. Deliver an updated, implementation-ready spec and re-run the 35-day simulation (hype, steady, weak) with everything below added.\n\nNEW MECHANICS TO DESIGN, PRICE AND SIMULATE\n1. Progressive sell tax in the v4 hook. Buys pay the base fee only. Sells pay a dynamic fee that rises with sell pressure: e.g. net sell volume over the last 1h and 24h versus buys, and price below the 30-min TWAP. Base 1-2%, hard cap 15% (never more, so the token is never a honeypot). Define the exact formula, update interval and how it decays back. Route the tax: burn, reward pool, team, heartbeat; propose the split.\n2. Reinvest incentive. Claiming mining rewards to the wallet pays a withdrawal tax (start around 20%) that is redistributed pro-rata by hashrate to players who stay; optionally it decays with time since the reward was earned (e.g. 20% on day 0 down to 5% after 7 days). Spending rewards in game (packs, upgrades, repairs, electricity, lobbying) pays 0% and may get a small bonus (e.g. +5%). Model how this changes the player sell share and the stall day.\n3. Referrals: each inviter earns 5% of the mining rewards of every player they referred, one level only, paid on top from the reward pool, set once on the player's first action, no self-referral. Include the extra emission.\n4. Free starter pack for IMD NFT holders: one per tokenId, within 14 days, guaranteed Rare, no Legendary. The IMD NFT collection is on Ethereum, the game on Robinhood Chain: use a merkle snapshot at a fixed block. Assume a realistic claim rate and include the cost.\n5. Swarm grid role (keep the previous event design, add): lobbying, where players pay ETH for their district, the ETH buys and burns the token, and more lobby lowers that district's blackout odds without a guarantee (define the curve and caps); a daily electricity tariff set by the swarm inside bounds (e.g. +/-10% per day); a weekly inspection bonus for the most efficient farm. Keep the rule that the swarm picks event types and the future block hash picks districts.\n6. Beta safety: for the first 48 hours after launch, per-wallet and global pack caps that lift automatically by time, with no admin action.\n\nTEAM REVENUE\nThe team must earn well but within reason: target team income of roughly 12-20% of all player ETH inflow (packs, lobbying, hook fees, sell tax), never more than 20%, and ETH only (no team tokens). Report team ETH per scenario and per week, and make sure the team take does not move the steady stall day before day 28.\n\nLIQUIDITY AND LAUNCH\nThe previous report found launch liquidity depth and player sell share are the most sensitive inputs. Run the sensitivity again with the new mechanics for virtual ETH reserves of 3, 5, 10 and 20 ETH and sell shares of 50%, 65% and 90%, and recommend the IMD launch settings that work best on Robinhood Chain.\n\nDELIVERABLES\n- Updated parameter table with reasons, including every new mechanic.\n- Updated simulation code and per-scenario tables: active farms, pack ETH, burns, supply, price, reward pool, runway, payback by join week, stall day, team ETH, heartbeat ETH, sell tax collected, withdrawal tax redistributed.\n- Comparison versus the previous report: what each new mechanic changed.\n- Updated failure modes and the parameters the heartbeat may adjust, with bounds and max step per epoch.\n- Updated contract spec sized for one IMD launch prompt.\n- Updated honest risk note for players.",
+  "publisherVersion": "0.1.0+4ba55555",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
