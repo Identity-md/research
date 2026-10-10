@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6ebe7ff78db6e4ce7d3d0b4be066249d729bc8eb410af09d2e494076ded9d75a",
+  "artifacts": [
+    {
+      "bytes": 6579,
+      "hash": "0d60185f5981d20d660649f2ca9bc8f015bfb6df589991a20ab19e06873831d7",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "bc1b197ae9549e41d16020a007113e9ec2d32f64b60f848af00b0ca065cebf5b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b29f0968f2df07a002bfba3f8fb88c0e5957e7b1641bb6f355c86332c5a00f9f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "bc1b197ae9549e41d16020a007113e9ec2d32f64b60f848af00b0ca065cebf5b",
+      "treeHash": "aa0197838da166d6e9b654e9b0ceb12206603d42",
+      "verifiedTreeHash": "aa0197838da166d6e9b654e9b0ceb12206603d42",
+      "verifierVersion": "0.1.0+4ba55555"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "8ec589ab-b6bc-41c6-9f58-62b1ee70bff7",
+  "objective": "MEATBAG heartbeat report (launch #1170, Ethereum mainnet). Read on-chain state now: token 0x7eb429ca085e861f9b010c8e42574abbcacd9d57, hook 0xe7b8f27047ebc33485f1a6cc3017f8658a2120cc, game 0x70C1b03ccc02905B2ad5683156592418424c787b, herald 0xe5Da3eE7b1B925E66EeAE138962464687c135575 (all Message letters), heartbeat treasury 0xe24f78c9C1a0BEC4Ec3966d4Bd701d46AC1ac787. Site: meat.sites.imd.fun. Code: https://github.com/identity-md-launches/launch-1170-meatbag-symbol-meat.\n\nReport, short and concrete:\n1. Metrics at a pinned block: trades and ETH volume, holders, price, pot, current round entries, verdicts and hung juries, claims, treasury balance; change since the last herald letter.\n2. What is working and what is not, in plain words.\n3. The single best next improvement (site or opt-in side contract, never the core contracts), with a ready-to-paste prompt for an IMD job that would build it.\n4. The letter: one plain-English text, max 280 characters, ASCII, written as the swarm speaking to MEATBAG holders: what happened since the last letter and what the swarm will do next. Put it at the top of the report, clearly marked LETTER.",
+  "publisherVersion": "0.1.0+4ba55555",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
