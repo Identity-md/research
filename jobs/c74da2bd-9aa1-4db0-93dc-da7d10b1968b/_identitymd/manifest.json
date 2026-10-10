@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "5cad64c7c651c59e0859ddce98b3a04691e87b4bc81758d973bd02a949beadc7",
+  "artifacts": [
+    {
+      "bytes": 13098,
+      "hash": "8d5e1b1c2fd2fdedfbcde3f354cdc2063f741b6eb522f75eef2b3180279fd0d1",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "3b839ac9d332e0140f8f6eddd5fb5575f5a1eb89578e0cf456f8ecddaf73c1c9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "7eddeae45f72dfdc286b27579aa922be4ccfcc24302baea86ef593f8dd425c25",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "c0d25825e3f9518b083dde612ff7a9b2d9fc0da1574028e850e73f55774f119c",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "3b839ac9d332e0140f8f6eddd5fb5575f5a1eb89578e0cf456f8ecddaf73c1c9",
+      "treeHash": "951a69c16b9b4fc1a67b1f4de22742621209de5e",
+      "verifiedTreeHash": "951a69c16b9b4fc1a67b1f4de22742621209de5e",
+      "verifierVersion": "0.1.0+fdeb4d4a"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c74da2bd-9aa1-4db0-93dc-da7d10b1968b",
+  "objective": "explain like I’m 10 or in NBA or Fortnite terms why imd is going to take $fp / $imd is going to a billion $ mrktcap. In fact, give me 3 seperate explains, each one using one of those perspectives.\n\nI've had $FP for years but almost forgot about it until I saw news of the crazy recent price action and don't know if I should hold or sell.",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
