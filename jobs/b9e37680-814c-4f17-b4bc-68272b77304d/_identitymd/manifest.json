@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "924f609f58ae1b1d687dabe8cfd3377c951505e1de0bebbc3fcc6c80f3ef1373",
+  "artifacts": [
+    {
+      "bytes": 34790,
+      "hash": "dfbd6842bdf572b684b09c4e56d150483da21ccc8dfb14d05fb01409c4441c0b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "6c22137bc2429b954905f74610f542e98b5e3e81fec4ad60fd32fb9aeb29bae8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "e9674ea42cc6e6c58e6abd7258d4877e7639a7d4f21bddf9ca8db1230db4ceb8",
+      "changedPaths": [
+        "README.md",
+        "sim/swarm_farm_sim.py"
+      ],
+      "deviceKey": "b0001bc8a5c908cd61a4d5cd5abe4fe4d4b0faf3f89216cdf26704913e9b5217",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "6c22137bc2429b954905f74610f542e98b5e3e81fec4ad60fd32fb9aeb29bae8",
+      "treeHash": "1c0ce56693749b1844c9b824f9418e37c245440b",
+      "verifiedTreeHash": "1c0ce56693749b1844c9b824f9418e37c245440b",
+      "verifierVersion": "0.1.0+4ba55555"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b9e37680-814c-4f17-b4bc-68272b77304d",
+  "objective": "Research and design the economy for an on-chain idle game launched through IMD, so it stays fun and rewarding for at least 3-4 weeks after launch, not a 3-day spike. Deliver a complete, numeric spec that a later launch job can implement as-is.\n\nGAME CONCEPT (fixed)\nSwarm Mining Farm. Players pay ETH to open packs. Packs drop farm items with rarity (Common, Rare, Epic, Legendary): GPUs, power supplies, cooling, rooms/slots. Items placed in a player's farm produce hashrate that mines the game token. Token is spent on upgrades (overclock, extra slots, better cooling), daily electricity (upkeep) and repairs; all of these token sinks are burned. Items are ERC-1155. The token is an IMD launch token with a Uniswap v4 hook taking an ETH fee on swaps. The IMD swarm acts as the \"Grid Operator\": every 12 hours a swarm panel, via the IMD oracle, decides a grid event (blackout in a district, heat wave that hurts weak cooling, tax audit, bonus surge) and publishes a letter on chain. Pack randomness: commit on open, resolve from a future block hash, so nobody can bias drops.\n\nMONEY FLOWS (starting point, optimize them)\nPack ETH: 50% buys the token into the mining reward pool, 25% buys and burns the token, 15% team, 10% swarm heartbeat treasury. Hook ETH fee on swaps: split between buyback/burn, team and heartbeat treasury. No team token allocation; the team earns only ETH.\n\nWHAT TO DESIGN AND JUSTIFY WITH NUMBERS\n1. Pack price in ETH and any price curve over time or supply; number of items per pack; rarity odds; how rarity scales hashrate; item caps per farm.\n2. Token emission: daily emission schedule from the reward pool (fixed, decaying, or tied to pool size), how it splits by hashrate share, halvings or epochs.\n3. Sinks: electricity per item per day, upgrade costs, repair/durability, crafting or merging duplicates into higher rarity, so sinks scale with the number of players and keep net emission in check.\n4. Swarm grid events: frequency, how many farms each event affects, size of effects, and how they are balanced so they feel fair and add drama without killing players.\n5. Late-joiner fairness: how a player who joins in week 3 can still earn a reasonable return; anti-whale limits.\n6. Payback: target days to break even on a pack for an average player in week 1, week 2, week 3, week 4.\n7. Chain choice: compare Ethereum mainnet vs Robinhood Chain for gas cost per action (open pack, claim, upgrade, pay upkeep) at realistic gas prices, and recommend one; IMD supports launches on both.\n\nSIMULATION (required)\nWrite a small simulation (Python) of 35 days with three inflow scenarios: hype (fast growth then decay), steady, and weak. Model players joining, opening packs, claiming, selling a share of earned tokens, upgrades, upkeep, burns, swarm events and token price from a constant-product pool. Report per scenario: daily active farms, token supply, burned total, pool price, average payback days by join week, reward pool runway, and the day the game would stall if it does. Tune the parameters until the steady scenario keeps positive player returns through day 28 and the reward pool never empties before day 35.\n\nDELIVERABLES\n- A parameter table with every number above and the reason for it.\n- The simulation code and its results per scenario (tables).\n- The main failure modes and the levers to fix each (which parameter the swarm heartbeat may adjust within safe bounds after launch).\n- A short, implementation-ready contract spec: contracts needed, state, functions, events and the exact formulas, sized to fit a single IMD launch prompt.\n- A one-paragraph honest risk note for players: early players earn more, rewards depend on new players and swap volume.",
+  "publisherVersion": "0.1.0+4ba55555",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
