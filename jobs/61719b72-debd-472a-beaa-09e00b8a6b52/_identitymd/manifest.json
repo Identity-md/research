@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "cd9f133f4982cebb1f3923c8345780094703b4860b5f2e6ed5543a35c7f819f0",
+  "artifacts": [
+    {
+      "bytes": 32223,
+      "hash": "894a4d87b2942fbe8eb30566ff1d72d6b970159d445ac9e779aba86e4b970aff",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "f3e4002593c9ac96ce2956f7ba4e6d86a308bb2f321f93439e8e550cf82a07e7"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "8d4072292805d16b5e2033c92b80f1c55bccaa0d37947cd0f6ae3cd353f559ee",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "942100a62f69e61c41f11644cfb5853e3bff89ad14772615df0f298be1b28f65",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "f3e4002593c9ac96ce2956f7ba4e6d86a308bb2f321f93439e8e550cf82a07e7",
+      "treeHash": "4ab81741255010396aaa43c2540bc7fdc515a966",
+      "verifiedTreeHash": "4ab81741255010396aaa43c2540bc7fdc515a966",
+      "verifierVersion": "0.1.0+fdeb4d4a"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "61719b72-debd-472a-beaa-09e00b8a6b52",
+  "objective": "redo this whole report and make it a lot more casual. have it be more like a exploration of an idea than so cut an dry. still keep things honest but assume the reader already fully understands th speculative nature of the project and token.\n\noffer info catered towards the same three perspectives as before but also include examples of things that the swarm/IMD/identity-md is actually doing or has produced to help turn abstract explanations into something easier to conceptualize. \n\nPull supporting images, breakdowns, flow charts, etc from sites about IMD and use in the report as needed. if copyright is a concern, make your own version using public data.\n\nConsider the whole FP/IMD ecosystem and, without getting too complex, include the fren pet game and the pool4 staking and hook info. consider that fren pet is a fully sustainable game that has been running for years, is the previous core of the ecosystem, and has highly loyal active players as well as a number of inactive, but still invested and interested players who would return if things got active again. ref https://dune.com/petertherock/frenpets-on-base for supporting info that player intrest and activity has increased as IMD's has.\n\nconsider current public opinion and volume of media signals.\nconsider known information about the project's lead dev @surfcoderepeat and their history of work, results, network of people in the crypto space, and ethos",
+  "publisherVersion": "0.1.0+c4d32abc",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
