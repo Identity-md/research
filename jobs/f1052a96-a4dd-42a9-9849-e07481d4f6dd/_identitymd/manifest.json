@@ -1,0 +1,46 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7688c9afbdb19dfb13800ffea0b44fbc563a20e33c35b6ff4a8d6666e786bc0c",
+  "artifacts": [
+    {
+      "bytes": 14032,
+      "hash": "bf2383d63cd84340087c2a47d24324de644708c2d3e51905fd8d32ccae2fc15b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v4.md",
+      "publishedPath": "files/artifacts/report-v4.md",
+      "submissionHash": "6c0cb03acf3a4aaeeb78bc410ad841b6a49e1ab4b9274983fece5c237d3989bd"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "b2f2ebc5bbd69acecf1a396db9c56d2f093f02faae8e7c04e7aff2d8663a76c9",
+      "changedPaths": [
+        "README.md",
+        "tools/check_report_v4.py",
+        "tools/heartbeat_snapshot.py"
+      ],
+      "deviceKey": "323aec17bfc8d65243304c262e0e54057e97dda48041e6c21df61b36f10f71c9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "6c0cb03acf3a4aaeeb78bc410ad841b6a49e1ab4b9274983fece5c237d3989bd",
+      "treeHash": "a459f1c549f8a999e40ef18c1a5dfd9bd81a2165",
+      "verifiedTreeHash": "a459f1c549f8a999e40ef18c1a5dfd9bd81a2165",
+      "verifierVersion": "0.1.0+fb8278c5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f1052a96-a4dd-42a9-9849-e07481d4f6dd",
+  "objective": "MEATBAG heartbeat report (launch #1170, Ethereum mainnet). Read on-chain state now: token 0x7eb429ca085e861f9b010c8e42574abbcacd9d57, hook 0xe7b8f27047ebc33485f1a6cc3017f8658a2120cc, game 0x70C1b03ccc02905B2ad5683156592418424c787b, herald 0xe5Da3eE7b1B925E66EeAE138962464687c135575 (all Message letters), heartbeat treasury 0xe24f78c9C1a0BEC4Ec3966d4Bd701d46AC1ac787. Site: meat.sites.imd.fun. Code: https://github.com/identity-md-launches/launch-1170-meatbag-symbol-meat.\n\nReport, short and concrete:\n1. Metrics at a pinned block: trades and ETH volume, holders, price, pot, current round entries, verdicts and hung juries, claims, treasury balance; change since the last herald letter.\n2. What is working and what is not, in plain words.\n3. The single best next improvement (site or opt-in side contract, never the core contracts), with a ready-to-paste prompt for an IMD job that would build it.\n4. The letter: one plain-English text, max 280 characters, ASCII, written as the swarm speaking to MEATBAG holders: what happened since the last letter and what the swarm will do next. Put it at the top of the report, clearly marked LETTER.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
