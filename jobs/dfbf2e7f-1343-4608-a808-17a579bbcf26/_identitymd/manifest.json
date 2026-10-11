@@ -1,0 +1,83 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "da0ba453692c828dc45e2247568c46f12341bc3e69bd63e5b3c0cda66300d10e",
+  "artifacts": [
+    {
+      "bytes": 42674,
+      "hash": "f8276dd5308f3bdfeb16e06cecf04d580c324d3567d82ba9d51a1e6ea8d92097",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "bcb059ad7ee82e5fc250458dd55550b0965304ea5a42efd89ca17ae7a835492a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "446f3339c6fe37173d49ab49b0e26c25c3fd6fab994bfb0e965342c8673e5d0b",
+      "changedPaths": [
+        "README.md",
+        "evidence/078025ba-91b4-4b3f-b52e-71765e20425a.html",
+        "evidence/078025ba-91b4-4b3f-b52e-71765e20425a.json",
+        "evidence/078025ba-91b4-4b3f-b52e-71765e20425a.txt",
+        "evidence/1d2b08b2-27b2-41d9-bc49-655ad0937a61.html",
+        "evidence/1d2b08b2-27b2-41d9-bc49-655ad0937a61.json",
+        "evidence/1d2b08b2-27b2-41d9-bc49-655ad0937a61.txt",
+        "evidence/2b3300ca-20fc-47bc-9178-ca07c63ca73f.html",
+        "evidence/2b3300ca-20fc-47bc-9178-ca07c63ca73f.json",
+        "evidence/2b3300ca-20fc-47bc-9178-ca07c63ca73f.txt",
+        "evidence/54dea99e-fe8a-42e5-aa70-d9ecd18f2316.html",
+        "evidence/54dea99e-fe8a-42e5-aa70-d9ecd18f2316.json",
+        "evidence/54dea99e-fe8a-42e5-aa70-d9ecd18f2316.txt",
+        "evidence/712c5619-5274-4b63-a3fb-91b0d52522d5.html",
+        "evidence/712c5619-5274-4b63-a3fb-91b0d52522d5.txt",
+        "evidence/77e471ab-7149-4997-a787-5ec5e9840562.html",
+        "evidence/77e471ab-7149-4997-a787-5ec5e9840562.json",
+        "evidence/77e471ab-7149-4997-a787-5ec5e9840562.txt",
+        "evidence/ad12213e-3b69-4ce3-aef7-2978b5e8a43d.html",
+        "evidence/ad12213e-3b69-4ce3-aef7-2978b5e8a43d.json",
+        "evidence/ad12213e-3b69-4ce3-aef7-2978b5e8a43d.txt",
+        "evidence/c213f3ed-a9ec-4e2c-80c0-0ec2f8892002.html",
+        "evidence/c213f3ed-a9ec-4e2c-80c0-0ec2f8892002.json",
+        "evidence/c213f3ed-a9ec-4e2c-80c0-0ec2f8892002.txt",
+        "evidence/c3aa3f34-e7b9-46d8-ba80-ec0310c8db3b.html",
+        "evidence/c3aa3f34-e7b9-46d8-ba80-ec0310c8db3b.json",
+        "evidence/c3aa3f34-e7b9-46d8-ba80-ec0310c8db3b.txt",
+        "evidence/comparison.json",
+        "evidence/d28e4745-421f-41c8-8541-36ca6a9d37a0.html",
+        "evidence/d28e4745-421f-41c8-8541-36ca6a9d37a0.json",
+        "evidence/d28e4745-421f-41c8-8541-36ca6a9d37a0.txt",
+        "evidence/d8054db5-7340-479a-a660-0c027c1135ef.html",
+        "evidence/d8054db5-7340-479a-a660-0c027c1135ef.json",
+        "evidence/d8054db5-7340-479a-a660-0c027c1135ef.txt",
+        "evidence/file-manifest.json",
+        "evidence/oracle-manifest.json",
+        "evidence/original-report.md",
+        "tools/build_report.py",
+        "tools/check_report.py",
+        "tools/collect_oracle.py"
+      ],
+      "deviceKey": "2717ac8e1d58fd36374b68d6f040efffd136bb776bd23506512cbd36befab5ad",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "bcb059ad7ee82e5fc250458dd55550b0965304ea5a42efd89ca17ae7a835492a",
+      "treeHash": "45468b3ad487b19532799d3508486b1ab9952562",
+      "verifiedTreeHash": "45468b3ad487b19532799d3508486b1ab9952562",
+      "verifierVersion": "0.1.0+fb8278c5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "dfbf2e7f-1343-4608-a808-17a579bbcf26",
+  "objective": "use this research report and add the 10 answers from IMD oracle in the table. show what consensus the imd oracle reached and how many agents agreed and how many never. and if it passed. show it all on the summary table so can compare polymarket resolution with imd resolution \nhttps://explorer.imd.fun/jobs/712c5619-5274-4b63-a3fb-91b0d52522d5\n\nheres the 10 answers\nhttps://explorer.imd.fun/jobs/77e471ab-7149-4997-a787-5ec5e9840562\nhttps://explorer.imd.fun/jobs/1d2b08b2-27b2-41d9-bc49-655ad0937a61\nhttps://explorer.imd.fun/jobs/d28e4745-421f-41c8-8541-36ca6a9d37a0\nhttps://explorer.imd.fun/jobs/54dea99e-fe8a-42e5-aa70-d9ecd18f2316\nhttps://explorer.imd.fun/jobs/c213f3ed-a9ec-4e2c-80c0-0ec2f8892002\nhttps://explorer.imd.fun/jobs/c3aa3f34-e7b9-46d8-ba80-ec0310c8db3b\nhttps://explorer.imd.fun/jobs/078025ba-91b4-4b3f-b52e-71765e20425a\nhttps://explorer.imd.fun/jobs/2b3300ca-20fc-47bc-9178-ca07c63ca73f\nhttps://explorer.imd.fun/jobs/d8054db5-7340-479a-a660-0c027c1135ef\nhttps://explorer.imd.fun/jobs/ad12213e-3b69-4ce3-aef7-2978b5e8a43d",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
