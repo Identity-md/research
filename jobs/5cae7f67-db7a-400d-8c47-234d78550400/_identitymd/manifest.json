@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0e250ce564d727998ef07f603e7a59b97be0ff2d78114f640b62797503c98b14",
+  "artifacts": [
+    {
+      "bytes": 14825,
+      "hash": "5571277b7012e2bf334d6f35af181218c3a5a36f1acadc3e53676a68972c2341",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "17499146e3e9a7c4ed4978db1310a17310dc374d200f0cbedb96f6d7ea96408b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0be47287abf7c3bd740f9daf5071e02cd867da22deccb9260f4b2a15a81d7edb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-luna",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "17499146e3e9a7c4ed4978db1310a17310dc374d200f0cbedb96f6d7ea96408b",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+fb8278c5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5cae7f67-db7a-400d-8c47-234d78550400",
+  "objective": "I'm working on a platform where it's a quarry, we mine Ether Rocks, the OG NFT collection of 100 units. I want to develop the tokenomics for this platform. The idea is to start with a token, which trading fees are used to buy an etherrock from the open market. Kinda like punkstrategy does. But then we don't want to sell it. My original idea was to split it:\n\nYou split each acquired rock into 100 stones, then each stone into 100 pebbles. In my original design, I actually started without an ERC20 token, a person has to voluntarily deposit an etherrock, but that's kinda hard to get it done. Originally, at the end you could grind the pebbles into an ERC20 called SILLICON, and maybe I could create something else after that. \n\nBut I'm thinking about starting with an ERC20 first, who knows, maybe it still makes sense to end with a token at the end. Maybe we can eventually make newer NFTs which are Chips...no idea. \n\nThe other plan or thing that could happen is that the people that have the token could participate in getting the rock itself. Or maybe they could get the rock parts and then burn them to acquire the rock. No idea.\n\nWhat I want to happen is to have an ERC20 token that has high volume to keep acquiring rocks as that's fun. And potentially for people to be able to have smaller pieces of rocks as easier to sell NFTs. Like, this could give liquidity to rocks.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
