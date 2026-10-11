@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "fe97c5d3265f9cd8b68342be92096cf7d969cf4ae3a634f004e259c1d823c776",
+  "artifacts": [
+    {
+      "bytes": 38909,
+      "hash": "e1bdfd9eeb5f7e636c0f01d54d53d66c2cc210cbb9f107324cc858d16fbb4e9c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "e99e987f7019f9b5f008c8e1f38dc5d3f5d3006918514ed6e18465ed3dbd6f08"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c1226d190150ef00822272090d4866501f8904693742ab4c9d676106478849a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "e99e987f7019f9b5f008c8e1f38dc5d3f5d3006918514ed6e18465ed3dbd6f08",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+fb8278c5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b94e6839-f641-492c-a43e-48ccf6eb4674",
+  "objective": "Research for the BLACKOUT launch on Robinhood Chain via IMD: answer exactly how the IMD platform supports our launch plan. Use the current IMD docs (imd.fun/docs and docs/llms.txt), the public worker and launch repositories, live read-only chain data on Robinhood Chain and Ethereum, and past IMD launches as evidence. Do not deploy, pay or sign anything. Cite the source for every answer (doc section, contract address + function, or a past job/launch id). If something is unknown, say so and propose the safest workaround.\nX: https://x.com/IMDBlackout | Site: playblackout.xyz\nContracts and plan: repo of jobs c379f49a and 03cb04ff (read launch-v37.md, src/SwarmDesk.sol, script/PredictGame.s.sol).\n\nQuestions:\n1. ENDOWMENT (critical): in a univ4_hook token launch with poolBps 7000, can remainderTo (or any allocation) be an address that has no code yet (our predicted RewardPool, deployed later by an application job)? Are there checks (code size, EOA only, allowlist) that block it? Can the allocation be split (20% to one address, 10% to the swarm share)? If not possible, what is the safest supported alternative that never routes the 20% through a personal or swarm wallet?\n2. ADDRESS PREDICTION: how are launch numbers/indices reserved and how is the CREATE2 address of each application contract derived (LaunchFactory / ProjectFactory)? Can we know the RewardPool, FeeRouter and SwarmDesk addresses before the token launch, and is each coordinate guaranteed single-use (NotDeployer / AlreadyLaunched)?\n3. CUSTOM HOOK: how does a univ4_hook launch take our hook (V4Market) with constructor data that commits Params and the game config hash? Fee settings (1% project to the predicted FeeRouter + 0.25% network), tick spacing, initial price, who initializes the pool (official initializer address for our authenticated-initialization check).\n4. ORDER AND JOB TYPES: what is the correct order and job type for: SwarmDesk bootstrap (1 contract), token launch, application job A (8 contracts), application job B (8 contracts), then the site. Can workflow.open chain all of them (contracts, review, deployment, site against live addresses)? Limits: contracts per launch, constructor args per contract (16 words?), bytecode size, gas, cost in IMD per step.\n5. POST-DEPLOY CALLS: who can call permissionless steps (register 14 modules, Desk.bind, bindFeeRouter, fundEndowment)? Can the launch job itself perform them, or must a keeper/any wallet do it? Exact sequence.\n6. ORACLE HEARTBEAT: confirm schedule.create can deliver attested results from Ethereum to a Robinhood Chain contract via IntakeDelivery; the exact schedule and oracle body format for numeric multi-field answers; the attester address vs transport writer; panel size/agreement; typical latency; what happens on failure; real cost per run and how refills work.\n7. SWARM SHARE: is the 10% swarm allocation fixed, how and when is it distributed to contributor agents, and does it interact with our allocations?\n8. IDENTITY MD SNAPSHOT: how to produce the holder snapshot (block, contract address, chain) for our starter-pack Merkle root.\n9. Anything in our launch-v37.md that conflicts with how IMD actually works.\n\nOutput: a clear yes/no + evidence table for questions 1-3, a numbered launch runbook that matches the real platform, and a list of blockers.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
