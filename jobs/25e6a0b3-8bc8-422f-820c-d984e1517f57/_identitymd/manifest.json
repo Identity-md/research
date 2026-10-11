@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "b57a16bd4be7a5350c24ecf24330d554f1f529ff66a5dac47b6c562d655b2760",
+  "artifacts": [
+    {
+      "bytes": 23151,
+      "hash": "7536ba78cee409f7d29a8f83c7222491fd772f55d4f8ef0b5573768ba044c39d",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "4d9466c86b78225782e8e4dfc731fdf91054506692c86e309b13458def1b50f3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fcb71e606c933181525a83d27f11eab9e58887a1363db3df621a159ae661b967",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b9eb1bc00e78425f86ba6c85c14094bbb9cbd6a5ed0af4535e2ec4db941b81c6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "63458a1bd2b2d3767464aaeb732d20dac973a849044d8c5460f7976c72e5cd08",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4d723cef5620349a46ef456d822b81adb0f1f001376a18578b7eaa3b58ff94b1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "644eb561f6d70a85d4f5be4eea313a7bd6222047c8a74d6ead4704470736c193",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a34a06af69ae832c9e2616f2a2afe3ebcd44bc45a190c6336fde3d507acd6c11",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "63c29c49a249ab7e8e442298266d4a1e2a0e009a974f8bb8e8b19459bec4e493",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ffa0e2ed42ce92e5ed21483e71c77b6f7673554916620be83e7b514a430e1c67",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "87804e27e9c9f85a56b7d27769006acebfcf590ed64f6eef9617da5195c9d826",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4d9466c86b78225782e8e4dfc731fdf91054506692c86e309b13458def1b50f3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "25e6a0b3-8bc8-422f-820c-d984e1517f57",
+  "objective": "Courier ($STAMP), new contracts since launch: Courier Skins (CourierSkins.sol) and the golden stamp hunt (StampHunt.sol). The code is on branch audit-skins-hunt, commit 2cf3432 (https://github.com/AdamNakamoto/courierworld/tree/audit-skins-hunt); main does not have it yet. Read AUDIT.md section 9 first: it describes both contracts, what they must guarantee and what is accepted. Sections 1-8 cover the live game, audited in ea514609, ca28d248 and 19b34b9b; it is deployed, unchanged, and the new contracts only read from it.\n\nWhat it is: a game on Robinhood Chain (4663). CourierSkins is 999 cosmetic NFTs (16 designs) players wear in the game. Blind mint for ETH (0.004, up to 10 per transaction), paid straight to the treasury. A commit-reveal seed (secret mixed with blockhash at the reveal) keys a 4-round Feistel shuffle on 10 bits with cycle-walking, so each token gets a distinct card of a 999-card deck and a full mint matches every design's supply. Metadata is on-chain JSON (tokenURI and ERC-7572 contractURI); pictures come from an owner-set image base that can be frozen. The 5% royalty is enforced with ERC721-C: every transfer between two non-zero addresses calls OpenSea's StrictAuthorizedTransferSecurityRegistry (0xA000027A9B2802E1ddf7000061001e5c005A0000, live on Robinhood Chain). The rate is fixed; the validator can be replaced but never removed. StampHunt pays $STAMP from a pool the owner fills (it never mints) for golden stamps found in the game: the game server signs an EIP-712 voucher Finds(player, day, stamps, deadline), only wallets with an open post office can claim, and payouts are capped per wallet per day, per day in total, and by the pool.\n\nScope: contracts/src/CourierSkins.sol, contracts/src/StampHunt.sol, contracts/script/DeploySkins.s.sol, contracts/script/DeployHunt.s.sol. Out of scope: contracts/script/DevTransferValidator.sol (local chains only), web/ and multiplayer/.\n\nWhat to check:\n\nSkins never exceed 999, every mint pays exactly price x quantity, and the payment reaches the treasury in the same call; nothing is ever left in the contract.\nNobody, owner included, can know or influence any design before the reveal; designs never change after it; _shuffle is a bijection on 0..998 for every seed, so no design ever exceeds its supply.\nNo path moves a skin between two non-zero addresses without calling the validator (transferFrom, both safeTransferFroms, anything reaching _update); the validator can't be set to zero or a non-contract; the royalty rate can't change from 5%; a holder can always move their own skin under the launch registry.\ntokenURI and contractURI always return valid base64 JSON, and designOf agrees with tokenURI.\nStampHunt pays only vouchers signed by signer for msg.sender, never pays a voucher beyond its count, never pays a wallet for more than maxStampsPerDay stamps in a day, never exceeds dailyLimit or the pool, pays only wallets with an open post office, and can't mint or touch any tokens but its own pool.\n\nTests: cd contracts; git submodule update --init --recursive; forge test --match-contract \"CourierSkinsTest|StampHuntTest\" (28 tests). Fork: forge test --match-contract CourierSkinsForkTest --fork-url https://robinhood.drpc.org (against OpenSea's real registry: holder transfers pass, a marketplace without the fee check is refused). All 125 tests: forge test.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "2cf3432693110c2fe40cc71e5bee2ca7f343c46e",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
