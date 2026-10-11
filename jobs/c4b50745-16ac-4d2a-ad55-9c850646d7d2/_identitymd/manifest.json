@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "1daf2a7a2ad327732424bc3f3ddf364e315c9db90636b0a43df85999de7903b7",
+  "artifacts": [
+    {
+      "bytes": 35009,
+      "hash": "d1418671215b361d05d3d6426e61d4a12e158fe2d418d4832da42f69b0bb475f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "fedd5ebcf7d672147c53fc150d4f02ea3aa340fbdc7abb7349b70dba03a7ffb7"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "03d5b3da48a2a8ea0389f11efcd28a9988471347ec240af4b1678daca0d47c60",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "fedd5ebcf7d672147c53fc150d4f02ea3aa340fbdc7abb7349b70dba03a7ffb7",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0e08a464"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c4b50745-16ac-4d2a-ad55-9c850646d7d2",
+  "objective": "BLACKOUT independent review: an honest outside assessment of the whole project before launch. Research only, no code changes, NO DEPLOY.\nProject X: https://x.com/IMDBlackout\nDemo and docs: playblackout.xyz (#/farm, #/packs, #/city, #/season, #/wallet, #/docs)\nContracts and sims: repo github.com/identity-md-launches/launch-1269-reports-v1-job-b9e37680-814c-4f17-b4bc-6, latest job 46fe87c6 (v3.3; history: 9c938888, 14e753f9, 5ce56cbc, 80dc62dc; research b9e37680, 10d225a6).\n\nAct as a skeptical reviewer who did not design this game. Read the docs, play the demo, read the contracts, reports and sims. Answer:\n\n1. VERDICT: would you launch this as is? Yes / yes with changes / no, and why in 5 lines.\n2. PLAYER VIEW: is it fun and clear for a new player in the first 10 minutes, day 1, day 7? What confuses or annoys? Where do players quit?\n3. ECONOMICS: is the reward pool sustainable? Realistic payback for week-1, week-2, week-3 joiners. What happens when inflow slows. Is the team share fair. Biggest hidden assumption in our sims.\n4. SECURITY: adversarial review of the v3.3 contracts (hook, FeeRouter, FarmRewards lazy accounting and idle expiry, PackSale, Season, GameRegistry). List findings by severity with file/line and a fix.\n5. ATTACKS AND ABUSE: whales, bots, multi-accounts, referral farming, sequencer/randomness, MEV on buybacks and packs, keeper griefing, launch snipers, sell pressure from contributor agents. Rank by impact.\n6. TRUST: what could make players call it a rug (team wallet holding the endowment before transfer, hook bind, swarm powers, Params)? How to prove it is safe on day 1.\n7. COMPETITION: compare with similar onchain gacha / mining games on Robinhood Chain and EVM in general. What do we do better, what worse.\n8. LAUNCH READINESS: a go / no-go checklist with owners (team, swarm, bots) and the exact order of steps.\n9. TOP 10 CHANGES: concrete, ranked by impact vs effort, each with the expected effect on payback, retention or safety.\n10. MARKETING ANGLE: the one-line pitch, the 3 strongest hooks for X, and what not to claim.\n\nBe direct, use numbers from the repo where possible, and mark guesses as guesses. Deliver: report.md.",
+  "publisherVersion": "0.1.0+46c92320",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
