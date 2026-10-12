@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "8a4230591fa7ef30961e58306b9615066abc129634d9eaff2239fc9ed988d8db",
+  "artifacts": [
+    {
+      "bytes": 18319,
+      "hash": "971dc4e8aef82c2cf80ad924eb69d6058eb8e182ac2d70762e77032b5969f9f3",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "a8562c9ba5284774912e8a6b38bcc226d2ef21b1c15eff5b0a0492c452556941"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ee9fbaf2480d10346d554c2e7e9766dc8d44669b80643d967d9d3282595aed71",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0703d9e4e6259bcdea6fc44cd4551fcd0af1abf8ab6f782f12d7ede5f45fcef7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dc34db8e17664ebd185a736b6dea358d95cb36c74d26c88c3b589796128956ec",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a8562c9ba5284774912e8a6b38bcc226d2ef21b1c15eff5b0a0492c452556941",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ea89e16822824c6f2a87d26cbd52d3a3bab2b7664b8d92898f6fb5bf24f419ec",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9172e1b3ba04108f50ea7437acad267c3f463a2de1c1deb17936407eb80062ce",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8e25456c4ae69acffaaf5326cb2609f9712dc9b61c4ae0efc997f11379cd9860",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "000b641a03551c8123d6e4aabbc2b64eff22c35d9eb509f2cf3f173357df9e3e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "be3be4cc237417f9b8b7b48f12d810fbe5c66335e939dfe0c91bb2aeb27d673f",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5d18223bdbb07a59ee166e7deef4725e714e9dec944d9a6af9f60fcb40213392",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "147b18fe-465a-4578-b366-7dfb5a6a512c",
+  "objective": "TokenDrops re-check (Courier World, Robinhood Chain 4663), commit d59c2ab, after fixing audit 9755203f.\n\nThe treasury (owner) funds drops of a launchpad token or $STAMP; players with an open post office claim coins they found with EIP-712 vouchers Finds(player, drop, day, coins, deadline) signed by the game server’s key. Since the last audit: dailyCoins is required and at least maxPerWallet (every player can collect each coin, as with golden stamps, so spots is coins placed, not a payout cap); claimMany skips expired or stale vouchers; withdraw while paused ends the drop; claimable respects pause and windows; endDrop(id, lastDay); sweep for stray tokens; SignerSet records the previous key; DROPS_OWNER required in the deploy script.\n\nMain question: if the server’s signing key leaks, what is the most an attacker can take, and can they touch anything outside the drops’ own balances? In particular, confirm they can’t pull tokens from the treasury wallet, move one drop’s tokens through another, exceed a drop’s daily cap per day (including the yesterday-plus-today window), or block the owner’s pause, setSigner and withdraw. Please also check the fixes above, the day edges, and that each drop’s tokens stay separate (held accounting).\n\nSource: contracts/src/TokenDrops.sol; tests in contracts/test/TokenDrops.t.sol.",
+  "publisherVersion": "0.1.0+1f97cecf",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "d59c2ab5f2ba4f2f6bff570311198ff3f38ca26b",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
