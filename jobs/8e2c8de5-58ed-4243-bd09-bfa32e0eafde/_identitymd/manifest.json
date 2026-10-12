@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "96fd47ef45b0574f48ad786d1ba7fcbb747cb706cb57f8751cf96e4c2e62eaf8",
+  "artifacts": [
+    {
+      "bytes": 26130,
+      "hash": "cedb54f9d9d7b8d21368f1e6b1aa53e31dff5aa7368f151cdf5f5bf71bc6525f",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "04bac612998eede215e7003f708b21fb9350eb44fc296abaf1b9dc5f78fab0d0"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1731fbfe0c4574fb6e59405e92715a96ebaf28ae80246f080a0c3368e4023bf8",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "91cc4fe29bbfa14cc810364e6eb1129ad86135bd694285ebefa4466d06952169",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "559cfaaab2c0d01334efc1aa9717eec5a6448a69f31468adc77273f21ccd7eac",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "aa2c77537356011b744ecdaa00f2991f9fa8065d70e8be3998059dd4dad27742",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6208734cdf5317a188e5c6dc2af68514fe66d13f7620146df9d349eb7e0db04f",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3f4a222b2400d50062d713a105c177acc54c8049bff8707b3f1289797b5784fa",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1f9cb1750ebf47ed3be909220d4cf61dbc3b9cdb889c7f01c48bffe1ffde44d9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "893d80db0621fd04b5610f6b0785b4a41f354f22151dd53ef2931190398b55d1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c9b660ee1938912fe6a358aa40bd92886ab34dc995194a468090e3c1fc25f05",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "04bac612998eede215e7003f708b21fb9350eb44fc296abaf1b9dc5f78fab0d0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "8e2c8de5-58ed-4243-bd09-bfa32e0eafde",
+  "objective": "# BMC ILLUMINATI — PRE-MAINNET SECURITY AUDIT\n## Existing Staking Contract #1357\n\n**TASK: Independent smart contract security audit and real NFT integration verification.**\n\n### Project repositories\n\nSTAKING — Main repository:\nhttps://github.com/0xSt3w/launch-1357-project-bmc-illuminati\n\nNFT COLLECTION — BMC PASS:\nhttps://github.com/0xSt3w/launch-1356-project-bmc-illuminati-pass\n\nBMC ERC-20 — Ethereum Mainnet:\n0x38224239f2BDae357D47cb864BC533d7f72dF961\n\n### Current development status\n\n- Staking: 81 Foundry tests passed, 0 failed.\n- NFT collection: 43 Foundry tests previously passed.\n- Real NFT source integration test passed for Genesis #1 and #2.\n- No staking deployment has been authorized.\n- NFT Mystery reveal integration requires additional testing.\n\nThese results are developer tests, not an independent security certification.\n\n### Audit scope\n\n**1. BMC Token Staking**\n\nReview deposit and withdrawal accounting, principal protection, token transfer fees, balance-delta checks, rounding, reward accrual, insolvency scenarios and reentrancy.\n\nVerify that users can recover their deposited principal without depending on treasury operations or reward-reserve solvency.\n\n**2. BMC PASS NFT Staking**\n\nReview NFT custody, ERC-721 receiver callbacks, owner verification, duplicate staking prevention, metadata assumptions, withdrawals and reward weighting.\n\nVerify these exact NFT tiers and weights:\n\n- Legendary Genesis #1: 5x\n- Early-minted Genesis #2–40: 3x\n- Revealed Mystery Genesis: 2x\n- Revealed Standard: 1x\n- Pending NFT: not eligible\n\nThe actual NFT contract uses Pending, LegendaryGenesis, Genesis and Standard. Do not introduce incompatible enum values.\n\n**3. Combined BMC + PASS Staking**\n\nAudit the 20% linked-exposure bonus, minimum BMC requirement, per-NFT weight caps, deposit order, withdrawals, transfers and prevention of double counting.\n\nVerify that the bonus is a relative reward weight, not a guaranteed APY.\n\n**4. Reward Funding and Treasury**\n\nReview the existing 55% token / 25% NFT / 15% combined bonus / 5% reserve allocation.\n\nVerify prefunding, reward liabilities, reward claims, treasury recovery, end-of-program settlement, rounding dust and preservation of unclaimed rewards.\n\nReview multisig authentication and all privileged functions.\n\n**5. Real BMC PASS Integration**\n\nUse the actual BMCIlluminatiPass.sol contract, not only MockPass.\n\nExtend integration tests to cover:\n- Genesis #1 and #2.\n- All 40 sequential Genesis NFTs.\n- Pending Mystery NFTs rejected by staking.\n- Chainlink VRF v2.5 fulfillment.\n- Revealed Mystery Genesis and Standard.\n- In-order reveal finalization.\n- NFT staking and safe withdrawal after reveal.\n- Reward weights and accounting across all tiers.\n\nUse the actual Chainlink coordinator mock where possible.\n\n**6. Mainnet Fork Verification**\n\nUse an Ethereum Mainnet fork to verify compatibility with the actual BMC token, without broadcasting transactions or transferring real assets.\n\nReport limitations where live behavior cannot be exercised.\n\n**7. Security and Invariants**\n\nReview:\n- Reentrancy and external calls.\n- ERC-20 and ERC-721 custody.\n- Reward pool solvency.\n- Arithmetic bounds.\n- Access control.\n- Malicious NFT contracts.\n- Unsupported ERC-20 behavior.\n- Emergency withdrawals.\n- Denial of service.\n- Time manipulation assumptions.\n- Permanent program termination.\n- Authenticity checks for the configured NFT collection.\n\nRun Foundry unit tests, fuzz tests and invariant tests.\n\n### Deliverables\n\nProvide:\n1. Independent audit report with Critical, High, Medium, Low and Informational findings.\n2. Reproduction steps or proof-of-concept tests for significant findings.\n3. Exact file and line references.\n4. Recommended remediations.\n5. Remaining mainnet deployment blockers.\n6. Results of actual NFT integration tests.\n7. GitHub pull request for proposed fixes, if needed.\n8. Retest results after remediation.\n\nDo not silently modify economic rules, staking weights, NFT supply or minting prices.\n\n### Strict execution restrictions\n\nDO NOT deploy contracts.\n\nDO NOT broadcast transactions.\n\nDO NOT request wallet private keys or seed phrases.\n\nDO NOT request real BMC approvals.\n\nDO NOT transfer or burn real BMC.\n\nDO NOT fund any staking pool.\n\nDO NOT merge pull requests automatically.\n\n**FIRST ACTION: Perform the free IMD feasibility/security check and display the complete audit price before requesting payment.**\n\nWait for explicit approval before any paid audit or on-chain action.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "2eebb2a84e3913197de16d15c2b916378f932029",
+    "repoUrl": "https://github.com/0xSt3w/launch-1357-project-bmc-illuminati.git"
+  }
+}
