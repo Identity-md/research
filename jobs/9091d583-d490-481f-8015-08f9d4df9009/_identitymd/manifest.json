@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "b9f77e8430d82b7096bcaa12a785f02f95f88f32f0a2ef1194126ab481c9b666",
+  "artifacts": [
+    {
+      "bytes": 51753,
+      "hash": "a7c40d31adb6310a599a05153400382b979537a8d77ddae06711e6fc811161eb",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "4071b5866b009929f0267ae021640429af8ac3a4f6d690cf85e1d05bcc5cd1b0"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ddfb1efa72fe9a944b35a41fae3d545fecd8a16eddcd9989e5e9cf62dce9b119",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "22ecd38f948cbbfefda2f2a55a72bdaa062d8a6eeafe28ae17b349c83242614c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "803eeae3d8b63de342abf5c1621b903ebc38796b2e6904b6b88e609c2a9d8dc5",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b4b5484c8176491535b0c0fa182112e2e786c2e25c9a423ea6768f1c6edbae68",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e06554fd2816f9d796b75a1be9ad0aff4a39d09d529d52c713eba61f4b33aabc",
+      "evaluation": null,
+      "findings": 14,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4071b5866b009929f0267ae021640429af8ac3a4f6d690cf85e1d05bcc5cd1b0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ddc5542bddcad225926acf93396c1dbbd124fbf864ca9131ce3fb3489688bf11",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fea4fc5d342e0fbf509d59f0f1e029fba369e0a09219b495432abdccf7dcbb16",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dfa08759ca0424debc4dfc20dd930e8826b1b031409abc52b9eb70465cbbee4c",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c8ba63ce94bb4fa1295fd7e89eb7bffbda45ceb4ea2a23b406deaccbab0d0f6f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9091d583-d490-481f-8015-08f9d4df9009",
+  "objective": "Adversarial review of the Regen rail contracts in github.com/ToknWrks/imdo at the given commit (branch regen-rail, PR #1): src/regen/ and its tests. Foundry; Solidity 0.8.26, evm_version cancun, via_ir, optimizer_runs 44444444, bytecode_hash = \"none\"; vendored lib/ (OpenZeppelin, forge-std, Uniswap v4). The rest of the tree (IMDO token, hook, treasury, staking, claim, RegenDrop) was reviewed by IMD swarm job 37ac5d94-da10-4a27-84d9-246c17a2c3f7 and is NOT in scope except where src/regen/ touches it (ImdoTreasury.payOffsets and offsetsSafe).\n\nPurpose: a permissionless, ownerless rail on Base that turns ETH fees from any registered project into retired Regen City Forest credits on Klima's Retirement Aggregator, with the project as beneficiary. Nothing has an owner, pause, setter or withdrawal. Deployment target: Base mainnet (chain 8453) for RegenRegistry, RegenRouter, UniswapV3Venue, RegenReceiverFactory; Ethereum mainnet for OffsetsForwarder. Nothing is deployed yet.\n\nContracts (src/regen/):\n1. RegenRegistry. register(string name, string regenAddress, address beneficiary) returns uint256 id (1-based). Name: 1..64 bytes printable ASCII 0x20..0x7E, no '|', no leading/trailing space, unique. regenAddress: 44 chars, \"regen1\" + 38 bech32 chars. Errors ZeroAddress, BadName, NameTaken(id), BadRegenAddress, UnknownProject(id). Event ProjectRegistered. project(id), exists(id), validName(bytes), validRegenAddress(bytes) pure. No update, no delete.\n2. RegenRouter. constructor(Config c) with struct Config { RegenRegistry registry; IKlimaRetirementAggregator aggregator; IERC20 usdc; address classVault; address creditA; address creditB; address creditC; IEthToTokenSwap venue; IPriceFeed ethUsd; uint256 maxFeedAge; uint256 minBatch; uint256 maxBatch; uint256 bountyBps; uint256 minOutBps; } (all addresses non-zero; minBatch > 0, maxBatch >= minBatch, bountyBps < 10000, 0 < minOutBps <= 10000, maxFeedAge > 0, feed decimals == 8). Intended values: minBatch 0.001 ether, maxBatch 0.05 ether, minOutBps 9700, bountyBps small (tens of bps), maxFeedAge about 1 hour. deposit(uint256 projectId) payable credits balanceOf[projectId][msg.sender]; plain receive() reverts DirectEthRefused. process(uint256 projectId, address depositor) nonReentrant: ethIn = min(balance, maxBatch), revert BelowMinBatch under minBatch; Chainlink ETH/USD read (stale or non-positive => emit Skipped(\"feedStale\"), return); first credit token of creditA/B/C the aggregator can price (none => emit Skipped(\"classEmpty\"), return); debit balance; bounty = ethIn * bountyBps / 10000; swap ethIn - bounty via venue.swapEthToToken(usdc, minUsdcOut(ethIn - bounty, price), router) and revert SwapShort if under minOutBps of the oracle value; quote tonnes for ALL USDC held (previous dust included), floor to 1e12 steps, revert NothingRetired on 0; forceApprove, aggregator.retireCreditViaKlima(credit, 0, 0, tonnes, usdc, classVault, held, 0, RetireDetails{retiringAddress: router, retiringEntityString: \"Regen Retirement Router\", beneficiaryAddress: p.beneficiary, beneficiaryString: p.name, retirementMessage: message(projectId, p, depositor), rest empty}); approve back to 0; retiredOf[projectId] and totalRetired += tonnes; emit Processed(projectId, depositor, caller, creditToken, ethIn, bounty, usdcBought, usdcSpent, tonnes); pay the bounty to msg.sender by call; a failed bounty call re-credits the depositor's balance and emits BountyForfeited. message() builds retirement grammar v1 (frozen with Regen 2026-10-07): the project's name, regen address and \"src:8453:<depositor>\". Errors: ZeroAddress, UnknownProject, ZeroDeposit, BadParameter, BelowMinBatch, SwapShort, NothingRetired, DirectEthRefused.\n3. UniswapV3Venue. constructor(ISwapRouter02 router, address weth, uint24 fee). swapEthToToken(address token, uint256 minOut, address to) payable: SwapRouter02.exactInputSingle with msg.value, WETH->token at the fixed fee tier, recipient `to`; reverts WrongToken for anything but the configured token path. Stateless.\n4. RegenReceiver + RegenReceiverFactory. One receiver per project at a CREATE2 address predictable before deployment (salt = projectId, fixed init code): predict(projectId), deploy(projectId) (AlreadyDeployed, UnknownProject). Receiver: receive() accepts anything (the OP Stack bridge finalisation call must succeed on minimal gas); forward() permissionless, sends the whole balance to router.deposit{value}(projectId), NothingToForward on 0; event Forwarded(projectId, amount).\n5. OffsetsForwarder (Ethereum). constructor(IOffsetsSource treasury, IL1StandardBridge bridge, address receiverOnBase, uint32 minGasLimit). forward() permissionless: calls treasury.payOffsets() (the ImdoTreasury pays only its immutable offsetsSafe, which is this contract), then bridges its entire ETH balance with bridge.depositETHTo(receiverOnBase, minGasLimit, \"\") (L1StandardBridge 0x3154Cf16ccdb4C6d922629664174b904d80F2C35). receive() accepts. NothingToForward on 0. No other function.\n\nReview questions (each needs a concrete answer):\n- Can ETH ever leave RegenRouter other than as a retirement input, the caller's bounty, or stay as USDC dust for the next batch? Can anyone extract USDC or credits? Reentrancy through the venue, the aggregator, a credit token, or the bounty call?\n- Griefing: can process() be made to revert forever for a project (feed, aggregator quote, tonnes rounding, dust accumulation, a depositor that is a contract)? Can the bounty be farmed with tiny deposits? Is minBatch/maxBatch sizing sound against a 0.05 ETH batch on Base liquidity?\n- Oracle floor: is minUsdcOut(ethIn, price) correct in decimals (USDC 6, feed 8, ETH 18)? Can a sandwich on the V3 pool pass the 97% floor and what is the maximum extractable per batch? Stale-feed handling: maxFeedAge, negative or zero answers, round completeness.\n- Aggregator integration: are the quoteRetireCreditForInputTokenInViaKlima and retireCreditViaKlima argument orders and semantics right for Klima's Base aggregator 0xdA0A793D7C32AB80bcdab7F8c725c96DB22464f4 with classVault 0xf4699531e0a5F6e9351a36De3753Deaad329Bf45 and credit tokens 0xE6628083Ab9A9Ab235e80f63e7ecd810B54A71B8, 0x3D1bf942619cB9FC71543721Ef3D5496FAf283B8, 0xb77A0be47A686c525a38fbb10c0D424929471d7D? What happens if the aggregator spends less than `held`, or more tonnes than quoted, or if a credit token is paused or delisted mid-call?\n- Registry: can a name collide by case or whitespace, can a malicious name or regen address break the retirement message or any off-chain reader (the message is read by Regen's indexer); is the bech32 charset check sufficient and does a wrong checksum matter here?\n- Receivers and bridge: CREATE2 prediction correctness across projects; can a receiver's ETH be redirected; can ETH bridged to a not-yet-deployed receiver be lost; L1StandardBridge gas limit and failure modes; can OffsetsForwarder strand ETH; reentrancy from payOffsets.\n- Cross-contract: ImdoTreasury pays offsetsSafe by pull. Confirm the forwarder works as that seat, and that nothing in the treasury can brick forward().\n\nRules: read-only review; do not modify src/, script/, foundry.toml, lib/ or test/ outside test/scratch/. Scratch tests may be added under test/scratch/ only. Every finding needs a severity, exact file:line, a concrete reproduction and, where possible, a Foundry proof that fails on this code. Run forge test (163 tests; test/fork/RegenRouterBaseFork.t.sol forks Base at block 52335751 via https://base.gateway.tenderly.co and may be skipped if no RPC) and forge fmt --check, and report the result. Do not claim an audit; this is a review by the IMD swarm. Wording in any report: \"regenerative contribution\" and \"retired credits\", never \"carbon offset\" or \"net zero\".",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "43935b019879a0046651ac154016105d31d79754",
+    "repoUrl": "https://github.com/ToknWrks/imdo.git"
+  }
+}
