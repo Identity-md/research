@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "4f855759a48670ee818e5db8d0b3fade1d60a0219f7cce994aa922742c435d72",
+  "artifacts": [
+    {
+      "bytes": 11532,
+      "hash": "adb0979931bb77a60bd19053684cd860442bd975e433927c124a0ea0f2cb589f",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "f308601aa9fc92d16858f72e7ce3febed595cf2c982715f181e27aa2e41923c7"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "47f3603854a893a3a92984b6f49200eaac390b9962bc0f815416207639e27b09",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "beae013b287db0f29235d2635869f2fcc56bee1aaa2d554b36153442c2338556",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c0fc4ea4f50e3380927cfa7df7d414d9a3689c513aca5f117e3c35ba351067e8",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f308601aa9fc92d16858f72e7ce3febed595cf2c982715f181e27aa2e41923c7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b273d407784470b47d335f4d3171227a0ffa0b170a60519e141a13a80ecc83bb",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4f49e5b84cfc4d381ec65d1d9e2ef08d94648c5b121a08822836b321ea41aaf5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ebee02fc506f27c1b0fadc62728da6e6bb08e89eb86b6d3f22e7fbf1df539ab",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ddc7c3386dc906cb65ed56b72a27bab9e0b17d18b9c2c85de3cb58c504120bbc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a9662a76cb5f51d178c6d5ff9e9a5da33ad63feb5a9ef85547ee127dbf9fd6f",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0cce389c8f8efe99f8e99a861014ce03ad1eb5abe261af3aa85b7091e0af1806",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ac2d0346-fc13-4cbc-9240-3aea5e8dd231",
+  "objective": "OGPass (src/OGPass.sol), deployed on Ethereum mainnet at 0xca9dc9064ffc695d979ea7da9a35130376bb3217 (commit 4527ed9). A soulbound ERC-721 club pass: 49 founders claim free via a Merkle root, with a fixed 100,000 OG buyback paid from a funded founder reserve. Public passes sit on a bonding curve, 1M + 10k*(n-1) OG; sells pay 92.5% and burn 7.5%. Cap of 1,000 passes, one per wallet. Look hardest at curve reserve solvency, the founder reserve and burnUnclaimedFounderReserve after the deadline, Merkle claim safety, soulbound enforcement, owner powers (pause, setBaseURI only), reentrancy, and slippage and deadline checks.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "4527ed978e9f295e70dfc044f180f1aa23e96852",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1343-ogpass-soulbound-erc-721-membership.git"
+  }
+}
