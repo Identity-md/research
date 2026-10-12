@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "5175c4f7119cf1d090ed7ba0f0e36c68619695ddd9777b1828040f96702b020f",
+  "artifacts": [
+    {
+      "bytes": 20639,
+      "hash": "f1ce0a6be964f9a3674fd337907488baa352c8f4b6ff2a60c8512d82aae8b9d4",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "894791a4b2f5d3484fe3c72d34adec039123652da5bca5d1b966c62af671a75a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7c748c02cd2ee98fa5731d87226bb0cdf78e517181b56a85ac95ee62d67d4826",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d2b24073b36e5364122f055db206a22afdb80a91ba6f5f63b6c8a23bc6e57dac",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "37eed9f56188ea8bc18cadb56eb376ad83d30a30750e8d54d0203251a3e3d14f",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "46931bf7e1bda80e4a4c42ca757a274f67becf18f69ea9a293085d35bab93ef9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1ca477e8d9b58040894c4693ab330aaa2cde1abb8c06ee731bcb0c0093132277",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3ce392f8c4083c156eb2558c6206afe64f73596a1681f997ab48900b70e48e0c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6b0a28df3d585600055efbf5af60f9a74c60e4b0c831789748389b5ca63b0ce9",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "894791a4b2f5d3484fe3c72d34adec039123652da5bca5d1b966c62af671a75a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "cd8076510aad8b8ebc5ce89c30074bf89ec0d8ecfc8d01423e23ae2ce9c59530",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "19e80f174e6c3d1b8afb7a6f7ece0eb2c1036dbfba483e2494f0ef9ca9909094",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "59db1445-68d3-4495-bd02-087f2c6c768a",
+  "objective": "CourierPad: in-game token launchpad for Courier World on Robinhood Chain (4663). Players with an open post office (PostOffice 0x26D80804D0FA2F4598369E0062bFC9536d115D82) launch a PadToken (1B fixed supply, OpenZeppelin ERC20 + Permit, no owner) by burning a $STAMP fee (burnFrom, bounded by the launcher’s maxStampFee; permit variant). 5% of the supply goes to the treasury for drops; 95% is single-sided liquidity in a Uniswap v4 pool against IMD, owned by the pad, with no way to remove it. The pad is every pool’s hook: 4% of the IMD side of every swap to the fee recipient (StampHook’s audited fee code, keyed per pool), full fills only, and nobody else can create pools with the hook or add liquidity. StampRouter and StampEthRouter are reused unchanged.\n\nPlease check: fee accounting across many pools and both currency orders, that launch liquidity can never be removed and no pool can be hijacked, the start-price bounds (liquidity overflow), the fee and permit handling at launch, that a launched token can’t be blocked from trading, and the owner’s powers.\n\nSource: contracts/src/CourierPad.sol and contracts/src/PadToken.sol; tests in contracts/test/CourierPad.t.sol and contracts/test/CourierPad.fork.t.sol. Commit 0b01b0c.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0b01b0c21c71ce2c8cb6b53b49c9bb5ff75cc3e1",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
