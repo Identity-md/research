@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "baa44fe452e276985f911da7633cdfbd37c8a6f8d03db91df4e947c6022ebaf0",
+  "artifacts": [
+    {
+      "bytes": 22386,
+      "hash": "2def50ca4e26a3feab2f8194985032525d1f3cad3eb31e110678ee8c243654ab",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "c7d3743d2f5928ee0f1440cffcc281ed1bc7be24e43292f8ad9fb24483735943"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "39da99ded7f125c89427cb189b1700d574bdf4e48c5bd0b800397b7cd53eab55",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5825825e3d90bb02452bb16f2d2150d173727cf559f406a03f48b6e8e60b1cac",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f47f953f8e35921edd8ad15f032f1bad0d020522e57a1e043a63fdcd8639f678",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "288503a3223f5018f3ee02edf2a4e3bc84b52be2e7410e51a61824915ec62cda",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3beb94a990617d4651d263ad3777d5af0836bb94b331f675dbe15bb8ae48e83d",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c7d3743d2f5928ee0f1440cffcc281ed1bc7be24e43292f8ad9fb24483735943",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dc34db8e17664ebd185a736b6dea358d95cb36c74d26c88c3b589796128956ec",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "eb611691c3d75c054436587be51a34f702ffa667266da5b16ec1eaab3dc613a1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e8e860c7f230647300bf957fd533ce3b3e1b5bfed6e86ac9311624145eeb53a1",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8bc15d6bec6f220881a40ac55399601c0946c488c6035479acbc6593997c496f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "91ed3906-da4a-4ecd-80c2-30d2a1fa6d37",
+  "objective": "MSFT95Vault v2: custody vault for a Stake-style crypto casino on Robinhood Chain (Arbitrum Orbit, single sequencer). Players deposit ETH or ERC-20s (MSFT95, USDC, NET, IMD), play off-chain against a backend ledger, and withdraw with EIP-712 vouchers the backend signs. Large withdrawals need a second COSIGNER signature. Per-token limits (maxWithdrawal, dailyCap, cosignAbove) cap losses if a signing key is stolen.\n\nAudit ONLY the MSFT95Vault.sol inside the msft95-casino folder (v2). Ignore any older msft95-vault folder (v1). v2 fixes all 9 findings from audit job d4fc488d; AUDIT-RESPONSE.md (same folder) maps each finding to its fix and test, and AUDIT.md is the updated brief with trust model and invariants. Tests: npm install --legacy-peer-deps && npx hardhat test (43 tests).\n\nLook hardest at:\n1. Fund theft or double payout: can any voucher pay twice, pay someone other than w.user, pay after deadline, or pay without the required signer/cosigner signatures? Check _verify ordering, role revocation and re-grant, and malformed or high-s signatures.\n2. The new voucher-time rules: issuedAt and deadline (deadline <= issuedAt + 24h, issuedAt <= block.timestamp + 5 min skew, block.timestamp >= deadline is expired) and voidVouchersIssuedBefore. Can a voucher outlive 24h from signing? Can the guardian, or anyone, brick withdrawals forever?\n3. Outflow limits: can player withdrawals plus sweeps exceed dailyCap per window (beyond the documented 2x across a boundary)? Check the cast to uint192, rollover at exactly start + 1 day, and the NO_COSIGN sentinel versus the cosignAbove < maxWithdrawal rule.\n4. Access control after the fixes: fundBankroll restricted to admin or BANKROLL_ROLE; sweep blocked while withdrawals are paused; GUARDIAN can only pause and void; only admin unpauses. Does the _grantRole override (SIGNER, COSIGNER and GUARDIAN must be three different keys) break AccessControlDefaultAdminRules admin handover, or let a role escape the rule?\n5. The new Setup constructor: can it be deployed in a dangerous state (zero admin, inconsistent token limits, overlapping keys)? Does it apply exactly the same validation as setToken?\n6. Reentrancy and odd tokens: ERC-777-style hooks, fee-on-transfer, blocklisting tokens like USDC, ETH receivers that revert or re-enter.\n7. Anything that would make the off-chain ledger disagree with the chain: events missing or wrong (Deposited, Withdrawn, HouseWithdrawal, BankrollFunded), or value moving without an event.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "427291e7312aa504214bf6961b64e30cba505f16",
+    "repoUrl": "https://github.com/DrTatum/MSFT95.git"
+  }
+}
