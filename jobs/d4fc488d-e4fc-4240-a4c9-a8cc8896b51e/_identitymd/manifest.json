@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "868dedc39cbf32fe21523920cae06d7c9a7407788202765b79aa1b5dfa809b37",
+  "artifacts": [
+    {
+      "bytes": 24147,
+      "hash": "5ca2463c56c027f9ee3842d189acd9deb6c1df66fcab89f2fdb9a992168ddd1e",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "059650338e18194b949eaebdea608852419c65b206a089690da844e2e5534826"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "11e4593175677f7e935b9352132cab0da4061164eac65d7df7445bf5ee44abe9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fc5bad660f032d7041db8ade1b21b22e9f8163015ef09530f093ba98f4f9393b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa2b0b9c7ebc154780b1c3f35982d6c9c2950dc9328019427fef7c6d9213c7f6",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5baebf47061695b2824cbf53d8cb8ef1ee1405b9a574763be04f669c3f3bcd8e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3bed38612db34f328e6e2bf3e06a52b95ccef2145dee8aa1006f50c85517964a",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "059650338e18194b949eaebdea608852419c65b206a089690da844e2e5534826",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2b170a76e3d9adca5bc821cd1416f3dbdd76151670e9a7bc21f5407d70659eb6",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d3481dc7a3dc826aa1820135e9faeefb6241f6b12506b41772094cc86c1345bd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3baa2091028c32c1a8e5f26a1e8fe0d5a29ce61044b8dd7451fe26e11065a1ad",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9e8d91bf18bc2d01290b77bcb2edb43d9e8d1406b84890f34c532b51df43632e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d4fc488d-e4fc-4240-a4c9-a8cc8896b51e",
+  "objective": "# Audit brief: MSFT95Vault\n\n**Scope:** `contracts/MSFT95Vault.sol`. The mocks in `contracts/mocks/` are test-only.\n\n**Compiler and libraries:** Solidity 0.8.24, optimizer 500 runs, EVM target shanghai, OpenZeppelin Contracts 5.1.0.\n\n**Chain:** Robinhood Chain, an Arbitrum Orbit chain with a single sequencer. Testnet is 46630 and mainnet is 4663.\n\n## Trust model\n\n- **Admin** is fully trusted. It is a Safe, plus a timelock on mainnet. It can:\n  - list and unlist tokens;\n  - change limits;\n  - grant SIGNER and COSIGNER;\n  - sweep funds, subject to `dailyCap`.\n- **SIGNER** is trusted to sign only withdrawals the off-chain ledger allows. A compromised SIGNER can take, per token per 24h window, up to `dailyCap`, in pieces no larger than `cosignAbove`. Anything above `cosignAbove` also needs COSIGNER.\n- **GUARDIAN** can only pause.\n- **Players** are untrusted.\n\n## Invariants to check\n\n1. A voucher pays at most once: `nonceUsed[user][nonce]` is set before the external transfer, and a reverted payout leaves it unset.\n2. Funds from `withdraw` only ever go to `w.user`, whoever calls it.\n3. A voucher is only valid on this chain and this vault, before its `deadline`, and at most 24h ahead of `block.timestamp`.\n4. `amount > cosignAbove` requires two distinct keys, one with SIGNER and one with COSIGNER. One key can never hold both roles (`_grantRole` override). The same signature or key can't be counted twice.\n5. Per token, within one window, player withdrawals plus `sweep` never exceed `dailyCap`. At most 2× `dailyCap` can leave inside any 24 hours, across a window boundary.\n6. `Deposited.amount` equals the real balance increase. This holds for fee-on-transfer tokens; rebasing tokens are not supported.\n7. Only an admin can unpause, change config, sweep, edit the allowlist or grant roles. A GUARDIAN can only pause.\n8. Plain ETH sent to the vault reverts. ETH can only enter through `depositETH` or `fundBankroll`.\n9. The token balance always equals deposits plus bankroll minus withdrawals minus sweeps. A randomized test covers this over 300 operations.\n\n## Areas worth extra attention\n\n- `_verify`: signature-ordering edge cases, role revocation between signing and submission, and `ECDSA.recover` with malformed signatures.\n- `_spend`: window rollover at exactly `start + WINDOW`, and `uint192` / `uint64` casts.\n- Reentrancy through ERC-777-style hooks or ETH receivers. Every external entry point is `nonReentrant`, and `deposit` reads the balance before and after the transfer.\n- `AccessControlDefaultAdminRules` interaction with the `_grantRole` override, so admin handover still works.\n- Tokens with blocklists (USDC): a blocklisted user's withdrawal reverts. Confirm it fails cleanly and the nonce stays unused.\n\n## Off-chain assumptions (for the step-2 backend review)\n\n- **Deposit indexing.** The indexer credits each `Deposited` event exactly once, keyed by `(chainId, txHash, logIndex)` or `depositId`, after enough confirmations. Reorgs are handled.\n- **Ledger before signing.** The ledger debits the player before signing a voucher. If the voucher expires unused, it re-credits only after `deadline` has passed and `nonceUsed` is confirmed false at a final block.\n- **Unique nonces.** Nonces are unique per user and never reused across voucher re-issues.\n- **Key custody.** SIGNER and COSIGNER keys live in separate KMS/HSM accounts. The GUARDIAN bot pauses withdrawals when reconciliation fails, that is, when the sum of ledger liabilities is greater than the vault balance.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "984db98bba67daa1aef19e342002088d131f0e74",
+    "repoUrl": "https://github.com/DrTatum/MSFT95.git"
+  }
+}
