@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "729f2d6758bf81529da5af0317c3f341d51e3f76c0f0994690c8eb9a9e36317f",
+  "artifacts": [
+    {
+      "bytes": 20921,
+      "hash": "c99fa75152508ef3d3e9c70759a77d4f5436c05d3112612cfaeac3015644c121",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "b392ea682d8720b1342cb9460049e321bdbf6b5dc18f2f9e644b256f832b1a94"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3987a51ff810f3b94af8dfb42af95303b2f982c1daacb7991257d7277c185cd8",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "771b346f1e67b2c640fc99aa0e8f7fccb934c0ff9047edf609d992d262ebe735",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2bdd77125ec75e6c43b23b1a1058de3980124933e5aad756c0289bfdd833c616",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "641c3582d901cb2533f64a17b22bd0f74be8b31f5e554378e9ee55d6735b7948",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "824e6de6196c686f45ec789bb4681971376c224f07a05ecf11cf0b724786d5a4",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "17b1fbab5cce38903d870ce9a1e02cc9071587cbd70cf85b3f81341faffaeca6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "02f22d6f13810ca8c6edce1203dbc336b0a785f87bb7354c4428c81847aebe93",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d560d2ecbadd42376c0049c4c7dfde3a1e3a8e9cb43c10637f85f65706f3f654",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7cb215928f3c94735dfd0637a7cfd1b426d89e2c612baf53f366c3d8b8ba7b6c",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b392ea682d8720b1342cb9460049e321bdbf6b5dc18f2f9e644b256f832b1a94",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b5fa7968-b085-4bfb-84f1-6e4737f1d6dc",
+  "objective": "Adversarial review, ROUND 3, of the Regen rail in github.com/ToknWrks/imdo at the given commit (branch regen-rail, PR #1): src/regen/ and its tests, script/DeployRegenRail.s.sol, and the OffsetsForwarder seat in script/DeployImdo.s.sol. Foundry; Solidity 0.8.26, evm_version cancun, via_ir, optimizer_runs 44444444, bytecode_hash = \"none\"; vendored lib/. The rest of the tree was reviewed by IMD swarm job 37ac5d94-da10-4a27-84d9-246c17a2c3f7 and is NOT in scope except where the rail touches it.\n\nRounds 1 and 2 were IMD swarm jobs 9091d583-d490-481f-8015-08f9d4df9009 (commit 43935b0) and e9b9f179-0ede-42aa-8695-3c731c1dff64 (commit ac40001; 1 high, 1 medium, 6 low, 3 info). All round-2 findings were answered in the commit under review. The point of this round is to BREAK THE ROUND-2 FIXES and find what both rounds missed, not to restate them. The round-2 fixes:\n- High (the time-weighted bar followed a price HELD across the window: Aerodrome writes an observation on any state change, sync() is public): three things now stack. (1) twapGranularity is intended to be 48 completed intervals (>= 24 h) and the reference takes the pool's fee off (IAerodromeFactory.getFee(pool, stable) via pool.factory(); fee >= 10000 reverts referenceTonnes, which the plan treats as priceOff). (2) processInterval (intended 7200 s): one retirement per (project, depositor) per interval, revert TooSoon(nextAt); lastRetiredAt is set only on a retirement, not on a skip. (3) maxUsdcPerTonne (intended 45e6 USDC per 1e18 t): an ABSOLUTE ceiling checked in _offer as spend * 1e18 > maxUsdcPerTonne * tonnes -> priceOff. The fork test holds an 8,000 USDC pump for 25 h with sync() every 1801 s: the relative bar follows exactly and the ceiling refuses at $48.5/t. The NatSpec and docs/REGEN_RAIL.md state the residual: a mover who holds the pool off its average for a full window under the ceiling can take, per depositor, (24h / processInterval) x maxBatch x (1 - market / maxUsdcPerTonne) a day (about $790 at the intended values, against ~$15k of capital in the pool for a day).\n- Medium (the live aggregator quotes its curve regardless of the class vault, so a depleted class reverted every full batch after ~14M gas): _offer caps tonnes at IERC20(credit).balanceOf(classVault) before flooring; the rest of the batch's dollars carry.\n- Low: retireCreditViaKlima gets maxInputTokenIn = min(held, spend + spend*10/10000 + 100) and the same allowance (an execution that pulls more reverts SlippageExceeded and the credit is passed over); dollar remainders are per (project, depositor) (usdcOf[projectId][depositor]; a 1-wei depositor plans on its own zero carry and skips classEmpty); RegenRegistry's constructor(name, regenAddress, beneficiary) registers the first project in the registry's own creation (empty name = none) and DeployRegenRail uses it, then checks count()==1 and project(1).beneficiary; validRegenAddress returns false for any byte >= 0x80; DeployRegenRail preflight requires IUniswapV3Factory(ISwapRouter02(swapRouter02).factory()).getPool(weth, usdc, v3Fee) != 0 and a non-empty projectName.\n- Info: _onClamp reads ethUsd.aggregator(), minAnswer() and maxAnswer() with raw staticcalls and exact 32-byte return checks; a proxy without aggregator(), an aggregator with no code, or a malformed answer means \"no clamp\", never a revert.\n\nConfig now has 21 fields: registry, aggregator, usdc, kvcm, kvcmPool, classVault, creditA/B/C, venue, ethUsd, sequencerUptime (optional), maxFeedAge, minBatch, maxBatch, bountyBps, minOutBps, twapGranularity, minTonnesBps, maxUsdcPerTonne, processInterval. Intended Base values: 0.001 / 0.05 ether, bounty 50 bps, minOut 9700, maxFeedAge 3600, granularity 48, minTonnes 9500, ceiling 45e6, interval 7200. Everything else is as the round-1 and round-2 briefs described; read the source.\n\nReview questions (each needs a concrete answer):\n- The ceiling and the interval. With the relative bar assumed beaten (a full-window hold), is the stated residual right, and is there a cheaper path: many depositors for one project (anyone can deposit under any address; does the per-depositor interval let a mover process its OWN deposits faster, and does that matter when the loss is the project's?), a pump that sits just under the ceiling, a ceiling-tolerant partial hold, or exploiting the fee-exclusive/inclusive difference? Can lastRetiredAt be reset or bypassed (a skip, a revert, a forfeited bounty, a receiver redeploy)? Is the interval a liveness problem for the bridge receiver (one batch per 2 h = 0.6 ETH/day per depositor)?\n- The vault cap. IERC20(credit).balanceOf(classVault) is read as \"retirable supply\": is that what the live Klima aggregator actually retires from (LibRetire / the class vault contract at 0xf4699531e0a5F6e9351a36De3753Deaad329Bf45), can the vault hold credit it will not release (locked, pending, another class), and can a mover change that balance within a transaction to shape the offer (donate credit to the vault, or make the vault's balance read revert)? Does capping tonnes at the vault re-open the round-2 \"saturation bypass\" (both sides of the comparison capped) now that the ceiling exists?\n- Spend-bounded pulls. Is spend + 0.1% + 100 enough slack for the live aggregator's round-up on every batch size (round 2 measured 1-18 micro-USDC); can the aggregator legitimately need more (its DiscountedForwardBalanceContext / rate limiter) so honest batches are passed over forever?\n- Per-depositor dollars. Verify the accounting invariants (USDC balance == sum of usdcOf; nothing moves between depositors); is a remainder that can never be spent possible (a depositor whose ETH is gone and whose carry is under a tonne step, with every batch too small)?\n- The registry constructor. Does registering in the constructor change msg.sender semantics or events in a way an indexer would misread; can the deploy still be front-run (the registry creation itself is one transaction; is there any window left between it and the receiver's deployment that matters)?\n- The clamp read. Is the raw staticcall decode safe against a proxy that returns more than 32 bytes, or an int192 encoded differently; could it ever read a clamp from the wrong phase aggregator?\n- Fee read. Can Aerodrome's factory fee for this pool be changed, by whom, and what does each value do to the rail (0, 30, 300, custom)?\n- Everything else: anything from rounds 1-2 not actually fixed, and anything new.\n\nRules: read-only review; do not modify src/, script/, foundry.toml, lib/ or test/ outside test/scratch/. Scratch tests only under test/scratch/. Every finding needs a severity, exact file:line, a concrete reproduction and, where possible, a Foundry proof that fails on this code. Run forge test (201 tests in the default profile, including test/invariant/RegenRouter.invariant.t.sol) and forge fmt --check, and report the result. Fork tests (10) run with FOUNDRY_PROFILE=fork: test/fork/RegenRouterBaseFork.t.sol forks Base at blocks 52335751 and 52487479 (env BASE_RPC_URL, default https://mainnet.base.org; note that on a fork vm.warp(block.timestamp + x) only takes once, drive the clock from a local), test/fork/OffsetsForwarderMainnetFork.t.sol forks Ethereum latest (env ETH_RPC_URL, default https://ethereum-rpc.publicnode.com); skip and say so if no RPC is reachable. Do not claim an audit; this is a review by the IMD swarm. Wording in any report: \"regenerative contribution\" and \"retired credits\", never \"carbon offset\" or \"net zero\".",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "aaa9f66b2754e7c3f43ec3447ef9408ae1a66d32",
+    "repoUrl": "https://github.com/ToknWrks/imdo.git"
+  }
+}
