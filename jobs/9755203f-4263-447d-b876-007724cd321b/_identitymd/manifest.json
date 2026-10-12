@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "aea94302b69766ffec00e407322caff3980439284ac107628d82a1d41541e32a",
+  "artifacts": [
+    {
+      "bytes": 30023,
+      "hash": "6932e639704475c8259eaeb4d9e394701cf181f15b37c36ff6a0c6bf4719db29",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "a289264e76180c4657d1b1752c9231a4533127cd46c3abaf1445bb8d52355015"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7e64d4917fa814e6e71a3c4c8be2af38153789fe42d8a3568d9e1837e3189945",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6c18f1e1b645565b7e6592f1a1b1c91f54b9f08abb974fea6b57f92b3ce03f34",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e06554fd2816f9d796b75a1be9ad0aff4a39d09d529d52c713eba61f4b33aabc",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d80608422b18fb90f7b090b50b32b61b47f649f920243b85385ed3a6719ad9bd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "829d84438fb3fdc88e93850c9bddcabb55e7d84f7fb9a6e15974f2983199bb64",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "90587ad88bb169acb3a2f7fb49e620197eaea816db23c168424a1a46c3d4e570",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e3a598aae0640402a8505309b5d5482ac7a211b59eafcac5ad6a811c22c329bb",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7b4ebafb16a95daf5a1cb31cdcec92a10ceca8fbdcce9000f864f64b0ebb4009",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d7e6877fd9e388bba6b27edab2ac756657c847f34bcbc0a3ecaf208a54f76377",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a289264e76180c4657d1b1752c9231a4533127cd46c3abaf1445bb8d52355015",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9755203f-4263-447d-b876-007724cd321b",
+  "objective": "TokenDrops: the treasure hunt for Courier World on Robinhood Chain (4663). The treasury (owner) funds drops of a launchpad token (CourierPad 0x90c3aaae34cf4681701452379D3819D6Bc8Fe8CC) or $STAMP: tokens per coin, coins out per day, a per-wallet daily cap, a daily cap across everyone, and a number of days. Players with an open post office (PostOffice 0x26D80804D0FA2F4598369E0062bFC9536d115D82) claim coins they found, for that day or the next, with EIP-712 vouchers Finds(player, drop, day, coins, deadline) signed by the game server’s key; claimMany pays several drops at once. Owner: topUp, endDrop (after today), withdraw (once claims have closed, or while paused), setSigner, setPaused; no renounce.\n\nPlease check: that no drop can pay more than its own tokens or its caps allow, that drops’ tokens never mix, voucher replay across drops, days and wallets, the claim windows and day edges, re-entry, the owner’s powers, and the withdraw rules.\n\nSource: contracts/src/TokenDrops.sol; tests in contracts/test/TokenDrops.t.sol. Commit 30ade10.",
+  "publisherVersion": "0.1.0+788bb33f",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "30ade100d5b6f9463fcc1d1af46ede154f0833eb",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
