@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "d98945a6fff39730ec1536ee3004255e833dfb8f0be921c4e2c43aee5a6c7ed7",
+  "artifacts": [
+    {
+      "bytes": 33884,
+      "hash": "9f4195907fa581b7759c42954c9f74ded7a27da61dd33b37e35195c865270585",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "a379f1c3ad9cc03949299566c21a05637bef4fc9e5f912b0c64d5b9b9f993a1a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3b9f88f55251764de70b4cb439f71dccf68bef0e9370c8b835b00bc381d6052f",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "07318494b626b0bc020bf9e5aa3298b38340831d1f3e1f74a17344d7abcd890d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "37eed9f56188ea8bc18cadb56eb376ad83d30a30750e8d54d0203251a3e3d14f",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "14d816a0ac8352763a009eb3a72e8b53a8e152b7bd4485b3cc0f2897c556fb7d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e0f64c10e30e33e2b79f69f20c59956ad1a7627f53e256037a7f323d77f980a1",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "951d40c994353aa3446c557001a39c31e81a56301f640405461ecedc4b55a3d6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a4c81f495eb81dd08d2b3b83465f83bc5b93bfad28a3b9c658db827c7aacb2d4",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e4251af60377c25c3e9f3f712b65c736c99f0742999e137d9be4ca96b497f69e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f768e94767a9dde3bfb3a7b0d4e7015be9266dc0da97d12cfe01eac2363dd7d9",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a379f1c3ad9cc03949299566c21a05637bef4fc9e5f912b0c64d5b9b9f993a1a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e9b9f179-0ede-42aa-8695-3c731c1dff64",
+  "objective": "Adversarial review, ROUND 2, of the Regen rail in github.com/ToknWrks/imdo at the given commit (branch regen-rail, PR #1): src/regen/ and its tests, script/DeployRegenRail.s.sol, and the OffsetsForwarder seat in script/DeployImdo.s.sol. Foundry; Solidity 0.8.26, evm_version cancun, via_ir, optimizer_runs 44444444, bytecode_hash = \"none\"; vendored lib/. The rest of the tree was reviewed by IMD swarm job 37ac5d94-da10-4a27-84d9-246c17a2c3f7 and is NOT in scope except where the rail touches it (ImdoTreasury.payOffsets/offsetsSafe, DeployImdo's forwarder prediction).\n\nRound 1 was IMD swarm job 9091d583-d490-481f-8015-08f9d4df9009 at commit 43935b0 (1 high, 2 medium, 7 low, 4 info). All were answered in commits a245307 and ac40001. The point of this round is to BREAK THE FIXES and find what round 1 missed, not to restate it. The fixes:\n- High (no floor on the USDC -> kVCM leg; the aggregator prices kVCM at the spot of Aerodrome USDC/kVCM pool 0x5C0D76fab1822bDeb47308eD6028231761ED723E, ~15.8k USDC): RegenRouter now plans every credit's offer (_offer: aggregator quote for the dollars floored to TONNE_STEP 1e12, then the USDC the aggregator asks for those tonnes via quoteRetireCreditViaKlima.retirementPrice, one step less if that overshoots) and holds the tonnes to minTonnesBps (9700) of referenceTonnes = the aggregator's kVCM-input quote for kvcmPool.quote(USDC, spend, twapGranularity 4) (Pool.quote is Aerodrome's time-weighted price, observations >= 30 min apart, fee-exclusive). Planned BEFORE the ETH leg with minUsdcOut(ethIn - bounty, price) + usdcOf[project] (Skipped(\"priceOff\") or Skipped(\"classEmpty\"), nothing spent) and again AFTER it with the real held (revert NothingRetired undoes the swap).\n- Medium: retireCreditViaKlima is in try/catch; the first credit (A, B, C order) that plans and retires wins, a reverting one is passed over; none -> revert.\n- Medium: USDC is kept PER PROJECT (usdcOf[projectId] = held - spent) and only spent on that project's batches; partial absorption allowed; donated USDC belongs to nobody.\n- Low: remainders under minBatch (and forfeited bounties) are processed by anyone with NO bounty (balance 0 -> NothingToProcess); registry names unique on nameKey (ASCII lower-cased, runs of spaces collapsed; stored as registered); regen address BIP-173 bech32 checksum verified on chain (hrp \"regen\"); OffsetsForwarder refuses a treasury/bridge with no code (NoCode) and bounds minGasLimit to 100000..1000000 (BadGasLimit); DeployImdo takes exactly one of offsetsSafe / receiverOnBase and for the latter predicts the forwarder at computeCreateAddress(deployer, nonce+1) just before new ImdoTreasury, creates it right after and checks treasury.offsetsSafe() == forwarder; DeployRegenRail deploys Base in one broadcast (registry, venue, router, factory, register must return id 1, deploy(1) must equal predict(1)).\n- Info: a future updatedAt skips; an ETH/USD answer on the aggregator's min/max clamp (read via the proxy's aggregator(), revert tolerated) is stale; with Config.sequencerUptime set (Chainlink L2 uptime feed 0xBCF85224fc0756B9Fa45aA7892530B47e10b6433) a batch skips while the sequencer is down or back for under SEQUENCER_GRACE (1 hour); UniswapV3Venue pins its output token (constructor(router, weth, token, fee)).\n\nConfig (19 fields): registry, aggregator, usdc, kvcm, kvcmPool, classVault, creditA/B/C, venue, ethUsd, sequencerUptime (optional), maxFeedAge, minBatch, maxBatch, bountyBps, minOutBps, twapGranularity, minTonnesBps. Intended Base values: 0.001 / 0.05 ether, bounty 50 bps, minOut 9700, maxFeedAge 3600, granularity 4, minTonnes 9700. Public views: minUsdcOut, referenceTonnes(credit, amount), plan(amount) -> Plan{credit, tonnes, spend, reason}, message (grammar v1, unchanged). Everything else (registry, receivers/factory, forwarder, events, errors) is as the round-1 brief described, read the source.\n\nReview questions (each needs a concrete answer):\n- The time-weighted bar. Can Pool.quote(USDC, amount, granularity) be moved within one transaction or block on Aerodrome's Pool (Velodrome v2; observations written in _update after periodSize 1800s)? What does holding the pool off its average for the whole window cost, and what is the most that extracts per batch and in total given the bounty? What if the pool has fewer observations than granularity, or has been idle so the last observations are hours old (an old bar: exploitable, or only a skip)? Does routing the reference through the aggregator's kVCM-input quote (Klima's kVCM-per-tonne curve, moved by retirements) give the caller a second lever, at what cost? Is the fee-exclusive quote on the right side of the bar?\n- Plan before vs after. Can the divergence between the pre-swap estimate and the real held be forced so the first plan always passes and the second always reverts (the batch never retires, each caller burns ~4M gas)? Can it under-retire within the bar?\n- Per-project dollars. Can USDC move between projects, be spent under another name, or become unspendable? What does a partial absorption leave and when is it spent? Is one step of slack enough against the live aggregator's round-up (quoteRetireCreditViaKlima.retirementPrice vs what retireCreditViaKlima pulls)?\n- Fall-through. Can the (upgradeable) aggregator revert in a way that eats the forwarded gas (63/64) and derail the loop; can a callback during the retirement re-enter deposit() or defeat the approve-to-zero; any standing allowance; can a credit retire fewer tonnes than planned without reverting?\n- Remainders. With sub-minBatch balances processable for no bounty: 1-wei griefing (what does SwapRouter02 do with 1 wei, who pays), and any path where a remainder is processed at the project's loss rather than the caller's.\n- Feeds. Sequencer answer/startedAt semantics on Base, the clamp read (int192, proxy phases, a proxy that reverts), future updatedAt; anything that skips forever.\n- Registry. Is nameKey the right normalisation (digits/punctuation look-alikes still register, by design) and does it break any grammar v1 guarantee? Verify the bech32 polymod against independent vectors; is a valid-but-wrong address still the trap round 1 described?\n- Forwarder and deploy. Do the gas bounds match the real OP portal and L2 relay needs; is the nonce prediction safe against everything DeployImdo does between the two creations (HookMiner.find is pure); can DeployRegenRail leave a half-deployed rail (register reverting, id != 1 on a reused registry); is receiver-before-forwarder enforced or only documented?\n- Anything from round 1 not actually fixed, and anything new.\n\nRules: read-only review; do not modify src/, script/, foundry.toml, lib/ or test/ outside test/scratch/. Scratch tests only under test/scratch/. Every finding needs a severity, exact file:line, a concrete reproduction and, where possible, a Foundry proof that fails on this code. Run forge test (193 tests in the default profile, including test/invariant/RegenRouter.invariant.t.sol) and forge fmt --check, and report the result. Fork tests (7) run with FOUNDRY_PROFILE=fork: test/fork/RegenRouterBaseFork.t.sol forks Base at block 52335751 (env BASE_RPC_URL, default https://mainnet.base.org), test/fork/OffsetsForwarderMainnetFork.t.sol forks Ethereum latest (env ETH_RPC_URL, default https://ethereum-rpc.publicnode.com); skip and say so if no RPC is reachable. Do not claim an audit; this is a review by the IMD swarm. Wording in any report: \"regenerative contribution\" and \"retired credits\", never \"carbon offset\" or \"net zero\".",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "ac40001aabe679656db3019e27ab267a154e6b86",
+    "repoUrl": "https://github.com/ToknWrks/imdo.git"
+  }
+}
