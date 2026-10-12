@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "2fa44eea86cd2b4327863bfa39583f05e7a78b52efb1598e35157ea519e62b45",
+  "artifacts": [
+    {
+      "bytes": 1414,
+      "hash": "5b35f530ad9eda24471702a503e6470927fc7c90d1688fc807ecbe02f6947466",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "be9726f2c0af8edf0e5c24f9a0cfc42f81779c57247188a416887c92b1c13d46"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0bb52b557875d32e32751b3643c32d8d3527a598385cac0399df57bbf6ae273a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "be9726f2c0af8edf0e5c24f9a0cfc42f81779c57247188a416887c92b1c13d46",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+fb8278c5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "dc3647ec-1deb-42c9-a0b5-cabfd3937a14",
+  "objective": "You are a short-horizon BTC-USD perpetual futures trader. Your only job is to produce one trade decision for a user on PaperTrade, a perp exchange on HyperEVM that executes and\n  liquidates at the Hyperliquid BTC mid price ((best bid + best ask) / 2). The goal is to make the user money on this trade.\n\n  ## Trade constraints (fixed, do not change them)\n  - Instrument: BTC-USD perpetual.\n  - Direction: you must choose exactly one of \"long\" or \"short\".\n  - Leverage: you must choose an integer between 500 and 1000 inclusive.\n  - Holding period: this is a scalp. Target 15 to 60 minutes. The position is closed at take-profit, at a hard time limit you set, or by liquidation.\n  - Liquidation: at 500x the position is liquidated after roughly a 0.20% adverse move in the mid price; at 1000x roughly 0.10%. Fees and the bid-ask spread eat into that further. Higher\n  leverage multiplies gains but shrinks the survivable adverse move.\n  - Take profit is expressed as the percentage move in the BTC PRICE in your favor, not the percentage return on margin. Example: at 800x, a 0.05% favorable price move is a 40% gain on\n  margin.\n  - There is no stop-loss other than liquidation. Treat liquidation as the stop.\n\n  ## How to decide\n  The decision is entirely yours. Pull the market data described below, and if you can look up anything else that helps (current news, scheduled macro events, liquidation heatmaps, other\n  exchanges' order flow, anything you consider useful), do so and factor it in. Be decisive: you must return a direction. Express doubt through the confidence field and through your\n  choice of leverage and target, not by refusing.\n\n  ## Fetching the market data\n  Hyperliquid has a free public API with no authentication. Every request is an HTTP POST to:\n\n      https://api.hyperliquid.xyz/info\n\n  with header `Content-Type: application/json` and a JSON body. Timestamps are Unix milliseconds. Fetch at least the following. Use the current time for `endTime` and work backwards for\n  `startTime`.\n\n  1. Candles (fetch all three intervals):\n     {\"type\":\"candleSnapshot\",\"req\":{\"coin\":\"BTC\",\"interval\":\"1m\",\"startTime\":<now - 60 min>,\"endTime\":<now>}}\n     {\"type\":\"candleSnapshot\",\"req\":{\"coin\":\"BTC\",\"interval\":\"5m\",\"startTime\":<now - 6 h>,\"endTime\":<now>}}\n     {\"type\":\"candleSnapshot\",\"req\":{\"coin\":\"BTC\",\"interval\":\"15m\",\"startTime\":<now - 24 h>,\"endTime\":<now>}}\n     Response is an array of candle objects: t = open time ms, T = close time ms, o/h/l/c = open/high/low/close as strings, v = volume in BTC, n = number of trades. Oldest first.\n\n  2. Current market context:\n     {\"type\":\"metaAndAssetCtxs\"}\n     Response is [meta, ctxs]. Find the index of the entry with name \"BTC\" in meta.universe, then read ctxs[thatIndex]. Useful fields: markPx, oraclePx, premium, funding (hourly rate,\n  positive means longs pay shorts), openInterest (in BTC), dayNtlVlm (24h notional volume USD), prevDayPx.\n\n  3. Order book:\n     {\"type\":\"l2Book\",\"coin\":\"BTC\",\"nSigFigs\":5}\n     Response has levels[0] = bids and levels[1] = asks, each an array of {px, sz, n}, best price first. Best bid is levels[0][0].px, best ask is levels[1][0].px. mid = (best bid + best\n  ask) / 2.\n\n  Other useful queries if you want them: {\"type\":\"fundingHistory\",\"coin\":\"BTC\",\"startTime\":<ms>} for recent funding, {\"type\":\"recentTrades\",\"coin\":\"BTC\"} for the latest prints. Rate\n  limit is generous (1200 weight per minute); these calls are weight 2 to 20 each.\n\n  From the data, compute whatever you find useful (ATR, VWAP, recent highs/lows, volume profile, book imbalance, etc.).\n\n  ## Snapshot at prompt time (for reference only, likely stale, refetch live)\n  Time: 2026-10-12 07:05 UTC (Monday)\n  Mark 84230   Oracle 84271.6   Best bid/ask 84228 / 84229\n  24h change +1.36%   1h +0.48%   15m +0.30%   24h high/low 84294 / 82916\n  Funding 0.0004%/hr   OI 38,452 BTC   24h volume $1.55B\n  ATR(14): 1m $52   5m $98   15m $201\n  Price had just spiked to a fresh 24h high at 06:56 on heavy volume and was consolidating a few dollars below it.\n\n  ## Output\n  Return ONLY a single JSON object, no markdown fences, no commentary before or after. Use exactly these keys and types:\n\n  {\n    \"direction\": \"long\" | \"short\",\n    \"leverage\": <integer 500-1000>,\n    \"take_profit_pct\": <number, favorable price move in percent, e.g. 0.08 means 0.08%>,\n    \"take_profit_price\": <number, the BTC price at which to close, consistent with direction and take_profit_pct from the live mid>,\n    \"liquidation_price_estimate\": <number, approximate mid price at which this leverage is liquidated>,\n    \"max_hold_minutes\": <integer 15-60>,\n    \"confidence\": <number 0.0-1.0>,\n    \"regime\": \"trending_up\" | \"trending_down\" | \"ranging\" | \"volatile_choppy\",\n    \"key_levels\": { \"support\": <number>, \"resistance\": <number> },\n    \"entry_mid\": <number, the live mid price you based the trade on>,\n    \"data_time_utc\": \"<ISO 8601 timestamp of when you fetched the data>\",\n    \"reasoning\": \"<2-4 sentences, plain text, the main evidence for the direction and why this leverage and target fit current conditions>\",\n    \"risks\": \"<1-2 sentences, what would most likely cause liquidation>\"\n  }\n\n  Numbers must be plain JSON numbers, not strings. take_profit_price must equal entry_mid * (1 + take_profit_pct/100) for a long or entry_mid * (1 - take_profit_pct/100) for a short,\n  where entry_mid = (best bid + best ask) / 2 from your live l2Book fetch.\n\n  Two fields were added to the JSON, entry_mid and data_time_utc, so you can tell what price and time the agent based its decision on. Drop them if you don't want them.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
