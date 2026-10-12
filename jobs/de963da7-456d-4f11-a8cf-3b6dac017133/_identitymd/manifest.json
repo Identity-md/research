@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "692e884fcad9fbe8d5effbf584b15f4b7bf024e9dfebff4a62dbe0e3070efe03",
+  "artifacts": [
+    {
+      "bytes": 52770,
+      "hash": "a4e5be845b806b7cd1c43f8fdb0966edeaa88244472359598701fd4be751a969",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "bba3408249ecfbcc380e9ec156b5fd47764d26de344da792a3935f385a40bb39"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c97fd6a73e3737dcd8fb494eef52303e25f45a8cdf5ef610ba4b2386929a5f85",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4f4afc30897ec6dc0358cf0ebadfce48f136d2964149b7248582296f20c4fad8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bcb8a3f211778fd6a46193890cd607594d069fe13ea3d8dfff685aa20625058c",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "30ab8d75cc752ad56d60cc9ec24350f7e7e75c6d3ee374f1a6420f18adb74f26",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "357c46e3781993d449f398d7eae2be8718b1cfa8deff2cc3661e944506942b5e",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "727f743b1fa2c31c860207fedbc072d074b41808fb063eb3f16a15db212d3847",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5ded77c3c883b7b0a02d87310d7b850561f8942d9748987b25539dc9c95cbc55",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "586baab44c0568fe76e85c949de81c5e04b02b312e54cbeb674db236ca3407f5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c9743cd9807c4c3a75a51e4d4b41771e00e8edc945f8d20d6901aa92224f03fc",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "bba3408249ecfbcc380e9ec156b5fd47764d26de344da792a3935f385a40bb39",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "de963da7-456d-4f11-a8cf-3b6dac017133",
+  "objective": "PROJECT: BMC ILLUMINATI PASS — PRE-MAINNET SECURITY AUDIT\n\nAudit my existing Solidity ERC-721 collection before Ethereum mainnet deployment.\n\nRepository:\nhttps://github.com/0xSt3w/launch-1356-project-bmc-illuminati-pass\n\nNetwork: Ethereum Mainnet, chain ID 1.\n\nBMC token:\n0x38224239f2BDae357D47cb864BC533d7f72dF961\n\nChainlink VRF v2.5 coordinator:\n0xD7f86b4b8Cae7D942340FF628F82735b7a20893a\n\nGenesis IPFS directory CID:\nbafybeihfihwwpev4gkqjuqawgtptsv3ynzsokclo6odsolvoa65aqaac2u\n\nAUDIT SCOPE\n\nReview all relevant Solidity contracts, deployment scripts, libraries, Foundry tests, VRF integrations and token interactions.\n\n1. NFT SUPPLY AND MINTING\n- Exactly 500 ERC-721 tokens.\n- First 40 mints are sequential Genesis.\n- Genesis #1 goes to the first successful minter.\n- First 40 mints burn 1,000,000 BMC each.\n- Remaining 460 mystery mints burn 350,000 BMC each.\n- Exactly 37 additional Genesis and 423 Standard outcomes.\n- No duplicate artwork assignments.\n- No minting beyond 500 tokens.\n\n2. BMC BURN SECURITY\n- Verify real BMC burnFrom compatibility.\n- Verify 18 decimals and allowance handling.\n- Confirm totalSupply and payer balance decrease correctly.\n- Test failures, reentrancy and unexpected token behavior.\n- Maximum total burn: 201,000,000 BMC.\n\n3. CHAINLINK VRF SECURITY\n- Verify Ethereum mainnet coordinator address and ABI compatibility.\n- Verify VRF v2.5 subscription requirements.\n- Review callback gas limits and payment configuration.\n- Test concurrent requests and out-of-order fulfillment.\n- Confirm random allocation without replacement.\n- Investigate permanently pending reveals and coordinator failures.\n- Review the consequences of owner-controlled VRF configuration.\n\n4. IPFS AND METADATA\n- Verify all 77 Genesis image paths.\n- Verify Genesis #1 points to genesis-01.png.\n- Confirm CID locking and metadata immutability.\n- Review Base64 JSON and on-chain Standard SVG rendering.\n- Check uniqueness of all 423 Standard combinations.\n- Confirm the artwork generator cannot accidentally overwrite the approved premium Genesis files.\n\n5. OWNER PERMISSIONS\n- Review setGenesisImagesCID and setVRFConfig.\n- Review transferOwnership and renounceOwnership.\n- Confirm no free owner mint, hidden withdrawals or upgrades.\n- Identify any risks from privileged configuration.\n\n6. DEPLOYMENT\n- Review script/Deploy.s.sol.\n- Verify owner, BMC and VRF coordinator parameters.\n- Verify foundry.toml and bytecode_hash = \"none\".\n- Check deployment size, gas estimates and Etherscan verification.\n- Review readiness for Ethereum mainnet.\n\n7. TESTING\n- Independently execute forge build and forge test.\n- Review the 43 existing Foundry tests.\n- Execute tests on an Ethereum mainnet fork using the actual BMC contract.\n- Add tests for uncovered edge cases.\n- Review invariants, gas limits and failure recovery.\n\nDELIVERABLES\n\nProvide:\n- Security findings classified Critical, High, Medium, Low and Informational.\n- Reproduction steps and proof-of-concept tests for significant findings.\n- Specific Solidity fixes.\n- Updated Foundry tests.\n- GitHub audit report.\n- Clear list of unresolved risks.\n- Mainnet deployment readiness assessment.\n\nIMPORTANT\n\nDo not deploy any contracts.\nDo not execute real BMC burns or token approvals.\nDo not request private keys or seed phrases.\nDo not change mint prices, supply or artwork without authorization.\nDo not claim that automated checks constitute a complete independent security audit.\n\nReport any blockers before requesting payment.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "330019e65d576ffda91c565cbff473a507d27d34",
+    "repoUrl": "https://github.com/0xSt3w/launch-1356-project-bmc-illuminati-pass.git"
+  }
+}
