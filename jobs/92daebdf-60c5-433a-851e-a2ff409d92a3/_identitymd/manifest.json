@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "578811e564f51d731e26b2b06b36f188df9fa9bdc1f6388227720f768c052e71",
+  "artifacts": [
+    {
+      "bytes": 38625,
+      "hash": "bd055a8efbb54922ab4d17d691f922e4785a05e7c4b4d93c13aaf0eba413829d",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "c813c676da27eab8a3f583814725ae3f4e463f48cc996b569f209324ab048eea"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "759c614fdc84ff665ba450b6daba8b6ee6e829dc44de5308a44f3f880d107fa2",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9967134592b1371568ed4b08a57aea5bbbe482af66f0ef396c1d5b1dcfa88d17",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca080fd3063996699e20c7e6f185c60d7926b45bca9b079ae2d367ddad7a3eb9",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5356913e3987553d420c2dcc3f2a45cdf6facf24634a7d39f9d811da63111cc6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "63458a1bd2b2d3767464aaeb732d20dac973a849044d8c5460f7976c72e5cd08",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ddd93515b77d9ddb23470e2064586a8a41381f120cc472ca004a936245f8ca53",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f2101c240e0b52a9a895b2f1bed1165b5d6229ab73d5e4567dbc624667e96505",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9544a6b0ff5c8dc658fdbe050a7f6a2dd616c73f90dd8d8ad9b0b422214e8dbc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9df7d5d52e83c572b70087c7652483d3122e52c488658420d6495d446820a289",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c813c676da27eab8a3f583814725ae3f4e463f48cc996b569f209324ab048eea",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "92daebdf-60c5-433a-851e-a2ff409d92a3",
+  "objective": "Audit BMC Illuminati PASS Candidate V3 for Ethereum Mainnet readiness.\n\nPrimary target: src/experimental/BMCIlluminatiPassCandidateV3.sol\n\nReview Chainlink VRF v2.5 integration, single-request randomness liveness, permanent reveal-stall risk, irreversible BMC burns, NFT rarity fairness, 30-day sale deadline, Genesis IPFS metadata, access control and deployment configuration.\n\nThe project previously passed 80 Foundry tests and a V3 deployment simulation.\n\nIdentify vulnerabilities by severity, reproduce findings where possible and recommend precise fixes. Clearly distinguish Candidate V3 from older experimental contracts.\n\nAudit only. No modifications or deployment. Perform a comprehensive, read-only smart contract security audit of BMC Illuminati PASS Candidate V3.\n\nRepository: https://github.com/0xSt3w/launch-1356-project-bmc-illuminati-pass\n\nCommit: bf2a63c04d0e73a1a1b9c65a785d921526ec39b0\n\nContract: src/experimental/BMCIlluminatiPassCandidateV3.sol\n\nReview Chainlink VRF v2.5 randomness, permanent reveal-stall risks, BMC token burns, NFT rarity fairness, sale deadlines, metadata integrity, permissions and deployment configuration.\n\nVerify the existing Foundry tests and report any critical, high, medium or low severity vulnerabilities.\n\nDeliver a written security report with recommended fixes and a Mainnet readiness verdict.\n\nAUDIT ONLY. Do not deploy, broadcast transactions, modify contracts or launch additional paid jobs.",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "bf2a63c04d0e73a1a1b9c65a785d921526ec39b0",
+    "repoUrl": "https://github.com/0xSt3w/launch-1356-project-bmc-illuminati-pass.git"
+  }
+}
