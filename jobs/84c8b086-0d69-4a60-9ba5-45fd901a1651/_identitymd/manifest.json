@@ -1,0 +1,53 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6f6c3697545344507caebbab85ea988eed623d8388474bb71e70233a1da5f024",
+  "artifacts": [
+    {
+      "bytes": 11821,
+      "hash": "77bac09d6e382d11803fbebb64641bd0652ea66bb01931abc90ab74a5d2b44f5",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "d1ba39b041efb5013e12220a4efb68120105ba8a63a57db9421e36458bb39b7f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "795e1a9dc11b78ca59c14db26465b4416ed4db8fa09cb6672a46ca2aecb9e3a3",
+      "changedPaths": [
+        "README.md",
+        "evidence/analyze.py",
+        "evidence/raw/explorer-search-heist.json",
+        "evidence/raw/imd-docs-ask-the-oracle.txt",
+        "evidence/raw/job-358b906b.json",
+        "evidence/raw/oracle-request-780814ff.json",
+        "evidence/raw/oracle-request-794b7da2.json",
+        "evidence/raw/oracle-request-7be453ea.json",
+        "evidence/raw/oracle-request-c6f4f665.json",
+        "evidence/raw/oracle-request-d89ef181.json"
+      ],
+      "deviceKey": "1ec9f666356a7ad7ec8111dd282072b5367280df2f3e966450f45afbe461f82b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "d1ba39b041efb5013e12220a4efb68120105ba8a63a57db9421e36458bb39b7f",
+      "treeHash": "d0b05cdfe0d4defda2655276ca8cb062857e5f7c",
+      "verifiedTreeHash": "d0b05cdfe0d4defda2655276ca8cb062857e5f7c",
+      "verifierVersion": "0.1.0+fb8278c5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "84c8b086-0d69-4a60-9ba5-45fd901a1651",
+  "objective": "https://explorer.imd.fun/jobs/358b906b-6b44-48f3-ad09-537e99e48d89\n\nwhy is the panel split",
+  "publisherVersion": "0.1.0+fb8278c5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
