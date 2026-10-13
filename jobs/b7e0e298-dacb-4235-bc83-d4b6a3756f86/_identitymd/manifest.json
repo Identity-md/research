@@ -1,0 +1,55 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "273e7cfe3ed9fe50b7defa307dab7fed220f332a8f7935f522d7cef50de9f0af",
+  "artifacts": [
+    {
+      "bytes": 73975,
+      "hash": "34b8e57d8874af4dd6d5dfc9fea8260bd5f35fdfff02392e8a631a7fddc580c6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "cd45cfb0d473ee22695af83816ed3811b513b6c3111370e7e288ae87c5ab0186"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "192c0d439ad3dc8be8f3c3df652bcd05eba4a3771b05d70375ac9dc2b2babf5b",
+      "changedPaths": [
+        "README.md",
+        "research/activity-windows.json",
+        "research/check-results.json",
+        "research/check_report.py",
+        "research/collect_activity.py",
+        "research/evidence-manifest.json",
+        "research/fee-series.json",
+        "research/imd-attester.json",
+        "research/imd-capabilities.json",
+        "research/onchain-snapshot.json",
+        "simulation/model.py",
+        "simulation/results.json"
+      ],
+      "deviceKey": "2293d6b19e81ef1a8e62ede461544ff79dea3ad4a1caedea0ea886f0de1ef005",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "cd45cfb0d473ee22695af83816ed3811b513b6c3111370e7e288ae87c5ab0186",
+      "treeHash": "7c925d4c5c6df6a0b16e8d7c06f016f132a71293",
+      "verifiedTreeHash": "7c925d4c5c6df6a0b16e8d7c06f016f132a71293",
+      "verifierVersion": "0.1.0+327e1e9f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b7e0e298-dacb-4235-bc83-d4b6a3756f86",
+  "objective": "Research and design: a token gacha on Ethereum mainnet, modeled on Fake World Assets (https://www.fwa.fun/) but with ERC-20 \"bags\" instead of NFTs. Read-only research, no deploy, no transactions.\n\nConcept:\n- A depositor seals a Bag: an ERC-721 that holds one or more whitelisted ERC-20 tokens they own. Each depositor risks only their own tokens. A Bag's value is its contents priced in ETH by a manipulation-resistant TWAP at draw time.\n- Bags fall into size tiers by value relative to the spin price (small, medium, large, jackpot).\n- Spins are paid only in ETH at a fixed price. Randomness via Chainlink VRF. The spinner either keeps the drawn Bag (open it for the tokens or trade the NFT) or takes an instant ETH buyback at a discount, which returns the Bag to the pool.\n- When a Bag is taken, its depositor receives ETH for its value minus a fee. While a Bag sits in the pool, its depositor earns dividends in the platform token.\n- Platform token: launched separately; part of the spin fees buys it and distributes it to depositors.\n- Curation by the IMD swarm only through attested IMD oracle answers (no admin key, no owner, immutable contracts): token whitelist and delisting using token-safety and liquidity checks, tier odds and pool weights within hard on-chain bounds (max 10% change per 24h), pause of a single token's bags.\n\nDeliver:\n1. Fake World Assets deep dive: contracts and addresses, deposit/bid/draw/buyback flow, fees and where they go, VRF integration, depositor rewards, FWAir, known exploits or farming issues, results after emissions ended. Sources and tx examples.\n2. Full mechanism spec for the Bag version: deposit, valuation (TWAP source, window, minimum liquidity, staleness), tiers, draw weighting, keep vs buyback, payout to depositors, ETH reserve design for payouts above the spin price, fee split (depositors, platform token buyback, team), dividend accounting, withdrawal and lockups.\n3. Economic simulation: spin price, tier odds and sizes, spinner expected value (target about 90-93%), depositor return, reserve solvency under bad streaks and a 50% token crash, adverse selection (depositors dumping falling tokens), whale and bot behavior. Recommend one parameter set with numbers.\n4. Attack analysis: TWAP manipulation, thin or malicious tokens (fee-on-transfer, rebasing, blacklist, pausable), VRF timing and request griefing, reentrancy via token callbacks, front-running deposits before draws, wash spinning to farm dividends. Mitigation for each.\n5. Contract architecture fitting IMD launch limits (evm_contracts: max 8 contracts per launch, static constructor args max 16 words, no owner, no proxy, no external calls in constructors): list contracts, responsibilities, storage, events, oracle question definitions for the curator, VRF setup (subscription funding without an admin key), gas per spin and deposit.\n6. Launch plan through IMD: platform token launch type and economics, contract jobs order, website, costs and risks. Note legal considerations of a gambling-like product at a high level only.\n\nReport facts with sources, mark inferences, give clear recommendations.",
+  "publisherVersion": "0.1.0+04d3c6da",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
