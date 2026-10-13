@@ -1,0 +1,59 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "fe7448238e98a12d4435ddb63177caa6a73e5175524d8631c361142462db5b69",
+  "artifacts": [
+    {
+      "bytes": 63575,
+      "hash": "cf320131e7856132f8c80974236abca4b581197af65c99b1406e3518cc340450",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "742329876dc2f7408dbf92e15acbaffcfd6a416ebcf4e26d49b7c0f2ef229f65"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "4d80c1a838447d8097bb139e8b7fb2978119194dfa3de84aa5cd61e02ac30e02",
+      "changedPaths": [
+        "README.md",
+        "evidence/README.md",
+        "evidence/bic-222-claim-receipt.json",
+        "evidence/bic-allocations.csv",
+        "evidence/bic-contributor-log-queries.json",
+        "evidence/bic-launch-rpc-blxrbdn.json",
+        "evidence/bic-launch-rpc-ordofi.json",
+        "evidence/bic-launch-rpc-pocket.json",
+        "evidence/bic-partial-claim-log-scan.json",
+        "evidence/bic-pinned-state.json",
+        "evidence/bic-reward-tree.json",
+        "evidence/capabilities.json",
+        "evidence/health.json",
+        "evidence/research-snapshot.json",
+        "evidence/source-index.json",
+        "evidence/validation.json"
+      ],
+      "deviceKey": "27c4974b8d88ec4b1c92b185745b48dd689176bf86191b205bda85599d42ca89",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "742329876dc2f7408dbf92e15acbaffcfd6a416ebcf4e26d49b7c0f2ef229f65",
+      "treeHash": "8fe45751844887f52cdde1f10474d65561accca7",
+      "verifiedTreeHash": "8fe45751844887f52cdde1f10474d65561accca7",
+      "verifierVersion": "0.1.0+7129bf9d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "71a4277b-a83e-4183-8fdf-6fef339bb732",
+  "objective": "Prepare a source-backed research report on the current capabilities of IdentityMD (IMD). Research only: do not modify code, deploy contracts, launch tokens, move funds, activate services or open additional paid tasks.\n\nAnswer the following questions:\n\n1. Continuous website assistance\nCan a real IMD agent receive questions from website visitors and provide ongoing conversational help with NFTs, IMD, Codex, VPS setup and project ideas? Identify supported APIs, skills and working examples. Distinguish agents building the website from agents operating its live chat service.\n\n2. Our agent: IdentityMD NFT #222\nCan website requests be routed specifically to Agent #222? Can it maintain separate conversation histories, serve multiple visitors and continue receiving swarm work? Explain authentication, queues, isolation, model subscription restrictions and operating costs.\n\n3. Two real agents playing chess\nCan two real IMD agents play each other while retaining verifiable identities throughout a match? Explain task dispatch, move submission, persistent sessions, legal-move validation, timeouts and costs. Does every move require a separate paid task? Do not substitute a local chess engine or simulated agent. Identify working examples or precise missing components.\n\n4. Agent rewards\nWhat rewards can agents receive beyond ordinary task payments? Explain launch-token allocations, accepted-contribution rewards, connected-seat distributions, eligibility, claiming and fees. Distinguish earned, claimable, claimed and sold rewards.\n\n5. BIC reward example\nInvestigate BIC on Robinhood Chain at:\n0x642C34606276849DE4Ae27B190abd9Dff47c9aa9\nA public post claimed approximately $6,000 was awarded to agents working on the project. Verify the reward asset, quantities, recipients, distribution mechanism and transaction evidence. Explain how the dollar value was calculated. Treat the claim as unverified unless supported by records.\n\n6. Multi-agent workflows\nHow can one request involve builders, testers, specialist auditors and a judge? Identify the correct forms, templates, skills or workflow parameters. Explain parallel versus sequential steps, retries, agent assignment and total pricing. Does requesting several agents in plain text actually configure such a workflow?\n\n7. Failed or blocked jobs\nExplain continuation, retries, cancellation and refund rules. What happens to payment and partially completed work when a task reaches “needs input” or fails?\n\n8. Costs and capacity\nSeparate IMD task fees, model subscription/API costs, VPS costs and transaction fees. Explain how costs scale for continuous chat, games and multi-agent projects. Use published prices or clearly labelled estimates.\n\n9. Treasury protection\nCan an agent research opportunities and prepare proposals without access to treasury funds? Explain how treasury principal could be protected while a separately funded reward pool distributes rewards under explicit rules. Identify withdrawal powers, approvals and any required owner actions.\n\n10. Cooperation with the Celestia ecosystem\nAre there actual agent projects in the Celestia ecosystem that could cooperate with IMD agents? Identify their names, documentation, APIs and operational status. Investigate shared tasks, data exchange, identity verification and rewards. Distinguish Celestia itself from projects using Celestia. Explain where data availability helps, where it does not, and what custom integration would be required.\n\n11. A Fomo- or pump.fun-style application\nCould IMD agents develop and audit a token-launch and trading platform? Examine token creation, bonding curves or alternative pricing, liquidity migration, swaps, platform fees, wallet integration, supported chains and operating infrastructure. Distinguish the two reference platforms rather than assuming identical designs. Identify reusable components, custom development, working examples and estimated costs.\n\nFor every question:\n- Label the result: supported today, requires custom development, unsupported, or not verified.\n- Cite official documentation and direct source links.\n- Include relevant job IDs, repository commits, reports and transaction hashes when available.\n- Distinguish documented capability, demonstrated operation and inference.\n- State missing permissions or credentials without requesting secrets.\n- Do not claim that an accepted task, passing test or audit guarantees correctness or safety.\n\nDeliver a readable report with a comparison table, precise blockers and practical next steps. We want evidence of what works today, not general promises.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
