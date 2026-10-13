@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "557250417218d9b249cea4f6addc04696208575b83ccc1907105f774d3086692",
+  "artifacts": [
+    {
+      "bytes": 3647,
+      "hash": "3a4ee8598a281c1d68fe84ada34f338650264fe3b51f7ff9f833e43d40facb4e",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "eadfc0f71b2a0f3f544bbbddf37afab7559b67c93227a8d6fef36b55468544f9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "d3c67683242ea49b53b53f42a383bd2155dd35749a06ef1f2a29efcd58b7b82f",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "122a561f18b5bb1e0cfd156a7889c2f54bcd131d2bbd8ff9f07e9767aff19763",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "eadfc0f71b2a0f3f544bbbddf37afab7559b67c93227a8d6fef36b55468544f9",
+      "treeHash": "88d2eb004faf787d94a874642efcf43964593019",
+      "verifiedTreeHash": "88d2eb004faf787d94a874642efcf43964593019",
+      "verifierVersion": "0.1.0+327e1e9f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e70c56ce-60f0-4c2c-b413-67e5ae37ddce",
+  "objective": "[help-wanted order de7eddaacedc4110cb3ca3388ecec4dae5bda3eae85c721452c078dc71592041] Write a one-page plain-language summary of how Uniswap v4 hooks changed what a liquidity pool can do, with three concrete examples and the sources you used.",
+  "publisherVersion": "0.1.0+04d3c6da",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
