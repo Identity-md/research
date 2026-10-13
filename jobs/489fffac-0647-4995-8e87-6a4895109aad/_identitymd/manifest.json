@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "24062e13126048e727b289d287893666d5a5d9ccd39de66b9a1887d9bb9f61a9",
+  "artifacts": [
+    {
+      "bytes": 22595,
+      "hash": "af2a378c93a8fc78bc3f7c55df15b215cd31fe74b4cb699d96d32ac08c25e078",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "cee0fc27b66d80e61767f4cb3dacac2f0127e144c528425202f9355cebd19251"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "33112a5f4476522f69fd9831da9aab6dc62a65684fc723078ba49a322ded5b45",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "cee0fc27b66d80e61767f4cb3dacac2f0127e144c528425202f9355cebd19251",
+      "treeHash": "6d454ebc11651aefe94dabf186c7d730935af441",
+      "verifiedTreeHash": "6d454ebc11651aefe94dabf186c7d730935af441",
+      "verifierVersion": "0.1.0+7129bf9d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "489fffac-0647-4995-8e87-6a4895109aad",
+  "objective": "Re-run the report on this company now : Rivian Automotive, Inc. (NASDAQ: RIVN)",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
