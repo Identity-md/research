@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "92a95357b236981b55fe5d598681b2f1241573610b971c022561b68a5ce6a7c6",
+  "artifacts": [
+    {
+      "bytes": 13320,
+      "hash": "940c70b08d5d8b89fcf4b64358ba8b12b7495a7eed3a7c1db26b778f89a8c7f4",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "d26870b9697956d37449760ef06e4a98a7cd662998460e6cfbd29f1d48291d4d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7eaf1cd0fb3df71232c315bf2b5773e515d3c66225687e3aa8f354309ec8798f",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b77a63597c774dcd1b26e3c9d9e0a6d3a734a7031b1470dcdc17ad8ae56ac9fb",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e8e860c7f230647300bf957fd533ce3b3e1b5bfed6e86ac9311624145eeb53a1",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b31d699df82206698934cf04e2026c6df2dbe16416cd7bcf435b27dffdb5b0ac",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "13603a08ada71730fae87d7d81691e4bc900ccc732cc2e2804c889fa1358eea0",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d26870b9697956d37449760ef06e4a98a7cd662998460e6cfbd29f1d48291d4d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "91d3f9816008ce9fbabd38a3201dca16b1a7f8716d056df53c1f395b433c056f",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7c764650b8f377ce14d2e8a63c768078e1fdcf7e0c41c2689ee0d2119ee87b3d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ee9fbaf2480d10346d554c2e7e9766dc8d44669b80643d967d9d3282595aed71",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d84328ffa3b696394d9b50a7cc5687316aba57524019e3ca9d3faa0e8c0bb96f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "339b6b19-3df3-4420-8cfc-dcf78059d7c0",
+  "objective": "Pre-token audit of BLACKOUT at commit 1e4490923f20a389ecb6be136121f4eea65db3b1. L1 (SwarmDesk + EndowmentEscrow) is already deployed on Robinhood Chain (4663) from this commit as launch 1593. After L1 every creation-code pin is frozen: SwarmDesk pins GameRegistry, which pins all 14 module creation codes, and V4Market pins the registry too. Any later source change to any module means a new L1 and, after L2, a new token. So we need every finding NOW, before L2.\n\nGoal: act exactly like the IMD launch panel (flow, permissions, economics, math, judge) for the three remaining launches and report everything it would raise:\n- L2: platform token + V4Market hook (univ4_hook, pairWith eth, poolBps 7000, remainderTo the escrow).\n- L3 (job A): Params, GameRegistry, RewardPool, FarmRewards, FarmCore, FarmItems, PackSale, StarterClaim, then the binder-only Desk.bind.\n- L4 (job B): FeeRouter, GridOperator, Season, FarmEngine, Economy, Enhancement, Civic, Billboards, then permissionless wiring (register roles, bindFeeRouter, escrow forward, fundEndowment).\nRead these contracts in full, with priority on everything except SwarmDesk and EndowmentEscrow, which have already been reviewed twice.\n\nAlready known and accepted (do not re-report unless you find a new impact): the binder trust and liveness, M-2 matching twin, stream-0 answers before role 1, Economy._insert 33-tie lock griefing, Festival band dead code, PackSale.buyPacksFor gifting, one-shot escrow, Season.rollover before finalize, FeeRouter.executeSells sweep rollback, FarmRewards same-epoch vintage back-dating, future-block randomness, exact-input swaps only, spot() bounds, fixed oracle endpoints, reserved Params keys, RewardPool shortfall repair by plain transfer, and the farmDaily basis (fixed: sticky, decays 1/96 per epoch).\n\nDeliver for every finding: severity, contract and line, a runnable Foundry reproduction, whether a launch judge would block it, and for medium or higher the minimal fix plus which creation-code pins it changes. If nothing blocks, say so explicitly per launch (L2, L3, L4). Do not change source.",
+  "publisherVersion": "0.1.0+172610c0",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "1e4490923f20a389ecb6be136121f4eea65db3b1",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1593-blackout-v3-16-l1-robinhood.git"
+  }
+}
