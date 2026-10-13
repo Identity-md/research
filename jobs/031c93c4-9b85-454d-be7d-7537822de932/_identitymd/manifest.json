@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "ec49b6228dfba0098e8112f988a103823b07aa076fa86f2f2c5df3a2916920cd",
+  "artifacts": [
+    {
+      "bytes": 18876,
+      "hash": "26dfdcace5f7db3278e41ea613208ff8aadc6a814157a83dc764246f9e7eaa37",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "da2e0df6bd3efb314a42fd5a2b406781b44869f24f47579d55a9192a0f386f56"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e0f64c10e30e33e2b79f69f20c59956ad1a7627f53e256037a7f323d77f980a1",
+      "evaluation": null,
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "612d734051d084aded604a6762427eeb07996daa3f81c49f584f2c6fac2f5a99",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e6de8d4c6cf9755159db0f1186e45380731977af9ac6ac182deeacfba39d97ee",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "da2e0df6bd3efb314a42fd5a2b406781b44869f24f47579d55a9192a0f386f56",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8d428b115b0ebd64045cefca6213be9167b1dd0d92925950f84c1df3ad60b83d",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9af86395bb5ded6ae19944b2e41c0365021154799b7e59451090716fdb4364f0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3987a51ff810f3b94af8dfb42af95303b2f982c1daacb7991257d7277c185cd8",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fea20e1f30e1c32baffa003f43f72bfa3cea8500cc68bc379c52f66b9eabcd60",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "824e6de6196c686f45ec789bb4681971376c224f07a05ecf11cf0b724786d5a4",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4e7b8343cd92a5c5cc24b9aaae5f596375e7c95c1c9d0f36f8ae63266cd63aab",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "031c93c4-9b85-454d-be7d-7537822de932",
+  "objective": "Control audit of BLACKOUT v3.14 before its four contract launches on Robinhood Chain (4663). Source: identity-md-launches/launch-1544-blackout-swarmdesk-bootstrap-robinhood at commit 210eafe, built with the repo foundry.toml (solc 0.8.26, optimizer 200, cancun, viaIR false, bytecode_hash none). Read-only: no deploy, no broadcast, no source changes.\n\nv3.14 fixed the previous pre-launch audit (job a8730286): V4Market quotes now include the 1.25% LP fee; SwarmDesk.bind checks the hook's desk, token and game hash; FeeRouter.executeSells, FarmCore.retire, SwarmDesk._regulate key range, FarmRewards vintage timestamp, Season.claimLottery via PackSale receipts, Economy bounded lock insertion; all IMD protocol addresses moved from constructor arguments into src/lib/Robinhood.sol constants (the IMD manifest gate refuses protocol addresses as constructor words); SwarmDesk and EndowmentEscrow now deploy together in one launch.\n\nGoal: confirm the launch audit panel (flow, permissions, economics, math, judge) would raise no medium, high or critical finding in any of the four launches described in launch-v39.md (L1 SwarmDesk + EndowmentEscrow, L2 token + V4Market hook, L3 job A, L4 job B), and that each v3.14 fix is correct and introduced no regression. Also check every constructor in launch-v39.md against the deploy gate (no IMD protocol address as a constructor word; only $poolManager, $token, $factory and $contract:Name placeholders).\n\nAccepted by the requester, report only a worse variant: the eight items in docs/accepted-v314.md.\n\nDeliver: every finding with severity, contract and line, reproduction, and whether the launch judge would block; for each medium or higher the minimal fix and which creation-code pins it changes. If nothing blocks, say so explicitly per launch.",
+  "publisherVersion": "0.1.0+04d3c6da",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "210eafe33ecc3a083e14a2b2c77b3b2584eaaa43",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1544-blackout-swarmdesk-bootstrap-robinhood.git"
+  }
+}
