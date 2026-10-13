@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "faf48f3407b320f1848fdecd3978d19b2b025c37861e46adfa2c7b3bfa49d81f",
+  "artifacts": [
+    {
+      "bytes": 33393,
+      "hash": "4c093791b8faff5b374e173e511196be0d4f9e1a2c634cbb0c26bbdf47ff7bf1",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2b44b17b65a710d1e610ce925e60c9fd60e834dcbf918a83f191df5e1826d407"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "236718fbf1016bf937cc5e5aedb2e4a5829ff987e84808d25e16d4c0d0414ec4",
+      "changedPaths": [
+        "README.md",
+        "tools/build_report.py"
+      ],
+      "deviceKey": "1f78880cc572868c36d7b539c1ed867e3a1c374a94c17090fef85c9ed1e8e50c",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "2b44b17b65a710d1e610ce925e60c9fd60e834dcbf918a83f191df5e1826d407",
+      "treeHash": "6d454ebc11651aefe94dabf186c7d730935af441",
+      "verifiedTreeHash": "6d454ebc11651aefe94dabf186c7d730935af441",
+      "verifierVersion": "0.1.0+7129bf9d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f9cdced4-80ac-4c30-a00b-a349ed5668ff",
+  "objective": "Produce a Standard-tier company intelligence report on DueDiligenceAi. Deliver exactly two files: artifacts/report.json and artifacts/report.md with the same content. Ten sections in this order: summary, identity, officers, financial, legal, sanctions, reputation, market, red_flags, sources. Every section is present; an empty one states status not_found or not_applicable and names what was searched.\n\nJSON shape: {company:{query, legal_name, former_names[], identifiers:{sec_cik, tickers[], state_of_incorporation, state_entity_id, domain}}, tier:“standard”, generated_at, sections:[{id, title, status, confidence, findings:[{id, kind:“fact”|”inference”|”absence”, claim, as_of, confidence, severity?, severity_rationale?, derived_from?[], sources:[{url, title, publisher, retrieved_at, quote?}], data?}]}], disclaimer}.\n\nRules. Public sources only, no logins, no paid APIs. Every finding carries at least one URL and an as_of date; a finding without a URL is dropped. Quotes verbatim, at most 25 words. Searched and absent is a result: kind “absence” with the search URL. Anything derived is kind “inference” and lists the finding ids it derives from. Where sources disagree, record both, lower confidence, surface in red_flags if material. Officers only as named in SEC or state filings; name, role, tenure, nothing else. Confidence 0–1: 0.9+ primary and current, 0.6–0.9 reputable secondary or older primary, 0.3–0.6 single secondary or inference, below 0.3 only if material and flagged. Severity low/medium/high/critical with one sentence of rationale on every legal and red_flags finding.\n\nCoverage. Identity: EDGAR submissions API for CIK, SIC, state of incorporation, former names, tickers; state registry for status and registered agent. Officers: latest 10-K Part III or DEF 14A. Financial: latest 10-K and 10-Q via EDGAR company facts — revenue, net income, cash, total debt, each with period and filing URL; going-concern or material-weakness language; auditor changes (8-K 4.01); restatements (8-K 4.02). Legal: CourtListener RECAP search, company as party, last 5 years — docket number, court, filed date, nature of suit, status, party role; SEC litigation releases; FTC and CFPB actions; bankruptcies. Sanctions: OFAC, EU sanctions map, UK OFSI, BIS Entity List, SAM.gov exclusions — company, subsidiaries from the latest 10-K Exhibit 21, and each named officer; state “no match” with list and date. Reputation: monthly news volume over 12 months, the 5–10 most material stories with tone; CFPB complaint counts and top issues if applicable; employee-review themes from public pages, counts only. Market: sector and named competitors from the 10-K; USPTO PatentsView patent count, last 24 months of grants, top CPC classes; trademark count; open roles on the careers page by function; USAspending federal awards, last 3 years. Red flags: cross-referenced items only, each naming the findings it rests on.\n\nSummary: 5–8 sentences, only facts that appear in later sections, ending with a one-sentence overall risk read. End with this disclaimer verbatim: “This report was assembled by automated agents from publicly available sources on the date shown. It is a research summary, not legal, financial or investment advice, and it may be incomplete or out of date. Verify every item against the linked source before acting on it.” Record every URL used in sources with retrieval time. Do not invent docket numbers, figures or URLs; if a source cannot be reached, say so in status_note.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
