@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "e7e698102de3511ee1c0acf2e48063da4360aa4486cc51d26096485a2bed5e24",
+  "artifacts": [
+    {
+      "bytes": 20364,
+      "hash": "8fe1ee5927391da713b4b950409b40af4c5b68eef907401dde4fdddb830af28c",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "5a110d421ebe6ebd52955c9a70e8c082bbe6780191563d965ba25cfa76201f80"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ebee02fc506f27c1b0fadc62728da6e6bb08e89eb86b6d3f22e7fbf1df539ab",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "af953a978aab09bc82126740b0370588a73965915cd635e3d311ae4d999c57d8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3a40eaafbd83a6bc57b859dab02a7e0ae1fcd12ca7afee73c0d6c380b94178e9",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c7f1964ba977e0b52aa7823582336a19e98dd0ee200075db05d7c1f13a535354",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f91b58cf7cd2d45e4d1e4594b1da9cc601a40bc07fa1e52580901572c5b342c",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "090646d81775ff589d75eb42501d6ab702343e985100288b764610d6c373d4ca",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a11137177fc72d8bc1a019c65c97a6f883784a7e9fc180fc790419b6cffc1eec",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5a110d421ebe6ebd52955c9a70e8c082bbe6780191563d965ba25cfa76201f80",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "764cd99b4c628a47fe03b684170e9c33e9784067e2f4eb68a4a2bfb32682dc34",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b6cd0c6899f70dbaf188d8161fd116eefa21acdcf96501aa5239359a0204af41",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "145af84f-02c5-4db7-8dc3-3ec3a300b8f1",
+  "objective": "Audit Courier Companions: an ERC-1155 collection of in-game companions for Courier World (https://courierworld.fun), sold only for $STAMP on Robinhood Chain (chain 4663). Contracts review only: no deployment.\n\nRepo: github.com/AdamNakamoto/courierworld, commit bbe1784eabeeb6a0fe4d0746958a72ad3977c652\nIn scope: contracts/src/CourierCompanions.sol (and its use in contracts/script/DeployCompanions.s.sol)\nTests: contracts/test/CourierCompanions.t.sol, contracts/test/CourierCompanions.invariant.t.sol (forge test --match-contract CourierCompanions)\nDependencies: OpenZeppelin Contracts 5.4.0. $STAMP is contracts/src/StampToken.sol (ERC20 + ERC20Permit + ERC20Burnable, no transfer tax), deployed at 0xBaB43AF01C32a952ff14B395D026cf1874932Bc5.\n\nWhat it does: each companion kind is a token id with a $STAMP price, a max supply, a per-wallet limit (0 = none) and an open flag. buy(id, quantity, maxCost) and buyWithPermit(...) take price x quantity $STAMP straight from the buyer to the treasury (the contract never holds tokens) and mint the companions. 1 to 10 per buy. Resales pay an ERC-2981 royalty (5% to the treasury at deploy, owner can change it up to 10%).\n\nPromises to verify:\n- Nothing can be minted without paying the current price; the owner has no free mint and no way to take anyone's tokens.\n- A buyer never pays more than maxCost, and pays exactly price x quantity, all to the treasury.\n- A kind's supply can only shrink, never below what's been minted; minted never exceeds maxSupply.\n- Wallet limits count lifetime purchases, not balances; transfers don't reset them.\n- No reentrancy through onERC1155Received or the $STAMP transfer; a failed mint reverts the whole buy (no $STAMP moves).\n- A front-run permit doesn't break buyWithPermit.\n- Safe casts (uint128 price, uint32 supply/minted/perWallet) and no overflow.\n- Owner powers are only: setKind, setTreasury, setBase, setRoyalty (max 10%), two-step ownership transfer.\n- ERC-1155 and ERC-2981 compliance; name/symbol/uri work on OpenSea.\n- The deploy script sets up the lineup as intended.\n\nPlease report findings by severity with suggested fixes; don't push to the repository, and I'll fix and ask for a re-check.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "bbe1784eabeeb6a0fe4d0746958a72ad3977c652",
+    "repoUrl": "https://github.com/AdamNakamoto/courierworld.git"
+  }
+}
