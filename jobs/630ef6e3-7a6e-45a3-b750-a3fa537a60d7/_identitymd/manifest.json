@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "a24ea7f8ab7244d7f46153de8c640db9499d70ae5c5de5e8e66dd6dd2a351eea",
+  "artifacts": [
+    {
+      "bytes": 308308,
+      "hash": "e8b73f29b67dadfadc26c51705477d2e0b1d39e359656742af3bac9481fe0b90",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "4512f6cb0cd1d61a400cdf76f2be41c80d20f6e128ac628b54c4b90a5a69bed6"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "33bef35e96ccb6539eccd61b0f469a38ce7af4e5424afca909419cb2751e601f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "4512f6cb0cd1d61a400cdf76f2be41c80d20f6e128ac628b54c4b90a5a69bed6",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+7129bf9d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "630ef6e3-7a6e-45a3-b750-a3fa537a60d7",
+  "objective": "Produce a Standard-tier company intelligence report on Rivian Automotive, Inc. (NASDAQ: RIVN). Deliver one file, artifacts/report.md: the human-readable report, followed by a final section “## JSON” containing one fenced json block with the machine-readable version of the same content. Ten sections in this order: summary, identity, officers, financial, legal, sanctions, reputation, market, red_flags, sources. Do not omit any section; if a source is unreachable, keep the section and explain in status_note. Do not change the structure or substitute your own format.\n\nJSON shape: {company:{query, legal_name, former_names[], identifiers:{sec_cik, tickers[], state_of_incorporation, state_entity_id, domain}}, tier:“standard”, generated_at, sections:[{id, title, status, status_note?, confidence, findings:[{id, kind:“fact”|”inference”|”absence”, claim, as_of, confidence, severity?, severity_rationale?, derived_from?[], sources:[{url, title, publisher, retrieved_at, quote?}], data?}]}], disclaimer}.\n\nAccess notes. For every request to sec.gov and efts.sec.gov send the header User-Agent “DueDiligence research growwithpassive@gmail.com”; the filings archive and the EDGAR APIs accept this.  For sanctions, download the full OFAC SDN and consolidated CSVs, UK OFSI consolidated CSV, EU consolidated CSV and the ITA Consolidated Screening List CSV and search them locally; report matches or “no match” per list with the date.\n\nRules. Public sources only, no logins, no paid APIs beyond the free keys above. Every finding carries at least one URL and an as_of date; a finding without a URL is dropped. Quotes verbatim, at most 25 words. Searched and absent is a result: kind “absence” with the search URL. Anything derived is kind “inference” and lists the finding ids it derives from. Where sources disagree, record both, lower confidence, surface in red_flags if material. Officers only as named in SEC or state filings; name, role, tenure, nothing else. Confidence 0–1: 0.9+ primary and current, 0.6–0.9 reputable secondary or older primary, 0.3–0.6 single secondary or inference, below 0.3 only if material and flagged. Severity low/medium/high/critical with one sentence of rationale on every legal and red_flags finding.\n\nCoverage. Identity: EDGAR submissions API for CIK, SIC, state of incorporation, former names, tickers; Delaware or OpenCorporates for status and registered agent. Officers: latest DEF 14A and any 8-K Item 5.02 since; include the announced CFO transition with dates. Financial: latest 10-K and 10-Q via EDGAR company facts — revenue, gross profit, net income, cash, short-term investments, total debt principal, each with period and filing URL; going-concern or material-weakness language; auditor and opinion; 8-K 4.01 and 4.02 since 2023. Legal: CourtListener RECAP search with Rivian as party, last 5 years — docket number, court, filed date, nature of suit, status, party role, at least the ten most recent; the IPO securities class action and its settlement; the Delaware derivative action; SEC litigation releases; FTC and CFPB actions; NHTSA recalls in the last 24 months with campaign numbers. Sanctions: the five lists above for the company, subsidiaries from the latest 10-K Exhibit 21, and each named officer and director. Reputation: monthly news volume over 12 months, the 5–10 most material stories with tone and URL; CFPB complaint count; employee-review themes from public pages, counts only. Market: sector and named competitors from the 10-K; PatentsView patent count, grants in the last 24 months, top CPC classes; trademark count; open roles on the careers page by function; USAspending federal awards, last 3 years; the DOE loan. Red flags: cross-referenced items only, each naming the findings it rests on.\n\nSummary: 5–8 sentences, only facts that appear in later sections, ending with a one-sentence overall risk read. Record every URL used in sources with retrieval time. End the readable part with this disclaimer verbatim: “This report was assembled by automated agents from publicly available sources on the date shown. It is a research summary, not legal, financial or investment advice, and it may be incomplete or out of date. Verify every item against the linked source before acting on it.” Do not invent docket numbers, figures or URLs.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
