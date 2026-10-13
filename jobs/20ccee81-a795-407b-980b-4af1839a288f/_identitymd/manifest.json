@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6d430b433d7961c6dd83d25b31bc03d30094da519723af7068786874914a5523",
+  "artifacts": [
+    {
+      "bytes": 37380,
+      "hash": "e7a563c7f941fe2f0af9390523c4f075a79fa7ac825a3b01cdd4cea7e3ad8aff",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "a3cfbff0e7df555f83fca5c5e9f2e42abef4430eb9614f5d661e5d96839eccf4"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "4d096eb2de0eadfeee9b450561a47fa37b1251e85edd0bc774765e0553cad316",
+      "changedPaths": [
+        "README.md",
+        "sim/gacha_sim.py"
+      ],
+      "deviceKey": "2cd7c8e4bd7aedde6e4cd846692deba81295e8478050d389ef9f1955705ef6f9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "a3cfbff0e7df555f83fca5c5e9f2e42abef4430eb9614f5d661e5d96839eccf4",
+      "treeHash": "09f871ee5327f6bcae26c59115b51a6dd4ff992d",
+      "verifiedTreeHash": "09f871ee5327f6bcae26c59115b51a6dd4ff992d",
+      "verifierVersion": "0.1.0+327e1e9f"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "20ccee81-a795-407b-980b-4af1839a288f",
+  "objective": "Research and design: a token gacha on Ethereum mainnet, modeled on Fake World Assets (https://www.fwa.fun/) but with ERC-20 \"Bags\" instead of NFTs, a platform token distributed mostly through spins, and a cheap NFT mint that funds the launch. Read-only research, no deploy, no transactions.\n\n1. Regular Bags (depositors):\n- A depositor seals a Bag: an ERC-721 holding one or more whitelisted ERC-20 tokens they own. Each depositor risks only their own tokens. Bag value = contents priced in ETH by a manipulation-resistant TWAP at draw time.\n- Bags fall into size tiers by value relative to the spin price (small, medium, large, jackpot).\n- Spins are paid only in ETH at a fixed price, randomness via Chainlink VRF. The spinner keeps the drawn Bag (open it for the tokens or trade the NFT) or takes an instant ETH buyback at a discount, which returns the Bag to the pool.\n- When a Bag is taken, its depositor receives ETH for its value minus a fee, paid from a payout reserve. While a Bag sits in the pool, its depositor earns platform-token dividends.\n\n2. Platform token through Genesis Bags:\n- Launched on IMD as an evm_project: about 10% to the liquidity pool, 10% to the swarm, the remaining ~80% sent in the launch transaction to the bag contract as Genesis Bags (no depositor). Most of the supply is distributed through spins, starting very cheap.\n- Spin price stays fixed in ETH; tokens per Genesis Bag decline over time along a VRGDA-like curve tied to the pool TWAP, so a Genesis Bag's expected value stays slightly below the pool price and spin-and-dump arbitrage is unprofitable. Recommend the discount band.\n- ETH from Genesis spins: a share adds protocol-owned liquidity, a share funds the payout reserve for regular Bags, a share goes to the team. Recommend the split.\n- A sealed Bag (Genesis or regular) kept by its winner earns platform-token dividends until opened; opening releases the tokens and stops dividends.\n\n3. NFT mint first (funds the launch):\n- Before the token launch, an NFT mint at 0.001 ETH each (recommend supply, e.g. about 10,000). Mint ETH is held by an ownerless escrow and, at token launch, released permissionlessly into protocol-owned liquidity for the token pool and into the initial payout reserve and rewards. If the token is not launched by a fixed deadline, every minter can refund their 0.001 ETH.\n- NFT holders get a share of spin fees in ETH and a share of the platform's 1% pool fee (IMD LaunchFactory pays it to the requester; evaluate redirecting it to an NFT revenue contract via LaunchFactory.setRequester), an early holder-only window for Genesis Bags at the best price, and a few free spins.\n- Art: pixel-art bag collection with rarities, on-chain or IPFS; describe what the swarm should draw.\n\n4. Curation by the IMD swarm, only through attested IMD oracle answers (no admin key, no owner, no proxy, immutable contracts): token whitelist and delisting using token-safety and liquidity checks, tier odds and pool weights within hard on-chain bounds (max 10% change per 24h), pause of a single token's Bags. If oracle answers stop, the game keeps running on current settings.\n\nDeliver:\n1. Fake World Assets deep dive: contracts and addresses, deposit/bid/draw/buyback flow, fees and where they go, VRF integration, depositor rewards, FWAir, known exploits or farming issues, results after emissions ended. Sources and tx examples.\n2. Full mechanism spec: deposit, valuation (TWAP source, window, minimum liquidity, staleness), tiers, draw weighting, keep vs buyback, depositor payouts, payout reserve for Bags above the spin price, Genesis curve, fee split (depositors, NFT holders, liquidity, platform token buyback, team), dividend accounting for sealed Bags and depositors, withdrawals and lockups, mint escrow release and refund.\n3. Economic simulation: spin price, tier odds and sizes, spinner expected value (target about 90-93%), depositor return, reserve solvency under bad streaks and a 50% token crash, Genesis distribution speed and price path, pool depth growth, bot arbitrage under different discounts, mint raise and liquidity at launch, NFT holder yield under weak/steady/hype volume. Recommend one parameter set with numbers.\n4. Attack analysis: TWAP manipulation, thin or malicious tokens (fee-on-transfer, rebasing, blacklist, pausable), adverse selection (depositors dumping falling tokens), VRF timing and request griefing, reentrancy via token callbacks, front-running deposits before draws, wash spinning to farm dividends, mint sybils. Mitigation for each.\n5. Contract architecture within IMD limits (evm_contracts: max 8 contracts per launch, static constructor args max 16 words, no owner, no proxy, no external calls in constructors): contracts, responsibilities, storage, events, oracle question definitions for the curator, VRF subscription funding without an admin key, gas per spin, deposit and mint.\n6. Launch plan through IMD in order: NFT mint, platform token launch (type and economics, remainder to the Genesis Bag contract by name), gacha contracts, website. Costs, timing and risks. Legal considerations of a gambling-like product and revenue-sharing NFTs at a high level only.\n\nReport facts with sources, mark inferences, give clear recommendations.",
+  "publisherVersion": "0.1.0+04d3c6da",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
