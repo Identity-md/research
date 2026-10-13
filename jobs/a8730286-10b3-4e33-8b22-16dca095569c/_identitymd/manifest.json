@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "a21a0114acb5ec4544e8678881103984559ec8ae6d3c74186a86a65e6834cacf",
+  "artifacts": [
+    {
+      "bytes": 54478,
+      "hash": "10325c3155357cf779a7d8dece9f757efcb78eb01dd825c04c27731455f2bbbe",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "6bad4d42d4bdeb3b85bed704c5c0c8ed71496cf43a6043901eb0fb5f9bddfee8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "cc86b49d3c40189747a262fdd6eb13e56026d2da18d3a98f70168ffe395e15ab",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "856f72c830a52ac6d775f72c0365a44fa239b062e61f72ad7ab0a58b9e032af6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa4b91aed45c94fa3ddfcbeda356afe450a05d4141103da9ab2df82784b9662f",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "221f364d530c8965070bb83b2eb014e61f236b34fde2791a514bf441061a1033",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dc176559ff153c37ea2678018f2f18552005f0db3858ffcee9bcc99309a4e759",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "77f24771f3985ff6195755911b547b04a79e22bee7eac4edc682ee9c0a96a845",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c79042525fc4a50d473919cd8466874dedfa46e047a528449a89092968090e12",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8122da494f2ab8ed4ac9e9780f3acf29857b3cd28d487d4530f28f6e1aeb76b5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c35be49d2f8f8def53d127cb1fdf58d1200d2c513d0ef92d905319810c41e5c6",
+      "evaluation": null,
+      "findings": 13,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6bad4d42d4bdeb3b85bed704c5c0c8ed71496cf43a6043901eb0fb5f9bddfee8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a8730286-10b3-4e33-8b22-16dca095569c",
+  "objective": "X: https://x.com/IMDBlackout\n\nFull pre-launch audit of BLACKOUT v3.13 before its five contract launches on Robinhood Chain (4663). Source: identity-md-launches/launch-1544-blackout-swarmdesk-bootstrap-robinhood at commit 24bfb1d, built with the repo foundry.toml (solc 0.8.26, optimizer 200, cancun, viaIR false, bytecode_hash none). Read-only: no deploy, no broadcast, no source changes.\n\nGoal: find now every finding that the IMD launch audit panel (audit_flow, audit_permissions, audit_economics, audit_math and the audit_judge) would raise as medium, high or critical in any of the launches, so all fixes land in one change before anything is deployed. The contracts authenticate each other by creation-code hash, so any later code change forces every launch to be repeated.\n\nScope, by launch:\n- M1: SwarmDesk (oracle-only swarm role, EIP-712 attested IMD answers, bind via ProjectFactory proofs).\n- M2: EndowmentEscrow (ownerless, one forward to the authenticated RewardPool).\n- M3: V4Market (Uniswap v4 hook, fee 12500, ETH pair, stepped launch tax 90/50/25 for 30 min, then exactly 1% to rewards plus a progressive sell surcharge).\n- M4 job A: Params, GameRegistry, RewardPool, FarmRewards, FarmCore, FarmItems, PackSale, StarterClaim.\n- M7 job B: FeeRouter, GridOperator, Season, FarmEngine, Economy, Enhancement, Civic, Billboards.\nPlus shared libraries (src/lib, ModuleCode, SwarmCode), keeper/ and tools/ only where they define on-chain inputs.\n\nReview each contract the way the launch panel does: call flow and state transitions, every authority and caller check, custody of ETH and tokens, economics and exploit profitability, arithmetic, rounding and bounds, liveness (what can get stuck, what can be griefed), deployability under the factory (static constructors, no external calls, empty-chain constructor rehearsal, size limits).\n\nKnown and accepted by the requester (report only if you find a worse variant):\n- M-2 twin front-run of SwarmDesk.bind (docs/m2-trust-assumption.md): griefing only, mitigated by binding right after job A.\n- 17 reserved Params keys with no reader (docs/params-keys-v313.md).\n- Import finding b2ccff16: a regulator answer with a cap announcement rolls back while the bound market reports initializedAt() == 0; unreachable because the Desk binds after the token launch and caps are only proposed at age >= 30 days.\n- Future-block randomness is sequencer-influenced; no VRF claim.\n\nDeliver report.md:\n1. Every finding with severity (critical/high/medium/low/info), contract and line, a concrete reproduction (Foundry test or exact call sequence), and whether the launch judge would likely block on it.\n2. For each medium or higher: the minimal fix, and exactly which creation-code pins it changes (which of SwarmDesk, EndowmentEscrow, V4Market, GameRegistry, Params, ModuleCode.launchHash(0..13)).\n3. A recommended single fix set, ordered, that clears all blocking findings with the fewest pin changes.\n4. A list of low/info items to accept as documented, with a one-line justification each, written so it can be pasted into the launch objectives.",
+  "publisherVersion": "0.1.0+04d3c6da",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "24bfb1d700159042da4b08262927727d37170540",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1544-blackout-swarmdesk-bootstrap-robinhood.git"
+  }
+}
