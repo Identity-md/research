@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "51d06829440faeea0c8b7be28065649affdb88c0aaafb3e1796944e76124ca03",
+  "artifacts": [
+    {
+      "bytes": 32511,
+      "hash": "67804e99ad2e40887284e1c6fb9c66a5be069a6e995c072fa9fbc74f7eb9934c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "9f7b635d5d9a46ef6a24b58806c2abaaaa043884fb85c018b4f4ca0c60812ee8"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c9c2e2c6dd7b7f081d92fcdc827556890129b756f2c656d9af8fa59649a901a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-luna",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "9f7b635d5d9a46ef6a24b58806c2abaaaa043884fb85c018b4f4ca0c60812ee8",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+67c588fa"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ca1d3789-346a-491c-affe-e7b6893526a1",
+  "objective": "Mission: Find a defensible, profitable product opportunity for the IMD agent ecosystem\n\nObjective\n\nFind ONE product opportunity that the IMD agent swarm can realistically build and monetize, with a credible path to users, recurring demand and revenue.\n\nDo NOT start by building a product. Do NOT assume that agent tokens, agent competitions, launchpads, audits, benchmarks or agent marketplaces are novel. Your job is to discover whether a genuinely underserved, economically valuable problem exists.\n\nOur maximum budget for this research task is 0.5 IMD. Optimize for decision quality, not report length.\n\n1. Attack our existing ideas first\n\nInvestigate these concepts as potentially failed ideas:\n\n* Tokenized AI agents with one token per agent.\n* Agent racing, competitions and leaderboards.\n* Agent reputation and proof-of-work systems.\n* AI agent auditing and independent verification.\n* Smart-contract auditing agents.\n* Agent marketplaces and paid agent services.\n* Agent-driven prediction markets.\n* AI research, trading and crypto intelligence products.\n\nFor every concept, identify direct competitors, indirect substitutes, existing open-source alternatives, actual product functionality, monetization, adoption evidence and weaknesses.\n\nAt minimum investigate Swarms, Recall, Arena42, OpenArena, relevant IMD projects and any stronger competitors you discover. Search current websites, documentation, repositories, live products and on-chain data where relevant.\n\nDo not count a project as successful merely because it has a website, token, announcements, transactions or a leaderboard.\n\n2. Find the actual unmet demand\n\nSearch for specific problems that users or businesses already spend time or money trying to solve.\n\nPrioritize problems where:\n\n* Existing solutions demonstrably fail, are too expensive, too slow or lack a critical capability.\n* The customer and buyer are identifiable.\n* The problem recurs frequently enough to generate repeat revenue.\n* IMD agents can deliver a measurable advantage over existing solutions.\n* A useful first version can be built cheaply using existing infrastructure.\n* The product can acquire users through a natural distribution mechanism rather than paid advertising alone.\n* A defensible advantage can accumulate through proprietary data, integrations, workflow lock-in, distribution or demonstrably superior results.\n\nInvestigate both crypto-native and non-crypto markets. Do not force a blockchain or token into a problem that does not need one.\n\n3. Search for gaps, not superficial novelty\n\nFor the strongest candidate opportunities, build a competitor matrix.\n\nFor each candidate answer:\n\n1. Who already solves this problem?\n2. What exactly can their live product do today?\n3. What can users not do with it?\n4. Is the missing capability technically feasible or merely commercially unattractive?\n5. Why have existing competitors not already closed the gap?\n6. Is there evidence of real demand, such as paying customers, repeat usage, active integrations or documented user complaints?\n7. What would make our solution meaningfully better and difficult to copy?\n\nDistinguish verified facts, reasonable inferences and unknowns. Cite sources for material claims. If you cannot establish that a gap exists, label it unverified.\n\n4. Test the economics before proposing a token\n\nEstimate, using explicit assumptions:\n\n* Likely customer and use case.\n* Plausible price per transaction or subscription.\n* Cost of inference, tools, verification, infrastructure and support.\n* Gross margin at low and moderate usage.\n* How the first 100 relevant users could realistically be acquired.\n* Why users would return.\n* The smallest experiment that could prove willingness to pay.\n\nDo not invent revenue projections or present speculative token prices as evidence of demand.\n\nExplain whether a token is actually necessary. If a token adds regulatory risk, speculation, complexity or no measurable customer benefit, recommend launching without one.\n\n5. Evaluate execution through IMD\n\nInspect the current IMD explorer and relevant repositories.\n\nDetermine which capabilities, reusable components and existing projects the swarm can actually use. Identify implementation dependencies, security risks, external services, likely failure modes and recurring operating costs.\n\nPropose no more than three candidates, ranked by evidence of demand, competitive differentiation, feasibility, revenue potential and downside risk.\n\n6. Required final decision\n\nDeliver one concise but evidence-backed report containing:\n\nA. The three strongest opportunities, ranked.\n\nB. The direct competitors and why each opportunity is or is not differentiated.\n\nC. The strongest evidence against your preferred opportunity.\n\nD. The single best opportunity and the specific customer problem it solves.\n\nE. A minimal first version that can be built using existing infrastructure, with estimated cost and explicit limitations.\n\nF. A validation experiment that tests real user demand before significant development.\n\nG. A measurable go/no-go threshold, including what evidence would cause you to abandon the idea.\n\nH. A clear decision on whether a token is needed now, later or never.\n\nI. The exact next implementation task only if the evidence supports proceeding.\n\nRules\n\n* Be adversarial. Try to disprove your own recommendation.\n* Do not generate another generic agent marketplace, token launchpad, leaderboard or audit wrapper unless you establish a concrete, underserved use case.\n* Do not build anything, deploy contracts, launch tokens, spend funds or make irreversible changes during this research task.\n* Do not claim novelty based only on a limited search.\n* Prefer a small, profitable niche with demonstrable demand over a grand vision without customers.\n* If no opportunity meets the criteria, explicitly recommend building nothing yet and explain what evidence is missing.\n\nThe goal is not to produce the most exciting idea. The goal is to identify the smallest defensible business the IMD swarm can build that real customers will pay for repeatedly.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
