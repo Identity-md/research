@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "5f502382ef3e9e0c8b7a9a4ac7444cd3d1071d31f2fb102865707fff36eedbb9",
+  "artifacts": [
+    {
+      "bytes": 25850,
+      "hash": "3a3725455a32a4dd94c516f6497cda7e96c0bc93223c68a4a84bff707b5b7562",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "6878ae436ccfd8c2ff7df7d5aae6397036e2a0fe95e816010c81bae8b5e0b20a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b5e3297a04468fd381015897d86a8717fba81dce62eab7c744efbe88cb4c9185",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6878ae436ccfd8c2ff7df7d5aae6397036e2a0fe95e816010c81bae8b5e0b20a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1ec9f666356a7ad7ec8111dd282072b5367280df2f3e966450f45afbe461f82b",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9b9407e56abd167908f50ba5d19d4f49571d164c5c6dbb39029b8c00c658dd5d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "af4be7a5238dbcbf7302ca643c8bde33a5fdec9fa89dfdfb5941a78fa75153ad",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "27325ad4cda8942e72b8c72e783ffe7fd978fdde8379d8d5011b73aa8f7a6103",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "13603a08ada71730fae87d7d81691e4bc900ccc732cc2e2804c889fa1358eea0",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8ad4179e9253df15155c0b4f126f46a8341a8f2b49297d03dd9ed0843548e39c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6f41bd9b44d3e708aa47faccd392886bd1f3d3474df77642d2969b158187cb81",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "bdda4a9846d8631fe995ecde84eec1a586db7d9ddd1795911e5425572b46257e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "8c7ba957-1fee-4fa5-a621-9b653cc52361",
+  "objective": "MineWorldCraft – re-check of the fixes for IMD Swarm audit 0792975e\n\nRepo: https://github.com/AdamNakamoto/MineWorld   Commit: 49830f2\nThe audited commit was ba2a8ed. Every finding and its fix (file:line and the tests that cover it) is in\nAUDIT.md section 8 \"Resolved: IMD Swarm audit 0792975e (on commit ba2a8ed)\". forge test: 225 passed,\n9 fork tests skipped without a fork (all 9 pass on a Robinhood Chain fork).\n\nPlease verify each fix and check the changed code for anything new:\n1. MEDIUM reveal seed: MineWorldCrafters binds the entropy to the block the sale closes in (revealBlock);\n   anyone can call seal() once it's over to record its hash; reveal(secret) uses the sealed hash. The sale\n   can't reopen or re-close while a hash is pending, or ever after a seal. Your proof\n   test_SeedDoesNotDependOnTheRevealBlock is in the suite and passes.\n2. MEDIUM distributor hijack: MineVault.proposeDistributor accepts a predicted (code-less) address,\n   MiningSites.initialize accepts the pending distributor, and acceptDistributor requires code AND\n   owner() == the vault's owner. Your two proofs are in the suite (test_hijackerMintsFromTheVault adapted:\n   the vault now refuses the uninitialised proxy at acceptDistributor).\n3. LOW tokenURI isolation: extraAttributes uses a raw staticcall with a 300,000 gas stipend and accepts the\n   answer only if it is exactly one ABI string of at most 4,096 bytes; otherwise \"\".\n4. LOW non-payable treasury: MiningSites and MineWorldCrafters refuse a treasury that rejects a zero-value\n   call (TreasuryRefusesEth).\n5. LOW maxCost: upgradeSite(uint256 maxCost) and CrafterLevels.upgrade(uint256 tokenId, uint256 maxCost)\n   revert CostAboveMax when the cost was raised.\n6. INFO validator: documented plainly that the owner can relax enforcement; on-chain check that OpenSea's\n   registry enforces an unconfigured collection with its default list (no registration needed).\n7. INFO fee recipient: documentation corrected (only the current fee recipient can move the fees after the\n   renounce); StampHook logic unchanged.\n8. INFO start tick: reviewed and accepted, no change.",
+  "publisherVersion": "0.1.0+aca6c688",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "49830f2febc4b0e83a15acb277b7b26cff34087b",
+    "repoUrl": "https://github.com/AdamNakamoto/MineWorld.git"
+  }
+}
