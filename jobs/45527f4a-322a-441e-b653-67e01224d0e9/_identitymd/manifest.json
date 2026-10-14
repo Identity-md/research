@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "49fd0f4bb5aa534e67b360fc1dd6ed7c8e05f60f807b9155ff88f1ae529103d3",
+  "artifacts": [
+    {
+      "bytes": 40516,
+      "hash": "1c230b855ff3549fb73589a63c1dc237091544ffddac480624e30e0f0302df88",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "ecfb52b7eea570202748c2642163d0e6189c5c35ee6a6b00194f75c5cebec61e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fdbedee33322a6ef10bc6279a21aba0e9b197be943991bcf6dd490192471d1ad",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fe27216ae0900b5bfc7e347e93a26773e54eec233e7eb011d96aa1897cbddca0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "63274cc86a9400deac142d0ea1036a4a23c98d65e97920ea85c0f50297165d04",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "863112052e733d272468e25c063e831db2b4af9639b308ca3fa4afa8b7d849cd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa2b0b9c7ebc154780b1c3f35982d6c9c2950dc9328019427fef7c6d9213c7f6",
+      "evaluation": null,
+      "findings": 12,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ecfb52b7eea570202748c2642163d0e6189c5c35ee6a6b00194f75c5cebec61e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e67cc6ec4009b22617765aa23b1e65dd021d8871446db2c0c3c8aa0777aec862",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ed2cf9f33217ca9401d1bef3aa12b9da1b76d6d44372dac1123c0abe2e5caf33",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bfeaa965edf57623074553fd18c5a54471d4b49377877b7d6f1cc3319150bd55",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "24f919e9af2f42cdbeb2a688fde1092630bf0a21bbaa695f41bf972cd11ad196",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "45527f4a-322a-441e-b653-67e01224d0e9",
+  "objective": "Perform an independent, adversarial security and specification-compliance audit of Ink & Inference.\n\nRepository: https://github.com/identity-md-launches/launch-1683-ink\nAudit this exact commit: 500eb996d7758bde7066dc63bbdadc4a2dafba5f\n\nAUDIT ONLY. Do not deploy contracts, launch a token, create or fund pools, upload artwork, open claims, execute transactions, or apply irreversible locks. Do not modify the implementation as part of this review. Return findings and recommended fixes.\n\nScope:\nAll five application contracts—InkPortraits, InkVault, InkLiquidity, InkHook and InkRenderer—plus interfaces, tests, fixtures, upload/snapshot tooling, compiler configuration, pinned dependencies, ABIs and setup documentation.\n\nRead README.md, docs/SECURITY.md, docs/ROUTER.md, docs/VALIDATION.md and docs/SETUP.md. Treat the previous implementation agent’s checks and automated review as untrusted claims to verify, not as an independent audit.\n\nPriorities:\n\n1. Vault solvency and NFT accounting.\nVerify the 2000 combined portrait limit, 400000 INK backing per circulating portrait and pending pull, claim reserves, inventory uniqueness/custody, returned-inventory reuse, bonus segregation and absence of backing withdrawals. Exercise adversarial sequences, reentrancy, failed transfers and malicious NFT receivers.\n\n2. Free claims and snapshot proofs.\nVerify current seat ownership, seat IDs 0–1999, one claim per seat, inclusion of inactive seats, the 24-hour boundaries and exact StandardMerkleTree leaf encoding:\nkeccak256(bytes.concat(keccak256(abi.encode(seat,accepted,rateBps,turns,hoursTenths,outdated)))).\nUse synthetic data only. The production snapshot is not supplied.\n\n3. Release and permanent liquidity.\nVerify unclaimed reserves move into a real single-sided Uniswap v4 position atomically, failed additions roll back the entire release, and no approval, transfer, permit, collection, decrease-liquidity or burn path can remove locked assets. Assess stale-price/range manipulation and the seven-day trading fallback.\n\n4. Draws and economic attacks.\nInvestigate next-block hash manipulation, selective revelation, full expiry refunds, inventory manipulation, reservation exhaustion and selective acquisition of agent NFTs. Model the exploitability of repeatedly drawing/acquiring and returning the same agent NFT to drain the bonus pot. Quantify costs, benefits and affected funds. Distinguish protected backing from drainable bonuses and unfair allocation. Do not dismiss these issues merely because documentation discloses them. Recommend minimal fixes and clearly identify any changes to the requested economics or randomness mechanism.\n\n5. Uniswap v4 hook.\nVerify callback and pool authentication, immutable router trader authentication, exact-input/output fees, both currency orderings, afterSwap deltas and settlement. Verify the 25 bps hook fee, agent-holder exemption, IMD treasury destination and INK dead-address destination. This is not IMD burning.\nVerify the opening lock, first-successful-swap clock and one-hour cumulative 1200000 INK buy cap, including exempt wallets, nested router plans, distinct recipients, failed swaps, smart accounts and unsupported aggregators. Check the pinned Universal Router implementation actually supports the claimed identity mechanism. Separate local source compatibility from deployed Ethereum address verification.\n\n6. Renderer and tooling.\nThe original artwork is available to the project owner but was intentionally NOT supplied to this swarm build. Do not invent replacement art or claim original-art fidelity has been verified. Audit chunk integrity, upload resumption/restarts, expected hashes, independent script/preview locks, renderer-selection lock, executable HTML safety and realistic gas/RPC limits. Assess whether integration with the owner’s original script requires an adapter.\n\n7. Build and deployment readiness.\nReproduce the documented Solidity and Python checks. Verify dependency pinning, ABI/constructor consistency, deployable bytecode sizes, CREATE2 hook permissions and setup order. Check for unsafe ownership/configuration transitions and irreversible mistakes. Identify missing tests rather than relying only on passing tests. Do not guess production addresses.\n\nDeliver:\n- A severity-ranked report with file/function references, exploit conditions, impact and recommended fixes.\n- Executable proof-of-concept or regression tests for concrete exploitable findings, where feasible.\n- A requirement-by-requirement compliance table.\n- Exact commands run, results, tool versions, and checks not performed.\n- A clear list of deployment blockers and unresolved design decisions.\n- The repository URL and exact audited commit.\n\nUse separate reviewers for accounting/economics, v4/router/liquidity, and renderer/tooling if the audit workflow supports it, followed by consolidated judgment. State what review actually occurred. Do not label this production-safe solely because tests pass.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "500eb996d7758bde7066dc63bbdadc4a2dafba5f",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1683-ink.git"
+  }
+}
