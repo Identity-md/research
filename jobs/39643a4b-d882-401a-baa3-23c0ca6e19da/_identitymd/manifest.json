@@ -1,0 +1,50 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "c689954b7e2076a77d318e074bfed21740d6c512dd7602be5a76a722b0568ba8",
+  "artifacts": [
+    {
+      "bytes": 80504,
+      "hash": "de75cda92bbfca237f12bdca8ae42c8a1a0322ba4cf88e04b0e4e4a61ae1c326",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "282b9cda06a77d46d184da3fb4c43aa621bee3fa1c7705f0a3281c5b1f458013"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "79a83b0f80543e4f1641dca377244706adfda713fcf497609e6d574f8ff51058",
+      "changedPaths": [
+        "README.md",
+        "research/data/candidates.csv",
+        "research/data/concepts-v2.csv",
+        "research/data/ranking-v2.csv",
+        "research/data/source-calculation-log-v2.csv",
+        "research/visuals/acquisition-cashflow-v2.svg",
+        "research/visuals/timeline-v2.svg"
+      ],
+      "deviceKey": "108f8fd3a1992a923b1bef617caf1bb0dbf219fe9e38c913df6f73d2cb4373cc",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-luna",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "282b9cda06a77d46d184da3fb4c43aa621bee3fa1c7705f0a3281c5b1f458013",
+      "treeHash": "23a2e66b9f6f047be8531721e3e2d49ec80aac62",
+      "verifiedTreeHash": "23a2e66b9f6f047be8531721e3e2d49ec80aac62",
+      "verifierVersion": "0.1.0+d1681b55"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "39643a4b-d882-401a-baa3-23c0ca6e19da",
+  "objective": "Continue from the existing report. Write in Russian. Reuse valid evidence, but revise discovery, rankings and recommendations around the objective below. \n\nOBJECTIVE\nFind speculative, crypto-native onchain products a small team could realistically launch and monetize. Explore financial games, social trading, collectibles, reflexive economies and protocol interfaces. Do not default to analytics SaaS, education or simulators.\n\nInclude large successes when their early history is instructive. Distinguish today's scale from startup accessibility. For Pump, verify early resources and low-traction periods. For Hyperliquid, examine founder resources, infrastructure and liquidity. No VC funding does not imply an accessible start.\n\nPERIOD\nUse the six months ending on the execution date for current traction; state exact dates and date every snapshot. Study launch history outside this window wherever necessary. Separate historical observations from current data.\n\nDISCOVERY\nReassess old candidates and discover overlooked projects across chains beyond analytics listings. Build a revised pool of 20–30 and select 8–10 deep cases. Prioritize accessible starts; include up to two large benchmarks and at least two declining/failed cases. NetNet, FWA and Papertrade are starting points, not mandatory winners. Verify official identities/contracts and flag ambiguity.\n\nSTART WITH THE ORIGIN STORY\nFor each deep case reconstruct:\n1. Founders, team size, prior experience, capital, existing audience and privileged access.\n2. First usable product: contracts, interface, manual work and external infrastructure.\n3. Required development, security, liquidity, incentives and acquisition resources; distinguish estimates from evidence.\n4. First users and first fees: specific channels, communities, partnerships and campaigns.\n5. Timeline: preparation → launch → low traction → iterations → breakout or decline. Quantify early activity where possible.\n6. What changed before growth; distinguish sequence/correlation from causal evidence.\n7. Why users participated before token appreciation or rewards; evidence of repeat payments and retention.\n8. Reproducible conditions versus timing, founder advantages or subsidies.\n\nUse archives, early docs, repos, deployment transactions and contemporary accounts. Label founder recollections.\n\nECONOMICS AND EVIDENCE\nUse official docs, verified contracts, explorers and independent analytics; dated citations beside claims. Separate facts, team claims, estimates and hypotheses; missing is not zero.\n\nExplain audience, journey, rules, assets, fees, rewards, exits and who pays whom. Separate deposits/TVL, volume, fees, protocol revenue, team income, payouts, subsidies and profit. Appreciation, issuance, fundraising and deposits are not revenue. Distinguish wallets from people and paid activity from wash trading, bots and farming.\n\nAssess security, insider control, incentive conflicts, liquidity and collapse risks. Test both no new deposits and no further paid activity. Investigate “Ponzi-like” labels rather than assuming them.\n\nTOKENS AND VISUALS\nReuse reliable token tables; prioritize launch distribution, liquidity, emissions, utility and dependence on speculation. State launched/announced/rumored/tokenless status. Never invent historical capitalization using today's supply.\n\nInclude sourced screenshots, launch timelines, acquisition/cash-flow diagrams and reliable charts. Label reconstructions and gaps.\n\nRANKING AND IDEAS\nRank startup opportunities: launch feasibility 25%, verified paying demand 20%, first-user acquisition accessibility 20%, economic sustainability 15%, originality/differentiation 10%, manageable risk 10%. Show evidence and confidence.\n\nReassess the previous five concepts; do not preserve A/B/C by default. Propose five concepts with audience, need, reason for onchain, borrowed mechanics, differentiation, competitors, genuine revenue, costs, token rationale, first 10–30 users, MVP, cheapest demand test and measurable go/stop criteria. Select three. Tokens and speculative entertainment are allowed; exclude deceptive payouts and guaranteed returns.\n\nCheck current IdentityMD docs. For the top three provide supported capabilities, dependencies, specification→prototype→tests→review→interface tasks, MVP prompts, acceptance criteria and invariants. Do not deploy or transact.\n\nOUTPUT\nLead with changed conclusions, most useful startup histories and one idea to test first. Deliver report, tables, source/calculation log and visuals in Markdown/CSV/SVG. Prefer substantiated startup histories over breadth.",
+  "publisherVersion": "0.1.0+d1681b55",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
