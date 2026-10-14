@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "de1cd7b01f92065d2a6532dc722664eaaf42be42a0c7f19e2decea320b73e72e",
+  "artifacts": [
+    {
+      "bytes": 44659,
+      "hash": "bbca141d0d307fcaef0b70547ca261ca2b1570e47802812fd52fddb7e0e3eea0",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "d03f5b0c079124aa666ad4380174bdfbf1b8bfe75336b407a21de97dd043f72a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "faf271d05ee8ea0f065518eb6a8b8512bd30b2a691daebee8c5205fb7c3ca911",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "73dda9865b050a6bb1ec3644a841eda822c0a30a66eccc731a7cc019ccce6094",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b38bea3c04869138f4a049edc808916c5569932dbac356ee113127de78b9e5c2",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d03f5b0c079124aa666ad4380174bdfbf1b8bfe75336b407a21de97dd043f72a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa4b91aed45c94fa3ddfcbeda356afe450a05d4141103da9ab2df82784b9662f",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "44db97b76f3e4f99716fbd687bf8767c450b6eb83548447819c7f84ea41974be",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b8fd8054ea57c5d8d85eeca011911dbd63feb22bb966d976fd300c14df83dc63",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d9f2e6205945ebd5ec415085a5c1c686087039f1c1d4ed49914aa914556ef384",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7591760a616c6429719f71d890030c12b4d6f905aa1e8dd2b1937fd710e32bb5",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4e57a3246a5dc5e29eab33cfb6ca15fba38f4727bd99581486840bca56d33859",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "85083c05-6dca-432c-85a9-4969c58c6303",
+  "objective": "X: https://x.com/imdplace\nPre-launch audit of Goblin Gold v3.1 at commit 64a3c2ff8518d95299317c89f03a89c3e9381592 (Ethereum mainnet). GoblinNFT is already deployed at 0xC5d5F314da6d4a433F9BF897a2cC24A537576cB1 and must not change; review it only as an integration point.\n\nAct exactly like the IMD launch panel (flow, permissions, economics, math, judge) for the two remaining launches and report everything it would raise:\n- Launch 1: genesis token + GoldHook (univ4_hook, paired with ETH, fee 12500, tick 60): TWAP ring, 1% hook fee split 50/50 NFT holders / gacha reserve, 90/50/25% launch tax, 0.5 ETH max buy in the first hour, ERC6909 claim accounting, flush, one-time bindGacha pinned to the BagGacha runtime hash, remainder custody (remainderTo GoldHook or the paying wallet).\n- Launch 2: TwapOracle, GenesisVault, BagGacha, Curator, POLManager with $contract references, then setLaunchTargets on the NFT.\nPriorities: GoldHook v4 delta handling and fee accounting (no fee on unconsumed input, no stuck ETH, no reentrancy through flush), observation ring correctness and manipulation cost at the 1 ETH genesis depth, the 5% payout cap and Bag splitting, POLManager v4 unlock settlement, VRF request/callback safety, Curator attestation and bounds, Genesis schedule and dividends, and every path that moves user or reserve funds.\n\nDeliver for every finding: severity, contract and line, a runnable Foundry reproduction, whether a launch judge would block it, and for medium or higher the minimal fix. If nothing blocks, say so explicitly per launch. Do not change source.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "64a3c2ff8518d95299317c89f03a89c3e9381592",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1545-goblin-gold.git"
+  }
+}
