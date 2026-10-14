@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "458ed143b79f6c831b32e04c728af72301a2218bdc1d9f9ce9840e67fd995d17",
+  "artifacts": [
+    {
+      "bytes": 30632,
+      "hash": "ac695b485bc117e5bf2cf8b198ce05e86acb4fb6127a35528ae812cdedc98073",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "bda268f35903d85a1ff27026350c60c95f79d3ca7c3a03ced6a6ebf2206d3b6c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a4ad9be539911004ed4d05cc0d56696dac8be164c61b24ff359ac6b4cde9209",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "92e8232c2f9750477c7c210941eb1de278f9528b4016cea260841b8d87963cdd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "de319b702da6aa2e2aa2d4b4d68e34e8518db0aadd5bf70db39abb39c4fd8c06",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1cf721fa5922e897793deaec6fa9e75b83d79308b443b3c1e3a8c7f0900c12f1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "72f49cf84b9ab056dea179fcfdd8dfe8080c92207c81b289111922ab603e0442",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c21169a196fece8c05c37ff32899e923e1f7bef89053f4492877de1268801f68",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dedc96e38388cb45a8281d3d762f4713de53d9dc9cdaf72a5541b60b2b4ba245",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f824e8bf039eaa84511be1e9a9575e1edbdeb2e82f50297d0f0c6898245f1e46",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f20ec62b0213db3f94aea2bb9bc4991d44282fc61f19f8ca9d251d3b10cff049",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "bda268f35903d85a1ff27026350c60c95f79d3ca7c3a03ced6a6ebf2206d3b6c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0792975e-220d-4fe2-a11c-d611efec47bd",
+  "objective": "MineWorldCraft – full smart contract audit before mainnet (Robinhood Chain)\n\nRepo: https://github.com/AdamNakamoto/MineWorld   Commit: <COMMIT>\nFoundry project in contracts/ (forge test). Detailed brief: AUDIT.md in the repo root.\n\nSCOPE (contracts/src)\n- MineToken.sol: $MINE, a line-for-line copy of Courier World's audited StampToken (21M cap, one-shot minter)\n- MineVault.sol: the only minter of $MINE: at most 35,000 a day and 10.5M in total\n- MiningSites.sol (UUPS proxy): mining sites (bought with ETH), site levels 1–5 paid in $MINE, EIP-712 voucher claims\n- MinePayments.sol (UUPS): in-game $MINE payments (shop 75% burned, rocket tickets 100% to treasury)\n- CrafterLevels.sol (UUPS): Crafter NFT levels paid in $MINE (75% burned)\n- MinePayer.sol, UpgradeCosts.sol, lib/OwnedUUPS.sol, ICrafterAttributes.sol: shared bases\n- MineWorldCrafters.sol + CrafterArt.sol: 3,333 fully on-chain NFTs, ERC721-C enforced 5% royalty, commit-reveal mint\n- MineHook.sol, MineRouter.sol, MineEthRouter.sol: Uniswap v4 hook (4% fee) and routers, derived from Courier\n  World's audited StampHook/routers (IMD audits ea514609, ca28d248, 19b34b9b). Please diff them against\n  github.com/AdamNakamoto/courierworld contracts/src and review every difference.\nOut of scope: tests, scripts, web/, multiplayer/ (except the trust assumptions below).\n\nWHAT TO CHECK\n1. Token: total minted can never exceed 21,000,000; burns are permanent; the minter is set once (the vault);\n   ownership renounced at deploy; no proxy, pause, blacklist or transfer tax (must look clean on token scanners).\n2. MineVault: never mints more than 35,000 $MINE in a UTC day or 10.5M in total, whoever the distributor is,\n   including across a distributor change; the distributor can only change after the 2-day delay (cancellable);\n   it can't mint to anyone but through its distributor; not upgradeable.\n3. MiningSites: voucher signatures (replay, deadline, malleability, EIP-712 domain surviving proxy upgrades);\n   a claim never pays more than (lifetime total − settled) × the site's rate, within the wallet cap, the global cap\n   and the vault's room; settled/claimed accounting and rounding (in the vault's favour); site price sent straight\n   to the treasury; upgradeSite takes exactly the cost (75% burned, 25% treasury) and never touches the vault;\n   bounds on rates (10–100%, non-decreasing), costs, caps and added levels.\n4. CrafterLevels: only the Crafter's current owner can level it; levels stay with the token; costs and burn split;\n   levels can be added, never removed; the Level attribute it returns is safe inside tokenURI.\n5. MinePayments: pay() burns the kind's share and sends the rest to the treasury, emits Paid; nobody can spend\n   another wallet's $MINE; bounds on kinds and burn shares.\n6. MineWorldCrafters: the 5% royalty enforcement can't be bypassed or removed; the commit-reveal is fair (no\n   one can pick traits); mint limits and price; links and images stay editable after mint-out; a reverting or\n   gas-heavy attributes extension can't break tokenURI; ERC-4906 events.\n7. MineHook and routers: the 4% fee can't be changed and its recipient is final after the renounce; launch\n   liquidity locked for good; market-cap maths with the 21M supply.\n8. Upgradeability: OwnedUUPS and the ERC-7201 storage layouts (no collisions), only the owner can upgrade, all\n   state survives an upgrade, implementations can't be initialized, two-step ownership with no renounce.\n9. Reentrancy and approvals wherever $MINE or ETH moves; front-running of owner price changes.\n10. Deploy scripts: the predicted proxy address, the order of setMinter / renounce / hook renounce, and\n    ownership handed to the owner wallet 0x6e85Dc9f094b7DD35a2A981AbBd0AC9C496670eD.\n\nKNOWN AND ACCEPTED (please confirm the risk is bounded as described)\n- The game server's voucher key decides earnings: a leaked key can take at most the daily caps until the owner\n  pauses claims or replaces the signer.\n- MiningSites, CrafterLevels and MinePayments are UUPS-upgradeable by the owner with no delay; the vault's\n  35,000-a-day limit is the hard guarantee whatever their code is.\n- Rocket tickets are checked by the server from the Paid event; shop items live in the player's browser.\n- A site's conversion rate applies when the player claims.\n\nPlease report findings by severity with file:line and a suggested fix.",
+  "publisherVersion": "0.1.0+aca6c688",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "ba2a8edc688e94a48b810f83ccc3ea9d66c9e0f9",
+    "repoUrl": "https://github.com/AdamNakamoto/MineWorld.git"
+  }
+}
