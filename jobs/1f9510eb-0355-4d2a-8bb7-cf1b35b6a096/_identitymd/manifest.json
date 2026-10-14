@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "52035cdec8ba841be1a3a771f8c57310f079457475b73af09cd0914d817aca75",
+  "artifacts": [
+    {
+      "bytes": 28485,
+      "hash": "b59e731a680197352d27c698d7b3b4fd94b919766eeab380a86ccb2a0bd0d862",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "788bee624dc7ad417c257c2d1856125f4a903afc77018d40e03c05a52f7ce1c3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "03f15d1296244279ebdd0e54df271264fe51f911902957fe042ff85c368f0173",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6d95946867c46c4a4707b706c38765423852d0fb9544ab58220905b832374bb2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b0b4e7bbc84f9d804f93bf7a29b48e9211a94a863f23c5fa39d6ac041f7c5695",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "788bee624dc7ad417c257c2d1856125f4a903afc77018d40e03c05a52f7ce1c3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "803eeae3d8b63de342abf5c1621b903ebc38796b2e6904b6b88e609c2a9d8dc5",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e026e64f2c2b88cb9532bd00c10a42801b431f6b6bfab6460bf8498ca6e6051b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1731fbfe0c4574fb6e59405e92715a96ebaf28ae80246f080a0c3368e4023bf8",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b3f27f7cf1397343acb23daf8fff9abb0756b00c79026144256f1f39b8be21cb",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ffbc32b7b56438e140e24497d3045cd04ce5dbb4722c5e06e199413c9b44dbf0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1f9510eb-0355-4d2a-8bb7-cf1b35b6a096",
+  "objective": "X: https://x.com/imdplace\nv3.3, fixes for audit 930ea061 (commit 8b769ee). Full adversarial review before the token launch. Build and test under the launch profile (FOUNDRY_VIA_IR=false FOUNDRY_BYTECODE_HASH=none) and the protected profile; confirm GACHA_RUNTIME_CODE_HASH 0xbdb13664f85a03997922c0678be6c02e83716a9d7b24e0cd231ae51a3c8af1ad under the launch profile.\n\n1. Verify every 930ea061 fix: full-range-only beforeAddLiquidity and flags 0x38CC; getHookPermissions matches REQUIRED_FLAGS; polTokensForEth (max) in POLManager vs min in GenesisVault; V3Depth (30-min harmonic L, band, first initialized tick, full-range-equivalent scaling); Genesis depth at max(spot, 4h) price and min(L now, 30m, 4h); seal refuses GOLD; bindCheck and CheckLaunch.s.sol; VRF ignored at or after requestedAt + CANCEL_DELAY; path A funding check.\n2. Griefing: V3Depth stops at the first initialized tick. Can anyone, with a tiny position near the price, make a listed token unpriceable and so block spins, draws, payouts or cancellations for Bags holding it, or lock funds? Same question for the Genesis lane and full-range-only adds.\n3. New issues from the changes: rounding in the band math, harmonic counter wrap, both token orders, oracle manipulation at minimum depth (MIN_LIQUIDITY 5 ETH, MIN_GENESIS_DEPTH 1 ETH, PAYOUT_CAP_BPS 500), payout above paid value, stuck funds, hook reentrancy, VRF races.\n4. bindGacha against the deployed GoblinNFT (launch-1616): any remaining way to lock the reserve.\n\nReport any medium or higher with a concrete fix. NO SOURCE CHANGES.",
+  "publisherVersion": "0.1.0+35c7b362",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "170070d52968fc43f73cf54c7a535917a31b78da",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1545-goblin-gold.git"
+  }
+}
