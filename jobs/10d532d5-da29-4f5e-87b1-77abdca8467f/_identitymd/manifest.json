@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "d8665ec6325762adb9f28a6b76975d6adb1bea1ab7e9dd047439c09795baae41",
+  "artifacts": [
+    {
+      "bytes": 20868,
+      "hash": "6cd0ce6f990af81d4d986cabf5331258652f081387798a0bc8f1714f32acb73b",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "8ba05731348758baecf835925654eee8aa2e51d50315c7923d68262c9d5ba86d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d11ea2b5e05fa7a87b4f93104e21f0e5d0435f2c729f01357ac11d3d92dc5d69",
+      "evaluation": null,
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "29123dcd2428b1cfd0b2ed44320fac53441df63390bf5d6ce4166225c1fe3bb3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "cbc83f8151b8340db8b1e074e9f146ec16c495f7ba719f8ad8dd610c3163044f",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a820c10a9355c17aae02bde2a448b786064f03bf035ef1379533ee66efeb9759",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b4f6137e7c93a2b39096a2b27d11ffc0319cdbf42630f50e80d3fde78bccf0f2",
+      "evaluation": null,
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c2e19f66ce7075e4cb568afd26caea29896492ce9bd8bcb75074c720506fabf0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "523b06a3dd921f5dae6e7a9ceb60f7d1f2d0a7fc32a8f4f72a9e2f6add56f1a0",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8ba05731348758baecf835925654eee8aa2e51d50315c7923d68262c9d5ba86d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "96ecbe9236c400bb98fe11dda1045d00e9d162d58f0f57f0166de1aef3387afe",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f34cf6fbf2a28308bf10f312a037b34d0721cbdc6815da1c95bbcdb0665439b1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "10d532d5-da29-4f5e-87b1-77abdca8467f",
+  "objective": "MineWorldCraft – third re-check: fixes for IMD Swarm second re-check 52b534f9\n\nRepo: https://github.com/AdamNakamoto/MineWorld   Commit: 25121ea\nHistory: audit 0792975e (ba2a8ed), re-check 8c7ba957 (49830f2), second re-check 52b534f9 (4de227d). Every finding of\n52b534f9 and its fix (file:line and the tests) is in AUDIT.md section 10. forge test: 243 passed, 10 fork tests\nskipped without a fork (all 10 pass on a Robinhood Chain fork). Also new since 4de227d: the I'M DIO mint is free with\nat most 3 per wallet at launch, and the collection's ownership can never be renounced (so OpenSea Studio editing\nstays possible).\n\nPlease verify each fix and check the changed code for anything new:\n1. MEDIUM late initialisation: MiningSites.initialize now runs only inside the proxy's own constructor\n   (address(this).code.length == 0, for anyone); the late path is removed, so a proxy deployed without initialize can\n   never be set up. Your FakeVaultHijackTest is in the suite as submitted, plus the own-vault variant.\n2. LOW free re-roll: after the 256-block window seal() reverts EntropyExpired; only the owner can call\n   moveEntropyOn(), at most MAX_ENTROPY_MOVES = 3 times (event each time), after which the reveal is Stuck. Anyone can\n   still seal within the window; the panel and dev.sh send seal() right after reveal() and retry. A fuzz test shows a\n   seal anywhere in the window always fixes the seed.\n3. LOW level clamp: _import and bookOf keep the raw level (bounded by MAX_LEVELS); the rate is clamped only where\n   used (_siteRate), and _nextLevel reverts MaxLevel at or past the top. Your hop scenario and a 3-hop case pass.\n4. INFO: revealStatus says Sealable only while current - entropyBlock < 256 (one block of margin).",
+  "publisherVersion": "0.1.0+820e5ed7",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "25121ea568bdca173068a2d6a101fade9691a29e",
+    "repoUrl": "https://github.com/AdamNakamoto/MineWorld.git"
+  }
+}
