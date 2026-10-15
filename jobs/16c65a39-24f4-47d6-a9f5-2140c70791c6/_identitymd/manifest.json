@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "6c466c2c56dd22e7da43f6da120325463f85f81a4a4c131c048abd99541f6854",
+  "artifacts": [
+    {
+      "bytes": 34265,
+      "hash": "eeb155d963d43f76343a93edbc305a3f95ca184108436fd97212019fab685a92",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "1ea05c56c2c97dde0383d1363062d86ea2aafb721fc478765e5805aa0f6561cc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b4e34f9d3c724992e2ab9f7f3bac398313404a93f1fc7aa5c63eab96b07ce1d2",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1211e0c93506ef86dd8b5b522e3ce5504d855f59134438d7f746be1ad01ca6a2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5061b3ff85c1f0c15e0e36f42202f6e177b14ed36f8d73af53a64d6119f7d6b0",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b566194232bd4eb73b52b131b811c752c5279f7ad0371689abdd72617496e594",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d7e6877fd9e388bba6b27edab2ac756657c847f34bcbc0a3ecaf208a54f76377",
+      "evaluation": null,
+      "findings": 14,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1ea05c56c2c97dde0383d1363062d86ea2aafb721fc478765e5805aa0f6561cc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ca075d17c94a854b1fe62aca56a0429037b7c1243b841fe919215375b710a27a",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "aef4f33036d826cde9d6b5838d08bb83c5acec254e079a48cd15339d11ee98a5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "78d8eb9b16352a1818b45163a221b7d9058c3037be7afef732c817815027e5b1",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f043e45a3cacb42af55b2634d1608fbfc2887216e5878c77c641d3fe7589a71d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "16c65a39-24f4-47d6-a9f5-2140c70791c6",
+  "objective": "Audit the contracts in gimogo/NTTW as they are.",
+  "publisherVersion": "0.1.0+820e5ed7",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "d063100b315c1936202970da9fd7a24a25aa0a2b",
+    "repoUrl": "https://github.com/gimogo/NTTW.git"
+  }
+}
