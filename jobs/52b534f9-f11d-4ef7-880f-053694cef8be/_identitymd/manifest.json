@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "8396ba11b11212c22ca0fce3fac101b1a291b0dda413c4cbb8583c914684db96",
+  "artifacts": [
+    {
+      "bytes": 22355,
+      "hash": "a68d8c35aa136df2b1e2bf030ed1b1dae648c55bc8a4a9321bf3174bcc3a5ad7",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "9ada74b73fc579c0c3c9bb7bf6c2e3f5d3dcb779fda86acc2bcefa78fa2621dc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "589ef002581a53719d3af2622bb0d2ba58ea5f4139529f8b933806d6cb2e511d",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "31b5744522b0928a9da901e46d93081e8de8b9f6550c376086ec9cf703b76d36",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "37eed9f56188ea8bc18cadb56eb376ad83d30a30750e8d54d0203251a3e3d14f",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9ada74b73fc579c0c3c9bb7bf6c2e3f5d3dcb779fda86acc2bcefa78fa2621dc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8d26cb1a4eaeb75a0132869a676e8ec703334d8c4ae82e3ac062a1569ffe71f9",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "71c42da188f124000bd01e1b7942a81e02c35e27f14cb1f6bf74d6e7a174129b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "91067b3439961e55f3a22547630c99060b3e69c4c1a43b06e80614391790508e",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5103e50698844c5b192cb570820ace622b8d3b659661e5a057167dd0b0c54062",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3bed38612db34f328e6e2bf3e06a52b95ccef2145dee8aa1006f50c85517964a",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c70c1632c20f469d0da687af557d3706ca0cb79b3a0e26897971d6b4bd86ee37",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "52b534f9-f11d-4ef7-880f-053694cef8be",
+  "objective": "MineWorldCraft – second re-check: fixes for IMD Swarm re-check 8c7ba957\n\nRepo: https://github.com/AdamNakamoto/MineWorld   Commit: 4de227d\nPrevious: audit 0792975e (on ba2a8ed), re-check 8c7ba957 (on 49830f2). Every finding of 8c7ba957 and its fix\n(file:line and the tests that cover it) is in AUDIT.md section 9. forge test: 235 passed, 10 fork tests skipped\nwithout a fork (all 10 pass on a Robinhood Chain fork). The collection was also renamed to \"I'M DIO\" (symbol DIO);\nthe code identifiers (MineWorldCrafters etc.) kept their names.\n\nPlease verify each fix and check the changed code for anything new:\n1. MEDIUM distributor hijack: MiningSites.initialize runs only inside the proxy's own constructor or when called by\n   the vault's owner; MineVault.acceptDistributor requires owner() == the vault's owner, vault() == this vault and\n   predecessor() == the current distributor. Your HijackNamesOwnerTest is in the suite unchanged and passes.\n2. MEDIUM Arbitrum blockhash (with LOW 6): the reveal is redesigned. reveal(secret) (owner, sale closed, checked\n   against seedCommit) publishes the secret and sets entropyBlock = ArbSys.arbBlockNumber() + 1; seal() (anyone)\n   sets seed = keccak256(secret, ArbSys.arbBlockHash(entropyBlock)); past the 256-block window seal() moves\n   entropyBlock to the next L2 block. Expiry comes from block numbers, not a try/catch (no gas-starvation re-roll).\n   Falls back to block.number/blockhash only where 0x64 has no code (dev chains). Measured on Robinhood Chain:\n   L2 blocks every 0.101 s, arbBlockHash answers for the last 256 blocks.\n3. LOW replacement pays again: a replacement records its predecessor and imports each player's site, level,\n   settled and claimed (the higher of each) on first touch; bookOf() reads through the chain. Your\n   ReplacementResetsSettledTest is in the suite (adapted: re-opening reverts AlreadyOpen, a zero claim reverts\n   NothingToClaim).\n4. LOW old contract keeps selling: openSite, upgradeSite and claim revert NotActive unless this contract is the\n   vault's distributor.\n5. LOW rate cut: upgradeSite(uint256 maxCost, uint256 minRateBps) reverts RateBelowMin.\n6. LOW owner-only knowledge window: solved by #2 (the secret is public before the entropy exists; anyone seals).",
+  "publisherVersion": "0.1.0+aca6c688",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "4de227d3d734a7efb7286bbf1050c9b0e632874f",
+    "repoUrl": "https://github.com/AdamNakamoto/MineWorld.git"
+  }
+}
