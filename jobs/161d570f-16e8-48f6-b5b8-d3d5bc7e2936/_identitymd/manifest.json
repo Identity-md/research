@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "e7afb0df8a3ae80878b41603a5ea434baa2d4d03bf957987dc7bf02725323693",
+  "artifacts": [
+    {
+      "bytes": 44369,
+      "hash": "386dc712d2a56ccf156255a173397cf89d9ea49345d08dabcb35c90d80c69ffc",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "430485e53da3a6b1ab0d67d137c852b1a552f7ec6c0291712003c82938fa9a23"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0e3b71e2ffcd200ba549914774d84233f9b103c5a0c25615caef3d52db60e7d9",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2f803d438e217c3129509f0af916fc3c34aa6d84cd6129cb0c06313d0bb6734b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "03845cacb54c3a737bb490638adf9db97b70c1ddeedd2fd50a31e67223e19cea",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b7783d1b8ab991266a9e1e6245a14577b7943108e2b0817015c4246ef89df193",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "559cfaaab2c0d01334efc1aa9717eec5a6448a69f31468adc77273f21ccd7eac",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "bb8e48139bb24749b209a9abdfe5cb4c5d34a6e4806792409ea8fc771c0c4606",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ce319efac2b76da09c3de3a5a268828d84eaf0260d8cc81e3bf92515a1bfd7af",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a6017476373a6df42f17bcf3ec830004c2ac7448a96275173e3d80e2fa7c18f9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fb26479062458645bd509587bf21df8211250483084ac4ee5c80eb08c57ef716",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "430485e53da3a6b1ab0d67d137c852b1a552f7ec6c0291712003c82938fa9a23",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "161d570f-16e8-48f6-b5b8-d3d5bc7e2936",
+  "objective": "Target: src/DrawdownBurnStrategy.sol (others are deployed context). Focus: (1) pot/pendingWall/accounted vs the vault's real ARB, pre-existing vault balance must never be spent; (2) v4 flash accounting in every unlockCallback path and onFeeReceived running inside another user's swap; (3) manipulation of the anchor, hourly-close ATH, tiers and buyback limits; (4) wall tick math, single-sided add/remove, crossed-wall burn, DoS of buildWall; (5) gas inside swaps vs the 400k cap.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "f55319f8e635922358167c3ce4c78d66e040ece9",
+    "repoUrl": "https://github.com/ch3rryhq/drawdown-burn-audit.git"
+  }
+}
