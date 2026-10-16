@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "c6955a538aad3f6f2f3feee006ba7ef68e66c466584da4f75e75271cd289827a",
+  "artifacts": [
+    {
+      "bytes": 30117,
+      "hash": "4dfef4c85f542db8aad8729ed72164ec8d6e8734a101db847cc55c5c38d6489a",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "9536f7ed63ef38ffa955f3c606d325e8babe0f47726f523a6276f8f013f8cb15"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a5c5e95a2ed071177dd13377fd9b133a5b9eca71664404e1b002dffa10748164",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "32658ed2bcd95ac4c42ad6a8c652b5e29a44685cc546a3d6890e3f253b500141",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5d667e4b0751bcb55515022399c1ba51448da54deb4eebc7503f9961c70cfde3",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "bdb6d9751dc642e1022c36a5b55decb541dc9e3a97ac70b214e02975e6b1c288",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "da7ed792c3bf5b80e63b2afca9b30d1a089ed0d44d762eda0bddbfd39564139a",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2b90ccfa537ed75162d8a7ee9f45b1af1833c92d628545b9ed694d3f2f1cb60e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2565f234b0a569e9052bccf27e7929a123a638c6fb37601ec4fa0fc25bbb2723",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9536f7ed63ef38ffa955f3c606d325e8babe0f47726f523a6276f8f013f8cb15",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "584bd638e7e022f034edd58cc926dced1645a8a1180a39f4341e46a3140529a0",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1531d61621105666610319468cca63926b93c0ff1dfacfe45f60d135c338eaea",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3e8226e1-d409-4cbc-938a-606a86b7a6d8",
+  "objective": "Audit commit 575e8a8f74da581298a8527f493e9eab8a45901f, focusing on changes since eb1333775e60fe191acfa5a420e9256feeb4a2b0. Read the original report: https://api.imd.fun/jobs/648ba2e5-46a0-4759-8439-73a6c9d81af6/report.md — not just the remediation summary. Reproduce and verify the same-UUID context-mismatch recovery, corrected quorum checks and assembled-body step-marker validation. Test unauthorized discard, fabricated owner context, genuine NotPassed verdict shopping, replay, retries and retained receipt history. Clearly distinguish enforced protections from owner-trust assumptions. Reproduce finding #4 exactly: Intake takes payment and invokes a callback inside request/requestWithFailure before returning, swallowing a callback revert. The new pre-payment revert test does not cover this. State whether it remains a live-compatibility blocker and what evidence would resolve it. Rerun the full regression suite, check payment caps/accounting and listing/ad escrow, remeasure worst-case callbacks against 200k gas, and verify deployed bytecode size against the contract-size limit. Separate material code blockers, documented owner powers and unverified live-protocol assumptions. No deployment, paid Intake request or fund movement.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "575e8a8f74da581298a8527f493e9eab8a45901f",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
