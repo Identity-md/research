@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "e7ee2af2ec069e07bcf2afbc2639c3df2d57723460192819f9c5c0b50fbe2713",
+  "artifacts": [
+    {
+      "bytes": 30030,
+      "hash": "6ef7ad0a415c108fb6cbefe16d53a868bab6c20956afe2c645a8e8ae54fdc7ef",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "5e9a10271670a9083a9f70d55ccf02ff4a6eea62886152219e17be581795cf43"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "433c37ef2c9c708df9424f2466ca706e07aac669b475629974c2b3560facb1f8",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "690b2a0bacc41e41f4e14e4de5631fa0da80a4b9415a3c52c0317e098c93153b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e9049e5b12ba53ba62ebd9359ce6c19c46f1dcc77e1a9276ecde087bd5ce9153",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "cfc48fb54d47287727525a5336c7cb241106d7ac3a823beff8de689ccd959df6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "401c4383398af47cbcb358b7bf27675cd481dbf39525cc93d1029da774972a60",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6ae3a38fbdf61933478c72c9a2115ca5db9d99a1a7e9533f23e045ccd93aea69",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a4e285247c6f8aed4c727a41c7b85e2978939f74e9ae6b02d8de4c1b75cccdea",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4e5dbd545c917e54bf0a53ce310c2dc249286b32bd1e8e3ee73abfdef8a3aa6b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "42a6bb6aa496cd6be4bac6470f3e7e15e137fc3141691ed48d3d79b65938b04c",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5e9a10271670a9083a9f70d55ccf02ff4a6eea62886152219e17be581795cf43",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "648ba2e5-46a0-4759-8439-73a6c9d81af6",
+  "objective": "Audit commit eb1333775e60fe191acfa5a420e9256feeb4a2b0 against all six findings in report 6b607200-d29f-4c7a-8476-0dca8091f48f. Reproduce the expiry race, wrong pre-binding, abandoned ask, compromised-signer recovery, partial Intake spending, and price-change cases. Adversarially check the new owner reset/revocation powers, negative-verdict shopping, replay, exact IMD accounting and listing/ad escrow regressions. Re-measure the one-shot callback under 200k gas, especially the new mismatched pre-binding path. Identify material blockers and unverified live-Intake assumptions. Do not deploy.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "eb1333775e60fe191acfa5a420e9256feeb4a2b0",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
