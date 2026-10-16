@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "b5d4446c59a7adc28ea104d4b3fb3d4e5956aa0be39276dae7d90c8dc67e5021",
+  "artifacts": [
+    {
+      "bytes": 29376,
+      "hash": "fa96af1a7d70f9bdde53a3c2150461c25ade1203344e92239a60e59052d16d42",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "af7b627b8b8b8b25863139cf51724fffe7ab8213daf27b563547580ea9f2fe5e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "229c8cb0d9067fbeb8b8c15d2c978334054b59142a7efed4b96efe2e04577e0c",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "af7b627b8b8b8b25863139cf51724fffe7ab8213daf27b563547580ea9f2fe5e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9e51ef2afd7c2af8835fca91b67945a9f91d110c0fb79dc47968e11cd0aa6f9b",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "11644fe4072beffc55e60f940009d2f547feaae46eef3f398ef16b019bf6e7f9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "63458a1bd2b2d3767464aaeb732d20dac973a849044d8c5460f7976c72e5cd08",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c64928a8befad5c2a5d0497bd73d4482823288b89b9989b25e2e63b627bd62a4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2bdd77125ec75e6c43b23b1a1058de3980124933e5aad756c0289bfdd833c616",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3485dfad21a2a645e570011a74b3ee3b1db0f1c7342881692fda432d54e9d6f9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8eebc53449bafe7b397089b5f80fd78e8c3946053d839f59fbbed07bfdc1f975",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "45622e59ab1933977f6ad1f935f9f5b4482c646a95fbbd1d9369066d5dbd80b1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "44df6543-f9d6-4f44-9d69-40e0f7223b0c",
+  "objective": "Cross-chain settlement integrity, hardest first: (1) IMDRetroWall.ccipReceive: router, source chain selector and sender checks, winnerIndex = randomWord % ticketCount(epoch), claimable[winner] += prize, then pull-based claimReward(). (2) requestSettlement(epoch): exact-fee InsufficientFee revert, SETTLEMENT_RETRY_DELAY = 1 day, and the SettlementStatus Requested/Settled machine must prevent double settlement or re-request at the epoch boundary. (3) VrfCcipRelay on Base: ccipReceive validation, _deliver when the word is cached, rawFulfillRandomWords first-word-wins and the UnknownRequest guard, and permissionless deliver(epoch) must not send a stale/zero word or replay a delivered epoch. (4) ERC-165 supportsInterface for IAny2EVMMessageReceiver (0x85572ffb) must not revert for unknown ids or 0xffffffff, because the off-ramp silently downgrades such receivers to token-only no-ops. (5) Economic bounds: MAX_STAMPS_PER_EPOCH = 5, 500 burn / 500 pool, stranded funds (no sweep). Current pair: wall 0x9550E4F888d1C084CB1C8E74677Da54109723EE3 (Robinhood 4663), relay 0x887bbed753938087Ce61Ca768a358848177E6eaA (Base 8453). Audited commit a5c1af9.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "a5c1af9fc13c8413b508b245a997fdfc2689fa81",
+    "repoUrl": "https://github.com/gimogo/NTTW.git"
+  }
+}
