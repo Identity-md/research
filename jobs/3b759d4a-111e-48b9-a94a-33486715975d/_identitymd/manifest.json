@@ -1,0 +1,46 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "da03afd6ccc4fef5754ff2c708466042ca493f3e64d8f079d2f26ddaffaebb47",
+  "artifacts": [
+    {
+      "bytes": 24144,
+      "hash": "919dff812550eed3353f407e8f8f326e0b91dd055086ee20d469f6534c07a3c4",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "20b89f6172e6e46ee7986e17abbe71eb2c9c78a9b0b76bfbb03341585ea29e69"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "138ef7bb5cc656ab620cc059aec4a88ceffe08106c00de0f1ad7f702ad939ceb",
+      "changedPaths": [
+        "README.md",
+        "research/check-results.json",
+        "research/source-register.json"
+      ],
+      "deviceKey": "782f24113d209be291586af5e9a052e6fdde82ef8713461badc9d344d78c480f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "20b89f6172e6e46ee7986e17abbe71eb2c9c78a9b0b76bfbb03341585ea29e69",
+      "treeHash": "c363387fa0dc56cdd41acd1c25a40b697be3dad0",
+      "verifiedTreeHash": "c363387fa0dc56cdd41acd1c25a40b697be3dad0",
+      "verifierVersion": "0.1.0+63e0a393"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3b759d4a-111e-48b9-a94a-33486715975d",
+  "objective": "Research https://docs.kudo.archi/ & https://docs.google.com/document/d/17Ae7MEQQ9HGIGcV4zksjRkE_gkk6nJGv/edit?usp=sharing&ouid=103206770492985068638&rtpof=true&sd=true evaluate whether it would be a good addition to the swarm and more in general good agentic tooling",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
