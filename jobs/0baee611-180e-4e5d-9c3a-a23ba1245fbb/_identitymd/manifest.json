@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "5f728a03fe84abc9a673ffbd8522ef7567a721b15d092fd9260cab675a6a1268",
+  "artifacts": [
+    {
+      "bytes": 17074,
+      "hash": "36674146be2a2a6129ec98f4bf1d46f398dbc8aff990552d5fef133d193c57bd",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "ce6aea8a15cccdca64ce4f46980d69decd9f52ed622f67d8e51b5021f2ec3b76"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2d027bc56749d95c339486a49d7394896754c073e11aca8def18842ba91e7a92",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ad3347289e7a45277916ef1ecd8701cb7c133a33b8d00b6a08219c662d710c36",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bdd9b74dce66953d980cc1c0cfe15f99b1c1ffde3719dbe7e0d5dec4e3e7a8eb",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "625788be70b77b8427becff3becc4aba588b088972c3160b9c613083f3a7b961",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "739094f0e08668ee6fa7e7cc35af2027375a89a94c2040e9f5433d2de88c4b0d",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ce6aea8a15cccdca64ce4f46980d69decd9f52ed622f67d8e51b5021f2ec3b76",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d03fc84904b54d9e1846df9d1f8d965b459d76184187e2ce05d2031a409975df",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ae29d10e9492aedae1023b89d9342159ee84eeb3a814404b7f8a3d1949c4aaf0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9b06782c7559b54c3eabc525ce1a320256d8068679a02f4efe7fa482fbee2e63",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "35ef06c4057481d318f6ddce59c838870f2550d3faff1f30b1573360419c89dd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0baee611-180e-4e5d-9c3a-a23ba1245fbb",
+  "objective": "Focus on the standalone v4 hook and CREATE2 factory: exact callback permission bits, mined versus deployed address, salt/front-running risks, constructor and PoolManager/chain binding, bytecode verification, swap-limit bypasses, denial-of-service, and behavior across two new pools. Reproduce material findings with Foundry tests. Distinguish local evidence from untested public-chain deployment.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "42119ec0a1425064b6cb7bd5a5015fd4f665d736",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
