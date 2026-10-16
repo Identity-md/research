@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "96456924517ff8f357c165b5062b708199add47192f827f5acde3401a07e6ca5",
+  "artifacts": [
+    {
+      "bytes": 20801,
+      "hash": "2df5871c7423703f62c0ab18b708c41a8382e9e94286e5d00ba1047accdfd805",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "7bc45ed3faac4c86e76e5a1753f4c0aee7cf6b30774b1a4917860b80ef6a0381"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "a90fb29b8d1d12dbd55deecde3bf5cd3557ef7c3c715fd1203293d8b9c042741",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "0fde2559e5db10f245a21ffdbb34484272cb3537302d84aa49dc13d4584113bf",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "7bc45ed3faac4c86e76e5a1753f4c0aee7cf6b30774b1a4917860b80ef6a0381",
+      "treeHash": "8ed7a69df8c136ece20d12697025c85656e1d045",
+      "verifiedTreeHash": "8ed7a69df8c136ece20d12697025c85656e1d045",
+      "verifierVersion": "0.1.0+d952fceb"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2a7594d2-92d3-4ffa-b40b-ebc8a29d5c1d",
+  "objective": "Research report: review the token design for Hamster Hour before we build it.\n\nContext: HamsterHour 0xc5217f129da200a8e86229de4eabf3686eef64b1 on Ethereum (repo identity-md-launches/launch-1951-workflow-contract-stage-context) is a live pari-mutuel game: hourly windows of 6 Squeekchain hamster rounds, markets OVER/UNDER a line, EXACT passes, SLEEP (zero passes), bets in IMD, settled only by signed IMD oracle attestations, split 91% winners / 5% stakers / 3% oracle reserve / 1% TEAM. It exposes window(k), position(k, account), results and a one-shot setStakingToken plus setJackpotToken with 48 h timelocks. We will not change it.\n\nProposed token $HAMSTER, 1B supply: 10% to the swarm, 10% to the IMD-paired pool, 80% to a new MiningVault. Mechanic \"lose to mine\": only losers receive HAMSTER, pro rata to their net loss per window (|over − under| per wallet, EXACT and SLEEP losses in full); winners get IMD. Emission per window = min(losses × rate, cap). Rate starts at 12% of the loss in HAMSTER at pool opening price and decays as cumulative game fees grow (half every 50k IMD of total bets). Cap = 0.04% of the vault's remaining balance × hamster factor (passes / line, max 2); passes below 10% of the line → zero emission. Mined tokens vest linearly over 7 days, no early exit. Staking in MiningVault: rewards start 1 h after staking, unstake starts a 24 h cooldown during which rewards stop; stakers receive the 5% IMD share from HamsterHour (the vault's receipt token becomes HamsterHour's stakingToken) plus any oracle reserve above a 30-day runway. Uniswap v4 hook 1%: IMD side to the oracle reserve, HAMSTER side to the EXACT jackpot. TEAM gets nothing from emission.\n\nQuestions, answer each with a verdict and a concrete fix:\n1. Can MiningVault compute net loss per wallet per window trustlessly from HamsterHour's public views and events alone? Which functions and events, and what is missing?\n2. Sybil and wash attacks: two wallets betting opposite sides, 256 EXACT tickets, self-settlement timing. Model the cost (9% fee) against emission at the proposed rate and cap. At what HAMSTER price does farming become profitable, and what rate or cap makes it unprofitable at launch?\n3. Sleeping-hamster windows: is the 10%-of-line threshold enough, or can predictable outcomes be farmed?\n4. Price-independent rate versus a TWAP-linked rate: which is safer here and why?\n5. Vesting 7 days linear with no early exit, staking warm-up 1 h and cooldown 24 h: any remaining flash-stake or claim-ordering exploit against the 5% share and the pre-token reserve release over 30 windows?\n6. Is 0.04% of remaining per window a sane decay (half-life about 72 days at 24 windows/day)? Propose numbers for rate, cap and decay given a game doing 200 to 2,000 IMD of bets per day.\n7. Hook routing and jackpot: any way to drain or block the jackpot or the oracle reserve.\n8. Anything in this design that would fail IMD's launch checks or the hackathon's \"really uses IMD\" bar.\nDeliver: a ranked list of defects with fixes, a recommended parameter table, and the exact contract interface (functions, events, storage) for MiningVault so the build job can start from it.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
