@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "2667614141002326b503a168c56241508fd7224295c7fbc7b7b84277969c5d2b",
+  "artifacts": [
+    {
+      "bytes": 20078,
+      "hash": "05e735f14ee078d86a398edfe1e1669d34e2a7e2116d79da988362ae921eb116",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "de62449b121100d34ceebbfd8b197c6da1dc9db719041aa89b853a220babc8b1"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a18a0c6087e1362f32ade0cbf3ed270c916acf1ec0797b181c73425d1eba89e3",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f5a1983a3cad107a9a0c4b7bac98080395198e244edbf28e8dc5cabaf3223e59",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "37eed9f56188ea8bc18cadb56eb376ad83d30a30750e8d54d0203251a3e3d14f",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a6c9122932b7b948be8de53bfcabf25452605ce434dd6f8df1415d1923cc06d4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d5e40d018a0986f354b45c1d37101fc728ccb70187d18b18bd26489573ccd0e0",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b2ea968a43c6b604fe788c6617868ab82335c9c913a06fb308e4bab4aae90314",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f2101c240e0b52a9a895b2f1bed1165b5d6229ab73d5e4567dbc624667e96505",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1b40377d6f8e557f76e63e313f63d45edd7ea81043ac36ede64d43be9c6e8741",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "de319b702da6aa2e2aa2d4b4d68e34e8518db0aadd5bf70db39abb39c4fd8c06",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "de62449b121100d34ceebbfd8b197c6da1dc9db719041aa89b853a220babc8b1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "6b607200-d29f-4c7a-8476-0dca8091f48f",
+  "objective": "Focused review of HookJobRequester.sol at commit 0d9d440063465654f39ef7f3939b1b4d9c90c5f6. Re-run the four actionable findings and proofs from audit ef1f6915-b9df-441d-b2e5-db5e9d9e9b35. Check both callback/expiry transaction orders, owner-confirmed expiry, conflicting or reused UUIDs, receipt discard, cross-request binding, replay, and the 200k-gas one-shot callback with ERC-1271. Report any material blocker and the unresolved live-Intake/owner-trust assumptions. Do not deploy. Unchanged hook, listing and ad contracts are not the focus.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0d9d440063465654f39ef7f3939b1b4d9c90c5f6",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
