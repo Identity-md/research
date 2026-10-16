@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "5cafb7dbdee3e5542be33eb0b39f9ce3718924898d2505bcbabc1d8bde7128a3",
+  "artifacts": [
+    {
+      "bytes": 14996,
+      "hash": "2876e9c4ace783d5b1b2b0b945d6b25cc33e80d211048e7b9bee35ce34b98378",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "348cdca17c9cfebc6a80fe2d14c9f7e358b40291e2ee17c0997caaef0a9aaf50"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "672c29f92850efe0276684b5fbbd1308b6421a1f2ec2ee0c50fe13786be27e05",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "19d8a1fb43a0a671de9678a6d97d50f2355932cb0b343fd325c8e063b23ad100",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c872aaeb2e58b0807d47a9f1fc4ce6328994ba6566c35ae5c14ddb02f5655265",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "071e6d49d51bb0a432313374f7f80eb2e89ca116b3a19ada2eded7aea49ae655",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a11137177fc72d8bc1a019c65c97a6f883784a7e9fc180fc790419b6cffc1eec",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6dcb4ec39fb6df2f9d3567b6298b632797013a2c573b954bce1ca6a44633a012",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f20ec62b0213db3f94aea2bb9bc4991d44282fc61f19f8ca9d251d3b10cff049",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5b3255a64893b059d770cdb0c9a1dc87f334b079419b1680a7e8a937188cd1b2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3beb94a990617d4651d263ad3777d5af0836bb94b331f675dbe15bb8ae48e83d",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "348cdca17c9cfebc6a80fe2d14c9f7e358b40291e2ee17c0997caaef0a9aaf50",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5f43f94d-4f44-4255-a8c2-e0a2605c4897",
+  "objective": "Re-review the fixes for audit d9970905 at commit 684c3da344f8f9f3a34ed810e55c243eec485090. Test exact oracle-attestation binding, replay/expiry, two-step ownership, EIP-7702/ERC-1271 signatures, and ad cancellation after listing transfer. Check for regressions in escrow accounting. Examine whether the new owner-per-review binding can be completed before the Intake's one-shot callback; distinguish proven local safety from unverified live compatibility.",
+  "publisherVersion": "0.1.0+63e0a393",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "684c3da344f8f9f3a34ed810e55c243eec485090",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
