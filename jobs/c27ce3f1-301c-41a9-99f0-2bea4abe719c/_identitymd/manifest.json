@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6d8cd2fda13dc9a22eb6d1438d956a226dd9ac4eebbc4e395deab5105985ec46",
+  "artifacts": [
+    {
+      "bytes": 75,
+      "hash": "bb631b1375d373a7c969884595546872ed731c05d4575c6e95e4969d177c5de6",
+      "mediaType": "application/json",
+      "name": "recommendations",
+      "path": "artifacts/recommendations.json",
+      "publishedPath": "files/artifacts/recommendations.json",
+      "submissionHash": "1060fcd4eeced43b55729dce8bd7aee802a43b0996a484fe07b72286fa413ace"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f121f0a8f834039269889841e51b6cc7dba91d0c635e38c04c51d18220549102",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "1060fcd4eeced43b55729dce8bd7aee802a43b0996a484fe07b72286fa413ace",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+c3fba9eb"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c27ce3f1-301c-41a9-99f0-2bea4abe719c",
+  "objective": "Keel prediction-market analysis 7717170c-5482-4a85-a429-56e1a1d185fc. Category: crypto. Data taken 2026-10-17T13:16:51.352Z from Polymarket order books.\nTask: find markets in the table whose price is wrong (mispriced) and recommend at most 8 trades for a bankroll of 25 USD (pUSD). Returning no trades is a valid answer.\nPrices are probabilities from 0 to 1. Columns: row|marketId|event|ends|question|outcome A/outcome B|A bid|A ask|B bid|B ask|last|24h volume $|liquidity $|$ at A ask+2c|min shares\nMarkets:\nm1|5742115|-|2026-10-17|Bitcoin Up or Down on October 17?|Up/Down|0.77|0.78|0.22|0.23|0.77|147516|38919|6772|5\nm2|5506691|-|2026-10-17|Will the price of Bitcoin be above $82,000 on October 17?|Yes/No|0.03|0.036|0.964|0.97|0.031|80210|36474|332|5\nm3|5593519|-|2026-10-19|Will Bitcoin dip to $78,000 October 12-18?|Yes/No|0.029|0.03|0.97|0.971|0.029|52362|49479|599|5\nm4|701496|-|2027-01-01|Will Bitcoin reach $100,000 by December 31, 2026?|Yes/No|0.2|0.21|0.79|0.8|0.21|47763|74491|3959|5\nm5|5742123|-|2026-10-17|Ethereum Up or Down on October 17?|Up/Down|0.28|0.3|0.7|0.72|0.37|46701|32350|1397|5\nm6|5170740|-|2026-11-01|Will Bitcoin dip to $75,000 in October?|Yes/No|0.23|0.24|0.76|0.77|0.24|41160|67769|3054|5\nm7|5564853|-|2026-10-18|Will the price of Bitcoin be above $80,000 on October 18?|Yes/No|0.956|0.958|0.042|0.044|0.958|32989|38689|679|5\nm8|5506667|-|2026-10-17|Will the price of Ethereum be above $2,400 on October 17?|Yes/No|0.961|0.971|0.029|0.039|0.981|25232|25706|4533|5\nm9|5170741|-|2026-11-01|Will Bitcoin dip to $72,500 in October?|Yes/No|0.12|0.13|0.87|0.88|0.12|19780|56800|1456|5\nm10|5506668|-|2026-10-17|Will the price of Bitcoin be between $80,000 and $82,000 on October 17?|Yes/No|0.95|0.96|0.04|0.05|0.95|18165|23156|5383|5\nm11|5506670|-|2026-10-17|Will the price of Bitcoin be between $82,000 and $84,000 on October 17?|Yes/No|0.024|0.044|0.956|0.976|0.04|17887|22559|236|5\nm12|1163699|-|2027-01-01|Clarity Act (H.R.3633) signed into law in 2026?|Yes/No|0.053|0.058|0.942|0.947|0.054|17536|279908|11075|5\nm13|5610574|-|2026-10-19|Will the price of Ethereum be above $2,400 on October 19?|Yes/No|0.66|0.67|0.33|0.34|0.67|16907|32632|2896|5\nm14|5794264|-|2026-10-18|Will Bitcoin dip to $80,000 on October 17?|Yes/No|0.029|0.03|0.97|0.971|0.026|16697|23589|250|5\nm15|701495|-|2027-01-01|Will Bitcoin reach $110,000 by December 31, 2026?|Yes/No|0.08|0.09|0.91|0.92|0.09|15647|102130|1411|5\nm16|5170734|-|2026-11-01|Will Bitcoin reach $90,000 in October?|Yes/No|0.15|0.17|0.83|0.85|0.17|15357|56269|1036|5\nm17|5794238|-|2026-10-18|Will Bitcoin reach $83,000 on October 17?|Yes/No|0.021|0.031|0.969|0.979|0.024|15292|24352|248|5\nm18|5692175|-|2026-10-19|Will Bitcoin reach $84,000 October 12-18?|Yes/No|0.031|0.049|0.951|0.969|0.05|15272|39901|508|5\nm19|5170733|-|2026-11-01|Will Bitcoin reach $92,500 in October?|Yes/No|0.08|0.09|0.91|0.92|0.1|13781|76975|5321|5\nm20|5610602|-|2026-10-19|Will the price of Bitcoin be above $84,000 on October 19?|Yes/No|0.05|0.06|0.94|0.95|0.07|13655|37542|488|5\nm21|5794256|-|2026-10-18|Will Bitcoin dip to $81,000 on October 17?|Yes/No|0.37|0.38|0.62|0.63|0.38|13446|17747|2105|5\nm22|3387867|-|2027-01-01|Will Ethereum dip to $1,750 by December 31, 2026?|Yes/No|0.16|0.17|0.83|0.84|0.16|11941|72175|731|5\nm23|1144471|-|2027-01-01|Will Satoshi move any Bitcoin in 2026?|Yes/No|0.029|0.03|0.97|0.971|0.03|11546|89263|2028|5\nm24|5170739|-|2026-11-01|Will Bitcoin dip to $77,500 in October?|Yes/No|0.42|0.43|0.57|0.58|0.43|11442|61444|3418|5\nRules:\n- Use only markets from the table. marketId is the second column, copied exactly.\n- side YES buys outcome A at its ask; side NO buys outcome B at its ask.\n- fairPrice: your probability (0-1) that the side you buy wins. estimatedEdge = fairPrice - ask of that side. Recommend only when estimatedEdge >= 0.03 after the spread.\n- Look for: news or base rates the price ignores; related markets that contradict each other; multi-outcome events whose YES asks sum far from 1 (listed under Events).\n- recommendedShares: whole shares, cost = shares x ask. Size with quarter-Kelly, at most 20% of the bankroll per market and 60% in total, never below the market's min shares.\n- confidence: low, medium or high. reasoning: at most 300 characters, name the evidence.\nOutput: write exactly one file, artifacts/recommendations.json, containing only this JSON (UTF-8, no comments, no markdown):\n{\"analysisId\":\"7717170c-5482-4a85-a429-56e1a1d185fc\",\"recommendations\":[{\"marketId\":\"123\",\"question\":\"copied from the table\",\"tokenId\":\"\",\"side\":\"YES\",\"fairPrice\":0.55,\"recommendedShares\":100,\"estimatedEdge\":0.12,\"confidence\":\"medium\",\"reasoning\":\"short evidence\"}]}\nLeave tokenId empty: Keel fills it from its own snapshot.",
+  "publisherVersion": "0.1.0+c3fba9eb",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
