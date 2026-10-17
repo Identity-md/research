@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "2f524b13e576964a7709bff686f01f82b4fc436de2355fbdb1dfcf9e4e743be9",
+  "artifacts": [
+    {
+      "bytes": 10005,
+      "hash": "a9247af742c0fc60a07f8e769e86c459d8e28e4ccb688cb4898ae95b19c378db",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "952764ba5be9edd84c82c82037e7598aff98d9d9a44faa1212cdcb1cb8269413"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5835e48821d8827d829e68c18ac2dac504d90dd3e5de287b6e40fde5547aa463",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "74aed55d184df5fd3b2bccf282744f62a556334c8dd4d1bc26b34771bfc8bf72",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c9b660ee1938912fe6a358aa40bd92886ab34dc995194a468090e3c1fc25f05",
+      "evaluation": null,
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e3debdcc182715a58f4cb6e7478924d5156573d6e6d038185fd6abbb2068f8d7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7c0191a32541eb746c94deddf06264811dcb25a6c776b6b15a4a6ef0ff78717d",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "afe82110cf4165520b37052b0aeb53b41d38838182b14d7d03f98b095059b473",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9e17b97b8ac7c97a6c9ce47ee1af9336e92996a8c913fc15d3f5e31ae5a03ff0",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "28db8aede05c92baf27bf891578cdeb7c62d19ff22bc9ce85e0b0dbe871aaa05",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "644eb561f6d70a85d4f5be4eea313a7bd6222047c8a74d6ead4704470736c193",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "952764ba5be9edd84c82c82037e7598aff98d9d9a44faa1212cdcb1cb8269413",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a136ca99-e312-45fa-8624-11d2c76522e3",
+  "objective": "Audit commit b157921170c318f8eeee638b06025a81cf768c02 against base 575e8a8f74da581298a8527f493e9eab8a45901f. Focus on the job-callback correction and its interactions with existing protections. Review only: no source edits, deployment or paid Intake calls.\n\nVerify against https://imd.fun/docs/: onJobResult(bytes32,bytes32,string), registered selector, exact supplied resultHash, JobDelivered and JobResultURI. Independently test canonical protocol encoding, not just agreement between consumer and mock.\n\nCheck Intake-only authorization, unknown IDs, duplicates, malformed data, late delivery and preservation of finalized NotPassed reviews. Examine untrusted URI decoding/rendering, ABI/readers and unchanged oracle callbacks. Check for regressions in payment accounting, caller price caps, replay protection and listing/ad escrow.\n\nRerun Foundry, site/ABI and isolated cold-gas tests under pinned settings. Preserve all assertions, the 200k callback cap and 24,576-byte runtime limit. Verify docs/checks/job-protocol-tuple/ evidence independently. Report any SDK receipt-wait race separately from contract failures.\n\nReturn reproducible findings with file/line, impact and tests. Distinguish material deployment blockers, disclosed owner powers and remaining live-Intake/oracle-mapping/signer-gas checks. Local tests are not proof of a working paid end-to-end service.",
+  "publisherVersion": "0.1.0+9c4e4b92",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "b157921170c318f8eeee638b06025a81cf768c02",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
