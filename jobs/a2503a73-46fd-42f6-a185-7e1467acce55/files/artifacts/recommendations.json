@@ -1,0 +1,250 @@
+{
+  "analysisId": "abd60a38-4d26-499e-8a93-53c6303679ef",
+  "scan": [
+    {
+      "marketId": "5787759",
+      "fairYes": 0.63,
+      "note": "HLTV: series moved 1-0 to 1-1 during research; .63 judgment, exact snapshot state unknown."
+    },
+    {
+      "marketId": "5791529",
+      "fairYes": 0.978,
+      "note": "Sofascore now 2-0 MVK; model .72/game gives 1-.28^3; score timing vs snapshot unconfirmed."
+    },
+    {
+      "marketId": "5557832",
+      "fairYes": 0.5,
+      "note": "Oct25 fixture not verified; ALCS schedule ends Oct20. .50 ignorance prior; avoid date mismatch."
+    },
+    {
+      "marketId": "5533029",
+      "fairYes": 0.5,
+      "note": "ICC: Oct17 finale no-result, not Oct24; .50 settlement proxy, not India win chance; avoid."
+    },
+    {
+      "marketId": "5817742",
+      "fairYes": 0.34,
+      "note": "HLTV: MIBR VRS12 vs NIP14, insani stronger; live score unverified; heavily shrink prior."
+    },
+    {
+      "marketId": "5760759",
+      "fairYes": 0.502,
+      "note": "StatMuse Oct18: O6.5 -108/U -106, near even after vig; starters/weather remain uncertain."
+    },
+    {
+      "marketId": "4329887",
+      "fairYes": 0.5,
+      "note": "Bovada -110/-110; records favor Giants but conflicting QB/line reports warrant even estimate."
+    },
+    {
+      "marketId": "608565",
+      "fairYes": 0.02,
+      "note": "SER Oct16: winner race favors Kane/Yamal; .02 Messi judgment."
+    },
+    {
+      "marketId": "5354642",
+      "fairYes": 0.5,
+      "note": "sbaodds.com/college: ND -11; other books -10/-10.5; no clear cover edge at -10.5."
+    },
+    {
+      "marketId": "5255063",
+      "fairYes": 0.53,
+      "note": "BetVictor 14Oct: Malott 4/5, Buckley 21/20; no-vig .532; home edge vs Buckley power."
+    },
+    {
+      "marketId": "608545",
+      "fairYes": 0.35,
+      "note": "SER Oct16: Yamal contender; .35 judgment vs Betfair ~.31; min-size fails."
+    },
+    {
+      "marketId": "608547",
+      "fairYes": 0.575,
+      "note": "SER Oct16: Kane competitive, winner unknown; .575 judgment vs Betfair ~.61."
+    },
+    {
+      "marketId": "4761407",
+      "fairYes": 0.57,
+      "note": "Ottawa 6-2 vs Flyers 0-6-3; book -144/+120 implies .565; regress early-season records."
+    },
+    {
+      "marketId": "5308185",
+      "fairYes": 0.52,
+      "note": "Oddschecker Udinese 51% model; home favorite; e2 asks 1.01/bids .98 offer no basket arb."
+    },
+    {
+      "marketId": "4761442",
+      "fairYes": 0.35,
+      "note": "betfirm.com/hockey-odds: PIT +170/VGK -200 implies .357; Oct17 local/Oct18 UTC likely."
+    },
+    {
+      "marketId": "5286639",
+      "fairYes": 0.53,
+      "note": "Betimate 47%, FootballPredictions 50%; shrink toward home market; e3 asks1.02 no arb."
+    },
+    {
+      "marketId": "5311859",
+      "fairYes": 0.62,
+      "note": "Oddschecker model61%; Brighton strong home defense; draw counts NO; e4 asks1.02 no arb."
+    },
+    {
+      "marketId": "4761417",
+      "fairYes": 0.417,
+      "note": "betfirm.com/hockey-odds: Sharks +134/Wings -155 implies .413; goalies add uncertainty."
+    },
+    {
+      "marketId": "5141816",
+      "fairYes": 0.25,
+      "note": "SER Oct16: Yamal podium more consistent than Mbappe; .25 Mbappe ranking judgment."
+    },
+    {
+      "marketId": "608540",
+      "fairYes": 0.035,
+      "note": "SER Oct16: Mbappe trophy deficit; Betfair26/42 implies small chance; .035 judgment."
+    },
+    {
+      "marketId": "4329888",
+      "fairYes": 0.61,
+      "note": "Bovada CAR -175/PHI +150 implies .614; road favorite despite home field; injury-driven move."
+    },
+    {
+      "marketId": "4367271",
+      "fairYes": 0.66,
+      "note": "Chiefs.com 4-0 after bye; Chargers.com consensus -7.5; -3.5 cover ~.66, below .68 ask."
+    },
+    {
+      "marketId": "5354010",
+      "fairYes": 0.49,
+      "note": "sbaodds.com/college total45; SportsJaw45.5; 45.5 over near even, no sizable edge."
+    },
+    {
+      "marketId": "5791531",
+      "fairYes": 0.087,
+      "note": "95% inferred MVK link: 2-0, FUR .28/game; 5% other total at .25 => over .087; verify."
+    },
+    {
+      "marketId": "4329891",
+      "fairYes": 0.22,
+      "note": "Bovada LAC +330/KC -440 implies LAC .222; rested unbeaten KC; no clear ML edge."
+    },
+    {
+      "marketId": "4329883",
+      "fairYes": 0.51,
+      "note": "Bovada -110 each; Chicago QB recovery uncertain; tiny judgment home/road adjustment."
+    },
+    {
+      "marketId": "5791530",
+      "fairYes": 0.28,
+      "note": "Assumed MVK-FURIA: at 2-0, over3.5 requires FUR game3 win; .28; linkage unverified."
+    },
+    {
+      "marketId": "4367438",
+      "fairYes": 0.51,
+      "note": "Bovada total45 O-105/U-115; at44.5 over slightly above half; small lean, min-size fails."
+    },
+    {
+      "marketId": "5354511",
+      "fairYes": 0.366,
+      "note": "sbaodds.com/college: OKST +165/HOU -190 => .3655 no-vig; road upset needs offense."
+    },
+    {
+      "marketId": "5354535",
+      "fairYes": 0.495,
+      "note": "Bovada HOU -4.5 -105 vs OKST -115; near-even cover; win probability is not cover chance."
+    },
+    {
+      "marketId": "5354004",
+      "fairYes": 0.5,
+      "note": "sbaodds.com/college USF -20.5; high win chance still leaves backdoor cover risk."
+    },
+    {
+      "marketId": "4329885",
+      "fairYes": 0.26,
+      "note": "Bovada TEN +270/IND -340 => .259 no-vig; consistent with Colts -6.5 market."
+    },
+    {
+      "marketId": "4367427",
+      "fairYes": 0.515,
+      "note": "Bovada IND -6.5 -115/TEN -105 => .511; key7 supports .515 judgment, no clear edge."
+    },
+    {
+      "marketId": "5354936",
+      "fairYes": 0.505,
+      "note": "sbaodds55.5; Bovada56 U-115; over55.5 near half; .505 judgment, not injury model."
+    },
+    {
+      "marketId": "5128553",
+      "fairYes": 0.55,
+      "note": "Colts ladder: extra point below6.5 helps; about3.5% mass on margin6; no .56 edge."
+    },
+    {
+      "marketId": "5354937",
+      "fairYes": 0.45,
+      "note": "LA Tech totals55.5/57.5 consistent; ~5.5% mass on56/57 supports .45 over57.5."
+    },
+    {
+      "marketId": "4367428",
+      "fairYes": 0.435,
+      "note": "Colts ladder assigns8% to exact7 and3.5% to6; -7.5 cover below -6.5, no clear edge."
+    },
+    {
+      "marketId": "5353969",
+      "fairYes": 0.093,
+      "note": "sbaodds.com/college: Kent +950/USF -1400 => .0926 no-vig; upset remains unlikely."
+    },
+    {
+      "marketId": "2772166",
+      "fairYes": 0.16,
+      "note": "Sportingbet PSG5.50 raw18.2%; discount full-field margin and long knockout variance."
+    },
+    {
+      "marketId": "5354636",
+      "fairYes": 0.77,
+      "note": "UHND CFBD pregame ND77%; moneyline books near77%; BYU home5-0 makes .79 unattractive."
+    },
+    {
+      "marketId": "4367515",
+      "fairYes": 0.52,
+      "note": "Bovada total52.5 vs table51.5; over modest lean, QB injuries uncertain; min-size fails."
+    },
+    {
+      "marketId": "2772177",
+      "fairYes": 0.11,
+      "note": "Sportingbet Madrid8.0 raw12.5%; full-field vig discount =>11%; no edge at .11 ask."
+    }
+  ],
+  "recommendations": [
+    {
+      "marketId": "5141816",
+      "question": "Ballon d'Or 2026: Kylian Mbappé or Lamine Yamal to finish higher?",
+      "tokenId": "",
+      "side": "NO",
+      "fairPrice": 0.75,
+      "recommendedShares": 6,
+      "estimatedEdge": 0.28,
+      "confidence": "medium",
+      "reasoning": "SER Oct16 voter interviews favor Yamal on the podium over Mbappe; .75 is judgment, not a count. Loses if Mbappe ranks higher; interviews may mislead. https://cadenaser.com/nacional/2026/10/16/periodistas-con-contrato-de-exclusividad-con-el-balon-de-oro-desvelan-sus-impresiones-a-la-ser-podriamos-descartar-a-mbappe-de-la-pelea-cadena-ser/"
+    },
+    {
+      "marketId": "5791531",
+      "question": "Games Total: O/U 4.5",
+      "tokenId": "",
+      "side": "NO",
+      "fairPrice": 0.913,
+      "recommendedShares": 5,
+      "estimatedEdge": 0.143,
+      "confidence": "low",
+      "reasoning": "Adjacent IDs suggest MVK-FURIA; linkage unverified. Sofascore now 2-0, newer than snapshot; .72/game gives under .9216, reduced to .913 for 5% linkage uncertainty. Loses to two FUR wins or wrong event; confirm before buying. Correlated LoL cost $8.20; total $11.02. https://www.sofascore.com/esports/match/mvk-esports-furia-esports/kCVcsigpj"
+    },
+    {
+      "marketId": "5791529",
+      "question": "LoL: MVK Esports vs FURIA Esports (BO5) - Worlds Play-In",
+      "tokenId": "",
+      "side": "YES",
+      "fairPrice": 0.978,
+      "recommendedShares": 5,
+      "estimatedEdge": 0.108,
+      "confidence": "medium",
+      "reasoning": "Sofascore checked ~19:53 UTC shows MVK 2-0; this is newer than the 19:48:51 snapshot. Judgment .72 per remaining game gives 1-.28^3=.978; loses to a reverse sweep. Recheck score, event and executable .87 ask; five shares fit quarter-Kelly. https://www.sofascore.com/esports/match/mvk-esports-furia-esports/kCVcsigpj"
+    }
+  ]
+}
