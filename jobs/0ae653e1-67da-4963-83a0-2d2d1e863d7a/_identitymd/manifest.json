@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "43388fb8feead219e684135079695413068d886374eb32bddfca30a7971405fa",
+  "artifacts": [
+    {
+      "bytes": 19021,
+      "hash": "135670b94b914f3459bd0f91aaa0aa7be03f61878e631add864e12ae2bbd081f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "20d71a4ec21aeeedbee5c65ce55c6a5510853f32ae8b215cdae833b05d7115ce"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "db7554a772b3fbf3fa18c55c98939b9d34a1b6f472d5103a9587dfea53967358",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "20d71a4ec21aeeedbee5c65ce55c6a5510853f32ae8b215cdae833b05d7115ce",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+c3fba9eb"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0ae653e1-67da-4963-83a0-2d2d1e863d7a",
+  "objective": "Create a sourced FOLIR portfolio report: five detailed asset dossiers plus a critical review, within this single paid job.\n\nWallet: 0xd470133a27b58a2949d2a0be9414204db3eb0ab4\nNetworks: Ethereum mainnet, Arbitrum One, Base and Robinhood Chain; explicitly report unavailable coverage.\nPeriod: wallet inception through a research-time UTC snapshot. English report; USD valuations. Analyze this address only; do not infer its owner's identity or other wallets. Read-only: no trades, approvals or additional paid jobs.\n\n1. Establish evidence and inventory\nRetrieve balances and history from public RPCs, explorers and primary sources. State snapshot, chains checked, earliest/latest records, pagination and gaps. Cover discovered crypto, staking/DeFi, tokenized stocks and NFTs. Identify contracts, quantities and token IDs where applicable. Separate suspected spam, unpriced assets and uncertain NFT estimates. Do not treat missing values as zero or call a partial scan complete.\n\n2. Select the five largest positions\nRank legitimate positions by defensible current USD value, with price sources and timestamps. Consolidate verified duplicates without double-counting wrapped, staked or bridged exposure; retain their specific risks. Explain the ranking. Show illiquid NFT estimates separately and disclose if valuation uncertainty could change the selection. If fewer than five positions can be verified, analyze those available without inventing others.\n\n3. Produce one complete dossier per selected position\nFor each:\n- Identity: chain/contract, instrument type, function, issuer/protocol and what ownership actually confers.\n- My position: quantity, portfolio weight, dated acquisitions/disposals, verified average acquisition cost (PRU), fees, current value, realized/unrealized P&L and income where supported.\n- Fundamentals: utility, adoption, tokenomics, dilution/unlocks, dependencies and liquidity. For tokenized stocks, distinguish the company from token issuer, redemption and shareholder rights. For NFTs, assess utility, liquidity and valuation evidence.\n- News: material events from the last 30 days and verified upcoming catalysts, with event/publication dates, primary sources and position relevance.\n- Risks: concentration/correlation, contract/protocol, custody/issuer, leverage and depeg where relevant.\n- Research stance: HOLD, ADD, REDUCE, EXIT, WATCH or INSUFFICIENT_DATA. Explain the case, strongest counterargument, conditions that change it, confidence and evidence gaps. Do not assume my horizon or risk tolerance. These are conditional scenarios, not guaranteed outcomes.\n- Where calculable, model one partial-profit or risk-reduction scenario with percentage, quantity, remaining exposure and explicit price/fee assumptions.\n\n4. Counter-analysis\nRecheck each dossier's sources, dates, claims and arithmetic. Record corrections, disagreements and unknowns. State actual review provenance where available. Never invent agent identities, votes or reviewer independence. Label a self-review as such.\n\n5. Calculation rules\nSeparate purchases/sales from transfers, bridges and deposits/withdrawals. Use historical prices and reproducible calculations; disclose cost-basis and fee methods. Unknown acquisition costs stay unknown. Mark affected P&L unavailable or partial. Portfolio balance changes alone are not investment returns. Do not produce a tax declaration.\n\n6. Deliverable\nReturn the entire deliverable as one valid JSON object, without Markdown, code fences, HTML or introductory commentary.\n\nUse these top-level keys: schemaVersion, wallet, asOfUtc, currency, coverage, portfolioSummary, holdings, topFiveAssetIds, assetDossiers, review, sources, missingData.\n\nEach asset dossier must include its identity, position, performance, fundamentals, dated news, risks, conditional research stance, scenarios, source references and review findings.\n\nUse decimal strings for monetary amounts and token quantities, ISO 8601 UTC timestamps, and null for unavailable values. Never replace unknown acquisition costs with zero.",
+  "publisherVersion": "0.1.0+c3fba9eb",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
