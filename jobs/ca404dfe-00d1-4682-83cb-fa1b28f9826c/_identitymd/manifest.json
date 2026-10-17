@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "ae0598a52363c2f79491e0106502879dcb5286c891285b51286f06bb48069934",
+  "artifacts": [
+    {
+      "bytes": 27794,
+      "hash": "85506b6d3fa35b75acd535fa824871475f4c990679a4a7a6781d9f66e3c7b7f5",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "e8142def83ae60132b12bdb6824bdddf46b1c7bd207f4d83a096d254ced0d79b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a4e285247c6f8aed4c727a41c7b85e2978939f74e9ae6b02d8de4c1b75cccdea",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4c6360a9dca13e0f31b8735a85e550194106f60e9057c761de4994595cec736f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "589ef002581a53719d3af2622bb0d2ba58ea5f4139529f8b933806d6cb2e511d",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "af1d1176a53fce4fba967d1a12d75980f892da254e559027ba4ff45726eb1c7f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa8fc4653a9e883d4b2a1e1c53a856ddf70e90f433ae70645a4a0bb3cccdd962",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2152c2898ca9ffcd009ac72edae2dd51afa89a6c672ab82a5e49e7c16b231b60",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "30a6c1a419ef4f9c0b7b9345d1843aaf4945ad583f614ed8027cb22761e6f96c",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e8142def83ae60132b12bdb6824bdddf46b1c7bd207f4d83a096d254ced0d79b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c2e167266d13dcf4799e5339055687439f82b9c239967df30587a4703733486f",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d1fa0010a26900d46716adaf30f09328d661b7ea3fc36b702abb5fb214eb82c9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ca404dfe-00d1-4682-83cb-fa1b28f9826c",
+  "objective": "Audit commit cc847d8f35bc0b814d390eb76092eed6051c5ae3. Focus on the oracle-gated generated-hook deployer and its integration, including changes since 2aef6408eabb45b8f149e16a96c7734d4b4b5b07. Review only; no deployment, paid Intake calls or source fixes.\n\nPrimary scope: GatedHookDeployer.sol, AcceptedArtifact.sol, ResultJson.sol, the signer-epoch change in HookJobRequester.sol, SDK/templates and deployment configuration.\n\nAttack the complete authorization chain: authenticated resultHash -> exact IMD completion snapshot -> unique accepted source/approval file -> exact artifact -> correctly bound signed verdict. Test duplicate/nested/escaped fields, parser limits and gas, hash/metadata mismatches, source/build substitutions, forged/unbound/missing/failed reviews, and replay. Check CREATE2, constructor/reentrancy, runtime/manager/permission readback and every deployment entry point.\n\nVerify signer provenance and revocation in BOTH callback/binding orders, including missing epochs, rotation and preserved historical verdicts. Preserve the 200k callback limit and 24,576-byte runtime limit.\n\nUse docs/checks/approval-binding and reproduce the regressions. Independently verify the real IMD schema and declared trust assumptions; fixtures/free request checks are not live delivery evidence. Automatic binding is explicitly disabled pending an authenticated protocol mapping proof: do not certify a founder-free or deployment-ready flow.\n\nReturn severity-ranked findings with file/line, runnable reproductions and material audit blockers. Separate code safety, owner/oracle trust, protocol gaps and untested live behavior.",
+  "publisherVersion": "0.1.0+c3fba9eb",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "cc847d8f35bc0b814d390eb76092eed6051c5ae3",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
