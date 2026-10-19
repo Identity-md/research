@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "38ef841a543554712ac4f37e85e0232ede7a073157ef00300ff9c0f5900cba6b",
+  "artifacts": [
+    {
+      "bytes": 20102,
+      "hash": "8b0d977ebe18903376535cc8ee4d000b199e69137e7be1e1a2dc7e1447f39060",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "f92a0d8f4e086d413f58729cd59c1d232b27a486ece9416f749c459698450dad"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a315ee4cb81c640c2388d11ff650bf551c45ddc2ca690b911d7a7fc3d67c4b5b",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "79fd4cafef22a6c358fa54dc2603cf3c325f3359ba50799026fc23d3257d2b78",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b8fd8054ea57c5d8d85eeca011911dbd63feb22bb966d976fd300c14df83dc63",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "27a2b8255c6ade9ca180e1dffe0278efe9c18b5c7b3c4f7df053b07413a968f7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "22c9b760d0a15149e66c355d3badb12ec2af1f24a269554b3481bd43c2a15408",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "13fe34174a5ddfff7a9d04c834b47c2b6157846c6dfb9db00efd54191cf88e67",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dedd4428da8fa41e62ad65c88b2500e5bc74fc9d2a1ed0383bc91717911373ee",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f92a0d8f4e086d413f58729cd59c1d232b27a486ece9416f749c459698450dad",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "99e4819277ea59fc78bc6b1fa5a3c1169cc0a1fb0619e68249391a4323f328e7",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fc4ff75fafce395c14c73fb60a5eb4a35ec72d40fe862e379279227c1e1aac47",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2218802d-0828-4f00-81cf-487b51c12aac",
+  "objective": "Audit commit 205fa11271ab17a26630154815fae4c390aac624. Focus on AutoHookJobRequester, HookRequestCodec and their GatedHookDeployer integration, not just the legacy manual requester. Check exact question/ArtifactV2 authorization; confirmed native-chain windows, including Robinhood ArbSys; premature reserve spending; refunds/retries and NotPassed shopping; signer revocation/recovery; replay/reentrancy; and one-shot callbacks within 200k gas. Preserve the 24576-byte runtime limit and pinned compiler. Reproduce material findings with tests. Distinguish code defects from unproven live integration; local tests and free checks are not a paid end-to-end proof. Audit/report only: no fixes, deployment, live signatures or payments.",
+  "publisherVersion": "0.1.0+5921f9e9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "205fa11271ab17a26630154815fae4c390aac624",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
