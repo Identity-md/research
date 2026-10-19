@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "42c285f574a1a77d6dac68f6b85e3562f6cd64db9dc223c0b1a15ab75576cd0d",
+  "artifacts": [
+    {
+      "bytes": 25033,
+      "hash": "d3dc835e4caf9086f60a3d96954adf626c7e61cf45012df0060eb05094cf9a8f",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "f0731fedf4fa705ba3de4faa5052d5e67cad3699b8d62c5dff7b796cddd9d709"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "76df9026b98e4277f1cac64106b60803511f2653de268761eacd8c52a316a388",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b91db1caffa1dd047f3caaf93e6d71d42414863887df6d457aa59fbc0954ab72",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "829d84438fb3fdc88e93850c9bddcabb55e7d84f7fb9a6e15974f2983199bb64",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "59f6a18d6a7159cbfd9be7b67b2014083a73d841aaf1eb9826b160150bd89c3b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9b06782c7559b54c3eabc525ce1a320256d8068679a02f4efe7fa482fbee2e63",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "63037ceb59bd30fbf9f5c6c984763a3d835ab770b3a61eae17c9b9d128357c58",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "af9a875696459139756b5a16efcdee817ccc15898ff6b2c8e1503c0b028af533",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5452ce4d4dbbc77a88ab8d0d245464200bb47fa17c211d2bc901562f3eb71bc9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f47f953f8e35921edd8ad15f032f1bad0d020522e57a1e043a63fdcd8639f678",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f0731fedf4fa705ba3de4faa5052d5e67cad3699b8d62c5dff7b796cddd9d709",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "7db42bb7-5204-4805-894f-db1a2c11cd8e",
+  "objective": "Audit commit 357201be804e18ab48567172fb6c8b07acb30a2c. Focus on changes since 205fa11271ab17a26630154815fae4c390aac624 addressing https://explorer.imd.fun/jobs/2218802d-0828-4f00-81cf-487b51c12aac.\nVerify late-build reserve refresh and requester-only renewal without extra payment/cancelled revival/NotPassed shopping; skew-tolerant signed validity and delayed true/false callbacks; trigger-time signer/epoch snapshots, bounded retired-key trust, pending/finalized emergency revocation and ERC1271 caller context; Delivered-only immutable commitments; codec body/pin/consumer equivalence. Preserve exact ArtifactV2 deployment authorization, escrow/refunds, native eight-block windows and recovery/replay controls.\nCheck updated SDK/UI and per-chain block-age assumptions. Independently rerun regressions, 24576-byte runtime and isolated 200000-gas callbacks on Ethereum and mocked Robinhood. Distinguish owner/registry trust and live-integration gaps from code findings. No deployment or paid requests.",
+  "publisherVersion": "0.1.0+5921f9e9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "357201be804e18ab48567172fb6c8b07acb30a2c",
+    "repoUrl": "https://github.com/identity-md-launches/launch-1811-build-technical-foundation-hooks.git"
+  }
+}
