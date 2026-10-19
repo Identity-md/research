@@ -1,0 +1,46 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3e4ae6686bee26b9831ac086ca709a074d49f223dbcd473831f22ee81fc5cbc3",
+  "artifacts": [
+    {
+      "bytes": 58761,
+      "hash": "a03a41315c8dc09875b8aa34d0780426c458adfb7f5f87a0824159d5d47f0af8",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "cc80d3445be67e85faa6505eaee64020071322f3ed2abc1ee63df4b10ff82f2a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "4390151a0c8ed4a8c9abf287ae70ca5efd64c99d94628e86fd7c98f552e18f06",
+      "changedPaths": [
+        "README.md",
+        "research/calculations.py",
+        "research/imd-capabilities-2026-10-19.json"
+      ],
+      "deviceKey": "ab846a7d68ed31f8a387c7535133e8ad58100b1076d7db7024eb847cf7523125",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "cc80d3445be67e85faa6505eaee64020071322f3ed2abc1ee63df4b10ff82f2a",
+      "treeHash": "09c3aa9c52ed01d63da8badeca8dee9a19817994",
+      "verifiedTreeHash": "09c3aa9c52ed01d63da8badeca8dee9a19817994",
+      "verifierVersion": "0.1.0+6a374fcd"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1dc6a64f-d2a5-4bfe-9fd5-dce8ad4b887d",
+  "objective": "Prompt: research-report\n\nProject site: https://hamsterhour.fun\n\nDesign and security review, no build. Hamster Hour is a pari-mutuel IMD betting game on the Squeekchain hamster wheel. v1 is deployed on Ethereum mainnet (HamsterHour 0xc5217f129da200a8e86229de4eabf3686eef64b1, OracleVerifier 0xdcd7a7dee31d589f9df8113780050c18e7ea1f7d) but was never announced and has no users, so we will redeploy as v2. Review the v2 spec below and the $HAMSTER token plan. Find economic exploits, farming loops, oracle and settlement risks, and parameter mistakes. Suggest concrete fixes and better parameter values with reasoning. Also say what is missing for a safe launch.\n\nTelemetry (Squeekchain API, last 162 hours): the hamster sleeps 77% of hours (0 work). It is active 21:00–06:00 UTC. Hourly work in active hours: median ~2100, p10 ~1090, p90 ~3060, max 3194. Windows are 1 hour = 6 rounds of 600 s. Correct genesis is 1791847200.\n\nv2 game spec:\n\nMarkets per window: OVER/UNDER, SLEEP (did the hamster run at all), EXACT jackpot.\nA result below a sleep threshold (proposed 100 work units) counts as sleeping. When the hamster sleeps, OVER/UNDER refunds 100%, EXACT has no winners and all tickets roll into the jackpot, and SLEEP settles normally.\nLine for OVER/UNDER: bootstrap 2100. After that, the median of the last 12 settled awake windows, ordered by window index, not settlement order. It is snapshotted when the window is created.\nEXACT jackpot: fixed ticket of 5 IMD, one ticket per address per window. Guesses within ±1% of the result split 80% of the jackpot equally. 20% stays as the seed for the next window. With no winner, everything stays and grows. Review ±1% versus a tighter range given the distribution, and Sybil multi-wallet coverage of the range.\nFees on binary markets: 5% stakers, 2% jackpot, 1% oracle reserve, 1% team, 91% winners. EXACT ticket: 5% stakers, 1% team, 1% oracle reserve, 93% jackpot. One-sided binary pools refund without fees.\nOracle: an external IMD oracle attestation per window, verified on-chain. The first settler is reimbursed from the oracle reserve. A 48h timeout refunds everything.\nAdd a view lossOf(k, account) returning the account’s net losing stake for a settled window (refunds excluded), so an external MiningVault can pull-verify losses. Staking token is set once by TEAM behind a 48h timelock. No owner, pause, upgrade or withdrawal powers.\n\n$HAMSTER plan (launched later via IMD swarm, Uniswap v4 hook):\n\n1B supply: 100M swarm, 100M pool vs IMD, 800M MiningVault.\nLose-to-earn: 20,000 HAMSTER per 1 IMD lost, halving every 20,000 IMD of cumulative losses (counted from game launch, retroactive). Claim is pull-based per window via lossOf. Rewards vest linearly over 7 days, and vesting balances count as staked.\nMiningVault is the game’s single staking token holder. Stakers get the 5% IMD bet share. Unstake: rewards stop at request, tokens release after 24h.\nHook fee 1.6% on every swap, taken in IMD: 1% team, 0.5% to the game’s jackpot, 0.1% to the oracle reserve.\nAnti-snipe buy tax: starts at 98%, drops 2% per minute, 0 after 49 minutes. Tax goes 80% to stakers as a perpetual drip (1% of the remaining pot per day), 10% to the oracle reserve, 10% to team.\n\nSpecific questions:\n\nTwo-wallet farming cost per HAMSTER at each halving, and whether 20,000/IMD is sane.\nWhether the sleep threshold and the line rule can be gamed by settlement timing or by betting on predictable hours.\nJackpot hit probability per hour at different ticket counts.\nOracle reserve runway at low volume.\nAnything in v2 that blocks a clean lossOf integration or staking-with-vesting.\n\nDeliver a report: findings ranked by severity, recommended final parameters as a table, and a short list of required changes before build.\nAlso propose 5–8 fun, on-brand features that increase retention and virality without breaking the economics. Candidates to evaluate: a weekly biggest-loser HAMSTER bonus; a free daily EXACT ticket for stakers above a threshold; a 2x mining “wake-up hour” (the first awake window each night); a daily wake-up-time market; a referral share of 0.5% of referred bets paid from the team fee; a HAMSTER drop to Squeek NFT holders; an hourly results bot for X and Telegram. For each: the exploit risk, whether it must be on-chain in v2 or can be added later, and a verdict.\nAdd a Squeek Boost Pool: 50M HAMSTER (5%, taken from the vault, so the vault holds 750M). Players who hold a Squeek NFT get +50% on their mined HAMSTER, and the bonus is paid from this pool until it runs out. One Squeek can boost one wallet per window, with a daily bonus cap per Squeek, so a transferred or lent NFT cannot boost many wallets. Ownership is checked directly with ownerOf once Squeekchain’s NFTs are on the same chain as the game (mainnet). The pool stays inactive until then. If it is not activated within 12 months, anyone can push it into the MiningVault. No other withdrawal path. Review the design, including flash-loan or rental abuse, and safe cross-chain options if mainnet is delayed.",
+  "publisherVersion": "0.1.0+6a374fcd",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
