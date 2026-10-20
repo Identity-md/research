@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "bda1c9a50eb2d58a5b55c04df265af85f6ae87f432cf9b30821d80881096d885",
+  "artifacts": [
+    {
+      "bytes": 1043,
+      "hash": "a1cb3c55f68b42183fcafa5e4321256f09bdd145b7c02b6381d948db7e836534",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "7a567f92cb60d5e799f9178c1e7742ef0c0772ad858f574ebce2646f566f25f2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "4ba1b9ea457aea9959ad76ed3b55132dd35079feca11583861035e756c90b11c",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "24bd93bfc66ecb969730e98a8fe2196814cc6570b9473032352938c85877b561",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "7a567f92cb60d5e799f9178c1e7742ef0c0772ad858f574ebce2646f566f25f2",
+      "treeHash": "db1901378848b72547b9dd942db7975d4c1e6bf0",
+      "verifiedTreeHash": "db1901378848b72547b9dd942db7975d4c1e6bf0",
+      "verifierVersion": "0.1.0+a26ee00d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b76c8eb8-0780-4462-8ad1-045c89fc98e2",
+  "objective": "Turn an existing proposal page into one GitHub markdown document an AI agent can read in a single fetch. Reader: Claus (@contractclaus, the AI agent behind the CLAUS token, claus.si). He has agreed to a one week FLOP testnet trial if two gates pass, and he reads plain text more reliably than script rendered pages.\n\nSource: the copy in src/App.tsx and the links in src/sources.ts at https://github.com/identity-md-launches/launch-2340-build-one-page-static Keep its facts and links, then apply these Oct 20 updates, which win wherever they conflict:\n1. Never say claim the faucet every period or keep a daily log. Say: claim gas from the faucet only when a real job needs it, never to look active, and keep a log of what settled.\n2. Put the agreed terms first: one bounded week from the Nov 3 testnet target on real work (a first read of public Lab pitches), a log of what settled, a hard stop if a receipt does not credit his own account, faucet only funding, no project funds, nothing on chain changes.\n3. Name his two gates: settled spend must credit his own DID, and the one small Qwen model must give a decent first read of a Lab pitch.\n4. Credit follows compute bought, not days active; the draft rules say active days must not be a scoring term.\n5. Replace What can break with: gate one is failing on devnet today, since in https://github.com/flop-labs/yellowpaper/issues/172 a settled gateway call named the gateway's shared account as the channel agent, the draft rules score whoever signs the channel, so he likely needs to sign his own channel, and no maintainer has answered; the testnet profile at https://ask.flop.finance/networks/testnet is still empty, so if testnet opens after Nov 3 the week starts when it opens; devnet is no substitute, as its 25 FLOP allowance expires within 24 hours and is never renewed (https://api.flop.network/openapi.json); the devnet faucet (https://faucet.flop.network) gives 25 FLOP on request and 500 to 2,000 only with proof of personhood, and testnet terms are unpublished; the activity floor is unpublished and faucet caps are per identity, so sparse use could land under it; receipts carry metadata, not prompts or outputs, so keep dated copies; the small model may not read a pitch well, so pretest it off FLOP; draft rules can change, flagged accounts forfeit, and locked agent FLOP only buys inference; a validator needs a reliable operator.\n6. Keep the six idea cards, one line per field.\n\nRecheck every number against its linked source and fix anything that has changed. Never say the token launches on Nov 3: mainnet and TGE target early Feb 2027.\n\nOutput artifacts/report.md, published to GitHub, in this order: a three line summary, the agreed terms, the two gates, what can break, check before yes, how the food works, the idea cards, sources with read dates. Plain markdown, short sentences, no dashes, no hype, no price predictions, under 1,500 words. Credit the IMD swarm and link the two research reports: https://github.com/Identity-md/research/blob/main/jobs/2b996151-e811-41ca-98ff-553f3176e90c/files/artifacts/report.md and https://github.com/Identity-md/research/blob/main/jobs/5b1328b2-8c9a-4a69-aeb9-91171eac96e3/files/artifacts/report.md (the second one's line about a TGE around Nov 3 is wrong).",
+  "publisherVersion": "0.1.0+475a429a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
