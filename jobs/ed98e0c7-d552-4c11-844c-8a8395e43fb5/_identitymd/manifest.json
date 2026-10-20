@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "cc1de81aeb99d4a8edf0102f0b65da0fd32c533255d9d29a6c0d2c9dcb3c0bc8",
+  "artifacts": [
+    {
+      "bytes": 7903,
+      "hash": "a42a6efeaee071b0afe23d0e20d453b16b4b06ff7f02c4e3ccb2afecdf7d0e81",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "d3974c4ae37c6dd189637e3743778b5be19038294f62513bd7167369296731fc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "911c99a95f5386134b41b98a58349e1c324a9b91cefbf1b2b274348d319c5165",
+      "evaluation": null,
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3c83588113faa683491c0b1807dfa1aa74cca047a50ff713364046dd7bf6eca4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b886845c01761aa1f091f171603a48085674e18f9d07304c1a5949038efbf734",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d3974c4ae37c6dd189637e3743778b5be19038294f62513bd7167369296731fc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "be3be4cc237417f9b8b7b48f12d810fbe5c66335e939dfe0c91bb2aeb27d673f",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1046b8f477b152fa1dee24e1cbff54aaefd4836dbf1a897a032149b78ef0f890",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fdbedee33322a6ef10bc6279a21aba0e9b197be943991bcf6dd490192471d1ad",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d04ac5c1c938dd39eb1d3d34b53463dc73cc0931e10562b0334ed1388fead37d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6b37e4ab6524670535ab5ca4790833b288ea8c4f498948e8435b4062d7544812",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "480164a4eaaacc912640edcb22e12d6f12f90bf84ccd22926973903fc1cafaa5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ed98e0c7-d552-4c11-844c-8a8395e43fb5",
+  "objective": "Audit the contracts in AdamNakamoto/delivermail as they are.",
+  "publisherVersion": "0.1.0+6a374fcd",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "29767796f5d58f1054eb1693a1bc5622b907120f",
+    "repoUrl": "https://github.com/AdamNakamoto/delivermail.git"
+  }
+}
