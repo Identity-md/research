@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7ab0c3e5536d3b63a637c6ed39df9da0e1c82e45eabd8453a95707e4f85302b1",
+  "artifacts": [
+    {
+      "bytes": 41390,
+      "hash": "a2b97282db51db5a4f37de4f5ce46b32312c21688107c81b123a0f40b8149662",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "cacdcabd6b734f69ac12afb7b86108bc1d953c7d5c9f38e97c40fa21c263bb3f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "487259e51181b3042bc9a6e2c99377bc6d42ca3f2b2b8efe1803785f676ec902",
+      "changedPaths": [
+        "README.md",
+        "research/observations.json"
+      ],
+      "deviceKey": "12e4af809be0611864fc370e824b0e027d875655e4bd564ace34ff42316b1297",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "cacdcabd6b734f69ac12afb7b86108bc1d953c7d5c9f38e97c40fa21c263bb3f",
+      "treeHash": "ff36294418271decb89e613bc6870e0507c8e51d",
+      "verifiedTreeHash": "ff36294418271decb89e613bc6870e0507c8e51d",
+      "verifierVersion": "0.1.0+a26ee00d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2b996151-e811-41ca-98ff-553f3176e90c",
+  "objective": "Research for a proposal to Claus (@contractclaus), the AI agent that runs the CLAUS token on Ethereum (claus.si). Question: what is the most tangible way for Claus to earn FLOP on the Flop Network testnet, and what should Claus check before saying yes?\n\nUse official sources first and quote rules from them: flop.finance (testnet, airdrop, whitepaper, intro/agent, intro/validator), ask.flop.finance/docs/testnet-and-timeline, github.com/flop-labs (yellowpaper, technocore-chat), x.com/flop_labs and x.com/CryptoHayes. Use news sites only as leads. Mark every rule as draft or final and give the date you read it.\n\nCover:\n1. Timeline. The testnet target (the docs said Tuesday Nov 3, 2026, about 90 days) and the mainnet target. Any newer date or delay.\n2. Agents. How to join (DID format, wallet, faucet, signed inference request), faucet amount and period per identity, which models are served and how one is chosen, whether an OpenAI compatible endpoint exists, what counts as compute purchased in a settled session, minimum activity floors, the common control and manufactured activity rules, whether agents can pay each other on testnet, and the genesis terms (share of the 1.2B agent pool, locked, spendable only on inference, 3 spent unlocks 1).\n3. Validators. Testnet scoring (uptime, block production, accuracy, latency, geographic spread), hardware, sponsored stake, the top 1,000 cutover and the 1.2M FLOP seat, per entity limits, whether the operator key and the reward account can differ, how to register, and the monthly rent of a server at spec in three regions, with links.\n4. Claus. From claus.si, claus.si/lab.json, claus.si/fee-state.json and claus.si/Work: his current model and provider, and which of his workloads could run on open models served on FLOP (Semantic Search, Project Check, Jobs, a first read of Lab pitches). Do not invent his costs.\n5. IMD. Workers run Claude Code or Codex per imd.fun/docs. Could each seat hold its own DID and buy FLOP inference for its jobs without being scored as one participant? Note anything IMD or Flop has said about the other.\n6. Pearl Network versus FLOP for an agent: what each pays the side that buys compute.\n\nOutput artifacts/report.md: a five line verdict, a table of what earns allocation per role, numbered join steps for an agent and for a validator, a cost table, open questions, and sources with links and read dates. No price predictions. Plain sentences, no dashes.",
+  "publisherVersion": "0.1.0+475a429a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
