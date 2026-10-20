@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "481c1488cd7d72a3974b4c812bec9f0c14fe02504c58b3a21f47f30c62b78b61",
+  "artifacts": [
+    {
+      "bytes": 27279,
+      "hash": "e9b1966871bd0cc2a4fe46884803457e75678b70b07f213de03e7d84105739e2",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "fc315fb2a2bad1fff100c18720781c265a7348c8541365934a53bf243cce511d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa2b7fcb5f53535ac44ad7be9e508551e18135c9c2e793f584abb7bd60b49796",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "04101ddfa9c89e1bc248d0f26875ef9e66cfb9a1c17b4d9ebb381a7cad7891ba",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a9662a76cb5f51d178c6d5ff9e9a5da33ad63feb5a9ef85547ee127dbf9fd6f",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "996b1a4b5800aa332d2118954a6e7af2d8a2bcc9493ae84285eb45119623bf00",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "be85220723d9ce9de7e756e35e2d36f7f05455c7d4db6cefcce13190a997735e",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a9a70a55d056b00969d57d60849742f72d2e9b7b0814e3ac1c5ff65d855fa29e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d192c3efd847050aa8b29c6a95e07900fceecc329b0007a266430d96159a64c9",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6c46e4654d412ce7098037eb5050c5600991fbec4bbf64e92343915e98e36fb5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c872aaeb2e58b0807d47a9f1fc4ce6328994ba6566c35ae5c14ddb02f5655265",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fc315fb2a2bad1fff100c18720781c265a7348c8541365934a53bf243cce511d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5fff9f74-06f9-4039-a489-d9c24b45c9df",
+  "objective": "Audit the OverflowKeeper contract in this repository (Solidity 0.8.26, Foundry). Primary target: src/OverflowKeeper.sol, a Gnosis Safe MODULE. Also in scope: script/DeployKeeper.s.sol (pinned deploy). Read for context: src/LifeForceVault.sol and src/SvoStaking.sol (both immutable, deployed, separately audited: treat as fixed external contracts the keeper drives), src/Interfaces.sol (the reentrancy Guard mixin; 'Guard' here is NOT a Safe guard), KEEPER.md (design, authority limits, runbooks, prior review notes), STAKING.md, test/OverflowKeeper.t.sol, test/AdversarialKeeperA.t.sol, test/AdversarialKeeperB.t.sol (the last two were written by adversarial reviewers; their MockSafe models Safe 1.5.0 module semantics: GS104 revert when not enabled, inner failure returned as success=false with return data, optional module guard pre/post hooks). Out of scope: the hook, the token and the vault's own logic. Build/test: forge build && forge test --match-path 'test/*Keeper*'. Write nothing to the repository; deliver report.md with a machine-readable JSON appendix. Tone: factual; no claims of safety beyond the evidence; no investment language.\n\nDEPLOYMENT CONTEXT. Robinhood Chain, id 4663. The LifeForceVault 0x2001318118e1B3DF1e653E0999926bdAa48A5A52 holds IMD (0x5F7Bb59365ce557C26dbcAa4EE9d39A4b95B7127, an ERC-20 with a single-key owner, a blocked(address) blocklist and a transfer gate: treat as untrusted) split 70/30 into an inference reserve (pays for an AI voice service) and a buyback reserve; only the hard-coded REFUEL_SAFE 0xEb57c52272B90F989C41B739e2ccc5f00bF7697C (Safe v1.5.0 proxy, 2-of-3, no modules, no guards today) can call withdrawInference(amount), which sends IMD to that Safe. SvoStaking 0xe8ebB026Ff49f139aBc50C3Af64bdFebbF28f533 streams IMD it receives to SVO stakers over 7 days when anyone calls notify(); while a stream runs notify() reverts unless the new IMD is at least a tenth of what is left, and also reverts when the total is below 7 days of wei or above MAX_STREAM (1e40). Until now the Safe's owners had to sign a batch (withdraw, transfer, notify) to move the overflow, and twice it got stuck in the Safe queue.\n\nWHAT IT DOES. Once the Safe's owners enable the keeper as a module (enableModule, one 2-of-3 tx), sweep() is permissionless: amount = vault.inferenceReserve() - full (full = 25 IMD at deploy; setFull and setMinSweep are callable only by the Safe); it reverts NothingToSweep below minSweep (1 IMD) and Blocked when IMD's blocked() is non-zero for the vault, the Safe or the staking contract. Through execTransactionFromModuleReturnData (operation 0 only) it makes the Safe call vault.withdrawInference(amount), checks the Safe's IMD balance rose by exactly amount (else SafeBalanceMismatch), makes the Safe transfer FEE_BPS = 50 (0.5%) of it to msg.sender and the rest to the staking contract, checks the Safe's balance is back to where it started, then calls staking.notify() itself only if a mirror of notify()'s checks (including the fold of emission that ran while nobody was staked) says it will pass; otherwise the IMD waits in the staking contract for a later sweep or a direct notify(). preview() predicts all of this. No owner, no upgrade, holds no tokens, nonReentrant. MIN_SWEEP_FLOOR = 7 days * 10000 / 9950 + 1 wei. The constructor checks vault.REFUEL_SAFE(), vault.IMD(), staking.rewardToken() == IMD and staking.token() == vault.token().\n\nAUDIT SCOPE. (1) SECURITY: every path by which the module could make the Safe move more than the computed overflow, touch the Safe's own IMD, ETH or other tokens, delegatecall, or change the Safe's configuration; the balance-check invariant against a fee-on-transfer, false-returning, callback-making, rebasing or blocklisting IMD and against a Safe or module guard that reports success for a failed inner call; the view-vs-execution reserve math (the vault's checkpoint and shortfall clamp) and whether withdrawInference can ever revert or leave the reserve different from full; the notify() mirror (every revert branch of SvoStaking.notify(), including undistributed, lastUpdate before the first stream, periodFinish == now, the leftover/10 boundary, dust and MAX_STREAM): can the keeper call a notify() that reverts, or park IMD that would have streamed, and can parked IMD be stranded; fee economics (fee farming, timing, sandwiching around fee arrivals, repeated minimal sweeps, stretching the staking stream horizon); griefing or DoS of sweep() and of the Safe; reentrancy via the fee transfer, IMD callbacks or notify(); front-running of the Safe's own setFull/disableModule; the moment enableModule executes (any overflow present is sweepable at once); Safe 1.5.0 ModuleManager semantics (GS104, return data, module guard checkModuleTransaction/checkAfterModuleExecution, SafeL2 events) and whether the MockSafe in the tests hides anything; the deploy script (chain pin, constants, exact-value overrides ALLOW_OTHER_FULL/ALLOW_OTHER_MIN_SWEEP, wei floors, read-back). (2) COMPLIANCE: do code, NatSpec, KEEPER.md and STAKING.md match behaviour; list every claim the code does not enforce; centralisation powers (the Safe's setFull, setMinSweep, disableModule; IMD owner's blocklist). (3) CODE QUALITY: NatSpec and event accuracy, low-level calls, gas, test gaps, anything the three prior reviews missed.\n\nSTANDARDS. Safe module security guidance (modules bypass the owner threshold; least authority); SWC Registry; Consensys Smart Contract Best Practices; OWASP Smart Contract Top 10; ERC-20 non-standard behaviour (compare OpenZeppelin SafeERC20).\n\nALREADY REVIEWED (2026-10-20, three independent AI adversarial reviews, no critical or high findings; fixes applied, see KEEPER.md 'Review notes'). Verify each fix and try to break it: (1) SafeBalanceMismatch invariant (exactly amount arrives; the Safe ends where it started); (2) constructor refuses a staking contract for another token; (3) blocked() read tolerates non-bool answers (any non-zero word = blocked, missing function = not blocked); (4) MIN_SWEEP_FLOOR grossed up for the fee; (5) the notify() mirror folds emission with nobody staked exactly as _updateGlobal does; (6) preview().ready covers the vault, the Safe and the staking contract.\n\nKNOWN AND ACCEPTED (do not report as new, but dispute them if you disagree). The 0.5% fee on a 1 IMD sweep is dust, so the team or a cron is the realistic caller. Each sweep that meets the tenth rule re-spreads the remainder over a fresh week (the staking contract's design); stakers lose nothing in total. A sweep under the tenth rule parks IMD in the staking contract until a later sweep or the stream's end; anyone may call notify() directly. The Safe's owners can set full to 0 (sweep everything) or huge (pause); that is Safe policy, no worse than the Safe's existing power to withdraw everything by hand. setFull/disableModule are visible before execution and a sweep can land first at the old level. A look-alike vault or staking contract can satisfy the constructor's identity checks; the deploy script pins the real addresses and the enable runbook requires each signer to read vault()/staking()/full() back before signing. IMD blocking the Safe or the vault makes every withdrawal fail, keeper or not.\n\nREPORT FORMAT. Summary with overall risk rating and counts by severity; findings table (ID, severity, category, file:line, title) most severe first; per finding a concrete exploit or failing Foundry test, impact, fix and confidence; what was checked and found fine; assumptions; JSON appendix [{id, severity, category, file, line, title, status}]. No generic advice.",
+  "publisherVersion": "0.1.0+475a429a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "90746ea5aa7aea70ad73eb0d6630ed96303af955",
+    "repoUrl": "https://github.com/SovrnOne/sovrn-contracts.git"
+  }
+}
