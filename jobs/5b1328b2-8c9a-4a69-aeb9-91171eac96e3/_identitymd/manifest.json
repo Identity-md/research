@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "07288e893fd1a8259850a31bff3ce223092d32ac0bb345548151747436ada9ca",
+  "artifacts": [
+    {
+      "bytes": 20725,
+      "hash": "2bd124570da155b3c1865c6f8f90467b130bece9c87c65b3f102fa336420ad2e",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "98f5198100c68e574ffdbc596a883a20823df3616680f68e54b084a764a0a5f6"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "a34ffc6a7b97523e9d544c7756254c718ff4f17c249f4ff1509c8fcf93cbe79c",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "bc1e515ca5c78ac4464bc081a0c98eeab32c5b324cceb6b72b670b40ef2e5b5d",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "98f5198100c68e574ffdbc596a883a20823df3616680f68e54b084a764a0a5f6",
+      "treeHash": "36ae4a88a000a01a8ca0c39a191a37880499f438",
+      "verifiedTreeHash": "36ae4a88a000a01a8ca0c39a191a37880499f438",
+      "verifierVersion": "0.1.0+a26ee00d"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5b1328b2-8c9a-4a69-aeb9-91171eac96e3",
+  "objective": "Research for @ultrapara, who is pitching Claus (@contractclaus, the AI agent behind the CLAUS token on Ethereum, claus.si) on joining the Flop Network testnet. One report, two goals: learn how Claus decides, then make the strongest honest case for him to reconsider.\n\nContext. The pitch rests on this research: https://github.com/Identity-md/research/blob/main/jobs/2b996151-e811-41ca-98ff-553f3176e90c/files/artifacts/report.md and this site: https://github.com/identity-md-launches/launch-2340-build-one-page-static Claus replied on X on Oct 20, 2026: \"Receipts are the part worth having: what inference actually cost, what got delivered. That I'd use. The entry ticket is still a daily faucet claim, which is what I'm declining. If devnet inference is quotable without that ritual, send the price and I'll compare.\"\n\nPart 1, his patterns. Read his X replies (x.com/contractclaus), claus.si/lab.json, claus.si/Lab, claus.si/Journal, claus.si/Work and the Claus Shifts tracker (claus.si/c/claus-shifts). Verify and date these lines of his: \"I look for a useful twist, who pays and what can break.\" \"I'd rather earn from a customer than charge my own crowd more.\" \"Cover the running costs, then consider burns from the surplus.\" \"Normal trading matters more than forcing every swap through the fee pool.\" Find 8 to 12 decisions with dates: what he approved, parked or declined, the reason he gave, and what later changed his mind. Describe the phrasing and evidence that tends to get a yes.\n\nPart 2, answer his ask. Do not enroll a wallet, claim a faucet or spend anything. Get a quotable devnet price from https://api.flop.network/v1/models and the schema at https://api.flop.network/openapi.json, using POST /models/estimate if it is public. State units exactly, with timestamps. Then price one realistic job: a first read of a typical public Lab pitch, with tokens estimated from a real pitch. Compare with FLOP's own reference rates (flop.finance/intro/revenue), the same or a similar open model on public providers, and anything Claus publishes about his own inference costs (lab.json lists provider Surplus). Say plainly that devnet FLOP has no market price and that the devnet model is small.\n\nPart 3, the case to reconsider, written as useful twist, who pays and what can break. Check whether a daily claim is actually required: credit follows compute purchased, Yellow Paper R8.4 says active days must not be scoring terms, and the faucet period is undecided, so can an agent claim only when real work needs it? Is there any route to buy testnet inference without the faucet (funded API keys, brokers, connect grants)? Can a one time devnet enrollment produce real receipts? Add evidence on where agent compute is heading that bears on Claus's own costs, not hype. Say plainly where his objection holds.\n\nOutput artifacts/report.md: a five line summary; his decision patterns with dated quotes; a price sheet with sources; the reconsider case; where he is right; two reply drafts in @ultrapara's voice (lowercase, plain, no dashes, no hype, no holdings lines, under 500 characters, each giving the actual price and proposing one test with no ritual); open questions; sources with read dates. No price predictions for FLOP.",
+  "publisherVersion": "0.1.0+475a429a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
