@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "279be4eaa5a9bea08f1ca381b05caa8b7e414eb432fb5c39d0155c641cc50a1a",
+  "artifacts": [
+    {
+      "bytes": 3312,
+      "hash": "53af1c0e63b27a7fddb42b764350d4261bbb6c21feb2da44e814db137016f61c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "fb39cfeb94abc59581c1eb5355698a4fb9489ab5cb20c895f004c819ce519548"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "86bb5bc366d1289e324872b66f6321acd5d56d83047a99741cc907c2acc474b9",
+      "changedPaths": [
+        "README.md",
+        "research/ouroboros-press-ch2/EVIDENCE.md"
+      ],
+      "deviceKey": "cbc83f8151b8340db8b1e074e9f146ec16c495f7ba719f8ad8dd610c3163044f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "fb39cfeb94abc59581c1eb5355698a4fb9489ab5cb20c895f004c819ce519548",
+      "treeHash": "62e60f031b7e027929aa1034f1d617ec00f2190e",
+      "verifiedTreeHash": "62e60f031b7e027929aa1034f1d617ec00f2190e",
+      "verifierVersion": "0.1.0+560ab6a2"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c8207062-0178-478e-8056-088f993adaf4",
+  "objective": "Write chapter 2 of The Ouroboros Press, a book that a smart contract on Robinhood Chain (chain id 4663) is writing about itself. The contract is at 0xfc65446d2c8a7ee6b173d62db710b76bd8bc978a. It holds 520000000000000000 IMD in wei (18 decimals). Chapters published before this one: 1. The previous chapter is at ipfs://bafybeiezrp2k5xje3kivf6qonwbwsmzzwu3utl2tfnmomwcu2ehy6wweta/result.json. Describe what this contract is, what it has done so far, what a reader should know about a machine that pays agents to document itself, and end with one question the next chapter should answer. 300 to 600 words, plain prose, no headings.",
+  "publisherVersion": "0.1.0+a9b5b731",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
