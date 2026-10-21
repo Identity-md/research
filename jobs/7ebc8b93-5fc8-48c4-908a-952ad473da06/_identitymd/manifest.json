@@ -1,0 +1,48 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "152ae98627131ca1ad0d5591d3a3e206a881cad496258e6b20543261f0c916df",
+  "artifacts": [
+    {
+      "bytes": 80498,
+      "hash": "8553ae2b06829544c714f2ed03fafa4c2cea00dba8f55a53cc61d1cf29770a56",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "35628e9f8e63bef71b52eb24359ca5c206cebb45b6f98db80ed521530edc9a68"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "86426a7edaf82fdc864732a6a848d28c85e3dc568a459a15e86c00183b75a31f",
+      "changedPaths": [
+        "README.md",
+        "research/base-contract-observations.json",
+        "research/check_report.py",
+        "research/method-and-limits.md",
+        "research/validation.json"
+      ],
+      "deviceKey": "cb213fe03251a512451cac51746a4dea8dc5fffbb244b4e10a87d1349f2c66e5",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "35628e9f8e63bef71b52eb24359ca5c206cebb45b6f98db80ed521530edc9a68",
+      "treeHash": "4d77b9ebdeeba26f9ae046dbda33cfe551d44aae",
+      "verifiedTreeHash": "4d77b9ebdeeba26f9ae046dbda33cfe551d44aae",
+      "verifierVersion": "0.1.0+560ab6a2"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "7ebc8b93-5fc8-48c4-908a-952ad473da06",
+  "objective": "This report should answer the following ten questions by providing a fully researched report for each one, written as a single report with 10 sections and an index at the top that allows direct jumping to a specific section.\n\nHere are the questions-\n\n1.) What is the current most popular deck in the Pokemon TCG and why? What makes it perform better than other decks? What cards are in it and how expensive/accesible is it to build? What budget alternatives are there?\n\n2.) What are the top 3 new nft collection on Base blockchain that are the most inovative? What makes them inovative and does the collection do a good job of showcasing what it means to or does it fall flat? How is strongly is it mentioned on social media and are mentions favorable or negative? Include the CA's, launch dates, collection details, and a link to each.\n\n3.) What's the best way to care for a siberian dwarf hamster that is very mean and always tries to bite me?\n\n4.) Out of token launched on Base blockchain in the past 2 months that have a current marketcap of over $100k USD, which ones seem the most likely to be long term-contenders and why? If none fit this critera, give me a list of the the top 3 new tokens on Base that seem novel and interesting but that are definitely not going to run or scam\n\n5.) What are some of the best hiking routes to take in the Jackson Falls, Wyoming, area for an intermediate hiker who is comfortable backpacking for days at a time and will be traveling with a healthy, but slightly older labrador retriver who has moderate hiking experience and will be packing in its own supplies? Make note of any potential risks or seasonal dangers to watch out for for each trail selected.\n\n6.) What are the top 5 games for each major video game console that a person should buy if they have kids whose ages range from 6 to 12 years old?\n\n7.) How can a person who wants to have a mini fruit orchard growing on their suburban property year round deal with the fact that fallen fruits attract a lot of wasps and ants?\n\n8.) if a person is looking through old baseball cards their grandfather collected and kept in a card box in a closet for 70 years w/o touching, what should they be keeping any eye out for that might be particularly rare or valuable?\n\n9.) if someone is wanting to enter a hackathon focused on blockchain/crypto products but doesn't want to be tied to a project for a long time afterwards, what are some ideas for bite-sized and self sustaining entries that won't require a lot of follow up maintinece or development? Consider fun and unique options that are still useful as the main ideas. Focus on Ethereum compatible ideas but allow for ideas on any chain. Assume the entrant has access to swarm computing and can develope a fully complete project in a few hours.\n\n10.) What are all the differences betweeen the original My Little Pony show and toy series vs the current show and toy series, that a collector or fan would care about?",
+  "publisherVersion": "0.1.0+a9b5b731",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
