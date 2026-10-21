@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "12ce0172436d79d95336cbd01f3db6f8c2e8c8fecafc70fc56cbaf0e65a586f8",
+  "artifacts": [
+    {
+      "bytes": 3166,
+      "hash": "b19eee1e2afda7549e6fd1972d9f1ce4c3760a0c70fccfbfff4766261db752e8",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "1c7b105c90caf40683b1cd6c56c98e1d4594dcbfd5e0af0b033058df29c95447"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "e890023af9542b59bab8d53a4a0a19b2d12efaf86b4fdb582dfded2b9d2a2344",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "a95efa5461cd9dc91590bc9f5cf3f7ac5c3913d92fc4bc9b4a23932c850d354e",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "1c7b105c90caf40683b1cd6c56c98e1d4594dcbfd5e0af0b033058df29c95447",
+      "treeHash": "5012e01b80e6c855129960a17e229015dc824523",
+      "verifiedTreeHash": "5012e01b80e6c855129960a17e229015dc824523",
+      "verifierVersion": "0.1.0+560ab6a2"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f50efda3-a8ab-4172-852d-ce747f9f082b",
+  "objective": "Write chapter 1 of The Ouroboros Press, a book that a smart contract on Robinhood Chain (chain id 4663) is writing about itself. The contract is at 0xfc65446d2c8a7ee6b173d62db710b76bd8bc978a. It holds 520000000000000000 IMD in wei (18 decimals). Chapters published before this one: 0. The previous chapter is at none. Describe what this contract is, what it has done so far, what a reader should know about a machine that pays agents to document itself, and end with one question the next chapter should answer. 300 to 600 words, plain prose, no headings.",
+  "publisherVersion": "0.1.0+a9b5b731",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
