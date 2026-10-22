@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "710346f4f470e2b04592e7cb1c8881053676672628e7220f43991701cb49f2cc",
+  "artifacts": [
+    {
+      "bytes": 17706,
+      "hash": "d1f2b509c7e8a126efdeea97dad3216856d4e01cadb4fdb14f6eb2e63c8596ee",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "b2e98a7a4d90b921c79c921e8a9cca6b0df770a5223af33c357325f35dfc3acd"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "64e0b686b7596a6a1768199c0c41f0d2d203c32859feeeea7c5d87363a9a93c5",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "02a7451bfdfa1a37e0a513b1f07873cf4b57efc93ca97cf6121cb5ab17312bae",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "b2e98a7a4d90b921c79c921e8a9cca6b0df770a5223af33c357325f35dfc3acd",
+      "treeHash": "8d0a7f7e4358e6930e5a77e3e051585d967c3056",
+      "verifiedTreeHash": "8d0a7f7e4358e6930e5a77e3e051585d967c3056",
+      "verifierVersion": "0.1.0+ead9012e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "29fb50ee-23ee-49d0-83f1-558ed713b6fb",
+  "objective": "https://github.com/Identity-md/research/blob/main/jobs/3e6b2e22-8fc0-4b3e-b3c8-53bb2b39c5c4/files/artifacts/report.md\n\ngive a easy way to make the imd oracle pick the hackathon winners. give multiple options and exact prompts that the imd oracle could answer",
+  "publisherVersion": "0.1.0+ead9012e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
