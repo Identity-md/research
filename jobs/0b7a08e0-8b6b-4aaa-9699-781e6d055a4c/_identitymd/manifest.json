@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "f15336ab7337f85955bd0c76c6afe2ac9701ef4655766de50e23c61e1619ec5c",
+  "artifacts": [
+    {
+      "bytes": 253291,
+      "hash": "2960fb81f1e2bfa1c4d477527a55dda69f63a1d979b8c6fe3882e495decd0bde",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "e52d5676f3f5556b9662ddc8c5caa5f1c3d67effb62323204173d0b53b3ccabb"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "1e8d31bda8329779377e8dfe028b926315fa85146c9e44402ed29834152c58a6",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "03845cacb54c3a737bb490638adf9db97b70c1ddeedd2fd50a31e67223e19cea",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "e52d5676f3f5556b9662ddc8c5caa5f1c3d67effb62323204173d0b53b3ccabb",
+      "treeHash": "17b33e23cdb087abb52bd73525c063e175ebb6e5",
+      "verifiedTreeHash": "17b33e23cdb087abb52bd73525c063e175ebb6e5",
+      "verifierVersion": "0.1.0+ead9012e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0b7a08e0-8b6b-4aaa-9699-781e6d055a4c",
+  "objective": "https://github.com/Identity-md/research/blob/911de4cb74c748d9c5727c7295dd38077e3aed51/jobs/3e6b2e22-8fc0-4b3e-b3c8-53bb2b39c5c4/files/artifacts/report.md\n\nadd more info in the All submissions: individual evidence and gaps. \nadd timestamps of when each project each used imd and any other info on the projects. include all the info in the first report and just add more info",
+  "publisherVersion": "0.1.0+ead9012e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
