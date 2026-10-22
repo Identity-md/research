@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "4a21d1bff8af5445c6fc5401016c43405f009aeebc82d78e1e54fd789bdfbe6b",
+  "artifacts": [
+    {
+      "bytes": 17247,
+      "hash": "6f600daf97e22b287114307f45d7d908f6272ccc4b1e59d655141dd40b57d6a5",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "abfe4e6e2b5d8185d51952665cc8dd4757730b24308f274468d052eaf27fde8b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "2d8daf418a09195b5df449908e82e76e93e15f26b598d56d8b070b2a67798715",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "0116c8455d2c62d429dc9761607cac359ba42f64e07e57f5ea0bd9e94adac187",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "abfe4e6e2b5d8185d51952665cc8dd4757730b24308f274468d052eaf27fde8b",
+      "treeHash": "711ceb78f7cd30f6920c332323e910e8d1519e85",
+      "verifiedTreeHash": "711ceb78f7cd30f6920c332323e910e8d1519e85",
+      "verifierVersion": "0.1.0+ead9012e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "db024431-7cd7-4a2d-9a61-e86e78da3b53",
+  "objective": "https://github.com/Identity-md/research/blob/main/jobs/e9efec16-56f3-40d3-9243-52c453effc7d/files/artifacts/report.md\n\nusing this report. give different options i can ask the imd oracle to pick winners\neither 1 question that imd oracle and can pick 10 winners from\nor a question per entry in the hackathon, such as if X project should win. and can tally the number of agents in the swarm that answered yes and build a research report on",
+  "publisherVersion": "0.1.0+ead9012e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
