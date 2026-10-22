@@ -1,0 +1,48 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "bd58ae6cd8f44c27be595b750a536a5d4dd6e8b87d8be62fc183f3db02f6cea3",
+  "artifacts": [
+    {
+      "bytes": 358179,
+      "hash": "a747482cdb9f65b85948ed2d007f40375ab027f6d56d57d10767ec7a0cb98d78",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "3f06fcbde2ece83e8c85cde13bfe841cf2e8ac6c82d5bd02bd029699c096478a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "04f2c33ea783f8148fc1ab2f5f3a7ce09fcf0a2355bd1eb7f65b420d6b305d4b",
+      "changedPaths": [
+        "README.md",
+        "research/build.py",
+        "research/contracts-scan.csv",
+        "research/fx.py",
+        "research/scan.py"
+      ],
+      "deviceKey": "00920b27421b9a80aeed74a23ad42a062ec72f51a48ab3599e30f3347e7416ea",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "3f06fcbde2ece83e8c85cde13bfe841cf2e8ac6c82d5bd02bd029699c096478a",
+      "treeHash": "61797e2435ef38eebb4a64be354328b58d43e195",
+      "verifiedTreeHash": "61797e2435ef38eebb4a64be354328b58d43e195",
+      "verifierVersion": "0.1.0+ead9012e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e2b921c9-35eb-48bb-add4-2e8f42d944b2",
+  "objective": "https://github.com/Identity-md/research/blob/main/jobs/0b7a08e0-8b6b-4aaa-9699-781e6d055a4c/files/artifacts/report.md\n\ngo over all the contracts mentioned on each projects X account or website and add it in this report. and if those contracts were made on imd or audited on imd or if imd was used in anyway.",
+  "publisherVersion": "0.1.0+ead9012e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
