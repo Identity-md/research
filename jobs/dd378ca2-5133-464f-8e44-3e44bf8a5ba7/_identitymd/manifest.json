@@ -1,0 +1,76 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "36b9a1acf14d7f4a86ef9b3eb98e79c746a8bba943329d66fe4a0eb38991e02b",
+  "artifacts": [
+    {
+      "bytes": 67979,
+      "hash": "e0cac1b74b1d539a61180aa5227001d8b197ce6766219cbc5799796d1efa49bc",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "f88bcbb937bc057faff296fe68e6d07f187bfb710761fa6fa39384fb3c115cfa"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "52ff15ad193a905b480a0f740d3c949a78d5e5df7a1a42d19582537f9ab37312",
+      "changedPaths": [
+        "README.md",
+        "evidence/METHOD.md",
+        "evidence/block-pins.json",
+        "evidence/burn-executor-state.json",
+        "evidence/capabilities.json",
+        "evidence/check-results.txt",
+        "evidence/claus-authority.json",
+        "evidence/claus-fees.json",
+        "evidence/claus-freeze-events.json",
+        "evidence/claus-owner-code.json",
+        "evidence/contract-state.json",
+        "evidence/contracts/BaseBurnReceiver.sol",
+        "evidence/contracts/BurnExecutor.sol",
+        "evidence/contracts/ClausGovernance.sol",
+        "evidence/contracts/ComputeProtectedProgram.sol",
+        "evidence/contracts/Intake.sol",
+        "evidence/contracts/PoolFees.sol",
+        "evidence/contracts/ProtectedToken.sol",
+        "evidence/contracts/TradeExtensionHost.sol",
+        "evidence/factory-fees.json",
+        "evidence/fee-sample.json",
+        "evidence/launch-records.json",
+        "evidence/launch-selection.json",
+        "evidence/manifest.json",
+        "evidence/octo-search-scope.json",
+        "evidence/oracle-attestation.json",
+        "evidence/ouro-intake.json",
+        "evidence/signature-check.json",
+        "evidence/source-pins.json",
+        "evidence/swap-logs.json",
+        "evidence/swarm-health.json",
+        "evidence/verified-contracts.json",
+        "scripts/check_report.py"
+      ],
+      "deviceKey": "0fce87924985c9baa5157fddf1f0a6b9eeaaa64356c663e736c73b940f8b0f30",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "f88bcbb937bc057faff296fe68e6d07f187bfb710761fa6fa39384fb3c115cfa",
+      "treeHash": "32dc842fb2fd7b087f830359f05f295ad006e521",
+      "verifiedTreeHash": "32dc842fb2fd7b087f830359f05f295ad006e521",
+      "verifierVersion": "0.1.0+1103e27b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "dd378ca2-5133-464f-8e44-3e44bf8a5ba7",
+  "objective": "RESEARCH JOB. Answer one question: is the idea below worth building and launching within 14 days on IMD or on CLAUS, and if it is, what exactly is the smallest version that proves it?\n\nStart the report by restating this question in one sentence.\n\nTHE IDEA\nIDEA A: FEE TO JOBS\nA token whose hook routes a fixed slice of every swap into a job vault. The vault can only spend on IMD jobs ordered through Intake from briefs that holders approved, and it burns whatever is unspent at the end of each epoch. Every delivered report, site or contract is linked onchain, so the token keeps building after its creator stops. Test it against Ouroboros Press (https://github.com/AaroneGeorge/ouroboros-press) and OCTO (https://github.com/RobertKodes/octo). Size the real fee streams of live IMD launches against 0.5 IMD per job, check whether IMD's launch policy allows a hook fee routed to a job vault, and find out whether payment can wait until a job is accepted.\n\nHARD REQUIREMENTS (an idea that cannot meet all seven is a no)\n1. AI agents do onchain work that plain code cannot do, and are paid onchain for it.\n2. A Uniswap v4 hook is where the rules are enforced. Name every callback it uses.\n3. No transfer fees, transfer restrictions, venue locks or minting after launch. IMD's launch factory refuses these and so do we.\n4. No admin key, or one behind a timelock of at least 24 hours. Say which.\n5. A fair opening: show how snipers and bundled buys are handled.\n6. Fees reward holders or liquidity without killing volume.\n7. Zero knowledge only where it removes a trusted party. It is optional.\n\nFACTS YOU MAY START FROM (verify each one and cite it)\n1. IMD ordering, prices and launch rules: https://imd.fun/docs and https://api.imd.fun/requests/capabilities. A job, launch or oracle request costs 0.5 IMD. Schedules run no faster than every 10 minutes for oracles and every 30 minutes for jobs. Custom Uniswap v4 hook launches run on Ethereum (1) and Robinhood Chain (4663), and the swarm takes 10 percent of supply.\n2. Swarm state: https://api.imd.fun/swarm. Oracle panels return one EIP-712 signature that a contract can check.\n3. IMD Intake contract on chains 1 and 4663: 0xa43e6f75ee006411f79ac1c84120606c2330de82\n4. ERC-8004 registries, per https://github.com/erc-8004/erc-8004-contracts: identity 0x8004A169FB4a3325136EB29fA0ceB6D2e539a432 and reputation 0x8004BAa17C55a88189AE136b182e5fdA19dE9b63 on Ethereum and Robinhood Chain. The official repo lists no validation registry deployment.\n5. CLAUS on Ethereum: Uniswap v4 hook 0x37Bfb8AC7C960E558657871D41Ca70E07e7DbfFf, frozen since Oct 15, 2026. Its owner can still set a trade module through TradeExtensionHost 0xea0436465676eA7001535Bfe2E5cbd4b137b7f91, which sees each swap's sender and hookData and returns fee allocations capped at 14.9 percent. Live fee plan: https://claus.si/fee-state.json\n6. A v4 hook sees the router that called the PoolManager as the sender, not the trader. Any design that meters traders must say how it identifies them.\n\nEVIDENCE RULES\n1. Official docs and verified contracts first, then GitHub with the last commit date. X posts are leads only.\n2. Label every figure Record, Claim or Inference, with the date you read it.\n3. Verified addresses only. If you cannot verify one, write \"not found\".\n4. No invented numbers. Show every derivation.\n5. Restate every pin you used: commit, block, date.\n6. Do not deploy anything and do not run downloaded code.\n7. At least 15 citations. Never rest a conclusion on a single X post, a price page, or a project's own site alone.\n\nDELIVERABLE: artifacts/report.md with exactly these numbered sections\n1. Question restated\n2. Verdict in five lines: gap (real, partly served, or served), speed to MVP, the MVP in one line, the biggest reason it could fail, total IMD cost\n3. Competitor table with at least five rows: name, link, chain, status (live, testnet, unreleased), last activity date, overlap, what it misses\n4. Hook spec: callbacks and permission flags, hookData schema, fee math with one worked example, invariants, admin surface\n5. Agent spec: who signs what, any pinned oracle question (yes or no answers only), how work is verified before anyone is paid, how agents are paid, failure modes\n6. Economics: who pays on day one and why, unit costs including 0.5 IMD per job, break even\n7. Home fit: what IMD or CLAUS must provide or approve, and what happens if they say no\n8. Why now: what changed in the last 60 days that makes this buildable, with dated links\n9. MVP plan of 14 days or less: contracts, a Foundry test plan, and the exact IMD jobs to order after this one\n10. Kill criteria: at least three, each measurable\n11. Moonshot: the boldest version of this idea under the same evidence rules, its smallest falsifiable experiment under 14 days, who pays for it on day one, and one paragraph on why it might be a bad idea. No undated roadmap words such as soon, eventually or v2.\n12. Open questions and everything you could not verify\n13. Sources with read dates",
+  "publisherVersion": "0.1.0+1103e27b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
