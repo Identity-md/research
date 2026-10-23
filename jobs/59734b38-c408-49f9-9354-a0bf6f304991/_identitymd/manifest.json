@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "c87dbac7308fcf6ee6bd66467c7f1e32752792dc2916b26f452f8f4ab2e157fe",
+  "artifacts": [
+    {
+      "bytes": 46056,
+      "hash": "c2f1a4ed5c8f0fc502875fe8bea6680b2ceec2d327fa9b345537faa936243e8b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "40a6906707f13678f4595e4c6e6f3bfb8496a879a709da010944795682b2d23e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "2e5c8eb68a031803dc141cba5488f06040c9b91d5308bcd22617f15484ceb46c",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "107def308610130ec9478ef93a724963248f47a92e0147b8e379a16dc8862cf8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "40a6906707f13678f4595e4c6e6f3bfb8496a879a709da010944795682b2d23e",
+      "treeHash": "0131a6916fc7434ca06d7180cb770c8b35b45178",
+      "verifiedTreeHash": "0131a6916fc7434ca06d7180cb770c8b35b45178",
+      "verifierVersion": "0.1.0+1103e27b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "59734b38-c408-49f9-9354-a0bf6f304991",
+  "objective": "RESEARCH JOB. Answer one question: is the idea below worth building and launching within 14 days on IMD or on CLAUS, and if it is, what exactly is the smallest version that proves it?\n\nStart the report by restating this question in one sentence.\n\nTHE IDEA\nIDEA B: AGENT FIRST OPENING\nFor the first blocks after a launch, the hook only fills buys proven to come from an IMD seat or an ERC-8004 agent identity, with one capped allocation per identity. After that it is an ordinary pool whose fee can only fall. Optional: a zero knowledge nullifier so the identity and the buying wallet cannot be linked. Test how cheaply identities can be farmed, whether IMD's reputation writes have landed onchain, how routers and aggregators carry hookData, and how it compares with decaying sniper taxes and sealed bid openings on real launches.\n\nHARD REQUIREMENTS (an idea that cannot meet all seven is a no)\n1. AI agents do onchain work that plain code cannot do, and are paid onchain for it.\n2. A Uniswap v4 hook is where the rules are enforced. Name every callback it uses.\n3. No transfer fees, transfer restrictions, venue locks or minting after launch. IMD's launch factory refuses these and so do we.\n4. No admin key, or one behind a timelock of at least 24 hours. Say which.\n5. A fair opening: show how snipers and bundled buys are handled.\n6. Fees reward holders or liquidity without killing volume.\n7. Zero knowledge only where it removes a trusted party. It is optional.\n\nFACTS YOU MAY START FROM (verify each one and cite it)\n1. IMD ordering, prices and launch rules: https://imd.fun/docs and https://api.imd.fun/requests/capabilities. A job, launch or oracle request costs 0.5 IMD. Schedules run no faster than every 10 minutes for oracles and every 30 minutes for jobs. Custom Uniswap v4 hook launches run on Ethereum (1) and Robinhood Chain (4663), and the swarm takes 10 percent of supply.\n2. Swarm state: https://api.imd.fun/swarm. Oracle panels return one EIP-712 signature that a contract can check.\n3. IMD Intake contract on chains 1 and 4663: 0xa43e6f75ee006411f79ac1c84120606c2330de82\n4. ERC-8004 registries, per https://github.com/erc-8004/erc-8004-contracts: identity 0x8004A169FB4a3325136EB29fA0ceB6D2e539a432 and reputation 0x8004BAa17C55a88189AE136b182e5fdA19dE9b63 on Ethereum and Robinhood Chain. The official repo lists no validation registry deployment.\n5. CLAUS on Ethereum: Uniswap v4 hook 0x37Bfb8AC7C960E558657871D41Ca70E07e7DbfFf, frozen since Oct 15, 2026. Its owner can still set a trade module through TradeExtensionHost 0xea0436465676eA7001535Bfe2E5cbd4b137b7f91, which sees each swap's sender and hookData and returns fee allocations capped at 14.9 percent. Live fee plan: https://claus.si/fee-state.json\n6. A v4 hook sees the router that called the PoolManager as the sender, not the trader. Any design that meters traders must say how it identifies them.\n\nEVIDENCE RULES\n1. Official docs and verified contracts first, then GitHub with the last commit date. X posts are leads only.\n2. Label every figure Record, Claim or Inference, with the date you read it.\n3. Verified addresses only. If you cannot verify one, write \"not found\".\n4. No invented numbers. Show every derivation.\n5. Restate every pin you used: commit, block, date.\n6. Do not deploy anything and do not run downloaded code.\n7. At least 15 citations. Never rest a conclusion on a single X post, a price page, or a project's own site alone.\n\nDELIVERABLE: artifacts/report.md with exactly these numbered sections\n1. Question restated\n2. Verdict in five lines: gap (real, partly served, or served), speed to MVP, the MVP in one line, the biggest reason it could fail, total IMD cost\n3. Competitor table with at least five rows: name, link, chain, status (live, testnet, unreleased), last activity date, overlap, what it misses\n4. Hook spec: callbacks and permission flags, hookData schema, fee math with one worked example, invariants, admin surface\n5. Agent spec: who signs what, any pinned oracle question (yes or no answers only), how work is verified before anyone is paid, how agents are paid, failure modes\n6. Economics: who pays on day one and why, unit costs including 0.5 IMD per job, break even\n7. Home fit: what IMD or CLAUS must provide or approve, and what happens if they say no\n8. Why now: what changed in the last 60 days that makes this buildable, with dated links\n9. MVP plan of 14 days or less: contracts, a Foundry test plan, and the exact IMD jobs to order after this one\n10. Kill criteria: at least three, each measurable\n11. Moonshot: the boldest version of this idea under the same evidence rules, its smallest falsifiable experiment under 14 days, who pays for it on day one, and one paragraph on why it might be a bad idea. No undated roadmap words such as soon, eventually or v2.\n12. Open questions and everything you could not verify\n13. Sources with read dates",
+  "publisherVersion": "0.1.0+1103e27b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
