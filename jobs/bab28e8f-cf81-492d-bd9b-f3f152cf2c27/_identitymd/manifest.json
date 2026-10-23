@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "de5db781f893fcff546ca566cdb6bf44a752e8e7a98293f471d6876855e04a0c",
+  "artifacts": [
+    {
+      "bytes": 13289,
+      "hash": "d9625bbdb67de8108d80d14d62142101c43907d8e78080ed7bdac63cec2607f6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "5fc109be60bc78b67755004cd4271765fb0e59b7fea944502ffe56fc68954d0f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "c12b93685c7dfbb5a50eb1e08f8a4da05827dd87b51017d0ad5360323ec12d95",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "12fbd676b21225124c5208843b9edf7dc22f02becfa0a26d7b7b80570e7fc634",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5fc109be60bc78b67755004cd4271765fb0e59b7fea944502ffe56fc68954d0f",
+      "treeHash": "8dc0329765f43a8dc551c978bf303630e16268db",
+      "verifiedTreeHash": "8dc0329765f43a8dc551c978bf303630e16268db",
+      "verifierVersion": "0.1.0+ad64f8c4"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "bab28e8f-cf81-492d-bd9b-f3f152cf2c27",
+  "objective": "Generate a vetting report identifying the top charity in each of the following 3 categories. Each charity MUST accept crypto/USDC donations.\n\nCATEGORIES:\n1. Natural disaster relief\n2. Feeding the hungry (includes clean water access)\n3. Medical research and breakthroughs\n\nEVALUATION CRITERIA (rank by these, in order):\n- Effectiveness: What percentage of each donated dollar reaches the intended beneficiary? (Use Charity Navigator, GuideStar, or equivalent ratings)\n- Non-political: No partisan alignment. Must serve regardless of political affiliation of recipients.\n- Transparency: Public financials, audited, accessible.\n- Track record: Minimum 5 years of operation.\n- Crypto acceptance: Must have a verified crypto/USDC donation channel.\n\nDELIVERABLE:\n- One charity per category (3 total)\n- For each: name, website, crypto donation address/method, effectiveness score, brief 3-sentence summary of why they were selected\n- Flag any red flags (governance issues, past controversies, political donations)\n- Format as a clean markdown report\n- This will be presented to SigmaHook governance for approval before integration",
+  "publisherVersion": "0.1.0+ad64f8c4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
