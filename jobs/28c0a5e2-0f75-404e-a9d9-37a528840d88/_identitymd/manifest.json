@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "7aa71fe081a0358b8980285f2f4665476ec8679f30eafb7f1e65b0202940a431",
+  "artifacts": [
+    {
+      "bytes": 26213,
+      "hash": "4b9e1d8e8db4279f22972d8b6da3a6424271c6819e1bc6bc0eb3b55f01ae6257",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "937960866e42cc84c35513286d1aaaa240b038bdfc0b656eb5d02599515c4407"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2c968e88904ec22bd5b436e37ebea0b565f7548d84ab140bb65b0acd2c0b7d42",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f93663a201517807f5bf52cb642a01646ea607c7b7fcb948894bc229aacc23ae",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a11137177fc72d8bc1a019c65c97a6f883784a7e9fc180fc790419b6cffc1eec",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "70e3ad597d83fca0fc25dab8f8e418a51212855f2d753c4b12f88ca428dbef94",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3a40eaafbd83a6bc57b859dab02a7e0ae1fcd12ca7afee73c0d6c380b94178e9",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "937960866e42cc84c35513286d1aaaa240b038bdfc0b656eb5d02599515c4407",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa4b91aed45c94fa3ddfcbeda356afe450a05d4141103da9ab2df82784b9662f",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8ce74fbe0542516c9ee3d9c9c75f830b844a4c8190d72473051b9b35bd135238",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3beb94a990617d4651d263ad3777d5af0836bb94b331f675dbe15bb8ae48e83d",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fdac93eff8bf465bbf75cc5f3762c4adcb91180d078e54decb1a8786f1eb4780",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api-imd.up.railway.app",
+  "jobId": "28c0a5e2-0f75-404e-a9d9-37a528840d88",
+  "objective": "Audit the contracts in 0xtenang/Runner as they are.",
+  "publisherVersion": "0.1.0+962b3018",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "9f1a6892d7fce7bb549e1c5589841e6267b19461",
+    "repoUrl": "https://github.com/0xtenang/Runner.git"
+  }
+}
