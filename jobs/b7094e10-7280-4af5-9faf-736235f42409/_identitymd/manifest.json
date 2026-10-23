@@ -1,0 +1,47 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "031b9ac6905ff8489a65d4411f16dfa51c200b783fcc1d5b3b7530455db49768",
+  "artifacts": [
+    {
+      "bytes": 21865,
+      "hash": "c52813c0aa207057a217bb53b6116a823a4dfcc35bbe724198db9cfa75f855c0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "b348a30812a2d13c565a5a608787bd24df058a8ce29e01256ea886a6e485796c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "fd6388bb2e226c2c62ed76435ae05823108c0c6248c0da4bd7a8cc03f34afeeb",
+      "changedPaths": [
+        "README.md",
+        "evidence/citation-audit.json",
+        "evidence/document-checks.json",
+        "evidence/source-observations.json"
+      ],
+      "deviceKey": "1272a65455eb54cabc04330c7a39ac8c0d04e4b744416cbe56cc79ed8f5f1481",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "b348a30812a2d13c565a5a608787bd24df058a8ce29e01256ea886a6e485796c",
+      "treeHash": "97d7179febc183579454c33fe07a3013ef7726ff",
+      "verifiedTreeHash": "97d7179febc183579454c33fe07a3013ef7726ff",
+      "verifierVersion": "0.1.0+1103e27b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b7094e10-7280-4af5-9faf-736235f42409",
+  "objective": "JUDGE JOB. Four research reports are linked below. Decide which single idea to build first and which moonshot to keep researching. If none is ready to launch, say so and name the single best experiment to run within 14 days instead.\n\nREPORTS\n1. Fee to Jobs: https://github.com/Identity-md/research/blob/main/jobs/dd378ca2-5133-464f-8e44-3e44bf8a5ba7/files/artifacts/report.md\n2. Agent First Opening: https://github.com/Identity-md/research/blob/main/jobs/59734b38-c408-49f9-9354-a0bf6f304991/files/artifacts/report.md\n3. Claus Crew: https://github.com/Identity-md/research/blob/main/jobs/aaeb3958-5818-4350-b441-a03bd8d28c80/files/artifacts/report.md\n4. Open lane: https://github.com/Identity-md/research/blob/main/jobs/f85fdd08-1c07-4c3f-a5e3-98b52847e411/files/artifacts/report.md\n\nDO THIS\n1. Restate the question in one sentence.\n2. Check five citations in each report at random. Mark each confirmed, wrong or unreachable.\n3. Score every idea 0 to 5 on: real gap, speed to MVP, agent depth, how necessary the hook is, fit with IMD or CLAUS, day one revenue, safety. Give each of the open lane's three proposals its own row. Show the table.\n4. Pick one to build first, or say none is ready and pick the single best experiment to run within 14 days. Pick one moonshot to keep researching. Explain each in five lines.\n5. For the pick, write the build spec: contracts and callbacks, invariants, parameters with values, the test plan, the audit focus, and the ordered list of IMD jobs from build to launch.\n6. List what IMD or CLAUS still has to confirm before anything ships.\n\nDELIVERABLES\nartifacts/report.md with steps 1 to 4 and 6, and artifacts/SPEC.md with step 5.\n\nSame evidence rules as the reports: verified addresses only, no invented numbers, label every figure Record, Claim or Inference with a read date. Do not deploy anything.",
+  "publisherVersion": "0.1.0+1103e27b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
