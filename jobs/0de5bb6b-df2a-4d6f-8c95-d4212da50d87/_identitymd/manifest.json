@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "6190f5ebc75708bd08e43164e9fa5cbe45a659dddb39768391a9cf9791c58052",
+  "artifacts": [
+    {
+      "bytes": 36150,
+      "hash": "ae22accb0f1614898386c42d4b92d1f0a0ab5e8f2bc190555043343508c8fbe7",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "7d961646ba6a33ae5bf0cb731eba366b285e7c04f096e398d8bbb6d791a70cb3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "96ecbe9236c400bb98fe11dda1045d00e9d162d58f0f57f0166de1aef3387afe",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7f867fc6a9b4b9a89b1b63ccab13b6b38acadfb3b4cb82c7d10a40d9cb17738e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d32559488518f9474724164c54c5f64fe64cc7b3cc0d9d212765a0f74099d11d",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7d961646ba6a33ae5bf0cb731eba366b285e7c04f096e398d8bbb6d791a70cb3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6b47d1bf92391c222bba8a8db12d0898cb52fd4d8f8214c4272b5faea62ff7e9",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3ab5daafd4cbafb8f358f192682a20011c7051794dd51af0e6ffa7f6b265cb81",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dedc96e38388cb45a8281d3d762f4713de53d9dc9cdaf72a5541b60b2b4ba245",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "bb3425394af3268375f7d9a0a4a124a140ecc0314896099efeb822dc0eb1dfc7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "584bd638e7e022f034edd58cc926dced1645a8a1180a39f4341e46a3140529a0",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7d850b53bcc92c6f292c55c913278248737db4274a93268e47a245bdf694c570",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0de5bb6b-df2a-4d6f-8c95-d4212da50d87",
+  "objective": "Scope is the msft95-contracts-audit-v3/ folder only. Ignore msft95-casino/, msft95-vault/, msft95-github-upload/ and the older msft95-contracts-audit/ and msft95-contracts-audit-v2/ folders. README.md has the scope, roles and file hashes. docs/AUDIT-4.md lists the last review's findings and how each was fixed. Earlier reviews were automated, so treat every fix as unverified.\n\nMainnet launch on Robinhood Chain (4663, Arbitrum Orbit L2). In scope: contracts/MSFT95Vault.sol, contracts/MSFT95Agents.sol (generated from tools/MSFT95Agents.sol.tpl), v4/MSFT95Token.sol, MSFT95RewardHook.sol, MSFT95Router.sol, MSFT95Staking.sol, MSFT95Vesting.sol, MSFT95AgentFarm.sol, MSFT95AgentStakes.sol, Create2Deployer.sol. Mocks, test-helpers, WETH9 and vendor/ are out of scope.\n\nLOOK HARDEST AT (changed since the last review):\n\n1. MSFT95RewardHook.openTrading(uint128 minLiquidity). Can trading open before the launch position is in? Can the price differ from launchSqrtPrice at that moment? Any way to move slot0 while trading is closed (donate, modifyLiquidity, initialize, another pool pointing at the hook)? Is half the launch liquidity (computed in scripts/mainnet/lib.js launchLiquidity) the right threshold, and is the maths right for both token orders?\n\n2. MSFT95Staking.sync. An arrival smaller than what is still streaming now joins the running stream without moving its end; a bigger one restarts the hour. Check INV owed + streaming <= held <= balance per token across every path (fresh, idle, dust, setRewardOff on/off, MSFT95 as both stake and reward). Can any arrival size stretch a stream, speed one up, or let a just-in-time staker catch a payout? Does flash staking still earn 0? Also check claimToken now harvests like claim.\n\n3. Hook price floor (_fairOut): the oraclePaused() check, the sequencer feed and grace period (setSequencer), a timestamp in the future, decimals scaling. Can the keeper or a stolen keeper key still convert below fair value?\n\n4. Hook unlockCallback RouteTooShallow: a later hop must take exactly what the previous hop gave. Any route or hook shape where this wrongly reverts or lets a currency go unsettled?\n\n5. MSFT95AgentStakes: claimRewards now also forwards the token's reward() asset (deduped), and the owner has rescue(token, to, amount) for anything but MSFT95. Can rescue or the forwarding loop ever reach principal or MSFT rewards owed to agents in a way the Safe shouldn't?\n\n6. Launch script (scripts/mainnet/lib.js, rehearse.js): every setting is now checked in config() before the first transaction. Any remaining way for a run to stop half way with the deployer holding supply or ownership? Are the printed Safe actions safe if signed late or out of order?\n\nALSO RE-CHECK (unchanged, high value):\n- Hook fee deltas in all four swap shapes.\n- Token dividend accounting with excluded addresses. The vault is eligible and MSFT is listed in it (deposits off) for buyback sweeps.\n- The Safe's one-batch setToken / sweep / setToken to sell up to 10% of supply out of the vault.\n- Vault voucher replay and daily caps.\n- What a stolen key can take: farm keeper, hook keeper, agent-stake keeper, vault signer.\n\nPlease give a PoC test for each High/Medium finding and say which invariant it breaks.",
+  "publisherVersion": "0.1.0+ad64f8c4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "3062412ab40266b1db749268ff6c83cdfcfca667",
+    "repoUrl": "https://github.com/DrTatum/MSFT95.git"
+  }
+}
