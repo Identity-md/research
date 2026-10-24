@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "09e9d9148c7b971bf95a7b83d0c33b58ad10afa6ec4208bc412902a4656a00f5",
+  "artifacts": [
+    {
+      "bytes": 12790,
+      "hash": "1c0443cb8d94be90e5acab34c2c2fcf3ccd2a90131b0a472cc77b6d35a2b8bba",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "80d8246c5a7c94f0f6dcd1ba26ca71df91dc827a63bd9f109fd495aa077b3acb"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "401c4383398af47cbcb358b7bf27675cd481dbf39525cc93d1029da774972a60",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "80d8246c5a7c94f0f6dcd1ba26ca71df91dc827a63bd9f109fd495aa077b3acb",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f96a0c89c039c22a846cc626e2739e902aec1218a771dd7ceb363bf2c60dea96",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9d3fc1a42485299eda4926c8deec7fc2b6539b711328df1b5008163561d25d58",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4fcac33561ba733dbf599f84ceb3e26439db174cc13b33fe91b78df7af0e0e3e",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7133c79a8c84ebd4989e35aa0aadc1c824b90f0db8247567fe0a545e976336c5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "776c025db24644e83396ec3b43a4f8b9aa10b354c5b76483681c847e3c8e29bd",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0fa63f48101c4fbb8ee4c2aab084c42f1c027139222b90ded742ede19881eb08",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "da7ed792c3bf5b80e63b2afca9b30d1a089ed0d44d762eda0bddbfd39564139a",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "265f6299b649c5c7dca374b8ee03346c593a706da64503cb9ce7e28d957a3abe",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2c8d4004-f484-4fd9-a842-f81f56f738eb",
+  "objective": "Audit only the msft95-contracts-audit-v5/ folder. These are MSFT95’s Robinhood Chain mainnet contracts after six automated review rounds; docs/AUDIT-6.md lists the latest fixes. Look hardest at:\n(1) scripts/mainnet/lib.js split, which records transfers by transaction hash. Find any stop-and-resume point where a part is paid twice or skipped, including when wallets are shared or kept by the deployer. Also check the vesting replacement and how much it carries over.\n(2) The overflow guard in MSFT95Staking.sync. Can sync or _accrue still overflow, or can the guard be used to hold back a legitimate reward?\n(3) The full-fill check in MSFT95RewardHook.afterSwap, for exact-in and exact-out swaps in both token orders. Can it refuse a legitimate full fill?\n(4) MSFT95AgentFarm.skim. Can it ever take tokens owed to agents or the treasury, including during callbacks, fee collection or removals?\n(5) The farm’s daily turnover limit (_useTurnover). Can the keeper get around it, or can it block a holder’s exit?\n(6) Re-check earlier fixes: the openTrading position gate, the vault’s separate house sweep window, MSFT being sweep-only in the vault, and that a compromised keeper can only cause bounded loss.\nGive concrete reproductions, and don’t modify or deploy anything.",
+  "publisherVersion": "0.1.0+ad64f8c4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "10a7936a0778f4ed02bdfac99dda165e2d9c83f7",
+    "repoUrl": "https://github.com/DrTatum/MSFT95.git"
+  }
+}
