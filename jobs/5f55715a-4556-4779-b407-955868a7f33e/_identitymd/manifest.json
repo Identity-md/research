@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "e0eda7eabee80eeaecff6f321e5b1abf07940696f1ec89bb884ef6c157f31ca4",
+  "artifacts": [
+    {
+      "bytes": 35063,
+      "hash": "56763d6940bebf850edf75d6461246e1449dd8f2976dbbd76f2f872a1215484e",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "5a39d1c899d7db494dc224e655e8576fb10f4cb34728f3b01505ad7589a1482d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e2a4a53638df3fc6dce8d6f323df7160f7f280da87173f0cb0e41c8f708c525f",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4435b79ca40d366651b9ec25d9961cac8e019d6bc4a19355afafa64c41ce9f80",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d2d5a117dd72f6b494e7d6b85148b6761d36cc6060a026a69eb7e94c2411ddf1",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "17d4ca9e92776d98e471f78a00e553b911db1038dcaa34f15e434dceaa0db8fa",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4b046083653bdcb31d13a1833d1505a502323b26090e5ab6411160c2c5288660",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a66b304eb6a3793460697b1e20c58a1db5b7681511d2ee57ce4aaaaa8a385f9f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "06d00e98fbdd1ee97e8c3710d97defe7b3457202a4e63b2d4b7223613745b23d",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c616043f1258e9ed7b2894c35256b0c1783f135d1cfec67f4df4f82c5ded3196",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f768e94767a9dde3bfb3a7b0d4e7015be9266dc0da97d12cfe01eac2363dd7d9",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5a39d1c899d7db494dc224e655e8576fb10f4cb34728f3b01505ad7589a1482d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5f55715a-4556-4779-b407-955868a7f33e",
+  "objective": "Scope is the msft95-contracts-audit-v2/ folder only. Ignore msft95-casino/, msft95-vault/, msft95-github-upload/ and the older msft95-contracts-audit/ folder. README.md has the scope, roles and file hashes. docs/AUDIT-3.md lists the last review's findings and how each was fixed. Earlier reviews were automated, so treat every fix as unverified.\n\nMainnet launch on Robinhood Chain (4663, Arbitrum Orbit L2). In scope: contracts/MSFT95Vault.sol, contracts/MSFT95Agents.sol (generated from tools/MSFT95Agents.sol.tpl), v4/MSFT95Token.sol, MSFT95RewardHook.sol, MSFT95Router.sol, MSFT95Staking.sol, MSFT95Vesting.sol, MSFT95AgentFarm.sol, MSFT95AgentStakes.sol (NEW), Create2Deployer.sol. Mocks, test-helpers, WETH9 and vendor/ are out of scope.\n\nLOOK HARDEST AT (new or changed since the last review):\n\n1. MSFT95AgentStakes (NEW, holds 25% of supply). The core claim: the keeper can never take locked principal, only what has unlocked for agents it names. Try to break it:\n   - The principal() / liquid() / funded / registered / totalReleased accounting.\n   - release() pulling from the stake when liquid is short.\n   - claimRewards() treating MSFT95 above liquid() as a reward. Can the keeper stake/unstake/claim in an order that makes principal look like reward?\n   - Donations of MSFT95.\n   - register() for unminted ids, repeats, and a tier the NFT reports wrongly.\n   - returnUnallocated() racing register().\n   - A keeper who stakes everything and then calls release.\n   - Rounding in unlockedAt.\n   - Reentrancy through staking or the token.\n\n2. MSFT95RewardHook trading gate (NEW). Can anything move the pool's price before openTrading()? Check direct PoolManager swaps, donate, adding liquidity in a narrow range, and other pools pointing at the hook. Is the NoLiquidity check (getLiquidity at the current tick) enough, or can 1 wei of out-of-range liquidity or a self-added position satisfy it in a harmful way?\n   Also check the new decimals-aware price floor in _fairOut (mulDiv scaling, feed decimals, stale feed).\n\n3. MSFT95Staking stream change (CHANGED). Rounding leftovers now go to `dust` and join the running stream without moving its end; `idle` (streamed while nobody was staked) still restarts a stream. Check INV: owed + streaming <= held <= balance per token. Can dust/idle be double-counted, lost, or used to time a payout (a large idle landing in a stream with seconds left)? Can anyone still stretch or speed up a stream? Does flash staking still earn 0?\n\n4. MSFT95AgentFarm hook-flag check (CHANGED). listV4 now rejects farm pools whose hook has add/remove-liquidity flags (0xF03). Is any flag combination still able to block holderRemove or take a cut? Holders must always be able to exit.\n\n5. Launch script (scripts/mainnet/lib.js, rehearse.js). Order: token, hook, pool (trading closed), route, feed (now required), router, staking, vesting, vault (then excluded from dividends), split, agents, agentStakes (funded), handover. Is there any window where the deployer keeps power or tokens, or where something can be front-run between steps? Are the Safe actions (add liquidity, then openTrading, acceptOwnership) safe if done late or out of order?\n\nALSO RE-CHECK (unchanged, high value):\n- Hook fee deltas in all four swap shapes.\n- Token dividend accounting with excluded addresses (the vault is now excluded).\n- Vault voucher replay and the daily caps.\n- What a stolen key can take: farm keeper, hook keeper, vault signer.\n\nPlease give a PoC test for each High/Medium finding and say which invariant it breaks.",
+  "publisherVersion": "0.1.0+ad64f8c4",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "810a96b3fdfaab5710177882c09c5117b4d6d473",
+    "repoUrl": "https://github.com/DrTatum/MSFT95.git"
+  }
+}
