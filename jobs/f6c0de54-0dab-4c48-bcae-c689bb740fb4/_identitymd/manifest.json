@@ -1,0 +1,51 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "9ae2cf1d8b822f69b73d9983f3a2022105143bd6e32656c9c68e284a9d02d814",
+  "artifacts": [
+    {
+      "bytes": 96103,
+      "hash": "be606585ecb765a77c8fce25680f58aa5a18180c00f811183f77181249f38dac",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "8f1c38a139e028961643a34a4ca8563de9e1fb36677ae2d71c892efcda53edff"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "b2531d8cfc19f88aa8ebc974fa4425a0e51ebb556fac7be6683e819ac59a8ea1",
+      "changedPaths": [
+        "README.md",
+        "docs/CHECKS.md",
+        "docs/PLAN.md",
+        "docs/SPEC.md",
+        "docs/chain-probes.json",
+        "scripts/check_report.py",
+        "scripts/committee_risk.py",
+        "scripts/probe_precompiles.py"
+      ],
+      "deviceKey": "1166e337c95d6cb887120b102deb6bbdecac19f7528b6f6bbf8b0ade1167524e",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "8f1c38a139e028961643a34a4ca8563de9e1fb36677ae2d71c892efcda53edff",
+      "treeHash": "f64c0aed0455cf415ab2898b5fed10be7f7ee3ad",
+      "verifiedTreeHash": "f64c0aed0455cf415ab2898b5fed10be7f7ee3ad",
+      "verifierVersion": "0.1.0+f3653923"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f6c0de54-0dab-4c48-bcae-c689bb740fb4",
+  "objective": "Repository: https://github.com/Bradymck/imd-beacon (read docs/PLAN.md on the main branch first; it is the project brief).\n\nWrite the specification for imd-beacon: a decentralized, unbiasable, publicly verifiable randomness beacon whose signers are IMD seats (identity.md NFT holders running IMD workers, registered as ERC-8004 agents). Read docs/PLAN.md in the repository first; it is the brief. The output replaces its \"Draft design\" section and becomes the contract every later build job is checked against.\n\nDeliver one Markdown document with these sections:\n\n1. Requirements. Unpredictability, unbiasability, public verifiability, liveness, open membership gated by IMD seats, EVM verifiability on Ethereum, Base and Robinhood Chain (chain id 4663). State each as a testable property.\n\n2. Prior art, with citations. Compare drand / League of Entropy (chained vs unchained, quicknet, evmnet), Pyth Entropy, Chainlink VRF, RANDAO and prevrandao bias, Supra dVRF, and any other threshold-BLS beacon you find. For each: trust model, failure modes, what imd-beacon should copy and what it must avoid. Prefer primary sources: papers, specs, audited repositories.\n\n3. Threat model. Adversaries: colluding seat holders, one operator holding many seats, offline members, malicious relayers, consumers trying to grind outcomes, chain reorgs, key compromise, seat NFT transfers mid-epoch. For each, state the protocol behaviour.\n\n4. Cryptographic design. Choose the curve and signature scheme: BN254 (precompiles on every EVM chain, drand evmnet) versus BLS12-381 (EIP-2537). Verify precompile availability per target chain with sources, and give gas estimates for one round verification. Specify hash-to-curve, message format (round number, domain separation), unchained rounds, and how randomness is derived from the group signature.\n\n5. Committee and threshold. Committee size N and threshold t with math: probability that an adversary controlling a given share of seats reaches t, or blocks liveness, when committees are sampled at random, for adversary shares of 10%, 20%, 33% and 40%. Recommend N and t. Specify committee sampling from the previous beacon output, the bootstrap for the first epoch, and epoch length.\n\n6. Key setup and handover. Choose the DKG (Pedersen / joint-Feldman with complaints, or a cited alternative) and the resharing protocol that keeps the group public key across epochs. Specify the phases, timeouts, the complaint and disqualification rules, and what happens when a DKG fails.\n\n7. Membership registry. On-chain registration of beacon keys with proof of possession, binding to the seat (NFT owner and ERC-8004 agent id), handling of transfers, and deregistration.\n\n8. Rounds and relaying. Round period, partial signature gossip (libp2p or a cited alternative), aggregation, permissionless relaying to chain, relayer fee, and the consumer pattern: commit to a future round, then read the verified value.\n\n9. Incentives. Rewards for signers whose partials are used, relayer fees, paid in IMD; whether a bond is needed and why. Keep this minimal and justify every mechanism against the threat model.\n\n10. Implementation plan. Language and libraries for the node (Go or Rust; consider drand/kyber, blst, gnark-crypto), with licences and audit status. Repository layout. Then the build pieces in order: verifier contract, committee registry, DKG, rounds and relay, resharing and sampling, incentives, audit, testnet with a demo raffle or dice consumer. For each piece, write acceptance criteria concrete enough for a verifier to check: files, test names, properties, gas limits.\n\n11. Open questions, each with a recommended default.\n\nRules: cite every external claim. Do not invent cryptography. Where sources disagree, say so. Mark anything unverified as unverified. Keep it implementable by agents working one piece at a time.",
+  "publisherVersion": "0.1.0+f3653923",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
