@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "96d9db26f74ac6a8c03322d2bfbb92c264637d404eaf2de38c45ade5b13e7392",
+  "artifacts": [
+    {
+      "bytes": 20009,
+      "hash": "e858f51a2f306645d7f824615dc92c6d800c7de1747e817bdb694ba4aa23fc5c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v2.md",
+      "publishedPath": "files/artifacts/report-v2.md",
+      "submissionHash": "51ea3a213e97b91582b5a11e33eaf3f79b47b03e66797f81dc20c3467fe8373e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "4e73efde7f779400bee90e62b20d241ce4bbeceed46726a33b7cc486711cbbd0",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "1aabf616dd57561c931736c421930ce9a443d17eb20978857600eda74e0096ac",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "51ea3a213e97b91582b5a11e33eaf3f79b47b03e66797f81dc20c3467fe8373e",
+      "treeHash": "3509146a5c477760fb7911186403cda18d40fe62",
+      "verifiedTreeHash": "3509146a5c477760fb7911186403cda18d40fe62",
+      "verifierVersion": "0.1.0+ea9ee562"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e8a59193-9fcb-4fe7-98fb-ae219a507cce",
+  "objective": "Write a feasibility report for a standalone opt-in campaign marketplace for AI products.\n\nThe idea: indie developers and small teams pay to have participating AI agents try new tools, skills, APIs, applications, or websites, complete useful tasks, and provide feedback. Participants may also opt into recurring testing or continued useful usage.\n\nEvaluate the opportunity rather than assuming it works or dismissing it as artificial engagement.\n\nScope: Study the proposed product as an independent service. Do not inspect or describe contributor computers, their configuration, or IMD’s internal worker or control-plane architecture. Use public product examples and general software-design principles.\n\n1. Developer value\n\nWhat would developers genuinely pay for?\n\nConsider onboarding trials, bug discovery, agent usability, individual evaluations, consolidated findings, product discovery, and continued adoption.\n\nDistinguish agent-native usage, exposure to participating operators, and human acquisition. Do not promise unique humans or machines, but do not treat that limitation as proof that agent participation has no value.\n\nSeparate legitimate disclosed sponsored testing and usage from fake reviews, spam, or deceptive metric inflation.\n\n2. Feasibility and safety\n\nCompare browser-based trials, API testing, isolated package execution, and optional persistent tool installation.\n\nFor each, assess feasibility, necessary safeguards, residual risks, and whether it belongs in an initial offering. Use a general threat model, not an examination of any existing participant or network.\n\nParticipation must be informed, voluntary, revocable, and designed to protect private data and credentials.\n\n3. Campaign design\n\nPropose a developer-facing campaign with:\n- A defined objective and product version.\n- Participation requirements and explicit opt-in.\n- A finite budget and enrollment period.\n- A separate assignment and result for each participant.\n- Individual feedback and a consolidated report.\n- Clear payment, withdrawal, cancellation, and refund rules.\n- Optional recurring tasks or continued useful usage.\n\nExplain how one campaign can invite all eligible participants while keeping spending bounded. Compare capped slots, funded enrollment windows, and disclosed shared reward pools.\n\nDescribe the required product behavior at a conceptual level. Do not investigate how IMD implements orchestration.\n\n4. Economics and pilot\n\nPricing is flexible. Recommend payment units based on customer value, task costs, and verification overhead. Assess both one-off and recurring revenue without anchoring to previously suggested prices.\n\nCompare relevant alternatives, identify the strongest initial customer segment, and propose one small paid pilot with measurable success and kill criteria.\n\nDeliverable\n\nA concise decision memo with:\n- The strongest customer proposition.\n- Recommended first campaign type.\n- Feasibility and safety verdict.\n- Conceptual campaign workflow.\n- Pricing options and recurring value.\n- Pilot design.\n- Go, conditional-go, or no-go recommendation.\n\nCite public sources. Separate facts, assumptions, proposals, and unknowns. Do not invent customer demand or willingness to pay.\n\nResearch only. Do not install software, run campaigns, contact anyone, access private systems, or spend funds.",
+  "publisherVersion": "0.1.0+ea9ee562",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
