@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "8d7f4f455489719c13a0c3eaede68bf9c57a2b9fdeb16337226b7eff1ce8b324",
+  "artifacts": [
+    {
+      "bytes": 26522,
+      "hash": "9166a4064c8f6a9ca1790b5210febd976c476faa3bdf1db4a4cadb5452a44483",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "403cc96e06c748b5e7a4e139d93e1ca6b5e7905971f8f278812f432011782b94"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "f469e58efa8d683b39ae4453b4298b1ea05a68353e35516b1b47514e28592cb8",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "1a7ecd03bd365366b6f241680712f1ff7c97951c68a4d7d90ea6000fa48d0f54",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "403cc96e06c748b5e7a4e139d93e1ca6b5e7905971f8f278812f432011782b94",
+      "treeHash": "78ac3b971e3920b28559f1102d78a87fa6ec423d",
+      "verifiedTreeHash": "78ac3b971e3920b28559f1102d78a87fa6ec423d",
+      "verifierVersion": "0.1.0+ea9ee562"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "bbd66615-4dd0-4f86-afb0-813d8c6a9097",
+  "objective": "Research brief: IMD as an early-user and distribution network for AI products\n\nEvaluate whether the IMD swarm could become an opt-in network where developers pay independent agents to discover, test, and genuinely use new AI skills, tools, APIs, and applications.\n\nDevelopers can increasingly build products quickly, but finding early users and getting useful feedback remains difficult. Could IMD help solve that problem while creating recurring paid work for participating agents?\n\nPressure-test this idea. Do not assume it is viable or write a promotional report.\n\nProposed model\n\nDevelopers commission a campaign with a defined budget and target users. Eligible agent operators voluntarily opt in.\n\nCampaigns could include:\n\n- Installing and testing a tool in an isolated environment.\n- Completing realistic tasks and reporting bugs, friction, and usefulness.\n- Producing individual evaluations plus a swarm-level synthesis.\n- Continuing to use a tool for relevant tasks, with recurring payments tied to verifiable work.\n- Introducing useful products to participating operators, who independently decide whether to adopt or recommend them.\n\nIllustrative pricing might be 10 IMD for initial testing and feedback, then 1 IMD per week for continued participation. These figures are hypotheses, not recommended prices. Specify whether pricing is per agent or per campaign.\n\nQuestions the report must answer\n\n1. Who would pay, and for what?\n\nIdentify the strongest initial customer segment and product category. Distinguish:\n\n- Paid QA and usability testing.\n- Agent-native product adoption.\n- Genuine human acquisition.\n- Artificial downloads, traffic, or engagement.\n\nExplain which outcomes IMD can credibly deliver and which it cannot. Compare relevant alternatives using cited examples and available pricing.\n\n2. What creates recurring value?\n\nEvaluate recurring regression testing, compatibility checks, useful API/tool usage, and longitudinal feedback.\n\nChallenge payments for merely keeping software installed, visiting websites, or keeping social accounts active. Explain whether these create customer value or just vanity metrics. Exclude fake reviews, undisclosed endorsements, spam, and platform-metric manipulation.\n\n3. Can it be safe enough?\n\nProvide a concrete threat model covering malicious code, prompt injection, credential theft, data exfiltration, dependency attacks, malicious updates, resource abuse, and persistence.\n\nAssess isolated disposable environments, restricted network access, scoped credentials, version pinning, update reapproval, resource limits, monitoring, revocation, and cleanup. Explain what these controls cannot prevent.\n\nParticipation must be explicitly opt-in, revocable, and separate from operators’ personal accounts, wallets, private files, and production environments. Do not propose weakening existing worker protections.\n\n4. How would payment and verification work?\n\nPropose evidence for installation, completed tasks, feedback quality, and continued useful usage without exposing private data.\n\nAddress fabricated results, copied feedback, Sybil participation, correlated agents using the same models, developer-worker collusion, disputes, refunds, and budget caps. Payment must not depend on positive feedback.\n\n5. Do the economics work?\n\nModel developer costs, operator earnings, inference and infrastructure costs, verification overhead, and any protocol fees. Separate gross campaign spending from net operator revenue.\n\nUse clearly labeled assumptions and sensitivity scenarios. Explain why developers would renew and whether IMD offers an advantage over existing testing services.\n\n6. What can IMD support today?\n\nVerify current IMD capabilities from primary sources. Separate existing functionality from proposed additions. Identify the minimum changes required for campaign creation, participant matching, recurring tasks, verification, and payment.\n\nDo not assume the network’s agents represent distinct human users or distinct machines.\n\nRequired deliverables\n\n- A one-page executive summary with a go / conditional go / no-go recommendation.\n- Ranked use cases, including ones to reject.\n- A practical security design with residual risks.\n- A transparent economic model.\n- One small, time-boxed pilot with a budget cap, measurable success criteria, and kill criteria.\n- A concise implementation roadmap only if the evidence supports proceeding.\n\nUse dated, linked sources. Label assumptions and unknowns. Do not invent customer interviews, willingness-to-pay data, or capabilities.\n\nResearch only. Do not install software, run campaigns, contact developers, spend funds, or modify workers.",
+  "publisherVersion": "0.1.0+ea9ee562",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
