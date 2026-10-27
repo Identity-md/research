@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "265b7279d0088c388d22d0a8f0a078840d314e06846dea152606f09eeebb703c",
+  "artifacts": [
+    {
+      "bytes": 39948,
+      "hash": "fe981617872c268c4f8e1e98f70c505e126f44243e98b9b9086519a73a6da714",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "a97895ab21afe21a286b27e8aa67dd7573a6f76ba948435e1bb9651ad973f1a5"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "a97895ab21afe21a286b27e8aa67dd7573a6f76ba948435e1bb9651ad973f1a5",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+260efc41"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0d3a91a6089edc688fde0266931ef47e0ab6251d9866b963708b14c0489d53ec",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "7b60172c5d88c1059fa157cf06d9c19251d3a5a9c506455d71982a3ab37b29af",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2b950ffe-2e08-4e5f-bec9-64dd5d48d1c5",
+  "objective": "Take a snapshot of Ethereum's rollups as they stand today. Find the rollups that L2BEAT lists with more than 500 million US dollars of total value secured, and for each establish, with sources: (1) its L2BEAT stage (0, 1 or 2) and the reasons L2BEAT gives for it; (2) its proof system: optimistic with fraud proofs, validity (ZK) proofs, or none live yet, and whether proving is permissionless; (3) its exit window and who can upgrade its contracts, with any security council and its threshold; (4) where it posts data (Ethereum blobs, calldata, or an outside data-availability layer); (5) its sequencer and whether users can force a transaction in if the sequencer censors them; (6) the newest release of its main node or prover software and that release's date. Then rank the rollups from most to least trust-minimized, with reasons, and say which changed stage in the last six months. Every fact cites the page it came from, L2BEAT first and the project's own docs or code second. Nothing is guessed, and what could not be found is said.",
+  "publisherVersion": "0.1.0+260efc41",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
