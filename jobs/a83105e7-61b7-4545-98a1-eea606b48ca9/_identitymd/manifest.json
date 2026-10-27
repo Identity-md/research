@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "18871d147f625e9aa04bca39cd13b70fb90bdfdcefd60216d62aeda3c85dcab5",
+  "artifacts": [
+    {
+      "bytes": 22615,
+      "hash": "68e9f4bfaaefbfaf8b32308bbbc2b0f29352e804ad1337fbdb6f83d5418f0799",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "26106bec25eacba2ee5e7b77a78241bbe65099cb726e65229ff4e07205460f93"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "21173e2f9a010d0b8c1897c3e682e2b167e9fd0c5393000f631c929fd48efc94",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "26106bec25eacba2ee5e7b77a78241bbe65099cb726e65229ff4e07205460f93",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+260efc41"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a83105e7-61b7-4545-98a1-eea606b48ca9",
+  "objective": "Evaluate and rank the **top 5 charities** for a recurring crypto donation split. Produce one report. No deployment, no code, no on-chain action. Research and report only.\n\n---\n\n### Categories (must cover all)\n\n- Disaster relief\n- Clean water\n- Humanitarian aid\n- Food security\n- Emergency relief (natural disasters)\n\nA single charity may span multiple categories. Rank by overall fit across all five, not per-category.\n\n---\n\n### Evaluation Criteria (score each 1–10)\n\n| # | Criterion | What to check |\n|---|-----------|---------------|\n| 1 | **Effectiveness** | Measurable outcomes per dollar. Independent evaluations (GiveWell, Charity Navigator, Guidestar). |\n| 2 | **Non-political bias** | No partisan funding, no advocacy beyond humanitarian scope, no government contract dependency. |\n| 3 | **Program expense ratio** | % of funds reaching intended audience. Target: >80%. Show the number. |\n| 4 | **Crypto donation acceptance** | Do they accept ETH/USDC/USDT? Published address? Which chains? |\n| 5 | **Established track record** | Years operating. Response to at least 2 major crises. No single-leader dependency. |\n| 6 | **Financial transparency** | Published annual reports. Audited financials. Public 990 (or equivalent). |\n| 7 | **Legal standing** | 501(c)(3) or equivalent registered nonprofit. No pending litigation. |\n| 8 | **Operational capacity** | Can they deploy within 72 hours of a new disaster? Global or regional reach? |\n| 9 | **Funding source diversity** | No single donor >20% of budget. No controversial funding (arms, fossil fuels, gambling). |\n| 10 | **Crypto address verification** | If they have a published crypto address: is it a dedicated donation wallet (not a personal/CEO wallet)? Has it been active for 6+ months? |\n\n---\n\n### Output Format\n\n**One table, 5 rows, ranked 1–5:**\n\n| Rank | Name | Category fit | Score (out of 100) | Program % | Years active | Crypto accepted? | Crypto address (if public) | Notes |\n|------|------|-------------|-------------------|-----------|-------------|-----------------|---------------------------|-------|\n\n**Below the table:**\n- 2–3 sentence justification per charity (why they made the cut)\n- Any charity that was close but didn't make the top 5 (1 line each)\n- Red flags found during research (even for charities that made the list)\n\n---\n\n### Constraints\n\n- No political organizations. No advocacy groups. Pure humanitarian/operational only.\n- Must be able to receive crypto on ETH mainnet (we bridge via Uniswap Swap UI).\n- Must be a registered legal entity (not an individual, not a DAO, not an unregistered fund).\n- If a charity has no public crypto address, note it. We will contact them directly.\n- Do not include charities that are primarily single-country (we need global deployment capability).\n\n---\n\n### Deliverable\n\nOne markdown report. Ranked table + justifications + red flags. That's it.",
+  "publisherVersion": "0.1.0+260efc41",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
