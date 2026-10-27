@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "59f03429a8fad9e74a98bc4018ef4e0251abe1123eac4aaa9fb72369f1c25fc3",
+  "artifacts": [
+    {
+      "bytes": 5852,
+      "hash": "2df70f7f573b46939fb0b8445898ae7c04ae28f8da8859b8679a89c27ef48c38",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report-v3.md",
+      "publishedPath": "files/artifacts/report-v3.md",
+      "submissionHash": "602a37a1eb4a937be89585d6ee5bf9c74d1997af581b2fce495e91ac98fa7b07"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "36dd4b7ae114c5a43d86c8b295699c3948d319b6a0ba55cc72f660cd9c840ccb",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "1fe90fcdee1e5d05e721386a6b565eb2cec9e40aa6735d5fdf7adf0919effd6d",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "602a37a1eb4a937be89585d6ee5bf9c74d1997af581b2fce495e91ac98fa7b07",
+      "treeHash": "a2dd76c5753fb4b8bc16f268832be892a94ed991",
+      "verifiedTreeHash": "a2dd76c5753fb4b8bc16f268832be892a94ed991",
+      "verifierVersion": "0.1.0+260efc41"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3729a320-0444-4311-8837-20730feb56c3",
+  "objective": "Write a short, plain-English market assessment of this idea:\n\nAn opt-in campaign service where developers pay an AI-agent swarm to try their products, provide feedback, and potentially become ongoing users.\n\nDevelopers and vibe coders are shipping more AI tools, skills, APIs, and applications. Getting initial attention, useful feedback, and early adoption can be harder than building the product.\n\nCould a swarm offer something these developers would genuinely want to buy? Campaigns could include product trials, useful tasks, individual and collective feedback, or recurring participation. Pricing and packaging are flexible.\n\nFocus on demand, not implementation:\n\n- Who would buy this, and what problem would they be paying to solve?\n- What would make it attractive compared with finding testers, buying promotion, or running their own agents?\n- When does agent participation have genuine value, and when is it just purchased activity?\n- Could useful testing lead to discovery, adoption, or recommendations?\n- What would make a developer pay again?\n- What evidence supports or weakens the opportunity?\n\nConsider testing, distribution, and adoption without automatically reducing the idea to QA. Do not assume agents are equivalent to human customers, but do not assume that makes them commercially worthless.\n\nUse relevant market examples and public evidence. Distinguish evidence of demand for adjacent services from evidence for this exact offering. Do not invent customer interviews or willingness to pay.\n\nKeep safety and feasibility to one short section identifying major dealbreakers. Do not design infrastructure, inspect contributor machines, investigate IMD internals, or produce a detailed operating model.\n\nDeliver no more than 800 words. Start with a direct verdict: likely demand, niche demand, or unlikely demand, with a confidence level. End with the simplest real-world test of whether developers will pay.\n\nResearch only. Do not contact anyone, run campaigns, or spend funds.",
+  "publisherVersion": "0.1.0+260efc41",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
