@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "9505839c41375939cc1f02c880b89e0c288811074887567cb2348d68020668a2",
+  "artifacts": [
+    {
+      "bytes": 19330,
+      "hash": "0d9b821e43b35111857b963590e7eb331c78f1c61adc6456532937ccea749fc6",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "9ebc773d35e7304c17703519df2af19cd834a287c3b3b992999800e17d47e7b9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "644eb561f6d70a85d4f5be4eea313a7bd6222047c8a74d6ead4704470736c193",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ad8b797e934d6e4d7ac1561be7c91b2ed74a25891d0b941ed1e72e7557e11ff9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1a7606be97f168d43c79193739ce9beae6ceb352fb8771a5430d9b34fff85682",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e7ebcfc9d5935c0a23062230c9467e9df26f05010295aa6222a06327d68722a4",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fe5e46fb044c6af1969272d2ad026d7c1211decd5df1bff0ea720a4ed442d97d",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "43c1058afc5e90421d53947384a0aeab2bdd6c72a90705ada6b3673b0967a4be",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2c968e88904ec22bd5b436e37ebea0b565f7548d84ab140bb65b0acd2c0b7d42",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "9ebc773d35e7304c17703519df2af19cd834a287c3b3b992999800e17d47e7b9",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "56e50117311155be93c3c3b79293d6ba6217df4024bcf993400ea696be39d5a7",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "70642dbac5c1b1583ad6a4d9d0d84c1f8ebcb66ea11261d0a5dccb0053d1ec79",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1ef59721-217f-477e-9108-c94171cf8d68",
+  "objective": "Weir Townies: AUDIT ONLY, ROUND 2 (round 1 findings fixed: royalty follows the treasury and is capped, renounceOwnership reverts, cap arithmetic widened, zero withdraw reverts, freezeMetadata, endSale + owner sweeps). Review src/WeirTownies.sol from this repository as it arrives (do not edit src/, test/, foundry.toml or lib/) and report findings; do NOT deploy anything, do NOT create a token, pool, distributor or website. The owner deploys from script/Deploy.s.sol with their own key after findings at medium or above are fixed. Context: an ERC-721 (OpenZeppelin v5.5.0: ERC721, ERC721Enumerable, ERC2981, Ownable2Step, MerkleProof, ReentrancyGuard) for 3,333 tokens on Robinhood Chain (chainId 4663, Arbitrum Orbit, cancun). Token ids are laid out by the owner before the sale (setLayout, sealPools): an owner-minted reserve, then role pools each with its own Merkle root and a one-claim-per-wallet rule, then the general range sold first to a Merkle allowlist and then publicly at an ETH price with a per-wallet cap of 3. Metadata is off-chain at baseURI + id and the contract emits ERC-4906 events from an updater address. Money: msg.value must equal price x qty; withdraw() sends the balance to the treasury and anyone may call it. Please look hardest at: the id layout arithmetic (ranges never overlap, never exceed MAX_SUPPLY, no id minted twice), the Merkle leaf encoding (double keccak of abi.encode(address)) and proof misuse across pools, the per-wallet caps, reentrancy through _safeMint receivers, owner powers after the sale (nothing should touch sold tokens), and the withdraw path. Build: forge build && forge test (20 tests incl. fuzz and a reentrant receiver). Report any finding at medium or above and block on high or critical. Do not claim an independent audit.",
+  "publisherVersion": "0.1.0+260efc41",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "1a2dc1f02f008a53bb7a3dc65c240b4c833d9552",
+    "repoUrl": "https://github.com/weircool/townies-contracts.git"
+  }
+}
