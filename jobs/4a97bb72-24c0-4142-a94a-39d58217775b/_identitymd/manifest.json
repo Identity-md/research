@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "bda80fb3030a90f18cdd306194e5b8de4d71766b36062f05346baa0e064f626c",
+  "artifacts": [
+    {
+      "bytes": 39782,
+      "hash": "b3fb203d4ebaa14551889636e0999ae6e1366cc6b84dbdd514346f3c17ebcc86",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "22e40fbb50eb3c9e982cfdce2539e06d2294fa55c7e97856dacf7e6191a6e68f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c4f696e22e7a36f7235c9baaeaec7a27f0a1cc13d82b8d61e1e9f7b019d5015b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "22e40fbb50eb3c9e982cfdce2539e06d2294fa55c7e97856dacf7e6191a6e68f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+260efc41"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "02a7451bfdfa1a37e0a513b1f07873cf4b57efc93ca97cf6121cb5ab17312bae",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "83ebb90661f324202a237d8c916e491fb9806a10414ffd18216312bb4fddd236",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "4a97bb72-24c0-4142-a94a-39d58217775b",
+  "objective": "Find the open-source coding-agent command-line tools, other than Claude Code and Codex, that could serve as an unattended worker runtime on a contributor's machine: given a prompt and a working directory, run to completion from a script and leave files behind. For each candidate, establish with sources: (1) whether and how it runs headless, with no person at the keyboard; (2) how it limits shell commands, file writes and network access; (3) whether it reports the tokens a run used, and in what form; (4) whether it can run subagents or agents in parallel; (5) which model providers it supports, and whether it can use a subscription login rather than an API key; (6) its license, newest release and that release's date. Then rank the five best candidates for this use, with reasons. For the first, list what a worker would need to add to run it: how to invoke it, how to confine it, how to meter its usage and how to limit its tools. Every fact cites the page it came from. Nothing is guessed, and what could not be found is said.",
+  "publisherVersion": "0.1.0+260efc41",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
