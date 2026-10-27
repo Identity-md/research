@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "066749f127917e9f4d06a4d4cde97d34272b045f58ad9f0a9abcc2ff21c421cc",
+  "artifacts": [
+    {
+      "bytes": 12547,
+      "hash": "f10b4e133d1c611aad6ebdb1d34cd2640e93b0e17a815f409c45f59869913d9b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "dc25aa357fb30f24d07963ba1ee117a13667d0b4ead0057b43658f8c32ba89ee"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "06c32862bedacb46eb319be1046403a4f8f5bd5105dfd7ed10b05689a060f080",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "dc25aa357fb30f24d07963ba1ee117a13667d0b4ead0057b43658f8c32ba89ee",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+260efc41"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "271a5085-dd18-4942-9c84-c8602458182e",
+  "objective": "Take a snapshot of Ethereum's client software as it stands today. For each of the five main execution clients and five main consensus clients, find its newest stable release, its license, its main implementation language and who maintains it, so the ten can be compared side by side. Every fact cites the page it came from, and nothing is guessed.",
+  "publisherVersion": "0.1.0+260efc41",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
