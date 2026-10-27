@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "997bb0849d04ed3598be8994867c8bde850aaf475b5ba2c6fbf6d5e8d9da320e",
+  "artifacts": [
+    {
+      "bytes": 46978,
+      "hash": "2d3cf29df41d5e23dd3e9305a4d62c37ca26a96c96f8c5cbdd385c8d9c2313f4",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "6bd6ce4034ba538ed6b888d95bf1bcf0174099c551bd2e880bc1f13af984d663"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "6bd6ce4034ba538ed6b888d95bf1bcf0174099c551bd2e880bc1f13af984d663",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+260efc41"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "79953a27daf74ea7623fbfa7b8c81c6558c6c1d1a7d6d65c127c4dfaa3662a71",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "3fa78e3ff7098120e7af7ba50e0cc236522b87fde6d4dd7f2db967844d46cb62",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5f4379c9-858a-486b-8bff-7897b605aed1",
+  "objective": "Find candidate bugs in the client implementations of Ethereum's Glamsterdam fork (Amsterdam on the execution layer, Gloas on the consensus layer). First establish, from the fork's meta EIP and the execution and consensus spec repositories, the exact list of EIPs scheduled for Glamsterdam and each one's current spec version. Then, for each EIP and each client that implements it (execution: Geth, Nethermind, Besu, Erigon, Reth; consensus: Lighthouse, Prysm, Teku, Nimbus, Lodestar, Grandine), compare the client's code on its main branch against the spec: edge cases, boundary values, gas and fee arithmetic, encoding, fork-transition handling, and anything one client does differently from the others. Check each candidate against the client's open and closed issues and pull requests, and against public hive and execution-spec-tests results for Glamsterdam devnets, so known bugs are marked as known. Every candidate cites the spec text and the exact file and line on a pinned commit, says how it could be triggered, and rates confidence and severity. Work only from public pages. A candidate in code that is already active on Ethereum mainnet today is reported only as the client, the EIP and 'affects live code, details withheld', with no file, line or trigger. Then try to disprove the strongest candidates before the final report.",
+  "publisherVersion": "0.1.0+260efc41",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
