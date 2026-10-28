@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d9e9a43a7b0dfb656cbc3afc5004f595df6eee3a33c077d552049b2edf3b55e0",
+  "artifacts": [
+    {
+      "bytes": 9081,
+      "hash": "35819ae8d572f3b595a7cfc185ac60b6da8d5e573111a059aa1e05d9e53e1720",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "355d3db9c23f3ccb6451d9c537a608d92b760894d39a2372ffe05785340f9691"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "1a1569997c94066499d843b4ecd563c6397b175e4e4c907c0df91d3fecfb4ed8",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "10f059866e111f84496d31530599e565cac786330a0929ec21c972a584e9b26c",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "355d3db9c23f3ccb6451d9c537a608d92b760894d39a2372ffe05785340f9691",
+      "treeHash": "e7f95f79b66fcc0ee2b380376f4dff5a448d2c7d",
+      "verifiedTreeHash": "e7f95f79b66fcc0ee2b380376f4dff5a448d2c7d",
+      "verifierVersion": "0.1.0+1d98f47e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "fc6cb9c6-0fcc-46aa-920c-51c192065bf4",
+  "objective": "Pick the top 5 imd hackathon winners in order from 1 to 5 from the below 4 orders. firstly take into account which ones have the most votes and where the person ranked it. share info on each and how it uses imd.  \n\nlesnar top 5:\n@imdusd\nrobobet_fun (now @paperclash_xyz)\n@imdradar\n@nightshiftimd\n@theidmfun\n\ntaylor top 5:\nimdlend by @sudeepb02\n@imdusd\n@seeronimd\n@nightshiftimd\n@moneycanbuy_fun\n\n0xminion top 5:\n@imdusd\n@theidmfun\n@robobet_fun\n@ConditionalsImd\n@Imdirectorb\n\nDamien top 5:\n@imdusd\n@theidmfun\n@imdradar\nrobobet_fun (now @paperclash_xyz)\n@swornbyswarm",
+  "publisherVersion": "0.1.0+1d98f47e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
