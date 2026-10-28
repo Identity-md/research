@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "433785f0debf79b95a31bdabd7ced3cb93ef2047bb3b003849dc5f4d6df922df",
+  "artifacts": [
+    {
+      "bytes": 6139,
+      "hash": "5707968a30477766a61068d8e43f0fcf3331311896afebc5fdd98112ca207e94",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "40c055bb3166883f65d6b1172b4c9c63e565444235c5a9a2eda830dd01c34bbc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "d675312686f12e5856f6165ae577c18c6d1bd85c289974d48ed38831655604ca",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "229c8cb0d9067fbeb8b8c15d2c978334054b59142a7efed4b96efe2e04577e0c",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "40c055bb3166883f65d6b1172b4c9c63e565444235c5a9a2eda830dd01c34bbc",
+      "treeHash": "245e997063a76c9b9c32485b2212eeb78349ec24",
+      "verifiedTreeHash": "245e997063a76c9b9c32485b2212eeb78349ec24",
+      "verifierVersion": "0.1.0+d372f99e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "01accac1-d21d-48e3-a0ed-c1aec0596055",
+  "objective": "15 Hackathon winners in order:\nfirst 5 from https://explorer.imd.fun/jobs/6a91a106-61f2-4e70-9191-f8308dc33ef4\n\nother 10 from https://github.com/Identity-md/research/blob/main/jobs/eefe93b9-537c-416d-b2af-eed8a24bbe71/files/artifacts/report.md\nrank by average score\n\nonly show the 15 winners",
+  "publisherVersion": "0.1.0+d372f99e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
