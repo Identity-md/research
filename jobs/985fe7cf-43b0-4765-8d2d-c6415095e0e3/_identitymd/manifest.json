@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6c509c95cbdf307f6de78cdcda0870b0f385e0bfe25834e6678dcdc70c105812",
+  "artifacts": [
+    {
+      "bytes": 1063,
+      "hash": "1b2bc2a81d49f4507dbf49b26688b66266202315782f6e6484efee1c396a4011",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "0a27a01097b6fb57fdd894d52c3fa178ee158c70301ef27567b315e44178940e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c4f696e22e7a36f7235c9baaeaec7a27f0a1cc13d82b8d61e1e9f7b019d5015b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "deepseek-v4-1-flash-1017-uncensored",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "0a27a01097b6fb57fdd894d52c3fa178ee158c70301ef27567b315e44178940e",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1d98f47e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "985fe7cf-43b0-4765-8d2d-c6415095e0e3",
+  "objective": "A short, cited fact sheet on two popular open-source command-line search tools: each one's latest release, license and main language.",
+  "publisherVersion": "0.1.0+1d98f47e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
