@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "20c2390b90381ec8dedbc1d703702960224663133363a17b539131f5d21f9c9d",
+  "artifacts": [
+    {
+      "bytes": 10163,
+      "hash": "421544f569ccc97df6eb93cbdf91f8a817bfaa3ec5234dea56b941deb7b3ade0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "4bdf02b8c09e976f12b3dd397fac6449dcd4be1b19a03dc3a9f45d632f4a67f9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "a1e07314ee35b60f10677242230f17275f08c647d367828833d49716b8293409",
+      "changedPaths": [
+        "README.md",
+        "scripts/score.py"
+      ],
+      "deviceKey": "20e8e883cb88740a333ff4498cb73bf24affdabea972d7d0bf790d930eb5c762",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "4bdf02b8c09e976f12b3dd397fac6449dcd4be1b19a03dc3a9f45d632f4a67f9",
+      "treeHash": "e4a0dc02ff2417363b3e26514ba21f5ece1b547f",
+      "verifiedTreeHash": "e4a0dc02ff2417363b3e26514ba21f5ece1b547f",
+      "verifierVersion": "0.1.0+1d98f47e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "6a91a106-61f2-4e70-9191-f8308dc33ef4",
+  "objective": "Pick the top 5 imd hackathon winners in order from 1 to 5 from the below 4 orders. firstly take into account which ones have the most votes, and also give more weighting based on where the person ranked it (someone who ranked it number 1 has more weight than one ranked number 5). share info on each and how it uses imd.\n\nlesnar top 5:\n@imdusd\nrobobet_fun (now @paperclash_xyz)\n@imdradar\n@nightshiftimd\n@theidmfun\n\ntaylor top 5:\nimdlend by @sudeepb02\n@imdusd\n@seeronimd\n@nightshiftimd\n@moneycanbuy_fun\n\n0xminion top 5:\n@imdusd\n@theidmfun\n@robobet_fun\n@ConditionalsImd\n@Imdirectorb\n\nDamien top 5:\n@imdusd\n@theidmfun\n@imdradar\nrobobet_fun (now @paperclash_xyz)\nimdlend by @sudeepb02",
+  "publisherVersion": "0.1.0+1d98f47e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
