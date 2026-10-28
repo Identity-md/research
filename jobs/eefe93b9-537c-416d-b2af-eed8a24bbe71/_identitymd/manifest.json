@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d9e37d918d2020e13e1051606d40710b907451529e19e992dbef72aac54ad10d",
+  "artifacts": [
+    {
+      "bytes": 13711,
+      "hash": "708fb026051d6976195b2830efe8cbc0d0eea96e822ec95fbb90175a8a8ab88a",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "64d21122997fd470f04f88b763537fe843c584e60ebd15288ca4017daeb7826a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "7179601434ddda94df4115c3bcf99be7dd6ae6d3bea9d2ca6d3f60ab66fce6a3",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "2293d6b19e81ef1a8e62ede461544ff79dea3ad4a1caedea0ea886f0de1ef005",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "64d21122997fd470f04f88b763537fe843c584e60ebd15288ca4017daeb7826a",
+      "treeHash": "b3f1e2d5696a37f2bfa67559518c04c389149fe6",
+      "verifiedTreeHash": "b3f1e2d5696a37f2bfa67559518c04c389149fe6",
+      "verifierVersion": "0.1.0+d372f99e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "eefe93b9-537c-416d-b2af-eed8a24bbe71",
+  "objective": "Find the average score for all of the below. show in the table: project name, the average score upto 2 decimal points, all the scores the ai agents gave. exclude errors like not_read\n\nhttps://explorer.imd.fun/jobs/8ee3c515-18db-4131-a58f-195e1cee3737\nhttps://explorer.imd.fun/jobs/ad8cfa36-d075-42ff-a946-cc2415b6fdf4\nhttps://explorer.imd.fun/jobs/411d4cc8-69e6-49ba-b91a-4c41f2fdbf6d\nhttps://explorer.imd.fun/jobs/53ca938d-0467-4636-b0aa-7cdef5c2e55e\nhttps://explorer.imd.fun/jobs/82bdd5e8-ef65-446f-9758-7cbd441990e3\nhttps://explorer.imd.fun/jobs/9309f46e-0dcf-4356-ad6b-cff990b41825\nhttps://explorer.imd.fun/jobs/1b4f498f-c9cf-454b-a04e-4a373a8b400b\nhttps://explorer.imd.fun/jobs/98c9e0bf-8191-4516-89ed-6e634c151502\nhttps://explorer.imd.fun/jobs/0fd7c109-3c74-4c00-a82d-61194f335e02\nhttps://explorer.imd.fun/jobs/13a466f2-68b9-45ff-906a-76bc351043b1\nhttps://explorer.imd.fun/jobs/56a357e2-2c54-4ee7-9b4e-f450970dbc8d\nhttps://explorer.imd.fun/jobs/017c10cb-405d-43b5-8d09-1b909ddf82c9\nhttps://explorer.imd.fun/jobs/26d627ee-77d5-4ed8-8174-bb8c7b9ce7e9\nhttps://explorer.imd.fun/jobs/8461b41e-368c-4fe7-97af-ffbc50632802\nhttps://explorer.imd.fun/jobs/6c6dca7c-75a4-4544-bf03-72985dc0587e",
+  "publisherVersion": "0.1.0+d372f99e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
