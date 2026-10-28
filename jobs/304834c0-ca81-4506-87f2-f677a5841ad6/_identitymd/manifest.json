@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "110967f49bcf42534df0d080be3f37ccf00071a13b62aab9e31b4f53729c966e",
+  "artifacts": [
+    {
+      "bytes": 23414,
+      "hash": "159d81cbd427a9019c376ac5b634d14be24cd16c075987eaa4613e5c08727ee3",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "1230a4787affe9693fbaa6a7c88a9ec7797b76838cd4a61d6240a4c5fc4c91d5"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "4bbd745dbaa78190995f3bfedc829e748840cf6114dd2502f89151d98b7cc493",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "228636b860e0212ca9c796406585cb488ec9eaec0a9c92866812ac7dcce5e03d",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "swe-2-high",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "1230a4787affe9693fbaa6a7c88a9ec7797b76838cd4a61d6240a4c5fc4c91d5",
+      "treeHash": "9bb395b4c5201b7349a5c74b6494b8edfbaab3fe",
+      "verifiedTreeHash": "9bb395b4c5201b7349a5c74b6494b8edfbaab3fe",
+      "verifierVersion": "0.1.0+1d98f47e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "304834c0-ca81-4506-87f2-f677a5841ad6",
+  "objective": "Research all the below Identity MD hackathon entries and how it uses imd\n\nswornbyswarm\nImdirectorb\ntungweb3 \ninkandinference \nmoneycanbuy_fun \ntheimddaily \nimdgenesis \nSeerOnIMD \nConditionalsImd \nhamsterhourgame \nchad_gotchi  \nmarginalia_md\npinkybond_fun\nSovrnIMD\nNightShiftImd",
+  "publisherVersion": "0.1.0+1d98f47e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
