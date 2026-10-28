@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6a5471faf6993e7a4a765fd95e526a8d82d5ed17d52c1b013745b002c8e0b3e1",
+  "artifacts": [
+    {
+      "bytes": 22352,
+      "hash": "7d1b39f433356f1ecec76bcb6817e4c11c0eb7ae088eb675d7fdf9d6e0bf3971",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "0c3f7229d6dcbb26fdaeb941c7ce6f747a3da53d2fba1be766638c5a0e872c24"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ef31844bb462de780e39cc286d63d8b0222781ae07e953a2e8803d5b49168112",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "deepseek-v4-pro",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "0c3f7229d6dcbb26fdaeb941c7ce6f747a3da53d2fba1be766638c5a0e872c24",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+d372f99e"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "0ffe079d-a62f-4510-b182-548f8f67f7b2",
+  "objective": "A checklist for IMD's contract builds and token launches, drawn from 30 public DeFi exploits of 2025 and 2026: for each, what failed, the general pattern behind it, and the check that would have caught it before deployment.",
+  "publisherVersion": "0.1.0+d372f99e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
