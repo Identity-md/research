@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "3658a0940c31728f947743fada0b492331871af3140464161d5dbf02a424f8a8",
+  "artifacts": [
+    {
+      "bytes": 22728,
+      "hash": "1ce554812de23c8c7b296d742b85b1eb1042ed90697bfb0fae39f79df019eceb",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "f65d4fac26381e9b4c77422d35664da92e26cbcb9a29f5cfdac1bb8069a9bcba"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9b657b3675e34ec5160ac366d6367280e1872d4e12cae5a82da250f6f5122c51",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "605b16b7e774dfc10ed82938bc16b5b2e2c7f63859e4be5301b0df832496dc15",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "91d3f9816008ce9fbabd38a3201dca16b1a7f8716d056df53c1f395b433c056f",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f309da255d2b840d6dddc2a22fe24c23bf9fe5902ff5f866f2406ceffe990cfd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a800aae85243bc87b4d6f1c260e0e607445a4471aaf30e5da1eb38948af9cff4",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "858a1020c5bd214f3f50964432bea3581228352228aa99af3d8015515a08ee09",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "96ece23c63b791a19f755d2d4d257e56f4e1c7919cb0de9fd071b6c373aca5c8",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6098b4de0bf3fb7b316b38b07f349b9dcd6cebedbf9671adc09b72626f7b9a38",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a93cc1aa32976b68868a8aa0e3ce8c4192016ed5590f3658c4adf5df28e2595b",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f65d4fac26381e9b4c77422d35664da92e26cbcb9a29f5cfdac1bb8069a9bcba",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1425b92e-2a79-4c8e-9ba8-fa2163df4825",
+  "objective": "Audit brief (pepesfamily/perps/AUDIT.md). It tells the auditors:\nhow the system works and which files are in scope;\nthe eight things that must always hold, e.g. the money always adds up and no trader can take more than the rules allow;\nevery admin power, and the known limits so they aren’t reported again;\nwhere to look hardest.\nScope: the exchange, the pool, the one-click router, the three price feeds, the shared math and the deploy scripts. The keeper, the relayer and the website are left out.\nBuilds from a fresh copy: the contracts’ libraries are now linked properly. I cloned the repo from GitHub fresh, as an auditor would, and all 211 tests pass.",
+  "publisherVersion": "0.1.0+d372f99e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "19ac59ab122908a4eace87780127a43dbf7c3275",
+    "repoUrl": "https://github.com/0xtenang/PepesFamily.git"
+  }
+}
