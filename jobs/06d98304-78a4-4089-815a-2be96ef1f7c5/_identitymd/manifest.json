@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "8555513de67ba7468e8663ec195f1177369e20c53e609d79481be29269efe429",
+  "artifacts": [
+    {
+      "bytes": 15330,
+      "hash": "0d790dc2a58a17dcf5f2bf72bf86f3d9ceb8845fd346d202c81430a774c22aba",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "d4f6d10f8332d35309d531c850c0ce1a028bcda854524247bfb402abd25bb8e6"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2bdd77125ec75e6c43b23b1a1058de3980124933e5aad756c0289bfdd833c616",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "dda5890c5fb5234268ca9835f19bc7b3a2ca48851f80dcd4be17df9106bf487d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f96a0c89c039c22a846cc626e2739e902aec1218a771dd7ceb363bf2c60dea96",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "069172620ffef1b8556f587acef7a23b44112fc44c1aa53bc1013456b9bc9fdc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3c9b660ee1938912fe6a358aa40bd92886ab34dc995194a468090e3c1fc25f05",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d68cc0d6052dfde81504cdff7d06e9721cfd984f3a7cd308c92a6eb3460eb6c1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "829d84438fb3fdc88e93850c9bddcabb55e7d84f7fb9a6e15974f2983199bb64",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "8f377b8d56d243eebc8a4bd2a06ff9f39a426bb3bfade5d1a2b7ac9d6a3ff1a7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8472a2af9a9cf974eb880fd5f9fb639dba33e69adb3c194c3a1f79e25030b6c2",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "d4f6d10f8332d35309d531c850c0ce1a028bcda854524247bfb402abd25bb8e6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "06d98304-78a4-4089-815a-2be96ef1f7c5",
+  "objective": "Audit contracts/SqueekPot.sol (version 2, live on Sepolia at 0x845AC45012405B8Fa1Ff017320304b665b915F86). Read contracts/AUDIT-SCOPE.md first: it describes the intended behaviour and the trust assumptions we accept. Look hardest at: funds can never be lost, locked or taken; no double refunds or payouts; settle/void/refund timing edges (lock time, endTime + 3 days); reentrancy and the 30,000-gas payout stipend in _pay; and anything the owner or resolver can do beyond the scope. SqueekPotV1.sol is lower priority.",
+  "publisherVersion": "0.1.0+a6eb4461",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "6ba3b13ee924403e79007a1c666472f67db51ed8",
+    "repoUrl": "https://github.com/StasBokhan/squeek-picks.git"
+  }
+}
