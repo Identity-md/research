@@ -1,0 +1,46 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "e1e7406e72862d0e4d05b2787d206c69ec7a3ab43683b9cee2ea102388a0e90a",
+  "artifacts": [
+    {
+      "bytes": 46199,
+      "hash": "79a3020a59827dd8ab5f482bd2fc5a879bdfbf4caa879d69b3d0e281ca78dba5",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "ae3b61e30b884db511cc12ad2179001af591860088b886fb91f3b536a8a5ae6e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "5d9da33ad6e71e9d50157c6b2e500d0bff51655aca3d82d586e70a1ee2655dce",
+      "changedPaths": [
+        "README.md",
+        "research/check-results.md",
+        "research/public-observations.json"
+      ],
+      "deviceKey": "11f978978d1e9b55ea4a5e23e9b4a067805880571aefe7b33b76ee60b7d5d283",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "ae3b61e30b884db511cc12ad2179001af591860088b886fb91f3b536a8a5ae6e",
+      "treeHash": "fd4956bb2833874594e3b3bd23f621efa9a4808d",
+      "verifiedTreeHash": "fd4956bb2833874594e3b3bd23f621efa9a4808d",
+      "verifierVersion": "0.1.0+b10502ca"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "fcb16849-f997-4cf9-9804-08dd5833a05c",
+  "objective": "Research privacy in publicly accessible AI agent swarms and distributed agent-work platforms, then assess what IMD could realistically learn from them.\n\nThis research supports a community discussion about whether developers can use a swarm while keeping unfinished products, proprietary mechanics and trading research out of public view.\n\nDo not assume privacy requires hiding everything from every participant. Distinguish these levels:\n\n1. Explorer-hidden: jobs disappear from the website but remain accessible through public APIs, blockchain records, storage or logs.\n2. Access-restricted: job contents and results are accessible only to the customer and explicitly authorized participants, such as assigned workers and platform operators. Identify whether underlying AI providers also receive them.\n3. Worker/operator-confidential: execution protects sensitive contents even from infrastructure operators. Investigate actual implementations and limitations, not just claims.\n\nResearch as of the date you run this job.\n\nA. Compare existing platforms\n\nFind 5–8 relevant systems, prioritizing working services that outside users can actually access.\n\nClearly distinguish:\n- Open networks with independent third-party workers.\n- Centrally operated multi-agent services.\n- Self-hosted frameworks.\n- Confidential-computing infrastructure that could support a swarm.\n\nDo not present a self-hosted framework as equivalent to an open worker marketplace.\n\nFor each system, establish:\n- What it does and whether it is operational, experimental or only announced.\n- Whether private work is genuinely available.\n- Who can access prompts, source code, inputs, intermediate work and final outputs.\n- What remains public: metadata, payments, hashes, repositories, logs or artifacts.\n- How access control, storage, model-provider exposure and retention are handled.\n- Whether iterative work can remain private across multiple jobs.\n- Whether customers control publication.\n- Any documented privacy premium or restrictions.\n\nFind documented attempts that were abandoned or limited, if any, and explain why. If you cannot find evidence of such attempts, say so; do not infer that nobody tried or that it is impossible.\n\nB. Examine IMD’s actual constraints\n\nUsing public documentation, repositories, contracts and example jobs, trace:\nsubmission → worker assignment → execution → verification → payment → result delivery.\n\nIdentify what information is exposed at each stage and to whom.\n\nSeparate information that is technically necessary for coordination, verification or payment from information published because of current implementation or product choices.\n\nInvestigate whether IMD could keep prompts, intermediate results and deliverables in access-controlled off-chain storage while recording only the necessary commitments, receipts or payment information on-chain.\n\nExplicitly examine:\n- What hiding a job from Explorer would and would not protect.\n- Whether unassigned workers or the wider network can obtain its contents.\n- Whether outputs can remain private across iterations, with optional publication later.\n- Whether existing reward, verification or dispute mechanisms require wider disclosure.\n- Leakage through URLs, public repositories, logs, previews, metadata or model providers.\n\nTreat statements about IMD’s architecture as claims to verify. Label anything not established by public evidence as unknown. Do not confuse hashes with encryption or private repositories with confidential execution.\n\nC. Recommend realistic options\n\nCompare:\n1. Explorer hiding.\n2. Genuine public-access restrictions, while authorized workers/operators can read the job.\n3. Stronger protection from worker/infrastructure operators.\n\nFor each, explain the user benefit, remaining trust, technical changes, verification implications, operational burden and limitations.\n\nRecommend the smallest useful improvement for individual developers working before launch. Include a concrete proposed job lifecycle and explain how optional public showcases could coexist with private work.\n\nDo not assume privacy increases revenue or justify a specific premium without evidence. Separate demonstrated demand from hypotheses.\n\nDeliver:\n- A short plain-language summary suitable for a group chat.\n- A comparison table with direct source links.\n- An evidence-based assessment of IMD.\n- A prioritized recommendation.\n- At most five important unanswered questions that genuinely require IMD maintainer input.\n\nUse primary sources wherever possible. Distinguish shipped behavior, documentation claims, roadmap proposals and your own inference. Prefer a smaller well-supported comparison over unsupported coverage.\n\nUse public information only. Do not contact teams, submit jobs, purchase services or request private code. Keep the main report concise; put detailed evidence in an appendix.",
+  "publisherVersion": "0.1.0+a6eb4461",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
