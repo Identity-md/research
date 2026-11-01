@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "404443474fea1b89ba490f0a86f462b82e509f4c5cb221838f98a36469a09132",
+  "artifacts": [
+    {
+      "bytes": 7933,
+      "hash": "dfd87592e226bf808e85ec4540e90c0f135ee651fa507121dd5aea233d12eb7c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "cf4a39a95b94b98ccd2ef382739c4635993e82fcc70b6bebb626afd3c7a1ad61"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0ef0dfae5a05e4be520bda90c6831222a29d35962520f8657921a25bb1d0a7c7",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "cf4a39a95b94b98ccd2ef382739c4635993e82fcc70b6bebb626afd3c7a1ad61",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+a6eb4461"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1f0e62c3-4602-4d4b-a712-42ec320d7a7a",
+  "objective": "Find and evaluate X accounts that have consistently posted about Identity.md ($IMD) from May 1, 2026 to November 1, 2026.\n\nThe goal is to build a useful follow list: who covers IMD, what each account contributes, and why someone should follow them.\n\n**Scope and discovery**\n\nSearch for `$IMD`, `Identity.md`, `identitymd`, official project handles, and relevant product names, links, and contract addresses. Verify that each result refers to this project rather than another token or organization using “IMD.”\n\nUse multiple discovery methods: keyword searches across individual months, replies and quote posts, and accounts mentioned by relevant contributors. Do not rely solely on top search results or the official account’s network.\n\n**Selection criteria**\n\nInclude an account in the main list if it has:\n\n- At least one substantive original post, quote post, or reply about IMD in at least three separate months during the period.\n- At least five substantive IMD contributions overall.\n- At least one qualifying contribution since September 1, 2026.\n\nReposts without commentary, ticker spam, giveaways, referral-only promotions, and generic engagement replies do not qualify.\n\nCreate a separate “occasional but valuable” list for accounts that miss these thresholds but have published at least two unusually useful contributions, such as original research, technical explanations, dashboards, or well-supported criticism. Keep official and team accounts in a separate section.\n\n**For each account, provide**\n\n1. Display name, handle, and profile link.\n2. Relationship to IMD: team member, builder, independent researcher, investor, trader, community member, critic, or unknown. Distinguish disclosed relationships from inference.\n3. Posting consistency: qualifying posts found, active months, and most recent qualifying post. Treat counts as lower bounds unless coverage is demonstrably complete.\n4. Main focus: tokenomics, swarm capabilities, NFTs, development, onchain data, trading, ecosystem news, or another specific topic.\n5. What makes the account distinct, supported by examples.\n6. Why someone should follow it—and what they would miss by following only the official account.\n7. Any relevant limitations: repetitive promotion, weak sourcing, undisclosed incentives, or low original contribution.\n8. Three representative post links with dates and short explanations of their value.\n\n**Ranking and output**\n\nRank accounts by usefulness and original contribution, not follower count or bullishness. Reward accurate analysis, primary evidence, practical knowledge, and informed disagreement.\n\nStart with a concise table of the strongest accounts, followed by individual profiles and the two separate lists. Finish with a recommended starter list of 5–10 accounts covering different perspectives, explaining each selection in one sentence.\n\nBe as comprehensive as the available evidence allows. Do not invent accounts, posts, affiliations, or metrics. Clearly state search limitations and distinguish “no qualifying posts found” from “no qualifying posts exist.”",
+  "publisherVersion": "0.1.0+a6eb4461",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
