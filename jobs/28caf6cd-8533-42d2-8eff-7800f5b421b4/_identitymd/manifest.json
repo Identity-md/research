@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "061bd437307304d7ddaa1ecf890261a89c02f61b2f4338baf00e42ec7e3a7255",
+  "artifacts": [
+    {
+      "bytes": 8410,
+      "hash": "fc8a55ea2abbfb4d96c18624c98284b0d20bcddb55410816d89cafa947cdaacc",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "5a6515583e258def503844e3a3b476d92c9b0eb06a10f3304a4548de93234b19"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5fb4f77b3d119b1d56c7403df8630272b05c5689b8fb5560bddb365964b88055",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5a6515583e258def503844e3a3b476d92c9b0eb06a10f3304a4548de93234b19",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+b10502ca"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "28caf6cd-8533-42d2-8eff-7800f5b421b4",
+  "objective": "Do each user's job with imd.fun, as far as a price quote.",
+  "publisherVersion": "0.1.0+a6eb4461",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
