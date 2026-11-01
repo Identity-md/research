@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "35487b2a4ac67147fc62de3101a1762c6b79bbdf94b6f84ae2d197955d12fb7a",
+  "artifacts": [
+    {
+      "bytes": 32877,
+      "hash": "9a61526377ad586ba8966c626f5bcf82b9167f237924dbf16f90ea0ac8d84309",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "65e404b4eed959674a8332a4cd3510e1affc954a1dccf30c46f241239c4d37f3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "7dc957d5a889e664fcda2ca33f9aba4967516b8729f8d3c91c192b30441e1c6b",
+      "changedPaths": [
+        "REPORT-README.md"
+      ],
+      "deviceKey": "079b3bf4557d8811a55e580eb48a93b83336e7bbb31ea5c119963e52e56d66d3",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "65e404b4eed959674a8332a4cd3510e1affc954a1dccf30c46f241239c4d37f3",
+      "treeHash": "439d0454341e1d4f91b4ed37546f8533a8088084",
+      "verifiedTreeHash": "439d0454341e1d4f91b4ed37546f8533a8088084",
+      "verifierVersion": "0.1.0+a6eb4461"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "97a88c24-4733-4ea4-91f9-a1dfe47f2c4c",
+  "objective": "STRATOKS - implementation-ready game economy and token blueprint\n\nProduce an implementation REPORT. Inspect source; do not deploy anything.\nRepository: https://github.com/kilicsln/stratoks\nBaseline commit: 6304eaa8c3e5fa1cadbdc928898669aa5d4a9877\nLive reference: https://stratoks.2-29-11-211.sslip.io\nRead docs/operations/LOCAL-MODEL-PILOT.md. State inaccessible sources.\n\nVISION\nAn evolving shared world with autonomous yellow STRATOKS creatures, memories, reproduction, needs, relationships, tools and migration across forests, deserts, islands and cold regions. Viewing is free. Creatures are not player-owned assets. Players prepare expeditions, establish useful infrastructure, produce goods and trade with other players. Outcomes depend on preparation, environment and creature decisions. Preserve resident autonomy.\nA new STRATOKS token will support useful transactions. Both the operator and players may earn revenue, without guaranteed profit.\n\nCURRENT REALITY\nThe existing server is authoritative; wallet sign-in is visitor-only, not payments. A reduced fly-inspired circuit is not a complete biological brain. Local Qwen advises at most three residents; it does not establish consciousness or invent executable capabilities. Host budget: ARM64, 2 CPU, approximately 4 GB RAM shared with Ollama. Preserve existing world identity, memories, population and backups. Investigate resource accumulation and the documented historical ledger offset before assigning economic value. Never silently convert legacy/debug resources into redeemable assets.\n\nREQUIRED REPORT\n1. Source audit: implemented, incomplete and absent capabilities, with file paths and commit evidence. Map changes onto existing modules. Identify release blockers and a non-destructive migration strategy.\n\n2. Specify ONE initial playable loop in detail: prepare expedition -> autonomous exploration -> verified outcome -> craft a useful item -> another player buys/uses it. Include three connected production chains and biome-specific needs. Define time, inputs, outputs, failure, recovery, ownership, consumption, discovery uniqueness and duplicate-claim rules. Separate creature survival resources from player inventories so market trading cannot drain the residents' entire food supply.\n\n3. Define players' legitimate income sources: useful goods, validated discoveries, creator cosmetics and explicitly funded work orders. Explain who pays and why. No rewards for wash trading, wallet count, referral recruitment or volume alone. No unlimited token farming or randomized cash-prize pools. Paid disasters must not enable unrestricted destruction of other players' purchased property.\n\n4. Recommend token supply, allocation, vesting, treasury spending, reward budgets and liquidity funding with explicit assumptions; present recommendations, not approved parameters. Evaluate Ethereum mainnet versus an EVM L2 for small trades; do not silently choose a new chain. Propose one settlement currency for gameplay and explain IMD's optional ecosystem role without requiring double payment. Treat a 5% marketplace fee as a hypothesis. Separate gross revenue, costs and profit. Burns and team allocations are not revenue.\n\n5. Provide auditable cash-flow and resource-flow tables for low/base/high activity and falling token prices, with no new buyers, reward funding exhausted, bot farming, stock hoarding and world extinction/recovery scenarios. Distinguish illustrative projections from measured results.\n\n6. Specify onchain/offchain boundaries: token, vesting, treasury, tradable-item representation, settlement, order cancellation and refunds. Explain custody and server trust honestly. Cover atomic payment/item delivery where possible, inventory reservation, duplicate/replayed requests, reorgs, reconciliation after crashes, restricted issuance and unavailable-server recovery. An LLM must never authorize funds or mint assets. Assess whether NFTs are actually necessary for each asset class.\n\n7. Describe integrated UX and art requirements: coherent detailed isometric world, original yellow characters, readable activity, distinct biomes, useful buildings, expedition interface, crafting, market and transaction history. Avoid repeated log/house carpeting, fake counters or a static illustration pretending to be a simulation.\n\n8. Deliver a dependency-ordered backlog with exact scope, interfaces, acceptance tests and rollback criteria per job. Include an isolated valueless test economy, testnet integration, independent review, fixes, then gated mainnet rollout. Hosting on IMD does not run our VPS backend; specify owner-operated deployment artifacts. No live writes, paid calls, mainnet transactions or wallet secrets in this report.\n\nDELIVER\nDeliver the specification, recommendation, economic formulas, source-linked gaps and sequenced job briefs under 5000 characters each. Label assumptions and owner decisions.",
+  "publisherVersion": "0.1.0+a6eb4461",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
