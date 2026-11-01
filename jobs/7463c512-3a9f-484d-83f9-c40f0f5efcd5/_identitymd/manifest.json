@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "518daeaa3779beaadc0426070f6bc80ddf8d789404033a45ba5f45023d68c5f9",
+  "artifacts": [
+    {
+      "bytes": 5566,
+      "hash": "e954bb85e0f7c79f238362cb602daa2eae57fc7c136fdf5486bc6dddc329c90a",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "cad54769d2b9e6091cb3500305abf0478af0617a0f72e2d15ef77112df089a08"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0e78515c4d95885a1154d97259bed6633518fe189ba70bc590fc635d6a018193",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "cad54769d2b9e6091cb3500305abf0478af0617a0f72e2d15ef77112df089a08",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+a6eb4461"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "7463c512-3a9f-484d-83f9-c40f0f5efcd5",
+  "objective": "Write the best strategy for earning in the game Yield Fields that you consider the most suitable, possibly based on the results of other similar games.",
+  "publisherVersion": "0.1.0+a6eb4461",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
