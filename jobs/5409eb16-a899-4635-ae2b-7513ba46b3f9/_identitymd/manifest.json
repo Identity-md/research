@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ca00782e0ebe045373ab0dcc4a6d71b82464b24b29d8f916229df57d83ad023a",
+  "artifacts": [
+    {
+      "bytes": 36124,
+      "hash": "3a6d73e82b81b3ea96d03c7ab43104f2a5d97568a39620edb9bf57e77498632d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "b57558d54074c15c2d39360d78c0033893f26ff62ef2dd66dc145bef5e4b4338"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "72daae0728a3d08076bc942c7212c888997615ec028181e7264e321923d3177b",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "056c3c5f5b979ca33dcdae8157b409e71bb7a07038d4a310d097e4545eab8a42",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "b57558d54074c15c2d39360d78c0033893f26ff62ef2dd66dc145bef5e4b4338",
+      "treeHash": "8843daec494530d79c3c1bcf869f91488331c465",
+      "verifiedTreeHash": "8843daec494530d79c3c1bcf869f91488331c465",
+      "verifierVersion": "0.1.0+3dcb4df2"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5409eb16-a899-4635-ae2b-7513ba46b3f9",
+  "objective": "Please list the top (at least 10 but if you can 20) cyber security incidents / hacks / vulnerabilites from the last 60 days. List the short name, the description, the detailed description or post moretem (if available) , the patch or fix if available , the compromitted machines, the impact (financial or other) if available , with source links too.",
+  "publisherVersion": "0.1.0+3dcb4df2",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
