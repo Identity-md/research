@@ -1,0 +1,4412 @@
+{
+  "schema_version": 1,
+  "as_of_utc": "2026-11-03T16:00:00Z",
+  "conclusion": "No tested indicator or combination demonstrates a positive pooled OOS edge at 100x.",
+  "data": {
+    "source": "https://www.okx.com/api/v5/market/history-candles",
+    "instrument_type": "USDT margined perpetual swap",
+    "retrieved_at": "2026-11-03T16:56:12.242661+00:00",
+    "start_inclusive": "2026-09-01T16:00:00+00:00",
+    "end_exclusive": "2026-11-03T16:00:00+00:00",
+    "columns": [
+      "timestamp_ms",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume_contracts",
+      "volume_base",
+      "volume_quote",
+      "confirmed"
+    ],
+    "timeframes": {
+      "1m": "native",
+      "5m": "UTC-aligned aggregation of native 1m",
+      "15m": "UTC-aligned aggregation of native 1m",
+      "1h": "UTC-aligned aggregation of native 1m"
+    },
+    "files": [
+      {
+        "coin": "BTC",
+        "file": "data/BTC-USDT-SWAP-1m.jsonl.gz",
+        "rows": 90720,
+        "sha256": "e03d4aa4252cd88714156024426445671899b0a38ae94fca0b1b79ca19d92e31"
+      },
+      {
+        "coin": "ETH",
+        "file": "data/ETH-USDT-SWAP-1m.jsonl.gz",
+        "rows": 90720,
+        "sha256": "b2fcec0c5262ff2201ec71afd8ea7fe07aef6dad5c61acc4e38f7b7c5847cc77"
+      }
+    ],
+    "derived_files": [
+      {
+        "file": "data/BTC-USDT-SWAP-5m.csv.gz",
+        "rows": 18144,
+        "sha256": "329c76be17c1296dfe552ca8eac51e11120b23cdeb92f20261cbc098244367fc",
+        "method": "aggregate native 1m; volume in base asset units"
+      },
+      {
+        "file": "data/BTC-USDT-SWAP-15m.csv.gz",
+        "rows": 6048,
+        "sha256": "b2b9d285729dace23890085063fc80ff263c2cc71184c05526c0adf7afb5f12f",
+        "method": "aggregate native 1m; volume in base asset units"
+      },
+      {
+        "file": "data/BTC-USDT-SWAP-1H.csv.gz",
+        "rows": 1512,
+        "sha256": "946398071303717e4fde49157e6e6eddfe2a8f4d12b789c5f1d47b0dfda1d938",
+        "method": "aggregate native 1m; volume in base asset units"
+      },
+      {
+        "file": "data/ETH-USDT-SWAP-5m.csv.gz",
+        "rows": 18144,
+        "sha256": "e04fb7504e244c73e77fa49c0f6141e2f94fe145f26e1508a58cf37a923cbed7",
+        "method": "aggregate native 1m; volume in base asset units"
+      },
+      {
+        "file": "data/ETH-USDT-SWAP-15m.csv.gz",
+        "rows": 6048,
+        "sha256": "9fb3424bf7ae02d9d40a5c5cdaa55bfb56270338527aa996d9a92db4d95bbdd9",
+        "method": "aggregate native 1m; volume in base asset units"
+      },
+      {
+        "file": "data/ETH-USDT-SWAP-1H.csv.gz",
+        "rows": 1512,
+        "sha256": "7341ccb609509db70b0c6999f194fe2c29eb1741325b433ff719b78bfb60bb8e",
+        "method": "aggregate native 1m; volume in base asset units"
+      }
+    ]
+  },
+  "evaluation_periods": {
+    "train": {
+      "start_inclusive": "2026-09-08T16:00:00+00:00",
+      "end_exclusive": "2026-10-10T16:00:00+00:00"
+    },
+    "validation": {
+      "start_inclusive": "2026-10-10T16:00:00+00:00",
+      "end_exclusive": "2026-10-22T16:00:00+00:00"
+    },
+    "test": {
+      "start_inclusive": "2026-10-22T16:00:00+00:00",
+      "end_exclusive": "2026-11-03T16:00:00+00:00"
+    }
+  },
+  "warmup_days": 7,
+  "common_rules": {
+    "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+    "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+    "gap_filter": "Skip if abs(entry / signal_close - 1) > 0.001 (0.10%).",
+    "long_stop": "Entry \u00d7 (1 \u2212 stop_fraction).",
+    "short_stop": "Entry \u00d7 (1 + stop_fraction).",
+    "long_target": "Entry \u00d7 (1 + target_fraction).",
+    "short_target": "Entry \u00d7 (1 \u2212 target_fraction).",
+    "time_stop": "Close full size at the close of time_bars bars, counting the entry bar as bar 1; never widen stop; no trailing or partial exits.",
+    "position_policy": "One position per asset per setup, no pyramiding, ignore new signals while occupied; BTC and ETH may overlap. Opposite signals do not exit/reverse an open trade.",
+    "trend_filter_if_selected": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+    "session_filter": "None: 24/7 UTC. Unknown off-hours curve schedule is bracketed by separate payout scenarios.",
+    "research_risk_normalization": "Each trade risks 0.25% of initial account equity at its planned stop. Fixed dollar R, no compounding. Margin fraction = 0.0025 / (100 \u00d7 stop_fraction).",
+    "do_not_trade": [
+      "This study establishes no positive 100x edge: setups are specifications for observation, not deployment recommendations.",
+      "Skip unconfirmed/missing candles, simultaneous opposing signals, the gap filter failure, or a position already open in that asset.",
+      "Operationally skip when actual displayed bust is not farther away than the stop, when the relayer cannot support prompt closes, or when opens are paused/capped. These unavailable protocol states were not historical filters."
+    ]
+  },
+  "selection_design": {
+    "split_minutes": {
+      "train": [
+        10080,
+        56160
+      ],
+      "validation": [
+        56160,
+        73440
+      ],
+      "test": [
+        73440,
+        90720
+      ]
+    },
+    "timeframes_minutes": [
+      1,
+      5,
+      15,
+      60
+    ],
+    "baseline_parameters": [
+      {
+        "period": 15,
+        "sd": 1.5,
+        "local": 5,
+        "reentry": false
+      },
+      {
+        "fast": 10,
+        "middle": 50,
+        "slow": 100,
+        "width": 0.03,
+        "duration": 5
+      },
+      {
+        "fast": [
+          3,
+          5,
+          8,
+          10,
+          12,
+          15
+        ],
+        "slow": [
+          30,
+          35,
+          40,
+          45,
+          50,
+          60
+        ],
+        "mode": "none"
+      },
+      {
+        "atr": 7,
+        "mult": 3.0,
+        "smoothing": "sma"
+      },
+      {
+        "tenkan": 12,
+        "kijun": 30,
+        "span_b": 60,
+        "displacement": 30,
+        "mode": "either"
+      },
+      {
+        "setup": 9,
+        "countdown": 13,
+        "mode": "both",
+        "perfect": false
+      },
+      {
+        "period": 7,
+        "lower": 30,
+        "upper": 80,
+        "mode": "turn"
+      },
+      {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      {
+        "k": 9,
+        "d": 3,
+        "lower": 20,
+        "upper": 80
+      },
+      {
+        "vma": 20,
+        "multiple": 2.0,
+        "move": 0.02,
+        "mode": "breakout"
+      }
+    ],
+    "variants": [
+      [
+        {
+          "period": 15,
+          "sd": 1.5,
+          "local": 5,
+          "reentry": true
+        },
+        {
+          "period": 20,
+          "sd": 2.0,
+          "local": 5,
+          "reentry": true
+        },
+        {
+          "period": 30,
+          "sd": 2.0,
+          "local": 5,
+          "reentry": true
+        }
+      ],
+      [
+        {
+          "fast": 5,
+          "middle": 20,
+          "slow": 50,
+          "width": 0.0005,
+          "duration": 5
+        },
+        {
+          "fast": 10,
+          "middle": 30,
+          "slow": 100,
+          "width": 0.001,
+          "duration": 5
+        },
+        {
+          "fast": 10,
+          "middle": 50,
+          "slow": 100,
+          "width": 0.002,
+          "duration": 5
+        }
+      ],
+      [
+        {
+          "fast": [
+            3,
+            5,
+            8,
+            10,
+            12,
+            15
+          ],
+          "slow": [
+            30,
+            35,
+            40,
+            45,
+            50,
+            60
+          ],
+          "mode": "cross"
+        },
+        {
+          "fast": [
+            3,
+            5,
+            8,
+            10,
+            12,
+            15
+          ],
+          "slow": [
+            30,
+            35,
+            40,
+            45,
+            50,
+            60
+          ],
+          "mode": "separation"
+        },
+        {
+          "fast": [
+            5,
+            8,
+            10
+          ],
+          "slow": [
+            20,
+            30,
+            50
+          ],
+          "mode": "separation"
+        }
+      ],
+      [
+        {
+          "atr": 7,
+          "mult": 2.0,
+          "smoothing": "sma"
+        },
+        {
+          "atr": 10,
+          "mult": 2.0,
+          "smoothing": "sma"
+        },
+        {
+          "atr": 14,
+          "mult": 2.5,
+          "smoothing": "sma"
+        }
+      ],
+      [
+        {
+          "tenkan": 9,
+          "kijun": 26,
+          "span_b": 52,
+          "displacement": 26,
+          "mode": "cross_outside"
+        },
+        {
+          "tenkan": 6,
+          "kijun": 18,
+          "span_b": 36,
+          "displacement": 18,
+          "mode": "break"
+        },
+        {
+          "tenkan": 12,
+          "kijun": 30,
+          "span_b": 60,
+          "displacement": 30,
+          "mode": "cross_outside"
+        }
+      ],
+      [
+        {
+          "setup": 9,
+          "countdown": 13,
+          "mode": "setup",
+          "perfect": true
+        },
+        {
+          "setup": 9,
+          "countdown": 13,
+          "mode": "countdown",
+          "perfect": false
+        },
+        {
+          "setup": 9,
+          "countdown": 13,
+          "mode": "setup_reversal",
+          "perfect": true
+        }
+      ],
+      [
+        {
+          "period": 7,
+          "lower": 30,
+          "upper": 70,
+          "mode": "recross"
+        },
+        {
+          "period": 14,
+          "lower": 30,
+          "upper": 70,
+          "mode": "recross"
+        },
+        {
+          "period": 7,
+          "lower": 20,
+          "upper": 80,
+          "mode": "recross"
+        }
+      ],
+      [
+        {
+          "fast": 5,
+          "slow": 13,
+          "signal": 5
+        },
+        {
+          "fast": 8,
+          "slow": 21,
+          "signal": 5
+        },
+        {
+          "fast": 12,
+          "slow": 26,
+          "signal": 9
+        }
+      ],
+      [
+        {
+          "k": 9,
+          "d": 3,
+          "lower": 20,
+          "upper": 80
+        },
+        {
+          "k": 14,
+          "d": 3,
+          "lower": 20,
+          "upper": 80
+        },
+        {
+          "k": 9,
+          "d": 3,
+          "lower": 30,
+          "upper": 70
+        }
+      ],
+      [
+        {
+          "vma": 20,
+          "multiple": 1.5,
+          "move": 0.001,
+          "mode": "breakout"
+        },
+        {
+          "vma": 30,
+          "multiple": 2.0,
+          "move": 0.002,
+          "mode": "breakout"
+        },
+        {
+          "vma": 20,
+          "multiple": 2.5,
+          "move": 0.0,
+          "mode": "exhaustion"
+        }
+      ]
+    ],
+    "exits": [
+      {
+        "stop": 0.002,
+        "target": 0.004,
+        "time_bars": 6
+      },
+      {
+        "stop": 0.0035,
+        "target": 0.007,
+        "time_bars": 12
+      },
+      {
+        "stop": 0.005,
+        "target": 0.01,
+        "time_bars": 24
+      }
+    ],
+    "trend_filters": [
+      false,
+      true
+    ],
+    "training_min_trades": 40,
+    "validation_min_trades": 15,
+    "objective": "pooled mean net R - 0.5 * sample standard deviation(R)/sqrt(n); at least max(3,min_n//5) trades per asset",
+    "selection": "top five eligible training candidates, then highest validation objective; if none eligible, highest available score with explicit insufficient-sample flag",
+    "candidate_count_per_indicator": 72,
+    "risk_fraction_initial_equity": 0.0025
+  },
+  "selection_lock_sha256": "d64f280e27d5f109da39701ae0d54b4408d6648c5a884d363645d052e36d5bc2",
+  "protocol": {
+    "contract_set": 2,
+    "leverage": 100,
+    "bust_distance_approx": 0.0095,
+    "parameters": {
+      "BTC": {
+        "base_rate": 0.1,
+        "rate_multiplier": 15000.0,
+        "reference_notional": 100000.0,
+        "position_multiplier": 814.598
+      },
+      "ETH": {
+        "base_rate": 0.1,
+        "rate_multiplier": 15000.0,
+        "reference_notional": 100000.0,
+        "position_multiplier": 483.979
+      }
+    },
+    "builder_fee": 0.0,
+    "headline_curve": "standard",
+    "fidelity": "Documented contract-set-2 mathematical payout scenario, not a byte-exact or historical onchain replay.",
+    "win_formula": "m=max(0, directional_move - 0.00002 - holdback); net_notional_return=m*(1-base_rate)/(1+1/(m*rate_multiplier)+reference_notional/(1e6*m*position_multiplier))*0.98, or 0 if m=0.",
+    "holdback_standard": {
+      "band": [
+        7.5e-05,
+        0.0006
+      ],
+      "coefficient": 3.597,
+      "formula": "coefficient*width*u^2*(1-u)^2, u=(raw_move-band_start)/width; zero outside band"
+    },
+    "holdback_off_hours": {
+      "band": [
+        3e-05,
+        0.001
+      ],
+      "coefficient": 6.085,
+      "formula": "coefficient*width*u^2*(1-u)^3; zero outside band"
+    },
+    "loss_formula": "Signed directional return, no additional trader fee; at/past bust lose full margin: net_notional_return=-0.01.",
+    "bust_limit": "Docs only approximate a 5bp buffer. Main scenario uses 0.95% adverse price distance; 0.90% and 1.00% sensitivities are included.",
+    "intraminute_policy": "If a live position\u2019s 1m candle touches bust, assume keeper beats stop. Otherwise stop before target when both touched. Gaps use open for adverse fills; favorable target gaps receive target only.",
+    "paper_token_return_included": false,
+    "paper_emission_quantity": null,
+    "paper_reason": "No historical supply, LP balance/insolvency clock, exact c, funding origin, or queued settlement state; no realizable token price. Documented emission function is implemented with explicit state inputs.",
+    "unavailable": [
+      "Exact per-block BBO path",
+      "historical actual owner-set impact/fee parameters",
+      "exact bust arithmetic and fixed-point rounding",
+      "off-hours keeper schedule",
+      "relayer and stop-trigger latency",
+      "LP payout liquidity and PAPER state"
+    ]
+  },
+  "indicators": [
+    {
+      "indicator": "Bollinger",
+      "id": 1,
+      "config": {
+        "timeframe_minutes": 5,
+        "variant_index": 1,
+        "parameters": {
+          "period": 20,
+          "sd": 2.0,
+          "local": 5,
+          "reentry": true
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.002,
+          "target": 0.004,
+          "time_bars": 6
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 50,
+        "win_rate": 0.46,
+        "average_r": -0.048295256194538554,
+        "profit_factor": 0.8554886648910058,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 8.55331674259356,
+        "max_drawdown_pct_initial": 2.13832918564839,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -2.414762809726928,
+        "long_trades": 26,
+        "short_trades": 24,
+        "ambiguous_candles": 0,
+        "time_exits": 32,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.28418270442784405,
+          0.2209124315078468
+        ],
+        "mark_to_close_drawdown": {
+          "r": 9.641865170486398,
+          "pct_initial_equity": 2.4104662926215994,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 26,
+          "win_rate": 0.46153846153846156,
+          "average_r": -0.1335130881321869,
+          "profit_factor": 0.6476048445034102,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 6.197566459778667,
+          "max_drawdown_pct_initial": 1.5493916149446667,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -3.4713402914368596,
+          "long_trades": 14,
+          "short_trades": 12,
+          "ambiguous_candles": 0,
+          "time_exits": 16,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 24,
+          "win_rate": 0.4583333333333333,
+          "average_r": 0.044024061737913824,
+          "profit_factor": 1.1540392005797786,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 4.834384673672872,
+          "max_drawdown_pct_initial": 1.208596168418218,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 1.0565774817099318,
+          "long_trades": 12,
+          "short_trades": 12,
+          "ambiguous_candles": 0,
+          "time_exits": 16,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 26,
+          "win_rate": 0.46153846153846156,
+          "average_r": 0.003892055945920941,
+          "profit_factor": 1.0137932956766262,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.83022274024869,
+          "max_drawdown_pct_initial": 0.9575556850621725,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 0.10119345459394447,
+          "long_trades": 26,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 18,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 24,
+          "win_rate": 0.4583333333333333,
+          "average_r": -0.10483151101336967,
+          "profit_factor": 0.7315863046582145,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.503756727740356,
+          "max_drawdown_pct_initial": 2.125939181935089,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.515956264320872,
+          "long_trades": 0,
+          "short_trades": 24,
+          "ambiguous_candles": 0,
+          "time_exits": 14,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 14,
+            "win_rate": 0.5,
+            "average_r": -0.14640344708535347,
+            "profit_factor": 0.5834495935335039,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 2.4360700464185636,
+            "max_drawdown_pct_initial": 0.6090175116046409,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -2.0496482591949485,
+            "long_trades": 14,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 9,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 12,
+            "win_rate": 0.4166666666666667,
+            "average_r": -0.11847433602015926,
+            "profit_factor": 0.7116345710961621,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 4.147918200583718,
+            "max_drawdown_pct_initial": 1.0369795501459296,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -1.421692032241911,
+            "long_trades": 0,
+            "short_trades": 12,
+            "ambiguous_candles": 0,
+            "time_exits": 7,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 12,
+            "win_rate": 0.4166666666666667,
+            "average_r": 0.17923680948240772,
+            "profit_factor": 1.8902879509239958,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 1.8302227402486326,
+            "max_drawdown_pct_initial": 0.45755568506215816,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": 2.1508417137888927,
+            "long_trades": 12,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 9,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 12,
+            "win_rate": 0.5,
+            "average_r": -0.09118868600658009,
+            "profit_factor": 0.7537244889291935,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 4.378206442442962,
+            "max_drawdown_pct_initial": 1.0945516106107405,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -1.094264232078961,
+            "long_trades": 0,
+            "short_trades": 12,
+            "ambiguous_candles": 0,
+            "time_exits": 7,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 2448,
+          "win_rate": 0.5081699346405228,
+          "average_r": -0.053082010499068286,
+          "profit_factor": 0.7369766706965188,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 133.99125696547085,
+          "max_drawdown_pct_initial": 33.49781424136771,
+          "bust_rate": 0.002042483660130719,
+          "busts": 5,
+          "total_r": -129.94476170171916,
+          "long_trades": 1254,
+          "short_trades": 1194,
+          "ambiguous_candles": 0,
+          "time_exits": 2161,
+          "split_end_exits": 2
+        },
+        "5": {
+          "trades": 657,
+          "win_rate": 0.471841704718417,
+          "average_r": -0.0727536268855657,
+          "profit_factor": 0.8284575276050571,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 79.54168536330225,
+          "max_drawdown_pct_initial": 19.885421340825562,
+          "bust_rate": 0.0060882800608828,
+          "busts": 4,
+          "total_r": -47.799132863816666,
+          "long_trades": 356,
+          "short_trades": 301,
+          "ambiguous_candles": 0,
+          "time_exits": 349,
+          "split_end_exits": 2
+        },
+        "15": {
+          "trades": 320,
+          "win_rate": 0.4,
+          "average_r": -0.10436981797347736,
+          "profit_factor": 0.8173810447845856,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 47.27431908135861,
+          "max_drawdown_pct_initial": 11.818579770339653,
+          "bust_rate": 0.00625,
+          "busts": 2,
+          "total_r": -33.39834175151275,
+          "long_trades": 170,
+          "short_trades": 150,
+          "ambiguous_candles": 0,
+          "time_exits": 80,
+          "split_end_exits": 1
+        },
+        "60": {
+          "trades": 125,
+          "win_rate": 0.312,
+          "average_r": -0.17609999517126756,
+          "profit_factor": 0.7422228718180273,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 31.659048871464094,
+          "max_drawdown_pct_initial": 7.914762217866024,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -22.012499396408444,
+          "long_trades": 70,
+          "short_trades": 55,
+          "ambiguous_candles": 0,
+          "time_exits": 3,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 50,
+          "win_rate": 0.46,
+          "average_r": -0.05321771884149934,
+          "profit_factor": 0.8407594408390399,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.659041022694689,
+          "max_drawdown_pct_initial": 2.1647602556736723,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.660885942074967,
+          "long_trades": 26,
+          "short_trades": 24,
+          "ambiguous_candles": 0,
+          "time_exits": 32,
+          "split_end_exits": 0
+        },
+        "one_minute_trigger_delay": {
+          "trades": 50,
+          "win_rate": 0.46,
+          "average_r": -0.05257943883416935,
+          "profit_factor": 0.8396661987417972,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.699594157489209,
+          "max_drawdown_pct_initial": 2.174898539372302,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.6289719417084676,
+          "long_trades": 26,
+          "short_trades": 24,
+          "ambiguous_candles": 0,
+          "time_exits": 32,
+          "split_end_exits": 0
+        },
+        "bust_0_90_percent": {
+          "trades": 50,
+          "win_rate": 0.46,
+          "average_r": -0.048295256194538554,
+          "profit_factor": 0.8554886648910058,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.55331674259356,
+          "max_drawdown_pct_initial": 2.13832918564839,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.414762809726928,
+          "long_trades": 26,
+          "short_trades": 24,
+          "ambiguous_candles": 0,
+          "time_exits": 32,
+          "split_end_exits": 0
+        },
+        "bust_1_00_percent": {
+          "trades": 50,
+          "win_rate": 0.46,
+          "average_r": -0.048295256194538554,
+          "profit_factor": 0.8554886648910058,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.55331674259356,
+          "max_drawdown_pct_initial": 2.13832918564839,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.414762809726928,
+          "long_trades": 26,
+          "short_trades": 24,
+          "ambiguous_candles": 0,
+          "time_exits": 32,
+          "split_end_exits": 0
+        },
+        "ideal_continuous_stop": {
+          "trades": 50,
+          "win_rate": 0.46,
+          "average_r": -0.048295256194538554,
+          "profit_factor": 0.8554886648910058,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.55331674259356,
+          "max_drawdown_pct_initial": 2.13832918564839,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.414762809726928,
+          "long_trades": 26,
+          "short_trades": 24,
+          "ambiguous_candles": 0,
+          "time_exits": 32,
+          "split_end_exits": 0
+        }
+      },
+      "rank": 4,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "Current low \u2264 SMA20 \u2212 2\u00d7population SD20 and is the minimum low of this bar and the preceding four; close > lower band and close > open.",
+        "short_trigger": "Current high \u2265 SMA20 + 2\u00d7population SD20 and is the maximum high of this bar and the preceding four; close < upper band and close < open.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.2,
+        "take_profit_percent_of_entry": 0.4,
+        "time_stop_bars": 6,
+        "time_stop_minutes": 30,
+        "trend_filter": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "Do not enter on the touch alone, on a doji, or before the close returns inside the touched band."
+      },
+      "selection_samples": {
+        "training_trades": 165,
+        "validation_trades": 66
+      }
+    },
+    {
+      "indicator": "Moving averages",
+      "id": 2,
+      "config": {
+        "timeframe_minutes": 1,
+        "variant_index": 0,
+        "parameters": {
+          "fast": 5,
+          "middle": 20,
+          "slow": 50,
+          "width": 0.0005,
+          "duration": 5
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.0035,
+          "target": 0.007,
+          "time_bars": 12
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 623,
+        "win_rate": 0.44301765650080255,
+        "average_r": -0.04613140890340021,
+        "profit_factor": 0.7089720451654549,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 35.33607613377006,
+        "max_drawdown_pct_initial": 8.834019033442514,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -28.73986774681833,
+        "long_trades": 287,
+        "short_trades": 336,
+        "ambiguous_candles": 0,
+        "time_exits": 604,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.09136835575599968,
+          -0.003127663024534301
+        ],
+        "mark_to_close_drawdown": {
+          "r": 35.41992059364645,
+          "pct_initial_equity": 8.854980148411613,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 337,
+          "win_rate": 0.45103857566765576,
+          "average_r": -0.03781357117281557,
+          "profit_factor": 0.7277980567236316,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 17.696706164665834,
+          "max_drawdown_pct_initial": 4.424176541166458,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -12.743173485238847,
+          "long_trades": 157,
+          "short_trades": 180,
+          "ambiguous_candles": 0,
+          "time_exits": 332,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 286,
+          "win_rate": 0.43356643356643354,
+          "average_r": -0.055932497418110086,
+          "profit_factor": 0.6920028539643237,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 19.092096450298143,
+          "max_drawdown_pct_initial": 4.773024112574536,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -15.996694261579485,
+          "long_trades": 130,
+          "short_trades": 156,
+          "ambiguous_candles": 0,
+          "time_exits": 272,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 287,
+          "win_rate": 0.46689895470383275,
+          "average_r": -0.02651805742756694,
+          "profit_factor": 0.8255696342922901,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 18.12674189399741,
+          "max_drawdown_pct_initial": 4.531685473499352,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -7.610682481711712,
+          "long_trades": 287,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 278,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 336,
+          "win_rate": 0.4226190476190476,
+          "average_r": -0.06288447995567445,
+          "profit_factor": 0.61667844896467,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 21.78686110148212,
+          "max_drawdown_pct_initial": 5.44671527537053,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -21.129185265106617,
+          "long_trades": 0,
+          "short_trades": 336,
+          "ambiguous_candles": 0,
+          "time_exits": 326,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 157,
+            "win_rate": 0.4585987261146497,
+            "average_r": -0.019255806921607516,
+            "profit_factor": 0.8539515091466326,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 9.664620948418992,
+            "max_drawdown_pct_initial": 2.416155237104748,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -3.0231616866923803,
+            "long_trades": 157,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 156,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 180,
+            "win_rate": 0.4444444444444444,
+            "average_r": -0.054000065547480366,
+            "profit_factor": 0.627805837596549,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 9.868479345155743,
+            "max_drawdown_pct_initial": 2.4671198362889357,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -9.720011798546466,
+            "long_trades": 0,
+            "short_trades": 180,
+            "ambiguous_candles": 0,
+            "time_exits": 176,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 130,
+            "win_rate": 0.47692307692307695,
+            "average_r": -0.035288621500148706,
+            "profit_factor": 0.7999504758997988,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 10.694080012295784,
+            "max_drawdown_pct_initial": 2.673520003073946,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -4.587520795019332,
+            "long_trades": 130,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 122,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 156,
+            "win_rate": 0.3974358974358974,
+            "average_r": -0.07313572734974456,
+            "profit_factor": 0.6066599069427819,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 11.918381756326365,
+            "max_drawdown_pct_initial": 2.9795954390815913,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -11.409173466560151,
+            "long_trades": 0,
+            "short_trades": 156,
+            "ambiguous_candles": 0,
+            "time_exits": 150,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 0,
+          "win_rate": null,
+          "average_r": null,
+          "profit_factor": null,
+          "max_drawdown_r": null,
+          "max_drawdown_pct_initial": null,
+          "bust_rate": null,
+          "total_r": 0.0,
+          "long_trades": 0,
+          "short_trades": 0
+        },
+        "5": {
+          "trades": 0,
+          "win_rate": null,
+          "average_r": null,
+          "profit_factor": null,
+          "max_drawdown_r": null,
+          "max_drawdown_pct_initial": null,
+          "bust_rate": null,
+          "total_r": 0.0,
+          "long_trades": 0,
+          "short_trades": 0
+        },
+        "15": {
+          "trades": 2,
+          "win_rate": 0.5,
+          "average_r": 0.34634321365764054,
+          "profit_factor": 1.6926864273152695,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 1.0000000000000167,
+          "max_drawdown_pct_initial": 0.25000000000000416,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 0.6926864273152811,
+          "long_trades": 0,
+          "short_trades": 2,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "60": {
+          "trades": 2,
+          "win_rate": 0.0,
+          "average_r": -1.0000000000000167,
+          "profit_factor": 0.0,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 2.0000000000000333,
+          "max_drawdown_pct_initial": 0.5000000000000083,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.0000000000000333,
+          "long_trades": 0,
+          "short_trades": 2,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 623,
+          "win_rate": 0.44301765650080255,
+          "average_r": -0.04930775616163638,
+          "profit_factor": 0.688933510284708,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 36.61638353607671,
+          "max_drawdown_pct_initial": 9.154095884019178,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -30.718732088699465,
+          "long_trades": 287,
+          "short_trades": 336,
+          "ambiguous_candles": 0,
+          "time_exits": 604,
+          "split_end_exits": 0
+        },
+        "one_minute_trigger_delay": {
+          "trades": 620,
+          "win_rate": 0.44193548387096776,
+          "average_r": -0.05268247631415784,
+          "profit_factor": 0.6715030409286589,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 37.87444864312974,
+          "max_drawdown_pct_initial": 9.468612160782435,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -32.66313531477786,
+          "long_trades": 286,
+          "short_trades": 334,
+          "ambiguous_candles": 0,
+          "time_exits": 601,
+          "split_end_exits": 0
+        },
+        "bust_0_90_percent": {
+          "trades": 623,
+          "win_rate": 0.44301765650080255,
+          "average_r": -0.04613140890340021,
+          "profit_factor": 0.7089720451654549,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 35.33607613377006,
+          "max_drawdown_pct_initial": 8.834019033442514,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -28.73986774681833,
+          "long_trades": 287,
+          "short_trades": 336,
+          "ambiguous_candles": 0,
+          "time_exits": 604,
+          "split_end_exits": 0
+        },
+        "bust_1_00_percent": {
+          "trades": 623,
+          "win_rate": 0.44301765650080255,
+          "average_r": -0.04613140890340021,
+          "profit_factor": 0.7089720451654549,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 35.33607613377006,
+          "max_drawdown_pct_initial": 8.834019033442514,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -28.73986774681833,
+          "long_trades": 287,
+          "short_trades": 336,
+          "ambiguous_candles": 0,
+          "time_exits": 604,
+          "split_end_exits": 0
+        },
+        "ideal_continuous_stop": {
+          "trades": 623,
+          "win_rate": 0.44301765650080255,
+          "average_r": -0.04613140890340021,
+          "profit_factor": 0.7089720451654549,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 35.33607613377006,
+          "max_drawdown_pct_initial": 8.834019033442514,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -28.73986774681833,
+          "long_trades": 287,
+          "short_trades": 336,
+          "ambiguous_candles": 0,
+          "time_exits": 604,
+          "split_end_exits": 0
+        }
+      },
+      "rank": 3,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "For at least five consecutive completed bars, (max(EMA5,EMA20,EMA50) \u2212 min(...))/close \u2264 0.0005. On the current bar it becomes > 0.0005, EMA5 > EMA50, EMA5 rises and EMA50 rises versus the prior bar.",
+        "short_trigger": "The same five-bar compression ends with width > 0.0005, EMA5 < EMA50, EMA5 falls and EMA50 falls versus the prior bar.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.35000000000000003,
+        "take_profit_percent_of_entry": 0.7000000000000001,
+        "time_stop_bars": 12,
+        "time_stop_minutes": 12,
+        "trend_filter": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "No entry while still compressed, after a release without five immediately preceding compressed bars, or when the two EMA slopes disagree."
+      },
+      "selection_samples": {
+        "training_trades": 1521,
+        "validation_trades": 541
+      }
+    },
+    {
+      "indicator": "MA ribbon",
+      "id": 3,
+      "config": {
+        "timeframe_minutes": 1,
+        "variant_index": 0,
+        "parameters": {
+          "fast": [
+            3,
+            5,
+            8,
+            10,
+            12,
+            15
+          ],
+          "slow": [
+            30,
+            35,
+            40,
+            45,
+            50,
+            60
+          ],
+          "mode": "cross"
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 540,
+        "win_rate": 0.45185185185185184,
+        "average_r": -0.06662181764594016,
+        "profit_factor": 0.6466829251220101,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 43.0656244620034,
+        "max_drawdown_pct_initial": 10.76640611550085,
+        "bust_rate": 0.001851851851851852,
+        "busts": 1,
+        "total_r": -35.97578152880769,
+        "long_trades": 295,
+        "short_trades": 245,
+        "ambiguous_candles": 0,
+        "time_exits": 504,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.0956969847332585,
+          -0.039309544223203534
+        ],
+        "mark_to_close_drawdown": {
+          "r": 43.232599380226034,
+          "pct_initial_equity": 10.808149845056509,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 256,
+          "win_rate": 0.4609375,
+          "average_r": -0.045203827538531464,
+          "profit_factor": 0.699354466435427,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 14.91942907324857,
+          "max_drawdown_pct_initial": 3.729857268312143,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -11.572179849864055,
+          "long_trades": 140,
+          "short_trades": 116,
+          "ambiguous_candles": 0,
+          "time_exits": 248,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 284,
+          "win_rate": 0.44366197183098594,
+          "average_r": -0.08592817492585787,
+          "profit_factor": 0.6146708053908052,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 28.55716099679531,
+          "max_drawdown_pct_initial": 7.139290249198828,
+          "bust_rate": 0.0035211267605633804,
+          "busts": 1,
+          "total_r": -24.403601678943634,
+          "long_trades": 155,
+          "short_trades": 129,
+          "ambiguous_candles": 0,
+          "time_exits": 256,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 295,
+          "win_rate": 0.4271186440677966,
+          "average_r": -0.06610116411070252,
+          "profit_factor": 0.6476028837583235,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 25.92389311541476,
+          "max_drawdown_pct_initial": 6.48097327885369,
+          "bust_rate": 0.003389830508474576,
+          "busts": 1,
+          "total_r": -19.499843412657242,
+          "long_trades": 295,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 276,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 245,
+          "win_rate": 0.4816326530612245,
+          "average_r": -0.0672487270046957,
+          "profit_factor": 0.6455878964977746,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 18.179998159809827,
+          "max_drawdown_pct_initial": 4.544999539952457,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -16.475938116150445,
+          "long_trades": 0,
+          "short_trades": 245,
+          "ambiguous_candles": 0,
+          "time_exits": 228,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 140,
+            "win_rate": 0.40714285714285714,
+            "average_r": -0.06011255361456334,
+            "profit_factor": 0.623831464129799,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 11.05203431553717,
+            "max_drawdown_pct_initial": 2.7630085788842926,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -8.415757506038867,
+            "long_trades": 140,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 134,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 116,
+            "win_rate": 0.5258620689655172,
+            "average_r": -0.027210537446768865,
+            "profit_factor": 0.8041776179871157,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 5.642911724128506,
+            "max_drawdown_pct_initial": 1.4107279310321266,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -3.1564223438251884,
+            "long_trades": 0,
+            "short_trades": 116,
+            "ambiguous_candles": 0,
+            "time_exits": 114,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 155,
+            "win_rate": 0.44516129032258067,
+            "average_r": -0.07151023165560241,
+            "profit_factor": 0.6637369958701607,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 15.069479923316528,
+            "max_drawdown_pct_initial": 3.767369980829132,
+            "bust_rate": 0.0064516129032258064,
+            "busts": 1,
+            "total_r": -11.084085906618375,
+            "long_trades": 155,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 142,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 129,
+            "win_rate": 0.4418604651162791,
+            "average_r": -0.1032520602505834,
+            "profit_factor": 0.5614147884142736,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 13.741380260687496,
+            "max_drawdown_pct_initial": 3.435345065171874,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -13.319515772325257,
+            "long_trades": 0,
+            "short_trades": 129,
+            "ambiguous_candles": 0,
+            "time_exits": 114,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 0,
+          "win_rate": null,
+          "average_r": null,
+          "profit_factor": null,
+          "max_drawdown_r": null,
+          "max_drawdown_pct_initial": null,
+          "bust_rate": null,
+          "total_r": 0.0,
+          "long_trades": 0,
+          "short_trades": 0
+        },
+        "5": {
+          "trades": 0,
+          "win_rate": null,
+          "average_r": null,
+          "profit_factor": null,
+          "max_drawdown_r": null,
+          "max_drawdown_pct_initial": null,
+          "bust_rate": null,
+          "total_r": 0.0,
+          "long_trades": 0,
+          "short_trades": 0
+        },
+        "15": {
+          "trades": 0,
+          "win_rate": null,
+          "average_r": null,
+          "profit_factor": null,
+          "max_drawdown_r": null,
+          "max_drawdown_pct_initial": null,
+          "bust_rate": null,
+          "total_r": 0.0,
+          "long_trades": 0,
+          "short_trades": 0
+        },
+        "60": {
+          "trades": 0,
+          "win_rate": null,
+          "average_r": null,
+          "profit_factor": null,
+          "max_drawdown_r": null,
+          "max_drawdown_pct_initial": null,
+          "bust_rate": null,
+          "total_r": 0.0,
+          "long_trades": 0,
+          "short_trades": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 540,
+          "win_rate": 0.45185185185185184,
+          "average_r": -0.06859914895567663,
+          "profit_factor": 0.6361964968150915,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 44.13197149898484,
+          "max_drawdown_pct_initial": 11.03299287474621,
+          "bust_rate": 0.001851851851851852,
+          "busts": 1,
+          "total_r": -37.043540436065385,
+          "long_trades": 295,
+          "short_trades": 245,
+          "ambiguous_candles": 0,
+          "time_exits": 504,
+          "split_end_exits": 0
+        },
+        "one_minute_trigger_delay": {
+          "trades": 539,
+          "win_rate": 0.45083487940630795,
+          "average_r": -0.06985541635793015,
+          "profit_factor": 0.6356961217709671,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 44.54826925865015,
+          "max_drawdown_pct_initial": 11.137067314662538,
+          "bust_rate": 0.0018552875695732839,
+          "busts": 1,
+          "total_r": -37.65206941692435,
+          "long_trades": 294,
+          "short_trades": 245,
+          "ambiguous_candles": 0,
+          "time_exits": 503,
+          "split_end_exits": 0
+        },
+        "bust_0_90_percent": {
+          "trades": 540,
+          "win_rate": 0.45185185185185184,
+          "average_r": -0.06662181764594016,
+          "profit_factor": 0.6466829251220101,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 43.0656244620034,
+          "max_drawdown_pct_initial": 10.76640611550085,
+          "bust_rate": 0.001851851851851852,
+          "busts": 1,
+          "total_r": -35.97578152880769,
+          "long_trades": 295,
+          "short_trades": 245,
+          "ambiguous_candles": 0,
+          "time_exits": 504,
+          "split_end_exits": 0
+        },
+        "bust_1_00_percent": {
+          "trades": 540,
+          "win_rate": 0.45185185185185184,
+          "average_r": -0.06476996579408831,
+          "profit_factor": 0.6530969709489951,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 42.06562446200341,
+          "max_drawdown_pct_initial": 10.516406115500853,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -34.97578152880769,
+          "long_trades": 295,
+          "short_trades": 245,
+          "ambiguous_candles": 0,
+          "time_exits": 504,
+          "split_end_exits": 0
+        },
+        "ideal_continuous_stop": {
+          "trades": 540,
+          "win_rate": 0.45185185185185184,
+          "average_r": -0.06476996579408831,
+          "profit_factor": 0.6530969709489951,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 42.06562446200341,
+          "max_drawdown_pct_initial": 10.516406115500853,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -34.97578152880769,
+          "long_trades": 295,
+          "short_trades": 245,
+          "ambiguous_candles": 0,
+          "time_exits": 504,
+          "split_end_exits": 0
+        }
+      },
+      "rank": 5,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "The arithmetic mean of EMA3/5/8/10/12/15 crosses strictly above the mean of EMA30/35/40/45/50/60; on the previous bar the fast mean was \u2264 the slow mean.",
+        "short_trigger": "The same fast mean crosses strictly below the slow mean; on the previous bar it was \u2265 the slow mean.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.5,
+        "take_profit_percent_of_entry": 1.0,
+        "time_stop_bars": 24,
+        "time_stop_minutes": 24,
+        "trend_filter": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "An already aligned ribbon is not a new entry. Do not trade an intrabar crossover that disappears at the close."
+      },
+      "selection_samples": {
+        "training_trades": 1454,
+        "validation_trades": 522
+      }
+    },
+    {
+      "indicator": "SuperTrend",
+      "id": 4,
+      "config": {
+        "timeframe_minutes": 60,
+        "variant_index": 0,
+        "parameters": {
+          "atr": 7,
+          "mult": 2.0,
+          "smoothing": "sma"
+        },
+        "trend_filter": false,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 27,
+        "win_rate": 0.3333333333333333,
+        "average_r": -0.09391359213527094,
+        "profit_factor": 0.8591296117970924,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 8.403993709983993,
+        "max_drawdown_pct_initial": 2.1009984274959983,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -2.5356669876523155,
+        "long_trades": 14,
+        "short_trades": 13,
+        "ambiguous_candles": 0,
+        "time_exits": 0,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.4422875907487527,
+          0.5299039705301678
+        ],
+        "mark_to_close_drawdown": {
+          "r": 9.243805040759757,
+          "pct_initial_equity": 2.310951260189939,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 12,
+          "win_rate": 0.25,
+          "average_r": -0.3180801080789399,
+          "profit_factor": 0.5758931892280753,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 5.272320432315704,
+          "max_drawdown_pct_initial": 1.318080108078926,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -3.816961296947279,
+          "long_trades": 6,
+          "short_trades": 6,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 15,
+          "win_rate": 0.4,
+          "average_r": 0.08541962061966421,
+          "profit_factor": 1.142366034366108,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 4.572901896901655,
+          "max_drawdown_pct_initial": 1.1432254742254138,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 1.2812943092949631,
+          "long_trades": 8,
+          "short_trades": 7,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 14,
+          "win_rate": 0.35714285714285715,
+          "average_r": -0.028856693570295903,
+          "profit_factor": 0.9551118100017622,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 6.272320432315794,
+          "max_drawdown_pct_initial": 1.5680801080789488,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.40399370998414263,
+          "long_trades": 14,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 13,
+          "win_rate": 0.3076923076923077,
+          "average_r": -0.16397486751293638,
+          "profit_factor": 0.7631474135924202,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 6.999999999999851,
+          "max_drawdown_pct_initial": 1.7499999999999627,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.131673277668173,
+          "long_trades": 0,
+          "short_trades": 13,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 6,
+            "win_rate": 0.3333333333333333,
+            "average_r": -0.09077347743859636,
+            "profit_factor": 0.8638397838421056,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 2.272320432315791,
+            "max_drawdown_pct_initial": 0.5680801080789477,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -0.5446408646315781,
+            "long_trades": 6,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 0,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 6,
+            "win_rate": 0.16666666666666666,
+            "average_r": -0.5453867387192834,
+            "profit_factor": 0.34553591353684593,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 4.999999999999893,
+            "max_drawdown_pct_initial": 1.2499999999999734,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -3.2723204323157007,
+            "long_trades": 0,
+            "short_trades": 6,
+            "ambiguous_candles": 0,
+            "time_exits": 0,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 8,
+            "win_rate": 0.375,
+            "average_r": 0.017580894330929436,
+            "profit_factor": 1.028129430929487,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 5.000000000000027,
+            "max_drawdown_pct_initial": 1.2500000000000067,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": 0.1406471546474355,
+            "long_trades": 8,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 0,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 7,
+            "win_rate": 0.42857142857142855,
+            "average_r": 0.16294959352107538,
+            "profit_factor": 1.285161788661888,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 2.999999999999936,
+            "max_drawdown_pct_initial": 0.749999999999984,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": 1.1406471546475276,
+            "long_trades": 0,
+            "short_trades": 7,
+            "ambiguous_candles": 0,
+            "time_exits": 0,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 1136,
+          "win_rate": 0.5061619718309859,
+          "average_r": -0.020175982473092484,
+          "profit_factor": 0.8702299551150723,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 37.879882663560636,
+          "max_drawdown_pct_initial": 9.469970665890159,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -22.919916089433062,
+          "long_trades": 547,
+          "short_trades": 589,
+          "ambiguous_candles": 0,
+          "time_exits": 1062,
+          "split_end_exits": 0
+        },
+        "5": {
+          "trades": 209,
+          "win_rate": 0.4354066985645933,
+          "average_r": -0.05529268377728544,
+          "profit_factor": 0.8477578066110353,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 14.42412110080451,
+          "max_drawdown_pct_initial": 3.6060302752011273,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -11.556170909452657,
+          "long_trades": 103,
+          "short_trades": 106,
+          "ambiguous_candles": 0,
+          "time_exits": 129,
+          "split_end_exits": 1
+        },
+        "15": {
+          "trades": 62,
+          "win_rate": 0.43548387096774194,
+          "average_r": -0.03252679392989011,
+          "profit_factor": 0.9407286792391816,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.2829529162629,
+          "max_drawdown_pct_initial": 2.820738229065725,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.0166612236531867,
+          "long_trades": 32,
+          "short_trades": 30,
+          "ambiguous_candles": 0,
+          "time_exits": 14,
+          "split_end_exits": 0
+        },
+        "60": {
+          "trades": 13,
+          "win_rate": 0.5384615384615384,
+          "average_r": 0.38544731677278116,
+          "profit_factor": 1.8351358530076831,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.0000000000000506,
+          "max_drawdown_pct_initial": 0.7500000000000127,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 5.010815118046155,
+          "long_trades": 7,
+          "short_trades": 6,
+          "ambiguous_candles": 0,
+          "time_exits": 1,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 27,
+          "win_rate": 0.3333333333333333,
+          "average_r": -0.09391359213527094,
+          "profit_factor": 0.8591296117970924,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.403993709983993,
+          "max_drawdown_pct_initial": 2.1009984274959983,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.5356669876523155,
+          "long_trades": 14,
+          "short_trades": 13,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "one_minute_trigger_delay": {
+          "trades": 27,
+          "win_rate": 0.3333333333333333,
+          "average_r": -0.0631561320532678,
+          "profit_factor": 0.8986632423911904,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 7.538240842241839,
+          "max_drawdown_pct_initial": 1.8845602105604597,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.7052155654382304,
+          "long_trades": 14,
+          "short_trades": 13,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "bust_0_90_percent": {
+          "trades": 27,
+          "win_rate": 0.3333333333333333,
+          "average_r": -0.09391359213527094,
+          "profit_factor": 0.8591296117970924,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.403993709983993,
+          "max_drawdown_pct_initial": 2.1009984274959983,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.5356669876523155,
+          "long_trades": 14,
+          "short_trades": 13,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "bust_1_00_percent": {
+          "trades": 27,
+          "win_rate": 0.3333333333333333,
+          "average_r": -0.09391359213527094,
+          "profit_factor": 0.8591296117970924,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.403993709983993,
+          "max_drawdown_pct_initial": 2.1009984274959983,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.5356669876523155,
+          "long_trades": 14,
+          "short_trades": 13,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "ideal_continuous_stop": {
+          "trades": 27,
+          "win_rate": 0.3333333333333333,
+          "average_r": -0.09391359213527094,
+          "profit_factor": 0.8591296117970924,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.403993709983993,
+          "max_drawdown_pct_initial": 2.1009984274959983,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.5356669876523155,
+          "long_trades": 14,
+          "short_trades": 13,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "rank": 10,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "SuperTrend with SMA ATR7 \u00d7 2 on hl2 flips from down to up when the close is strictly above the current final upper band.",
+        "short_trigger": "The same SuperTrend flips from up to down when the close is strictly below the current final lower band.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.5,
+        "take_profit_percent_of_entry": 1.0,
+        "time_stop_bars": 24,
+        "time_stop_minutes": 1440,
+        "trend_filter": "None",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "Do not enter on a wick through the band or merely because the trend remains up/down. Exact recursive bands are specified below."
+      },
+      "selection_samples": {
+        "training_trades": 65,
+        "validation_trades": 24
+      }
+    },
+    {
+      "indicator": "Ichimoku",
+      "id": 5,
+      "config": {
+        "timeframe_minutes": 15,
+        "variant_index": 1,
+        "parameters": {
+          "tenkan": 6,
+          "kijun": 18,
+          "span_b": 36,
+          "displacement": 18,
+          "mode": "break"
+        },
+        "trend_filter": false,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 66,
+        "win_rate": 0.3787878787878788,
+        "average_r": -0.16405887666217647,
+        "profit_factor": 0.7053169478093773,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 11.344111448885561,
+        "max_drawdown_pct_initial": 2.8360278622213904,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -10.827885859703647,
+        "long_trades": 29,
+        "short_trades": 37,
+        "ambiguous_candles": 0,
+        "time_exits": 19,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.36166262796505666,
+          0.04449033413120454
+        ],
+        "mark_to_close_drawdown": {
+          "r": 11.963658447888657,
+          "pct_initial_equity": 2.990914611972164,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 28,
+          "win_rate": 0.4642857142857143,
+          "average_r": -0.013369124287082867,
+          "profit_factor": 0.9660003163362026,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 4.999999999999938,
+          "max_drawdown_pct_initial": 1.2499999999999845,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.3743354800383203,
+          "long_trades": 13,
+          "short_trades": 15,
+          "ambiguous_candles": 0,
+          "time_exits": 14,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 38,
+          "win_rate": 0.3157894736842105,
+          "average_r": -0.2750934310438244,
+          "profit_factor": 0.5937877283822685,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.167099431214485,
+          "max_drawdown_pct_initial": 2.7917748578036212,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.453550379665327,
+          "long_trades": 16,
+          "short_trades": 22,
+          "ambiguous_candles": 0,
+          "time_exits": 5,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 29,
+          "win_rate": 0.3448275862068966,
+          "average_r": -0.30924292515206436,
+          "profit_factor": 0.4464410721596635,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 9.330080802839891,
+          "max_drawdown_pct_initial": 2.332520200709973,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -8.968044829409866,
+          "long_trades": 29,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 12,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 37,
+          "win_rate": 0.40540540540540543,
+          "average_r": -0.05026597379172383,
+          "profit_factor": 0.9094680230437936,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 4.76603293734054,
+          "max_drawdown_pct_initial": 1.191508234335135,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.8598410302937818,
+          "long_trades": 0,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 7,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 13,
+            "win_rate": 0.46153846153846156,
+            "average_r": -0.08967402217578647,
+            "profit_factor": 0.7389986245380522,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 3.3724015933131124,
+            "max_drawdown_pct_initial": 0.8431003983282781,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -1.165762288285224,
+            "long_trades": 13,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 9,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 15,
+            "win_rate": 0.4666666666666667,
+            "average_r": 0.05276178721646026,
+            "profit_factor": 1.12094908427845,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 2.0113314034338288,
+            "max_drawdown_pct_initial": 0.5028328508584572,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": 0.7914268082469038,
+            "long_trades": 0,
+            "short_trades": 15,
+            "ambiguous_candles": 0,
+            "time_exits": 5,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 16,
+            "win_rate": 0.25,
+            "average_r": -0.48764265882029006,
+            "profit_factor": 0.3350822054806195,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 7.802282541124642,
+            "max_drawdown_pct_initial": 1.9505706352811605,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -7.802282541124641,
+            "long_trades": 16,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 3,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 22,
+            "win_rate": 0.36363636363636365,
+            "average_r": -0.12051217447912208,
+            "profit_factor": 0.8106237258185184,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 5.229804768298942,
+            "max_drawdown_pct_initial": 1.3074511920747356,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -2.6512678385406856,
+            "long_trades": 0,
+            "short_trades": 22,
+            "ambiguous_candles": 0,
+            "time_exits": 2,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 1461,
+          "win_rate": 0.4668035592060233,
+          "average_r": -0.057347771090604294,
+          "profit_factor": 0.6932156058463229,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 92.56472474451584,
+          "max_drawdown_pct_initial": 23.14118118612896,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -83.78509356337287,
+          "long_trades": 732,
+          "short_trades": 729,
+          "ambiguous_candles": 0,
+          "time_exits": 1343,
+          "split_end_exits": 0
+        },
+        "5": {
+          "trades": 349,
+          "win_rate": 0.45272206303724927,
+          "average_r": -0.09388486228484796,
+          "profit_factor": 0.7566996572251693,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 37.715917948374305,
+          "max_drawdown_pct_initial": 9.428979487093576,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -32.76581693741194,
+          "long_trades": 177,
+          "short_trades": 172,
+          "ambiguous_candles": 0,
+          "time_exits": 213,
+          "split_end_exits": 1
+        },
+        "15": {
+          "trades": 140,
+          "win_rate": 0.39285714285714285,
+          "average_r": -0.02408911853539198,
+          "profit_factor": 0.9538375317162875,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 19.085531829420823,
+          "max_drawdown_pct_initial": 4.771382957355206,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -3.372476594954877,
+          "long_trades": 76,
+          "short_trades": 64,
+          "ambiguous_candles": 0,
+          "time_exits": 40,
+          "split_end_exits": 0
+        },
+        "60": {
+          "trades": 47,
+          "win_rate": 0.3191489361702128,
+          "average_r": -0.18299785069813787,
+          "profit_factor": 0.731221906787111,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.008611453890364,
+          "max_drawdown_pct_initial": 2.752152863472591,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -8.60089898281248,
+          "long_trades": 22,
+          "short_trades": 25,
+          "ambiguous_candles": 0,
+          "time_exits": 2,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 66,
+          "win_rate": 0.3787878787878788,
+          "average_r": -0.16448284063516797,
+          "profit_factor": 0.70455542243433,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.364100808345887,
+          "max_drawdown_pct_initial": 2.8410252020864717,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.855867481921086,
+          "long_trades": 29,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 19,
+          "split_end_exits": 0
+        },
+        "one_minute_trigger_delay": {
+          "trades": 66,
+          "win_rate": 0.3787878787878788,
+          "average_r": -0.15135964504128896,
+          "profit_factor": 0.7257324981857143,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 10.951431922133256,
+          "max_drawdown_pct_initial": 2.737857980533314,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -9.989736572725072,
+          "long_trades": 29,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 19,
+          "split_end_exits": 0
+        },
+        "bust_0_90_percent": {
+          "trades": 66,
+          "win_rate": 0.3787878787878788,
+          "average_r": -0.16405887666217647,
+          "profit_factor": 0.7053169478093773,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.344111448885561,
+          "max_drawdown_pct_initial": 2.8360278622213904,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.827885859703647,
+          "long_trades": 29,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 19,
+          "split_end_exits": 0
+        },
+        "bust_1_00_percent": {
+          "trades": 66,
+          "win_rate": 0.3787878787878788,
+          "average_r": -0.16405887666217647,
+          "profit_factor": 0.7053169478093773,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.344111448885561,
+          "max_drawdown_pct_initial": 2.8360278622213904,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.827885859703647,
+          "long_trades": 29,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 19,
+          "split_end_exits": 0
+        },
+        "ideal_continuous_stop": {
+          "trades": 66,
+          "win_rate": 0.3787878787878788,
+          "average_r": -0.16405887666217647,
+          "profit_factor": 0.7053169478093773,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.344111448885561,
+          "max_drawdown_pct_initial": 2.8360278622213904,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.827885859703647,
+          "long_trades": 29,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 19,
+          "split_end_exits": 0
+        }
+      },
+      "rank": 8,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "With tenkan/kijun/span-B = 6/18/36 and displacement 18, close is above the displayed cloud top and the previous close was \u2264 the previous displayed cloud top; current tenkan > kijun.",
+        "short_trigger": "Close is below the displayed cloud bottom and the previous close was \u2265 the previous displayed cloud bottom; current tenkan < kijun.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.5,
+        "take_profit_percent_of_entry": 1.0,
+        "time_stop_bars": 24,
+        "time_stop_minutes": 360,
+        "trend_filter": "None",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "No inside-cloud entries or breaks against tenkan/kijun alignment. Use the cloud calculated 18 bars ago, not today\u2019s forward projection."
+      },
+      "selection_samples": {
+        "training_trades": 162,
+        "validation_trades": 67
+      }
+    },
+    {
+      "indicator": "TD Sequential",
+      "id": 6,
+      "config": {
+        "timeframe_minutes": 1,
+        "variant_index": 2,
+        "parameters": {
+          "setup": 9,
+          "countdown": 13,
+          "mode": "setup_reversal",
+          "perfect": true
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 59,
+        "win_rate": 0.576271186440678,
+        "average_r": -0.01968219056932377,
+        "profit_factor": 0.9029459557144357,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 3.443019585242839,
+        "max_drawdown_pct_initial": 0.8607548963107099,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -1.1612492435901025,
+        "long_trades": 22,
+        "short_trades": 37,
+        "ambiguous_candles": 0,
+        "time_exits": 52,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.14131080403785018,
+          0.15914886195777225
+        ],
+        "mark_to_close_drawdown": {
+          "r": 3.695157001790589,
+          "pct_initial_equity": 0.9237892504476473,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 30,
+          "win_rate": 0.6,
+          "average_r": 0.014065928268464744,
+          "profit_factor": 1.1162149505920775,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 1.889491492650901,
+          "max_drawdown_pct_initial": 0.47237287316272525,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 0.4219778480539423,
+          "long_trades": 11,
+          "short_trades": 19,
+          "ambiguous_candles": 0,
+          "time_exits": 29,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 29,
+          "win_rate": 0.5517241379310345,
+          "average_r": -0.054594037642898094,
+          "profit_factor": 0.8100271167172279,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.7249085667425508,
+          "max_drawdown_pct_initial": 0.9312271416856378,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.5832270916440447,
+          "long_trades": 11,
+          "short_trades": 18,
+          "ambiguous_candles": 0,
+          "time_exits": 23,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 22,
+          "win_rate": 0.5909090909090909,
+          "average_r": -0.03885871044926132,
+          "profit_factor": 0.78466123896016,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.308142789603729,
+          "max_drawdown_pct_initial": 0.8270356974009322,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.854891629883749,
+          "long_trades": 22,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 20,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 37,
+          "win_rate": 0.5675675675675675,
+          "average_r": -0.008279935505577122,
+          "profit_factor": 0.9616813031617416,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 4.853873132233115,
+          "max_drawdown_pct_initial": 1.2134682830582788,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.3063576137063535,
+          "long_trades": 0,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 32,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 11,
+            "win_rate": 0.6363636363636364,
+            "average_r": 0.044318527443726524,
+            "profit_factor": 1.5121012164109833,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 0.8814707186033381,
+            "max_drawdown_pct_initial": 0.22036767965083454,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": 0.48750380188099174,
+            "long_trades": 11,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 11,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 19,
+            "win_rate": 0.5789473684210527,
+            "average_r": -0.0034487344119499734,
+            "profit_factor": 0.9755412928936226,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 2.1247776170675015,
+            "max_drawdown_pct_initial": 0.5311944042668754,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -0.0655259538270495,
+            "long_trades": 0,
+            "short_trades": 19,
+            "ambiguous_candles": 0,
+            "time_exits": 18,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 11,
+            "win_rate": 0.5454545454545454,
+            "average_r": -0.12203594834224915,
+            "profit_factor": 0.5552061737268438,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 2.9723345553073326,
+            "max_drawdown_pct_initial": 0.7430836388268331,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -1.3423954317647406,
+            "long_trades": 11,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 9,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 18,
+            "win_rate": 0.5555555555555556,
+            "average_r": -0.013379536659961335,
+            "profit_factor": 0.9546963713005863,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 2.8476524882632455,
+            "max_drawdown_pct_initial": 0.7119131220658114,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -0.24083165987930402,
+            "long_trades": 0,
+            "short_trades": 18,
+            "ambiguous_candles": 0,
+            "time_exits": 14,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 1029,
+          "win_rate": 0.5461613216715258,
+          "average_r": -0.031057953463520787,
+          "profit_factor": 0.8271693734833151,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 40.09716376422891,
+          "max_drawdown_pct_initial": 10.024290941057227,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -31.95863411396289,
+          "long_trades": 534,
+          "short_trades": 495,
+          "ambiguous_candles": 0,
+          "time_exits": 930,
+          "split_end_exits": 1
+        },
+        "5": {
+          "trades": 183,
+          "win_rate": 0.5081967213114754,
+          "average_r": -0.0023764404981136537,
+          "profit_factor": 0.9933264314888448,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 16.65630157530989,
+          "max_drawdown_pct_initial": 4.164075393827472,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.43488861115479865,
+          "long_trades": 94,
+          "short_trades": 89,
+          "ambiguous_candles": 0,
+          "time_exits": 114,
+          "split_end_exits": 0
+        },
+        "15": {
+          "trades": 71,
+          "win_rate": 0.3380281690140845,
+          "average_r": -0.23738449561983158,
+          "profit_factor": 0.6009518692925996,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 20.78662900836026,
+          "max_drawdown_pct_initial": 5.196657252090065,
+          "bust_rate": 0.014084507042253521,
+          "busts": 1,
+          "total_r": -16.854299189008042,
+          "long_trades": 40,
+          "short_trades": 31,
+          "ambiguous_candles": 0,
+          "time_exits": 23,
+          "split_end_exits": 0
+        },
+        "60": {
+          "trades": 16,
+          "win_rate": 0.375,
+          "average_r": 0.014707237559352403,
+          "profit_factor": 1.0235315800949638,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 5.0000000000000835,
+          "max_drawdown_pct_initial": 1.2500000000000209,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 0.23531580094963844,
+          "long_trades": 9,
+          "short_trades": 7,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 59,
+          "win_rate": 0.576271186440678,
+          "average_r": -0.022831372765209957,
+          "profit_factor": 0.8874171522905315,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.5255769007826996,
+          "max_drawdown_pct_initial": 0.8813942251956749,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.3470509931473875,
+          "long_trades": 22,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 52,
+          "split_end_exits": 0
+        },
+        "one_minute_trigger_delay": {
+          "trades": 59,
+          "win_rate": 0.576271186440678,
+          "average_r": -0.005170057306617469,
+          "profit_factor": 0.9748459549077624,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.969896243136819,
+          "max_drawdown_pct_initial": 0.9924740607842047,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.30503338109043066,
+          "long_trades": 22,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 52,
+          "split_end_exits": 0
+        },
+        "bust_0_90_percent": {
+          "trades": 59,
+          "win_rate": 0.576271186440678,
+          "average_r": -0.01968219056932377,
+          "profit_factor": 0.9029459557144357,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.443019585242839,
+          "max_drawdown_pct_initial": 0.8607548963107099,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.1612492435901025,
+          "long_trades": 22,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 52,
+          "split_end_exits": 0
+        },
+        "bust_1_00_percent": {
+          "trades": 59,
+          "win_rate": 0.576271186440678,
+          "average_r": -0.01968219056932377,
+          "profit_factor": 0.9029459557144357,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.443019585242839,
+          "max_drawdown_pct_initial": 0.8607548963107099,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.1612492435901025,
+          "long_trades": 22,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 52,
+          "split_end_exits": 0
+        },
+        "ideal_continuous_stop": {
+          "trades": 59,
+          "win_rate": 0.576271186440678,
+          "average_r": -0.01968219056932377,
+          "profit_factor": 0.9029459557144357,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.443019585242839,
+          "max_drawdown_pct_initial": 0.8607548963107099,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.1612492435901025,
+          "long_trades": 22,
+          "short_trades": 37,
+          "ambiguous_candles": 0,
+          "time_exits": 52,
+          "split_end_exits": 0
+        }
+      },
+      "rank": 1,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "Exactly the ninth consecutive close < close four bars earlier; min(low on setup bars 8,9) \u2264 min(low on setup bars 6,7), and the ninth candle is green (close > open).",
+        "short_trigger": "Exactly the ninth consecutive close > close four bars earlier; max(high on setup bars 8,9) \u2265 max(high on setup bars 6,7), and the ninth candle is red (close < open).",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.5,
+        "take_profit_percent_of_entry": 1.0,
+        "time_stop_bars": 24,
+        "time_stop_minutes": 24,
+        "trend_filter": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "Do not anticipate bar 9, backdate a later perfection, or enter on countdown 13 for this selected setup. Equality in the four-bar comparison resets that setup count."
+      },
+      "selection_samples": {
+        "training_trades": 161,
+        "validation_trades": 39
+      }
+    },
+    {
+      "indicator": "RSI",
+      "id": 7,
+      "config": {
+        "timeframe_minutes": 1,
+        "variant_index": 0,
+        "parameters": {
+          "period": 7,
+          "lower": 30,
+          "upper": 70,
+          "mode": "recross"
+        },
+        "trend_filter": false,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 1079,
+        "win_rate": 0.5264133456904542,
+        "average_r": -0.03491774778754773,
+        "profit_factor": 0.808330851873614,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 55.34163650673361,
+        "max_drawdown_pct_initial": 13.835409126683402,
+        "bust_rate": 0.0037071362372567192,
+        "busts": 4,
+        "total_r": -37.676249862763996,
+        "long_trades": 563,
+        "short_trades": 516,
+        "ambiguous_candles": 0,
+        "time_exits": 973,
+        "split_end_exits": 2,
+        "average_r_ci95_day_block": [
+          -0.07959115303517869,
+          0.009637635543921485
+        ],
+        "mark_to_close_drawdown": {
+          "r": 56.11731819956836,
+          "pct_initial_equity": 14.02932954989209,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 533,
+          "win_rate": 0.5196998123827392,
+          "average_r": -0.034135194916780215,
+          "profit_factor": 0.771953614747183,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 25.23443074842783,
+          "max_drawdown_pct_initial": 6.3086076871069565,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -18.194058890643856,
+          "long_trades": 278,
+          "short_trades": 255,
+          "ambiguous_candles": 0,
+          "time_exits": 501,
+          "split_end_exits": 1
+        },
+        "ETH": {
+          "trades": 546,
+          "win_rate": 0.532967032967033,
+          "average_r": -0.03568166844710648,
+          "profit_factor": 0.8331817395540791,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 31.568006149965903,
+          "max_drawdown_pct_initial": 7.892001537491476,
+          "bust_rate": 0.007326007326007326,
+          "busts": 4,
+          "total_r": -19.482190972120137,
+          "long_trades": 285,
+          "short_trades": 261,
+          "ambiguous_candles": 0,
+          "time_exits": 472,
+          "split_end_exits": 1
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 563,
+          "win_rate": 0.5293072824156305,
+          "average_r": -0.043216014422433946,
+          "profit_factor": 0.7822166976037194,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 38.17468606267818,
+          "max_drawdown_pct_initial": 9.543671515669544,
+          "bust_rate": 0.007104795737122558,
+          "busts": 4,
+          "total_r": -24.33061611983031,
+          "long_trades": 563,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 497,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 516,
+          "win_rate": 0.5232558139534884,
+          "average_r": -0.0258636312847552,
+          "profit_factor": 0.8427146315387046,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 21.122905498405004,
+          "max_drawdown_pct_initial": 5.280726374601251,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -13.345633742933684,
+          "long_trades": 0,
+          "short_trades": 516,
+          "ambiguous_candles": 0,
+          "time_exits": 476,
+          "split_end_exits": 2
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 278,
+            "win_rate": 0.5143884892086331,
+            "average_r": -0.04378147394876078,
+            "profit_factor": 0.7213058169829497,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 16.545947266464378,
+            "max_drawdown_pct_initial": 4.136486816616094,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -12.171249757755497,
+            "long_trades": 278,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 258,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 255,
+            "win_rate": 0.5254901960784314,
+            "average_r": -0.023618859344660237,
+            "profit_factor": 0.8332086980813542,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 10.970291901174464,
+            "max_drawdown_pct_initial": 2.742572975293616,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -6.02280913288836,
+            "long_trades": 0,
+            "short_trades": 255,
+            "ambiguous_candles": 0,
+            "time_exits": 243,
+            "split_end_exits": 1
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 285,
+            "win_rate": 0.543859649122807,
+            "average_r": -0.0426644433757011,
+            "profit_factor": 0.8213091945644868,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 23.312312670178493,
+            "max_drawdown_pct_initial": 5.828078167544623,
+            "bust_rate": 0.014035087719298246,
+            "busts": 4,
+            "total_r": -12.159366362074813,
+            "long_trades": 285,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 239,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 261,
+            "win_rate": 0.5210727969348659,
+            "average_r": -0.028056799272204305,
+            "profit_factor": 0.8497572686259834,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 11.900401171686976,
+            "max_drawdown_pct_initial": 2.975100292921744,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -7.322824610045323,
+            "long_trades": 0,
+            "short_trades": 261,
+            "ambiguous_candles": 0,
+            "time_exits": 233,
+            "split_end_exits": 1
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 488,
+          "win_rate": 0.569672131147541,
+          "average_r": -0.00048759621750953943,
+          "profit_factor": 0.9970606028906246,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 10.274615282422285,
+          "max_drawdown_pct_initial": 2.5686538206055713,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.23794695414465525,
+          "long_trades": 395,
+          "short_trades": 93,
+          "ambiguous_candles": 0,
+          "time_exits": 443,
+          "split_end_exits": 0
+        },
+        "5": {
+          "trades": 96,
+          "win_rate": 0.4166666666666667,
+          "average_r": -0.19130445749967265,
+          "profit_factor": 0.6512677779902769,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 23.868867792840994,
+          "max_drawdown_pct_initial": 5.967216948210249,
+          "bust_rate": 0.020833333333333332,
+          "busts": 2,
+          "total_r": -18.365227919968575,
+          "long_trades": 84,
+          "short_trades": 12,
+          "ambiguous_candles": 0,
+          "time_exits": 40,
+          "split_end_exits": 0
+        },
+        "15": {
+          "trades": 34,
+          "win_rate": 0.38235294117647056,
+          "average_r": -0.02885782035799,
+          "profit_factor": 0.9496959191897094,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 6.073777302226314,
+          "max_drawdown_pct_initial": 1.5184443255565785,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.9811658921716601,
+          "long_trades": 33,
+          "short_trades": 1,
+          "ambiguous_candles": 0,
+          "time_exits": 7,
+          "split_end_exits": 0
+        },
+        "60": {
+          "trades": 10,
+          "win_rate": 0.6,
+          "average_r": 0.6215516491685137,
+          "profit_factor": 2.5538791229213076,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 2.9999999999999556,
+          "max_drawdown_pct_initial": 0.7499999999999889,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 6.215516491685137,
+          "long_trades": 10,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 1079,
+          "win_rate": 0.5264133456904542,
+          "average_r": -0.036932148942405,
+          "profit_factor": 0.7972734791104716,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 57.15895833902034,
+          "max_drawdown_pct_initial": 14.289739584755084,
+          "bust_rate": 0.0037071362372567192,
+          "busts": 4,
+          "total_r": -39.849788708854994,
+          "long_trades": 563,
+          "short_trades": 516,
+          "ambiguous_candles": 0,
+          "time_exits": 973,
+          "split_end_exits": 2
+        },
+        "one_minute_trigger_delay": {
+          "trades": 1076,
+          "win_rate": 0.5260223048327137,
+          "average_r": -0.03252606709684231,
+          "profit_factor": 0.8179061201641834,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 50.483888109288756,
+          "max_drawdown_pct_initial": 12.620972027322189,
+          "bust_rate": 0.0037174721189591076,
+          "busts": 4,
+          "total_r": -34.998048196202326,
+          "long_trades": 561,
+          "short_trades": 515,
+          "ambiguous_candles": 0,
+          "time_exits": 970,
+          "split_end_exits": 2
+        },
+        "bust_0_90_percent": {
+          "trades": 1079,
+          "win_rate": 0.5264133456904542,
+          "average_r": -0.0358445318468619,
+          "profit_factor": 0.8042394708357931,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 56.34163650673362,
+          "max_drawdown_pct_initial": 14.085409126683407,
+          "bust_rate": 0.004633920296570899,
+          "busts": 5,
+          "total_r": -38.67624986276399,
+          "long_trades": 563,
+          "short_trades": 516,
+          "ambiguous_candles": 0,
+          "time_exits": 973,
+          "split_end_exits": 2
+        },
+        "bust_1_00_percent": {
+          "trades": 1079,
+          "win_rate": 0.5264133456904542,
+          "average_r": -0.03399096372823355,
+          "profit_factor": 0.8124640736631907,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 55.34163650673361,
+          "max_drawdown_pct_initial": 13.835409126683402,
+          "bust_rate": 0.0027803521779425394,
+          "busts": 3,
+          "total_r": -36.676249862763996,
+          "long_trades": 563,
+          "short_trades": 516,
+          "ambiguous_candles": 0,
+          "time_exits": 973,
+          "split_end_exits": 2
+        },
+        "ideal_continuous_stop": {
+          "trades": 1079,
+          "win_rate": 0.5264133456904542,
+          "average_r": -0.031210611550290986,
+          "profit_factor": 0.8251213018361158,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 52.34163650673359,
+          "max_drawdown_pct_initial": 13.085409126683398,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -33.676249862763974,
+          "long_trades": 563,
+          "short_trades": 516,
+          "ambiguous_candles": 0,
+          "time_exits": 973,
+          "split_end_exits": 2
+        }
+      },
+      "rank": 2,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "Wilder RSI7 was < 30 on the prior bar and is \u2265 30 now, with current close > open.",
+        "short_trigger": "Wilder RSI7 was > 70 on the prior bar and is \u2264 70 now, with current close < open.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.5,
+        "take_profit_percent_of_entry": 1.0,
+        "time_stop_bars": 24,
+        "time_stop_minutes": 24,
+        "trend_filter": "None",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "No entry merely because RSI remains oversold/overbought; require the threshold recross and candle color. No trend or session filter was selected."
+      },
+      "selection_samples": {
+        "training_trades": 2844,
+        "validation_trades": 1057
+      }
+    },
+    {
+      "indicator": "MACD",
+      "id": 8,
+      "config": {
+        "timeframe_minutes": 15,
+        "variant_index": 2,
+        "parameters": {
+          "fast": 12,
+          "slow": 26,
+          "signal": 9
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 71,
+        "win_rate": 0.352112676056338,
+        "average_r": -0.2589935871901053,
+        "profit_factor": 0.5845547168388582,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 20.74384788750759,
+        "max_drawdown_pct_initial": 5.185961971876898,
+        "bust_rate": 0.014084507042253521,
+        "busts": 1,
+        "total_r": -18.388544690497476,
+        "long_trades": 25,
+        "short_trades": 46,
+        "ambiguous_candles": 0,
+        "time_exits": 15,
+        "split_end_exits": 1,
+        "average_r_ci95_day_block": [
+          -0.4810636951049144,
+          0.05602362715399258
+        ],
+        "mark_to_close_drawdown": {
+          "r": 21.17930051622539,
+          "pct_initial_equity": 5.294825129056347,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 35,
+          "win_rate": 0.3142857142857143,
+          "average_r": -0.3177176792636319,
+          "profit_factor": 0.4770018870676365,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.120118774227118,
+          "max_drawdown_pct_initial": 2.7800296935567794,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -11.120118774227118,
+          "long_trades": 11,
+          "short_trades": 24,
+          "ambiguous_candles": 0,
+          "time_exits": 10,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 36,
+          "win_rate": 0.3888888888888889,
+          "average_r": -0.20190071989639882,
+          "profit_factor": 0.683981481901285,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 14.008485234947436,
+          "max_drawdown_pct_initial": 3.5021213087368595,
+          "bust_rate": 0.027777777777777776,
+          "busts": 1,
+          "total_r": -7.268425916270358,
+          "long_trades": 14,
+          "short_trades": 22,
+          "ambiguous_candles": 0,
+          "time_exits": 5,
+          "split_end_exits": 1
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 25,
+          "win_rate": 0.32,
+          "average_r": -0.4574414166907607,
+          "profit_factor": 0.3646646990406114,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.726420269049013,
+          "max_drawdown_pct_initial": 2.9316050672622533,
+          "bust_rate": 0.04,
+          "busts": 1,
+          "total_r": -11.436035417269018,
+          "long_trades": 25,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 4,
+          "split_end_exits": 1
+        },
+        "short": {
+          "trades": 46,
+          "win_rate": 0.3695652173913043,
+          "average_r": -0.15114150593974907,
+          "profit_factor": 0.7352660877807456,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 10.01742761845858,
+          "max_drawdown_pct_initial": 2.504356904614645,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -6.952509273228457,
+          "long_trades": 0,
+          "short_trades": 46,
+          "ambiguous_candles": 0,
+          "time_exits": 11,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 11,
+            "win_rate": 0.2727272727272727,
+            "average_r": -0.5284289872537171,
+            "profit_factor": 0.27341014252614165,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 6.540398427475078,
+            "max_drawdown_pct_initial": 1.6350996068687693,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -5.8127188597908885,
+            "long_trades": 11,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 2,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 24,
+            "win_rate": 0.3333333333333333,
+            "average_r": -0.22114166310150954,
+            "profit_factor": 0.5998116253889267,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 5.654788476235691,
+            "max_drawdown_pct_initial": 1.4136971190589227,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -5.307399914436229,
+            "long_trades": 0,
+            "short_trades": 24,
+            "ambiguous_candles": 0,
+            "time_exits": 8,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 14,
+            "win_rate": 0.35714285714285715,
+            "average_r": -0.40166546839129497,
+            "profit_factor": 0.4376683442521875,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 6.286450948450829,
+            "max_drawdown_pct_initial": 1.5716127371127073,
+            "bust_rate": 0.07142857142857142,
+            "busts": 1,
+            "total_r": -5.623316557478129,
+            "long_trades": 14,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 2,
+            "split_end_exits": 1
+          },
+          "short": {
+            "trades": 22,
+            "win_rate": 0.4090909090909091,
+            "average_r": -0.07477769812691945,
+            "profit_factor": 0.873453126246749,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 8.09478382568931,
+            "max_drawdown_pct_initial": 2.0236959564223276,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -1.6451093587922279,
+            "long_trades": 0,
+            "short_trades": 22,
+            "ambiguous_candles": 0,
+            "time_exits": 3,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 1629,
+          "win_rate": 0.5003069367710252,
+          "average_r": -0.03140851924562065,
+          "profit_factor": 0.8178560262768687,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 62.553247386721026,
+          "max_drawdown_pct_initial": 15.638311846680256,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -51.16447785111605,
+          "long_trades": 827,
+          "short_trades": 802,
+          "ambiguous_candles": 0,
+          "time_exits": 1495,
+          "split_end_exits": 2
+        },
+        "5": {
+          "trades": 373,
+          "win_rate": 0.4289544235924933,
+          "average_r": -0.15333596590273998,
+          "profit_factor": 0.6281349736521253,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 60.33302254036991,
+          "max_drawdown_pct_initial": 15.083255635092478,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -57.19431528172201,
+          "long_trades": 191,
+          "short_trades": 182,
+          "ambiguous_candles": 0,
+          "time_exits": 220,
+          "split_end_exits": 2
+        },
+        "15": {
+          "trades": 150,
+          "win_rate": 0.42,
+          "average_r": -0.03449268740369815,
+          "profit_factor": 0.9332511319477312,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 23.106882445637545,
+          "max_drawdown_pct_initial": 5.776720611409386,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -5.173903110554723,
+          "long_trades": 73,
+          "short_trades": 77,
+          "ambiguous_candles": 0,
+          "time_exits": 41,
+          "split_end_exits": 1
+        },
+        "60": {
+          "trades": 46,
+          "win_rate": 0.32608695652173914,
+          "average_r": -0.11893713968303166,
+          "profit_factor": 0.8235126314380825,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 15.80428281757935,
+          "max_drawdown_pct_initial": 3.951070704394838,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -5.471108425419456,
+          "long_trades": 24,
+          "short_trades": 22,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 71,
+          "win_rate": 0.352112676056338,
+          "average_r": -0.2592760753668563,
+          "profit_factor": 0.5841015844588126,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 20.74391518859659,
+          "max_drawdown_pct_initial": 5.185978797149147,
+          "bust_rate": 0.014084507042253521,
+          "busts": 1,
+          "total_r": -18.408601351046798,
+          "long_trades": 25,
+          "short_trades": 46,
+          "ambiguous_candles": 0,
+          "time_exits": 15,
+          "split_end_exits": 1
+        },
+        "one_minute_trigger_delay": {
+          "trades": 71,
+          "win_rate": 0.352112676056338,
+          "average_r": -0.25937889094323774,
+          "profit_factor": 0.5873422822238555,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 21.1144990736461,
+          "max_drawdown_pct_initial": 5.278624768411525,
+          "bust_rate": 0.014084507042253521,
+          "busts": 1,
+          "total_r": -18.415901256969878,
+          "long_trades": 25,
+          "short_trades": 46,
+          "ambiguous_candles": 0,
+          "time_exits": 15,
+          "split_end_exits": 1
+        },
+        "bust_0_90_percent": {
+          "trades": 71,
+          "win_rate": 0.352112676056338,
+          "average_r": -0.2730780942323591,
+          "profit_factor": 0.571639878009413,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 21.743847887507613,
+          "max_drawdown_pct_initial": 5.435961971876903,
+          "bust_rate": 0.028169014084507043,
+          "busts": 2,
+          "total_r": -19.388544690497497,
+          "long_trades": 25,
+          "short_trades": 46,
+          "ambiguous_candles": 0,
+          "time_exits": 15,
+          "split_end_exits": 1
+        },
+        "bust_1_00_percent": {
+          "trades": 71,
+          "win_rate": 0.352112676056338,
+          "average_r": -0.2589935871901053,
+          "profit_factor": 0.5845547168388582,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 20.74384788750759,
+          "max_drawdown_pct_initial": 5.185961971876898,
+          "bust_rate": 0.014084507042253521,
+          "busts": 1,
+          "total_r": -18.388544690497476,
+          "long_trades": 25,
+          "short_trades": 46,
+          "ambiguous_candles": 0,
+          "time_exits": 15,
+          "split_end_exits": 1
+        },
+        "ideal_continuous_stop": {
+          "trades": 71,
+          "win_rate": 0.352112676056338,
+          "average_r": -0.24490908014785176,
+          "profit_factor": 0.5980666044858587,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 19.74384788750759,
+          "max_drawdown_pct_initial": 4.935961971876898,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -17.388544690497476,
+          "long_trades": 25,
+          "short_trades": 46,
+          "ambiguous_candles": 0,
+          "time_exits": 15,
+          "split_end_exits": 1
+        }
+      },
+      "rank": 9,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "MACD = EMA12 \u2212 EMA26; signal = EMA9 of MACD. Histogram is > 0 now and was \u2264 0 on the prior bar.",
+        "short_trigger": "The same histogram is < 0 now and was \u2265 0 on the prior bar.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.5,
+        "take_profit_percent_of_entry": 1.0,
+        "time_stop_bars": 24,
+        "time_stop_minutes": 360,
+        "trend_filter": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "Do not treat a change in histogram slope as a zero crossing or act before the bar closes."
+      },
+      "selection_samples": {
+        "training_trades": 187,
+        "validation_trades": 60
+      }
+    },
+    {
+      "indicator": "Stochastic",
+      "id": 9,
+      "config": {
+        "timeframe_minutes": 5,
+        "variant_index": 2,
+        "parameters": {
+          "k": 9,
+          "d": 3,
+          "lower": 30,
+          "upper": 70
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.0035,
+          "target": 0.007,
+          "time_bars": 12
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 157,
+        "win_rate": 0.43312101910828027,
+        "average_r": -0.10209754205423448,
+        "profit_factor": 0.7298698199535102,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 22.679195883154392,
+        "max_drawdown_pct_initial": 5.669798970788598,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -16.029314102514814,
+        "long_trades": 81,
+        "short_trades": 76,
+        "ambiguous_candles": 0,
+        "time_exits": 101,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.24349002453695817,
+          0.026795142469644838
+        ],
+        "mark_to_close_drawdown": {
+          "r": 23.56380113875331,
+          "pct_initial_equity": 5.890950284688327,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 73,
+          "win_rate": 0.4794520547945205,
+          "average_r": -0.03324117259352795,
+          "profit_factor": 0.8939561949062932,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 10.801866486756081,
+          "max_drawdown_pct_initial": 2.7004666216890203,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.4266055993275404,
+          "long_trades": 38,
+          "short_trades": 35,
+          "ambiguous_candles": 0,
+          "time_exits": 53,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 84,
+          "win_rate": 0.39285714285714285,
+          "average_r": -0.16193700599032468,
+          "profit_factor": 0.6268750041511182,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 16.14967928008339,
+          "max_drawdown_pct_initial": 4.0374198200208475,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -13.602708503187273,
+          "long_trades": 43,
+          "short_trades": 41,
+          "ambiguous_candles": 0,
+          "time_exits": 48,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 81,
+          "win_rate": 0.49382716049382713,
+          "average_r": -0.00518708080402662,
+          "profit_factor": 0.9810688354045576,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 7.071239181379545,
+          "max_drawdown_pct_initial": 1.7678097953448866,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -0.4201535451261562,
+          "long_trades": 81,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 61,
+          "split_end_exits": 0
+        },
+        "short": {
+          "trades": 76,
+          "win_rate": 0.3684210526315789,
+          "average_r": -0.2053836915445876,
+          "profit_factor": 0.5797829204119336,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 20.31350718755641,
+          "max_drawdown_pct_initial": 5.078376796889103,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -15.609160557388657,
+          "long_trades": 0,
+          "short_trades": 76,
+          "ambiguous_candles": 0,
+          "time_exits": 40,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 38,
+            "win_rate": 0.5263157894736842,
+            "average_r": 0.020630660168082404,
+            "profit_factor": 1.0852595014002944,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 4.8000218169620545,
+            "max_drawdown_pct_initial": 1.2000054542405136,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": 0.7839650863871314,
+            "long_trades": 38,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 31,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 35,
+            "win_rate": 0.42857142857142855,
+            "average_r": -0.0917305910204192,
+            "profit_factor": 0.7654463696493957,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 7.703139925878471,
+            "max_drawdown_pct_initial": 1.925784981469618,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -3.210570685714672,
+            "long_trades": 0,
+            "short_trades": 35,
+            "ambiguous_candles": 0,
+            "time_exits": 22,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 43,
+            "win_rate": 0.46511627906976744,
+            "average_r": -0.028002758872402035,
+            "profit_factor": 0.9073662550078327,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 4.888866417445832,
+            "max_drawdown_pct_initial": 1.222216604361458,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -1.2041186315132875,
+            "long_trades": 43,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 30,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 41,
+            "win_rate": 0.3170731707317073,
+            "average_r": -0.30240463101643866,
+            "profit_factor": 0.47144378019763483,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 13.087585324255944,
+            "max_drawdown_pct_initial": 3.271896331063986,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -12.398589871673986,
+            "long_trades": 0,
+            "short_trades": 41,
+            "ambiguous_candles": 0,
+            "time_exits": 18,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 1492,
+          "win_rate": 0.5107238605898123,
+          "average_r": -0.0283714857204898,
+          "profit_factor": 0.8427706965884488,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 51.00618465458378,
+          "max_drawdown_pct_initial": 12.751546163645944,
+          "bust_rate": 0.0006702412868632708,
+          "busts": 1,
+          "total_r": -42.330256694970785,
+          "long_trades": 779,
+          "short_trades": 713,
+          "ambiguous_candles": 0,
+          "time_exits": 1359,
+          "split_end_exits": 0
+        },
+        "5": {
+          "trades": 264,
+          "win_rate": 0.4734848484848485,
+          "average_r": -0.044758657827305155,
+          "profit_factor": 0.8746913380458079,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 21.459749531919105,
+          "max_drawdown_pct_initial": 5.364937382979776,
+          "bust_rate": 0.003787878787878788,
+          "busts": 1,
+          "total_r": -11.816285666408561,
+          "long_trades": 143,
+          "short_trades": 121,
+          "ambiguous_candles": 0,
+          "time_exits": 165,
+          "split_end_exits": 0
+        },
+        "15": {
+          "trades": 79,
+          "win_rate": 0.3924050632911392,
+          "average_r": -0.0412686282919205,
+          "profit_factor": 0.9243278337000007,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 18.187680047683234,
+          "max_drawdown_pct_initial": 4.546920011920808,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -3.2602216350617197,
+          "long_trades": 38,
+          "short_trades": 41,
+          "ambiguous_candles": 0,
+          "time_exits": 21,
+          "split_end_exits": 0
+        },
+        "60": {
+          "trades": 15,
+          "win_rate": 0.6,
+          "average_r": 0.6222116261439972,
+          "profit_factor": 2.555529065359975,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.0000000000000178,
+          "max_drawdown_pct_initial": 0.7500000000000044,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 9.333174392159957,
+          "long_trades": 5,
+          "short_trades": 10,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 157,
+          "win_rate": 0.43312101910828027,
+          "average_r": -0.1036377915926452,
+          "profit_factor": 0.7257946201322805,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 22.89862994808857,
+          "max_drawdown_pct_initial": 5.724657487022142,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -16.271133280045298,
+          "long_trades": 81,
+          "short_trades": 76,
+          "ambiguous_candles": 0,
+          "time_exits": 101,
+          "split_end_exits": 0
+        },
+        "one_minute_trigger_delay": {
+          "trades": 156,
+          "win_rate": 0.42948717948717946,
+          "average_r": -0.09491012725480476,
+          "profit_factor": 0.7326729536915821,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 21.654097434057967,
+          "max_drawdown_pct_initial": 5.413524358514492,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -14.805979851749543,
+          "long_trades": 81,
+          "short_trades": 75,
+          "ambiguous_candles": 0,
+          "time_exits": 101,
+          "split_end_exits": 0
+        },
+        "bust_0_90_percent": {
+          "trades": 157,
+          "win_rate": 0.43312101910828027,
+          "average_r": -0.10209754205423448,
+          "profit_factor": 0.7298698199535102,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 22.679195883154392,
+          "max_drawdown_pct_initial": 5.669798970788598,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -16.029314102514814,
+          "long_trades": 81,
+          "short_trades": 76,
+          "ambiguous_candles": 0,
+          "time_exits": 101,
+          "split_end_exits": 0
+        },
+        "bust_1_00_percent": {
+          "trades": 157,
+          "win_rate": 0.43312101910828027,
+          "average_r": -0.10209754205423448,
+          "profit_factor": 0.7298698199535102,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 22.679195883154392,
+          "max_drawdown_pct_initial": 5.669798970788598,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -16.029314102514814,
+          "long_trades": 81,
+          "short_trades": 76,
+          "ambiguous_candles": 0,
+          "time_exits": 101,
+          "split_end_exits": 0
+        },
+        "ideal_continuous_stop": {
+          "trades": 157,
+          "win_rate": 0.43312101910828027,
+          "average_r": -0.10209754205423448,
+          "profit_factor": 0.7298698199535102,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 22.679195883154392,
+          "max_drawdown_pct_initial": 5.669798970788598,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -16.029314102514814,
+          "long_trades": 81,
+          "short_trades": 76,
+          "ambiguous_candles": 0,
+          "time_exits": 101,
+          "split_end_exits": 0
+        }
+      },
+      "rank": 6,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "Raw %K9 = 100\u00d7(close \u2212 lowest low9)/(highest high9 \u2212 lowest low9), %D = SMA3(%K). K > D now, K \u2264 D previously, and current K < 30.",
+        "short_trigger": "K < D now, K \u2265 D previously, and current K > 70.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.35000000000000003,
+        "take_profit_percent_of_entry": 0.7000000000000001,
+        "time_stop_bars": 12,
+        "time_stop_minutes": 60,
+        "trend_filter": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "No signal if the crossing occurs outside the specified K zone. A zero nine-bar range is assigned K = 50 and provides no extreme-zone signal."
+      },
+      "selection_samples": {
+        "training_trades": 434,
+        "validation_trades": 172
+      }
+    },
+    {
+      "indicator": "Volume",
+      "id": 10,
+      "config": {
+        "timeframe_minutes": 15,
+        "variant_index": 1,
+        "parameters": {
+          "vma": 30,
+          "multiple": 2.0,
+          "move": 0.002,
+          "mode": "breakout"
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "selection_eligible": true,
+      "test": {
+        "trades": 76,
+        "win_rate": 0.35526315789473684,
+        "average_r": -0.13862099617748838,
+        "profit_factor": 0.7618028625960841,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 16.943433380366628,
+        "max_drawdown_pct_initial": 4.235858345091657,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -10.535195709489118,
+        "long_trades": 33,
+        "short_trades": 43,
+        "ambiguous_candles": 0,
+        "time_exits": 16,
+        "split_end_exits": 1,
+        "average_r_ci95_day_block": [
+          -0.3061923575190411,
+          0.02590666000215891
+        ],
+        "mark_to_close_drawdown": {
+          "r": 17.99127036532162,
+          "pct_initial_equity": 4.497817591330405,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 30,
+          "win_rate": 0.36666666666666664,
+          "average_r": -0.21023063713911272,
+          "profit_factor": 0.6138264645986233,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 9.433862475755884,
+          "max_drawdown_pct_initial": 2.358465618938971,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -6.306919114173382,
+          "long_trades": 14,
+          "short_trades": 16,
+          "ambiguous_candles": 0,
+          "time_exits": 10,
+          "split_end_exits": 1
+        },
+        "ETH": {
+          "trades": 46,
+          "win_rate": 0.34782608695652173,
+          "average_r": -0.09191905641990732,
+          "profit_factor": 0.8484329323368588,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.377494611384327,
+          "max_drawdown_pct_initial": 2.0943736528460817,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -4.228276595315736,
+          "long_trades": 19,
+          "short_trades": 27,
+          "ambiguous_candles": 0,
+          "time_exits": 6,
+          "split_end_exits": 0
+        }
+      },
+      "per_side": {
+        "long": {
+          "trades": 33,
+          "win_rate": 0.30303030303030304,
+          "average_r": -0.3405034114055629,
+          "profit_factor": 0.4311682120375701,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 13.565092281524679,
+          "max_drawdown_pct_initial": 3.3912730703811698,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -11.236612576383575,
+          "long_trades": 33,
+          "short_trades": 0,
+          "ambiguous_candles": 0,
+          "time_exits": 11,
+          "split_end_exits": 1
+        },
+        "short": {
+          "trades": 43,
+          "win_rate": 0.3953488372093023,
+          "average_r": 0.016312020160336213,
+          "profit_factor": 1.028658442080008,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 8.80543780910797,
+          "max_drawdown_pct_initial": 2.2013594522769924,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 0.7014168668944571,
+          "long_trades": 0,
+          "short_trades": 43,
+          "ambiguous_candles": 0,
+          "time_exits": 5,
+          "split_end_exits": 0
+        }
+      },
+      "per_asset_side": {
+        "BTC": {
+          "long": {
+            "trades": 14,
+            "win_rate": 0.2857142857142857,
+            "average_r": -0.4371079924226863,
+            "profit_factor": 0.24482546948510023,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 6.734442547509557,
+            "max_drawdown_pct_initial": 1.6836106368773893,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -6.119511893917608,
+            "long_trades": 14,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 6,
+            "split_end_exits": 1
+          },
+          "short": {
+            "trades": 16,
+            "win_rate": 0.4375,
+            "average_r": -0.011712951265985885,
+            "profit_factor": 0.9772243032048701,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 3.6994199282463267,
+            "max_drawdown_pct_initial": 0.9248549820615817,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -0.18740722025577417,
+            "long_trades": 0,
+            "short_trades": 16,
+            "ambiguous_candles": 0,
+            "time_exits": 4,
+            "split_end_exits": 0
+          }
+        },
+        "ETH": {
+          "long": {
+            "trades": 19,
+            "win_rate": 0.3157894736842105,
+            "average_r": -0.26932108855084036,
+            "profit_factor": 0.5607789805084484,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 6.830649734015122,
+            "max_drawdown_pct_initial": 1.7076624335037804,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": -5.117100682465967,
+            "long_trades": 19,
+            "short_trades": 0,
+            "ambiguous_candles": 0,
+            "time_exits": 5,
+            "split_end_exits": 0
+          },
+          "short": {
+            "trades": 27,
+            "win_rate": 0.37037037037037035,
+            "average_r": 0.032919410635193755,
+            "profit_factor": 1.0547080898761936,
+            "profit_factor_no_losses": false,
+            "max_drawdown_r": 5.533117376792307,
+            "max_drawdown_pct_initial": 1.3832793441980769,
+            "bust_rate": 0.0,
+            "busts": 0,
+            "total_r": 0.8888240871502313,
+            "long_trades": 0,
+            "short_trades": 27,
+            "ambiguous_candles": 0,
+            "time_exits": 1,
+            "split_end_exits": 0
+          }
+        }
+      },
+      "baseline_test_by_timeframe": {
+        "1": {
+          "trades": 0,
+          "win_rate": null,
+          "average_r": null,
+          "profit_factor": null,
+          "max_drawdown_r": null,
+          "max_drawdown_pct_initial": null,
+          "bust_rate": null,
+          "total_r": 0.0,
+          "long_trades": 0,
+          "short_trades": 0
+        },
+        "5": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "average_r": -1.0000000000000167,
+          "profit_factor": 0.0,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 1.0000000000000167,
+          "max_drawdown_pct_initial": 0.25000000000000416,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.0000000000000167,
+          "long_trades": 0,
+          "short_trades": 1,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "15": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "average_r": -1.0000000000000167,
+          "profit_factor": 0.0,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 1.0000000000000167,
+          "max_drawdown_pct_initial": 0.25000000000000416,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -1.0000000000000167,
+          "long_trades": 0,
+          "short_trades": 1,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        },
+        "60": {
+          "trades": 2,
+          "win_rate": 0.0,
+          "average_r": -1.0000000000000167,
+          "profit_factor": 0.0,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 2.0000000000000333,
+          "max_drawdown_pct_initial": 0.5000000000000083,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -2.0000000000000333,
+          "long_trades": 0,
+          "short_trades": 2,
+          "ambiguous_candles": 0,
+          "time_exits": 0,
+          "split_end_exits": 0
+        }
+      },
+      "sensitivity": {
+        "all_off_hours": {
+          "trades": 76,
+          "win_rate": 0.35526315789473684,
+          "average_r": -0.1389437385681895,
+          "profit_factor": 0.7612482834507611,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 16.96796180205991,
+          "max_drawdown_pct_initial": 4.241990450514978,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.559724131182403,
+          "long_trades": 33,
+          "short_trades": 43,
+          "ambiguous_candles": 0,
+          "time_exits": 16,
+          "split_end_exits": 1
+        },
+        "one_minute_trigger_delay": {
+          "trades": 76,
+          "win_rate": 0.3684210526315789,
+          "average_r": -0.12490726129787251,
+          "profit_factor": 0.7769635047936657,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 15.387327300201184,
+          "max_drawdown_pct_initial": 3.846831825050296,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -9.49295185863831,
+          "long_trades": 33,
+          "short_trades": 43,
+          "ambiguous_candles": 0,
+          "time_exits": 16,
+          "split_end_exits": 1
+        },
+        "bust_0_90_percent": {
+          "trades": 76,
+          "win_rate": 0.35526315789473684,
+          "average_r": -0.13862099617748838,
+          "profit_factor": 0.7618028625960841,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 16.943433380366628,
+          "max_drawdown_pct_initial": 4.235858345091657,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.535195709489118,
+          "long_trades": 33,
+          "short_trades": 43,
+          "ambiguous_candles": 0,
+          "time_exits": 16,
+          "split_end_exits": 1
+        },
+        "bust_1_00_percent": {
+          "trades": 76,
+          "win_rate": 0.35526315789473684,
+          "average_r": -0.13862099617748838,
+          "profit_factor": 0.7618028625960841,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 16.943433380366628,
+          "max_drawdown_pct_initial": 4.235858345091657,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.535195709489118,
+          "long_trades": 33,
+          "short_trades": 43,
+          "ambiguous_candles": 0,
+          "time_exits": 16,
+          "split_end_exits": 1
+        },
+        "ideal_continuous_stop": {
+          "trades": 76,
+          "win_rate": 0.35526315789473684,
+          "average_r": -0.13862099617748838,
+          "profit_factor": 0.7618028625960841,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 16.943433380366628,
+          "max_drawdown_pct_initial": 4.235858345091657,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -10.535195709489118,
+          "long_trades": 33,
+          "short_trades": 43,
+          "ambiguous_candles": 0,
+          "time_exits": 16,
+          "split_end_exits": 1
+        }
+      },
+      "rank": 7,
+      "edge_assessment": "No demonstrated positive edge at 100x in pooled out-of-sample BTC/ETH; negative measured net expectancy.",
+      "setup": {
+        "long_trigger": "Base-asset volume is > 2\u00d7SMA30(volume), including the signal bar, and close/open \u2212 1 > 0.002.",
+        "short_trigger": "Volume is > 2\u00d7SMA30(volume), including the signal bar, and close/open \u2212 1 < \u22120.002.",
+        "confirmation": "Only after the signal candle is complete; all indicator inputs include that candle and no future candles.",
+        "entry": "Next signal-timeframe candle open, using the corresponding OKX 1m open as a proxy for executable Hyperliquid BBO mid.",
+        "stop_percent_of_entry": 0.5,
+        "take_profit_percent_of_entry": 1.0,
+        "time_stop_bars": 24,
+        "time_stop_minutes": 360,
+        "trend_filter": "Long: signal close > EMA100 and EMA100 > prior EMA100. Short: signal close < EMA100 and EMA100 < prior EMA100, all on the selected timeframe.",
+        "session_filter": "None",
+        "trailing_rule": "None",
+        "extra_no_trade": "A high-volume doji or spike without the required signed 0.20% body move is not a trade. Do not use dollar volume in place of the tested base-asset volume."
+      },
+      "selection_samples": {
+        "training_trades": 214,
+        "validation_trades": 79
+      }
+    }
+  ],
+  "ranking": [
+    "TD Sequential",
+    "RSI",
+    "Moving averages",
+    "Bollinger",
+    "MA ribbon",
+    "Stochastic",
+    "Volume",
+    "Ichimoku",
+    "MACD",
+    "SuperTrend"
+  ],
+  "combinations": [
+    {
+      "name": "MACD + ribbon alignment",
+      "parent_config": {
+        "timeframe_minutes": 15,
+        "variant_index": 2,
+        "parameters": {
+          "fast": 12,
+          "slow": 26,
+          "signal": 9
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.005,
+          "target": 0.01,
+          "time_bars": 24
+        }
+      },
+      "confirmation": "ribbon",
+      "test": {
+        "trades": 57,
+        "win_rate": 0.3684210526315789,
+        "average_r": -0.28744072727964226,
+        "profit_factor": 0.5469951098568654,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 18.82928397750219,
+        "max_drawdown_pct_initial": 4.707320994375547,
+        "bust_rate": 0.017543859649122806,
+        "busts": 1,
+        "total_r": -16.38412145493961,
+        "long_trades": 23,
+        "short_trades": 34,
+        "ambiguous_candles": 0,
+        "time_exits": 12,
+        "split_end_exits": 1,
+        "average_r_ci95_day_block": [
+          -0.5757103203925196,
+          0.07435900132544024
+        ],
+        "mark_to_close_drawdown": {
+          "r": 19.969302157453445,
+          "pct_initial_equity": 4.992325539363361,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 32,
+          "win_rate": 0.34375,
+          "average_r": -0.36489909739311094,
+          "profit_factor": 0.4210147332087104,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 11.676771116579552,
+          "max_drawdown_pct_initial": 2.919192779144888,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -11.67677111657955,
+          "long_trades": 11,
+          "short_trades": 21,
+          "ambiguous_candles": 0,
+          "time_exits": 8,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 25,
+          "win_rate": 0.4,
+          "average_r": -0.18829401353440242,
+          "profit_factor": 0.7057906038524928,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 9.020311553938749,
+          "max_drawdown_pct_initial": 2.255077888484687,
+          "bust_rate": 0.04,
+          "busts": 1,
+          "total_r": -4.707350338360061,
+          "long_trades": 12,
+          "short_trades": 13,
+          "ambiguous_candles": 0,
+          "time_exits": 4,
+          "split_end_exits": 1
+        }
+      }
+    },
+    {
+      "name": "Bollinger + RSI recovery",
+      "parent_config": {
+        "timeframe_minutes": 5,
+        "variant_index": 1,
+        "parameters": {
+          "period": 20,
+          "sd": 2.0,
+          "local": 5,
+          "reentry": true
+        },
+        "trend_filter": true,
+        "exit": {
+          "stop": 0.002,
+          "target": 0.004,
+          "time_bars": 6
+        }
+      },
+      "confirmation": "rsi",
+      "test": {
+        "trades": 45,
+        "win_rate": 0.4222222222222222,
+        "average_r": -0.07627858258936925,
+        "profit_factor": 0.7815042091127838,
+        "profit_factor_no_losses": false,
+        "max_drawdown_r": 9.420336679941098,
+        "max_drawdown_pct_initial": 2.3550841699852745,
+        "bust_rate": 0.0,
+        "busts": 0,
+        "total_r": -3.432536216521616,
+        "long_trades": 23,
+        "short_trades": 22,
+        "ambiguous_candles": 0,
+        "time_exits": 29,
+        "split_end_exits": 0,
+        "average_r_ci95_day_block": [
+          -0.3044976255659391,
+          0.19504195126813106
+        ],
+        "mark_to_close_drawdown": {
+          "r": 10.349621693963364,
+          "pct_initial_equity": 2.587405423490841,
+          "sampling": "one-minute close; intraminute peak-to-trough unknown"
+        }
+      },
+      "per_asset": {
+        "BTC": {
+          "trades": 24,
+          "win_rate": 0.4166666666666667,
+          "average_r": -0.21486370415114595,
+          "profit_factor": 0.47651162667033925,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 7.882955067969309,
+          "max_drawdown_pct_initial": 1.9707387669923273,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": -5.1567288996275025,
+          "long_trades": 12,
+          "short_trades": 12,
+          "ambiguous_candles": 0,
+          "time_exits": 15,
+          "split_end_exits": 0
+        },
+        "ETH": {
+          "trades": 21,
+          "win_rate": 0.42857142857142855,
+          "average_r": 0.0821044134812327,
+          "profit_factor": 1.2942736813540585,
+          "profit_factor_no_losses": false,
+          "max_drawdown_r": 3.8343846736728713,
+          "max_drawdown_pct_initial": 0.9585961684182178,
+          "bust_rate": 0.0,
+          "busts": 0,
+          "total_r": 1.7241926831058865,
+          "long_trades": 11,
+          "short_trades": 10,
+          "ambiguous_candles": 0,
+          "time_exits": 14,
+          "split_end_exits": 0
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "12 OOS days; trades are clustered and BTC/ETH correlated.",
+    "720 candidate searches and two combinations; no multiplicity-corrected edge claim.",
+    "OHLCV venue and quote-currency basis differs from Papertrade BBO.",
+    "Ranking uses OOS results, so selecting its winner requires a fresh future test.",
+    "All fee regimes are current-rule counterfactuals; most acquisition history predates contract set 2."
+  ],
+  "source_urls": [
+    "https://docs.papertrade.xyz/how/architecture/",
+    "https://docs.papertrade.xyz/how/asymmetric-impact/",
+    "https://docs.papertrade.xyz/how/pricing-bbo/",
+    "https://docs.papertrade.xyz/how/mint-curve/",
+    "https://docs.papertrade.xyz/how/risk/",
+    "https://docs.papertrade.xyz/learn/trades-pricing/",
+    "https://docs.papertrade.xyz/learn/wins-losses/",
+    "https://docs.papertrade.xyz/learn/liquidations/",
+    "https://docs.papertrade.xyz/learn/paper-emissions/",
+    "https://docs.papertrade.xyz/dev/protocol-changes/",
+    "https://docs.papertrade.xyz/dev/contract-addresses/",
+    "https://docs.papertrade.xyz/how/solvency-queue/",
+    "https://docs.papertrade.xyz/how/builder-codes/"
+  ],
+  "reproduce": [
+    "python3 research/backtest.py",
+    "python3 research/write_report.py",
+    "python3 research/check.py"
+  ]
+}
