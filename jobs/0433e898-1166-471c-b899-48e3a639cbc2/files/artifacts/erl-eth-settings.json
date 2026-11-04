@@ -1,0 +1,352 @@
+{
+  "version": 1,
+  "symbol": "ETH",
+  "leverage": 100,
+  "best": "180",
+  "timeframes": {
+    "60": {
+      "params": {
+        "ledgerBars": 24,
+        "frontierBars": 12,
+        "sweepMin": 0.0003,
+        "sweepMax": 0.0015,
+        "reclaimBuffer": 5e-05,
+        "confirmMin": 0.0,
+        "stopPad": 0.0003,
+        "riskMin": 0.0003,
+        "riskMax": 0.002,
+        "rangeMax": 0.003,
+        "targetRiskMultiple": 4.0,
+        "targetMin": 0.0015,
+        "targetMax": 0.004,
+        "supportMin": 0.2,
+        "obstacleMax": 0.2,
+        "netRRMin": 1.2,
+        "budgetMin": 0.05,
+        "latencyReserve": 0.0002,
+        "maxHoldBars": 48,
+        "cooldownBars": 6
+      },
+      "exits": {
+        "frontierFailEnabled": false,
+        "sweepFailEnabled": false,
+        "partialFraction": 0,
+        "description": "Added exit variant: disable both closed-bar structural exits (directional close < frozen frontier OR directional close <= frozen sweep low). Keep fixed stop, fixed target and maxHoldBars full exit requested on the final holding-bar close and filled at next bar open. No break-even move or trailing stop."
+      },
+      "filters": {
+        "direction": 1,
+        "directionMeaning": "1 = long only; -1 = short only; 0 = both",
+        "utcHours": {
+          "fromInclusive": 8,
+          "toExclusive": 16,
+          "timestamp": "confirmation_bar_close"
+        },
+        "higherTimeframeTrend": null,
+        "atrPercentile": {
+          "atrBars": 14,
+          "atrAlpha": 0.07142857142857142,
+          "rankLookbackBars": 240,
+          "minInclusive": 0.1,
+          "maxInclusive": 0.9,
+          "description": "TR=max(high-low,abs(high-priorClose),abs(low-priorClose)); first TR=high-low. Wilder ATR seeded with first segment TR, recursively updated on closed bars. Rank ATR/close against the previous min(240,bars since segment start) ATR/close values: fraction <= current value. No current observation in reference ranks; reset on gaps."
+        },
+        "executionEligibility": {
+          "maxEntryDriftFraction": 0.0002,
+          "entryAttempt": "next_timeframe_bar_open_only",
+          "entryExpiryAfterConfirmationSec": 60,
+          "minStopToBustDistanceFraction": 0.003,
+          "researchApproximateBustDistanceFraction": 0.0095,
+          "requireActualBustPriceForOperationalEligibility": true
+        },
+        "liveVeto": {
+          "enabled": true,
+          "historicalEvaluation": false,
+          "rangePct": 1,
+          "bucketCount": 150,
+          "maximumAgeSec": 15,
+          "endpointRelativeTolerance": 1e-08,
+          "futureToleranceSec": 2,
+          "centerDriftMax": 0.0005,
+          "nearBandFraction": 0.0005,
+          "materialMinUsd": 10000,
+          "materialMarginFraction": 0.01,
+          "crowdingMin": 0.75,
+          "queueUsdMax": 0,
+          "lpUsdMustBePositive": true,
+          "missingOrInvalid": "UNKNOWN_NO_ACTIONABLE_ENTRY",
+          "description": "Section 5 veto only: Ad is same-side mass between entry and stop, Fav is opposite-side mass between entry and target, Near is same-side mass in the clipped adverse 5bp band. Veto when Ad >= max(10000,0.01*summary.marginUsd) and Ad/(Ad+Fav) >= 0.75, OR Near >= that material amount. Require valid fresh map and summary, matching symbol/range, exactly 150 contiguous buckets spanning from/to, and full stop-target containment. Allocate mass by interval overlap fraction. Evaluate only the latest completed candidate while its one-bar entry expiry remains valid. Never infer levels for above/below totals. Queue > 0 or LP <= 0 blocks new entries. Zero masses mean no map evidence, not clearance. Preserve historical core candidates; never attach a later map to history."
+        }
+      },
+      "holdout": {
+        "trades": 84,
+        "winRate": 0.27380952380952384,
+        "meanR": -0.23624543040621276,
+        "profitFactor": 0.6710974797182124,
+        "maxDrawdownR": 21.44396632039127,
+        "bustRate": 0.0,
+        "from": "2026-08-01T00:00:00Z",
+        "to": "2026-11-01T00:00:00Z"
+      }
+    },
+    "180": {
+      "params": {
+        "ledgerBars": 24,
+        "frontierBars": 12,
+        "sweepMin": 0.0003,
+        "sweepMax": 0.006,
+        "reclaimBuffer": 5e-05,
+        "confirmMin": 0.0,
+        "stopPad": 0.0005,
+        "riskMin": 0.0005,
+        "riskMax": 0.006,
+        "rangeMax": 0.003,
+        "targetRiskMultiple": 4.0,
+        "targetMin": 0.0015,
+        "targetMax": 0.008,
+        "supportMin": 0.05,
+        "obstacleMax": 0.7,
+        "netRRMin": 1.8,
+        "budgetMin": 0.2,
+        "latencyReserve": 0.0002,
+        "maxHoldBars": 96,
+        "cooldownBars": 3
+      },
+      "exits": {
+        "frontierFailEnabled": false,
+        "sweepFailEnabled": false,
+        "partialFraction": 0,
+        "description": "Added exit variant: disable both closed-bar structural exits (directional close < frozen frontier OR directional close <= frozen sweep low). Keep fixed stop, fixed target and maxHoldBars full exit requested on the final holding-bar close and filled at next bar open. No break-even move or trailing stop."
+      },
+      "filters": {
+        "direction": -1,
+        "directionMeaning": "1 = long only; -1 = short only; 0 = both",
+        "utcHours": {
+          "fromInclusive": 8,
+          "toExclusive": 16,
+          "timestamp": "confirmation_bar_close"
+        },
+        "higherTimeframeTrend": {
+          "timeframeSec": 3600,
+          "emaBars": 20,
+          "emaAlpha": 0.09523809523809523,
+          "minimumClosedBarsInSegment": 21,
+          "input": "hourly close",
+          "alignment": "latest hour with hourOpen+3600 <= confirmation close; must be less than 3600 seconds old",
+          "rule": "long: latest closed hourly close > its EMA20; short: close < EMA20; equality or insufficient history rejects",
+          "initialization": "first closed hourly close in segment; reset on missing hourly bar"
+        },
+        "atrPercentile": null,
+        "executionEligibility": {
+          "maxEntryDriftFraction": 0.0002,
+          "entryAttempt": "next_timeframe_bar_open_only",
+          "entryExpiryAfterConfirmationSec": 180,
+          "minStopToBustDistanceFraction": 0.003,
+          "researchApproximateBustDistanceFraction": 0.0095,
+          "requireActualBustPriceForOperationalEligibility": true
+        },
+        "liveVeto": {
+          "enabled": true,
+          "historicalEvaluation": false,
+          "rangePct": 1,
+          "bucketCount": 150,
+          "maximumAgeSec": 15,
+          "endpointRelativeTolerance": 1e-08,
+          "futureToleranceSec": 2,
+          "centerDriftMax": 0.0005,
+          "nearBandFraction": 0.0005,
+          "materialMinUsd": 10000,
+          "materialMarginFraction": 0.01,
+          "crowdingMin": 0.75,
+          "queueUsdMax": 0,
+          "lpUsdMustBePositive": true,
+          "missingOrInvalid": "UNKNOWN_NO_ACTIONABLE_ENTRY",
+          "description": "Section 5 veto only: Ad is same-side mass between entry and stop, Fav is opposite-side mass between entry and target, Near is same-side mass in the clipped adverse 5bp band. Veto when Ad >= max(10000,0.01*summary.marginUsd) and Ad/(Ad+Fav) >= 0.75, OR Near >= that material amount. Require valid fresh map and summary, matching symbol/range, exactly 150 contiguous buckets spanning from/to, and full stop-target containment. Allocate mass by interval overlap fraction. Evaluate only the latest completed candidate while its one-bar entry expiry remains valid. Never infer levels for above/below totals. Queue > 0 or LP <= 0 blocks new entries. Zero masses mean no map evidence, not clearance. Preserve historical core candidates; never attach a later map to history."
+        }
+      },
+      "holdout": {
+        "trades": 82,
+        "winRate": 0.24390243902439024,
+        "meanR": -0.06432542133495854,
+        "profitFactor": 0.9149244427505387,
+        "maxDrawdownR": 24.0437702694691,
+        "bustRate": 0.0,
+        "from": "2026-08-01T00:00:00Z",
+        "to": "2026-11-01T00:00:00Z"
+      }
+    },
+    "300": {
+      "params": {
+        "ledgerBars": 24,
+        "frontierBars": 12,
+        "sweepMin": 5e-05,
+        "sweepMax": 0.0015,
+        "reclaimBuffer": 0.0,
+        "confirmMin": 5e-05,
+        "stopPad": 0.0005,
+        "riskMin": 0.0003,
+        "riskMax": 0.0045,
+        "rangeMax": 0.008,
+        "targetRiskMultiple": 5.0,
+        "targetMin": 0.003,
+        "targetMax": 0.006,
+        "supportMin": 0.3,
+        "obstacleMax": 0.7,
+        "netRRMin": 2.2,
+        "budgetMin": 0.6,
+        "latencyReserve": 0.0002,
+        "maxHoldBars": 24,
+        "cooldownBars": 6
+      },
+      "exits": null,
+      "filters": {
+        "direction": 0,
+        "directionMeaning": "1 = long only; -1 = short only; 0 = both",
+        "utcHours": {
+          "fromInclusive": 8,
+          "toExclusive": 16,
+          "timestamp": "confirmation_bar_close"
+        },
+        "higherTimeframeTrend": {
+          "timeframeSec": 3600,
+          "emaBars": 20,
+          "emaAlpha": 0.09523809523809523,
+          "minimumClosedBarsInSegment": 21,
+          "input": "hourly close",
+          "alignment": "latest hour with hourOpen+3600 <= confirmation close; must be less than 3600 seconds old",
+          "rule": "long: latest closed hourly close > its EMA20; short: close < EMA20; equality or insufficient history rejects",
+          "initialization": "first closed hourly close in segment; reset on missing hourly bar"
+        },
+        "atrPercentile": null,
+        "executionEligibility": {
+          "maxEntryDriftFraction": 0.0002,
+          "entryAttempt": "next_timeframe_bar_open_only",
+          "entryExpiryAfterConfirmationSec": 300,
+          "minStopToBustDistanceFraction": 0.003,
+          "researchApproximateBustDistanceFraction": 0.0095,
+          "requireActualBustPriceForOperationalEligibility": true
+        },
+        "liveVeto": {
+          "enabled": true,
+          "historicalEvaluation": false,
+          "rangePct": 1,
+          "bucketCount": 150,
+          "maximumAgeSec": 15,
+          "endpointRelativeTolerance": 1e-08,
+          "futureToleranceSec": 2,
+          "centerDriftMax": 0.0005,
+          "nearBandFraction": 0.0005,
+          "materialMinUsd": 10000,
+          "materialMarginFraction": 0.01,
+          "crowdingMin": 0.75,
+          "queueUsdMax": 0,
+          "lpUsdMustBePositive": true,
+          "missingOrInvalid": "UNKNOWN_NO_ACTIONABLE_ENTRY",
+          "description": "Section 5 veto only: Ad is same-side mass between entry and stop, Fav is opposite-side mass between entry and target, Near is same-side mass in the clipped adverse 5bp band. Veto when Ad >= max(10000,0.01*summary.marginUsd) and Ad/(Ad+Fav) >= 0.75, OR Near >= that material amount. Require valid fresh map and summary, matching symbol/range, exactly 150 contiguous buckets spanning from/to, and full stop-target containment. Allocate mass by interval overlap fraction. Evaluate only the latest completed candidate while its one-bar entry expiry remains valid. Never infer levels for above/below totals. Queue > 0 or LP <= 0 blocks new entries. Zero masses mean no map evidence, not clearance. Preserve historical core candidates; never attach a later map to history."
+        }
+      },
+      "holdout": {
+        "trades": 88,
+        "winRate": 0.18181818181818182,
+        "meanR": -0.2238156328914274,
+        "profitFactor": 0.6253386045392466,
+        "maxDrawdownR": 22.647528320549952,
+        "bustRate": 0.0,
+        "from": "2026-08-01T00:00:00Z",
+        "to": "2026-11-01T00:00:00Z"
+      }
+    },
+    "900": {
+      "params": {
+        "ledgerBars": 24,
+        "frontierBars": 12,
+        "sweepMin": 0.0001,
+        "sweepMax": 0.006,
+        "reclaimBuffer": 0.0001,
+        "confirmMin": 0.0,
+        "stopPad": 0.0002,
+        "riskMin": 0.001,
+        "riskMax": 0.0035,
+        "rangeMax": 0.008,
+        "targetRiskMultiple": 4.0,
+        "targetMin": 0.0015,
+        "targetMax": 0.008,
+        "supportMin": 0.2,
+        "obstacleMax": 0.9,
+        "netRRMin": 1.5,
+        "budgetMin": 0.1,
+        "latencyReserve": 0.0002,
+        "maxHoldBars": 96,
+        "cooldownBars": 3
+      },
+      "exits": {
+        "frontierFailEnabled": false,
+        "sweepFailEnabled": false,
+        "partialFraction": 0,
+        "description": "Added exit variant: disable both closed-bar structural exits (directional close < frozen frontier OR directional close <= frozen sweep low). Keep fixed stop, fixed target and maxHoldBars full exit requested on the final holding-bar close and filled at next bar open. No break-even move or trailing stop."
+      },
+      "filters": {
+        "direction": 0,
+        "directionMeaning": "1 = long only; -1 = short only; 0 = both",
+        "utcHours": {
+          "fromInclusive": 0,
+          "toExclusive": 24,
+          "timestamp": "confirmation_bar_close"
+        },
+        "higherTimeframeTrend": {
+          "timeframeSec": 3600,
+          "emaBars": 20,
+          "emaAlpha": 0.09523809523809523,
+          "minimumClosedBarsInSegment": 21,
+          "input": "hourly close",
+          "alignment": "latest hour with hourOpen+3600 <= confirmation close; must be less than 3600 seconds old",
+          "rule": "long: latest closed hourly close > its EMA20; short: close < EMA20; equality or insufficient history rejects",
+          "initialization": "first closed hourly close in segment; reset on missing hourly bar"
+        },
+        "atrPercentile": {
+          "atrBars": 14,
+          "atrAlpha": 0.07142857142857142,
+          "rankLookbackBars": 240,
+          "minInclusive": 0.0,
+          "maxInclusive": 0.75,
+          "description": "TR=max(high-low,abs(high-priorClose),abs(low-priorClose)); first TR=high-low. Wilder ATR seeded with first segment TR, recursively updated on closed bars. Rank ATR/close against the previous min(240,bars since segment start) ATR/close values: fraction <= current value. No current observation in reference ranks; reset on gaps."
+        },
+        "executionEligibility": {
+          "maxEntryDriftFraction": 0.0002,
+          "entryAttempt": "next_timeframe_bar_open_only",
+          "entryExpiryAfterConfirmationSec": 900,
+          "minStopToBustDistanceFraction": 0.003,
+          "researchApproximateBustDistanceFraction": 0.0095,
+          "requireActualBustPriceForOperationalEligibility": true
+        },
+        "liveVeto": {
+          "enabled": true,
+          "historicalEvaluation": false,
+          "rangePct": 1,
+          "bucketCount": 150,
+          "maximumAgeSec": 15,
+          "endpointRelativeTolerance": 1e-08,
+          "futureToleranceSec": 2,
+          "centerDriftMax": 0.0005,
+          "nearBandFraction": 0.0005,
+          "materialMinUsd": 10000,
+          "materialMarginFraction": 0.01,
+          "crowdingMin": 0.75,
+          "queueUsdMax": 0,
+          "lpUsdMustBePositive": true,
+          "missingOrInvalid": "UNKNOWN_NO_ACTIONABLE_ENTRY",
+          "description": "Section 5 veto only: Ad is same-side mass between entry and stop, Fav is opposite-side mass between entry and target, Near is same-side mass in the clipped adverse 5bp band. Veto when Ad >= max(10000,0.01*summary.marginUsd) and Ad/(Ad+Fav) >= 0.75, OR Near >= that material amount. Require valid fresh map and summary, matching symbol/range, exactly 150 contiguous buckets spanning from/to, and full stop-target containment. Allocate mass by interval overlap fraction. Evaluate only the latest completed candidate while its one-bar entry expiry remains valid. Never infer levels for above/below totals. Queue > 0 or LP <= 0 blocks new entries. Zero masses mean no map evidence, not clearance. Preserve historical core candidates; never attach a later map to history."
+        }
+      },
+      "holdout": {
+        "trades": 106,
+        "winRate": 0.22641509433962265,
+        "meanR": -0.1380891495277802,
+        "profitFactor": 0.8214945140250646,
+        "maxDrawdownR": 32.6478292443564,
+        "bustRate": 0.0,
+        "from": "2026-08-01T00:00:00Z",
+        "to": "2026-11-01T00:00:00Z"
+      }
+    }
+  }
+}
