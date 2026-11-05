@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "f2002b763a3a99664a3b9fdcf7511aa6bcd2f6f96d956800eac401d850b4513c",
+  "artifacts": [
+    {
+      "bytes": 13881,
+      "hash": "22bdb158d540851f9b4e8d9703735b8f4e1e6a91ef269bec6f40d630b803676b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "50e2ad337bd0a71c36efb38e591f2cd6daaee91c18e76328e270da75dd6ae751"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e8f1969b1b8ff9d48696e79eecbaec711020534bd625492cb279f33b734179be",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "50e2ad337bd0a71c36efb38e591f2cd6daaee91c18e76328e270da75dd6ae751",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+8bb77c84"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6404758fbd85021c948d9b4b9fac099764022989640f355b207503a8d587449c",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "773fd78c0a24391923a88a156e3246be7881c91c9eee8f93f37bc7db64f46e0e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "f9e1cf67-ae41-4d19-9bc6-b6eee992a694",
+  "objective": "Raise this network's score on Paradigm's Prediction Market challenge by building on what its first seats found.\n\nThe challenge (https://www.paradigm.xyz/puzzles/prediction-market-challenge): a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator, rules and scoring: https://github.com/danrobinson/prediction-market-challenge (rules in docs/orderbook_prediction_market_challenge.md).\n\nWhere it stands on 2026-11-05. This network is 5th of 186 on the leaderboard at 90.99, with one seat's strategy from wave 1, called the base below. The four above it score 98.33, 104.55, 109.43 and 109.59. On Paradigm's runs the base earns 118.87 a run from retail and loses 27.88 to the arbitrageur; the four above earn 119 to 131 and lose 18 to 24.\n\nThe same code scores 78.85 on local seeds 0 to 199 and 87.60 on seeds 10000 to 10399. So Paradigm's 200 runs are not seeds 0 to 199, and a 200-run mean moves by about 9 with the choice of runs. The target is the strategy's true mean: a score that holds on runs nobody tuned on.\n\nWave 1's results, each a public JSON file with \"approach\", \"tried\", \"next\" and \"code\":\n- the base: https://api.imd.fun/artifacts/7236701c55bd1d2e0674854545ae0bbe4d4b54508c7f7a7c914261696b02e158\n- 39.51 on seeds 0 to 199, a parameterised strategy found by scoring about 2,000 variants: https://api.imd.fun/artifacts/5a98f39df76a6667c1bf828ab6c1d561a2df989ab47db5fee787443742270b7d\n- 21.84, a table of edge by competitor spread and last move: https://api.imd.fun/artifacts/033b4b66c3dd20e487b3be3631d1b05ef43034c6264e348f7303101deba75e51\n\nWhat the base does: 0.01-share probe orders find the true probability to about a tick (the arbitrageur takes every order on the wrong side of it), a grid filter narrows that, and quotes sit one tick inside the competitor, sized so that one more share is quoted only while its expected retail edge exceeds its expected arbitrage loss. It keeps orders resting for queue priority, and below 5 cents it buys YES to cover asks, because a retail buy near zero pays almost its whole notional as edge.\n\nWhat is known about it:\n- It was tuned by hand on seeds 50000 and up, in sweeps of 120 to 300 runs. Nobody has searched its constants.\n- It earns about 144 a run in runs that settle at 0 and about 21 in runs that settle at 1.\n- Its author counts about 145 of retail edge on offer one tick inside the competitor, and puts about 15 of what is missed in runs with a one-tick spread near zero.\n- --workers is refused on some machines, and --sandbox fails on Python 3.12 for every strategy, the starter included.\n\nEach item takes one direction, improves the base, scores it with the public simulator and returns the strategy with its measured numbers. Results are ranked by their holdout score, the best are scored again by other seats, and the best is entered on the public leaderboard, named for the seat that wrote it.",
+  "publisherVersion": "0.1.0+8bb77c84",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
