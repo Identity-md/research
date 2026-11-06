@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "01b32e842059b48d8b6409bc578f8709c054d198c200beffd16bc03ad5842274",
+  "artifacts": [
+    {
+      "bytes": 20232,
+      "hash": "2027be10bf123f04558ab0e1c57357c43cbccec0a88b196c1effdb8bab30894d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "d50d016be3610718c74d33977af7ef152c664874b739ea84140fd6af5eb7f448"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "82601570d69ec3a97ea3317dc342d58d5c042a9272feab5774046057850c9c61",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "d50d016be3610718c74d33977af7ef152c664874b739ea84140fd6af5eb7f448",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f789d5aca947b1be05262956973fe678c331fa2ef3f7ba1cf193eb12235ae7ba",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-opus-5-5",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fe3130a9bf247e85a2ea7a38df0bfc36cacf657db4c834ea79470d2ef489c247",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e9948bb1-69e7-4477-98ce-94cdbdee448b",
+  "objective": "Take this network from 3rd to 1st on Paradigm's Prediction Market challenge by winning first place in the queue at the rival market maker's own price.\n\nThe challenge: a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge. On 2026-11-06 this network is 3rd of 186 at 107.17; first is 109.59.\n\nThe base is a public JSON file whose \"code\" is the strategy: https://api.imd.fun/artifacts/41fa8829432f502a00c5302c0e2200b475c5c2e100a2a16b086aaab0ce62a395\nIt reads the rival's spread at the first step as self.s, 1 to 4 ticks, a quarter of runs each.\n\nThe measurement behind this round: with first place at the rival's price, and quoting there, an earlier base made 47.86 more a run, at every spread alike. A perfect probability estimate is worth 1.9. First place alone, with the base still quoting one tick inside, was worth 1.98. Quoting at the rival's price from behind, everywhere, lost badly.\n\nHow the queue works (orderbook_pm_challenge/market.py):\n- Orders at one tick fill in the order they were placed. Each rival lot is worth 24 to 72 dollars at its price, the same all run.\n- When a rival lot is used up, its replacement appears at the start of the next step on the other side, spread ticks away, at the back of that tick's queue. An order of ours already resting there is ahead of it.\n- Each step the arbitrageur takes every bid above the true probability and every ask below it, at any size.\n- Under 1 cent the rival's lowest ask is at tick 1 + spread. When retail uses it up it is back two steps later: a bid at tick 1 the next step, taken by the arbitrageur, an ask again the step after.\n- YES bought at tick 1 and sold at tick a nets a - 1 ticks a share. So at spread 1 an ask at tick 1 nets nothing, and it takes the retail that would have used up the rival's lot at tick 2.\n\nWhat the base does. It quotes one tick inside the rival and stays at the rival's tick only while an order it placed there first has 2 shares left (top(), self.ahead). It never adds at the rival's tick, cancels a front order when its size rule shrinks, and sizes every order for one step, capped at 3,000 shares.\n\nEarlier seats: keeping small front positions alive gained 0.32. At spread 1, resting all stock at tick 2 near 1 cent lost 40 a run more to the arbitrageur: jumps sweep a big order close to the price, so size must follow how far below it the price sits.\n\nHow this round works. Every seat has one spread and changes the base only in runs of that spread, so the other three come out the same, run by run. Gains in different spreads then add up exactly, and the best file per spread is stacked into one. Files are entered on Paradigm by the network's operator, by hand: do not look for a key.\n\nA file is a candidate if it gains on unseen runs of its spread, fails no simulation, leaves the other spreads identical, and is no slower than the base.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
