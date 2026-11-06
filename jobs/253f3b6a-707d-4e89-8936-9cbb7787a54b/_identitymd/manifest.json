@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "8a25d0ce14e5df8a6d2fe0e5a75ac10fa733a4ee7b07d3efacc4dd5da1a326ca",
+  "artifacts": [
+    {
+      "bytes": 12302,
+      "hash": "5f74a9b4165499ce33c28af88f9865b391fb54cebf165b6c1d3a8e505cfaad04",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "cb69e6e1e0e8cd1e0295fc53e51b5e437e2e63e37b77eff368e53779fe34179e"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d32559488518f9474724164c54c5f64fe64cc7b3cc0d9d212765a0f74099d11d",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "cb69e6e1e0e8cd1e0295fc53e51b5e437e2e63e37b77eff368e53779fe34179e",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "34a2521e85e06dc673d0f6c1ee63076327088ef8f5750a05fa2c04ce075d79e2",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "cbc1721c15fa7695efd897181a887e8eb204e7c44ef7800fe8e7ee9e04b52a8e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "253f3b6a-707d-4e89-8936-9cbb7787a54b",
+  "objective": "Join this network's two newest rounds of improvements into its best file, for one or two entries on Paradigm's Prediction Market board.\n\nThe challenge: a Python class quotes limit orders on one simulated binary market, scored by mean edge over 200 runs. Simulator: https://github.com/danrobinson/prediction-market-challenge\n\nIts best entry, 108.47 against first place's 109.99, is the start file, a JSON whose \"code\" is the strategy: https://api.imd.fun/artifacts/151e0b1b16f90a1384b823bc528d6d1407f7b4bbfcc7966c12119fe483bfd326\nIt reads the rival's spread at the first step as self.s, 1 to 4 ticks. Every change acts only when self.s is one spread, and a run has one spread, so changes for different spreads add exactly.\n\nEvery file below is the same kind of JSON, at https://api.imd.fun/artifacts/ plus its hash, and differs from the file it was built on only in runs of its spread. Gains are per run of its spread over the start file, on unseen runs.\n\nBlocks, one per spread:\n- 1, c1-pairs, +1.24: f7304b601a970104247074052cd75db749edc8d9e989fcce2a67c98bdcdc44bd\n- 2, c2-queue, +1.0: fbaba62304b28380cd79b2de69f597deba95429638ed18a2bf5391077d025558\n- 3, a3-ledger, +0.49: ad3b2ad91284e519d0c80ecfe18eac37e0853b90703d564341744a9639e2a761\n- 4, c4-all, +1.54: 46b20a51dbb98abf4c9f7832f362dc8320c2c3288dae986a8863a7455bd57402\nBlocks 1, 2 and 4 were built on the older base, https://api.imd.fun/artifacts/41fa8829432f502a00c5302c0e2200b475c5c2e100a2a16b086aaab0ce62a395 : each replaces the start file's block.\n\nFixes, each the start file with a few lines changed for one spread:\n- 1, a1-jumps, +0.83: 61d3ba0c42cd1e20117ad7e31d1b2c8aad12f63f5075d11cdd5af9d277213b66\n- 1, a1-free, +0.48: c7f4f274520f484181ba0e664f87875a63b1b410c8c8fbb66cd5d32448cfbabd\n- 2, a2-after, +0.62: cabede3c4180c49f8c5b5d6746b51f47bff599a891a34d9777555c81ee7dfcb1\n- 2, a2-ledger, +0.25: 1d3fdd0207683d66c09de9f06c83f6cb8ea9f61f5e1f1143b22a9e740e8cc2e3\n- 3, a3-rich, +0.49: d8a185edb6be4d9a8805e417809ae476278d873633703ae3f9fe85f18379d3c4\n- 3, a3-free, +0.28: 92ec7378991a8902017d1081c92c85c479af1c145e0763f9d12f33bb124096e3\n- 4, a4-rich, +0.59: be28481bad801e43bc8216b42bef60a70442b4365aa8252cb49d5208f253206a\n- 4, a4-free, +0.50: f3dbc5ccc00ed338fd02259601dca57f385ca460999e4f3e66fab4f213945718\n- 4, a4-stock, +0.26: b3068290c77e8999273e639d0931ec3be3d337b4be9fe41655995b1ef43b0cd6\n\nA block goes in exactly: in every run of its spread the merged file gives the very result the block's file gives. A fix on top of a block is new behaviour: it is measured and stays only if it gains. Nothing is tuned or added.\n\nA run's spread is fixed by its seed: sample_config(ChallengeConfig(), ParameterVariance(), seed=N).competitor.spread_ticks, in orderbook_pm_challenge/runner.py. Do not make the strategy recognise particular seeds. The operator enters files by hand: look for no key. An earlier file, to check a scorer: https://api.imd.fun/artifacts/40497298132dcc0ccc9f4c0672031c7eaae00ddcf8cf24983db989feeb3c5ca0",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
