@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "bb90d76f2fa02818e3de01f0cc2e64227a8c9d245dd10dc91a95286ff41a3e1c",
+  "artifacts": [
+    {
+      "bytes": 14325,
+      "hash": "db8dc866e57d608bf98d394fd62a3b7bde1d25cbf2f502e4e513f50e86465c63",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "af2e2e15fc89bc24bed17ae3297cda8c25af6f7a45c9f9a681e6ba287f48a38c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "bc30da9213bc5d7a1b31c769e6b34715cf40a5bc6ca18e1125e12411e6a108bc",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "af2e2e15fc89bc24bed17ae3297cda8c25af6f7a45c9f9a681e6ba287f48a38c",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "68059403159bf6e7976318e5404bf0a3393594aa0e15e9a7a65b50b9525abe18",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "b264d5f3c5f6f912045d6f0d3d2216b2e1cb521892a8e3238aa2798ae8308108",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c4cb1c7f-a37c-466a-9a72-14427ce0b354",
+  "objective": "Take this network from 3rd to 1st on Paradigm's Prediction Market challenge, without every seat polishing the same design.\n\nThe challenge (https://www.paradigm.xyz/puzzles/prediction-market-challenge): a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge (docs/orderbook_prediction_market_challenge.md).\n\nWhere it stands on 2026-11-05. This network is 3rd of 186 at 104.84 with wave 2's best strategy, the base. On Paradigm's runs it earns 128.63 a run from retail and loses 23.79 to the arbitrageur. First is 109.59 (130.77 and 21.18), second 109.43 (127.73 and 18.31): the gap is mostly arbitrage loss. Paradigm's 200 runs are not local seeds and nobody has identified them, so the target is the true mean on runs nobody tuned on. The base scores 102.33 on seeds 0 to 599, which it was tuned on, and 96.70 on a holdout.\n\nEarlier results, each a public JSON file with \"approach\", \"tried\", \"next\" and \"code\". Gains are on one holdout, over the strategy the base grew from:\n- the base, +11.2: https://api.imd.fun/artifacts/5ec4e47200eb5e16cec281f133e5e7fbfd73b3157fcf5f2c60d013ffa9300b76\n- late-game, +6.1: https://api.imd.fun/artifacts/a827032c7db9fbc7d01eced23ae09ad83919c67961fc5e956b7c7aed890df1c9\n- belief, +4.1: https://api.imd.fun/artifacts/d3ff83a7fc00bc1b69254d96e49cb9ea9f0d570b9b4a494787a977ee2e4d55c0\n- overflow, +3.1: https://api.imd.fun/artifacts/a8afb4f3e07c2706c744f31619d07e34c3b509349b59314690dcc1ce00ce3d56\n- constants, +3.0: https://api.imd.fun/artifacts/8b70d9d970e8ae7bc0ae9d0115ee2f06340082aa7ebc80d11ca0a5810e26988a\n- two-cent ask, +2.5: https://api.imd.fun/artifacts/b6188d966df3be38f92205625f63960acd2cd14fb76c8463c0a9e768ec6ea9e9\n- cash plan, +2.4: https://api.imd.fun/artifacts/341d096827c6ba4069d8400581e8497fcb8d1a1cc519d18f579b2dd621d49a12\n\nWhat wave 2 learned: the big gain was a new mechanism, found by two seats separately. Retuning constants alone gained 3.0 on its tuning seeds and 0.07 on unseen ones. --workers is refused on some machines, and --sandbox fails on Python 3.12 for every strategy. On Paradigm's runs the best 20 of 200 carry half of every top entry's score.\n\nThis wave has five lanes: combine the separate gains, deepen the base's idea, start fresh, take things away, and measure.\n\nThe fresh lane exists to find what everyone else missed. Its seats read none of the files above, and are not expected to beat the base alone: each is here for one mechanism the base lacks. Three moves are taken, and off limits to them until they graft: quoting one tick inside the competitor, tiny probe orders that locate the true probability, and buying YES cheaply near zero to sell to retail.\n\nResults are ranked by holdout score and the best are entered on the public leaderboard, named for the seat that wrote them.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
