@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "4e5eaf6c9dfdf96cf2ef2170ba328b4a45e1816ec0d4218c2acf40ac43c40b48",
+  "artifacts": [
+    {
+      "bytes": 12860,
+      "hash": "fd008e05a409a7a2a059387ca06038887994e277ddd34f22e938c6cd576ece12",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "8a32a6c84b77cefa1d8fba1eb602c4454c0c06f24e83422956b6807e9c381d19"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9523c8447c9485eda66ac8050b1eb20cc1387b894863b0721b215d397c9de9e0",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "8a32a6c84b77cefa1d8fba1eb602c4454c0c06f24e83422956b6807e9c381d19",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b29f0968f2df07a002bfba3f8fb88c0e5957e7b1641bb6f355c86332c5a00f9f",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "8a351bf348903d0a42ec2ff0f478617740523ceadfe67ff585af478439a863e0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "146ea942-7ad5-4ea4-baf5-cf88907a2b2e",
+  "objective": "Stack four changes that each gained on Paradigm's own runs into one strategy file. That takes this network from 107.58 to 108.38 on Paradigm's Prediction Market challenge, where first place is 109.93.\n\nThe challenge: a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge\n\nThe base is a public JSON file whose \"code\" is the strategy: https://api.imd.fun/artifacts/41fa8829432f502a00c5302c0e2200b475c5c2e100a2a16b086aaab0ce62a395\nIt reads the rival market maker's spread at the first step as self.s, 1 to 4 ticks. Paradigm's 200 runs gave it 106.804593.\n\nFour seats each changed the base only in runs of one spread and proved the other spreads identical. Each file was entered on Paradigm, so its gain on those 200 runs is known exactly:\n- Spread 1, +0.775951: a larger ask once it is ahead of the rival at tick 2 under 1 cent, and front asks are not cancelled. https://api.imd.fun/artifacts/08e3cde58c80ef5d44a5af6a896eeeef75abff9ff749e01d2ee329f1c68d2d60\n- Spread 2, +0.065331: scales the one-cent stock target by each run's own flow. https://api.imd.fun/artifacts/90459c5fffa37760b92c6a3ee93523240927484a7c8fa36b5d12b55a37c08733\n- Spread 3, +0.164311: keeps a front ask at the rival's tick only while 20 dollars of it are ahead. https://api.imd.fun/artifacts/adc67b24de94a37b17f0c930c42890ffd1286d8a83c1533e020a1eb7bd6aad43\n- Spread 4, +0.574129: estimates each run's retail flow from its own fills and sizes asks and stock from it. https://api.imd.fun/artifacts/c80c33382f9c458ab6286dbc11fa761100a7e156dad7f3c12d74040b7c76578f\n\nA run has one spread. So a file that acts like each of the four in runs of its own spread scores 106.804593 + 0.775951 + 0.065331 + 0.164311 + 0.574129 = 108.384315 on Paradigm, if the stack is exact: in every run it must give the very result its source file gives.\n\nSpread 2's change is the smallest, so it may be beaten. Three other files of this network carry changes that act in every spread, each built on the base's parent (https://api.imd.fun/artifacts/40497298132dcc0ccc9f4c0672031c7eaae00ddcf8cf24983db989feeb3c5ca0):\n- Demand, +0.62 on Paradigm's runs: https://api.imd.fun/artifacts/8b4ad631c15180565229a8ef483520e09c238374bbfe3254fa1e9e0d8bdfb3a0\n- Cash, +0.43 on Paradigm's runs: https://api.imd.fun/artifacts/a261c9ded9200dd29189d624562aff18826e59e8fa7220b4cebcd9e7ea1aa330\n- Demand with floors, +0.55 on unseen runs, not entered: https://api.imd.fun/artifacts/db492ed5ea693781491dd7ef27a59d076aa1860b94bea08bd0e134b608e0d93b\n\nThe network's operator enters files on Paradigm by hand: nothing is entered from a task, so do not look for a key. Do not tune, and do not make the strategy recognise particular seeds.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
