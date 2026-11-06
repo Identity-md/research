@@ -1,0 +1,1026 @@
+{
+  "version": "1.0.0-research-disabled",
+  "recommended": {
+    "executionEnabled": 0,
+    "marketId": 1,
+    "mode": 0,
+    "signalMode": 0,
+    "longLeverage": 20,
+    "shortLeverage": 20,
+    "pairMarginFraction": 0.005,
+    "directionalMarginFraction": 0.0025,
+    "maxConcurrentGroups": 1,
+    "maxOpenMarginFraction": 0.01,
+    "maxNotionalEquityMultiple": 0.2,
+    "maxNetNotionalEquityMultiple": 0.05,
+    "maxTradesPerDay": 1,
+    "dailyLossLimitFraction": 0.01,
+    "weeklyLossLimitFraction": 0.03,
+    "drawdownKillFraction": 0.06,
+    "minFreeCashFraction": 0.98,
+    "bias": 0,
+    "neutralBiasThreshold": 20,
+    "directionalBiasThreshold": 70,
+    "maxTiltFraction": 0.1,
+    "entryHourUtc": 1,
+    "maxHoldHours": 12,
+    "stopAtr": 1,
+    "targetAtr": 2,
+    "minBustStopRatio": 4,
+    "atrHours": 24,
+    "minAtrFraction": 0.001,
+    "maxAtrFraction": 0.02,
+    "maxEntryDriftBps": 1,
+    "maxPairLegDelaySeconds": 2,
+    "maxDataAgeSeconds": 60,
+    "oracleMaxAgeSeconds": 7200,
+    "reviewIntervalHours": 24,
+    "guardIntervalSeconds": 5,
+    "maxQueueUsd": 0,
+    "minQueueEmptyMinutes": 60,
+    "minRewardRate7dPerPaperDay": 3e-05,
+    "maxSupplyLogGrowthDaily": 0.005,
+    "maxStakingShare": 0.001,
+    "maxOwnNotionalOiFraction": 0.005,
+    "maxOiHeadroomUseFraction": 0.05,
+    "minNetValue90PerUsdMargin": 0.005,
+    "futureDividendSizingCredit": 0,
+    "debtFundingEnabled": 0,
+    "partialCloseEnabled": 0,
+    "autoStakeEnabled": 0,
+    "claimThresholdUsd": 10
+  },
+  "bounds": {
+    "executionEnabled": {
+      "min": 0,
+      "max": 0
+    },
+    "marketId": {
+      "min": 0,
+      "max": 1
+    },
+    "mode": {
+      "min": 0,
+      "max": 3
+    },
+    "signalMode": {
+      "min": 0,
+      "max": 2
+    },
+    "longLeverage": {
+      "min": 1,
+      "max": 20
+    },
+    "shortLeverage": {
+      "min": 1,
+      "max": 20
+    },
+    "pairMarginFraction": {
+      "min": 0,
+      "max": 0.01
+    },
+    "directionalMarginFraction": {
+      "min": 0,
+      "max": 0.005
+    },
+    "maxConcurrentGroups": {
+      "min": 1,
+      "max": 1
+    },
+    "maxOpenMarginFraction": {
+      "min": 0,
+      "max": 0.02
+    },
+    "maxNotionalEquityMultiple": {
+      "min": 0,
+      "max": 0.4
+    },
+    "maxNetNotionalEquityMultiple": {
+      "min": 0,
+      "max": 0.1
+    },
+    "maxTradesPerDay": {
+      "min": 0,
+      "max": 2
+    },
+    "dailyLossLimitFraction": {
+      "min": 0.001,
+      "max": 0.02
+    },
+    "weeklyLossLimitFraction": {
+      "min": 0.005,
+      "max": 0.05
+    },
+    "drawdownKillFraction": {
+      "min": 0.01,
+      "max": 0.08
+    },
+    "minFreeCashFraction": {
+      "min": 0.95,
+      "max": 1
+    },
+    "bias": {
+      "min": -100,
+      "max": 100
+    },
+    "neutralBiasThreshold": {
+      "min": 10,
+      "max": 30
+    },
+    "directionalBiasThreshold": {
+      "min": 60,
+      "max": 90
+    },
+    "maxTiltFraction": {
+      "min": 0,
+      "max": 0.25
+    },
+    "entryHourUtc": {
+      "min": 0,
+      "max": 23
+    },
+    "maxHoldHours": {
+      "min": 1,
+      "max": 24
+    },
+    "stopAtr": {
+      "min": 0,
+      "max": 2
+    },
+    "targetAtr": {
+      "min": 0,
+      "max": 4
+    },
+    "minBustStopRatio": {
+      "min": 2,
+      "max": 8
+    },
+    "atrHours": {
+      "min": 24,
+      "max": 72
+    },
+    "minAtrFraction": {
+      "min": 0.0005,
+      "max": 0.003
+    },
+    "maxAtrFraction": {
+      "min": 0.005,
+      "max": 0.03
+    },
+    "maxEntryDriftBps": {
+      "min": 0,
+      "max": 2
+    },
+    "maxPairLegDelaySeconds": {
+      "min": 1,
+      "max": 5
+    },
+    "maxDataAgeSeconds": {
+      "min": 10,
+      "max": 300
+    },
+    "oracleMaxAgeSeconds": {
+      "min": 300,
+      "max": 7200
+    },
+    "reviewIntervalHours": {
+      "min": 6,
+      "max": 24
+    },
+    "guardIntervalSeconds": {
+      "min": 1,
+      "max": 10
+    },
+    "maxQueueUsd": {
+      "min": 0,
+      "max": 0
+    },
+    "minQueueEmptyMinutes": {
+      "min": 15,
+      "max": 1440
+    },
+    "minRewardRate7dPerPaperDay": {
+      "min": 0,
+      "max": 0.0002
+    },
+    "maxSupplyLogGrowthDaily": {
+      "min": 0.001,
+      "max": 0.01
+    },
+    "maxStakingShare": {
+      "min": 1e-05,
+      "max": 0.001
+    },
+    "maxOwnNotionalOiFraction": {
+      "min": 0.0001,
+      "max": 0.01
+    },
+    "maxOiHeadroomUseFraction": {
+      "min": 0.001,
+      "max": 0.05
+    },
+    "minNetValue90PerUsdMargin": {
+      "min": 0,
+      "max": 0.05
+    },
+    "futureDividendSizingCredit": {
+      "min": 0,
+      "max": 0
+    },
+    "debtFundingEnabled": {
+      "min": 0,
+      "max": 0
+    },
+    "partialCloseEnabled": {
+      "min": 0,
+      "max": 0
+    },
+    "autoStakeEnabled": {
+      "min": 0,
+      "max": 1
+    },
+    "claimThresholdUsd": {
+      "min": 1,
+      "max": 1000
+    }
+  },
+  "candidates": [
+    {
+      "name": "cash_and_observe",
+      "params": {
+        "executionEnabled": 0,
+        "marketId": 1,
+        "mode": 0,
+        "signalMode": 0,
+        "longLeverage": 20,
+        "shortLeverage": 20,
+        "pairMarginFraction": 0.005,
+        "directionalMarginFraction": 0.0025,
+        "maxConcurrentGroups": 1,
+        "maxOpenMarginFraction": 0.01,
+        "maxNotionalEquityMultiple": 0.2,
+        "maxNetNotionalEquityMultiple": 0.05,
+        "maxTradesPerDay": 1,
+        "dailyLossLimitFraction": 0.01,
+        "weeklyLossLimitFraction": 0.03,
+        "drawdownKillFraction": 0.06,
+        "minFreeCashFraction": 0.98,
+        "bias": 0,
+        "neutralBiasThreshold": 20,
+        "directionalBiasThreshold": 70,
+        "maxTiltFraction": 0.1,
+        "entryHourUtc": 1,
+        "maxHoldHours": 12,
+        "stopAtr": 1,
+        "targetAtr": 2,
+        "minBustStopRatio": 4,
+        "atrHours": 24,
+        "minAtrFraction": 0.001,
+        "maxAtrFraction": 0.02,
+        "maxEntryDriftBps": 1,
+        "maxPairLegDelaySeconds": 2,
+        "maxDataAgeSeconds": 60,
+        "oracleMaxAgeSeconds": 7200,
+        "reviewIntervalHours": 24,
+        "guardIntervalSeconds": 5,
+        "maxQueueUsd": 0,
+        "minQueueEmptyMinutes": 60,
+        "minRewardRate7dPerPaperDay": 3e-05,
+        "maxSupplyLogGrowthDaily": 0.005,
+        "maxStakingShare": 0.001,
+        "maxOwnNotionalOiFraction": 0.005,
+        "maxOiHeadroomUseFraction": 0.05,
+        "minNetValue90PerUsdMargin": 0.005,
+        "futureDividendSizingCredit": 0,
+        "debtFundingEnabled": 0,
+        "partialCloseEnabled": 0,
+        "autoStakeEnabled": 0,
+        "claimThresholdUsd": 10
+      },
+      "expectedDailyValuePerUsdMargin": 0,
+      "p10": 0,
+      "p90": 0,
+      "maxDrawdown": 0,
+      "notes": "Recommended. No newly deployed margin; values are zero per hypothetical $1 budget, exclude any external USDC yield or pre-existing PAPER dividends. Execution is hard-disabled in this version."
+    },
+    {
+      "name": "ETH_pair_10x_24h",
+      "params": {
+        "executionEnabled": 0,
+        "marketId": 1,
+        "mode": 1,
+        "signalMode": 0,
+        "longLeverage": 10,
+        "shortLeverage": 10,
+        "pairMarginFraction": 0.005,
+        "directionalMarginFraction": 0.0025,
+        "maxConcurrentGroups": 1,
+        "maxOpenMarginFraction": 0.01,
+        "maxNotionalEquityMultiple": 0.2,
+        "maxNetNotionalEquityMultiple": 0.05,
+        "maxTradesPerDay": 1,
+        "dailyLossLimitFraction": 0.01,
+        "weeklyLossLimitFraction": 0.03,
+        "drawdownKillFraction": 0.06,
+        "minFreeCashFraction": 0.98,
+        "bias": 0,
+        "neutralBiasThreshold": 20,
+        "directionalBiasThreshold": 70,
+        "maxTiltFraction": 0.1,
+        "entryHourUtc": 0,
+        "maxHoldHours": 24,
+        "stopAtr": 0,
+        "targetAtr": 0,
+        "minBustStopRatio": 4,
+        "atrHours": 24,
+        "minAtrFraction": 0.001,
+        "maxAtrFraction": 0.02,
+        "maxEntryDriftBps": 1,
+        "maxPairLegDelaySeconds": 2,
+        "maxDataAgeSeconds": 60,
+        "oracleMaxAgeSeconds": 7200,
+        "reviewIntervalHours": 24,
+        "guardIntervalSeconds": 5,
+        "maxQueueUsd": 0,
+        "minQueueEmptyMinutes": 60,
+        "minRewardRate7dPerPaperDay": 3e-05,
+        "maxSupplyLogGrowthDaily": 0.005,
+        "maxStakingShare": 0.001,
+        "maxOwnNotionalOiFraction": 0.005,
+        "maxOiHeadroomUseFraction": 0.05,
+        "minNetValue90PerUsdMargin": 0.005,
+        "futureDividendSizingCredit": 0,
+        "debtFundingEnabled": 0,
+        "partialCloseEnabled": 0,
+        "autoStakeEnabled": 0,
+        "claimThresholdUsd": 10
+      },
+      "expectedDailyValuePerUsdMargin": -0.010319629616717459,
+      "p10": -0.012339955190330081,
+      "p90": -0.008402489347366782,
+      "maxDrawdown": 0.010624215654124192,
+      "notes": "10th/90th percentile of 90-day mean total cash economics under joint historical block resampling and judgmental dividend regimes; $1 fixed total margin per decision; no token terminal value. maxDrawdown is historical realized cash drawdown with 1% equity committed per decision, excluding dividends, before policy gates; candidate is shadow-only, not a deploy recommendation. Full oracle panel not backtested. No-stop variants are comparative research, not approved live risk rules."
+    },
+    {
+      "name": "ETH_pair_20x_24h",
+      "params": {
+        "executionEnabled": 0,
+        "marketId": 1,
+        "mode": 1,
+        "signalMode": 0,
+        "longLeverage": 20,
+        "shortLeverage": 20,
+        "pairMarginFraction": 0.005,
+        "directionalMarginFraction": 0.0025,
+        "maxConcurrentGroups": 1,
+        "maxOpenMarginFraction": 0.01,
+        "maxNotionalEquityMultiple": 0.2,
+        "maxNetNotionalEquityMultiple": 0.05,
+        "maxTradesPerDay": 1,
+        "dailyLossLimitFraction": 0.01,
+        "weeklyLossLimitFraction": 0.03,
+        "drawdownKillFraction": 0.06,
+        "minFreeCashFraction": 0.98,
+        "bias": 0,
+        "neutralBiasThreshold": 20,
+        "directionalBiasThreshold": 70,
+        "maxTiltFraction": 0.1,
+        "entryHourUtc": 0,
+        "maxHoldHours": 24,
+        "stopAtr": 0,
+        "targetAtr": 0,
+        "minBustStopRatio": 4,
+        "atrHours": 24,
+        "minAtrFraction": 0.001,
+        "maxAtrFraction": 0.02,
+        "maxEntryDriftBps": 1,
+        "maxPairLegDelaySeconds": 2,
+        "maxDataAgeSeconds": 60,
+        "oracleMaxAgeSeconds": 7200,
+        "reviewIntervalHours": 24,
+        "guardIntervalSeconds": 5,
+        "maxQueueUsd": 0,
+        "minQueueEmptyMinutes": 60,
+        "minRewardRate7dPerPaperDay": 3e-05,
+        "maxSupplyLogGrowthDaily": 0.005,
+        "maxStakingShare": 0.001,
+        "maxOwnNotionalOiFraction": 0.005,
+        "maxOiHeadroomUseFraction": 0.05,
+        "minNetValue90PerUsdMargin": 0.005,
+        "futureDividendSizingCredit": 0,
+        "debtFundingEnabled": 0,
+        "partialCloseEnabled": 0,
+        "autoStakeEnabled": 0,
+        "claimThresholdUsd": 10
+      },
+      "expectedDailyValuePerUsdMargin": -0.020632705125907005,
+      "p10": -0.024242198896263112,
+      "p90": -0.017042411955503996,
+      "maxDrawdown": 0.021090115805504905,
+      "notes": "10th/90th percentile of 90-day mean total cash economics under joint historical block resampling and judgmental dividend regimes; $1 fixed total margin per decision; no token terminal value. maxDrawdown is historical realized cash drawdown with 1% equity committed per decision, excluding dividends, before policy gates; candidate is shadow-only, not a deploy recommendation. Full oracle panel not backtested. No-stop variants are comparative research, not approved live risk rules."
+    },
+    {
+      "name": "ETH_tilt_20x",
+      "params": {
+        "executionEnabled": 0,
+        "marketId": 1,
+        "mode": 3,
+        "signalMode": 1,
+        "longLeverage": 20,
+        "shortLeverage": 20,
+        "pairMarginFraction": 0.005,
+        "directionalMarginFraction": 0.0025,
+        "maxConcurrentGroups": 1,
+        "maxOpenMarginFraction": 0.01,
+        "maxNotionalEquityMultiple": 0.2,
+        "maxNetNotionalEquityMultiple": 0.05,
+        "maxTradesPerDay": 1,
+        "dailyLossLimitFraction": 0.01,
+        "weeklyLossLimitFraction": 0.03,
+        "drawdownKillFraction": 0.06,
+        "minFreeCashFraction": 0.98,
+        "bias": 0,
+        "neutralBiasThreshold": 20,
+        "directionalBiasThreshold": 70,
+        "maxTiltFraction": 0.25,
+        "entryHourUtc": 0,
+        "maxHoldHours": 24,
+        "stopAtr": 0,
+        "targetAtr": 0,
+        "minBustStopRatio": 4,
+        "atrHours": 24,
+        "minAtrFraction": 0.001,
+        "maxAtrFraction": 0.02,
+        "maxEntryDriftBps": 1,
+        "maxPairLegDelaySeconds": 2,
+        "maxDataAgeSeconds": 60,
+        "oracleMaxAgeSeconds": 7200,
+        "reviewIntervalHours": 24,
+        "guardIntervalSeconds": 5,
+        "maxQueueUsd": 0,
+        "minQueueEmptyMinutes": 60,
+        "minRewardRate7dPerPaperDay": 3e-05,
+        "maxSupplyLogGrowthDaily": 0.005,
+        "maxStakingShare": 0.001,
+        "maxOwnNotionalOiFraction": 0.005,
+        "maxOiHeadroomUseFraction": 0.05,
+        "minNetValue90PerUsdMargin": 0.005,
+        "futureDividendSizingCredit": 0,
+        "debtFundingEnabled": 0,
+        "partialCloseEnabled": 0,
+        "autoStakeEnabled": 0,
+        "claimThresholdUsd": 10
+      },
+      "expectedDailyValuePerUsdMargin": -0.040350018631073056,
+      "p10": -0.06149019225695297,
+      "p90": -0.018836833935115697,
+      "maxDrawdown": 0.044019329244121774,
+      "notes": "10th/90th percentile of 90-day mean total cash economics under joint historical block resampling and judgmental dividend regimes; $1 fixed total margin per decision; no token terminal value. maxDrawdown is historical realized cash drawdown with 1% equity committed per decision, excluding dividends, before policy gates; candidate is shadow-only, not a deploy recommendation. Full oracle panel not backtested. No-stop variants are comparative research, not approved live risk rules."
+    },
+    {
+      "name": "ETH_revert_20x_12h_stopNone",
+      "params": {
+        "executionEnabled": 0,
+        "marketId": 1,
+        "mode": 2,
+        "signalMode": 2,
+        "longLeverage": 20,
+        "shortLeverage": 20,
+        "pairMarginFraction": 0.005,
+        "directionalMarginFraction": 0.0025,
+        "maxConcurrentGroups": 1,
+        "maxOpenMarginFraction": 0.01,
+        "maxNotionalEquityMultiple": 0.2,
+        "maxNetNotionalEquityMultiple": 0.05,
+        "maxTradesPerDay": 1,
+        "dailyLossLimitFraction": 0.01,
+        "weeklyLossLimitFraction": 0.03,
+        "drawdownKillFraction": 0.06,
+        "minFreeCashFraction": 0.98,
+        "bias": 0,
+        "neutralBiasThreshold": 20,
+        "directionalBiasThreshold": 70,
+        "maxTiltFraction": 0.1,
+        "entryHourUtc": 0,
+        "maxHoldHours": 12,
+        "stopAtr": 0,
+        "targetAtr": 0,
+        "minBustStopRatio": 4,
+        "atrHours": 24,
+        "minAtrFraction": 0.001,
+        "maxAtrFraction": 0.02,
+        "maxEntryDriftBps": 1,
+        "maxPairLegDelaySeconds": 2,
+        "maxDataAgeSeconds": 60,
+        "oracleMaxAgeSeconds": 7200,
+        "reviewIntervalHours": 24,
+        "guardIntervalSeconds": 5,
+        "maxQueueUsd": 0,
+        "minQueueEmptyMinutes": 60,
+        "minRewardRate7dPerPaperDay": 3e-05,
+        "maxSupplyLogGrowthDaily": 0.005,
+        "maxStakingShare": 0.001,
+        "maxOwnNotionalOiFraction": 0.005,
+        "maxOiHeadroomUseFraction": 0.05,
+        "minNetValue90PerUsdMargin": 0.005,
+        "futureDividendSizingCredit": 0,
+        "debtFundingEnabled": 0,
+        "partialCloseEnabled": 0,
+        "autoStakeEnabled": 0,
+        "claimThresholdUsd": 10
+      },
+      "expectedDailyValuePerUsdMargin": -0.010277879541308661,
+      "p10": -0.02769128854893595,
+      "p90": 0.006246302408259382,
+      "maxDrawdown": 0.01727706495398984,
+      "notes": "10th/90th percentile of 90-day mean total cash economics under joint historical block resampling and judgmental dividend regimes; $1 fixed total margin per decision; no token terminal value. maxDrawdown is historical realized cash drawdown with 1% equity committed per decision, excluding dividends, before policy gates; candidate is shadow-only, not a deploy recommendation. Full oracle panel not backtested. No-stop variants are comparative research, not approved live risk rules."
+    },
+    {
+      "name": "ETH_trend_20x_24h_stop1",
+      "params": {
+        "executionEnabled": 0,
+        "marketId": 1,
+        "mode": 2,
+        "signalMode": 1,
+        "longLeverage": 20,
+        "shortLeverage": 20,
+        "pairMarginFraction": 0.005,
+        "directionalMarginFraction": 0.0025,
+        "maxConcurrentGroups": 1,
+        "maxOpenMarginFraction": 0.01,
+        "maxNotionalEquityMultiple": 0.2,
+        "maxNetNotionalEquityMultiple": 0.05,
+        "maxTradesPerDay": 1,
+        "dailyLossLimitFraction": 0.01,
+        "weeklyLossLimitFraction": 0.03,
+        "drawdownKillFraction": 0.06,
+        "minFreeCashFraction": 0.98,
+        "bias": 0,
+        "neutralBiasThreshold": 20,
+        "directionalBiasThreshold": 70,
+        "maxTiltFraction": 0.1,
+        "entryHourUtc": 0,
+        "maxHoldHours": 24,
+        "stopAtr": 1,
+        "targetAtr": 2,
+        "minBustStopRatio": 4,
+        "atrHours": 24,
+        "minAtrFraction": 0.001,
+        "maxAtrFraction": 0.02,
+        "maxEntryDriftBps": 1,
+        "maxPairLegDelaySeconds": 2,
+        "maxDataAgeSeconds": 60,
+        "oracleMaxAgeSeconds": 7200,
+        "reviewIntervalHours": 24,
+        "guardIntervalSeconds": 5,
+        "maxQueueUsd": 0,
+        "minQueueEmptyMinutes": 60,
+        "minRewardRate7dPerPaperDay": 3e-05,
+        "maxSupplyLogGrowthDaily": 0.005,
+        "maxStakingShare": 0.001,
+        "maxOwnNotionalOiFraction": 0.005,
+        "maxOiHeadroomUseFraction": 0.05,
+        "minNetValue90PerUsdMargin": 0.005,
+        "futureDividendSizingCredit": 0,
+        "debtFundingEnabled": 0,
+        "partialCloseEnabled": 0,
+        "autoStakeEnabled": 0,
+        "claimThresholdUsd": 10
+      },
+      "expectedDailyValuePerUsdMargin": 0.0008708486041099233,
+      "p10": -0.017523900989418358,
+      "p90": 0.01947531311137821,
+      "maxDrawdown": 0.013937414991393338,
+      "notes": "10th/90th percentile of 90-day mean total cash economics under joint historical block resampling and judgmental dividend regimes; $1 fixed total margin per decision; no token terminal value. maxDrawdown is historical realized cash drawdown with 1% equity committed per decision, excluding dividends, before policy gates; candidate is shadow-only, not a deploy recommendation. Full oracle panel not backtested. No-stop variants are comparative research, not approved live risk rules."
+    },
+    {
+      "name": "BTC_revert_20x_12h_stopNone",
+      "params": {
+        "executionEnabled": 0,
+        "marketId": 0,
+        "mode": 2,
+        "signalMode": 2,
+        "longLeverage": 20,
+        "shortLeverage": 20,
+        "pairMarginFraction": 0.005,
+        "directionalMarginFraction": 0.0025,
+        "maxConcurrentGroups": 1,
+        "maxOpenMarginFraction": 0.01,
+        "maxNotionalEquityMultiple": 0.2,
+        "maxNetNotionalEquityMultiple": 0.05,
+        "maxTradesPerDay": 1,
+        "dailyLossLimitFraction": 0.01,
+        "weeklyLossLimitFraction": 0.03,
+        "drawdownKillFraction": 0.06,
+        "minFreeCashFraction": 0.98,
+        "bias": 0,
+        "neutralBiasThreshold": 20,
+        "directionalBiasThreshold": 70,
+        "maxTiltFraction": 0.1,
+        "entryHourUtc": 0,
+        "maxHoldHours": 12,
+        "stopAtr": 0,
+        "targetAtr": 0,
+        "minBustStopRatio": 4,
+        "atrHours": 24,
+        "minAtrFraction": 0.001,
+        "maxAtrFraction": 0.02,
+        "maxEntryDriftBps": 1,
+        "maxPairLegDelaySeconds": 2,
+        "maxDataAgeSeconds": 60,
+        "oracleMaxAgeSeconds": 7200,
+        "reviewIntervalHours": 24,
+        "guardIntervalSeconds": 5,
+        "maxQueueUsd": 0,
+        "minQueueEmptyMinutes": 60,
+        "minRewardRate7dPerPaperDay": 3e-05,
+        "maxSupplyLogGrowthDaily": 0.005,
+        "maxStakingShare": 0.001,
+        "maxOwnNotionalOiFraction": 0.005,
+        "maxOiHeadroomUseFraction": 0.05,
+        "minNetValue90PerUsdMargin": 0.005,
+        "futureDividendSizingCredit": 0,
+        "debtFundingEnabled": 0,
+        "partialCloseEnabled": 0,
+        "autoStakeEnabled": 0,
+        "claimThresholdUsd": 10
+      },
+      "expectedDailyValuePerUsdMargin": 0.005327006522029841,
+      "p10": -0.018570456617859426,
+      "p90": 0.027159205179690386,
+      "maxDrawdown": 0.01792553309063194,
+      "notes": "10th/90th percentile of 90-day mean total cash economics under joint historical block resampling and judgmental dividend regimes; $1 fixed total margin per decision; no token terminal value. maxDrawdown is historical realized cash drawdown with 1% equity committed per decision, excluding dividends, before policy gates; candidate is shadow-only, not a deploy recommendation. Full oracle panel not backtested. No-stop variants are comparative research, not approved live risk rules."
+    }
+  ],
+  "parameterSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:imd:papertrade:strategy-parameters:1",
+    "title": "Trusted Papertrade research policy v1 parameter schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "executionEnabled",
+      "marketId",
+      "mode",
+      "signalMode",
+      "longLeverage",
+      "shortLeverage",
+      "pairMarginFraction",
+      "directionalMarginFraction",
+      "maxConcurrentGroups",
+      "maxOpenMarginFraction",
+      "maxNotionalEquityMultiple",
+      "maxNetNotionalEquityMultiple",
+      "maxTradesPerDay",
+      "dailyLossLimitFraction",
+      "weeklyLossLimitFraction",
+      "drawdownKillFraction",
+      "minFreeCashFraction",
+      "bias",
+      "neutralBiasThreshold",
+      "directionalBiasThreshold",
+      "maxTiltFraction",
+      "entryHourUtc",
+      "maxHoldHours",
+      "stopAtr",
+      "targetAtr",
+      "minBustStopRatio",
+      "atrHours",
+      "minAtrFraction",
+      "maxAtrFraction",
+      "maxEntryDriftBps",
+      "maxPairLegDelaySeconds",
+      "maxDataAgeSeconds",
+      "oracleMaxAgeSeconds",
+      "reviewIntervalHours",
+      "guardIntervalSeconds",
+      "maxQueueUsd",
+      "minQueueEmptyMinutes",
+      "minRewardRate7dPerPaperDay",
+      "maxSupplyLogGrowthDaily",
+      "maxStakingShare",
+      "maxOwnNotionalOiFraction",
+      "maxOiHeadroomUseFraction",
+      "minNetValue90PerUsdMargin",
+      "futureDividendSizingCredit",
+      "debtFundingEnabled",
+      "partialCloseEnabled",
+      "autoStakeEnabled",
+      "claimThresholdUsd"
+    ],
+    "properties": {
+      "executionEnabled": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "marketId": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "mode": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 3
+      },
+      "signalMode": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 2
+      },
+      "longLeverage": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20
+      },
+      "shortLeverage": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20
+      },
+      "pairMarginFraction": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.01
+      },
+      "directionalMarginFraction": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.005
+      },
+      "maxConcurrentGroups": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 1
+      },
+      "maxOpenMarginFraction": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.02
+      },
+      "maxNotionalEquityMultiple": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.4
+      },
+      "maxNetNotionalEquityMultiple": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.1
+      },
+      "maxTradesPerDay": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 2
+      },
+      "dailyLossLimitFraction": {
+        "type": "number",
+        "minimum": 0.001,
+        "maximum": 0.02
+      },
+      "weeklyLossLimitFraction": {
+        "type": "number",
+        "minimum": 0.005,
+        "maximum": 0.05
+      },
+      "drawdownKillFraction": {
+        "type": "number",
+        "minimum": 0.01,
+        "maximum": 0.08
+      },
+      "minFreeCashFraction": {
+        "type": "number",
+        "minimum": 0.95,
+        "maximum": 1
+      },
+      "bias": {
+        "type": "integer",
+        "minimum": -100,
+        "maximum": 100
+      },
+      "neutralBiasThreshold": {
+        "type": "integer",
+        "minimum": 10,
+        "maximum": 30
+      },
+      "directionalBiasThreshold": {
+        "type": "integer",
+        "minimum": 60,
+        "maximum": 90
+      },
+      "maxTiltFraction": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.25
+      },
+      "entryHourUtc": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 23
+      },
+      "maxHoldHours": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 24
+      },
+      "stopAtr": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 2
+      },
+      "targetAtr": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 4
+      },
+      "minBustStopRatio": {
+        "type": "number",
+        "minimum": 2,
+        "maximum": 8
+      },
+      "atrHours": {
+        "type": "integer",
+        "minimum": 24,
+        "maximum": 72
+      },
+      "minAtrFraction": {
+        "type": "number",
+        "minimum": 0.0005,
+        "maximum": 0.003
+      },
+      "maxAtrFraction": {
+        "type": "number",
+        "minimum": 0.005,
+        "maximum": 0.03
+      },
+      "maxEntryDriftBps": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 2
+      },
+      "maxPairLegDelaySeconds": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "maxDataAgeSeconds": {
+        "type": "integer",
+        "minimum": 10,
+        "maximum": 300
+      },
+      "oracleMaxAgeSeconds": {
+        "type": "integer",
+        "minimum": 300,
+        "maximum": 7200
+      },
+      "reviewIntervalHours": {
+        "type": "integer",
+        "minimum": 6,
+        "maximum": 24
+      },
+      "guardIntervalSeconds": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 10
+      },
+      "maxQueueUsd": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "minQueueEmptyMinutes": {
+        "type": "integer",
+        "minimum": 15,
+        "maximum": 1440
+      },
+      "minRewardRate7dPerPaperDay": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.0002
+      },
+      "maxSupplyLogGrowthDaily": {
+        "type": "number",
+        "minimum": 0.001,
+        "maximum": 0.01
+      },
+      "maxStakingShare": {
+        "type": "number",
+        "minimum": 1e-05,
+        "maximum": 0.001
+      },
+      "maxOwnNotionalOiFraction": {
+        "type": "number",
+        "minimum": 0.0001,
+        "maximum": 0.01
+      },
+      "maxOiHeadroomUseFraction": {
+        "type": "number",
+        "minimum": 0.001,
+        "maximum": 0.05
+      },
+      "minNetValue90PerUsdMargin": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.05
+      },
+      "futureDividendSizingCredit": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "debtFundingEnabled": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "partialCloseEnabled": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "autoStakeEnabled": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "claimThresholdUsd": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 1000
+      }
+    }
+  },
+  "oracleBiasQuestion": {
+    "wording": "Using only public evidence timestamped at or before {asOfUtc}, what is the directional pressure on ETH over the next 24 hours on a scale from -100 (strong short) through 0 (neutral) to +100 (strong long)? Apply the fixed trend, funding, open-interest and Papertrade liquidation-map rubric and volatility multiplier in report.md. Report an int256 integer in [-100,100], without units, prose or JSON. Publish the required timestamped evidence packet separately. This score predicts price pressure, not a guaranteed profitable Papertrade trade.",
+    "answerType": "int256",
+    "min": -100,
+    "max": 100,
+    "tolerance": 10,
+    "toleranceMeaning": "Absolute integer points for independently reproduced score; not a price or PnL tolerance. Three valid independent answers, median rounded to nearest integer; require max-min <=20. Otherwise oracle status INVALID and halt entries; never substitute an unavailable score with zero.",
+    "scheduleUtc": "00:00 daily; evidence cutoff 00:00, answer before 01:00; expires after oracleMaxAgeSeconds for entry",
+    "evidence": [
+      "UTC cutoff and every retrieval timestamp, raw response hash and source URL",
+      "Closed ETH candles: 24h/72h/168h returns, 24h realized volatility and 90-day volatility percentile",
+      "Hyperliquid last-24h funding and OKX funding, normalized to 8h",
+      "Hyperliquid and OKX OI change over exactly 24h from archived snapshots; no current-only change estimate",
+      "Papertrade ETH range=5 liquidation map, 150 buckets and below/above fields; state as-of age <=60 seconds",
+      "Protocol summary and queue, live payout parameter and implementation fingerprints",
+      "Each component T,F,O,Q, volatility multiplier, unrounded aggregate, rounded score; missingness status"
+    ]
+  },
+  "reviewInputs": [
+    "Prior trusted version/hash and all current parameters; review may patch recommended only",
+    "Reconciled trade-intent and receipt log: UTC times, instrument, side, full isolated margin, leverage, entries/exits/BBO, bustPrice, latency, actual payout mode and all fees, queued versus paid proceeds",
+    "Per-trade loss basis and PAPER minted: API trade rows reconciled to mint Transfer events; total supply and total staked",
+    "Our wallet PAPER/staked balances and pendingReward(address), accumulator snapshots, distributed rewards, claims, and externally withdrawn USDC; include claim receipt to avoid double count",
+    "USDC equity bridge: deposits, withdrawals, available, locked margin, queue claims and cash dividends; separate unrealized PnL and zero cash mark for nontransferable PAPER",
+    "Protocol summary, minute queue snapshots, house history, reward distributions, cap/headroom/OI, implementation and 24h timelock changes",
+    "Daily oracle evidence packet and panel validity; use separate BTC rubric if marketId=0",
+    "Rolling 7/15/30-day rewards per PAPER, supply growth, our diluted stake share and own fee contribution; unavailable 90-day history remains unavailable",
+    "Frozen shadow trades, executable BBO tracking errors, sign/submit/confirm latency and failed-intent log; compare pre-registered rule against cash and random-side control"
+  ],
+  "reviewOutputs": [
+    "Strict JSON patch containing only allowed recommended fields, expected previous version/hash, asOfUtc and expiresAtUtc; reject unknown fields, stale versions, nonfinite values or bound changes",
+    "Oracle int256 answer and separate evidence packet/hash, panel min/max/median and VALID/INVALID status",
+    "Reconciled daily and cumulative net cash PnL + USDC dividends, PAPER minted and eligible loss basis; staking and queue accrual separately, no token terminal mark",
+    "Updated 30/90/180-day dividend distribution and dilution/queue/parameter stresses, with data window and assumptions; incremental versus existing-stake baseline",
+    "Per-candidate 90-day cash simulation mean/p10/p90, realized and stressed drawdowns, limits/headroom and decision OBSERVE/HALT; no execution in v1",
+    "Adversarial review: evidence gaps, regime/latency sensitivity, endogenous-reward and survivorship checks; explicit pass/fail for every kill condition",
+    "New entries, full-close intents and claim/stake suggestions for an independently authorized future execution version only; this version must output an empty transaction list"
+  ],
+  "killConditions": [
+    "executionEnabled must remain 0 in version 1: any attempted submission is rejected; a new reviewed policy version is required to enable trading",
+    "Any payout queue >0 USD, missing/stale queue state, negative tracked LP, or reward distribution suppressed; do not farm an insolvency bonus",
+    "Any change in implementation, impact/deadband/holdback, win/loss/builder fee, mint coefficient, reward allocation, LP cap, custody asset or timelock configuration; freeze on a scheduled material change",
+    "Daily net cash loss >= dailyLossLimitFraction, trailing 7-day loss >= weeklyLossLimitFraction, or peak cash-equity drawdown >= drawdownKillFraction; unrealized losses count for entry gating",
+    "Open margin, gross/net notional, concurrency, OI share/headroom or free-cash limit exceeded; minimum venue order exceeds permitted size => skip",
+    "Invalid oracle/panel, expired evidence, bad candles, BBO mismatch > maxEntryDriftBps, relayer failure, or pair-leg delay > maxPairLegDelaySeconds => cancel further entries and request full closes where permitted",
+    "Unknown actual bustPrice, stop distance too close to bust, no continuously available guard, or stopped guard heartbeat => no leverage entries",
+    "7-day per-PAPER reward below minRewardRate7dPerPaperDay, supply log growth above maxSupplyLogGrowthDaily, or our stake share above maxStakingShare => no loss-farm entries",
+    "Prospective 90-day total cash economics p10 <= minNetValue90PerUsdMargin (no confidence from recycled holdout), or any gate relies on future PAPER value for sizing => no farm",
+    "Unreconciled cash or mint discrepancy, delayed claim/withdrawal, retired instrument, opens pause, chain reorg/outage or custody/USDC depeg observation => halt and escalate"
+  ],
+  "metricDefinitions": {
+    "expectedDailyValuePerUsdMargin": "Mean of (90-day trading cash PnL plus USDC dividends earned within those same 90 days)/90 per fixed $1 total margin budget per daily decision, from saved historical calendar block resamples and explicit judgmental revenue/dilution regimes. Excludes pre-existing stake, token price, idle-cash yield and queue recovery. Hypothetical, not a forecast guarantee.",
+    "p10": "10th percentile of the same 90-day average daily economics",
+    "p90": "90th percentile of the same 90-day average daily economics",
+    "maxDrawdown": "Historical realized equity drawdown as fraction using 1% current equity committed per trade/group, prior to proposed risk gates, without dividends; not a worst-case bound.",
+    "modeCodes": {
+      "0": "observe",
+      "1": "equal-notional pair",
+      "2": "directional",
+      "3": "biased equal-leverage pair"
+    },
+    "signalModeCodes": {
+      "0": "live oracle panel (not backtested)",
+      "1": "24h/72h trend agreement candle proxy",
+      "2": "opposite of 24h/72h trend agreement, exploratory comparator"
+    },
+    "marketCodes": {
+      "0": "BTC",
+      "1": "ETH"
+    },
+    "versionPolicy": "Bounds, schemas, candidates, review rules and kill conditions are immutable to recurring review. Validate a recommended-only patch against the trusted shipped schema and cross-field policy, not against editable JSON bounds. executionEnabled pinned to zero."
+  }
+}
