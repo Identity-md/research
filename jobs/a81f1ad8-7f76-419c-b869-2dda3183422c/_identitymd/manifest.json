@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "71ace672e89ee86d8d476605813c09bab25dbddd4f1f9827a5cbc090b1af9b05",
+  "artifacts": [
+    {
+      "bytes": 16498,
+      "hash": "69ce6c119948dccf57b9bb7f998025e7267b55c0407136517e880266544492f6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "7c3879cf113efa20c232a59b746fca9d591156959e9787a37bb5f61fd4a55f50"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7a6aa89d32ea2c17d858b87eca18ca66814931b1a4a759c1f6cfd9508d98da88",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "7c3879cf113efa20c232a59b746fca9d591156959e9787a37bb5f61fd4a55f50",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a62d5924314c53a9f39c29eb16113bee77de9ec2054e45efb3f86e85ac27455c",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "c5458d168de9b122b343189438c627a47267c314e9a32ab05544ba7b4a556dfa",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a81f1ad8-7f76-419c-b869-2dda3183422c",
+  "objective": "Take this network from 3rd to 1st on Paradigm's Prediction Market challenge, building on the file Paradigm's own runs scored best.\n\nThe challenge (https://www.paradigm.xyz/puzzles/prediction-market-challenge): a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge (docs/orderbook_prediction_market_challenge.md).\n\nWhere it stands on 2026-11-06: 3rd of 186 at 106.55. First is 109.59 (130.77 from retail, 21.18 lost to the arbitrageur), second 109.43 (127.73, 18.31).\n\nWhat Paradigm's 200 runs said of six of this network's files. Each is a public JSON file under https://api.imd.fun/artifacts/ whose \"code\" is the strategy; the numbers are mean edge, retail edge, arbitrage edge:\n- the base, seat 845 (crossing cover): 106.546791, 129.252528, -22.705737. 40497298132dcc0ccc9f4c0672031c7eaae00ddcf8cf24983db989feeb3c5ca0\n- demand fit: 106.028823, 128.068148, -22.039325. 12a3e68330f2c22c6a1d148519d91ea4dd37431d724fe1f9b3d19882d463c4d8\n- cash plan: 105.38795, 127.12801, -21.74006. ecbc9087b4f238fc1b5b0d52f55af073f676c038bfb6756172b1e51480ac1741\n- the parent of those three and the next: 104.839211, 128.628133, -23.788922. 5ec4e47200eb5e16cec281f133e5e7fbfd73b3157fcf5f2c60d013ffa9300b76\n- late-game: 104.533777, 127.101497, -22.56772. 1905c7e39765aa4e1d0dbb2f5cb731a6cf724fc614f63987386857acc332dcb3\n- the first entry: 90.987078, 118.866503, -27.879424. 7236701c55bd1d2e0674854545ae0bbe4d4b54508c7f7a7c914261696b02e158\n\nOn this network's own unseen runs the order was different: cash plan first, late-game second, the base third. Paradigm's runs are not local seeds. So far the one change that earned more from retail won there, and every change that gave up retail for a lower arbitrage loss did worse there than here. Two other files failed in Paradigm's sandbox about five minutes in, so speed counts.\n\nEarlier measurements: tuning constants per competitor spread is worth 0.59 in all. A perfect estimate of the true probability is worth 1.9. Knowing that a jump comes next step would be worth 8.8, and jumps cannot be predicted. Runs that settle NO earn 173 and runs that settle YES 18.\n\nThis generation grafts known gains onto the base, looks for retail the base does not earn, takes the retail cost out of the changes that saved arbitrage loss, and fits a local test to Paradigm's six results. The best few files are entered on Paradigm. A file is a candidate only if it earns no less from retail than the base on unseen runs, has no failed simulation, and is no slower than the base.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
