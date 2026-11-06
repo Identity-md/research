@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6b883a9c6453e9a94dc265a008e0127bda6656acdb4bcb543226e8aaa381b19c",
+  "artifacts": [
+    {
+      "bytes": 21415,
+      "hash": "732c2d1033f022b2af0cf1c39bc3377f0b40d900147ffa203c0a38c3e76b6c3f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "181f621f2656d15dc9d154f8eaebf13d7be03fefe07086fe664ef16d72430eb9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9ea940b94f2f7e923d0cc50e726f8c5042488978a11d09e479625ae4b2c59392",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "181f621f2656d15dc9d154f8eaebf13d7be03fefe07086fe664ef16d72430eb9",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c5a27b25fa718879a86e0e24e5a1fc5334fa167774e0c796908d5b4f7f89f65c",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "fa38dcf097c15a05f0dd2f8c7b7e0f55e1d3f7b845591befabb9e399b9bf0504",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d41eafd7-8c3c-4a30-8bb5-945cdc38ee66",
+  "objective": "Combine what other seats found into one better strategy block for each kind of market, to take this network from 3rd toward 1st on Paradigm's Prediction Market challenge. It stands at 107.58; first is 109.93.\n\nThe challenge: a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge\n\nThe base is a public JSON file whose \"code\" is the strategy: https://api.imd.fun/artifacts/41fa8829432f502a00c5302c0e2200b475c5c2e100a2a16b086aaab0ce62a395\nIt reads the rival market maker's spread at the first step as self.s, 1 to 4 ticks. Paradigm's 200 runs gave it 106.804593. Its parent, for checking a scorer: https://api.imd.fun/artifacts/40497298132dcc0ccc9f4c0672031c7eaae00ddcf8cf24983db989feeb3c5ca0\n\nTwo rounds of seats each changed the base only in runs of one spread. The network's operator entered the best file for each spread on Paradigm, so those four blocks are priced on its 200 runs:\n- Spread 1, +0.775951: a five times larger ask once ahead of the rival at tick 2 under 1 cent; front asks not cancelled. https://api.imd.fun/artifacts/08e3cde58c80ef5d44a5af6a896eeeef75abff9ff749e01d2ee329f1c68d2d60\n- Spread 2, +0.065331: one-cent stock target scaled by each run's flow. https://api.imd.fun/artifacts/90459c5fffa37760b92c6a3ee93523240927484a7c8fa36b5d12b55a37c08733\n- Spread 3, +0.172915: per-run retail rate and order size drive sizes and stock. https://api.imd.fun/artifacts/9acbf0cf247803e24c4e9e0ae987f830bc304be449b9981a837ed2d2ce7e62f2\n- Spread 4, +0.574129: per-run retail flow from own fills sizes asks and stock. https://api.imd.fun/artifacts/c80c33382f9c458ab6286dbc11fa761100a7e156dad7f3c12d74040b7c76578f\nA run has one spread, so gains in different spreads add exactly: the four together are worth 108.392919.\n\nGains in the same spread do not add. Other seats found more pieces for each spread, each a file of its own built on the base. Two pieces may do the same thing twice, or fight. This round turns the pieces for one spread into one block that beats the priced one.\n\nWhat Paradigm's runs taught. A gain on unseen runs is not a gain there: one file gained 0.95 a run on 2,035 unseen runs and lost 0.73 on Paradigm's. So each combined block is entered and priced before it is trusted.\n\nRules. Whatever a file adds must do nothing unless self.s is its spread, so runs of the other three spreads come out the same, run by run. A run's spread is fixed by its seed: sample_config(ChallengeConfig(), ParameterVariance(), seed=N).competitor.spread_ticks, in orderbook_pm_challenge/runner.py. Choose on the seeds of your spread among 20000 to 27999 and confirm on those among 80000 to 87999; earlier seats used 8000 to 15999 and 60000 to 67999, so leave those. Do not tune constants and do not make the strategy recognise particular seeds. Files are entered by the operator, by hand: do not look for a key.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
