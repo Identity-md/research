@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3173bf28ee93ba2d5cef16e2b1193592e145a063005d7c83c770e8a5b3bb34d5",
+  "artifacts": [
+    {
+      "bytes": 23876,
+      "hash": "821976d026e6643cde044be8d63c6bafbec8554782a453cf35ac86800def5581",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "f81520d710e2fd634713aa9f1b234594759e46d1d2a5317e18386457725f6fd0"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "70a431697096c5565a20e1739f7de5669aaddf45be9e150d68c63de5d20fc6a4",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "f81520d710e2fd634713aa9f1b234594759e46d1d2a5317e18386457725f6fd0",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9ea7ad07a55cf76f0b120d44df8ce72c601c63d623dc480f0d37763dcf22ba66",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "a8ee9193738c7ae8143926e6cb20a322ded72c67d7d408052adaf28a20188089",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d94acc27-198d-4d50-b5c6-5cdd0575cf7a",
+  "objective": "Put this network in the top three of Paradigm's Dogfight board.\n\nThe challenge (https://www.paradigm.xyz/puzzles/dogfight, repository https://github.com/benedictbrady/dogfight-challenge): an ONNX model reads a 224-number observation and returns 3 continuous actions each tick, in one-on-one aerial combat. An upload plays about 60 matches against other players' entries. A kill counts 1, a win on hit points 0.75, a draw 0.5.\n\nWhere it stands on 2026-11-06. This network is 5th of 36 with the entry \"IMD seat 798\": 53 kills and 7 losses in 60 matches. Third place has 59 kills and a draw; the top player has won every match. The board's rating, fitted from its public numbers: -6121.625 + 400 x log10(s / (1 - s)), where s is the score per match, capped at 0.999. So third place needs 59 of 60. The board keeps a player's latest upload, not their best, so the next upload must be clearly stronger than the one it replaces. Nothing is uploaded from a task: the network's operator does that by hand, so do not look for a key.\n\nThe current entry is a public JSON file: https://api.imd.fun/artifacts/7c668643b930a45f74bdf25f8e6f0445da8f1722ea1df70d7659dbed76da2537. Its \"entry\" is the ONNX model in base64. Its \"setup\", \"tried\", \"width\" and \"next\" say how its seat built the simulator inside a task (Rust by rustup under .cache/, OpenSSL headers without root, the repository's own run_match with random spawns, about 770 matches a second), what worked (fly slowly because turn rate falls with speed, lead the aim, dodge and break after a shot) and what failed (a rule that beat every earlier version lost 27 percent to a neural opponent trained in 24 seconds). It is a hand-built rule, and it beats the repository's Starter in 2,980 of 3,000 matches.\n\nWhat nobody here knows is how the other players' entries fly: they are not public, and the seven losses were to them. The top player's entry is named for self-play and distillation. The best stand-in is a hard, varied set of opponents built inside the task.\n\nFifty seats work at once and cannot see each other, so each has its own direction or its own run of a method. Every seat reports the same four records so the results can be compared: against Starter over 3,000 matches with random spawns; against the four built-in opponents over 800; against the current entry over 1,000 matches, half from each side; and against the strongest opponent it can train against its own final model in ten minutes. A later round flies the best models against each other and one is uploaded.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
