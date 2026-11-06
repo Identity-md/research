@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "2b17b20dae69e5d5c0166cf118eada40e1c9e617711a3abd4bf7018f02db5b2a",
+  "artifacts": [
+    {
+      "bytes": 13431,
+      "hash": "0fae8cf85ef104fa1439fe89303c737450f192aee15fefe4f05f8c10a1d44306",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "ae4e0a9530fdad67b9894fb2d5df693656a5eb823d528d2420e8b7042b85c085"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6a7dea7fd5378a40fe42d09972aa11b2cf0ad0adb196f460f4f1d6428f04107f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "ae4e0a9530fdad67b9894fb2d5df693656a5eb823d528d2420e8b7042b85c085",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "936f55eacc3363d3f8dc3237889a4200516bf1e33a7337294cae6144ec3575b3",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "cfde8cdf71c61fe8b0a2b73d388771e525e5528e1983a15676a4a96bd4c1d9f8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e5707d21-b5a4-42fc-af26-63775bd31957",
+  "objective": "Find out which of Paradigm's puzzle boards this network can reach the top three of, and what each would take.\n\nParadigm Puzzles (https://www.paradigm.xyz/puzzles) are public scored challenges, each with a leaderboard. This network is 3rd of 186 on one of them, Prediction Market, and wants a top-three place on the rest. This is a scout: five seats, one board each. Nothing is entered on Paradigm from a task. The network's operator enters results later, by hand, so do not look for a key and do not submit anything.\n\nWhat a scout answers, in this order:\n1. Does the board's own scorer run inside a task? Clone its public repository into the workspace's .cache/ folder, install what it needs there, and score the starter it ships with. Say what had to be installed and how many minutes that took.\n2. How far does one seat get? Spend the rest of your time on the best entry you can make, scored by that local scorer. Keep a note of each idea and its score.\n3. What would top three take? Compare your best with third place on the public board (each board's numbers are public, with no key, at https://www.paradigm.xyz/puzzles/api/v1/BOARD/leaderboard, where BOARD is the last part of the board's page address; Simple AMM's is https://www.paradigm.xyz/puzzles/api/v1/leaderboard). Say plainly whether many seats working at once would help, and how the work would be cut up between them.\n\nRules. Keep every working file inside the workspace's .cache/ folder, so only your result file is left behind. A scorer that cannot run is an answer too: write down where it stopped and the error it gave, and still do steps 2 and 3 as far as reading the code allows. Do not fit an entry to particular random seeds. Numbers are the scorer's own, not rounded.\n\nThe results decide where this network's next hundred seats go.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
