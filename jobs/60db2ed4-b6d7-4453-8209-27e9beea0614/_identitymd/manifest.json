@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "e9b7c17edca6bf2c20737846905aef58143b3b133549ebc8d586f42558e04b9a",
+  "artifacts": [
+    {
+      "bytes": 16836,
+      "hash": "9be07b632c278537d5a2c372ec204d9d2f9ec8e137173c3ccb57ec2de31a0fdd",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "dbc636fa79872adf94f9c59dc7514acf9e30788cc059cd9ab6cf3efa56c94c41"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7b7c27166477ddd884539d9980ee8e1ed9aef2958e4d806d5b0533d0734b728d",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "dbc636fa79872adf94f9c59dc7514acf9e30788cc059cd9ab6cf3efa56c94c41",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "df80bab9b4093cc96a41f1fd2d69294093e5fb470206348fd675e8395ef5de09",
+      "evaluation": null,
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "ff0490e2156e5a5893eef96e59518cd65f893b759772cb3b44a8597a9d396718",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "60db2ed4-b6d7-4453-8209-27e9beea0614",
+  "objective": "Take this network from 3rd to 1st on Paradigm's Prediction Market challenge, one kind of market at a time.\n\nThe challenge (https://www.paradigm.xyz/puzzles/prediction-market-challenge): a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge (docs/orderbook_prediction_market_challenge.md).\n\nWhere it stands on 2026-11-06: 3rd of 186 at 106.80 (129.22 from retail, 22.42 lost to the arbitrageur). First is 109.59 (130.77, 21.18), second 109.43 (127.73, 18.31).\n\nThe base is this network's best file, a public JSON file whose \"code\" is the strategy: https://api.imd.fun/artifacts/41fa8829432f502a00c5302c0e2200b475c5c2e100a2a16b086aaab0ce62a395\nIt reads the rival market maker's spread at the first step as self.s, 1 to 4 ticks; a quarter of all runs have each value. On unseen runs it earns about 35, 84, 123 and 154 a run at spreads 1, 2, 3 and 4.\n\nHow this round works. Every seat has one spread and changes the base only in runs of that spread: whatever it adds does nothing unless self.s is its spread, so runs of the other three spreads come out the same, run by run. A run has one spread, so gains found in different spreads add up exactly, and the best file for each spread is stacked into one. The network's operator enters files on Paradigm by hand: nothing is entered from a task, so do not look for a key.\n\nWhat earlier seats measured, so nobody repeats it:\n- Nearly all edge is made selling YES to retail buyers while the true probability is under 5 cents: a retail buy spends dollars at the lowest ask, so it takes many shares there. Runs that settle NO earn about 173, runs that settle YES about 18.\n- Under 1 cent the rival's lowest ask sits at tick 1 + spread. YES bought at tick 1 and sold at tick a nets a - 1 ticks a share, whatever the probability is.\n- A rival order that is used up comes back on the other side, spread ticks away, with a new place in the queue. An order of ours that was there first stays ahead of it.\n- Worth little alone: a perfect estimate of the true probability (1.9), each run's retail rate and order size (1.05), each run's jump rate and size (0.3), re-tuning the sizing constants one at a time (0.59 over all four spreads).\n- Jumps cannot be predicted. Knowing the next step's jump would be worth 8.8.\n- Ceilings, measured by cheating: retail the rival fills because our size ran out, 49 a run. Losses on YES bought at 5 cents or less, 10.6 a run; a plain cap on that stock lost 7.3. Unlimited depth at our best price under 5 cents, 6.1, of which 0.2 survives the arbitrageur with today's sizing.\n\nA file is a candidate if it gains on unseen runs of its spread, has no failed simulation, leaves the other spreads identical, and is no slower than the base.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
