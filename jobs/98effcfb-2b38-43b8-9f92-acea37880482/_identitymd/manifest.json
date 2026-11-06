@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0ea5499a1023752a6a028e7a445a8acfaf30f39fdf8661e1917698fb2bf12f6b",
+  "artifacts": [
+    {
+      "bytes": 23949,
+      "hash": "e4273d4a3ec299290769056a905929037cf6827d403a4b30515ff619b6d0fc47",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "a14d07a320f3cb28a6587bc23b1c8a74868726dff8e15f56720194ee64378aea"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9a29c101a23c14cc1a27a875f2c1b5eceaf7ebad46ca78d581e333462a34af88",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "a14d07a320f3cb28a6587bc23b1c8a74868726dff8e15f56720194ee64378aea",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6007d5038419a72d22022c29c30899f014f9b11274e3e70c4e3f2ffec2e96769",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "7d494ebf820f1b4d791a50f5d6fda11de4f51b677d9f76746a52ac215c2a3943",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "98effcfb-2b38-43b8-9f92-acea37880482",
+  "objective": "Cut what this network's strategy loses to the arbitrageur, to take it from 3rd to 1st on Paradigm's Prediction Market board.\n\nThe challenge: a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator: https://github.com/danrobinson/prediction-market-challenge\n\nWhere the gap is. Paradigm scores every entry on the same 200 runs and publishes what each earns from retail and loses to the arbitrageur:\n- First, 109.93: 128.26 from retail, 18.34 lost.\n- Second, 109.59: 130.77 and 21.18.\n- This network, 108.47: 130.37 and 21.90.\nSo this network out-earns the leader on retail and loses 3.56 a run more to the arbitrageur. Two clues: its mean final wealth is 1,036 against the leader's 1,074, which suggests more YES left to expire; and the best of the 200 runs, a spread-4 run, pays the leader about 1,440 and this network 1,362.\n\nOne step (engine.py): the rival's used-up lots return, the strategy quotes, the probability moves, the arbitrageur takes in full every bid above it and every ask below it, then retail trades. Each fill is scored against the probability after the move; nothing else is scored. A map of an older file of this network: of 27.7 lost a run, 14.6 fell on the 3.8 steps a run that hold a jump, and 11.0 on bids the arbitrageur filled below 5 cents, its cover for low asks.\n\nThe start file is this network's best entry, the 108.47: https://api.imd.fun/artifacts/151e0b1b16f90a1384b823bc528d6d1407f7b4bbfcc7966c12119fe483bfd326\nIt reads the rival's spread at the first step as self.s, 1 to 4 ticks, and holds a block of changes for each spread, each acting only when self.s is that spread. Its blocks: 1, a larger tick-2 ask when ahead under 1 cent; 2, a cash reserve and a shorter stock horizon; 3, a front ask held while 20 dollars are ahead; 4, sizes from each run's own flow. Every seat has one spread and changes the start file only in runs of that spread. Gains in different spreads add exactly, and a file that gains is entered as its seat wrote it. An earlier file, for checking a scorer: https://api.imd.fun/artifacts/40497298132dcc0ccc9f4c0672031c7eaae00ddcf8cf24983db989feeb3c5ca0\n\nWhat Paradigm's runs taught. A gain on unseen runs is not a gain there: one file gained 0.95 a run of its spread on 2,035 unseen runs and lost about 2.9 a run on Paradigm's, all of it to the arbitrageur. Entries are few, so only a file with a broad gain is entered: prefer a change that helps most runs a little to one that lives on a few.\n\nRules. Whatever you change must do nothing unless self.s is your spread. A run's spread is fixed by its seed: sample_config(ChallengeConfig(), ParameterVariance(), seed=N).competitor.spread_ticks, in orderbook_pm_challenge/runner.py. Choose on the seeds of your spread among 30000 to 37999 and confirm on those among 90000 to 97999. Do not tune constants or make the strategy recognise particular seeds. The operator enters files by hand: do not look for a key.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
