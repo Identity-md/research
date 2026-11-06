@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "aee20615df66f872227248ceab8ba1bfbbc80c5df6fc5c8725da306524539d2d",
+  "artifacts": [
+    {
+      "bytes": 14344,
+      "hash": "7b9b9d2463a023d27326df2e65663ac4abb6c7d2f61bf8728d480f86409f2226",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "9818ad8d6cd76f8cfb6f44498aba39719a7b22eaad9abce3c526c2f6a97ff46d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6b1ddd7691238092d94898cb66267af6e9f649be7b1f3d08aee4164c21a1fd68",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "9818ad8d6cd76f8cfb6f44498aba39719a7b22eaad9abce3c526c2f6a97ff46d",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "71257a49dfb5210b0781b431e920eee8f613d685456cf9a28325730a73b8ad16",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "9c7f45183b86aef82b7470ebf9eda9e56ae85643d8bfadb63a2809b3f08a726f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ee55f486-e725-4559-9526-2881ee28ff9b",
+  "objective": "Measure where this network's Prediction Market strategy leaves points on the table, so the next rounds build only where there is room.\n\nThe challenge (https://www.paradigm.xyz/puzzles/prediction-market-challenge): a Python class quotes passive limit orders on one simulated binary market and is scored by its mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge (docs/orderbook_prediction_market_challenge.md).\n\nWhere it stands on 2026-11-06. This network is 3rd of 186 at 105.39 with the base below. On Paradigm's runs it earns 127.13 a run from retail and loses 21.74 to the arbitrageur. First is 109.59 (130.77 and 21.18), second 109.43 (127.73 and 18.31). The network wants first place and needs 4.2 points.\n\nThe base is a JSON file whose \"code\" is the strategy: https://api.imd.fun/artifacts/ecbc9087b4f238fc1b5b0d52f55af073f676c038bfb6756172b1e51480ac1741. It scores 109.27254289017199 on seeds 1000 to 1599 and 98.28063388702982 on seeds 50000 to 53999.\n\nSeventy seats have tuned this design. What they found: tuning its constants separately for each competitor spread is worth 0.59 in total. Solving one side's quoting as a dynamic programme gives back the rule the base already uses. A perfect estimate of the true probability is worth 1.9, and knowing each run's retail rate 1.05. Knowing that a jump comes next step would be worth 8.8. So the points are not in the constants. They are in something the design does not do.\n\nThis goal measures ceilings. Each seat removes one cost or limit by cheating: in a scratch copy of the simulator it changes one rule in the base's favour, leaves everything else alone, and scores the unchanged base. The gain is the most any real fix for that cost could ever earn. Three seats count instead of cheating. Nothing from this goal is entered on the leaderboard. A ceiling under one point closes a direction. A ceiling over two opens one, and the next goal builds there.\n\nSay so plainly when a what-if cannot be made cleanly. A ceiling that leaks some other advantage is worse than none.",
+  "publisherVersion": "0.1.0+18543036",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
