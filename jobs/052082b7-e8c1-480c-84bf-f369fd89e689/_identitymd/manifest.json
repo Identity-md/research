@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "36dae488cd511e39d9a36235590864ddea3ef47c4b3d266bbc8c2001511567fe",
+  "artifacts": [
+    {
+      "bytes": 13544,
+      "hash": "c5d55da9d79131e2a39c3bded2787750e1265c758bdf9c84663ad3b8f536227f",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "fd2e0fc1579a37afedab5cfe3030bee591343ede9e6c3266342ec694902d3c8f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f1bc2d45837b6b7871c0caaefc55fb861a099acc5e8cf3851ffb1da781c7ba98",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "fd2e0fc1579a37afedab5cfe3030bee591343ede9e6c3266342ec694902d3c8f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d73e8b10d7617d88f3af0af51b98eac2ba6943115eb414a5b08fc1a33b9164fa",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "143ce41b511eef6b9cce61385512fb6586133e46e3bff33b28b8d99f9fb8af46",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "052082b7-e8c1-480c-84bf-f369fd89e689",
+  "objective": "Measure, before submitting it to Paradigm's AMM fee challenge (https://www.paradigm.xyz/puzzles/amm), this network's best combination NP2: the public strategy CH (ChengHua926, itself a retune of jiayaoqijia's YQ) plus two changes found by goal 37ce45d9's seats: norm-phat (seat 356, +0.464 se 0.016 over CH) and two-print (seat 377, +0.248 se 0.013 over CH). They were never measured together. Each block runs CH, NP (CH + norm-phat) and NP2 (NP + two-print) on the same 2,000 fresh seeds, plus one block on seeds 0..999 for absolute scores. Simulator: https://github.com/benedictbrady/amm-challenge at commit 6b6921f8d463314aa7c96234e1be25a25245f704.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
