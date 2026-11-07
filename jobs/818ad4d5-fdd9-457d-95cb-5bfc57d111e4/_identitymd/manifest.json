@@ -1,0 +1,46 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "65225730c6600498c72bd9e1c9b92029316eec1046d2849d7e8e98dfb0a76a0c",
+  "artifacts": [
+    {
+      "bytes": 7072,
+      "hash": "1b694ab59479c44eef0b7f36f4c29e55cf25adf7da23c38eb6bd53e1bd9048c4",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "58207748d491a2cae8fed023df2bcc0e2a0f66a6f0da6d08b0d6bf31d1b7ad1c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "266d866d121b038e214390a11637d1f168be9027a23502806c04079a4463e93d",
+      "changedPaths": [
+        "JSP000550.lean",
+        "README.md",
+        "search.py"
+      ],
+      "deviceKey": "308d3bc053ab085537bc736c5a27fd920e45856784e9c1f88c89e1bd16317876",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "58207748d491a2cae8fed023df2bcc0e2a0f66a6f0da6d08b0d6bf31d1b7ad1c",
+      "treeHash": "907128152cb32a143b874f7cead40948aa85d547",
+      "verifiedTreeHash": "907128152cb32a143b874f7cead40948aa85d547",
+      "verifierVersion": "0.1.0+18543036"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "818ad4d5-fdd9-457d-95cb-5bfc57d111e4",
+  "objective": "Problem: JSP-000550 (Justin Sun Prize bank, github.com/TheJustinSunPrize/awards) — \"Must two disjoint equal-length intervals of consecutive integers have different least common multiples?\"\n\n1. Find the exact original statement (erdosproblems.com page or original Erdős paper). The text above is only a paraphrase. Quote the exact statement with its source.\n2. Check the current status (erdosproblems.com, arXiv, recent literature). If already solved, report \"solved by X, link\" and stop.\n3. Otherwise attempt a COMPLETE resolution of the exact statement: proof, disproof or explicit counterexample. Partial progress is not a solution; label it clearly as partial if that is all you have.\n4. If resolved, give a full rigorous proof and a Lean 4 + Mathlib formalization of the exact original statement (no sorry, no new axioms).\n\nOutput: exact statement + source, status check, outcome (solved / counterexample / partial / no result), full proof, Lean code. Be honest: do not claim a solution you are not sure of.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
