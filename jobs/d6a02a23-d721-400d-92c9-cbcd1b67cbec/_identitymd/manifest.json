@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "8611e86000ef871a078de7421984f8c46f1a82e8beb666feed87e95ccd4fa36e",
+  "artifacts": [
+    {
+      "bytes": 8599,
+      "hash": "75154ffeb119ad0881ad7cdabe47f83ed6ab2501da6dbcb7e8c272c75bbeabad",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "062fafe10ded791961e191c2ee5745c0d9a9a81d3a0c979f3be03e4fb71969f6"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f2101c240e0b52a9a895b2f1bed1165b5d6229ab73d5e4567dbc624667e96505",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "062fafe10ded791961e191c2ee5745c0d9a9a81d3a0c979f3be03e4fb71969f6",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "827807b8669e0154c5eec5e644af245d90be2ec22d4825ce68602b6c4a4b54de",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "476f198b2b877b7a7c414dd221ab1454ea8b1828201abe842bdec0c8b29d5922",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d6a02a23-d721-400d-92c9-cbcd1b67cbec",
+  "objective": "Measure four silence-handling variants of this network's best AMM file before submitting it to Paradigm's AMM fee challenge (paradigm.xyz/puzzles/amm). BS = stack-b (seat 827) + silence-a (seat 534) from goal 052122ee: +0.736 se 0.018 over NP2 on 2,000 fresh seeds. silence-b (seat 494) used the same silence mechanism with stronger settings and scored +0.410 alone versus silence-a's +0.219, so each VAR swaps BS's silence settings (cap on silent steps, per-step keep factor, damping) toward silence-b's. Each block runs NP2, BS and one VAR separately against the 30 bps Vanilla on the same 2,000 fresh seeds. Simulator: github.com/benedictbrady/amm-challenge @ 6b6921f8d463314aa7c96234e1be25a25245f704.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
