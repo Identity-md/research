@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "56cff58b0cf4b2409fb512f4e20ddd087fd18a02df432f611869322ac2316296",
+  "artifacts": [
+    {
+      "bytes": 2335,
+      "hash": "c134d86ff1243764b2a7636776f7d6f950144787534a87176ee94505412b5e26",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "17d255f83c84858d69f77494d12015d7123f740a5966c8da39edf41e43c16a1f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "e3fb42892fcc4c823e4a2679189ed63a07cd22703dafe00aba5c6d6322494c80",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "19e9c602f9934c6542c4832e1e06f69bcb7f1bffcc3ff7a7507f038d3bc3be35",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "17d255f83c84858d69f77494d12015d7123f740a5966c8da39edf41e43c16a1f",
+      "treeHash": "801b584d81506ca5c74463c010fbf7dc6a2a775d",
+      "verifiedTreeHash": "801b584d81506ca5c74463c010fbf7dc6a2a775d",
+      "verifierVersion": "0.1.0+18543036"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d2f6b891-e1aa-4b1f-b724-4324eab9df1b",
+  "objective": "TASK: attempt open problems from the Justin Sun Prize bank (github.com/TheJustinSunPrize/awards, problems/). Work on ONE problem per agent.\n\nProblems (JSP id — catalog paraphrase):\n1. JSP-000246 — Can separated integer intervals be chosen so that the reciprocals of all their integers sum to one?\n2. JSP-000294 — Can distinct-element sums from the union of two floored exponential sequences represent every sufficiently large integer?\n3. JSP-000340 — Are there infinitely many n such that m + ω(m) ≤ n for all m < n? Same with c·ω(m) for any fixed c > 0?\n4. JSP-000372 — Is lcm(1..p_{k+1}−1) always smaller than p_k · lcm(1..p_k)?\n5. JSP-000550 — Must two disjoint equal-length intervals of consecutive integers have different lcm?\n6. JSP-000617 — Can an integer set have uniformly bounded two-term representation counts while its sumset density is arbitrarily close to 1?\n7. JSP-000682 — Is there an integer n such that d(n+k) is bounded linearly in k for all k?\n8. JSP-000738 — Is there a uniform constant bound on the number of divisors of n in an interval of length n^{1/4} near √n?\n9. JSP-000773 — Which disjoint intervals of consecutive integers have products with exactly the same set of prime factors?\n10. JSP-000947 — Is there an integer n such that n − 2^k is prime for every permitted 2^k < n?\n11. JSP-000951 — Does adding the set {2^a·3^b} always strictly increase the Schnirelmann density of another integer set?\n12. JSP-001004 — Does every 2-coloring of ℕ contain an infinite set whose specified pairwise sums all have one color?\n\nSTEP 0 (mandatory, before any math):\n- Find the exact original statement: the problem's page on erdosproblems.com or the original Erdős paper. The catalog text is only a paraphrase.\n- Check current status on erdosproblems.com, arXiv, and the open PRs/issues of the repo. If it is solved, or someone has an active complete-solution claim, STOP and report \"taken\".\n\nSTEP 1: try to solve the original statement completely (proof, disproof, or counterexample). Partial progress is not eligible, so do not claim it as a solution.\n\nSTEP 2: if solved, write a Lean 4 + Mathlib formalization of the EXACT original statement, compiling with no sorry and no extra axioms (check with #print axioms).\n\nRULES:\n- Never claim a solution without a compiling Lean proof.\n- Do not post anything publicly, do not open PRs, do not submit claims.\n- Report back only: JSP id, exact statement + source link, status check result, outcome (solved / counterexample / no result), the proof sketch, and the Lean file. If no result, say so in one line.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
