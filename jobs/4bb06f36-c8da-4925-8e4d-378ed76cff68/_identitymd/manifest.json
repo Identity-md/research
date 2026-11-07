@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "1c07f41b45572bdbb2edd96f8520137cdc83f1c6d2848a2e336ecacd806d2753",
+  "artifacts": [
+    {
+      "bytes": 18549,
+      "hash": "33746cb5586bad6c9077179bdf14fa9e30130b3df475497d36116a543be23e59",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "9b5c0d622c02be0d4e9babd4da70ca411d8f15c4a8fd66d7f9da1c1aeea4e9f1"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1731fbfe0c4574fb6e59405e92715a96ebaf28ae80246f080a0c3368e4023bf8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "9b5c0d622c02be0d4e9babd4da70ca411d8f15c4a8fd66d7f9da1c1aeea4e9f1",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "4bb06f36-c8da-4925-8e4d-378ed76cff68",
+  "objective": "Write a sourced proposal to the IMD team: add the FLOP Network as an opt in provider in the IMD worker, so the IMD swarm becomes the first large, verifiable agent cohort on FLOP.\n\nFacts to build on, each to be verified and cited:\n1. FLOP (flop.finance, docs.flop.network) is a proof of inference chain where agents pay miners in FLOP for verified inference. Its devnet opened to the public on Nov 3 2026 (gateway api.flop.network/v1, faucet faucet.flop.network, explorer explorer.devnet.flop.network, RPC wss://rpc.devnet.flop.network, packages @flop-labs/sdk, @flop-labs/client, @flop-labs/cli and flop-sdk). Devnet earns nothing and can reset. The testnet date is due the week of Nov 9.\n2. On testnet an agent needs an Ed25519 did:key, draws test FLOP from a faucet capped per identity, and what it spends on inference becomes its claim at genesis, locked and unlocking 1 FLOP per 3 spent on compute.\n3. IMD workers already support Venice this way: the holder enters a key, and only jobs that ask for Venice use it. Workers auto update from GitHub releases. Each seat is bound to an ERC-8004 agent. Research and oracle work runs on any model, and oracle panels can seat up to 100 distinct seats.\n\nThe proposal must cover:\nA. The worker change: a FLOP credential command modeled on the Venice one, one DID per seat created on the holder's machine, a hard daily spend cap, and a signed public link between the seat (tokenId and ERC-8004 agentId) and its FLOP DID.\nB. Routing: jobs and oracle questions that ask for FLOP go only to seats with the credential. Start with oracle and research panels, and state what FLOP's current model list can and cannot handle today.\nC. Receipts: how each FLOP session or settlement id would show on explorer.imd.fun next to the job it served.\nD. Rollout: devnet rehearsal now, live on testnet day one, then mainnet, with what each phase gives holders.\nE. Rules: keys never leave the holder's machine or enter a job body or repo. One DID per seat. No faucet cycling and no synthetic traffic.\nF. A stopgap for technical holders before the worker change ships: the spec of a small companion CLI (init, link, faucet, run, status) that runs beside the worker without modifying it.\nG. Risks and open questions, including where FLOP's docs and the live devnet disagree (for example the HTLC chat route needing a registered appraisal profile).\n\nWrite it for the IMD team and seat holders: plain language, short sections, every protocol claim linked to its source, no token price talk.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
