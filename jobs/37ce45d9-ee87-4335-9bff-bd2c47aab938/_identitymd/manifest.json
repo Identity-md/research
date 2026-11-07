@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7f25f16a1f884b9f8e353e9761a29ff7096e6bcdea4cf056b1c60906e81078ef",
+  "artifacts": [
+    {
+      "bytes": 39526,
+      "hash": "02b4cfd9515c3f32a3d454f83c1fb6de0c3a5e52f07e956bdd721c4a38db57c4",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "26f9bc3c964cd0fa79a48c4e4f5eaba3930dd5eab46a1ed27068720e2a19e1d4"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "26f9bc3c964cd0fa79a48c4e4f5eaba3930dd5eab46a1ed27068720e2a19e1d4",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "30a6c1a419ef4f9c0b7b9345d1843aaf4945ad583f614ed8027cb22761e6f96c",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "aa7bf0b768fece1c602e9461db83ff72cd446a03eae964b4195a7aa93e5eda77",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "37ce45d9-ee87-4335-9bff-bd2c47aab938",
+  "objective": "Take this network to 1st on Paradigm's AMM fee challenge (https://www.paradigm.xyz/puzzles/amm). A Solidity contract `Strategy is AMMStrategyBase` returns a bid and an ask fee at start and after every trade on its constant-product AMM. It competes for retail flow against a fixed 30 bps normalizer AMM while arbitrageurs trade both. Score: average edge over 1000 simulations with randomized parameters. Rules, math and simulator: https://github.com/benedictbrady/amm-challenge at commit 6b6921f8d463314aa7c96234e1be25a25245f704 (Rust engine built with maturin, py-solc-x, pyrevm; `amm-match run strategy.sol --simulations N`, `amm-match validate`).\n\nBoard on 2026-11-07: 1st @0xMai 528.40, 2nd @Ponxter 528.32, 3rd 528.26, 4th 528.21, 5th 528.10, 75 pages of entries. The top five sit within 0.3 of each other, so the gains left are small and only paired measurement will see them. Public write-ups of this challenge may exist; read and cite them if you find them.\n\nHow to run the rounds:\n- Round 1 builds strong starting points from first principles, not small tweaks: fees from an inferred fair price (an arbitrage trade shows the price moved past the fee band), asymmetric bid and ask, inventory, volatility from trade timing and size, telling retail from arbitrage. Each item returns a complete .sol.\n- Measure every candidate paired against the current best on the same simulation seeds (seed the Rust runner if the CLI cannot), at least 2,000 simulations per comparison, reporting n, mean difference, its standard error and the 5 worst runs. One 1000-simulation score moves by more than the top-five gap.\n- Keep a scoreboard in your notes: the best file's SHA-256 and score, and every candidate's paired difference against it.\n- Promote only when a paired gain clears twice its standard error on fresh seeds that no tuning used.\n- Later rounds: about 40% deepen the best, 30% fresh mechanisms, 15% simplify, 15% measure and replicate. No two items in a round try the same idea.\n- Code must pass `amm-match validate`, use only the 32 slots, and stay gas-light (no loops over history).\n- Each item returns JSON: approach, tried, next, code (the full .sol), code_sha256, score {n, mean_edge}, paired {n, mean_diff, se, worst}, seconds_per_simulation.\n- Stop after two rounds in a row with no promotion, or at the last episode.\n\nWrite-up: the best Strategy.sol, ready to submit, its SHA-256, its paired gain over the starter and over the previous best with standard errors, and a ranked table of every promotion.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
