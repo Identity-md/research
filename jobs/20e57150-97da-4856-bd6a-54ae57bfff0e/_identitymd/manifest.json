@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "a920612b9fc4b52d0700a8c1fd89987bd832e05fdebd4fc3a761200c8e1caa67",
+  "artifacts": [
+    {
+      "bytes": 71159,
+      "hash": "18fe73183c52600f5685b42790b201a78895422a604603f5940bb03c13f09958",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "0aee3b313f467717a648a3a50cfa36d71bd1e89558088af22bf7e5867bfb3ee5"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "0aee3b313f467717a648a3a50cfa36d71bd1e89558088af22bf7e5867bfb3ee5",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4dd9389cdce7acfe1def41802f403a317a6fdae23a57a2ae38cb8697327fc3e2",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "7af7c58779305fd6254b2ac0c4033c2aa142d5b872dae11dee01138903371d1c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "20e57150-97da-4856-bd6a-54ae57bfff0e",
+  "objective": "Take this network from 3rd to 1st on Paradigm's Prediction Market challenge (https://www.paradigm.xyz/puzzles/prediction-market-challenge), in rounds that build on each other instead of one wave of separate attempts.\n\nA Python class quotes passive limit orders on one simulated binary market, scored by mean edge over 200 simulations. Simulator and rules: https://github.com/danrobinson/prediction-market-challenge at commit b244530ee2a6247b5f930830eeca9dd950da0e7e. Run it single-process without --sandbox: --workers is refused on some machines and --sandbox fails on Python 3.12.\n\nStanding on 2026-11-05: 3rd of 186 at 104.84 (retail 128.63, arbitrage -23.79). First 109.59 (130.77, -21.18), second 109.43 (127.73, -18.31). The gap is mostly arbitrage loss.\n\nStart from wave 3's best, combine-cash, +2.08 paired holdout gain (standard error 0.41) over the base: https://api.imd.fun/artifacts/ecbc9087b4f238fc1b5b0d52f55af073f676c038bfb6756172b1e51480ac1741 . Independent alternative, simplify: https://api.imd.fun/artifacts/5aa77c807417d8eb4743635be24fb9590f57e3e636dfb11050dd283e0a14ad6d . The base: https://api.imd.fun/artifacts/5ec4e47200eb5e16cec281f133e5e7fbfd73b3157fcf5f2c60d013ffa9300b76 . Wave 3's report, every result and what it learned: https://github.com/Identity-md/research/blob/main/jobs/c4cb1c7f-a37c-466a-9a72-14427ce0b354/files/artifacts/goal/writeup/report.md\n\nHow to run the rounds:\n- Keep a scoreboard in your notes: the current best's code hash, and each candidate's paired difference against it.\n- Every item measures against the current best on the same seeds, paired, with a standard error, and its tuning seeds never overlap its holdout. One 200-run mean has a standard error near 12, so only paired differences over thousands of seeds rank candidates.\n- Keep seeds 900000 to 903999 untouched for finalists, run only by your measure items. Promote a new best only when its paired gain there exceeds twice its standard error.\n- Split each round: about 40% combine and deepen what the scoreboard says works, 30% fresh mechanisms, 15% take away, 15% measure and replicate. Fresh items read none of the files above and look for one mechanism the best lacks. Wave 3 measured knowing the next step's probability as worth +24 and retail parameters +1: probability and jump estimation, and less arbitrage loss, are the levers.\n- No two items in a round try the same idea; name each item's idea in its brief.\n- Each item returns JSON: approach, tried, next, code, code_sha256, its tuning score, and its paired difference with standard error.\n- Stop after two rounds in a row with no promotion, or at the last episode.\n\nWrite-up: the best strategy's full code, ready to submit, its evidence on the finalist seeds, and a ranked table of every promotion.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
