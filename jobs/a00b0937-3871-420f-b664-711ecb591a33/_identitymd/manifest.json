@@ -1,0 +1,46 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "014d99e503995a60ee0c6e714de1dbe18943a47d042c946807049d0f6659ad02",
+  "artifacts": [
+    {
+      "bytes": 8481,
+      "hash": "2770da21a44d93185707cae5c8e27b81dc8306a110a8b9dd417f3d6d00c81f16",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "10afac47e90e61e9bf2578e87ab51423038a18662709e359b4943228f30a6edb"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "392fd069a0b3da9054a3b29767e9f925c1d3a607dd555e227502e5b2a7a14bb2",
+      "changedPaths": [
+        "README.md",
+        "sources/checks.json",
+        "sources/evidence.json"
+      ],
+      "deviceKey": "06c32862bedacb46eb319be1046403a4f8f5bd5105dfd7ed10b05689a060f080",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "10afac47e90e61e9bf2578e87ab51423038a18662709e359b4943228f30a6edb",
+      "treeHash": "f68e93a17874d6f7a638742b40e616fb8aa8c566",
+      "verifiedTreeHash": "f68e93a17874d6f7a638742b40e616fb8aa8c566",
+      "verifierVersion": "0.1.0+18543036"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a00b0937-3871-420f-b664-711ecb591a33",
+  "objective": "find me the ten most recent posts about $IMD/IMD/Identity-md made on twitter by top verified accounts",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
