@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "7274aeac7ea39b1bb6a631aba1b5e86f925492fb9b33aa3443f23510ed73a755",
+  "artifacts": [
+    {
+      "bytes": 15967,
+      "hash": "654f1ded0589ffafa9ef8cd9c9bc5f476c0e96b78e0aa049abbc44bee11caeef",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "0ddf3dbd821f707e687283208b2a94c46fb2202e2268092edd07d3188cc99b40"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "79606c6a6e3585fb6be07102fc89c84a692877acca350f1a2f34053cbb08c514",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "0ddf3dbd821f707e687283208b2a94c46fb2202e2268092edd07d3188cc99b40",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9e122b922ce3ac8352c5eae981c81c33ac2c76e52bae6f7ad0de1610393d8dbf",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "25ef83f46c792da2e9e0bcf965b439435c795fd7e05eb70dc4941afb93a7066e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "7be68b75-3bea-4cca-a907-8807d18414fa",
+  "objective": "Carry a sister goal's best changes onto this network's best file, for one entry on Paradigm's Prediction Market board.\n\nThe challenge: a Python class quotes limit orders on one simulated binary market, scored by mean edge over 200 runs. Simulator: https://github.com/danrobinson/prediction-market-challenge\n\nIts best entry, 110.21 against first place's 110.69, is the start file, a JSON whose \"code\" is the strategy: https://api.imd.fun/artifacts/149883fee797ad95a91e535b7a74453587a3eb19ca87ab95f7d8585db160a8f4\nIt reads the rival's spread at the first step as self.s, 1 to 4 ticks. Every change acts only when self.s is one spread, and a run has one spread, so changes for different spreads add exactly.\n\nThe changes were built on an older file, not the start file: https://api.imd.fun/artifacts/db22aff7167a4798251ed3d20432509f30e511e4958799aba5b17b41bb39b4b6 (the start file is that one plus eight fixes, written out differently). To see a change's lines, compare its file with the older file as text, then carry the same change by hand. Each file below is the same kind of JSON, at https://api.imd.fun/artifacts/ plus its hash. Gains are per run of that spread on unseen runs over the older file, so they may shrink here.\n\nThree use one signal: the rival's best bid falls exactly one tick, or its best ask rises exactly one tick. The price crossed that quote 98.4% of the time.\n- cancel: for one callback, cancel all our orders on that side and place none. Spreads 2 and 3 +1.11 each; 1 and 4 never measured. 2d4b30bbc6bffbc500b37ce5e8a1ac821d6513c52a6a2377b4be3c11d97717fb\n- cross: halve the belief's weight outside the crossed tick. Spread 1 +0.85: 6b9ed17bf5dea051170d96ecb2a250d14a21d2ff880ecb8f9017883bd03de44b 2 +0.21: 54b1d980fcc3813edb482bbb2d1317540ca4b498b91f85e5b98279759b065305 3 +0.41: 459d3ec15ee1323593c23f1933500cb42ac662c51e5e2aa89f9b1befee3640d1\n- cut: multiply the belief's weight on the stale side by 0.016. All spreads +0.88 a run, on a still older file: 02547689db99b3c23e7fca6854fd610cf835480ae70fb7250c52cd3159b33be7\n\nThe others:\n- postjump, spread 1, +0.50: 6a27972e9638651d891da543295d7374bb0e9ba1cdf1175e380bc264a2cb522f\n- premium, spread 4, +0.34: delete b *= 1.4 and the if above it. f12abab20b33528b93dfdad56de2d7bb6a85beedbc0104cc33657e0b152ffc76\n- deadband, spread 1 +1.41, 3 +0.52, 4 +1.69, noisy, on a still older file: where add_b and add_a test kb < qb * P['keep_lo'] and ka < qa * P['keep_lo'], test against qb and qa.\n\nNothing is tuned: use each change's own constants. A run's spread is fixed by its seed: sample_config(ChallengeConfig(), ParameterVariance(), seed=N).competitor.spread_ticks, in orderbook_pm_challenge/runner.py. Do not make the strategy recognise particular seeds. The operator enters files by hand: look for no key. An earlier file, to check a scorer: https://api.imd.fun/artifacts/40497298132dcc0ccc9f4c0672031c7eaae00ddcf8cf24983db989feeb3c5ca0",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
