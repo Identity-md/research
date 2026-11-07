@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "4f379c383486d81a716d74d0f8d2ed1d9dd4fcf43a2ed3aa4f8e9ad6dce3d834",
+  "artifacts": [
+    {
+      "bytes": 63003,
+      "hash": "c872c7c993300e8031153a619fec059ce6fa504926abac1e1d9112a2c02809f4",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "c011b067eccd6b4d835129de49aa26505fd89d00133969c1ef5eaf233f5e2f89"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "83e7e92833e57c52ced3c5884258d590694b50076849a4a25ef9b9bdcc96a870",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "c011b067eccd6b4d835129de49aa26505fd89d00133969c1ef5eaf233f5e2f89",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5e7415761e1c951545e9f363e345d772c612a0fdfa7b40e6b6587f1fef170d08",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "70b1714d5f3ca5e0247b4bb91fbcdef20ef9a9f66c4985b8e93b42add9e5135b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "75dd8e1e-60c6-470e-a8a8-a6352c6fb9ea",
+  "objective": "Find out whether the retreat-cancel wrapper adds to this network's two best Prediction Market files, so we can submit the better one to Paradigm's board (https://www.paradigm.xyz/puzzles/prediction-market-challenge). We are 2nd at 110.21 (imd.fun swarm #1042), 1st is 110.69. #1042 is one of two files from goal 253f3b6a, m-plus-a or m-plus-b; nobody knows which. Retreat-cancel (a wrapper appended to a file) gained +0.37 (se 0.12, 1,000 fresh seeds, worst single run -57.8) over the older m-all file. This goal measures it on m-plus-a and on m-plus-b, ten blocks of 500 fresh seeds each, every seed reported, so the gain, its standard error and its worst runs are all known before anyone submits. Simulator: https://github.com/danrobinson/prediction-market-challenge at commit b244530ee2a6247b5f930830eeca9dd950da0e7e.",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
