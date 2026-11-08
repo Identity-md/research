@@ -1,0 +1,10 @@
+{"_item":"beacon-dep","key":"beacon-dep","answer":"100","rpc":"https://ethereum.publicnode.com"}
+{"_item":"usdc-burn","key":"usdc-burn","answer":"588","rpc":"https://ethereum-rpc.publicnode.com"}
+{"_item":"usdc-mint","key":"usdc-mint","answer":"1092","rpc":"https://ethereum-rpc.publicnode.com"}
+{"_item":"usdc-mint-sum","key":"usdc-mint-sum","answer":"39818447682674","rpc":"https://ethereum-rpc.publicnode.com"}
+{"_item":"v2-pairs","key":"v2-pairs","answer":"31","rpc":"https://ethereum-rpc.publicnode.com"}
+{"_item":"v4-init","key":"v4-init","answer":"94","rpc":"https://ethereum-rpc.publicnode.com"}
+{"_item":"weth-dep","key":"weth-dep","answer":"10974","rpc":"https://ethereum-rpc.publicnode.com"}
+{"_item":"weth-dep-sum","key":"weth-dep-sum","answer":"16113541637114718147661","rpc":"https://ethereum.publicnode.com"}
+{"_item":"weth-wd","key":"weth-wd","answer":"14110","rpc":"https://ethereum.publicnode.com"}
+{"_item":"weth-wd-sum","key":"weth-wd-sum","answer":"13712073409150491261489","rpc":"https://rpc.flashbots.net"}

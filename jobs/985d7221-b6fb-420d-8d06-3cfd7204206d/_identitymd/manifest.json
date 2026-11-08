@@ -1,0 +1,100 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "778757161a35b6de25ce6f46caabcd56c004e13525090fa5caa42ea58024fa2b",
+  "artifacts": [
+    {
+      "bytes": 48,
+      "hash": "24c80c58afdfbab284aa0a8364d6057a66ac98b59d093311a16b65a28ba5b461",
+      "mediaType": "application/json",
+      "name": "figures",
+      "path": "artifacts/goal/writeup/figures.json",
+      "publishedPath": "files/artifacts/goal/writeup/figures.json",
+      "submissionHash": "cbfb0a6779250dc0cafe711d6015d2bf45d9e39eeb9a0b8f6097b8677423f9d4"
+    },
+    {
+      "bytes": 23916,
+      "hash": "e4b04518ac6c855ce4b703fcba139d741db5f5d5736a3d1f27b1f93758db0543",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "cbfb0a6779250dc0cafe711d6015d2bf45d9e39eeb9a0b8f6097b8677423f9d4"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "cbfb0a6779250dc0cafe711d6015d2bf45d9e39eeb9a0b8f6097b8677423f9d4",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+6b1a2333"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1fa852531dbead0a7495c94abb396610c81588e915294b6eb60e97bb726c765b",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "18ffdbe8daf090846fdb60c8c9f0cb3f86afea24cd51e1c4892a9950474b032e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "derived": [
+    {
+      "bytes": 678,
+      "dataset": "check",
+      "hash": "962110a2020a32fe324242177cf3dc8521421371a873ae4eeeb33c8580bb65d5",
+      "kind": "dataset",
+      "mediaType": "application/json",
+      "name": "manifest",
+      "path": "datasets/check/manifest.json",
+      "publishedPath": "files/datasets/check/manifest.json"
+    },
+    {
+      "bytes": 661,
+      "dataset": "check",
+      "hash": "f1a466ac4bef2fa8aa35a9c12e06e78ec8417740a5ad385b89f6c4a2f3a6a23f",
+      "kind": "dataset",
+      "mediaType": "text/csv",
+      "name": "rows-csv",
+      "path": "datasets/check/rows.csv",
+      "publishedPath": "files/datasets/check/rows.csv"
+    },
+    {
+      "bytes": 1030,
+      "dataset": "check",
+      "hash": "f0330c3185562ed076ced64dffefbcc0e93b572771578d8affd4069b575c52ff",
+      "kind": "dataset",
+      "mediaType": "application/x-ndjson",
+      "name": "rows-jsonl",
+      "path": "datasets/check/rows.jsonl",
+      "publishedPath": "files/datasets/check/rows.jsonl"
+    }
+  ],
+  "derivedCid": "bafybeihbtfr5ufofswoo5klrzbm7rawccwrrrgowfbojlloclyyq2bcrqu",
+  "jobId": "985d7221-b6fb-420d-8d06-3cfd7204206d",
+  "objective": "Test the oracle asks: put ten questions to the IMD oracle, and check every attested answer against the goal's own count over the same blocks.\n\nEpisode 1, both at once:\n\n1. Ask all ten. Every ask: chainId 1, window {\"fromBlock\":26371056,\"toBlock\":26372855}, evidence \"chain\", panelSize 7, answerType \"uint256\", the key below. Write each question in full, naming the contract's address and the event's full signature, for example: \"How many Deposit(address indexed dst, uint256 wad) events did WETH9 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 emit in the window?\"\n- weth-dep: count of WETH9 Deposit(address indexed dst, uint256 wad)\n- weth-wd: count of WETH9 Withdrawal(address indexed src, uint256 wad)\n- weth-dep-sum: sum of wad, in wei, over WETH9 Deposit\n- weth-wd-sum: sum of wad, in wei, over WETH9 Withdrawal\n- usdc-mint: count of USDC Transfer(address indexed from, address indexed to, uint256 value) with from the zero address\n- usdc-mint-sum: sum of value, in base units, over those mint Transfers\n- usdc-burn: count of USDC Transfer with to the zero address\n- v4-init: count of PoolManager Initialize(bytes32 indexed id, address indexed currency0, address indexed currency1, uint24 fee, int24 tickSpacing, address hooks, uint160 sqrtPriceX96, int24 tick)\n- v2-pairs: count of V2 factory PairCreated(address indexed token0, address indexed token1, address pair, uint256)\n- beacon-dep: count of deposit contract DepositEvent(bytes pubkey, bytes withdrawal_credentials, bytes amount, bytes signature, bytes index)\nAddresses: WETH9 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2; USDC 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48; Uniswap v4 PoolManager 0x000000000004444c5dc75cB358380D2e3dE08A90; Uniswap V2 factory 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f; beacon deposit contract 0x00000000219ab540356cBB839Cbe05303d7705Fa; zero address 0x0000000000000000000000000000000000000000.\n\n2. Spawn one table batch named check, ten items, one per key: each computes its figure over blocks 26371056 to 26372855 inclusive from public Ethereum RPC data, with eth_getLogs in spans of at most 500 blocks, and writes one row: key, answer (a decimal), rpc (the endpoint it used). Key the table on key. Wake on check, or after 120 minutes.\n\nLater episodes: an answered ask wakes you with its answer. If an answer and its check row differ, spawn a one-item batch recheck-<key> that recomputes it on another public RPC. Otherwise decide nothing new while asks or batches still run. If an ask is refused, note why, and ask it once more only if the refusal names wording you can fix. Finish once all ten asks and every batch have settled.",
+  "publisherVersion": "0.1.0+6b1a2333",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}

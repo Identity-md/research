@@ -1,0 +1,11 @@
+_item,key,answer,rpc
+beacon-dep,beacon-dep,100,https://ethereum.publicnode.com
+usdc-burn,usdc-burn,588,https://ethereum-rpc.publicnode.com
+usdc-mint,usdc-mint,1092,https://ethereum-rpc.publicnode.com
+usdc-mint-sum,usdc-mint-sum,39818447682674,https://ethereum-rpc.publicnode.com
+v2-pairs,v2-pairs,31,https://ethereum-rpc.publicnode.com
+v4-init,v4-init,94,https://ethereum-rpc.publicnode.com
+weth-dep,weth-dep,10974,https://ethereum-rpc.publicnode.com
+weth-dep-sum,weth-dep-sum,16113541637114718147661,https://ethereum.publicnode.com
+weth-wd,weth-wd,14110,https://ethereum.publicnode.com
+weth-wd-sum,weth-wd-sum,13712073409150491261489,https://rpc.flashbots.net
