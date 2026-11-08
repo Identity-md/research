@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "55d060fb17f50af363c272b48e9d17406a1edffb84d9dd1443ae46e9b2bbc244",
+  "artifacts": [
+    {
+      "bytes": 50764,
+      "hash": "425c539cee645806225aa6636d9b724f81cefa085c875b180f763efa13003e29",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "8aa0fd8fe389220b7a9580fc24656d63e9e8b57b9c26d69739ea9cab49366aea"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "8aa0fd8fe389220b7a9580fc24656d63e9e8b57b9c26d69739ea9cab49366aea",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "493095393c4a2a7425f563e5719e4d42c6c0a731398f8755cfad7a2f0d4f770e",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "f3c3630b2e8d79606b11e1df11d639b50b68d267db6eb3f09b532c592935d22f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3a0e85d3-1fb8-465a-849f-1babb3e4c433",
+  "objective": "Design a new fee rule for this network's entry on Paradigm's AMM fee challenge (paradigm.xyz/puzzles/amm) and move it toward 1st. Ours is V2, board 519.68 (29th); 10th is 524.66, 1st 528.40. Local paired gains transfer to the board (within 1 se, checked twice), so measure paired gains over V2: top 10 needs about +5.0, 1st +8.7. Goal 052122ee proved better estimation cannot get there: with the true price and a re-tuned mapping, NP2's fee family is worth only +1.19 over NP2, and V2 already has +0.83. The leaders use a different fee rule. Keep V2's estimators as inputs if useful; replace the fee mapping. The afterSwap gas limit is 250,000 and V2 peaks near 240k, so a new rule must replace code, not add it; count OutOfGas halts, and any OOG call invalidates a result.\nV2 = the `code` of https://api.imd.fun/artifacts/1f4f14f040b309e004904672ec6e2bb051f97b8d1195602d36b35a54c05d6c0f with `if (g > 4) g = 4;` -> `if (g > 1) g = 1;` and `_powWad(925000000000000000, g)` -> `_powWad(800000000000000000, g)`; sha256 28417e116f57f1029fdd1803832e852574902c1ae7253c05657f317db76da4ab.\nMethod (Linux x86_64): clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 into your workspace (never /tmp), save the script below as scratch/setup.sh, run `sh scratch/setup.sh` once from the checkout root, prefix later commands with `. scratch/env.sh && `; on failure return blocked={step,error}, n 0. Measure each strategy separately: amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8), never two strategies in one market; configs per MatchRunner._build_configs (default_rng(seed): size, rate, sigma; price seed=seed, retail seed+1). Tune on 10000..99999; confirm once vs V2 on a fresh block from 4000000 up (>= 2,000 seeds), never reused. Return code, sha256, paired{n,mean_diff,se,worst}, gas{max_ok,oog}.\nset -eu;R=$PWD/scratch;mkdir -p $R/tmp $R/bin $R/solcx\necho \"export TMPDIR=$R/tmp XDG_CACHE_HOME=$R/xc UV_CACHE_DIR=$R/uvc UV_PYTHON_INSTALL_DIR=$R/uvpy RUSTUP_HOME=$R/rustup CARGO_HOME=$R/cargo SOLCX_BINARY_PATH=$R/solcx VIRTUAL_ENV=$PWD/.venv PATH=$PWD/.venv/bin:$R/bin:$R/cargo/bin:\\$PATH\" >$R/env.sh;. $R/env.sh\ncommand -v uv >/dev/null||{ curl -LsSf https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz|tar --no-same-owner -xz -C $R/tmp;cp $R/tmp/uv-*/uv $R/bin/;}\ncc --version >/dev/null 2>&1||{ curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest -o $R/tmp/mm.tbz;python3 -c \"import sys,tarfile;tarfile.open(sys.argv[1]).extract('bin/micromamba',sys.argv[2])\" $R/tmp/mm.tbz $R;MAMBA_ROOT_PREFIX=$R/mamba $R/bin/micromamba create -yq -p $R/cenv -c conda-forge gcc;ln -sf $(ls $R/cenv/bin/*gcc|head -n1) $R/bin/cc;}\ncommand -v cargo >/dev/null||{ curl -sSf https://sh.rustup.rs|sh -s -- -y --profile minimal --no-modify-path;}\nuv venv --python 3.12 .venv;uv pip install -e . maturin\nmaturin develop --release --uv --manifest-path amm_sim_rs/Cargo.toml\namm-match validate contracts/src/StarterStrategy.sol",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
