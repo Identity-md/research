@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6d76482f3af8bdbe9e676f2ab4341a53a720aca049b02aa25c324881e0d33654",
+  "artifacts": [
+    {
+      "bytes": 22599,
+      "hash": "13095eec3232efde6dbb64dbec6639168b3e0ec81ad6ae54b6a2fb7a2b328a46",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "006acf33b4522d2873f02c8ca491f11d0d253923993fbde0a9cc5f44d36cb182"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5620e37a43b11630df0e09b40018f96ca1617659c0c9eb3dae9e4ad52b7db3bb",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "006acf33b4522d2873f02c8ca491f11d0d253923993fbde0a9cc5f44d36cb182",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "79953a27daf74ea7623fbfa7b8c81c6558c6c1d1a7d6d65c127c4dfaa3662a71",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "15c373b0376f6bb5248fbe2b6b56a01f61e87e7a749b205f6581ff45f07c56cc",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5ec6cdb2-743d-444e-9c73-a4c7cc6eee19",
+  "objective": "Fit next-mix (N, seat #1958: +0.170 se 0.007 over NP2 on 4,000 seeds) into this network's best AMM file V2 (board 519.68, 29th on paradigm.xyz/puzzles/amm) under the simulator's 250,000 afterSwap gas limit, and measure it. V2 = stack-b + silence (seats #827, #534, #494) and already peaks near 236k-243k gas, so every V2+N build in goal 052122ee ran out of gas (6.4M OOG calls over 2,000 sims; on OOG the engine keeps the old fees and reverts the hook's writes, so the result measured the failure, not N). Each item builds its own gas-trimmed V2+N (GN) and GN without the direction skew (GNK), proves zero OOG calls, and measures both paired against V2 on its own 2,000 fresh seeds.\nSETUP (every item): Clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 into your workspace (never /tmp); save this as scratch/setup.sh, run `sh scratch/setup.sh` once from the checkout root, prefix every later command with `. scratch/env.sh && `:\nset -eu;R=$PWD/scratch;mkdir -p $R/tmp $R/bin $R/solcx\necho \"export TMPDIR=$R/tmp XDG_CACHE_HOME=$R/xc UV_CACHE_DIR=$R/uvc UV_PYTHON_INSTALL_DIR=$R/uvpy RUSTUP_HOME=$R/rustup CARGO_HOME=$R/cargo SOLCX_BINARY_PATH=$R/solcx VIRTUAL_ENV=$PWD/.venv PATH=$PWD/.venv/bin:$R/bin:$R/cargo/bin:\\$PATH\" >$R/env.sh;. $R/env.sh\ncommand -v uv >/dev/null||{ curl -LsSf https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz|tar --no-same-owner -xz -C $R/tmp;cp $R/tmp/uv-*/uv $R/bin/;}\ncc --version >/dev/null 2>&1||{ curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest -o $R/tmp/mm.tbz;python3 -c \"import sys,tarfile;tarfile.open(sys.argv[1]).extract('bin/micromamba',sys.argv[2])\" $R/tmp/mm.tbz $R;MAMBA_ROOT_PREFIX=$R/mamba $R/bin/micromamba create -yq -p $R/cenv -c conda-forge gcc;ln -sf $(ls $R/cenv/bin/*gcc|head -n1) $R/bin/cc;}\ncommand -v cargo >/dev/null||{ curl -sSf https://sh.rustup.rs|sh -s -- -y --profile minimal --no-modify-path;}\nuv venv --python 3.12 .venv;uv pip install -e . maturin\nmaturin develop --release --uv --manifest-path amm_sim_rs/Cargo.toml\namm-match validate contracts/src/StarterStrategy.sol",
+  "publisherVersion": "0.1.0+0a4c1b6e",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
