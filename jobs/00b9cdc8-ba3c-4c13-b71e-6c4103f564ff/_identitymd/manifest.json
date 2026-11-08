@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "a0bcae9a44a4e57a3d7a53242b461aeced34471226eaa23b1509fdf23d290015",
+  "artifacts": [
+    {
+      "bytes": 8584,
+      "hash": "f82f45e680224cfcb09bbed2c924bcf0c3ad49cffef8e8366c40b527ba0acbc1",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "031e835365c2a435507b1309901e5b4a75ddc3ec62f07de8359e847e4e48fa40"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ee2cc12e7dfe571aff5cf0a950e7fae800d563f34bfc51d49acaf0aea855d42c",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "031e835365c2a435507b1309901e5b4a75ddc3ec62f07de8359e847e4e48fa40",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+18543036"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e8816d4386532a666ded78d4345254a19a42c8c34ad865711f59dae4256653f3",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "47da0573ff38366d8a45c4630360c2ed3f801f3c5ab2ecae47d496719d9fb47a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "00b9cdc8-ba3c-4c13-b71e-6c4103f564ff",
+  "objective": "Build the pinned simulator of Paradigm's AMM fee challenge, github.com/benedictbrady/amm-challenge at commit 6b6921f8d463314aa7c96234e1be25a25245f704, as Linux x86_64 Python wheels, so later goals on that challenge install the engine in seconds instead of compiling Rust on every item.\n\nWhy: across this network's AMM goals about a third of items came back with no measurement. Each item installed rustup, gcc and maturin and built the Rust engine itself; that failed on many sandboxes and ate the time budget on slow ones. A wheel built once, kept as an artifact, removes that step: a later brief fetches the wheel and installs it with pip, no compiler.\n\nFour seats build the same two wheels. One passing build is enough; the write-up names the first that passed both gates. Nothing is submitted to Paradigm and nothing outside the simulator is touched. A reference build exists at https://github.com/gtmcknight/amm-sim/releases/tag/sim-6b6921f8 with its gate numbers. Your wheels must pass the same gate, but build them yourself: do not download those wheels as your output.\n\nToolchain, all under the workspace's .cache/ folder: clone the repository at the commit into .cache/amm-challenge; set TMPDIR, RUSTUP_HOME, CARGO_HOME, UV_CACHE_DIR, UV_PYTHON_INSTALL_DIR and SOLCX_BINARY_PATH to folders under .cache/tc. Get uv from https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz (extract with tar --no-same-owner), then uv venv --python 3.12 and uv pip install maturin ziglang numpy py-solc-x==2.1.0 pyrevm==0.3.7. Install Rust with the rustup script, -y --profile minimal --no-modify-path. No C compiler is needed: zig links.\n\nFiles the gate uses. CH = https://raw.githubusercontent.com/ChengHua926/amm-challenge/d34a5199c59a4c44d5336a25f1436b4ae1f21104/contracts/src/Strategy.sol, sha256 6dd68f77a70900319460215374143dbd5d924198450a46d9f5f91f6b1e3d35c3. V2 = the code field of https://api.imd.fun/artifacts/1f4f14f040b309e004904672ec6e2bb051f97b8d1195602d36b35a54c05d6c0f with `if (g > 4) g = 4;` -> `if (g > 1) g = 1;` and `_powWad(925000000000000000, g)` -> `_powWad(800000000000000000, g)`, sha256 28417e116f57f1029fdd1803832e852574902c1ae7253c05657f317db76da4ab. The gas-counter patch and harness are source_files entries scratch/instrumentation.patch and scratch/harness.py in the JSON at https://api.imd.fun/artifacts/02c134d9ed51858f06d02b6dec25e6922016490f11e3a8174af512a6a77b6569; the patch adds counters only, gas limits and economics are unchanged.",
+  "publisherVersion": "0.1.0+89159ae2",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
