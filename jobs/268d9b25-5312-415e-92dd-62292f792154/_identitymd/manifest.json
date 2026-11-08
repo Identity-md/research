@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "18e210bbecc3208c246cdc3cb6b795f84c92a4bb08f43c57fe50c9f1625aed6b",
+  "artifacts": [
+    {
+      "bytes": 13357,
+      "hash": "302b9e38904533eb39de5f63bf6ba84514d52603dd37cce2b9a49539d70aecbb",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "3bfebe0320fee4cbb456592e9145dcaf6ac1c39b3ad2368bdb1ea35eee1da942"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "74979c69cdd583ad20c6917c0fa3174b3dc2b585c33c8cbff95dcb22a0d66084",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "3bfebe0320fee4cbb456592e9145dcaf6ac1c39b3ad2368bdb1ea35eee1da942",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+89159ae2"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e8d1aeb6b1315bb1f73a4d5495c919933c2c6759ac08ca611f391c04551089e7",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f2470ea646caf8111ce60840a8dca3beeb47cd76c6d39f7434c9623fb7b6799f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "268d9b25-5312-415e-92dd-62292f792154",
+  "objective": "Make the AMM simulator wheels reproducible, so a wheel's sha256 can be checked against independent builds wherever it is hosted. Goal 00b9cdc8 built wheels of amm_sim_rs from github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 on four machines: all passed the gates, but no two were byte-identical (wheel B 727916 to 727933 bytes). Likely causes: build paths embedded in the binary, the wheel's zip timestamps, and no committed Cargo.lock. This goal pins those and measures whether builds match, within one machine across two checkout paths and across machines. Nothing is submitted anywhere; never download any wheel.\nToolchain, all under the workspace's .cache/ folder (TMPDIR, RUSTUP_HOME, CARGO_HOME, UV_CACHE_DIR, UV_PYTHON_INSTALL_DIR, SOLCX_BINARY_PATH, ZIG_GLOBAL_CACHE_DIR in .cache/tc): uv from https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz (another platform: its own uv archive), tar --no-same-owner; uv venv --python 3.12; uv pip install maturin==1.16.0 ziglang==0.17.1 numpy py-solc-x==2.1.0 pyrevm==0.3.7. Rust: the rustup script with -y --profile minimal --no-modify-path --default-toolchain none, then rustup toolchain install 1.99.1 --profile minimal, RUSTUP_TOOLCHAIN=1.99.1, rustup target add x86_64-unknown-linux-gnu.\nEvery build: SOURCE_DATE_EPOCH = the commit's time (git log -1 --format=%ct), CARGO_INCREMENTAL=0, RUSTFLAGS=\"--remap-path-prefix=<checkout>=/src --remap-path-prefix=<CARGO_HOME>=/cargo --remap-path-prefix=<RUSTUP_HOME>=/rustup\" with absolute paths, and maturin build --release --strip --locked --zig --target x86_64-unknown-linux-gnu --compatibility manylinux2014 --features pyo3/abi3-py310 --manifest-path amm_sim_rs/Cargo.toml --out <dir>. The commit has no Cargo.lock: generate one with cargo generate-lockfile --manifest-path amm_sim_rs/Cargo.toml and use that same file in every checkout. Wheel A = the commit unchanged. Wheel B = plus scratch/instrumentation.patch from the source_files of https://api.imd.fun/artifacts/02c134d9ed51858f06d02b6dec25e6922016490f11e3a8174af512a6a77b6569 (git apply) and version = \"0.1.0.post1\" in amm_sim_rs/pyproject.toml.\nFor comparison only: Taylor's reference release lists A 11fcc2748d430bc73c5acb107ca1fab9a6719b86bc2b0960c9cbcc374b6eba4e and B 6c6a439e3aff01fe014123559ec5c1b6414b515a74cbe0402a31ded19716bfce.",
+  "publisherVersion": "0.1.0+89159ae2",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
