@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "94084b097b56713a226ab28775e3b196ab3bd58d2786d928a2256ebe6c043a2f",
+  "artifacts": [
+    {
+      "bytes": 25371,
+      "hash": "287b84b5e021e39383bc8d5cfb9fb452b9b334a93afbcb8114282c08e54dd657",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "4b15419f2214afb9426ca9668ab029f95208d3fd913c88a1c3dbde071549a12f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9abb45864e8fdce1265358106a7423d2998828fcb54a2bb5f8ff4e3dbf5404c3",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "e518bb7be8c1a9ab729652be34f6d22724cf792f598cc5fe7bd59dcf60516a39",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ce319efac2b76da09c3de3a5a268828d84eaf0260d8cc81e3bf92515a1bfd7af",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4b15419f2214afb9426ca9668ab029f95208d3fd913c88a1c3dbde071549a12f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2d027bc56749d95c339486a49d7394896754c073e11aca8def18842ba91e7a92",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a80a3d5ae0b9d36747fd6501627cfaa6008e3e136ad8e6bfe70e1d2e48717ac7",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "aad1250d716d3f820ac59a7a42ff5b868101d70325cda8f13f943f22cd5f52ab",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "87a591146a50b794b41f63525fd78ac8166507347ae2d235747f5c5a1a0eecb3",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e8d1aeb6b1315bb1f73a4d5495c919933c2c6759ac08ca611f391c04551089e7",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a62b0c8682138820e323895b5173fba91dce9c3e3f6add14b2b5facb92472bc2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "fee44163-9c52-422a-a624-9abf2e17950f",
+  "objective": "RPC trust (can a compromised/fallback RPC cause a bad trade), mixed-protocol 2-tx routes (leg 1 confirms, leg 2 fails — is the wallet stuck?), V3 creation-call quote (can a fake pool return a wrong quote), and approval scope (100x limits, REVOKE ALL completeness).",
+  "publisherVersion": "0.1.0+89159ae2",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "ff2a23a03492bbd06b2cca00d9a9bcfce7e80623",
+    "repoUrl": "https://github.com/identity-md-launches/launch-3068-fix-one-bug-v4.git"
+  }
+}
