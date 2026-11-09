@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ffe5d482f75bda59c3284f5d37796df2e135b9258fc8133bf8ad6ca5bf04008f",
+  "artifacts": [
+    {
+      "bytes": 49568,
+      "hash": "4b273579ec26f370e8e1e80a6650bb7565b29e71db3f47fd6f957f7f15b4c500",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "2b32fd10ae18469bb464c5c19666615987ced89998c1ef974c7a1f7a4483432d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9df7d5d52e83c572b70087c7652483d3122e52c488658420d6495d446820a289",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "2b32fd10ae18469bb464c5c19666615987ced89998c1ef974c7a1f7a4483432d",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+c9de2ee5"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7143d892ed24d728dd5021de0b339cf83389060221596556cdc85213a7534c51",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "7f5b311c00ad1e2c14541515c0e3ec01fa7ec2a0ce7782c86a14fd1c73824d1b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "282fbc03-197f-467b-8c2b-d982758183e8",
+  "objective": "Find out whether a search over many parameters at once, on fast replicas, beats this network's best AMM file T on paradigm.xyz/puzzles/amm. T = RS2 plus a per-run toxicity anchor: +0.271 se 0.013 over RS2 (board 520.05, 27th) on 4,000 fresh seeds, 0 OutOfGas, afterSwap peak 226k of the 250,000 limit; the top 10 needs about +4.3 over T. Hand-made changes have given +0.1 to +0.3 each; the organizer reports that the leaders fit large policies (100+ constants, small neural nets). Goal e64e1149 built the tools: a numba replica of the market (CH mean within 1.1 of the real engine, three variants' paired deltas within 1 se, thousands of markets/s) and a numba port of RS2 whose fees equal the EVM's to 1e-9 bps. The replica only proposes; every result is decided on the real engine.\nSETUP: clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 into your workspace (never /tmp), save the script below as scratch/setup.sh, run `sh scratch/setup.sh` once from the checkout root, prefix later commands with `. scratch/env.sh && `; on failure return blocked={step,error}. Check once: CH (https://raw.githubusercontent.com/ChengHua926/amm-challenge/d34a5199c59a4c44d5336a25f1436b4ae1f21104/contracts/src/Strategy.sol) on seeds 0..999 gives mean edge 525.5258821780834.\nREAL ENGINE: each strategy alone against VanillaStrategy, amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8), never two strategies in one market; configs per MatchRunner._build_configs (default_rng(seed): size, rate, sigma; price seed=seed, retail seed+1); arb/retail split per the `harness_source` of https://api.imd.fun/artifacts/33f54e81f3372088e9eced52c0174f310ac348af98ef5727b73785c088679194. Gas from amm_sim_rs.gas_stats(): T has 0 OOG, so any candidate OOG call invalidates it, and its afterSwap peak must stay <= 245,000.\nNo single command may run longer than 8 minutes: run long work in segments that save and resume their state under scratch/.\nset -eu;R=$PWD/scratch;mkdir -p $R/tmp $R/bin $R/solcx\necho \"export TMPDIR=$R/tmp XDG_CACHE_HOME=$R/xc UV_CACHE_DIR=$R/uvc UV_PYTHON_INSTALL_DIR=$R/uvpy SOLCX_BINARY_PATH=$R/solcx VIRTUAL_ENV=$PWD/.venv PATH=$PWD/.venv/bin:$R/bin:\\$PATH\" >$R/env.sh;. $R/env.sh\ncommand -v uv >/dev/null||{ curl -LsSf https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz|tar --no-same-owner -xz -C $R/tmp;cp $R/tmp/uv-*/uv $R/bin/;}\nW=amm_sim_rs-0.1.0.post1-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl;curl -LsSf https://github.com/gtmcknight/amm-sim/releases/download/sim-6b6921f8/$W -o $R/$W\necho \"aedb68280aca34c110968f00148387c95885207913fb2cf19a1ab4c5cfd6887a  $R/$W\"|sha256sum -c -\nuv venv --python 3.12 .venv;uv pip install $R/$W numpy numba cma py-solc-x==2.1.0 pyrevm==0.3.7;uv pip install --no-deps -e .\npython -c \"import solcx;solcx.install_solc('0.8.24')\"\namm-match validate contracts/src/StarterStrategy.sol",
+  "publisherVersion": "0.1.0+c9de2ee5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
