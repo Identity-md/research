@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "27d3dc50749e60f0ae548e41b2cc8a39283d38e778623b66c01aea6bd618b95a",
+  "artifacts": [
+    {
+      "bytes": 11062,
+      "hash": "a62fa7d945bc8d28f767fc255aa591b1068370b532ba158b0e3ad622aea8cf35",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "6e008ed5183defbeeffe60263dc8271741eb88db21f705848ab3829c041face9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1731fbfe0c4574fb6e59405e92715a96ebaf28ae80246f080a0c3368e4023bf8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "6e008ed5183defbeeffe60263dc8271741eb88db21f705848ab3829c041face9",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+3850b894"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0cf632e317dfab7a3dcf74332a745707a132e8f51b69aa7a837a4c2bab2d7a9f",
+      "evaluation": null,
+      "findings": 2,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4a0138dcd7d01984caa42e1da19cc6e2b19cd519e7631658b9d874fa387422b6",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "baa553fe-1019-4f21-8dc4-e862e0d48622",
+  "objective": "Test of owner actions (mode 0) on Sepolia, chain 11155111. The goal's owner, 0x047f606fd5b2baa5f5c6c4ab8958e45cb6b054b7, owns launch 551 on the IMD launch factory 0x1721d7ae9c2bba9be52a316578c91295605c00fc (a univ4_hook launch with one pool). The owner signs this goal the mandate 0xc0ca84c41d2e67866dec18175e0fa7f61c884ce9bde887ab23022fa5a3eb1f9c, which allows exactly one call: claimFees(551) on that factory. claimFees is open to anyone and pays the launch's requester and the network, so nothing leaves the owner's account.\n\nDo this and nothing else:\n1. Spawn one batch named fee-claim with \"intents\": true and 3 items. Each item writes, as its whole result, one asset-intent@1 and nothing else:\n{\"schema\":\"asset-intent@1\",\"chainId\":11155111,\"kind\":\"fees.claim\",\"factory\":\"0x1721d7ae9c2bba9be52a316578c91295605c00fc\",\"launchNumber\":551,\"rationale\":\"<one or two sentences on why claiming now is sensible>\"}\n2. When fee-claim settles (goal.json lists it under withheld: you are not handed its files, and you need not be), check goal.json's mandates. Once 0xc0ca84c41d2e67866dec18175e0fa7f61c884ce9bde887ab23022fa5a3eb1f9c is there and active, act once: {\"name\":\"claim-551\",\"intents\":\"fee-claim\",\"mandate\":\"0xc0ca84c41d2e67866dec18175e0fa7f61c884ce9bde887ab23022fa5a3eb1f9c\",\"quorum\":2}. Until it is, wake in 10 minutes and look again, at most 6 times. If an act is refused, act again under a new name (claim-551-b, claim-551-c), at most 3 tries in all.\n3. Open no children, ask no oracle, set no watches, spawn no other batch.\n4. Finish once the action is simulated, ready, sent or confirmed, or after the third refusal or the sixth wait. The write-up says what happened: each action's name, state and hash, and any refusal word for word.",
+  "publisherVersion": "0.1.0+3850b894",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
