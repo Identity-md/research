@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0418072a69143fe1ec574e12d42530430f4d26ee75e386a2e364c862b3210486",
+  "artifacts": [
+    {
+      "bytes": 49835,
+      "hash": "7f5402e4ec703e6a3965272f917dd684d80223acdcffa60b6a2fc70254804fb5",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "54f77917e545f49578540f5a97a486c621d7ecec185287bc009ad72e9c8f1386"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "43eaeedfc1287bf117b41b839bcb80bcc54ead052d1dc533fd7d76422daeaedd",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "54f77917e545f49578540f5a97a486c621d7ecec185287bc009ad72e9c8f1386",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+68cd8f62"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e0f2f45a1b346346273ed3d0f0cdd44484475e2cfe54387a89507ffb78254d1f",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "bbfed56f8e5af408f3b62b3dc08015c30463fe44b9853752b8430cef4491b129",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "361fbb0e-7902-475b-bccf-67100e1c5fe6",
+  "objective": "Take this network from 8th to first on paradigm.xyz/puzzles/amm. It is at 524.94 with the Gaussian + qm contract of seat #1268, C0: https://api.imd.fun/artifacts/8a6e303b662e1a5ea9bb47f31acedd3988ef65b3ddb66d074517aa59ad41ca40. 5th is 528.10 (C0 + 3.16), 1st 528.42 (C0 + 3.48). This goal enters nothing.\nREAD FIRST: B/tell/README.md with B=https://raw.githubusercontent.com/gtmcknight/amm-sim/66604b3426d8e97a73e2c39940b9b4dece51cc73/research, and get both folders: curl -LsSf $B/tell/fetch.sh -o fetch.sh && sh fetch.sh $B test/scratch/amm. It shows the callback's own numbers tell the arbitrageur's trade from a retail one: what an arbitrage trade pays always sits on a grid a retail amount hits once in 500. The solved policy with that test scores +6.98 over HA on the replica: +3.21 se 0.02 over the policy C0 implements, level with 1st. None of it has run on the real engine. Plan from its \"For a goal\" and \"Gates\".\nTRACK A, the contract, most of the items. (1) Port tellref.is_arb to Solidity: the expected answer on every vector of vectors.json.gz, gas per call reported. (2) Put it in C0 as \"What changes in a contract\" says, never pinning on a hit alone: then the README's gates for a port (fees within 0.01 bps of tellpol.TellPolicy, afterSwap peak <= 245,000 gas, 0 OutOfGas, validate, size). C0 gives up about 0.24 to table compression and has 3,971 bytes free: win some back. (3) The candidate and C0, each alone against VanillaStrategy on the same fresh engine seeds from 14000000 up, never reused, 256 seeds an item, both arms in the item: paired{n,mean_diff,se,sum,sumsq,worst5} and gas_stats(). Carry the best to 4,096 seeds.\nTRACK P, the probe, two items in episode 1: prove the test on the unpatched engine as \"Proving it on the real engine\" says. Report arbitrage trades read and retail trades read as arbitrage over 8 runs.\nTRACK C, a few items a round, plain Python on the replica: what else the numbers give away, tables for a belief that knows its flags, a better price between pins (1.73 is left to the true price). One idea an item, blind through run.py, tuned on seeds from 60000, scored once on 10000..12047 against tell_qm.json. What wins 0.2 goes into A's next contract.\nSEATS: no item blocks on speed. An item runs the setup, and where a step fails it returns blocked={step,error} and nothing else. Vector, replica and Solidity work need python3 or forge alone. An item's own files go under test/scratch/.\nENGINE: amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8), configs per MatchRunner._build_configs. One script that loops over 64-seed blocks and saves each as it lands, never a command a block.\nSETUP for engine work: clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 into test/scratch/ac; from that checkout's root: mkdir -p scratch && curl -LsSf https://raw.githubusercontent.com/gtmcknight/amm-sim/main/research/setup.sh -o scratch/setup.sh && sh scratch/setup.sh; prefix later commands with `. scratch/env.sh && `.",
+  "publisherVersion": "0.1.0+68cd8f62",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
