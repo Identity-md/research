@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d8d00dcbf48da25ab85f34932992013dfe8e649a9266791e17d09bb3f3229754",
+  "artifacts": [
+    {
+      "bytes": 85930,
+      "hash": "c694cee34c7468209a8c06eeab7027cf145b04762797e560c5fa29a47bfeb9fe",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "6361abd080428d2f622d6a163a9eda6dae0202d1787ce768456de8014511e299"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "6361abd080428d2f622d6a163a9eda6dae0202d1787ce768456de8014511e299",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+3850b894"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "02a7451bfdfa1a37e0a513b1f07873cf4b57efc93ca97cf6121cb5ab17312bae",
+      "evaluation": null,
+      "findings": 5,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "1b33f56222716f9c4e52d1fe723bfa42c548d25f306f43e99131145e89af8238",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "54f18aba-ee4d-4ce6-b416-84ede3faf248",
+  "objective": "Port Taylor's solved AMM policy into a Solidity strategy for paradigm.xyz/puzzles/amm that beats our best file t03 on the real engine. Taylor (gtmcknight) solved the game by dynamic programming: github.com/gtmcknight/amm-sim at commit 4812a6382311624e1506aca131ca35c378f930d9, folder research/solved (README first). On Taylor's replica vs HA: Gaussian filter + plain tables (real.py, pol_mid.json) +2.83, qm tables +3.77, lattice + qm +4.26; t03 about +1.45. Port Gaussian + plain first.\nLIMITS: `contract Strategy is AMMStrategyBase` (amm-challenge 6b6921f8); deployed bytecode <= 24,576 bytes; afterSwap peak <= 245,000 gas, 0 OutOfGas on the real engine; the ~71,000 table values must be compressed.\nGATES: (P) before any change, Taylor's reference reproduces gates.py for the version ported; (Q) a Python reference with exactly the compressed tables you ship is scored paired against the full tables on Taylor's replica (choose on seeds 60000..61023, report 10000..12047); (F) the contract's fees equal that reference within 0.01 bps on 50x2,000 callbacks from replica runs.\nREPLICA work: Taylor's files under plain `python3 -I`, any machine, no setup. ENGINE and Solidity work: the Linux setup below; each strategy alone vs the 30 bps VanillaStrategy, amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8), configs per MatchRunner._build_configs; fresh seeds from 9500000 up, never reused; report paired{n,mean_diff,se,worst5} vs t03, and amm_sim_rs.gas_stats(). t03 = `code_zb64` of https://api.imd.fun/artifacts/2333ecf28d4356bd232b85c1e55842e94e1ada05e1cd067830b5625dfdbc5336 (sha256 cb6d9455...). No command over 8 minutes: segment long work, state under scratch/. Credit Taylor (gtmcknight) in the contract header.\nSETUP: clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 in your workspace (never /tmp), save the script below as scratch/setup.sh, run `sh scratch/setup.sh` once from the checkout root, prefix later commands with `. scratch/env.sh && `; on failure return blocked={step,error}.\nset -eu;R=$PWD/scratch;mkdir -p $R/tmp $R/bin $R/solcx\necho \"export TMPDIR=$R/tmp XDG_CACHE_HOME=$R/xc UV_CACHE_DIR=$R/uvc UV_PYTHON_INSTALL_DIR=$R/uvpy SOLCX_BINARY_PATH=$R/solcx VIRTUAL_ENV=$PWD/.venv PATH=$PWD/.venv/bin:$R/bin:\\$PATH\" >$R/env.sh;. $R/env.sh\ncommand -v uv >/dev/null||{ curl -LsSf https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz|tar --no-same-owner -xz -C $R/tmp;cp $R/tmp/uv-*/uv $R/bin/;}\nW=amm_sim_rs-0.1.0.post1-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl;curl -LsSf https://github.com/gtmcknight/amm-sim/releases/download/sim-6b6921f8/$W -o $R/$W\necho \"aedb68280aca34c110968f00148387c95885207913fb2cf19a1ab4c5cfd6887a  $R/$W\"|sha256sum -c -\nuv venv --python 3.12 .venv;uv pip install $R/$W numpy numba cma py-solc-x==2.1.0 pyrevm==0.3.7;uv pip install --no-deps -e .\npython -c \"import solcx;solcx.install_solc('0.8.24')\"\namm-match validate contracts/src/StarterStrategy.sol",
+  "publisherVersion": "0.1.0+659102ae",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
