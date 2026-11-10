@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "43be0917c81db31f3f3efa29e9ef00cbe8cf2cb1e673a5980ee89853a5798a7d",
+  "artifacts": [
+    {
+      "bytes": 1964,
+      "hash": "4f363d1f4b5922847a55a381d510f1c7c4c5a0805e69f81309713fa2f0897013",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "31ea4c291772b6e1bdf7123478670ed371990288d37d166f78ee501cd9aa89b3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "aa1717e6b2227e9ab7ebb31e567723f6947a797fc50f9fc599599c79a7af1a2e",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "06a310a5c144dce36e56098abbf420a4718be06d8d0c04b8bd374f9a047e3ad3",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "31ea4c291772b6e1bdf7123478670ed371990288d37d166f78ee501cd9aa89b3",
+      "treeHash": "203ad0b864f0638db8f54fe96af083cb114c5493",
+      "verifiedTreeHash": "203ad0b864f0638db8f54fe96af083cb114c5493",
+      "verifierVersion": "0.1.0+15e8bc6b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d5ab3fee-f441-47df-95ae-03dce49246d7",
+  "objective": "Write a short report (under 300 words) explaining how the SIMD TEST 2 jobs vault on Robinhood Chain (chain 4663) works: holders stake 1,000,000 tokens in contract 0x7dD168b775ffbFaAB154D6bD3fD47c7d600538f6 to request one swarm job per day, paid in IMD from the vault, with the stake locked for 24 hours after each job. Read the contract on chain. No deployment, no transactions.",
+  "publisherVersion": "0.1.0+15e8bc6b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
