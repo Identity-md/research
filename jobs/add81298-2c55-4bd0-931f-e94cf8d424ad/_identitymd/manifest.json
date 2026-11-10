@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0e1e7cbf71c7c72cccf1e1f642570493fa7df154056c3919aa0fa03df5bc53ed",
+  "artifacts": [
+    {
+      "bytes": 8227,
+      "hash": "8fbd0c21a42a4c379b1338186324a5a5827b697c08f83290a3e314e490c123f9",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "a40540b86edfe62ab8cecc33ee4968249a304e6f11dfd7e456ccb653c18823bc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "37eed9f56188ea8bc18cadb56eb376ad83d30a30750e8d54d0203251a3e3d14f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "a40540b86edfe62ab8cecc33ee4968249a304e6f11dfd7e456ccb653c18823bc",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+1dd97a72"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "322201e0794fc891777586b73f07e04824b9b1d77c49293c94454a70b29ac0d3",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "c85f6b0eb179fb323e8f8a5cbbd9fa2fe96f82cb965afa9ba28af5b27f16be9c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "add81298-2c55-4bd0-931f-e94cf8d424ad",
+  "objective": "Test of owner actions (mode 0) on Sepolia, chain 11155111. The goal's owner, 0x047f606fd5b2baa5f5c6c4ab8958e45cb6b054b7, owns launch 551 on the IMD launch factory 0x1721d7ae9c2bba9be52a316578c91295605c00fc (a univ4_hook launch with one pool). The owner signs this goal the mandate 0x1acc5602dcc5ae9485c7138f12516734b22247374ce53ca54ed4cbcbcac628a5, quorum 2, which allows exactly one call: claimFees(551) on that factory. claimFees is open to anyone and pays the launch's requester and the network, so nothing leaves the owner's account.\n\nDo this and nothing else:\n1. Spawn one batch named fee-claim with \"intents\": true, \"replicas\": {\"size\": 2} and exactly 1 item, so two independent machines each write the item. The item writes, as its whole result, one asset-intent@1 and nothing else:\n{\"schema\":\"asset-intent@1\",\"chainId\":11155111,\"kind\":\"fees.claim\",\"factory\":\"0x1721d7ae9c2bba9be52a316578c91295605c00fc\",\"launchNumber\":551,\"rationale\":\"<one or two sentences on why claiming now is sensible>\"}\n2. When fee-claim settles (goal.json lists it under withheld: you are not handed its files, and you need not be), check goal.json's mandates. Once 0x1acc5602dcc5ae9485c7138f12516734b22247374ce53ca54ed4cbcbcac628a5 is there and active, act once: {\"name\":\"claim-551\",\"intents\":\"fee-claim\",\"mandate\":\"0x1acc5602dcc5ae9485c7138f12516734b22247374ce53ca54ed4cbcbcac628a5\",\"quorum\":2}. Until it is, wake in 10 minutes and look again, at most 6 times.\n3. If the act is refused, do not retry blindly: if the refusal says an item's intent has too few counted holders, spawn fee-claim-2 the same way and act on it as claim-551-2, once. Any other refusal: write it up and finish.\n4. Open no children, ask no oracle, set no watches, spawn no other batch.\n5. Finish once an action is simulated, ready, sent or confirmed, or after the second refusal or the sixth wait. The write-up says what happened: each action's name, state and hash, and every refusal word for word.",
+  "publisherVersion": "0.1.0+1dd97a72",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
