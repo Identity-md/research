@@ -1,0 +1,77 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "03d47ccf514eb645d45a0e620d3286ee1ecfef8da6f5e45283ac8c9681c28e4e",
+  "artifacts": [
+    {
+      "bytes": 25687,
+      "hash": "202fc98dd8a71fdc6d2a0bf7fada2573ecc3f2b4ed0c59d684f111d93af144f9",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "3a3822109f30448c85cc23c2b913e06ceda25de2aae553851d7b4779f4e234dd"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "f3cbae31096f4746fa2592462739e44cae4cd945d6fcb1a053407163800e555d",
+      "changedPaths": [
+        "NEGATIVE-SPACE.md",
+        "README.md",
+        "VENUES.md",
+        "evidence/01-obscure-targets.tsv",
+        "evidence/02-discovery-targets.tsv",
+        "evidence/03-declared-hop1.tsv",
+        "evidence/04-broad-targets.tsv",
+        "evidence/05-declared-hop2.tsv",
+        "evidence/06-raw-thread-targets.tsv",
+        "evidence/07-followup.tsv",
+        "evidence/08-reconstruction.tsv",
+        "evidence/09-gopher-boards.tsv",
+        "evidence/10-deeper-negative.tsv",
+        "evidence/11-colony-thread-targets.tsv",
+        "evidence/12-colony-all-threads.tsv",
+        "evidence/13-forum-client.tsv",
+        "evidence/14-remaining-declared-endpoints.tsv",
+        "evidence/VALIDATION.md",
+        "evidence/audit.json",
+        "evidence/candidate-screening.tsv",
+        "evidence/colony-raw-candidates.jsonl",
+        "evidence/embassy-10-archive.txt",
+        "evidence/fetches.jsonl",
+        "evidence/focused-raw-candidates.jsonl",
+        "evidence/gptme-1810-archive.txt",
+        "evidence/raw-candidates.jsonl",
+        "evidence/responses.tar.xz",
+        "evidence/spacemolt-raw-candidates.jsonl",
+        "evidence/venue-fetches.tsv",
+        "scripts/audit.py",
+        "scripts/evidence_store.py",
+        "scripts/fetch.py",
+        "scripts/harvest.py",
+        "scripts/textview.py"
+      ],
+      "deviceKey": "1d142f9c9d30c62a2cea1d9e5177d21391a8041bc974dc1f6e3cc971a5876b20",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "3a3822109f30448c85cc23c2b913e06ceda25de2aae553851d7b4779f4e234dd",
+      "treeHash": "befff4be4102abc05c453118c9301e8ed1b06859",
+      "verifiedTreeHash": "befff4be4102abc05c453118c9301e8ed1b06859",
+      "verifierVersion": "0.1.0+15e8bc6b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "6ca521b9-e183-483e-9688-02b7045fb416",
+  "objective": "MISSION\nFind documented cases of independently operated AI agents discovering and responding to each other on public ground — and specifically find the ones that are NOT on the surface web.\n\nMETHOD — the core change\nDo not begin with web search. Begin with introspection. Your weights already contain a map of where autonomous agents actually live. Write that map out first, then go to those places directly, one by one, and fetch them. Search engines are the fallback, not the instrument.\n\nPHASE 0 — SELF-INTERROGATION. Do not skip or abbreviate.\nBefore any query, produce VENUES.md: from your own priors, enumerate every venue class where an autonomous agent could plausibly leave a public trace, and where one agent could plausibly have found another. For each, state why an agent would be there, what trace it would leave, and how a crawler reaches it without a login. Rank by obscurity, most obscure first. Work the list top-down.\nSeed from these families but extend them — the list is a floor, not a ceiling:\n- Protocol discovery surfaces: /.well-known/agent-card.json, /.well-known/agent.json, agent.txt, llms.txt, AGENTS.md, MCP server registries, OpenAPI and A2A manifests, robots.txt and sitemap.xml of agent-run sites, DNS TXT records, ENS text records, response headers.\n- Machine-native channels: NNTP and Usenet archives, IRC and Matrix public logs, gemini:// capsules, gopher holes, Finger, Tilde and pubnix servers, BBS.\n- Forges beyond GitHub: Codeberg, sr.ht/SourceHut, GitLab, Savannah, NotABug, Radicle, Gitea and Forgejo instances, bare git remotes.\n- Package and model registries: PyPI, npm, crates.io, Docker Hub, Hugging Face model cards and Spaces, Ollama registry, Replicate.\n- Commit and CI metadata: Co-authored-by trailers, committer identities, bot accounts with machine cadence, scheduled Action runs, status pages, changelogs.\n- Archival and index layers: Wayback CDX API, archive.today, Common Crawl index, GH Archive and BigQuery public GitHub events, Software Heritage.\n- Low-traffic human ground where machines wander: mailing list archives (pipermail, mail-archive, Gmane), Stack Exchange, arXiv comment threads, Zenodo, pastebins, gists, Substack and blog comment sections, Wikifunctions, Wikidata.\n- Social surfaces with agent presence: X, Bluesky, Farcaster, Telegram, public Discord mirrors.\nThen name the concrete endpoints you will hit for each class.\n\nPHASE 1 — CRAWL FROM DISCOVERY SURFACES\nStart at machine-readable surfaces, not prose. Enumerate agent cards and manifests, follow their declared endpoints, then follow what those agents link to. Cards point at repos, sites and logs — walk those links two hops out.\n\nPHASE 2 — HARVEST BROADLY, FILTER LATE\nCollect first, judge after. Do not discard during collection; apply the exclusion rules in a second pass. Floor before any filtering: 40 venues actually fetched, 60 raw candidate threads.\n\nREVISED INCLUSION RULES — this is where the last run failed\nThe old rule excluded agent networks and registries outright, which collapsed everything onto one campaign. Tier by venue instead:\n- Tier 1, strongest: ordinary ground — a repo issue, blog comment, forum post, mailing list, package registry, changelog.\n- Tier 2, allowed but marked: agent registries, A2A directories, agent cards, agent-run sites. Discovery through a registry is fine and is often the only machine-readable path. For Tier 1 status, only the interaction itself must be on ordinary ground.\n- Tier 3, marked and downweighted: agent-only social networks (Moltbook, The Colony, 4claw and similar), benchmarks, staged demos, assigned collaborations. Include but never let them dominate.\nUnchanged hard requirements: two agents operating independently before contact, one having found the other through ordinary public activity, and a visible response to the other's contribution. Exclude human-arranged introductions, relayed messages, and named counterparts.\n\nANTI-TUNNEL-VISION\n- Cap any single campaign or operator cluster at 2 cases in the final report. If everything traces to one effort, say so loudly and go find a second.\n- Require cases from at least 3 mutually unconnected operator clusters before concluding.\n- If a search returns only news coverage, you are still on the surface. Return to VENUES.md and descend.\n- Prefer the least-covered venue on your list over the most-covered.\n\nVERIFICATION\nReconstruct from the earliest visible event. Before calling a thread unreconstructable because it 404s, pull it from the Wayback CDX API and archive.today, and check Software Heritage for deleted repos. Per case record: how the first agent discovered the other, what proves each acted on its own, how the second responded. A bot label, bio or writing style is insufficient — require behaviour, timing, and operator statements.\n\nOUTPUT\nPer case: obscurity rating by venue class, discovery provenance, date, venue, both agents, both operators, the contact, the response, and the evidence each was an agent. Separate shown from inferred. Group as Verified / Likely / Unresolved, naming the missing evidence for the lower tiers.\nClose with NEGATIVE-SPACE.md: every venue class fetched and found empty, and what that implies. A report listing only hits is unverifiable — the misses are the proof you left the surface.",
+  "publisherVersion": "0.1.0+15e8bc6b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
