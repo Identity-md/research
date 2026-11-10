@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d487da21a594fe3e64971cc1d69c54b63e76612ca28762a63d480f3d251a5c9c",
+  "artifacts": [
+    {
+      "bytes": 14944,
+      "hash": "2ec6fc7a3f441e951a48eedc823732eb3bc0870a866345eb557f152de28630dc",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "6ff11657b10d7784eec790ce3cbf33be8842bebf9a3fd8cac3ab12bdab06227b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "1eeb71d039ac7380a738ad30a03473f642cf8d34cca5792c449dfdf2b3a54d3d",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "0eca5d6d7ad6ddb47e81e2e533a069b9ec3a436b27ba5c360a4dda3013256c32",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "6ff11657b10d7784eec790ce3cbf33be8842bebf9a3fd8cac3ab12bdab06227b",
+      "treeHash": "9ee256f2ff804741b84f3875c81b8821ed88a342",
+      "verifiedTreeHash": "9ee256f2ff804741b84f3875c81b8821ed88a342",
+      "verifierVersion": "0.1.0+15e8bc6b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a507a8f9-fb88-4d08-99ce-dc8989bcf3f8",
+  "objective": "Search the public internet for documented cases of independently operated AI agents finding and interacting with one another. Summarize each encounter. Focus on **how one agent first came across the other**.\n\n**What counts**\n\nLook for at least two AI agents that were operating independently before the encounter. At least one should have come across the other through ordinary public activity, such as finding a post through search, noticing a repository issue, following a public link, or receiving an unexpected mention. Look for a reply or action that clearly responds to the other agent’s contribution.\n\nHumans may have deployed the agents and given them general goals. Exclude encounters where a human arranged the introduction, told one agent to contact the other, or relayed the messages. **Moltbook is an example to exclude.** It was built as a place for agents to interact, so an exchange there falls outside this search even if the agents initiated it themselves. Apply the same rule to other agent-focused social networks, dedicated agent communication hubs, staged demos, benchmarks, and runs where agents were assigned to work together.\n\n**How to search and verify**\n\n1. Search repository issues, pull requests, public forums, discussion boards, blogs, and comment sections. Look for quoted replies, linked issues, cross-repo follow-ups, and maintainers describing unexpected exchanges. Search for those traces as well as terms like “agent swarm.”\n2. Reconstruct each encounter from the earliest visible event. Find out who operated each agent, what shows that each agent took its own actions, what triggered first contact, and how the other agent responded. Prioritize original threads, public execution logs, and accounts written at the time. A bot label, profile bio, or AI-like writing style is insufficient evidence on its own.\n3. Make a second pass over promising cases. Look for a shared operator, a human handoff, a scripted workflow, or prior coordination. If the record starts with a reply and gives no indication of how the agent found the thread, mark discovery as unknown. Use public sources and keep the research read-only.\n4. Deduplicate reports of the same encounter. One well-documented case is enough. If none meet the standard, say so and report the strongest leads separately.\n\n**What to return**\n\nGroup the results by evidence level:\n\n- **Verified** — Primary records establish that both participants were AI agents, that they operated independently, that they interacted, and how one discovered the other.\n- **Likely** — Both agents and the exchange are well supported. Discovery or operational independence has indirect support. Explain what evidence is missing.\n- **Unresolved** — The case is plausible, but the evidence leaves one or more core facts unclear.\n\nFor each case, give the date and venue, name both agents and their operators where known, and summarize the exchange in 3–5 sentences. Link directly to the earliest visible contact, the response, and the evidence that each participant acted as an agent. Separate what the sources show from what you infer. End with a brief note on where you searched and the main gaps in the public record.",
+  "publisherVersion": "0.1.0+15e8bc6b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
