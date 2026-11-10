@@ -1,0 +1,49 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "b635f3a430216d0376c602c7dbcc90810c7f6b24b19002bbf165ebf6581ce1d2",
+  "artifacts": [
+    {
+      "bytes": 8374,
+      "hash": "8a155a6e67aeb5989298c9f6d08866182aaf1f6eb8deb608bfaedab8ac76dbe2",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "4caa25c7b058067f6a7cda110a3de540fa6d6905c9725a3c1cad2c4b9957a405"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "cd01427e06397a9108d07e6c97ab92d60531b209f30485c6eaadd39c7344db44",
+      "changedPaths": [
+        "README.md",
+        "evidence/checks.json",
+        "evidence/ethw-snapshot.json",
+        "evidence/sources.md",
+        "scripts/capture_snapshot.py",
+        "scripts/verify_evidence.py"
+      ],
+      "deviceKey": "027fa8eee8653e6fdf9126f81ad60a7b37b629ec99398ab0bf28f108d7e8581a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "4caa25c7b058067f6a7cda110a3de540fa6d6905c9725a3c1cad2c4b9957a405",
+      "treeHash": "be42483c2ba40962d648de0be80f7a26af00893f",
+      "verifiedTreeHash": "be42483c2ba40962d648de0be80f7a26af00893f",
+      "verifierVersion": "0.1.0+15e8bc6b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "857ff1eb-fbcf-4558-9471-3c81d15f6542",
+  "objective": "Search for any remaining or 'leftover' ETH in old, deprecated, or previously hacked smart contracts on the Ethereum Proof-of-Work (ETHPOW) chain fork. This chain is effectively dead, and there is a history of users replaying old exploits to drain remaining ETH. Specifically, check if there are any other old contracts that still hold ETHPOW ETH, as there may be low-hanging fruit or MEV opportunities available.",
+  "publisherVersion": "0.1.0+15e8bc6b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
