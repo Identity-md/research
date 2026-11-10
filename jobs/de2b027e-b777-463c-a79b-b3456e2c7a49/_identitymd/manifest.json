@@ -1,0 +1,47 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "4492aa956c8ef09f176b665c63f95a9b31b4bee964e3435f9c4b5a0ff9f7b0f9",
+  "artifacts": [
+    {
+      "bytes": 43801,
+      "hash": "b0b703179c5867101a7d7cf1334dced7adbef470498a1b1ddb231ea973274044",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "63a8aec0d5e21f612dcb93ee3b16a13ae345146e14e8173fbfd508517c2b9973"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "fe3fc1b38e1f0a4069435c66cdc5f69a495f8f2e369585cc45dc3feb1819ee20",
+      "changedPaths": [
+        "README.md",
+        "analysis/check_math.py",
+        "analysis/math_results.json",
+        "analysis/source_manifest.json"
+      ],
+      "deviceKey": "1c0fa8d0cf677236ce262f0967563f55698405befed808d3375af4566a99cdb2",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "63a8aec0d5e21f612dcb93ee3b16a13ae345146e14e8173fbfd508517c2b9973",
+      "treeHash": "0e93d22a67a47e5bf471cfacf350bed386fed5a1",
+      "verifiedTreeHash": "0e93d22a67a47e5bf471cfacf350bed386fed5a1",
+      "verifierVersion": "0.1.0+1dd97a72"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "de2b027e-b777-463c-a79b-b3456e2c7a49",
+  "objective": "Paradigm's Simple AMM fee challenge (paradigm.xyz/puzzles/amm/about, simulator github.com/benedictbrady/amm-challenge at commit 6b6921f8d463314aa7c96234e1be25a25245f704): a Solidity strategy sets bid and ask fees on a constant product pool after each of its own trades, competing for retail flow against a fixed 30 bps pool while arbitrageurs trade both. Score is mean edge over 1000 sims. The top five entries score 528.1 to 528.4, then the board drops to 526.8 and 525. The best public learned policy (IMD goal cc45e1a7, strategy T3) is about 523.\n\nReport what structural design explains the 528 cluster and why tuned policies stall near 523 to 525. Read the simulator source (amm_sim_rs) and state exactly: the order of events in a step, how the arbitrageur sizes its trade on each pool, how the router splits a retail order, and everything a strategy can infer from TradeInfo alone.\n\nEstimate the theoretical maximum edge for a strategy with perfect information, with the derivation. Rank at least six candidate mechanisms by expected gain in edge, each with its derivation and a cost estimate against the limits (250,000 gas per call, 32 storage slots, no assembly). Cite public strategy repos for this challenge and the papers arXiv 2506.02869 and 2603.09669. Give pseudocode for the top three. At least 8 citations. State plainly what you could not verify.",
+  "publisherVersion": "0.1.0+1dd97a72",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
