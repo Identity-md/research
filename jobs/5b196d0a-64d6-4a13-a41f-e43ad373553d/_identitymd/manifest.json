@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "78487a464e768db43121941b26be2dd7f24c73189a74d2dc6c01fe1232fa1b7c",
+  "artifacts": [
+    {
+      "bytes": 99193,
+      "hash": "b5d8fc074a92bbbed766e6779e9d033b2c4b9a17af2a09f93652b2fc20d2701c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "53ac108b19bd3a169bd500d76c3a4ff46bffda563f4854253793a030a38e2154"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "12fbd676b21225124c5208843b9edf7dc22f02becfa0a26d7b7b80570e7fc634",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "53ac108b19bd3a169bd500d76c3a4ff46bffda563f4854253793a030a38e2154",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+68cd8f62"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "683717be669f8838cb693142e0bf5d3136216f99e6dad490f58d5bf25e4d60a1",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "af141da62704a419287781e52c1d24df186ee22c9e472f3aa6b95de2f62b9833",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5b196d0a-64d6-4a13-a41f-e43ad373553d",
+  "objective": "Beat this network's AMM entry qt1 on paradigm.xyz/puzzles/amm (board 524.9403, 8th; 7th is 525.377, +0.44; 6th 526.777). qt1 is Taylor (gtmcknight)'s solved policy (github.com/gtmcknight/amm-sim at 4812a6382311624e1506aca131ca35c378f930d9, research/solved) in Solidity: Gaussian filter plus the qm tables compressed by qm-spline. qt1 = the Solidity block of https://api.imd.fun/artifacts/8a6e303b662e1a5ea9bb47f31acedd3988ef65b3ddb66d074517aa59ad41ca40, sha256 c68887cff61180e12ba2b1ceb333edf76a830f91f63b5d775a8806fb9ec08aca; that result also holds its Python reference. Two leads, measured on Taylor's replica (links in note 1): quoting against the whole two-part posterior at a step's first trade (+0.49 over Gaussian + plain, 2 to 4 table lookups), and a cheaper lattice filter (lattice + qm is +0.49 over Gaussian + qm, but the exact lattice costs 453k gas a call).\nLIMITS: deployed bytecode <= 24,576 bytes; engine afterSwap peak <= 245,000 gas and 0 OutOfGas (qt1 peaks at 208,775).\nGATES: (P) Taylor's gates.py reproduces before any change; (Q) each new Python reference is scored paired against qt1's reference on Taylor's replica (choose on 60000..61023, report 10000..12047); (F) the contract's fees equal its Python reference within 0.01 bps on 50x2,000 callbacks from replica runs.\nREPLICA work: plain `python3 -I`, any machine. ENGINE work: the Linux setup below; each strategy alone vs the 30 bps VanillaStrategy, amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8), configs per MatchRunner._build_configs; fresh seeds from 9800000 up, never reused; report paired{n,mean_diff,se,worst5} vs qt1 and amm_sim_rs.gas_stats(). No command over 8 minutes; state under scratch/. Credit Taylor in the header.\nSETUP: clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 in your workspace (never /tmp), save the script below as scratch/setup.sh, run `sh scratch/setup.sh` once from the checkout root, prefix later commands with `. scratch/env.sh && `; on failure return blocked={step,error}.\nset -eu;R=$PWD/scratch;mkdir -p $R/tmp $R/bin $R/solcx\necho \"export TMPDIR=$R/tmp XDG_CACHE_HOME=$R/xc UV_CACHE_DIR=$R/uvc UV_PYTHON_INSTALL_DIR=$R/uvpy SOLCX_BINARY_PATH=$R/solcx VIRTUAL_ENV=$PWD/.venv PATH=$PWD/.venv/bin:$R/bin:\\$PATH\" >$R/env.sh;. $R/env.sh\ncommand -v uv >/dev/null||{ curl -LsSf https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz|tar --no-same-owner -xz -C $R/tmp;cp $R/tmp/uv-*/uv $R/bin/;}\nW=amm_sim_rs-0.1.0.post1-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl;curl -LsSf https://github.com/gtmcknight/amm-sim/releases/download/sim-6b6921f8/$W -o $R/$W\necho \"aedb68280aca34c110968f00148387c95885207913fb2cf19a1ab4c5cfd6887a  $R/$W\"|sha256sum -c -\nuv venv --python 3.12 .venv;uv pip install $R/$W numpy numba cma py-solc-x==2.1.0 pyrevm==0.3.7;uv pip install --no-deps -e .\npython -c \"import solcx;solcx.install_solc('0.8.24')\"\namm-match validate contracts/src/StarterStrategy.sol",
+  "publisherVersion": "0.1.0+68cd8f62",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
