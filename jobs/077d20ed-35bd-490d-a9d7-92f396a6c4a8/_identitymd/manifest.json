@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0dd0683250cd2946d1b9a2b86a1f84fd164e5b7ea36fd9ebeef87107b41f3f67",
+  "artifacts": [
+    {
+      "bytes": 70454,
+      "hash": "da0aa52ecda2730c508b685ee2a30ced838938e4f586896fdbfef0e0d9f25b59",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "229c62a208b034741e439aa37d1588e5a2c34e5cd373abb0f56fb5c3155dfee1"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "229c62a208b034741e439aa37d1588e5a2c34e5cd373abb0f56fb5c3155dfee1",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+3850b894"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "fa2b7fcb5f53535ac44ad7be9e508551e18135c9c2e793f584abb7bd60b49796",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "13d09bc2d329c5c25d3b16b22f6b40aec48ce869aec1ff62017719c845e59271",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "077d20ed-35bd-490d-a9d7-92f396a6c4a8",
+  "objective": "Train this network's best fee policy for paradigm.xyz/puzzles/amm far longer than one item can, passing weights from round to round. Board entry IB = 522.00, 20th: T plus a learned 19-8-2 fee correction, +0.59 over HA. In sister goal cc45e1a7 the same design gained +0.33 in 210 CMA generations and +0.59 in 910, still rising: start from saved weights, train as long as the item allows, return the weights.\nFILES (check sha256): IB = `code_zb64` of https://api.imd.fun/artifacts/afd5183e9ff3235334e041c00b0cd19079599a2c6464db95f8c1586712105557, code sha256 301941829a44bb60977bb28181a5e4bfa6544f3696763f987054789b2611d686; its `params` are the frozen weights and `port_zb64` its exact port. KIT-B = https://api.imd.fun/artifacts/48cd6a10f39fc22a79c5f12398474bd65282803d59314819acd586f187015808 (decode per `decode_instructions`): a port for any of IA's 19 inputs, 1-64 units, single or first-print-gated nets; IAD = IA with a gas diet (afterSwap peak 132k, not 238k). Briefs name other files.\nGATES first: your starting file's port matches its EVM fees (< 0.01 bps, 50x2,000 callbacks); the replica reproduces its real gain over HA within 0.15; the frozen Solidity matches the frozen port (< 0.1 bps). Measure replica speed; search only at >= 300 markets/s.\nREAL ENGINE: each strategy alone against the 30 bps VanillaStrategy, amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8), never two in one market; configs per MatchRunner._build_configs; fresh seeds from 8000000 up, never reused; report paired{n,mean_diff,se,worst5} vs IB, retail/arb deltas, amm_sim_rs.gas_stats(); any OOG call invalidates a candidate; afterSwap peak <= 245,000. No command over 8 minutes: segment long work, saving state under scratch/.\nSETUP: clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 in your workspace (never /tmp), save the script below as scratch/setup.sh, run `sh scratch/setup.sh` once from the checkout root, prefix later commands with `. scratch/env.sh && `; on failure return blocked={step,error}.\nset -eu;R=$PWD/scratch;mkdir -p $R/tmp $R/bin $R/solcx\necho \"export TMPDIR=$R/tmp XDG_CACHE_HOME=$R/xc UV_CACHE_DIR=$R/uvc UV_PYTHON_INSTALL_DIR=$R/uvpy SOLCX_BINARY_PATH=$R/solcx VIRTUAL_ENV=$PWD/.venv PATH=$PWD/.venv/bin:$R/bin:\\$PATH\" >$R/env.sh;. $R/env.sh\ncommand -v uv >/dev/null||{ curl -LsSf https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz|tar --no-same-owner -xz -C $R/tmp;cp $R/tmp/uv-*/uv $R/bin/;}\nW=amm_sim_rs-0.1.0.post1-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl;curl -LsSf https://github.com/gtmcknight/amm-sim/releases/download/sim-6b6921f8/$W -o $R/$W\necho \"aedb68280aca34c110968f00148387c95885207913fb2cf19a1ab4c5cfd6887a  $R/$W\"|sha256sum -c -\nuv venv --python 3.12 .venv;uv pip install $R/$W numpy numba cma py-solc-x==2.1.0 pyrevm==0.3.7;uv pip install --no-deps -e .\npython -c \"import solcx;solcx.install_solc('0.8.24')\"\namm-match validate contracts/src/StarterStrategy.sol",
+  "publisherVersion": "0.1.0+3850b894",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
