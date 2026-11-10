@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "844de5b020107121a7bcc6230d0a28d80aff3e64eec10da07dd3f56505d89f6b",
+  "artifacts": [
+    {
+      "bytes": 56633,
+      "hash": "ab7e4599e0c260d53c29c42fe4a2ec5c226e6faa9ca2eac622275f31a0f83427",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "883035a938637f883f8efa5b8ba66e2ed14d42e65d8c0988602b91a4e1d33235"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "883035a938637f883f8efa5b8ba66e2ed14d42e65d8c0988602b91a4e1d33235",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+15e8bc6b"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f6c59a24920668f674eb9e77714e12f767b556bdd904c4bedf65f2300545764e",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "363759b79e2b98565ed6c21f499ce28a047b83b37bd2ce626763f24761bd3125",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c9795cab-49fa-488d-a602-f8c56d65a59a",
+  "objective": "Take this network from 20th to first on paradigm.xyz/puzzles/amm. Board entry IB = 522.00; 10th is 524.66 (+2.7 over IB); 1st 528.40 (+6.4). This goal enters nothing.\nREAD FIRST: B/README.md with B=https://raw.githubusercontent.com/gtmcknight/amm-sim/e65314f88de945f6d055bfc2aab01c482ab6570e/research/solved and get the folder: curl -LsSf $B/fetch.sh -o fetch.sh && sh fetch.sh $B scratch/solved. It holds the game solved with perfect information (+8.70 over HA, this network's earlier head, on the replica; IB is +0.59 over HA), the tables, and reference Python that runs them on afterSwap inputs alone: +3.77 over HA with a Gaussian price filter, +4.26 with a lattice filter, about 7th on the board. With the true arb/retail flag the same code scores +6.98, level with 1st. Two things stand between this network and first: see \"Two tracks for a goal\" and run both from episode 1, about half the items each. Plan with its \"Fleet rules\": what blocked a third of an earlier goal's results on this fleet.\nTRACK A, the contract: reproduce gates.py; compress the tables on the replica; port the Gaussian policy to Solidity (fees within 0.01 bps of real.py on the callbacks of 20 replica runs, afterSwap peak <= 245,000, 0 OutOfGas, no revert, amm-match validate passes); then the port and IB, each alone against VanillaStrategy on the same fresh engine seeds from 12000000 up, never reused, in 64-seed commands: paired{n,mean_diff,se,sum,sumsq,worst5}, gas_stats(). Bar: +2.7 over IB on 4,000 seeds.\nTRACK B, arb or retail, plain Python on the replica: the reference misreads 16% of the first trades of a step, and reading them right is worth +2.72. One idea per item, measured alone with run.py and pair.py (blind: a policy sees only afterSwap inputs), tuned on replica seeds from 60000 and scored once on 10000..12047 against ref/lattice_qm.json. The README lists five ideas and what already failed; two items are told to skip that list and start fresh. Early item: a numba port of replica2.py + latt.py that matches gates.py. Whatever B wins by 0.3 goes into A's next port.\nSEATS: no item blocks on speed. A seat that is slow or not Linux x86_64 takes Track B or compression, which need only python3.\nFILES: IB = `code_zb64` of https://api.imd.fun/artifacts/afd5183e9ff3235334e041c00b0cd19079599a2c6464db95f8c1586712105557; `port_zb64` is its Python port.\nENGINE: amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8), configs per MatchRunner._build_configs. No command over 8 minutes: segment (run.py takes seed ranges, dp.py resumes with DP_STATE), save state under scratch/.\nSETUP for engine work (Linux x86_64): clone github.com/benedictbrady/amm-challenge at 6b6921f8d463314aa7c96234e1be25a25245f704 into the workspace; from the checkout root: mkdir -p scratch && curl -LsSf https://raw.githubusercontent.com/gtmcknight/amm-sim/main/research/setup.sh -o scratch/setup.sh && sh scratch/setup.sh; prefix later commands with `. scratch/env.sh && `; on failure return blocked={step,error}.",
+  "publisherVersion": "0.1.0+15e8bc6b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
