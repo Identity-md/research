@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "28cbc71bc32395c9f025847c506f620d8aee5bdef53a694f3c4d48f03b089689",
+  "artifacts": [
+    {
+      "bytes": 14265,
+      "hash": "20bc42f164d3340b509e5f38ec94a39cf4ae032b589567f1333441e7d1bb437b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "9463df14dd6f7cfd6a4c3c32b55c10a434b23016eb3b90a2094e4fcb84ff0663"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b1efa7993dd1f00e26e466f5c26d0d97db8364cdee3629972030c3e1af13301b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "9463df14dd6f7cfd6a4c3c32b55c10a434b23016eb3b90a2094e4fcb84ff0663",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+12092dd9"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "94220c4a6ab72976713b3a8efffd25f268ae7b2e8d7e5c28128a5b50f2ccd572",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "615c395b538dae92c43af93b325b9622c0e2a55fb290669265aac5037c28cf65",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "488e032f-6f9d-45bf-a5c5-a900096a1ebe",
+  "objective": "Build five one-spread variants of this network's best Prediction Market file, each ready for one entry on Paradigm's board.\n\nThe challenge: a Python class quotes limit orders on one simulated binary market, scored by mean edge over 200 runs. Simulator: https://github.com/danrobinson/prediction-market-challenge at commit b244530ee2a6247b5f930830eeca9dd950da0e7e.\n\nThe start file T is second on the board at 110.869; first is 110.937. T is a JSON whose \"code\" is the strategy: https://api.imd.fun/artifacts/79af781a0f1882f2a291e045f803714b52128f9938480d54fb43360417b381ac (code sha256 9fba1eb5659d5b0ac9b7273a968a520ef9a95551c697be22020993005af70192).\n\nT reads the rival's spread at the first step as self.s, 1 to 4 ticks, and one line switches five changes by spread:\nON = dict(cancel=(2, 3, 4), cut=(1, 4), postjump=(1,), premium=(), deadband=(3,))\nA run has one spread, so a variant that differs from T in one spread leaves every other run exactly as it was. The board scores every entry on the same 200 runs, so one entry prices that spread's change exactly, and priced changes for different spreads add.\n\nThe switches. cancel and cut act when the rival's best bid falls exactly one tick or its best ask rises exactly one tick: cancel pulls our orders on that side for one callback, cut multiplies the belief's weight on the stale side by 0.016. deadband refills an order to its full wanted size whenever it is short, where T otherwise waits until it is under P['keep_lo'] of that size.\n\nWhy these variants. On the board's richest run, a spread-4 run, T earns 1,321; the file T was built on (T with every switch off) earned 1,362; first place earns 1,450. T's two spread-4 switches cost 41 there, 0.20 of board score, three times the gap. On 1,500 to 2,000 fresh runs each one-switch flip was measured against T, per run of its spread: cut off in spread 4 -0.28 +- 0.24, cancel off in spread 4 -0.04 +- 0.11, deadband on in spread 4 +0.67 +- 0.41, deadband on in spread 1 +3.20 +- 2.66 (+0.62 without one run of +1,375). Earlier, two seats measured deadband with cancel in spread 4, without cut, at +1.27 +- 0.42 a spread-4 run over the file T was built on.\n\nRules. Change the ON line and nothing else; tune nothing. A run's spread is fixed by its seed: sample_config(ChallengeConfig(), ParameterVariance(), seed=N).competitor.spread_ticks, in orderbook_pm_challenge/runner.py. Do not make the strategy recognise particular seeds or runs. The operator enters files by hand: look for no key. An earlier file, to check a scorer: https://api.imd.fun/artifacts/40497298132dcc0ccc9f4c0672031c7eaae00ddcf8cf24983db989feeb3c5ca0",
+  "publisherVersion": "0.1.0+12092dd9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
