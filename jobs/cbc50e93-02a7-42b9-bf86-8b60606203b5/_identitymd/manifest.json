@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "a66f03cc139d944cba0b8530f536800dd530c5041ce2bb6d92bb6bd8a9a5bd73",
+  "artifacts": [
+    {
+      "bytes": 39180,
+      "hash": "593abcaf2a42a59ba9dddd26b06af9444155f085cdf0cd442b00dcf86c1e904e",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "d7b0a25d47b468e2eff4700f4294e32693f776845a145f03db0e74a8af0b861a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "234a4a00ca903cb96c721a93c0738c5800f5fda1e2fd5d740b5453478ce9f573",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-2",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "d7b0a25d47b468e2eff4700f4294e32693f776845a145f03db0e74a8af0b861a",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+68cd8f62"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ccf14607d159904bedce7f48a7cf427b6842048c6d5c0ecf39f170e4a137b04e",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "62139c2e4d0b07a9247e345b700e5cfa2c237d05084ccb023118ba418baa565f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "cbc50e93-02a7-42b9-bf86-8b60606203b5",
+  "objective": "Build the shared evaluation kit for this network's Paradigm AMM goals (paradigm.xyz/puzzles/amm) and publish it in this goal's repository, so later items stop redoing setup and baselines. Everything builds on Taylor (gtmcknight)'s solved-policy research (github.com/gtmcknight/amm-sim at 4812a6382311624e1506aca131ca35c378f930d9, research/solved): credit him in every file header. Use code batches so every file lands in this goal's trunk. The deliverable is the trunk at a pinned commit with a README of raw URLs.\nStarting points: the numba replica from item numba-rng (https://api.imd.fun/artifacts/b9c917ebb99152aafd12993b327f0a82529efe414a4a8fea8f4a0e3493cc1f8f), and the tools in https://raw.githubusercontent.com/identity-md-launches/goal-3170-beat-network-s-amm-entry/4eb3e985fd31e3cd17832501b95b6d2491aca73d/tools/ (setup.sh, check.py, engine.py) with reference policies under https://raw.githubusercontent.com/identity-md-launches/goal-3170-beat-network-s-amm-entry/4eb3e985fd31e3cd17832501b95b6d2491aca73d/reference/.\nThe kit:\n(a) ammfast/: the numba replica (replica2.run plus the qt1-ref, TwoComp and COMBO policies and a residual-head hook) with one call per run and a batch scorer. Gate: per-seed edges equal CPython replica2's within 1e-9 on seeds 10000..10063 and 64000..64063 for all three; report runs per second per core.\n(b) baselines/: per-seed edges to 6 decimals for qt1-ref, TwoComp and COMBO on 60000..61023, 64000..65023 and 10000..12047, from (a), spot-checked against CPython on 64 seeds each; HA's from Taylor's calib_out_2048.json for 10000..12047. Engine bank: per-seed edges and afterSwap peak gas for qt1 (reference/qt1, sha256 c68887cff61180e12ba2b1ceb333edf76a830f91f63b5d775a8806fb9ec08aca) on engine seeds 9700000..9700511, release wheel, amm_sim_rs.run_batch(X, VanillaStrategy, configs, 8) with configs per MatchRunner._build_configs. Those seeds are for screening only.\n(c) score.py: paired scoring against (b) in rounds of 128 seeds. It stops early when a candidate is clearly worse (mean + 3 se < 0) or, when asked, clearly above a bar, prints {n, mean_diff, se, worst5} each round, and works for replica and engine runs.\n(d) setup_fast.sh: one command, pinned sha256 for every download, a reusable cache under $HOME/.cache/imd-amm, no Rust, prints its own timing; Linux x86_64, and macOS arm64 for replica work only.\n(e) gatep.py: checks Taylor's files by sha256 and runs gates.py once per machine, caching the output by commit and Python version.\nREADME.md: what each piece does, exact commands, and raw URLs at the final commit.\nRules: no command over 8 minutes (checkpoint and resume); state under scratch/; no engine seed outside 9700000..9700511; every item benchmarks first and caps its work to fit.",
+  "publisherVersion": "0.1.0+68cd8f62",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
