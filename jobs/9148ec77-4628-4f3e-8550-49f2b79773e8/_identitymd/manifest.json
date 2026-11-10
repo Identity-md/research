@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "cc28a8df41dcafb476f6a4faed062cbdc4ab0598837520947796c0472aa06d82",
+  "artifacts": [
+    {
+      "bytes": 10608,
+      "hash": "c31daee4b080f550d9ed5151748362b46ad6bd445edf49d4e594657493357ff5",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "ace9395f76d43f4aae748197cd6bc473c3dd1a0975bfd9bdf7e4b0aea0a0c0e9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1731fbfe0c4574fb6e59405e92715a96ebaf28ae80246f080a0c3368e4023bf8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "ace9395f76d43f4aae748197cd6bc473c3dd1a0975bfd9bdf7e4b0aea0a0c0e9",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+7984da50"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "21644a133f76db30ff2aaf26d530052034e3699515bfd32c4fa804d8d475f049",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-1",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "4641df8b6307f39981cda75e0d223021722cebee0fbb6258483b30aa6bc9221b",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9148ec77-4628-4f3e-8550-49f2b79773e8",
+  "objective": "Second test of owner actions (mode 0) on Sepolia, chain 11155111: a decision taken by five machines. The goal's owner, 0x047f606fd5b2baa5f5c6c4ab8958e45cb6b054b7, signs this goal the mandate 0xcd8e06df68251ea8bc6b28886d167556695e29b0becc6dedb6bd28591041db97, quorum 3, which lets it send native ETH only to 0xb7a832db45f240f876432bf8b222bff30b4be8ff, 0xbe11d80c27863c950485d269992dc086e9f397a9, 0xfff9976782d46cc05630d1f6ebab18b2324d6b14, at most 0.05 ETH a day.\n\nDo this and nothing else:\n1. Spawn one batch named top-up with {\"intents\": true, \"replicas\": {\"size\": 5, \"quorum\": 4}, \"chain\": {\"chainId\": 11155111, \"pin\": \"head\", \"accounts\": [\"0xb7a832db45f240f876432bf8b222bff30b4be8ff\", \"0xbe11d80c27863c950485d269992dc086e9f397a9\", \"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"]}} and exactly 1 item, so five independent machines each read the chain at the same pinned block and write the item. The item's instructions, word for word:\nRead the native ETH balance of each of these accounts at the block .imd/reads/chain.json pins (its accounts give them; or eth_getBalance at exactly that block, never latest): 0xb7a832db45f240f876432bf8b222bff30b4be8ff, 0xbe11d80c27863c950485d269992dc086e9f397a9, 0xfff9976782d46cc05630d1f6ebab18b2324d6b14. For each account, in exactly that order, whose balance is below 50000000000000000 wei (0.05 ETH), add one move {\"asset\":\"native\",\"to\":\"<that account>\",\"amount\":\"10000000000000000\"}. Skip every account at or above it. Write, as your whole result, one asset-intent@1 and nothing else:\n{\"schema\":\"asset-intent@1\",\"chainId\":11155111,\"kind\":\"treasury.rebalance\",\"moves\":[<the moves>],\"approvals\":[],\"rationale\":\"<each account's balance in wei at the pinned block, and which you topped up>\"}\nAddresses in lowercase, amounts as decimal strings of wei, the moves in the order the accounts are listed above.\n2. When top-up settles (goal.json lists it under withheld: you are not handed its files, and you need not be), check goal.json's mandates. Once 0xcd8e06df68251ea8bc6b28886d167556695e29b0becc6dedb6bd28591041db97 is there and active, act once: {\"name\":\"top-up-1\",\"intents\":\"top-up\",\"mandate\":\"0xcd8e06df68251ea8bc6b28886d167556695e29b0becc6dedb6bd28591041db97\",\"quorum\":3}. Until it is, wake in 10 minutes and look again, at most 6 times.\n3. If the act is refused, do not retry blindly: if the refusal says an item's intent has too few counted holders, spawn top-up-2 the same way and act on it as top-up-2, once. Any other refusal: write it up and finish.\n4. Open no children, ask no oracle, set no watches, spawn no other batch.\n5. Finish once an action is simulated, ready, sent or confirmed, or after the second refusal or the sixth wait. The write-up says what happened: each action's name, state and hash, and every refusal word for word.",
+  "publisherVersion": "0.1.0+7984da50",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
