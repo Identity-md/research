@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "b546cee118ee5474c2897105348132de491b452302e54a1149b5989a380b728f",
+  "artifacts": [
+    {
+      "bytes": 21350,
+      "hash": "8f1f26a6264f1194b2ebe8009e92446db7889f64222b01d10b3a6be07e988c98",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "f99704c6cbf891d1899f50ac893294f3f5feab75fb17e2493ef6dc2e5e7e9f3c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "10f059866e111f84496d31530599e565cac786330a0929ec21c972a584e9b26c",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "f99704c6cbf891d1899f50ac893294f3f5feab75fb17e2493ef6dc2e5e7e9f3c",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+f03a8d70"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2f111874-d780-4578-80a7-2198c62bf86a",
+  "objective": "Research question: how can a client prove, with read only calls to a FLOP devnet RPC node, that the request behind one gateway receipt settled on chain, and for how much, through its compute channel?\nWhy: uxp-labs/flop-devnet-lab holds imd-flop, a tool that lets an IMD worker pay FLOP for inference under a daily cap. Today the cap must count each call at the full amount it was allowed to spend, because a gateway receipt is not final (the gateway's OpenAPI says a later reconciliation can change it). The cap can release the unused part of a call only when the settlement is proven on chain. This research is the specification for that proof. Our own code will then implement it, so be exact and say for every statement whether it is confirmed from source or data, or inferred.\nWhat we already measured on FLOP devnet (2026-11-11), treat as leads to confirm or correct:\n- RPC wss://rpc.devnet.flop.network, node zkVerify 1.1.0, chain \"FLOP Devnet\", genesis 0x99c172c095340ace980631f9123544c6bebd4839f3437e463533422d8be2d631, runtime tzkv-runtime spec 1014014 (1011000 at block 1, 1011003 at block 1000000), metadata version 14, about 1 second blocks, finality noted by aleph.noteFinalized inherents, archive state back to block 1.\n- Gateway (https://api.flop.network/openapi.json) CredentialReceipt fields: request_id, correlation_id, model, reserved_spend, settled_spend, settled_spend_raw, terminal_event, channel_id, created_at, state (reserved, estimated, settled, released), response_status. terminal_event \"may cover several requests\".\n- Pallet computeChannel. Calls seen: openChannel, topUpEscrow, registerSessionEvidence, submitToplocEvidence, settle, timeout. Events as the explorer shows them: ChannelOpened {channelId, agent, miner, escrow, measuredRoot}, AssuranceClassPinned {channelId, class}, CalibrationSnapshotted {channelId, miner, capGflopsPerSec, assuranceTier, calibrationVersion, softTierSpotCheckRatePpm}, SessionEvidenceRegistered {channelId, slot, commitment, sizeBytes}, ToplocEvidenceSubmitted {channelId, miner, commitmentRef, turnsCommitted}, EscrowToppedUp {channelId, added, total}, AuditFeeEarmarked {channelId, amount}, Settled {channelId, minerPaid, burned, aggregateGn, cooperative}, TimedOutRefunded {channelId, refunded}. The SDK also names ForceOpenRequested, SettlementPosted, ForceOpenExpired.\n- One channel by hand, 0x9f81f65bc93855d394329e4996bc78d949bb786178f3471c13d3853f9813ddd7: EscrowToppedUp total 114000000000000002, Settled minerPaid 112860000000000002, burned 0 (block 3479299, hash 0xeba1182c9f2bbf5a8fd012afddc201c2ebed11b64f59b10c1d3c4fcc4b2ee18e), AuditFeeEarmarked 1140000000000000. So minerPaid plus the audit fee equals the escrow total.\n- The explorer API lists the pallet's transactions: https://explorer.devnet.flop.network/api/transactions?limit=100&offset=0&section=computeChannel\nAnswer these, in this order:\n1. Storage. Every storage item of the computeChannel pallet at spec 1014014: name, hashers, how the storage key is built from a channel id (give the full key for the channel above), the value type field by field with SCALE types, and what each field means. Does a channel stay in storage after Settled or TimedOutRefunded, and if it is removed, when?\n2. Events. Every event of the pallet with its fields in SCALE order and their types, its pallet index and variant index at spec 1014014, and which call emits it. Include the ones we did not see.\n3. The life of a channel as a state machine: every state, every transition, the event and call for each, and which transitions move funds, from whom to whom.\n4. Conservation. The exact equation or equations that hold for a channel between escrow in (opening escrow, top ups) and funds out (miner, burn, audit fee, refund, anything else), including rounding and the stray 1 or 2 base units visible above. Say which numbers are in events and which only in storage.\n5. Receipts to channels. How a gateway request maps to a channel: one channel per request, per session, per agent and miner pair? What channel_id and terminal_event in the receipt are, the format of terminal_event, and how to find the block and event it names. How a single request's settled_spend_raw relates to the channel's totals when a channel serves several requests, and what a client can and cannot prove about one request from chain data alone.\n6. Finality. How finality works on this chain (Aleph), and the read only RPC calls that show a given block is finalized.\n7. The procedure. A step by step check, using only read only JSON RPC calls against an archive node, that takes a receipt (channel_id, terminal_event, settled_spend_raw) and returns one of: proven settled for at most X, proven refunded, not yet final, cannot be proven, with the fewest calls. Give two variants: reading the channel's storage at the finalized head, and reading System.Events at the block the terminal event names. Say what changes after a runtime upgrade.\n8. Ways it can go wrong: a channel reused, a top up after settlement, a force open, a dispute or fraud verdict that refunds the agent, a chain reset that keeps the genesis.\nSources to use: the flop-labs organisation on GitHub (network, the SDK @flop-labs/sdk, the CLI, tclk and any pallet source that is public), https://docs.flop.network (whitepaper, yellowpaper, agent accounts and spend control), the gateway OpenAPI, zkVerify's public runtime source for what FLOP inherits, and the chain itself through public read only RPC and the explorer API. Cite file and line or URL for every claim.\nRules: read only. No keys, no faucet, no transactions, no paid calls. Do not present an explorer or indexer answer as proof: say when a fact rests on it alone.\nDeliver: one report with the tables above, the worked example for the channel above with every number checked against the chain, a list of what could not be confirmed, and the open questions to put to the FLOP team.",
+  "publisherVersion": "0.1.0+f03a8d70",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
