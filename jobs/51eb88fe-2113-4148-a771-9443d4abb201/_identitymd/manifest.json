@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "42c6e9e82a3d6002fba3b39306c8f017b3e2ee9ee075a449097ed4dab483b5bf",
+  "artifacts": [
+    {
+      "bytes": 94252,
+      "hash": "6149de03ebac848bad3f5a2033efc7e94d7faa25df99124a303c11d5fd8ef8c0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "c19bd3b298b266441e8c2f85bad0029acc8da04e4d8a1ba5b1b25d6770229119"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f42f27bce9bb7fc5251ad781c221ee157406ba6f3ed5767a0fd8420eec11c54a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "c19bd3b298b266441e8c2f85bad0029acc8da04e4d8a1ba5b1b25d6770229119",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+9b8047c1"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "377843575071cdb156ab6317aaffd00c5f4a8e1fec7f8b133fd913ca807eed04",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "4cc0b5b5ceeed837e4bb7ff22c7cb0d84429418aee04b17fba65f93dd4d05e7d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "51eb88fe-2113-4148-a771-9443d4abb201",
+  "objective": "Take this network's entry on paradigm.xyz/puzzles/amm from 528.3333 (4th) to #1 (528.4152): about +0.08 is needed. Base: QLX5 = LEAN (Taylor (gtmcknight)'s solved policy, github.com/gtmcknight/amm-sim at 4812a6382311624e1506aca131ca35c378f930d9 research/solved, with the exact-arithmetic arb/retail tell and U1 tables) plus a drift-tolerant rival split test. Source sha256 e183e5bc3fb794b7067703b10a7da9920267aa5f4caa968e16ca101b02338f40 inside https://api.imd.fun/artifacts/1ef80bfb6d6791b877b1f4048a5e63cf2ae54153e6e8763ae3f8ab13132dfb15 (code_zb64.QLX5); certified in https://api.imd.fun/artifacts/d73c1749574cce67042552e9278be2ba20c8fedf9720bdee71c27d4019f21f02. Engine gains transfer to the board exactly. Credit Taylor in every file.\nSpent, do not repeat: table compression and refit, price-belief variants (twocomp, lattice, rival pin), per-run sigma/rate, exact rival carry, learned residual heads (four sizes), kappa.\nLines:\n(a) stack QLX5 with the AGE rule (+0.032 se 0.008 over LEAN on 512 engine seeds; https://api.imd.fun/artifacts/0343e8049294da6680c2ee1ad413fa5dc95843b1893e96c3b173df49b850b3e1, engine https://api.imd.fun/artifacts/87dfbac60f00625d53477537621d5d15b2b95529011ed061eab3bb64452d677c); certify, then 2,048 fresh engine seeds.\n(b) engine-faithful replica: the engine recomputes k from rounded reserves at every quote (https://api.imd.fun/artifacts/8b18deed94ffc0ce7268140f652b5a1d2cf1a55e98a7e18575d1c51ce83cb098), the replica does not; port every such difference into the fast LEAN replica (https://api.imd.fun/artifacts/a88ff982eba7e078bc6ccb1555b90a211c00c9fd76ec90a62ab13a4074f2c3d0), prove it per seed against engine logs, then re-tune on it.\n(c) wide engine-in-the-loop search over QLX5's structural constants (phase thresholds, rival clip and band widths, synced-table switches, table levels, tell floors): many parallel 128-seed engine items per round; confirm the best on 1,024+.\n(d) idea sweep: about 20 items, each testing one new mechanism on the fast replica with early stopping; promote any >= +0.03 into a pipeline.\nKit: https://raw.githubusercontent.com/identity-md-launches/goal-3178-build-shared-evaluation-kit/45e7563d1a29ffca9d608fdf60c90bf2624d2d01/ (setup_fast.sh, ammfast, baselines, score.py, engine_eval.py). Keep downloads, venvs, caches and checkpoints under test/scratch/. Full 64-character hashes in every brief. Use `after` pipelines (build, check, engine) and `requires` {platform linux-x64, minCpus 4} for Solidity and engine items.\nLimits: <= 50,000 source characters, <= 24,576 deployed bytes, engine afterSwap peak <= 245,000, 0 OOG. Gates: P, Q (replica, choose 64000..65023, report 10000..12047), T (labels equal the Python reference), F (fees within 0.01 bps), G, E (fresh engine seeds from 10,200,000, never reused, paired against QLX5 and qt1). Bring back a contract only when it beats QLX5 by >= +0.04 on 1,024+ fresh engine seeds. The requester asks the user before any submission.",
+  "publisherVersion": "0.1.0+19b4b503",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
