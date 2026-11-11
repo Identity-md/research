@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3d620480ee204527454efbf1d4c0725a5a47689bb43d034e3475dc526831c1f6",
+  "artifacts": [
+    {
+      "bytes": 28705,
+      "hash": "a0c36b85f45088a1d8d7c4d74e8a0661e5af155ddb1b5c27f7fe8b4ba9a5abf6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "cafc3a0771fd2d9f4b9dccdae4e533d3e72c2086b2706a81a5b074ef52cf8bc4"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ba44f3d5ab7b010895a775f74901bfc7f9cae8f3ed681e13f9731833d860428",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "cafc3a0771fd2d9f4b9dccdae4e533d3e72c2086b2706a81a5b074ef52cf8bc4",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+9b8047c1"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e5ed95d8889ee1942d65654f5c1944f9fecdc73e49e2256fca9f56ba8f6f76b2",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "25ed34329033e8c34fe40c8afa86f5479e8ce31afc0f412493e4f9dccdf07f85",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ae7f7a6a-cc16-41e9-842f-6a5b2903b52c",
+  "objective": "Take this network's entry on paradigm.xyz/puzzles/amm from 528.3333 (4th) to #1 (528.452): about +0.12 is needed. Base: QLX5, Taylor (gtmcknight)'s solved policy (github.com/gtmcknight/amm-sim at 4812a6382311624e1506aca131ca35c378f930d9 research/solved) with the exact-arithmetic arb/retail tell, U1 compressed qm tables and a drift-tolerant rival split test. Source sha256 e183e5bc3fb794b7067703b10a7da9920267aa5f4caa968e16ca101b02338f40 in https://api.imd.fun/artifacts/1ef80bfb6d6791b877b1f4048a5e63cf2ae54153e6e8763ae3f8ab13132dfb15 (code_zb64.QLX5). Engine gains transfer to the board exactly. Credit Taylor in every file.\nSpent, do not repeat: one-at-a-time and joint tuning of QLX5's scalar constants (engine and replica, best +0.026), 20 rule ideas (best +0.012), table compression and refit, price-belief variants, residual heads (four sizes), rival trackers beyond QLX5, kappa.\nNew line, the only one in this goal: tune the fee tables themselves against the real objective. Taylor's tables were solved from a model (lognormal fills, a grid, stationary rates, QMDP for uncertainty); nobody has tuned their values directly on the engine's behaviour.\nTool: the engine-faithful LEAN/QLX5 replica, equal to the engine within its printed precision on 512 seeds (https://api.imd.fun/artifacts/a1eef2f3dbbcbc7a1de9d15a2b22d1d25ac6d316a72efde67275b5d5a16ab16b; core https://api.imd.fun/artifacts/2ad2abf45223c729557e83e77d22de54c5db7da2be0599658144906b91dbf0f7; faster build https://api.imd.fun/artifacts/72b58a1407966f0223f06ab7c6ddd979a24fb4593f1a9b3dc43508a7f133d00b).\nMethod: parameterise corrections to the table values (per phase and table: low-dimensional bases such as offsets by row band, column band and sd level, then finer), search them with evolution strategies across many parallel items, choose on 64000..65023 and report on 10000..12047; first measure which table regions carry the edge so the search spends there. Promote any correction worth >= +0.03 over QLX5 on the report seeds into an `after` pipeline: Solidity (fit the corrected tables in the existing encoding), T and F against the Python reference, G, then engine runs on disjoint 256-seed blocks from 10,400,000 against QLX5.\nRunning rules: batches of at most 5 items; result.json carries gain_vs_base, se, n, seeds, advance, source_sha256, and peak_gas and oog for engine items; stage checks gate on advance. Early-stop with score.py when mean + 2 se < the bar. Engine and Solidity items require {platform [linux-x64], minCpus 8}. Keep caches under test/scratch/. Full 64-character hashes in every brief.\nLimits: <= 50,000 source characters, <= 24,576 deployed bytes, engine afterSwap peak <= 245,000 with 0 OOG. Bring back a contract only when it beats QLX5 by >= +0.04 on 1,024+ fresh engine seeds; the requester asks the user before any submission.",
+  "publisherVersion": "0.1.0+19b4b503",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
