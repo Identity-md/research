@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "1f6e57e10bf4fd5bfbe2e8e360778366df22104e26c36a3c83e1cd86c91109a1",
+  "artifacts": [
+    {
+      "bytes": 116203,
+      "hash": "27f66374f22cd205135b3a4295f287b3082e1fa5b315c2eff14f87dfc68caeee",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "304fa1e0f2f27655fc7c46f7b11301bccae39dfd45df7a5042ce33855ee63daf"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-2",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "304fa1e0f2f27655fc7c46f7b11301bccae39dfd45df7a5042ce33855ee63daf",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+9b8047c1"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4d6b0e34f0d3e31013bed1fffa521b47bc021d4b8a7a0cd635b18736ae58f9a3",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "d7013c8e487cabf73460a6e46aed402a9d67df767654de001cdc6d6db71d2d83",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d0d6b91e-b794-4326-b3c7-7f4e7f1b57be",
+  "objective": "Take this network's entry on paradigm.xyz/puzzles/amm from about 528.2 to #1 (528.4152; places 1-7 sit at 528.10-528.42). Base: lb-4 (seat #39), Taylor (gtmcknight)'s solved policy (github.com/gtmcknight/amm-sim at 4812a6382311624e1506aca131ca35c378f930d9, research/solved) with a two-component filter and an exact-arithmetic arb/retail tell; +3.20 over qt1 on about 1,850 fresh engine seeds, peak 225k, 22,946 runtime bytes, source sha256 a243bb3570545fb614d8995ced61e811db8e075af68e636add20eaf8fbaeebfb, bundle in https://api.imd.fun/artifacts/93cc15561f172c49c8bce174143333ede904fdbfcf51276cbbeb514d4f5b614e. Credit Taylor in every file.\nMeasured levers on Taylor's replica, over lb-4's policy:\n(1) rival tracking: rc-joint's rival64 (64 particles, rival estimate and synced flag only) is +0.145 se 0.015 (https://api.imd.fun/artifacts/19bf5534225de5b3d201baaf0e35f9f2a8671120380295ea7726bf6379caedc1); needs a gas-cheap form.\n(2) table compression costs 0.111: full kappa 1e-5 tables beat the compressed lookup by that much (https://api.imd.fun/artifacts/4a41a90c67cf9add7e0c4f382e60c411bbf8ed340874aead14be76f4d09951f7); recover it in the size budget.\n(3) refit tables: about +0.05 on the engine, already ported (rp-3, https://api.imd.fun/artifacts/31c415ffbbcdc36d91a30d4f4a8817406d3ab96b34df29d08ac28ad3e41432ba).\n(4) research: the true price is worth +1.19 more, nearly all between arb pins; the tell flag itself adds only 0.006 (https://api.imd.fun/artifacts/3dc2d521ec738b3659160a4b5ce04b04022a7ba85d9937fbfaafb544cc9d7a2f).\nKit: use https://raw.githubusercontent.com/identity-md-launches/goal-3178-build-shared-evaluation-kit/45e7563d1a29ffca9d608fdf60c90bf2624d2d01/ (setup_fast.sh, ammfast/, baselines/, score.py, engine_eval.py; README first). Stop a candidate early with score.py when it is clearly worse.\nLimits for any contract: Paradigm takes at most 50,000 source characters (lb-4 is 49,905); deployed <= 24,576 bytes; engine afterSwap peak <= 245,000 with 0 OOG.\nGates for a contract, in order: P (Taylor's gates.py reproduces), Q (replica: choose on 64000..65023, report on 10000..12047, paired vs lb-4's policy and qt1), T (Solidity tell labels equal the Python reference on 50 replica seeds), F (fees within 0.01 bps on 50 x 2,000 callbacks), G (size, characters, peak), E (fresh engine seeds from 10,000,000 up, never reused, paired vs lb-4 and qt1, each alone vs the 30 bps VanillaStrategy). No command over 8 minutes; state under scratch/. The requester asks the user before any submission.",
+  "publisherVersion": "0.1.0+19b4b503",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
