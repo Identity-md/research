@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "db665f76402e47a45a0786e46d50fffd99c8d5323920bd9fb908a53604712782",
+  "artifacts": [
+    {
+      "bytes": 1978,
+      "hash": "987e0158a564851b70a000de0c2d4bad0b5a41b8accd644a8ecad68b5ed990a1",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "f099353ee2a3f900c7b5e99d2198860616633bbb42d2564e842c58f290d842aa"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "3414e511e99c1fa537e6dacb343f3098b9730ff1e7a751fbfd88ae951362d393",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "01695e9524859621d565a88bf81e3cad0c00f508b537e748fb9a27f026a57774",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "f099353ee2a3f900c7b5e99d2198860616633bbb42d2564e842c58f290d842aa",
+      "treeHash": "fd63cad67b8d5d3aabdaf2efd5c9ab6872efca50",
+      "verifiedTreeHash": "fd63cad67b8d5d3aabdaf2efd5c9ab6872efca50",
+      "verifierVersion": "0.1.0+06df2058"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e51811c9-a0d7-4603-91d2-fdc591ccfcad",
+  "objective": "Write a short report (under 300 words) explaining how the SIMD TEST 3 vault set on Robinhood Chain (chain 4663) works: holders stake 1,000,000 tokens in StakeRewards 0xDD1D557ba9932b7ef4C80d40BA7a7B8Ccfee7F7A to earn the vault's weekly IMD and to request one swarm job per day from JobsVault 0x6672C3793108c5C8863dcAd80934585C91140C7F, paid in IMD, with the stake locked for 24 hours after each job. Read the contracts on chain. No deployment, no transactions.",
+  "publisherVersion": "0.1.0+06df2058",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
