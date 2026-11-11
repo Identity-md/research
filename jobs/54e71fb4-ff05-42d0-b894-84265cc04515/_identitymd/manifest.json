@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "c213e1901ed46e755f320f502757e28bb13d73c357bbdeb2b458209ffc7230c1",
+  "artifacts": [
+    {
+      "bytes": 33336,
+      "hash": "c4d47bff3b76a7ae2197336aed5263215f856d3a14b35fe4fe6f7a32a373dbe1",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "84cdadfb7492d8ec63bf974b4667ba18e4d2e8f627149a9785619a894e1bbd90"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2c736d2f8963f8a507c1f105407e5ba312f42ab34716c5f81b163e655e340023",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "84cdadfb7492d8ec63bf974b4667ba18e4d2e8f627149a9785619a894e1bbd90",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+f03a8d70"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "228636b860e0212ca9c796406585cb488ec9eaec0a9c92866812ac7dcce5e03d",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "846aac6f4c997f4d203a448ee83c355c415b62108fc0ab109642cc9d9684a805",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "54e71fb4-ff05-42d0-b894-84265cc04515",
+  "objective": "Research only. Find where the 0.12 between this network's paradigm.xyz/puzzles/amm entry (QLX5, 528.3333, 4th) and #1 (528.452) could come from, and measure each source's ceiling before anyone builds anything.\nBase: QLX5, Taylor (gtmcknight)'s solved policy (github.com/gtmcknight/amm-sim at 4812a6382311624e1506aca131ca35c378f930d9 research/solved) plus network extensions; source sha256 e183e5bc3fb794b7067703b10a7da9920267aa5f4caa968e16ca101b02338f40 in https://api.imd.fun/artifacts/1ef80bfb6d6791b877b1f4048a5e63cf2ae54153e6e8763ae3f8ab13132dfb15 (code_zb64.QLX5). Credit Taylor in every file.\nTools: the engine-faithful replica (equal to the engine within its printed precision on 512 seeds): https://api.imd.fun/artifacts/a1eef2f3dbbcbc7a1de9d15a2b22d1d25ac6d316a72efde67275b5d5a16ab16b, core https://api.imd.fun/artifacts/2ad2abf45223c729557e83e77d22de54c5db7da2be0599658144906b91dbf0f7, faster build https://api.imd.fun/artifacts/72b58a1407966f0223f06ab7c6ddd979a24fb4593f1a9b3dc43508a7f133d00b; table harness https://api.imd.fun/artifacts/9ad960e6c7e11509b81f2852f7f34d395425adc226141b0bc828ed6f5f344663; oracle-probe examples https://api.imd.fun/artifacts/6c23d23d4a21a37a502bf47a69d9f87b4c7ac84f614f2097e2488c6d5e6dd164 and https://api.imd.fun/artifacts/9d06411b9d249e074a426b33b08474edac375f300111ace5bb34928f853531e6.\nSettled, do not repeat: perfect arb/retail labels +0.011 (se 0.007); perfect router split truth +0.004 (se 0.006); every QLX5 scalar constant at a local optimum; about 45 rule ideas and combinations (best +0.026); Taylor's tables (joint 1,393-node correction +0.011 on 2,048 report seeds; small gains overlap and do not stack); residual heads; price-belief variants; rival trackers; kappa.\nRound 1, ceilings: one item each, on the replica, QLX5 given perfect knowledge of one hidden quantity at each own callback, all else unchanged: (a) the true fair price; (b) each run's true volatility; (c) each run's true retail arrival rate and size distribution; (d) the next trade's side and size; (e) everything the engine knows, with the best fee policy for that information searched or solved, not just QLX5 fed it (the full-information bound). Also one item that reads the engine source (amm_sim_rs) for any scoring or routing behaviour QLX5 does not use, and states each with a quick ceiling.\nRound 2, only for sources whose ceiling advances: a realisable estimator or rule that captures part of it, on the replica, reporting the fraction captured.\nSeeds: choose 64000..65023, report 10000..12047. result.json carries gain_vs_base, se, n, seeds, source_sha256 and advance (true only when the ceiling's mean − 2 se ≥ +0.08). Early-stop with score.py when mean + 2 se < +0.08. Batches of at most 5; every item requires {platform [linux-x64], minCpus 8}; caches under test/scratch/; full 64-character hashes in every brief.\nNo Solidity, no engine runs and no submissions in this goal.",
+  "publisherVersion": "0.1.0+f03a8d70",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
