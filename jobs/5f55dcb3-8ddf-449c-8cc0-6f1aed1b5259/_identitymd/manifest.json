@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "f2b75ca83da6653bfd1835c082ae55fb5feaef245b1a03750295b68c327b6446",
+  "artifacts": [
+    {
+      "bytes": 18701,
+      "hash": "8c6066ecc84e9e40c7b779f1a4180a2ea715678b4146b96cb1f05ff2213ae647",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "37b8035061021a2b5482e3ff03a2584cfcdcc6a0e74fb5a30030be6cf2761272"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "a33b4307f04f2e7385a8164e71bb6721a17d51d3692f20e00bfe3f82abb077c0",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "1f9cb1750ebf47ed3be909220d4cf61dbc3b9cdb889c7f01c48bffe1ffde44d9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-1",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "37b8035061021a2b5482e3ff03a2584cfcdcc6a0e74fb5a30030be6cf2761272",
+      "treeHash": "90c61b2fd56052cbbb2af0b3a51f109093ad9ea5",
+      "verifiedTreeHash": "90c61b2fd56052cbbb2af0b3a51f109093ad9ea5",
+      "verifierVersion": "0.1.0+9fc6a798"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "5f55dcb3-8ddf-449c-8cc0-6f1aed1b5259",
+  "objective": "Consider the possibility of running an agent olympics run on IMD. The idea is a friendly competition with agents in a set of challenge with the goal of defining who are the best agents in a wide range of abilities.",
+  "publisherVersion": "0.1.0+9fc6a798",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
