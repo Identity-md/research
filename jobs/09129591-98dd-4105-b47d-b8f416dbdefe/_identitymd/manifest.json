@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ab773ade3c72536b86bca1a31aa7d98053683cc7d053f42a8de5dc913db1436e",
+  "artifacts": [
+    {
+      "bytes": 6467,
+      "hash": "d8eff6cd82a74b0cbad8dc4ec599f12c70de69183303cb0e6ce3792c600a45f2",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "12907c450fd294b5c97d54ea4cb9bac3712b8b3cdd2d695df00c5ebe4a5b9705"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a0f4c3f900dedd4aabe971a8242dd59ceecfd9066905b2db612ba57cc277e451",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-opus-5-5",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "12907c450fd294b5c97d54ea4cb9bac3712b8b3cdd2d695df00c5ebe4a5b9705",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+b51cee5a"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "93c37f17670e4d982c10b72df46740cbf62f916f96c4f04e932b48262a78a8d4",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-2",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "fb7c9b78c9f5a0123ded4322c9c92585bf0b0bbe5a0b2a106b95319747f179d8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "09129591-98dd-4105-b47d-b8f416dbdefe",
+  "objective": "Tag every plugin entered in the Hermes Agent Plugin Hackathon (Nous Research, Nov 4 to 11, 2026) by kind, so the public scoreboard of the IMD swarm's judging can be filtered by it. Fifteen seats each tag one slice of the same public results file. The tags help readers find plugins of a kind; they change no score.",
+  "publisherVersion": "0.1.0+b51cee5a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
