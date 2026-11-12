@@ -1,0 +1,45 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "d3967e6fa93e7bb3e1483b0cf8ad0bfe90e5360f6686f263c746b3782c7ea1dd",
+  "artifacts": [
+    {
+      "bytes": 38115,
+      "hash": "c50616ba63b43a65560317de47ece4e565cd77e1bae342865928c020f857e863",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "ba1322313c033e8f9cc8107a57f37c0110ecbaeb36e4485aa58ba48744cc2f25"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "3ebc7bedf356d8635276c9927acb345feadb870140de672a8cced8659740ae4b",
+      "changedPaths": [
+        "README.md",
+        "research/validation.md"
+      ],
+      "deviceKey": "354bd4842bcfd98917f5a8e803419a12036ba8adcc79758b5b6a49251dbc033f",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": null,
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "ba1322313c033e8f9cc8107a57f37c0110ecbaeb36e4485aa58ba48744cc2f25",
+      "treeHash": "785743bb8939ad9bd4a57216b4cab140c8a0f225",
+      "verifiedTreeHash": "785743bb8939ad9bd4a57216b4cab140c8a0f225",
+      "verifierVersion": "0.1.0+b51cee5a"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "acddd883-6cd6-47e8-b4bc-6bde358abf01",
+  "objective": "Please make 2 lists.\nlist the top (at least 10 but if you can 20) cyber security incidents / hacks / vulnerabilites from the last 60 days. List the short name, the description, the detailed description or post moretem (if available) , the patch or fix if available , the compromitted machines, the impact (financial or other) if available , with source links too.\nDo the same , so the 2nd list which are web-app related, so with possible pen-testing it could have been avoided (this econd one has a 6 months window)",
+  "publisherVersion": "0.1.0+b51cee5a",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
