@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "aefcbe4c6cf15eab809a53f53e7d690b5b83ae68a8a975d5672b3a7b3ce3d6fc",
+  "artifacts": [
+    {
+      "bytes": 32708,
+      "hash": "26e07275c424be9e7aac360a4fcf4eea4d16c0c08bd7198940bb1254d201edfe",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "7dad7a6f70d18f591482f1edeb004a834778fd5d55c5f35dac4132f09a9edfee"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "382ebcfad965e0cdc9c6a9daa9c12ada1f849a7cd85b0bacb3c7e4f5678835d9",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "7dad7a6f70d18f591482f1edeb004a834778fd5d55c5f35dac4132f09a9edfee",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+a490e3c0"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "ca037980-a29f-4b2e-8d70-534ed6d37b84",
+  "objective": "Research the Dutch market for this proposed business and write the final report in Dutch.\n\nBUSINESS\nAn online service for Dutch entrepreneurs. Customers order a defined digital service; the owner routes the brief to the IMD swarm, reviews the output, and delivers it. The owner has Mollie and crypto experience.\n\nOBJECTIVE\nRecommend and rank ten services that address real business needs, have clear deliverables, can be objectively checked, could earn a positive margin, and have a specific multi-agent advantage over one strong ChatGPT or Claude workflow. Do not assume every entrepreneur wants the same thing. “AI-generated” is not a differentiator. Do not claim IMD is better without a controlled comparison.\n\nWORK IN PARALLEL\nSplit into checkable work packages: (1) Dutch entrepreneur needs, (2) Google Trends, (3) competitors and prices, (4) IMD and reliability, (5) payment economics, (6) ten practical tests. Have a separate reviewer check sources, calculations, unsupported claims, and consistency. If this job type cannot run in parallel, state that.\n\nDEMAND\nUse Google Trends: Netherlands, Web Search, latest five years and latest 12 months where available. Compare exact Dutch queries in sensible groups covering websites/local visibility/SEO; business cases/plans/forecasts; sales/offers/leads; marketing/content/images; automation/AI; dashboards/spreadsheets; logos/QR codes. Report query, date range, geography, search type, relative score, and direct chart links. Do not compare scores across separate charts as absolute volumes. Explain that Trends is relative interest, not search volume or buying intent; 0/missing means insufficient data.\n\nCross-check with recent KVK, CBS, government, or other authoritative sources. Give publication date, sample size, population, and limitations. Check Dutch competitors and published prices. Separate stated need, search interest, and evidence of actual purchases.\n\nRANKING\nScore ten services using: demand 25%, swarm advantage 25%, testability/reliability 20%, margin 15%, delivery/privacy/legal/support risk 15%. Explain scores; avoid false precision. For each service state:\n- Buyer, problem, exact deliverable, demand evidence, and alternatives.\n- Swarm workflow and why it may outperform one ChatGPT/Claude session; explain where it may not.\n- Fixed scope, required inputs, estimated turnaround, revision limit, dependencies.\n- Pass/fail acceptance checklist and main risks (accuracy, freshness, copyright, privacy, integration, subjective quality, expectations).\nDo not rank simple logos or QR codes highly just because they are easy; consider them as add-ons.\n\nTEST ALL TEN\nAfter ranking, produce one small sample deliverable for each service using fictional business data and comparable scope. Define acceptance criteria first. For each report the sample, checks and evidence, pass/fail by criterion, automated vs human checks, time, retries, missing inputs, blocked steps, review effort, and failures. Compare with ChatGPT/Claude only if the same brief, inputs, rubric, and comparable effort are actually used; otherwise say no comparison was performed. Samples do not prove customer demand.\n\nDo not buy anything, create paid accounts, contact businesses, submit public forms, transact, or run ads. Identify market tests that need customers or owner approval.\n\nRELIABILITY\nAssess whether 99% accepted first handoffs is realistic per service. Define this as paid orders passing the published checklist without material defects. Report separately first-pass acceptance, on-time delivery, and customer satisfaction/revisions. Propose narrow scope, input checks, objective tests, human review, retry limit, escalation, and refund/credit fallback for blocked or bad results. State what evidence is needed before advertising 99%; ten samples are not enough. Identify qualities automation cannot guarantee.\n\nPAYMENTS AND MARGIN\nCheck current official IMD documentation for price, payment, retries/refusals, guarantees, visibility, and prompt/data handling; cite date checked. Check Mollie methods and fees only from official Mollie sources. Model low/base/high EUR margins for the five best MVP services, showing assumptions/formula for price, VAT (flag for accountant), Mollie, IMD and retries, token movement, conversion/network fees, human time, revisions, support, and refunds. Do not invent costs or make unsupported legal/tax/custody claims; list questions for an accountant or lawyer. Recommend euro vs crypto customer pricing and explain trade-offs.\n\nDELIVER\nGive: executive recommendation; methods/limitations; Trends tables and links; ranked ten with scores; ten sample test results; best five MVP services and target segment; measurable go/no-go thresholds; reliability plan; low/base/high economics; risks, next actions, and dated source list. Cite material facts. Label facts, assumptions, and conclusions. Never invent data, prices, fees, guarantees, or test results.",
+  "publisherVersion": "0.1.0+a490e3c0",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
