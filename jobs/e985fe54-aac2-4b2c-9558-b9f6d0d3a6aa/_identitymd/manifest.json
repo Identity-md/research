@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6f361370ad1adbde2493baa3d09e784566157f0ec8fe65cb389ac166cd142956",
+  "artifacts": [
+    {
+      "bytes": 16262,
+      "hash": "411592c5b9ca5f43ae1f7d5e0422f02dab5bbf45f00be1c688623f95670c7698",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "0088bff30b0580257567715748fb7729c991253278e81c6f74a1e7216725f741"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "38c0c4e8e443817767b8b4b5146d22b9281fcdc1a5505b0508ae85532be1cec0",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-luna",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "0088bff30b0580257567715748fb7729c991253278e81c6f74a1e7216725f741",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+a490e3c0"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e985fe54-aac2-4b2c-9558-b9f6d0d3a6aa",
+  "objective": "Write a research backed blog post about IMD at https://imd.fun/ for my newsletter, DeFi Frontier.\n\nThe goal is to explain what IMD is, why it’s interesting and the strongest reasons someone might be bullish on the project and token. Find the substance behind the excitement and explain it clearly.\n\nThis should feel like a crypto investor working through an interesting opportunity in public.\n\nResearch leads to verify\n\nMy current understanding is that:\n\nIMD stands for Identity.md and is building a network of independently operated AI agents that collaborate on tasks.\n\nThe founder is Adam, who previously worked on Fren Pet.\n\nThere is a connection between the original Fren Pet token and IMD. Verify exactly what happened, including any migration or rebrand.\n\nThe team or its swarm placed highly in an AMM competition and won a prediction market competition associated with Paradigm. Verify the exact competitions, rankings, dates and entrant names.\n\nMatt Huang has discussed swarms and something called “Swarm Riders” or “SwarmRiders.” Find the original posts and establish the connection, if any, to IMD.\n\nThese are research leads, not established facts. Correct anything I’ve misunderstood.\n\nDivide the research across these areas\n\n1. What IMD actually does\n\nExplain the product through a concrete example. Who submits a task? Who operates the agents? How do they divide the work, communicate, check results and get paid?\n\nWhat can someone use today? What remains experimental or planned?\n\nExplain what makes this different from one developer running several agents through existing AI tools. Why does having independently operated agents coordinate through a network matter?\n\n2. The competition results\n\nFind the original competition pages, leaderboards, submissions and relevant team explanations.\n\nExplain what each competition tested, how IMD’s entry performed and what the swarm actually contributed. Identify the human involvement, AI models, compute and other resources used where disclosed.\n\nWhat do these results demonstrate about the system? What do they leave unproven?\n\nMake this one of the central sections. Translate the results into something a reader can understand without knowing how an AMM or prediction market competition is scored.\n\n3. Matt Huang and the broader swarm thesis\n\nFind Matt Huang’s original comments about swarms and SwarmRiders. Explain why they matter and how closely they relate to what IMD is building.\n\nSeparate general enthusiasm for agent swarms from a specific mention, endorsement, investment or partnership involving IMD. Do not imply any relationship that the evidence doesn’t establish.\n\nExplore the strongest argument for why this category could become important, and why IMD might be well positioned within it.\n\n4. The team, product and adoption\n\nResearch Adam’s background, the Fren Pet history and the transition to IMD.\n\nLook for evidence of execution beyond announcements: working products, public code, completed tasks, repeat users, independent agent operators, paying customers and outside developers building with it.\n\nDistinguish team reported figures from independently verifiable activity. Identify what the team appears unusually good at.\n\n5. The token\n\nExplain exactly what someone is buying exposure to.\n\nVerify the token’s identity, chain, official contract, supply, circulating market cap, FDV, allocations and future dilution. Date all market figures.\n\nWhat role does the token play today? Is it required for payments, staking, access, security or something else? Are there fees, revenue, buybacks or distributions? Which mechanisms are live versus proposed?\n\nMost importantly, explain how a successful agent network could create demand or value for this particular token. A useful product does not automatically make its token a good investment.\n\nWriting style\n\nWrite in Nomatic’s voice for The Edge:\n\nCasual, bloggy, informed and easy to follow.\n\nUse plain English and short paragraphs.\n\nExplain the basic idea before the technical details.\n\nUse natural uncertainty where appropriate, such as “my understanding,” “I think” or “the question for me is.” Don’t hedge every sentence.\n\nKeep the interesting details and cut corporate language.\n\nNo em dashes, forced metaphors, canned hooks or generic AI phrasing.\n\nOnly bold headings. Don’t scatter bold emphasis throughout the body.\n\nDon’t invent my holdings, conversations with the team or experience using the product.\n\nStructure\n\nOpen with the most interesting verified finding. Then cover:\n\nWhat is IMD?\n\nWhy am I paying attention?\n\nWhat the competition results actually show.\n\nWhy the swarm thesis could matter.\n\nWhat does this mean for the token?\n\nWhat I’d still want to understand.\n\nAdjust those headings if the research suggests a better flow. Keep background brief and spend most of the article on the strongest reasons to care.\n\nFinish with a short, specific assessment of what would strengthen or weaken the thesis. Avoid a generic risk disclaimer.\n\nEvidence standards\n\nPrioritize official documentation, original posts, competition organizers, public repositories and observable onchain activity. Link important claims directly to their sources.\n\nIf a number or claim can’t be verified, say so or leave it out. Don’t fill gaps with assumptions.\n\nProduce the finished article, followed by a short list of unresolved questions I could send to the team. Research thoroughly, but keep the article tight enough that someone would actually want to read it.",
+  "publisherVersion": "0.1.0+a490e3c0",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
