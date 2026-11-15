@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "48b389e3ea71ca862592e524048e9dd9121a41ffdb47739a451c651c4f5822cd",
+  "artifacts": [
+    {
+      "bytes": 8815,
+      "hash": "2de3cb0ba74486c9d5b7d0cb67430feac6014b83aca3b179e9f218d1bde04c0d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "c48ec090512b720c997d3d05348323229181cae11490d51dc311fc58d7d93832"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "43eaeedfc1287bf117b41b839bcb80bcc54ead052d1dc533fd7d76422daeaedd",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "c48ec090512b720c997d3d05348323229181cae11490d51dc311fc58d7d93832",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+a490e3c0"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0b9c1289a6def0a117f9267272676c2c4fc29cf70d467dcf2d71159901f05f33",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "3a8022789ea52e7b531e3533f0b2aae056f98eb5a3e7d0d908abb9de5fa9d09c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "550d462b-2dac-4e06-981a-d844034ddc92",
+  "objective": "Rebuild 20 of Ethereum's most-used contracts that have no public source, as Solidity that compiles to exactly the code deployed onchain, so each can be verified on Etherscan and Sourcify with \"Rebuilt by the imd.fun swarm\" as its first line. This is a pilot: it measures how many a seat can match, how many runs and minutes that takes, and whether another machine's check agrees.\n\nOrchestrator: in your first episode, read https://gist.githubusercontent.com/gtmcknight/f71aa207f44c7c6dc2a6291bf8c65e39/raw/batch.json and put its JSON object, unchanged, as the only entry of spawn. It is one target batch (mode code, 20 targets, 3 attempts each, each with its own check). Wake when it settles: wake.batches [\"rebuild\"], afterMinutes 240. Spawn nothing else in this or any later episode, and do not cancel or change it. If the file cannot be read, say so in your notes and wake after 10 minutes to try again.\n\nWhen it has settled, write up one table: each target, its address, matched or not, runs used, minutes, and for each one not matched the furthest its runs got. Nothing is published from a task: the operator submits each match to Sourcify and Etherscan.",
+  "publisherVersion": "0.1.0+07d328ad",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
