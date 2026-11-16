@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "20db487e257e85d0b789b626e95a3036e93be2a8cba1c33dcc6cca8dd906ace6",
+  "artifacts": [
+    {
+      "bytes": 10388,
+      "hash": "a1108dcfb5b0438fef8da09d88f4db3f307a0c352981bdcd88a01792d89b7db2",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "1c63466be9c1858467f87bed906a69ea9572a490bc3e5eaa4d3c1fa228066e17"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "1731fbfe0c4574fb6e59405e92715a96ebaf28ae80246f080a0c3368e4023bf8",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-2",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "1c63466be9c1858467f87bed906a69ea9572a490bc3e5eaa4d3c1fa228066e17",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+17d5dce1"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "739094f0e08668ee6fa7e7cc35af2027375a89a94c2040e9f5433d2de88c4b0d",
+      "evaluation": null,
+      "findings": 1,
+      "model": "claude-fable-5-2",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "2901e176c2941ef08960cf5a52fcddaa7379e86e3bc19f34b10492c774639e54",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "29dbb6b4-60d7-4de9-b0a8-9f850a79b9ad",
+  "objective": "First mode 1 owner action, on Sepolia, chain 11155111: a drawn jury of worker seats acts on the owner's Safe. The goal's owner is the Safe 0x8069c5b00e218c211d972b815b357e9f1b732ac9. It signs this goal the mandate 0x6189cd1843894ccb4a118655dacb9b8230538f46429db77c3e92353fe15144b9, mode 1, quorum 2, which lets a jury move WETH (0xfff9976782d46cc05630d1f6ebab18b2324d6b14) out of the Safe only to 0x5fc3f8fa91ecf69ee1897406706eb505b4498d2f, at most 0.01 a transfer and 0.02 a day.\n\nDo this and nothing else:\n1. Spawn one batch named pay-owner with {\"intents\":true,\"replicas\":{\"size\":2},\"chain\":{\"chainId\":11155111,\"pin\":\"head\",\"accounts\":[\"0x8069c5b00e218c211d972b815b357e9f1b732ac9\"],\"tokens\":[\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\"]}} and exactly 1 item, so two machines each read the chain at the same pinned block and write it. The item's instructions, word for word:\nRead the balance of the token 0xfff9976782d46cc05630d1f6ebab18b2324d6b14 (WETH) that the account 0x8069c5b00e218c211d972b815b357e9f1b732ac9 holds at the block .imd/reads/chain.json pins (its accounts give it, under tokens; or balanceOf at exactly that block, never latest). The intent has exactly one move, whatever the balance: {\"asset\":\"0xfff9976782d46cc05630d1f6ebab18b2324d6b14\",\"to\":\"0x5fc3f8fa91ecf69ee1897406706eb505b4498d2f\",\"amount\":\"10000000000000000\"}. Write, as your whole result, one asset-intent@1 and nothing else:\n{\"schema\":\"asset-intent@1\",\"chainId\":11155111,\"kind\":\"treasury.rebalance\",\"moves\":[<that one move>],\"approvals\":[],\"rationale\":\"<the balance you read, in the token's smallest units, and whether it covers 10000000000000000>\"}\nAddresses in lowercase, amounts as decimal strings. If the balance is short, still write the move and say so in the rationale: an intent cannot be empty, and the simulation refuses a transfer the account cannot make.\n2. When pay-owner settles (goal.json lists it under withheld: you are not handed its files, and you need not be), check goal.json's mandates. Once 0x6189cd1843894ccb4a118655dacb9b8230538f46429db77c3e92353fe15144b9 is there and active, act once: {\"name\":\"pay-owner-1\",\"intents\":\"pay-owner\",\"mandate\":\"0x6189cd1843894ccb4a118655dacb9b8230538f46429db77c3e92353fe15144b9\",\"quorum\":2}. Until it is, wake in 10 minutes and look again, at most 6 times.\n3. If the act is refused, do not retry blindly: if the refusal says an item's intent has too few counted holders, spawn pay-owner-2 the same way and act on it as pay-owner-2, once. Any other refusal: write it up and finish.\n4. Open no children, ask no oracle, set no watches, spawn no other batch.\n5. The action is a jury's: once ready it waits for its commitment on chain, its drawn jury and the Safe's Delay, which people outside this goal carry out; each change of its state wakes you. Finish once it is confirmed, failed or expired, or after six wakes that changed nothing. The write-up says each action's name, state and hash, and every refusal word for word.",
+  "publisherVersion": "0.1.0+17d5dce1",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
