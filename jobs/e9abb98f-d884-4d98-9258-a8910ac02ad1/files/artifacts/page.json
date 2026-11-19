@@ -1,0 +1,1929 @@
+{
+ "tag": "imd.fun",
+ "input": "The project at imd.fun, whose main contract is 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 on chain 1.",
+ "found": true,
+ "ambiguous": false,
+ "candidates": [],
+ "subject": {
+  "type": "project",
+  "name": "IMD (Identity.md)",
+  "one_line": "A network of AI agents, run by seat NFT holders, that people pay in IMD tokens to do jobs.",
+  "channels": [
+   {
+    "label": "IMD website",
+    "url": "https://imd.fun/",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD docs",
+    "url": "https://imd.fun/docs/",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD API reference",
+    "url": "https://imd.fun/docs/api/",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD agent guide",
+    "url": "https://imd.fun/skill.md",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD public API",
+    "url": "https://api.imd.fun/requests/capabilities",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD Explorer",
+    "url": "https://explorer.imd.fun/",
+    "tie": "none"
+   },
+   {
+    "label": "IMD GitHub organization",
+    "url": "https://github.com/Identity-md",
+    "tie": "none"
+   },
+   {
+    "label": "IMD Worker repository",
+    "url": "https://github.com/Identity-md/worker",
+    "tie": "none"
+   },
+   {
+    "label": "IMD desktop repository",
+    "url": "https://github.com/Identity-md/desktop",
+    "tie": "none"
+   },
+   {
+    "label": "Awesome IMD repository",
+    "url": "https://github.com/Identity-md/awesome-imd",
+    "tie": "none"
+   },
+   {
+    "label": "POOL4 docs",
+    "url": "https://pool4.imd.fun/docs",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD Community Coins",
+    "url": "https://communitycoins.imd.fun/",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD onchain announcements",
+    "url": "https://eth.blockscout.com/address/0x200E710aCAA6A93bbc77146026328C40F1d60fB1",
+    "tie": "none"
+   },
+   {
+    "label": "Adam (@surfcoderepeat), reported founder",
+    "url": "https://x.com/surfcoderepeat",
+    "tie": "none"
+   },
+   {
+    "label": "Taylor McKnight (@taylor_), website contributor",
+    "url": "https://x.com/taylor_",
+    "tie": "none"
+   },
+   {
+    "label": "@builtbyimd, reported swarm output feed",
+    "url": "https://x.com/builtbyimd",
+    "tie": "none"
+   },
+   {
+    "label": "@IMD_IdentityMD, self-described community account (posts the main contract address)",
+    "url": "https://x.com/IMD_IdentityMD",
+    "tie": "weak"
+   },
+   {
+    "label": "IMD API (listed in identitymd.eth ENS record)",
+    "url": "https://api.imd.fun",
+    "tie": "strong"
+   },
+   {
+    "label": "IMD backup API (listed in identitymd.eth ENS record)",
+    "url": "https://api-imd.up.railway.app",
+    "tie": "strong"
+   }
+  ],
+  "contracts": [
+   {
+    "address": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "chain": 1,
+    "role": "IMD payment token on Ethereum. Main: it is the asset the API and Intake v2 price jobs in (m-1, m-2), and the subject was given by this address.",
+    "main": true
+   },
+   {
+    "address": "0x0000ec93127baa929e58e97dd0095a2bfb38ec1d",
+    "chain": 1,
+    "role": "Seat NFT collection",
+    "main": false
+   },
+   {
+    "address": "0xa43e6f75ee006411f79ac1c84120606c2330de82",
+    "chain": 1,
+    "role": "Intake v2, accepts payments and requests",
+    "main": false
+   },
+   {
+    "address": "0x1397434cd35e8a9c8ac312a61d3a285eb31dea56",
+    "chain": 1,
+    "role": "Earlier request and payment contract",
+    "main": false
+   },
+   {
+    "address": "0xce0e6a670aa75e161d02aca3c7f00b94ca428ccb",
+    "chain": 1,
+    "role": "Delivers results from another chain",
+    "main": false
+   },
+   {
+    "address": "0x12c63b581d07093f6126bc02263c58f7eadaa96f",
+    "chain": 1,
+    "role": "LaunchFactory",
+    "main": false
+   },
+   {
+    "address": "0xa47fcb220ddd1cddda865f89029bec1b9eca3bf1",
+    "chain": 1,
+    "role": "LaunchFactory registry",
+    "main": false
+   },
+   {
+    "address": "0xff03410d0fe5fa8f7f59f743de35e333d9857120",
+    "chain": 1,
+    "role": "ProjectFactory",
+    "main": false
+   },
+   {
+    "address": "0x7c9d5ee697bff5ac4f10e2e54d3f40c44e48fe23",
+    "chain": 1,
+    "role": "ProjectFactory registry",
+    "main": false
+   },
+   {
+    "address": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+    "chain": 1,
+    "role": "Restricts pool initialization to ProjectFactory",
+    "main": false
+   },
+   {
+    "address": "0x12c9e1007262afac205567457f5826a9416a3863",
+    "chain": 1,
+    "role": "Launch pool fee settings",
+    "main": false
+   },
+   {
+    "address": "0xb6d0a187b050fa5bb0b87033a203f37becf4a775",
+    "chain": 1,
+    "role": "Work receipts and reviews",
+    "main": false
+   },
+   {
+    "address": "0xde152afb7db5373f34876e1499fbd893a82dd336",
+    "chain": 1,
+    "role": "ERC-8004 adapter",
+    "main": false
+   },
+   {
+    "address": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+    "chain": 4663,
+    "role": "Robinhood Chain payment token",
+    "main": false
+   },
+   {
+    "address": "0xa43e6f75ee006411f79ac1c84120606c2330de82",
+    "chain": 4663,
+    "role": "Intake v2, accepts payments and requests",
+    "main": false
+   },
+   {
+    "address": "0x1397434cd35e8a9c8ac312a61d3a285eb31dea56",
+    "chain": 4663,
+    "role": "Earlier request and payment contract",
+    "main": false
+   },
+   {
+    "address": "0xce0e6a670aa75e161d02aca3c7f00b94ca428ccb",
+    "chain": 4663,
+    "role": "Delivers results from another chain",
+    "main": false
+   },
+   {
+    "address": "0xa25b02a1e93903b790e6aaf7da1b8b8d50294645",
+    "chain": 4663,
+    "role": "LaunchFactory",
+    "main": false
+   },
+   {
+    "address": "0x842e9bcff1e68566d45697a84f5b38c1c7766edb",
+    "chain": 4663,
+    "role": "LaunchFactory registry",
+    "main": false
+   },
+   {
+    "address": "0x9c9d2fcb75c2c132c0ac0c42df3819a42347265e",
+    "chain": 4663,
+    "role": "ProjectFactory",
+    "main": false
+   },
+   {
+    "address": "0xf52bbe066b7ad2d28c2195d066ea08dcbca88406",
+    "chain": 4663,
+    "role": "ProjectFactory registry",
+    "main": false
+   },
+   {
+    "address": "0x19bec7c2e1b2aadaf67b259744751a9960d66000",
+    "chain": 4663,
+    "role": "Restricts pool initialization to ProjectFactory",
+    "main": false
+   },
+   {
+    "address": "0xf053525ffe8f8d8973339e36ee8d455690fb73cb",
+    "chain": 4663,
+    "role": "Launch pool fee settings",
+    "main": false
+   },
+   {
+    "address": "0x56bcf2a5f47710649a4091219ef0b56e2d1b58bf",
+    "chain": 11155111,
+    "role": "Sepolia test payment token",
+    "main": false
+   },
+   {
+    "address": "0x44a1cd38474fb1748400e7deb5f8d786cce3f89a",
+    "chain": 11155111,
+    "role": "Retired test payment token",
+    "main": false
+   },
+   {
+    "address": "0xa0443799c320e16c80801c9c1911f3571260287f",
+    "chain": 11155111,
+    "role": "Test seat NFT collection",
+    "main": false
+   },
+   {
+    "address": "0xa43e6f75ee006411f79ac1c84120606c2330de82",
+    "chain": 11155111,
+    "role": "Intake v2, accepts payments and requests",
+    "main": false
+   },
+   {
+    "address": "0x1397434cd35e8a9c8ac312a61d3a285eb31dea56",
+    "chain": 11155111,
+    "role": "Earlier request and payment contract",
+    "main": false
+   },
+   {
+    "address": "0xce0e6a670aa75e161d02aca3c7f00b94ca428ccb",
+    "chain": 11155111,
+    "role": "Delivers results from another chain",
+    "main": false
+   },
+   {
+    "address": "0x315752fee5cbcaa00333e0d4d91e0cd69429e908",
+    "chain": 11155111,
+    "role": "LaunchFactory",
+    "main": false
+   },
+   {
+    "address": "0x78ba7bdcc66715d0f6e425b4700207a0b75ad5a4",
+    "chain": 11155111,
+    "role": "LaunchFactory registry",
+    "main": false
+   },
+   {
+    "address": "0x84cf2bc1dc2af577dba5d62e26f90d041ca38f7a",
+    "chain": 11155111,
+    "role": "ProjectFactory",
+    "main": false
+   },
+   {
+    "address": "0x90aaedd35073e2a31861276e58081251a601aad9",
+    "chain": 11155111,
+    "role": "ProjectFactory registry",
+    "main": false
+   },
+   {
+    "address": "0xa0602cb30558d5dd17415b6268a4feea3a0ca000",
+    "chain": 11155111,
+    "role": "Restricts pool initialization to ProjectFactory",
+    "main": false
+   },
+   {
+    "address": "0x428ff16d1bb25d6674463881ed6a62bd09e30584",
+    "chain": 11155111,
+    "role": "Launch pool fee settings",
+    "main": false
+   },
+   {
+    "address": "0x7621630cb63a73a194f45a3e6801b8c6a7ec2f92",
+    "chain": 11155111,
+    "role": "ERC-8004 adapter",
+    "main": false
+   },
+   {
+    "address": "0xFF0C532FDB8Cd566Ae169C1CB157ff2Bdc83E105",
+    "chain": 8453,
+    "role": "Original Base token",
+    "main": false
+   },
+   {
+    "address": "0xab152db8aaC047b6757fFCF495FfE88d7712690A",
+    "chain": 8453,
+    "role": "Base bridge adapter",
+    "main": false
+   },
+   {
+    "address": "0x9efa934d9fad4ae28c998a40195646b965a97247",
+    "chain": 1,
+    "role": "sIMD staking vault",
+    "main": false
+   },
+   {
+    "address": "0xc6c965bd164c483e87d0b550671798e9a3602840",
+    "chain": 1,
+    "role": "POOL4 market hook",
+    "main": false
+   },
+   {
+    "address": "0x9046739E1535B40EfBe6AB3f45d0024b690eCA30",
+    "chain": 1,
+    "role": "POOL4 reward distributor",
+    "main": false
+   },
+   {
+    "address": "0xe6D3De6daEAf327fCA42745f1998FcD989e00884",
+    "chain": 1,
+    "role": "POOL4 reward dripper",
+    "main": false
+   },
+   {
+    "address": "0xe29386719C155B6847aD5a4E97C6674f10ffc750",
+    "chain": 1,
+    "role": "IMD burn executor",
+    "main": false
+   },
+   {
+    "address": "0x73d1ae084F04f793A5bbd6B623d74400C9Fc3f42",
+    "chain": 1,
+    "role": "Community Coins factory",
+    "main": false
+   },
+   {
+    "address": "0x51768F5dA32BA2008304cC81674da51aCb802888",
+    "chain": 1,
+    "role": "Community Coins trading hook",
+    "main": false
+   }
+  ]
+ },
+ "infobox": [
+  {
+   "label": "Website",
+   "value": "imd.fun",
+   "url": "https://imd.fun/",
+   "lines": [
+    "p-4",
+    "wd-1"
+   ]
+  },
+  {
+   "label": "Token (symbol and contract)",
+   "value": "IMD (Identity.md), 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+   "url": "https://eth.blockscout.com/address/0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+   "lines": [
+    "oc-1",
+    "oc-2"
+   ]
+  },
+  {
+   "label": "Main contract",
+   "value": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 on Ethereum",
+   "url": "https://eth.blockscout.com/address/0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+   "lines": [
+    "oc-2",
+    "m-2"
+   ]
+  },
+  {
+   "label": "Chains",
+   "value": "Ethereum, Robinhood Chain",
+   "url": null,
+   "lines": [
+    "oc-2",
+    "oc-9"
+   ]
+  },
+  {
+   "label": "Supply or seats",
+   "value": "About 4,234,348 IMD (block 26,451,648); 2,000 seat NFTs, all issued",
+   "url": null,
+   "lines": [
+    "oc-4",
+    "oc-5",
+    "oc-6"
+   ]
+  },
+  {
+   "label": "Price",
+   "value": "0.5 IMD to open a job",
+   "url": "https://imd.fun/docs/api/",
+   "lines": [
+    "m-1",
+    "m-2",
+    "m-3"
+   ]
+  },
+  {
+   "label": "Deployed by",
+   "value": "0x047F606fD5b2BaA5f5C6c4aB8958E45CB6B054B7",
+   "url": "https://eth.blockscout.com/address/0x047F606fD5b2BaA5f5C6c4aB8958E45CB6B054B7",
+   "lines": [
+    "h-2"
+   ]
+  },
+  {
+   "label": "Founder or creator",
+   "value": "Adam (@surfcoderepeat), according to Bankless",
+   "url": "https://x.com/surfcoderepeat",
+   "lines": [
+    "p-1"
+   ]
+  },
+  {
+   "label": "Contributors",
+   "value": "@taylor_ (self-described contributor)",
+   "url": "https://x.com/taylor_",
+   "lines": [
+    "p-2"
+   ]
+  },
+  {
+   "label": "Official accounts",
+   "value": "Announcement wallet 0x200E710aCAA6A93bbc77146026328C40F1d60fB1 (on-chain messages)",
+   "url": "https://eth.blockscout.com/address/0x200E710aCAA6A93bbc77146026328C40F1d60fB1",
+   "lines": [
+    "p-4",
+    "p-5"
+   ]
+  },
+  {
+   "label": "Launched",
+   "value": "Token created October 4, 2025",
+   "url": null,
+   "lines": [
+    "h-1"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "IMD is a network of AI agents that you can hire for jobs such as building and hosting a website, writing a researched report, or giving a signed answer a smart contract can use.",
+   "lines": [
+    "wd-1",
+    "wd-3",
+    "wd-4",
+    "wd-5"
+   ],
+   "paragraph": 1
+  },
+  {
+   "text": "You describe what you want in plain words, and other agents review the work before it is delivered.",
+   "lines": [
+    "wd-2",
+    "hw-1"
+   ],
+   "paragraph": 1
+  },
+  {
+   "text": "The agents run on the own machines of people who hold one of 2,000 seat NFTs, and a news site reported that those holders pay for the computing power.",
+   "lines": [
+    "wd-6",
+    "oc-5",
+    "oc-6",
+    "wd-7"
+   ],
+   "paragraph": 1
+  },
+  {
+   "text": "Opening a job costs half an IMD token, paid from a wallet, either on the explorer's launch page or straight through the project's request contract.",
+   "lines": [
+    "m-1",
+    "m-2",
+    "m-3",
+    "hw-2",
+    "hw-3"
+   ],
+   "paragraph": 2
+  },
+  {
+   "text": "The project's trading pool charges a 1% swap fee and says it burns most of the tokens it removes, and a contributor says launch fees also feed the burn.",
+   "lines": [
+    "m-6",
+    "m-5",
+    "m-7"
+   ],
+   "paragraph": 2
+  },
+  {
+   "text": "A news site names a person who posts as Adam as the creator, and a second person says they contribute; the creator has posted that there are no employees.",
+   "lines": [
+    "p-1",
+    "p-2",
+    "p-3"
+   ],
+   "paragraph": 3
+  },
+  {
+   "text": "One thing is unclear: the project's docs say its contract code is not verified, while a block explorer shows the token as verified.",
+   "lines": [
+    "oc-12",
+    "oc-13"
+   ],
+   "paragraph": 3
+  }
+ ],
+ "lines": [
+  {
+   "id": "wd-1",
+   "section": "what_it_does",
+   "text": "IMD describes itself as a network of AI agents that people can hire for jobs.",
+   "kind": "statement",
+   "by": "IMD agent guide",
+   "sources": [
+    "skill"
+   ],
+   "quote": "IMD is a network of AI agents",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:wd-1"
+   ],
+   "links": []
+  },
+  {
+   "id": "wd-2",
+   "section": "what_it_does",
+   "text": "Customers describe the work they want in plain words.",
+   "kind": "statement",
+   "by": "IMD docs",
+   "sources": [
+    "docs"
+   ],
+   "quote": "in plain words.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:wd-2"
+   ],
+   "links": []
+  },
+  {
+   "id": "wd-3",
+   "section": "what_it_does",
+   "text": "IMD offers to build a website from a customer's brief and host it.",
+   "kind": "statement",
+   "by": "IMD docs",
+   "sources": [
+    "docs"
+   ],
+   "quote": "website built from your brief, and hosted for you.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:wd-3",
+    "F2:website-service"
+   ],
+   "links": []
+  },
+  {
+   "id": "wd-4",
+   "section": "what_it_does",
+   "text": "IMD offers researched reports that answer a customer's question.",
+   "kind": "statement",
+   "by": "IMD docs",
+   "sources": [
+    "docs"
+   ],
+   "quote": "A researched answer to your question",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F2:report-service"
+   ],
+   "links": []
+  },
+  {
+   "id": "wd-5",
+   "section": "what_it_does",
+   "text": "IMD offers signed answers from a panel of agents for smart contracts to use.",
+   "kind": "statement",
+   "by": "IMD docs",
+   "sources": [
+    "docs"
+   ],
+   "quote": "A signed answer from a panel of agents, for a contract to use.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:wd-4",
+    "F2:oracle-service"
+   ],
+   "links": []
+  },
+  {
+   "id": "wd-6",
+   "section": "what_it_does",
+   "text": "The agents are run by holders of IMD seat NFTs on their own machines.",
+   "kind": "statement",
+   "by": "IMD agent guide",
+   "sources": [
+    "skill"
+   ],
+   "quote": "each run by the holder of an IMD NFT on their own machine.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:wd-5",
+    "F2:workers"
+   ],
+   "links": []
+  },
+  {
+   "id": "wd-7",
+   "section": "what_it_does",
+   "text": "Bankless reported that seat holders pay for the computing power their agents use.",
+   "kind": "claim",
+   "by": "Bankless",
+   "sources": [
+    "bankless"
+   ],
+   "quote": "holders pay for the compute.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:wd-6"
+   ],
+   "links": []
+  },
+  {
+   "id": "hw-1",
+   "section": "how_it_works",
+   "text": "IMD says other agents review the work before it is delivered.",
+   "kind": "statement",
+   "by": "IMD agent guide",
+   "sources": [
+    "skill"
+   ],
+   "quote": "has other agents review it",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:hw-1",
+    "F2:review"
+   ],
+   "links": []
+  },
+  {
+   "id": "hw-2",
+   "section": "how_it_works",
+   "text": "A wallet holder can start a job from the explorer's launch page.",
+   "kind": "statement",
+   "by": "IMD API reference",
+   "sources": [
+    "api"
+   ],
+   "quote": "from the launch page",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:hw-2"
+   ],
+   "links": []
+  },
+  {
+   "id": "hw-3",
+   "section": "how_it_works",
+   "text": "The Intake contract takes a payment and a request in one transaction.",
+   "kind": "statement",
+   "by": "IMD API reference",
+   "sources": [
+    "api"
+   ],
+   "quote": "Takes a payment and an ask in one transaction.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:hw-3",
+    "F2:intake"
+   ],
+   "links": []
+  },
+  {
+   "id": "m-1",
+   "section": "money",
+   "text": "IMD lists a price of 0.5 IMD to open a job.",
+   "kind": "statement",
+   "by": "IMD API reference",
+   "sources": [
+    "api",
+    "capabilities"
+   ],
+   "quote": "Pay 0.5 IMD from a wallet to open work",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F2:job-price"
+   ],
+   "links": [
+    {
+     "type": "confirms",
+     "target": "m-2"
+    },
+    {
+     "type": "confirms",
+     "target": "A1"
+    }
+   ]
+  },
+  {
+   "id": "m-2",
+   "section": "money",
+   "text": "The Intake v2 contract lists a price of 0.5 IMD to open a job paid in IMD.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "intake-source",
+    "api",
+    "token-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xa43e6f75ee006411f79ac1c84120606c2330de82 'priceOf(bytes32,address)(uint256)' 0x6a6f622e6f70656e406a6f622d31000000000000000000000000000000000000 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest. Divide the result by 10^18.",
+   "fact": {
+    "name": "Job price",
+    "value": "500000000000000000",
+    "unit": "IMD base units (0.5 IMD)"
+   },
+   "from": [
+    "F1:wd-7"
+   ],
+   "links": []
+  },
+  {
+   "id": "m-3",
+   "section": "money",
+   "text": "One recorded Ethereum job payment was 0.5 IMD.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "receipt-pay",
+    "api",
+    "token-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,446,420. Run cast receipt 0xe5fc9620bf1853a39dbeb806acbc164cccf37f5cece55d5e67230b658504ed1a --json --rpc-url https://eth.drpc.org. Find the IMD Transfer log at index 0x281 and decode data as uint256; the adjacent Intake Requested log at 0x282 has job.open@job-1 in topics[3]. Divide by 10^18. Receipts do not need archive state.",
+   "fact": {
+    "name": "Example job payment",
+    "value": "500000000000000000",
+    "unit": "IMD base units (0.5 IMD)"
+   },
+   "from": [
+    "F1:m-1"
+   ],
+   "links": []
+  },
+  {
+   "id": "m-4",
+   "section": "money",
+   "text": "The DeFi Frontier author reported paying 0.5 IMD for a report about IMD.",
+   "kind": "claim",
+   "by": "Nomatic, DeFi Frontier",
+   "sources": [
+    "edge"
+   ],
+   "quote": "I paid 0.5 IMD to have the IMD swarm write a report on itself",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:m-2"
+   ],
+   "links": [
+    {
+     "type": "confirms",
+     "target": "m-2"
+    }
+   ]
+  },
+  {
+   "id": "m-5",
+   "section": "money",
+   "text": "POOL4 says it burns 85% of each IMD batch it removes from its pool.",
+   "kind": "statement",
+   "by": "POOL4 docs",
+   "sources": [
+    "pool"
+   ],
+   "quote": "Of each batch removed, 85% is burned",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F2:pool-burn"
+   ],
+   "links": []
+  },
+  {
+   "id": "m-6",
+   "section": "money",
+   "text": "POOL4 documents a 1% swap fee.",
+   "kind": "statement",
+   "by": "POOL4 docs",
+   "sources": [
+    "pool"
+   ],
+   "quote": "Normal Uniswap math, 1% fee.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F2:pool-fee"
+   ],
+   "links": []
+  },
+  {
+   "id": "m-7",
+   "section": "money",
+   "text": "@taylor_ posted that launch fees on Ethereum and Robinhood Chain now feed a burn of IMD.",
+   "kind": "claim",
+   "by": "@taylor_",
+   "sources": [
+    "s5"
+   ],
+   "quote": "Launch fees on Ethereum and Robinhood Chain now feed the burn: IMD is burned, ETH buys IMD to burn.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F3:L22"
+   ],
+   "links": []
+  },
+  {
+   "id": "p-1",
+   "section": "people",
+   "text": "Bankless identifies @surfcoderepeat, who posts as Adam, as IMD's creator.",
+   "kind": "claim",
+   "by": "Bankless",
+   "sources": [
+    "bankless",
+    "adam"
+   ],
+   "quote": "IMD was created by Adam (@surfcoderepeat)",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:p-1"
+   ],
+   "links": []
+  },
+  {
+   "id": "p-2",
+   "section": "people",
+   "text": "@taylor_ says they contribute to imd.fun, and @surfcoderepeat said @taylor_ redesigned the site and explorer.",
+   "kind": "claim",
+   "by": "@taylor_; @surfcoderepeat",
+   "sources": [
+    "s4",
+    "adam"
+   ],
+   "quote": "About me: I'm a contributor to imd.fun",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F3:L15",
+    "F1:p-2"
+   ],
+   "links": []
+  },
+  {
+   "id": "p-3",
+   "section": "people",
+   "text": "@surfcoderepeat posted that IMD has no employees.",
+   "kind": "claim",
+   "by": "@surfcoderepeat",
+   "sources": [
+    "s1"
+   ],
+   "quote": "no employees but you can just take ownership and do whatever you want",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F3:L1"
+   ],
+   "links": []
+  },
+  {
+   "id": "p-4",
+   "section": "people",
+   "text": "The wallet named as IMD's announcement channel published the imd.fun site address in an Ethereum transaction.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "tx-site",
+    "bankless",
+    "awesome"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 25,779,657. Run cast tx 0x2d62675493a7edf7a15a840803f72b516b4f70395d9228923211269af604d379 --json --rpc-url https://eth.drpc.org. Check from equals 0x200E710aCAA6A93bbc77146026328C40F1d60fB1, then decode input as UTF-8. Transactions do not need archive state.",
+   "fact": {
+    "name": "Announced site",
+    "value": "https://www.imd.fun/",
+    "unit": "URL"
+   },
+   "from": [
+    "F1:p-4"
+   ],
+   "links": []
+  },
+  {
+   "id": "p-5",
+   "section": "people",
+   "text": "The same announcement wallet sent an on-chain message naming imd.fun.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "announcement",
+    "awesome",
+    "rpc-eth"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,021,512. Fetch transaction 0xb1061a2a5f777910d69671439a6042621d5af58ab44868b3a2b07b0308e51e8d with cast tx --json --rpc-url https://ethereum-rpc.publicnode.com, confirm from is 0x200E710aCAA6A93bbc77146026328C40F1d60fB1, then decode the input as UTF-8.",
+   "fact": {
+    "name": "Announcement message",
+    "value": "names imd.fun",
+    "unit": "text"
+   },
+   "from": [
+    "F2:announcement-tx"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-1",
+   "section": "on_chain",
+   "text": "The main token reports the name Identity.md.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 'name()(string)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "Token name",
+    "value": "Identity.md",
+    "unit": "string"
+   },
+   "from": [
+    "F2:eth-name"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-2",
+   "section": "on_chain",
+   "text": "The main token reports the ticker IMD.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "token-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 'symbol()(string)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "Token ticker",
+    "value": "IMD",
+    "unit": "ticker"
+   },
+   "from": [
+    "F1:oc-symbol",
+    "F2:eth-symbol"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-3",
+   "section": "on_chain",
+   "text": "The main token uses 18 decimal places.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "token-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 'decimals()(uint8)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "Token decimals",
+    "value": "18",
+    "unit": "decimal places"
+   },
+   "from": [
+    "F1:oc-decimals"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-4",
+   "section": "on_chain",
+   "text": "The main token's total supply was about 4,234,348 IMD at the block checked.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 'totalSupply()(uint256)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest. Supply changes over time; an earlier report read 4241494529343000000000000 at block 26,445,903.",
+   "fact": {
+    "name": "Token total supply",
+    "value": "4234347634825000000000000",
+    "unit": "IMD base units at block 26451648"
+   },
+   "from": [
+    "F2:eth-supply"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-5",
+   "section": "on_chain",
+   "text": "The seat NFT contract caps seats at 2,000.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "nft-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0x0000ec93127baa929e58e97dd0095a2bfb38ec1d 'MAX_SUPPLY()(uint256)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "Seat cap",
+    "value": "2000",
+    "unit": "NFTs"
+   },
+   "from": [
+    "F1:oc-seats"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-6",
+   "section": "on_chain",
+   "text": "The seat NFT contract reports 2,000 seats in existence.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "nft-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0x0000ec93127baa929e58e97dd0095a2bfb38ec1d 'totalSupply()(uint256)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "Seats issued",
+    "value": "2000",
+    "unit": "NFTs"
+   },
+   "from": [
+    "F2:seat-count"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-7",
+   "section": "on_chain",
+   "text": "The identitymd.eth ENS name points to the seat NFT contract.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "nft-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xf29100983e058b709f3d539b0c765937b804ac15 'addr(bytes32)(address)' $(cast namehash identitymd.eth) --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "identitymd.eth address",
+    "value": "0x0000ec93127baa929e58e97dd0095a2bfb38ec1d",
+    "unit": "address"
+   },
+   "from": [
+    "F1:oc-ens"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-8",
+   "section": "on_chain",
+   "text": "The identitymd.eth ENS record lists api.imd.fun and a backup API host as IMD servers.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xf29100983e058b709f3d539b0c765937b804ac15 'text(bytes32,string)(string)' $(cast namehash identitymd.eth) imd.servers --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "identitymd.eth imd.servers",
+    "value": "https://api.imd.fun,https://api-imd.up.railway.app",
+    "unit": "URL list"
+   },
+   "from": [
+    "F2:ens-api",
+    "F2:ens-backup"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-9",
+   "section": "on_chain",
+   "text": "The Robinhood Chain payment token reports the ticker IMD.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "robinhood"
+   ],
+   "quote": null,
+   "rerun": "Robinhood Chain (chain 4663), block 117,856,010. Run cast call 0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127 'symbol()(string)' --block 117856010 --rpc-url https://rpc.mainnet.chain.robinhood.com, or use --block latest if that block is outside the endpoint's state window.",
+   "fact": {
+    "name": "Robinhood token ticker",
+    "value": "IMD",
+    "unit": "ticker"
+   },
+   "from": [
+    "F2:robin-symbol"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-10",
+   "section": "on_chain",
+   "text": "The sIMD staking vault holds the main IMD token as its underlying asset.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0x9efa934d9fad4ae28c998a40195646b965a97247 'asset()(address)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest.",
+   "fact": {
+    "name": "sIMD underlying asset",
+    "value": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "unit": "address"
+   },
+   "from": [
+    "F2:vault-asset"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-11",
+   "section": "on_chain",
+   "text": "The POOL4 hook's owner is the wallet that deployed the main token.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "tx-create"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 26,451,648 or latest. Run cast call 0xc6c965bd164c483e87d0b550671798e9a3602840 'owner()(address)' --block 26451648 --rpc-url https://ethereum-rpc.publicnode.com. A recent block works on a free RPC; once block 26451648 leaves the endpoint's recent state window use an archive RPC or run with --block latest. Compare with the from field of cast tx 0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b.",
+   "fact": {
+    "name": "POOL4 hook owner",
+    "value": "0x047F606fD5b2BaA5f5C6c4aB8958E45CB6B054B7",
+    "unit": "address"
+   },
+   "from": [
+    "F2:hook-owner"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-12",
+   "section": "on_chain",
+   "text": "IMD's API docs say none of the listed contract sources are verified on explorers.",
+   "kind": "statement",
+   "by": "IMD API reference",
+   "sources": [
+    "api"
+   ],
+   "quote": "None of the sources are verified on the explorers yet.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:oc-docs"
+   ],
+   "links": []
+  },
+  {
+   "id": "oc-13",
+   "section": "on_chain",
+   "text": "Blockscout marks the main IMD token's source code as verified.",
+   "kind": "claim",
+   "by": "Blockscout",
+   "sources": [
+    "token-source"
+   ],
+   "quote": "\"is_verified\":true",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F1:oc-verified"
+   ],
+   "links": []
+  },
+  {
+   "id": "h-1",
+   "section": "history",
+   "text": "The main IMD token was created on October 4, 2025.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "tx-create",
+    "token-source"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 23,501,863. Run cast receipt 0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b --json --rpc-url https://ethereum-rpc.publicnode.com, check contractAddress is 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 and blockNumber is 23501863, then cast block 23501863 timestamp. No archive state needed.",
+   "fact": {
+    "name": "Token creation date",
+    "value": "2025-10-04 (block 23501863)",
+    "unit": "UTC date"
+   },
+   "from": [
+    "F1:h-deploy",
+    "F2:eth-deployment"
+   ],
+   "links": []
+  },
+  {
+   "id": "h-2",
+   "section": "history",
+   "text": "One wallet sent the transaction that created the main IMD token.",
+   "kind": "proof",
+   "by": null,
+   "sources": [
+    "rpc-eth",
+    "tx-create"
+   ],
+   "quote": null,
+   "rerun": "Ethereum mainnet (chain 1), block 23,501,863. Run cast tx 0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b from --rpc-url https://ethereum-rpc.publicnode.com. No archive state needed.",
+   "fact": {
+    "name": "Token deployer",
+    "value": "0x047F606fD5b2BaA5f5C6c4aB8958E45CB6B054B7",
+    "unit": "address"
+   },
+   "from": [
+    "F1:h-deployer"
+   ],
+   "links": []
+  },
+  {
+   "id": "h-3",
+   "section": "history",
+   "text": "IMD's timeline says the token was renamed from FP to VIBE to IMD in May 2026.",
+   "kind": "statement",
+   "by": "IMD docs",
+   "sources": [
+    "docs"
+   ],
+   "quote": "Renamed $FP to $VIBE to $IMD.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F2:token-renames"
+   ],
+   "links": []
+  },
+  {
+   "id": "h-4",
+   "section": "history",
+   "text": "IMD dates the start of Intake version 2 to October 10, 2026.",
+   "kind": "statement",
+   "by": "IMD API reference",
+   "sources": [
+    "api"
+   ],
+   "quote": "Version 2 has been live since 2026-10-10.",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F2:intake-v2"
+   ],
+   "links": []
+  },
+  {
+   "id": "h-5",
+   "section": "history",
+   "text": "@taylor_ posted that the imd.fun swarm reviewed every entry to Nous Research's Hermes hackathon.",
+   "kind": "claim",
+   "by": "@taylor_",
+   "sources": [
+    "s4"
+   ],
+   "quote": "We pointed the imd.fun swarm at every submission to @NousResearch's Hermes hackathon",
+   "rerun": null,
+   "fact": null,
+   "from": [
+    "F3:L7"
+   ],
+   "links": []
+  }
+ ],
+ "differs": [
+  {
+   "lines": [
+    "oc-12",
+    "oc-13"
+   ],
+   "why": "Read on the same day, the API docs say no listed source is verified on explorers, while Blockscout marks the main token's source as verified. Both cannot be true of the token at once.",
+   "level": "conflict"
+  }
+ ],
+ "dropped": [
+  {
+   "id": "F1:hw-4",
+   "why": "Personal-site listing is weaker than the contributor claim kept in p-2; left out under the 8-claim limit."
+  },
+  {
+   "id": "F1:p-3",
+   "why": "Claim from a self-described community account; left out under the 8-claim limit."
+  },
+  {
+   "id": "F1:p-5",
+   "why": "Repository link announcement; p-4 and p-5 already show the announcement wallet; left out under the 40-line limit."
+  },
+  {
+   "id": "F1:oc-coin-hook",
+   "why": "Contract-wiring detail; left out under the 40-line limit."
+  },
+  {
+   "id": "F1:h-bridge",
+   "why": "Bankless claim about the Fren Pet bridge; left out under the 8-claim limit (h-3 covers the token's earlier names)."
+  },
+  {
+   "id": "F2:announcements",
+   "why": "Same claim as F3:L29 about the announcement wallet; both left out under the 8-claim limit; p-4 and p-5 prove the wallet's messages."
+  },
+  {
+   "id": "F2:base-symbol",
+   "why": "Base token detail; left out under the 40-line limit."
+  },
+  {
+   "id": "F2:bridge-asset",
+   "why": "Base bridge wiring detail; left out under the 40-line limit."
+  },
+  {
+   "id": "F2:vault-owner",
+   "why": "Vault admin detail; left out under the 40-line limit."
+  },
+  {
+   "id": "F2:fren-pet-address",
+   "why": "Claim from Fren Pet docs; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L2",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L3",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L4",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L5",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L6",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L8",
+   "why": "Detail of the hackathon review in h-5; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L9",
+   "why": "Detail of the hackathon review in h-5; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L10",
+   "why": "Detail of the hackathon review in h-5; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L11",
+   "why": "Detail of the hackathon review in h-5; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L12",
+   "why": "Detail of the hackathon review in h-5; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L13",
+   "why": "Detail of the hackathon review in h-5; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L14",
+   "why": "Self-description quoted in a personal post, partly promotional; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L16",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L17",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L18",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L19",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L20",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L21",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L23",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L24",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L25",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L26",
+   "why": "From the Identity-md GitHub repository, which has no strong or weak tie, so at most a claim; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L27",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L28",
+   "why": "Repository claim about the burn hook; m-5 carries the same 85% burn from POOL4 docs."
+  },
+  {
+   "id": "F3:L29",
+   "why": "Same as F2:announcements; left out under the 8-claim limit."
+  },
+  {
+   "id": "F3:L30",
+   "why": "Repository claim of 2,000 seats is settled by proofs oc-5 and oc-6; dropped as covered by them."
+  },
+  {
+   "id": "F3:L31",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L32",
+   "why": "Left out to keep the page within the 40-line and 8-claim limits; lower priority for a newcomer than the lines kept."
+  },
+  {
+   "id": "F3:L33",
+   "why": "From the Identity-md GitHub repository (claim at most); left out under the 8-claim limit."
+  }
+ ],
+ "open_questions": [
+  "Which X accounts, if any, does a contract, ENS record or deployer wallet point to? None was found, so @surfcoderepeat and @taylor_ have tie none.",
+  "Who operates @builtbyimd and @IMD_IdentityMD?",
+  "What does an operator typically pay for a seat, an AI plan and the machine that runs it?",
+  "Panel answer A3 says @surfcoderepeat posted that tokens launched through the swarm can be paired with imdusd; the post itself was not read, so no line was written.",
+  "What is the circulating IMD supply across all chains after counting tokens locked in the Base bridge?",
+  "Who controls the deployer wallet, and which deployed contracts are still in use?"
+ ],
+ "sources": [
+  {
+   "id": "home",
+   "ref": "https://imd.fun/",
+   "type": "website",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "docs",
+   "ref": "https://imd.fun/docs/",
+   "type": "documentation",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "api",
+   "ref": "https://imd.fun/docs/api/",
+   "type": "documentation",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "skill",
+   "ref": "https://imd.fun/skill.md",
+   "type": "documentation",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "capabilities",
+   "ref": "https://api.imd.fun/requests/capabilities",
+   "type": "api",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "explorer",
+   "ref": "https://explorer.imd.fun/",
+   "type": "website",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "pool",
+   "ref": "https://pool4.imd.fun/docs",
+   "type": "documentation",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "community-app",
+   "ref": "https://communitycoins.imd.fun/assets/index-Qo3WddoZ.js",
+   "type": "website",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "coin-factory",
+   "ref": "https://eth.blockscout.com/api/v2/smart-contracts/0x73d1ae084F04f793A5bbd6B623d74400C9Fc3f42",
+   "type": "explorer",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "github",
+   "ref": "https://github.com/Identity-md",
+   "type": "repository",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "worker",
+   "ref": "https://github.com/Identity-md/worker",
+   "type": "repository",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "desktop",
+   "ref": "https://github.com/Identity-md/desktop",
+   "type": "repository",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "awesome",
+   "ref": "https://github.com/Identity-md/awesome-imd",
+   "type": "repository",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "bankless",
+   "ref": "https://www.bankless.com/read/inside-imd-ethereum-s-new-ai-swarm-experiment",
+   "type": "article",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "edge",
+   "ref": "https://www.the-edge.xyz/p/imd-riding-the-swarm",
+   "type": "article",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "other-site",
+   "ref": "https://imdcoin.fun/",
+   "type": "website",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "adam",
+   "ref": "https://x.com/surfcoderepeat/status/2101158010718490945",
+   "type": "post",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "api.fxtwitter.com"
+  },
+  {
+   "id": "adam-wallet",
+   "ref": "https://x.com/surfcoderepeat/status/2082143148214530256",
+   "type": "post",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "api.fxtwitter.com"
+  },
+  {
+   "id": "taylor",
+   "ref": "https://taylor.fyi/",
+   "type": "website",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "taylor-x",
+   "ref": "https://x.com/taylor_",
+   "type": "profile",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "teapawt.org"
+  },
+  {
+   "id": "community-x",
+   "ref": "https://x.com/IMD_IdentityMD",
+   "type": "profile",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "teapawt.org"
+  },
+  {
+   "id": "feed",
+   "ref": "https://x.com/builtbyimd",
+   "type": "profile",
+   "read_at": "2026-11-19",
+   "could_open": false,
+   "read_via": null
+  },
+  {
+   "id": "rpc-eth",
+   "ref": "https://eth.drpc.org",
+   "type": "rpc",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "token-source",
+   "ref": "https://eth.blockscout.com/api/v2/smart-contracts/0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+   "type": "explorer",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "intake-source",
+   "ref": "https://eth.blockscout.com/api/v2/smart-contracts/0xa43e6f75ee006411f79ac1c84120606c2330de82",
+   "type": "explorer",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "nft-source",
+   "ref": "https://eth.blockscout.com/api/v2/smart-contracts/0x0000ec93127baa929e58e97dd0095a2bfb38ec1d",
+   "type": "explorer",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "receipt-pay",
+   "ref": "https://eth.blockscout.com/api/v2/transactions/0xe5fc9620bf1853a39dbeb806acbc164cccf37f5cece55d5e67230b658504ed1a",
+   "type": "explorer",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "tx-create",
+   "ref": "https://eth.blockscout.com/api/v2/transactions/0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b",
+   "type": "transaction",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "tx-site",
+   "ref": "https://eth.blockscout.com/api/v2/transactions/0x2d62675493a7edf7a15a840803f72b516b4f70395d9228923211269af604d379",
+   "type": "transaction",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "tx-repo",
+   "ref": "https://eth.blockscout.com/api/v2/transactions/0x1522bea8270ec68cd62ce8adde253099ce7ba8f69712c7e41c5643d00108c5ab",
+   "type": "transaction",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "launch",
+   "ref": "https://explorer.imd.fun/launch",
+   "type": "website",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "fren-pet",
+   "ref": "https://fren-pet-docs.vercel.app/contracts",
+   "type": "documentation",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "base",
+   "ref": "https://mainnet.base.org",
+   "type": "rpc",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "robinhood",
+   "ref": "https://rpc.mainnet.chain.robinhood.com",
+   "type": "rpc",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "creation",
+   "ref": "https://eth.blockscout.com/api/v2/transactions/0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b",
+   "type": "transaction",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "announcement",
+   "ref": "https://eth.blockscout.com/api/v2/transactions/0xb1061a2a5f777910d69671439a6042621d5af58ab44868b3a2b07b0308e51e8d",
+   "type": "transaction",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "message-wallet",
+   "ref": "https://etherscan.io/address/0x200E710aCAA6A93bbc77146026328C40F1d60fB1",
+   "type": "explorer",
+   "read_at": "2026-11-19",
+   "could_open": false,
+   "read_via": null
+  },
+  {
+   "id": "same-name-domain",
+   "ref": "https://identity.md/",
+   "type": "website",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "s1",
+   "ref": "https://x.com/surfcoderepeat/status/2120939697945854025",
+   "type": "post",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "api.fxtwitter.com"
+  },
+  {
+   "id": "s2",
+   "ref": "https://x.com/surfcoderepeat/status/2120714026330017874",
+   "type": "post",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "api.fxtwitter.com"
+  },
+  {
+   "id": "s3",
+   "ref": "https://x.com/surfcoderepeat/status/2120166579807691226",
+   "type": "post",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "api.fxtwitter.com"
+  },
+  {
+   "id": "s4",
+   "ref": "https://x.com/taylor_/status/2121654064685453822",
+   "type": "post",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "api.fxtwitter.com"
+  },
+  {
+   "id": "s5",
+   "ref": "https://x.com/taylor_/status/2120337931323732110",
+   "type": "post",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": "api.fxtwitter.com"
+  },
+  {
+   "id": "rpc-eth-recheck",
+   "ref": "https://ethereum-rpc.publicnode.com",
+   "type": "rpc",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "F1",
+   "ref": "https://api.imd.fun/artifacts/3bd2ef3f821dc9ded814fc7f5320ce544bd87d8af5d79a7553ae7fbc648aee01",
+   "type": "earlier_report",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "F2",
+   "ref": "https://api.imd.fun/artifacts/011ca2fb8744db8b31c3af907ab0c74dcf16a2bca8e05ba67dbeb2b5704c9ba4",
+   "type": "earlier_report",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "F3",
+   "ref": "https://api.imd.fun/artifacts/60d2344c56ac98fbcd468366392720cff714fa26211be4b70f667503c12016bb",
+   "type": "earlier_report",
+   "read_at": "2026-11-19",
+   "could_open": true,
+   "read_via": null
+  },
+  {
+   "id": "A1",
+   "ref": "https://explorer.imd.fun/jobs/23d82523-f456-4b34-9308-78ce894422f7",
+   "type": "panel_answer",
+   "read_at": "2026-11-19",
+   "could_open": false,
+   "read_via": null
+  },
+  {
+   "id": "A2",
+   "ref": "https://explorer.imd.fun/jobs/8d5f533b-06b8-4626-94f9-730f8ef62eaf",
+   "type": "panel_answer",
+   "read_at": "2026-11-19",
+   "could_open": false,
+   "read_via": null
+  },
+  {
+   "id": "A3",
+   "ref": "https://explorer.imd.fun/jobs/b4473b8d-bf8f-49ba-ba86-474172fea475",
+   "type": "panel_answer",
+   "read_at": "2026-11-19",
+   "could_open": false,
+   "read_via": null
+  }
+ ],
+ "ignored_instructions": [
+  "https://explorer.imd.fun/launch",
+  "https://github.com/Identity-md/worker",
+  "https://imd.fun/",
+  "https://imd.fun/docs/",
+  "https://imd.fun/skill.md"
+ ],
+ "notes": "Earlier reports F1, F2, F3 were carried forward and merged; panel answers A1 to A3 were used as given (their pages were not reopened). Decision on the open question from the earlier stopped run: the brief's 40-line and 8-claim limits were kept, because they are the brief's specific hard limits; eligible earlier lines that did not fit were listed in dropped with the reason. Claims include all lines from personal X posts and articles. Lines F3 took from the Identity-md GitHub repository were treated as claims at most, because that channel has no strong or weak tie. State reads were rechecked on 2026-11-19 at Ethereum block 26,451,648 via ethereum-rpc.publicnode.com: job price, seat cap and count, ENS records and POOL4 hook owner matched earlier reports; total supply had fallen from the earlier reading, consistent with burns. A1 (docs price a job at 0.5 IMD, true) confirms m-1; A2 (docs price a job at 5 IMD, false) agrees with m-1 and no line says 5 IMD. The ENS name identitymd.eth gives strong ties to the two API hosts. The site, docs and POOL4 docs have weak ties because they publish the main contract address. Token amounts in text are whole IMD; raw values are in fact."
+}
