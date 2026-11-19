@@ -1,0 +1,800 @@
+{
+  "tag": "record_page",
+  "input": "imd.fun",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "project",
+    "name": "IMD",
+    "one_line": "IMD is a paid network of AI agents that takes requests for work such as website builds, research reports and oracle answers.",
+    "channels": [
+      {
+        "label": "IMD website",
+        "url": "https://imd.fun/",
+        "tie": "weak"
+      },
+      {
+        "label": "IMD docs",
+        "url": "https://imd.fun/docs/",
+        "tie": "weak"
+      },
+      {
+        "label": "IMD API reference",
+        "url": "https://imd.fun/docs/api/",
+        "tie": "weak"
+      },
+      {
+        "label": "IMD worker guide",
+        "url": "https://imd.fun/skill.md",
+        "tie": "weak"
+      },
+      {
+        "label": "IMD Explorer",
+        "url": "https://explorer.imd.fun/",
+        "tie": "none"
+      },
+      {
+        "label": "IMD API",
+        "url": "https://api.imd.fun",
+        "tie": "strong"
+      },
+      {
+        "label": "IMD backup API",
+        "url": "https://api-imd.up.railway.app",
+        "tie": "strong"
+      },
+      {
+        "label": "POOL4",
+        "url": "https://pool4.imd.fun/",
+        "tie": "weak"
+      },
+      {
+        "label": "Identity-md GitHub organization",
+        "url": "https://github.com/Identity-md",
+        "tie": "none"
+      },
+      {
+        "label": "On-chain announcements",
+        "url": "https://etherscan.io/address/0x200E710aCAA6A93bbc77146026328C40F1d60fB1",
+        "tie": "none"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+        "chain": "Ethereum",
+        "role": "IMD payment token. Main because the public API lists it as the payment asset for opening a job on Ethereum.",
+        "main": true
+      },
+      {
+        "address": "0xff0c532fdb8cd566ae169c1cb157ff2bdc83e105",
+        "chain": "Base",
+        "role": "Original Fren Pet token, listed by IMD as its Base token",
+        "main": false
+      },
+      {
+        "address": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+        "chain": "Robinhood Chain",
+        "role": "IMD payment token on Robinhood Chain",
+        "main": false
+      },
+      {
+        "address": "0xab152db8aac047b6757ffcf495ffe88d7712690a",
+        "chain": "Base",
+        "role": "LayerZero bridge adapter for the Base token",
+        "main": false
+      },
+      {
+        "address": "0x0000ec93127baa929e58e97dd0095a2bfb38ec1d",
+        "chain": "Ethereum",
+        "role": "identity.md seat NFT collection",
+        "main": false
+      },
+      {
+        "address": "0x9efa934d9fad4ae28c998a40195646b965a97247",
+        "chain": "Ethereum",
+        "role": "sIMD staking vault",
+        "main": false
+      },
+      {
+        "address": "0xc6c965bd164c483e87d0b550671798e9a3602840",
+        "chain": "Ethereum",
+        "role": "POOL4 market hook",
+        "main": false
+      },
+      {
+        "address": "0x9046739e1535b40efbe6ab3f45d0024b690eca30",
+        "chain": "Ethereum",
+        "role": "POOL4 reward distributor",
+        "main": false
+      },
+      {
+        "address": "0xe6d3de6daeaf327fca42745f1998fcd989e00884",
+        "chain": "Ethereum",
+        "role": "POOL4 staking reward dripper",
+        "main": false
+      },
+      {
+        "address": "0xe29386719c155b6847ad5a4e97c6674f10ffc750",
+        "chain": "Ethereum",
+        "role": "POOL4 burn executor",
+        "main": false
+      },
+      {
+        "address": "0xa43e6f75ee006411f79ac1c84120606c2330de82",
+        "chain": "Ethereum",
+        "role": "Intake v2 for on-chain requests",
+        "main": false
+      },
+      {
+        "address": "0x1397434cd35e8a9c8ac312a61d3a285eb31dea56",
+        "chain": "Ethereum",
+        "role": "Intake v1 for on-chain requests",
+        "main": false
+      },
+      {
+        "address": "0xce0e6a670aa75e161d02aca3c7f00b94ca428ccb",
+        "chain": "Ethereum",
+        "role": "IntakeDelivery for cross-chain result delivery",
+        "main": false
+      },
+      {
+        "address": "0xa43e6f75ee006411f79ac1c84120606c2330de82",
+        "chain": "Robinhood Chain",
+        "role": "Intake v2 for on-chain requests",
+        "main": false
+      },
+      {
+        "address": "0x1397434cd35e8a9c8ac312a61d3a285eb31dea56",
+        "chain": "Robinhood Chain",
+        "role": "Intake v1 for on-chain requests",
+        "main": false
+      },
+      {
+        "address": "0xce0e6a670aa75e161d02aca3c7f00b94ca428ccb",
+        "chain": "Robinhood Chain",
+        "role": "IntakeDelivery for cross-chain result delivery",
+        "main": false
+      },
+      {
+        "address": "0xa43e6f75ee006411f79ac1c84120606c2330de82",
+        "chain": "Sepolia",
+        "role": "Intake v2 for on-chain requests",
+        "main": false
+      },
+      {
+        "address": "0x1397434cd35e8a9c8ac312a61d3a285eb31dea56",
+        "chain": "Sepolia",
+        "role": "Intake v1 for on-chain requests",
+        "main": false
+      },
+      {
+        "address": "0xce0e6a670aa75e161d02aca3c7f00b94ca428ccb",
+        "chain": "Sepolia",
+        "role": "IntakeDelivery for cross-chain result delivery",
+        "main": false
+      },
+      {
+        "address": "0x12c63b581d07093f6126bc02263c58f7eadaa96f",
+        "chain": "Ethereum",
+        "role": "LaunchFactory for token launches",
+        "main": false
+      },
+      {
+        "address": "0xa47fcb220ddd1cddda865f89029bec1b9eca3bf1",
+        "chain": "Ethereum",
+        "role": "LaunchFactory registry",
+        "main": false
+      },
+      {
+        "address": "0xff03410d0fe5fa8f7f59f743de35e333d9857120",
+        "chain": "Ethereum",
+        "role": "ProjectFactory for launches with additional contracts",
+        "main": false
+      },
+      {
+        "address": "0x7c9d5ee697bff5ac4f10e2e54d3f40c44e48fe23",
+        "chain": "Ethereum",
+        "role": "ProjectFactory registry",
+        "main": false
+      },
+      {
+        "address": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+        "chain": "Ethereum",
+        "role": "PoolInitializationGuard hook for ProjectFactory pools",
+        "main": false
+      },
+      {
+        "address": "0x12c9e1007262afac205567457f5826a9416a3863",
+        "chain": "Ethereum",
+        "role": "LaunchFees settings",
+        "main": false
+      },
+      {
+        "address": "0xa25b02a1e93903b790e6aaf7da1b8b8d50294645",
+        "chain": "Robinhood Chain",
+        "role": "LaunchFactory for token launches",
+        "main": false
+      },
+      {
+        "address": "0x842e9bcff1e68566d45697a84f5b38c1c7766edb",
+        "chain": "Robinhood Chain",
+        "role": "LaunchFactory registry",
+        "main": false
+      },
+      {
+        "address": "0x9c9d2fcb75c2c132c0ac0c42df3819a42347265e",
+        "chain": "Robinhood Chain",
+        "role": "ProjectFactory for launches with additional contracts",
+        "main": false
+      },
+      {
+        "address": "0xf52bbe066b7ad2d28c2195d066ea08dcbca88406",
+        "chain": "Robinhood Chain",
+        "role": "ProjectFactory registry",
+        "main": false
+      },
+      {
+        "address": "0x19bec7c2e1b2aadaf67b259744751a9960d66000",
+        "chain": "Robinhood Chain",
+        "role": "PoolInitializationGuard hook for ProjectFactory pools",
+        "main": false
+      },
+      {
+        "address": "0xf053525ffe8f8d8973339e36ee8d455690fb73cb",
+        "chain": "Robinhood Chain",
+        "role": "LaunchFees settings",
+        "main": false
+      },
+      {
+        "address": "0x315752fee5cbcaa00333e0d4d91e0cd69429e908",
+        "chain": "Sepolia",
+        "role": "LaunchFactory for token launches",
+        "main": false
+      },
+      {
+        "address": "0x78ba7bdcc66715d0f6e425b4700207a0b75ad5a4",
+        "chain": "Sepolia",
+        "role": "LaunchFactory registry",
+        "main": false
+      },
+      {
+        "address": "0x84cf2bc1dc2af577dba5d62e26f90d041ca38f7a",
+        "chain": "Sepolia",
+        "role": "ProjectFactory for launches with additional contracts",
+        "main": false
+      },
+      {
+        "address": "0x90aaedd35073e2a31861276e58081251a601aad9",
+        "chain": "Sepolia",
+        "role": "ProjectFactory registry",
+        "main": false
+      },
+      {
+        "address": "0xa0602cb30558d5dd17415b6268a4feea3a0ca000",
+        "chain": "Sepolia",
+        "role": "PoolInitializationGuard hook for ProjectFactory pools",
+        "main": false
+      },
+      {
+        "address": "0x428ff16d1bb25d6674463881ed6a62bd09e30584",
+        "chain": "Sepolia",
+        "role": "LaunchFees settings",
+        "main": false
+      },
+      {
+        "address": "0xb6d0a187b050fa5bb0b87033a203f37becf4a775",
+        "chain": "Ethereum",
+        "role": "WorkRegistry for work receipts and reviews",
+        "main": false
+      },
+      {
+        "address": "0xde152afb7db5373f34876e1499fbd893a82dd336",
+        "chain": "Ethereum",
+        "role": "ERC-8004 adapter linking seats to agent IDs",
+        "main": false
+      },
+      {
+        "address": "0x7621630cb63a73a194f45a3e6801b8c6a7ec2f92",
+        "chain": "Sepolia",
+        "role": "Test ERC-8004 adapter",
+        "main": false
+      },
+      {
+        "address": "0x56bcf2a5f47710649a4091219ef0b56e2d1b58bf",
+        "chain": "Sepolia",
+        "role": "imdTEST payment token",
+        "main": false
+      },
+      {
+        "address": "0x44a1cd38474fb1748400e7deb5f8d786cce3f89a",
+        "chain": "Sepolia",
+        "role": "Retired test IMD token",
+        "main": false
+      },
+      {
+        "address": "0xa0443799c320e16c80801c9c1911f3571260287f",
+        "chain": "Sepolia",
+        "role": "Test seat NFT collection",
+        "main": false
+      }
+    ]
+  },
+  "lines": [
+    {
+      "id": "website-service",
+      "section": "what_it_does",
+      "text": "IMD offers website builds.",
+      "kind": "statement",
+      "by": "IMD docs",
+      "sources": [
+        "docs"
+      ],
+      "quote": "website built from your brief",
+      "rerun": null
+    },
+    {
+      "id": "report-service",
+      "section": "what_it_does",
+      "text": "IMD offers sourced research reports.",
+      "kind": "statement",
+      "by": "IMD docs",
+      "sources": [
+        "docs"
+      ],
+      "quote": "A researched answer to your question",
+      "rerun": null
+    },
+    {
+      "id": "oracle-service",
+      "section": "what_it_does",
+      "text": "IMD offers signed oracle answers.",
+      "kind": "statement",
+      "by": "IMD docs",
+      "sources": [
+        "docs"
+      ],
+      "quote": "A signed answer from a panel of agents",
+      "rerun": null
+    },
+    {
+      "id": "intake",
+      "section": "how_it_works",
+      "text": "The Intake contract accepts a payment and request in one transaction.",
+      "kind": "statement",
+      "by": "IMD API reference",
+      "sources": [
+        "api-docs"
+      ],
+      "quote": "Takes a payment and an ask in one transaction.",
+      "rerun": null
+    },
+    {
+      "id": "review",
+      "section": "how_it_works",
+      "text": "IMD says other agents review the work.",
+      "kind": "statement",
+      "by": "IMD worker guide",
+      "sources": [
+        "worker-guide"
+      ],
+      "quote": "has other agents review it",
+      "rerun": null
+    },
+    {
+      "id": "job-price",
+      "section": "money",
+      "text": "IMD lists a price of 0.5 IMD to open a job.",
+      "kind": "statement",
+      "by": "IMD API reference",
+      "sources": [
+        "api-docs",
+        "capabilities"
+      ],
+      "quote": "Pay 0.5 IMD from a wallet to open work",
+      "rerun": null
+    },
+    {
+      "id": "pool-burn",
+      "section": "money",
+      "text": "POOL4 says it burns 85% of the IMD batches it removes from the pool.",
+      "kind": "statement",
+      "by": "POOL4 docs",
+      "sources": [
+        "pool-docs"
+      ],
+      "quote": "Of each batch removed, 85% is burned",
+      "rerun": null
+    },
+    {
+      "id": "pool-fee",
+      "section": "money",
+      "text": "POOL4 documents a 1% swap fee.",
+      "kind": "statement",
+      "by": "POOL4 docs",
+      "sources": [
+        "pool-docs"
+      ],
+      "quote": "Normal Uniswap math, 1% fee.",
+      "rerun": null
+    },
+    {
+      "id": "workers",
+      "section": "people",
+      "text": "IMD says seat holders run agents on their own machines.",
+      "kind": "statement",
+      "by": "IMD worker guide",
+      "sources": [
+        "worker-guide"
+      ],
+      "quote": "each run by the holder of an IMD NFT on their own machine",
+      "rerun": null
+    },
+    {
+      "id": "announcements",
+      "section": "people",
+      "text": "The Identity-md GitHub repository identifies an Ethereum wallet as an announcement channel.",
+      "kind": "claim",
+      "by": "Identity-md/awesome-imd maintainers",
+      "sources": [
+        "github"
+      ],
+      "quote": "official communication is published as on-chain messages from this address",
+      "rerun": null
+    },
+    {
+      "id": "eth-name",
+      "section": "on_chain",
+      "text": "At Ethereum block 26445903, the payment token returned the name Identity.md.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) block 26445903, run cast call --rpc-url https://ethereum-rpc.publicnode.com --block 26445903 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 'name()(string)'."
+    },
+    {
+      "id": "eth-symbol",
+      "section": "on_chain",
+      "text": "At Ethereum block 26445903, the payment token returned the symbol IMD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) block 26445903, run cast call --rpc-url https://ethereum-rpc.publicnode.com --block 26445903 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 'symbol()(string)'."
+    },
+    {
+      "id": "eth-supply",
+      "section": "on_chain",
+      "text": "At Ethereum block 26445903, the IMD token reported a total supply of 4241494529343000000000000 in raw units.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) block 26445903, run cast call --rpc-url https://ethereum-rpc.publicnode.com --block 26445903 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 'totalSupply()(uint256)'."
+    },
+    {
+      "id": "base-symbol",
+      "section": "on_chain",
+      "text": "At Base block 59310707, the original token returned the symbol Fren Pet.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "base"
+      ],
+      "quote": null,
+      "rerun": "On Base (chain ID 8453) block 59310707, run cast call --rpc-url https://mainnet.base.org --block 59310707 0xff0c532fdb8cd566ae169c1cb157ff2bdc83e105 'symbol()(string)'."
+    },
+    {
+      "id": "robin-symbol",
+      "section": "on_chain",
+      "text": "At Robinhood Chain block 117856010, the local payment token returned the symbol IMD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "robinhood"
+      ],
+      "quote": null,
+      "rerun": "On Robinhood Chain (chain ID 4663) block 117856010, run cast call --rpc-url https://rpc.mainnet.chain.robinhood.com --block 117856010 0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127 'symbol()(string)'."
+    },
+    {
+      "id": "bridge-asset",
+      "section": "on_chain",
+      "text": "At Base block 59310707, the bridge adapter returned the original Fren Pet token as its underlying asset.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "base"
+      ],
+      "quote": null,
+      "rerun": "On Base (chain ID 8453) block 59310707, run cast call --rpc-url https://mainnet.base.org --block 59310707 0xab152db8aac047b6757ffcf495ffe88d7712690a 'token()(address)'."
+    },
+    {
+      "id": "vault-asset",
+      "section": "on_chain",
+      "text": "At Ethereum block 26445903, sIMD returned the Ethereum IMD token as its underlying asset.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) block 26445903, run cast call --rpc-url https://ethereum-rpc.publicnode.com --block 26445903 0x9efa934d9fad4ae28c998a40195646b965a97247 'asset()(address)'."
+    },
+    {
+      "id": "seat-count",
+      "section": "on_chain",
+      "text": "At Ethereum block 26445903, the seat NFT contract reported a total supply of 2,000.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) block 26445903, run cast call --rpc-url https://ethereum-rpc.publicnode.com --block 26445903 0x0000ec93127baa929e58e97dd0095a2bfb38ec1d 'totalSupply()(uint256)'."
+    },
+    {
+      "id": "ens-api",
+      "section": "on_chain",
+      "text": "The identitymd.eth imd.servers record lists api.imd.fun at Ethereum block 26445903.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) at block 26445903, compute cast namehash identitymd.eth. Call resolver(bytes32)(address) on ENS Registry 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e with that node. On the returned resolver 0xF29100983E058B709F3D539b0c765937B804AC15, call text(bytes32,string)(string) with the same node and key imd.servers at the same block using https://ethereum-rpc.publicnode.com or another Ethereum archive RPC."
+    },
+    {
+      "id": "ens-backup",
+      "section": "on_chain",
+      "text": "The identitymd.eth imd.servers record lists api-imd.up.railway.app at Ethereum block 26445903.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) at block 26445903, compute cast namehash identitymd.eth. Call resolver(bytes32)(address) on ENS Registry 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e with that node. On the returned resolver 0xF29100983E058B709F3D539b0c765937B804AC15, call text(bytes32,string)(string) with the same node and key imd.servers at the same block using https://ethereum-rpc.publicnode.com or another Ethereum archive RPC."
+    },
+    {
+      "id": "hook-owner",
+      "section": "on_chain",
+      "text": "The POOL4 hook returned the Ethereum IMD token deployer as its owner at block 26445903.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum",
+        "creation"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) at block 26445903, run cast call --rpc-url https://ethereum-rpc.publicnode.com --block 26445903 0xc6c965bd164c483e87d0b550671798e9a3602840 'owner()(address)' and check for 0x047F606fD5b2BaA5f5C6c4aB8958E45CB6B054B7. Compare with the sender of deployment transaction 0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b at block 23501863."
+    },
+    {
+      "id": "vault-owner",
+      "section": "on_chain",
+      "text": "The sIMD vault returned the zero address as owner at Ethereum block 26445903.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) at block 26445903, run cast call --rpc-url https://ethereum-rpc.publicnode.com --block 26445903 0x9efa934d9fad4ae28c998a40195646b965a97247 'owner()(address)' and check for 0x0000000000000000000000000000000000000000."
+    },
+    {
+      "id": "fren-pet-address",
+      "section": "history",
+      "text": "The Fren Pet game documentation lists the same Base address that IMD lists for its Base token.",
+      "kind": "claim",
+      "by": "Fren Pet documentation",
+      "sources": [
+        "fren-pet",
+        "docs"
+      ],
+      "quote": "FP Token: 0xff0c532fdb8cd566ae169c1cb157ff2bdc83e105",
+      "rerun": null
+    },
+    {
+      "id": "eth-deployment",
+      "section": "history",
+      "text": "The Ethereum IMD token was deployed on October 4, 2025.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "creation",
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), read the receipt for 0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b, confirm contractAddress is 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 and blockNumber is 23501863, then read the UTC timestamp of block 23501863."
+    },
+    {
+      "id": "intake-v2",
+      "section": "history",
+      "text": "IMD dates the start of Intake v2 service to October 10, 2026.",
+      "kind": "statement",
+      "by": "IMD API reference",
+      "sources": [
+        "api-docs"
+      ],
+      "quote": "Version 2 has been live since 2026-10-10.",
+      "rerun": null
+    },
+    {
+      "id": "announcement-tx",
+      "section": "history",
+      "text": "The listed announcement wallet sent a message naming imd.fun at Ethereum block 26021512.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "announcement",
+        "github",
+        "ethereum"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), fetch transaction 0xb1061a2a5f777910d69671439a6042621d5af58ab44868b3a2b07b0308e51e8d, confirm its from address is 0x200E710aCAA6A93bbc77146026328C40F1d60fB1 and its block number is 26021512, then decode the hex input as UTF-8 and check the opening words."
+    },
+    {
+      "id": "token-renames",
+      "section": "history",
+      "text": "IMD's timeline dates the FP-to-VIBE-to-IMD renames to May 2026.",
+      "kind": "statement",
+      "by": "IMD docs",
+      "sources": [
+        "docs"
+      ],
+      "quote": "Renamed $FP to $VIBE to $IMD.",
+      "rerun": null
+    }
+  ],
+  "differs": [],
+  "open_questions": [
+    "Who publicly identifies themselves as responsible for operating IMD or controlling its deployment and treasury wallets?",
+    "Do contract state, ENS records or transactions from a verified deployer establish stronger ties for the website, Explorer, GitHub organization or announcement wallet?",
+    "What is the aggregate circulating IMD supply across all three chains after accounting for tokens locked in the bridge?",
+    "What is the deployed BaseBurnReceiver address referenced by the POOL4 docs?",
+    "Which of the documented contracts remain active and who controls their current permissions?"
+  ],
+  "sources": [
+    {
+      "id": "home",
+      "ref": "https://imd.fun/",
+      "type": "website",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "docs",
+      "ref": "https://imd.fun/docs/",
+      "type": "documentation",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "api-docs",
+      "ref": "https://imd.fun/docs/api/",
+      "type": "documentation",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "worker-guide",
+      "ref": "https://imd.fun/skill.md",
+      "type": "documentation",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "explorer",
+      "ref": "https://explorer.imd.fun/",
+      "type": "website",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "launch",
+      "ref": "https://explorer.imd.fun/launch",
+      "type": "website",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "capabilities",
+      "ref": "https://api.imd.fun/requests/capabilities",
+      "type": "api",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "pool-docs",
+      "ref": "https://pool4.imd.fun/docs",
+      "type": "documentation",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "github",
+      "ref": "https://github.com/Identity-md/awesome-imd",
+      "type": "repository",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "fren-pet",
+      "ref": "https://fren-pet-docs.vercel.app/contracts",
+      "type": "documentation",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "ethereum",
+      "ref": "https://ethereum-rpc.publicnode.com",
+      "type": "rpc",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "base",
+      "ref": "https://mainnet.base.org",
+      "type": "rpc",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "robinhood",
+      "ref": "https://rpc.mainnet.chain.robinhood.com",
+      "type": "rpc",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "creation",
+      "ref": "https://eth.blockscout.com/api/v2/transactions/0xb2e2587f18b440f2c492d911566cb979d4ec477dd69824d9ac17bdae2608704b",
+      "type": "transaction",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "announcement",
+      "ref": "https://eth.blockscout.com/api/v2/transactions/0xb1061a2a5f777910d69671439a6042621d5af58ab44868b3a2b07b0308e51e8d",
+      "type": "transaction",
+      "read_at": "2026-11-19",
+      "could_open": true
+    },
+    {
+      "id": "message-wallet",
+      "ref": "https://etherscan.io/address/0x200E710aCAA6A93bbc77146026328C40F1d60fB1",
+      "type": "explorer",
+      "read_at": "2026-11-19",
+      "could_open": false
+    },
+    {
+      "id": "same-name-domain",
+      "ref": "https://identity.md/",
+      "type": "website",
+      "read_at": "2026-11-19",
+      "could_open": true
+    }
+  ],
+  "ignored_instructions": [
+    "https://imd.fun/",
+    "https://imd.fun/docs/",
+    "https://imd.fun/skill.md",
+    "https://explorer.imd.fun/launch"
+  ],
+  "notes": [
+    "The root website, documentation and worker guide are treated as publications of the same site. The documentation publishes the Ethereum token address. POOL4 also publishes it in its documentation.",
+    "The ENS record provides a strong tie for the two API hosts. The project website links to the Explorer, the docs link to Identity-md GitHub repositories, and the GitHub list identifies the announcement wallet. Those links alone give those three channels a tie of none under this record's rules.",
+    "The contract list follows the IMD docs, API contract tables and POOL4 address links. It excludes external infrastructure and contracts made for customers. The proof lines show which contract properties were checked directly.",
+    "The IMD docs describe one bridged supply. The Ethereum totalSupply result is for the Ethereum deployment only. The Base contract's returned symbol is distinct from the IMD docs' label for that deployment.",
+    "The similarly named identity.md website describes a passport service.",
+    "Block-tagged calls may require an archive RPC when repeated later.",
+    "The API capabilities response listed the Ethereum job payment under actions for job.open. The response can change independently of the block-pinned findings."
+  ]
+}
