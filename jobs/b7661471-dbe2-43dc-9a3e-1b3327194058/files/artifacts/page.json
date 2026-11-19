@@ -1,0 +1,3396 @@
+{
+  "tag": "imdusd",
+  "input": "imdusd.com",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "protocol",
+    "name": "imdUSD (INFER Protocol)",
+    "one_line": "An Ethereum protocol for borrowing a dollar-targeted token against staked IMD.",
+    "channels": [
+      {
+        "label": "Website",
+        "url": "https://imdusd.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Documentation",
+        "url": "https://imdusd.com/docs/",
+        "tie": "none"
+      },
+      {
+        "label": "Borrowing terminal",
+        "url": "https://imdusd.com/terminal/",
+        "tie": "none"
+      },
+      {
+        "label": "Stats",
+        "url": "https://imdusd.com/stats/",
+        "tie": "none"
+      },
+      {
+        "label": "Data API",
+        "url": "https://imdusd.com/api/v1/meta",
+        "tie": "none"
+      },
+      {
+        "label": "Blog",
+        "url": "https://blog.imdusd.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Whitepaper",
+        "url": "https://whitepaper.imdusd.com/",
+        "tie": "none"
+      },
+      {
+        "label": "INFER",
+        "url": "https://infer.imdusd.com/",
+        "tie": "none"
+      },
+      {
+        "label": "INFER BOX",
+        "url": "https://box.imdusd.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Project X",
+        "url": "https://x.com/imdusd",
+        "tie": "none"
+      },
+      {
+        "label": "Founder ENS",
+        "url": "https://app.ens.domains/miyagod.eth",
+        "tie": "strong"
+      },
+      {
+        "label": "Operator X account",
+        "url": "https://x.com/yadfarms",
+        "tie": "none"
+      },
+      {
+        "label": "GitHub organization",
+        "url": "https://github.com/imdusd",
+        "tie": "none"
+      },
+      {
+        "label": "Protocol repository",
+        "url": "https://github.com/imdusd/infer-protocol",
+        "tie": "weak"
+      },
+      {
+        "label": "Repository linked on the project’s links page",
+        "url": "https://github.com/fa11up/infer-protocol",
+        "tie": "weak"
+      },
+      {
+        "label": "Keeper repository",
+        "url": "https://github.com/imdusd/imdusd-keeper",
+        "tie": "none"
+      },
+      {
+        "label": "Peg hook repository",
+        "url": "https://github.com/imdusd/imdusd-peg-hook",
+        "tie": "none"
+      },
+      {
+        "label": "INFER token repository",
+        "url": "https://github.com/imdusd/infer-launch",
+        "tie": "none"
+      },
+      {
+        "label": "Contact email",
+        "url": "mailto:admin@imdusd.com",
+        "tie": "none"
+      },
+      {
+        "label": "Second-version audit repository",
+        "url": "https://github.com/imdusd/imdusd-v2-audit",
+        "tie": "none"
+      },
+      {
+        "label": "GitHub contributor account and repository owner",
+        "url": "https://github.com/fa11up",
+        "tie": "none"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82",
+        "chain": "Ethereum mainnet",
+        "role": "Borrowing vault. Main because it holds the loans and collateral and mints or burns the stablecoin.",
+        "main": true
+      },
+      {
+        "address": "0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25",
+        "chain": "Ethereum mainnet",
+        "role": "imdUSD stablecoin",
+        "main": false
+      },
+      {
+        "address": "0x53d0eA0A685220718Dc6a0a6e4617194C6F37921",
+        "chain": "Ethereum mainnet",
+        "role": "INFER protocol token",
+        "main": false
+      },
+      {
+        "address": "0x6Ac8fF96Fb8DCF5d79A8eF1E59D9AC23f2BD27Bc",
+        "chain": "Ethereum mainnet",
+        "role": "Treasury and reserve",
+        "main": false
+      },
+      {
+        "address": "0x3D96A6Ffada9C2E5B8fF8eb3f8AFB360116dA881",
+        "chain": "Ethereum mainnet",
+        "role": "Governed vault settings",
+        "main": false
+      },
+      {
+        "address": "0x070e0603737242B01aBC1D223f7C92D63E86EC97",
+        "chain": "Ethereum mainnet",
+        "role": "Main IMD/ETH price feed",
+        "main": false
+      },
+      {
+        "address": "0x77E1684402869Bf2B7c70B8bf21E1C7Ca7104951",
+        "chain": "Ethereum mainnet",
+        "role": "Spot IMD/ETH comparison feed",
+        "main": false
+      },
+      {
+        "address": "0x014DabF6F940c9C383D9ef48636F70D842F65D7A",
+        "chain": "Ethereum mainnet",
+        "role": "Network health feed",
+        "main": false
+      },
+      {
+        "address": "0x9AEb55c7A16C11B37DC96BD22a33906D1668e20B",
+        "chain": "Ethereum mainnet",
+        "role": "SwarmRelay for feed updates",
+        "main": false
+      },
+      {
+        "address": "0x24458aeF6cf074C7FB09B6734b1247508f137409",
+        "chain": "Ethereum mainnet",
+        "role": "Work oracle factory",
+        "main": false
+      },
+      {
+        "address": "0x00856Bd495941f3b95dA5b7e374c76d822C9059E",
+        "chain": "Ethereum mainnet",
+        "role": "Oracle update buyer",
+        "main": false
+      },
+      {
+        "address": "0xbF6410aD823F49D24935135EE230db89faBca6B2",
+        "chain": "Ethereum mainnet",
+        "role": "Treasury factory",
+        "main": false
+      },
+      {
+        "address": "0xC7335a836ad85a6ac0830c6CEf602d735B9d8a8A",
+        "chain": "Ethereum mainnet",
+        "role": "Work tally oracle",
+        "main": false
+      },
+      {
+        "address": "0x297b85afc6bbF9d9cCa636F7ED74c56DA79287A0",
+        "chain": "Ethereum mainnet",
+        "role": "IMD/USD price calculation",
+        "main": false
+      },
+      {
+        "address": "0xF065C8b65AA9Ac6fd9cBAd15301738e91389d9e1",
+        "chain": "Ethereum mainnet",
+        "role": "Staked IMD/USD price calculation",
+        "main": false
+      },
+      {
+        "address": "0x33cA5c16208EC08aC97d4f6315aaFA792A916044",
+        "chain": "Ethereum mainnet",
+        "role": "Fee hook for the imdUSD/USDC pool",
+        "main": false
+      },
+      {
+        "address": "0xbeFd108085613662356aa26A2466Ad3426DA9C32",
+        "chain": "Ethereum mainnet",
+        "role": "Governing Safe wallet",
+        "main": false
+      },
+      {
+        "address": "0x08DC1b5789Aa4951daC6022f2141C646c7F6F9f4",
+        "chain": "Ethereum mainnet",
+        "role": "Season rewards vault",
+        "main": false
+      },
+      {
+        "address": "0x5E11e627d63755Afa4b01D4c1de1E315EeFdb348",
+        "chain": "Ethereum mainnet",
+        "role": "Legacy token redemption",
+        "main": false
+      },
+      {
+        "address": "0x7328Da4251dd6E1f0AAF64F39c5137cbF160b9b3",
+        "chain": "Ethereum mainnet",
+        "role": "Founder vesting",
+        "main": false
+      },
+      {
+        "address": "0x0c1CE09ccfe9243c4ad23C3CAEE0C11D4E8340d3",
+        "chain": "Ethereum mainnet",
+        "role": "INFER reward dripper",
+        "main": false
+      },
+      {
+        "address": "0x5e3b440156ce928fda68b2378578dc9333846ce4",
+        "chain": "Ethereum mainnet",
+        "role": "sINFER staking vault",
+        "main": false
+      },
+      {
+        "address": "0xb99d305d00201f46e0f48e4e092ed1e95e1fcd76",
+        "chain": "Ethereum mainnet",
+        "role": "INFER launch rewards distributor",
+        "main": false
+      },
+      {
+        "address": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+        "chain": "Ethereum mainnet",
+        "role": "Shared INFER launch-pool hook",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "value": "imdusd.com",
+      "lines": [
+        "L49"
+      ],
+      "url": "https://imdusd.com/"
+    },
+    {
+      "label": "Token",
+      "value": "imdUSD · 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25",
+      "lines": [
+        "L80",
+        "L83"
+      ],
+      "url": "https://etherscan.io/token/0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25"
+    },
+    {
+      "label": "Main contract",
+      "value": "0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82",
+      "lines": [
+        "L11",
+        "L12",
+        "L82",
+        "L83"
+      ],
+      "url": "https://etherscan.io/address/0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82"
+    },
+    {
+      "label": "Chains",
+      "value": "Ethereum mainnet",
+      "lines": [
+        "L2",
+        "L84"
+      ]
+    },
+    {
+      "label": "Supply",
+      "value": "59822.623566003452582778 imdUSD total at the checked block",
+      "lines": [
+        "L101"
+      ]
+    },
+    {
+      "label": "Price",
+      "value": "Targets $1 USD per imdUSD",
+      "lines": [
+        "L1",
+        "L23"
+      ]
+    },
+    {
+      "label": "Deployed by",
+      "value": "0x5167D014a056E43883e1BBEa5530c3c0dC993281",
+      "lines": [
+        "L86",
+        "L85"
+      ],
+      "url": "https://etherscan.io/tx/0x0d457379d83f6a32a252b2cad3754a1e36fcf3d432fd441e7fb73a6408bd5d5d"
+    },
+    {
+      "label": "Founder or creator",
+      "value": "miyagod.eth (named as founder by the project)",
+      "lines": [
+        "L47",
+        "L48"
+      ],
+      "url": "https://app.ens.domains/miyagod.eth"
+    },
+    {
+      "label": "Contributors",
+      "value": "fa11up on GitHub and nine agents credited for the INFER token build",
+      "lines": [
+        "L76",
+        "L143"
+      ],
+      "url": "https://explorer.imd.fun/token/0x53d0ea0a685220718dc6a0a6e4617194c6f37921"
+    },
+    {
+      "label": "Official accounts",
+      "value": "@imdusd on X and imdusd on GitHub",
+      "lines": [
+        "L50",
+        "L51"
+      ],
+      "url": "https://x.com/imdusd"
+    },
+    {
+      "label": "Launched",
+      "value": "October 11, 2026 (Ethereum vault deployment)",
+      "lines": [
+        "L58",
+        "L88"
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "text": "imdUSD is a token on Ethereum designed to be worth one US dollar.",
+      "lines": [
+        "L1",
+        "L2",
+        "L84"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "The project names miyagod.eth as its founder, and a wallet that needs two of its three signers governs the borrowing settings.",
+      "lines": [
+        "L47",
+        "L54",
+        "L97",
+        "L98",
+        "L99"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "If you hold staked IMD, you can put it up as collateral through the project’s website and borrow imdUSD against it.",
+      "lines": [
+        "L3",
+        "L6"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Borrowers pay Ethereum transaction fees and annual interest, which was 4.44% when checked.",
+      "lines": [
+        "L8",
+        "L9",
+        "L90"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Holders can exchange imdUSD for staked IMD worth up to a dollar per token before a redemption fee of 0.5% to 5%.",
+      "lines": [
+        "L5",
+        "L23",
+        "L10",
+        "L91",
+        "L92"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "The system uses signed price answers from IdentityMD agent panels, and stale or disagreeing prices can stop borrowing and redemption.",
+      "lines": [
+        "L30",
+        "L34"
+      ],
+      "paragraph": 3
+    },
+    {
+      "text": "The documentation gives lower minimums for the number of agents and agreements than the deployed price feeds use.",
+      "lines": [
+        "L31",
+        "L32",
+        "L116",
+        "L117"
+      ],
+      "paragraph": 3
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "section": "what_it_does",
+      "text": "imdUSD is a token designed to be worth one US dollar.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S5"
+      ],
+      "quote": "stablecoin meant to be worth one US dollar",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L2",
+      "section": "on_chain",
+      "text": "The protocol runs on Ethereum mainnet.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S6"
+      ],
+      "quote": "on Ethereum mainnet",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L84"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "section": "what_it_does",
+      "text": "The protocol lets people borrow imdUSD against staked IMD.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S5"
+      ],
+      "quote": "locking staked IMD in a vault",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L4",
+      "section": "what_it_does",
+      "text": "The vault stakes plain IMD for borrowers who deposit it.",
+      "kind": "statement",
+      "by": "imdUSD website",
+      "sources": [
+        "S3"
+      ],
+      "quote": "IMD is staked for you.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L5",
+      "section": "what_it_does",
+      "text": "Holders can redeem imdUSD for staked IMD.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S49"
+      ],
+      "quote": "Anyone can burn imdUSD and receive sIMD",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L6",
+      "section": "what_it_does",
+      "text": "Borrowers use a connected wallet to act in the web terminal.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S10"
+      ],
+      "quote": "You connect a browser wallet to act",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L7",
+      "section": "what_it_does",
+      "text": "Keepers relay prices and liquidate unsafe loans.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S48"
+      ],
+      "quote": "relays price updates, marks unsafe positions or liquidates them.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L8",
+      "section": "what_it_does",
+      "text": "Borrowers need ETH for transaction fees.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S8"
+      ],
+      "quote": "and a little ETH for gas.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L9",
+      "section": "what_it_does",
+      "text": "Borrowers pay annual interest on their loan principal.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S15"
+      ],
+      "quote": "Annual stability fee on principal, in basis points.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L10",
+      "section": "what_it_does",
+      "text": "Redemption fees range from 0.5% to 5%.",
+      "kind": "statement",
+      "by": "imdUSD website",
+      "sources": [
+        "S3"
+      ],
+      "quote": "0.5–5% redemption fee",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L91"
+        },
+        {
+          "type": "confirms",
+          "target": "L92"
+        }
+      ]
+    },
+    {
+      "id": "L11",
+      "section": "how_it_works",
+      "text": "The vault holds every borrowing position.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S6"
+      ],
+      "quote": "it holds every position",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L12",
+      "section": "how_it_works",
+      "text": "Only the vault can mint or burn imdUSD.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S6"
+      ],
+      "quote": "only contract that mints or burns imdUSD",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L120"
+        }
+      ]
+    },
+    {
+      "id": "L13",
+      "section": "on_chain",
+      "text": "The imdUSD token has no owner.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S5"
+      ],
+      "quote": "has no owner",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L121"
+        }
+      ]
+    },
+    {
+      "id": "L14",
+      "section": "on_chain",
+      "text": "The imdUSD token has no pause switch.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S5"
+      ],
+      "quote": "no pause switch",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L122"
+        }
+      ]
+    },
+    {
+      "id": "L15",
+      "section": "on_chain",
+      "text": "The imdUSD token has no upgrade path.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S5"
+      ],
+      "quote": "no upgrade path",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L123"
+        }
+      ]
+    },
+    {
+      "id": "L16",
+      "section": "how_it_works",
+      "text": "A loan is unsafe when its collateral ratio falls below the required minimum.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S10"
+      ],
+      "quote": "Below the required ratio (`mat`): liquidatable.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L17",
+      "section": "how_it_works",
+      "text": "The minimum collateral ratio rises as the network health measure falls.",
+      "kind": "statement",
+      "by": "imdUSD website",
+      "sources": [
+        "S3"
+      ],
+      "quote": "the minimum collateral ratio, which rises as network health falls.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L18",
+      "section": "how_it_works",
+      "text": "An unsafe loan must be marked before it can be liquidated.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S11"
+      ],
+      "quote": "mark (`bark`), then liquidate (`bite`)",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L19",
+      "section": "money",
+      "text": "Liquidators are paid from the liquidation bonus.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S48"
+      ],
+      "quote": "keepers are paid from the liquidation bonus.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L20",
+      "section": "money",
+      "text": "Interest accrues without compounding.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S12"
+      ],
+      "quote": "fees do not earn fees.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L21",
+      "section": "money",
+      "text": "The annual borrowing rate at launch was 4.44%.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S15"
+      ],
+      "quote": "444 (4.44% a year)",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L139"
+        }
+      ]
+    },
+    {
+      "id": "L22",
+      "section": "money",
+      "text": "The Treasury receives paid interest.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S45"
+      ],
+      "quote": "Receives the protocol's bonus share and paid fees.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L23",
+      "section": "money",
+      "text": "Redemption pays at most one dollar of staked IMD per token before fees.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S9"
+      ],
+      "quote": "worth $1, or the backing per imdUSD if that is lower",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L24",
+      "section": "money",
+      "text": "The Treasury is the first source of staked IMD for redemptions.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S49"
+      ],
+      "quote": "Redemption is paid from the Treasury's sIMD first.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L25",
+      "section": "money",
+      "text": "Larger redemptions can raise the redemption fee.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S9"
+      ],
+      "quote": "A larger burn raises the fee",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L26",
+      "section": "money",
+      "text": "imdUSD trades against USDC in a Uniswap v4 pool.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S16"
+      ],
+      "quote": "against USDC in one Uniswap v4 pool.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L27",
+      "section": "money",
+      "text": "A swap near the dollar target pays a 0.01% pool fee.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S16"
+      ],
+      "quote": "fee 100 (0.01%)",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L119"
+        }
+      ]
+    },
+    {
+      "id": "L28",
+      "section": "money",
+      "text": "Swaps that push the price far enough away from one dollar pay a surcharge.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S16"
+      ],
+      "quote": "pushes the price away from $ 1.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L29",
+      "section": "money",
+      "text": "Swap surcharges go to the Treasury.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S16"
+      ],
+      "quote": "The surcharge goes to the Treasury",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L30",
+      "section": "how_it_works",
+      "text": "An oracle service signs collateral price answers from IdentityMD agent panels.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S14"
+      ],
+      "quote": "the oracle service signs the answer.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L31",
+      "section": "how_it_works",
+      "text": "The documentation gives 25 agents as the minimum panel size.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S14"
+      ],
+      "quote": "a panel of at least 25 agents",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "contradicts",
+          "target": "L116"
+        }
+      ]
+    },
+    {
+      "id": "L32",
+      "section": "how_it_works",
+      "text": "The documentation gives 15 agreeing agents as the feed threshold.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S14"
+      ],
+      "quote": "at least 15 agreeing",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "contradicts",
+          "target": "L117"
+        }
+      ]
+    },
+    {
+      "id": "L33",
+      "section": "how_it_works",
+      "text": "The dollar calculation uses Chainlink’s ETH price.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S13"
+      ],
+      "quote": "The ETH/USD price comes from Chainlink",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L34",
+      "section": "how_it_works",
+      "text": "Stale or disagreeing prices can block borrowing and redemption.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S13"
+      ],
+      "quote": "all wait for live prices.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L35",
+      "section": "how_it_works",
+      "text": "Borrowers can still deposit and repay when prices are stale.",
+      "kind": "statement",
+      "by": "imdUSD blog",
+      "sources": [
+        "S22"
+      ],
+      "quote": "repaying and depositing never wait.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L36",
+      "section": "money",
+      "text": "A liquidation can leave unpaid debt.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S45"
+      ],
+      "quote": "records the rest as bad debt.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L37",
+      "section": "money",
+      "text": "The protocol has no insurance fund for bad debt.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S11"
+      ],
+      "quote": "There is no insurance fund",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L38",
+      "section": "money",
+      "text": "INFER is the protocol token.",
+      "kind": "statement",
+      "by": "imdUSD links",
+      "sources": [
+        "S7"
+      ],
+      "quote": "INFER The protocol's token",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L39",
+      "section": "money",
+      "text": "People can stake INFER for sINFER.",
+      "kind": "statement",
+      "by": "INFER website",
+      "sources": [
+        "S20"
+      ],
+      "quote": "sINFER held",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L118"
+        }
+      ]
+    },
+    {
+      "id": "L40",
+      "section": "money",
+      "text": "The INFER page says the Treasury buys INFER with protocol revenue.",
+      "kind": "statement",
+      "by": "INFER website",
+      "sources": [
+        "S20"
+      ],
+      "quote": "The Treasury buys INFER with the protocol's revenue",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L41",
+      "section": "money",
+      "text": "The project counts staked INFER as circulating.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S4"
+      ],
+      "quote": "counts as circulating.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L42",
+      "section": "money",
+      "text": "The project excludes Treasury-held imdUSD from circulating supply.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S4",
+        "S21"
+      ],
+      "quote": "For imdUSD that's the Treasury.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L43",
+      "section": "money",
+      "text": "Wallet holders earn one point per imdUSD per day.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S18"
+      ],
+      "quote": "1 point per imdUSD per day.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L44",
+      "section": "money",
+      "text": "Liquidators earn three days of holding points per imdUSD of debt repaid.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S18"
+      ],
+      "quote": "3 days of holding points for each imdUSD of debt it repays.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L45",
+      "section": "money",
+      "text": "Each rewards season lasts 91 days.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S18"
+      ],
+      "quote": "A season lasts 91 days.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L46",
+      "section": "what_it_does",
+      "text": "INFER BOX accepts imdUSD payments to run requests through IdentityMD.",
+      "kind": "statement",
+      "by": "imdUSD website",
+      "sources": [
+        "S17"
+      ],
+      "quote": "pay in imdUSD on Ethereum mainnet from the website and the swarm runs the request.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L47",
+      "section": "people",
+      "text": "The project names miyagod.eth as founder.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S4"
+      ],
+      "quote": "Founder: miyagod.eth",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L48",
+      "section": "people",
+      "text": "The project whitepaper credits miyagod.eth as its author.",
+      "kind": "statement",
+      "by": "imdUSD whitepaper",
+      "sources": [
+        "S19"
+      ],
+      "quote": "Author\n\nmiyagod.eth",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L49",
+      "section": "people",
+      "text": "The project lists imdusd.com as its website.",
+      "kind": "statement",
+      "by": "imdUSD links",
+      "sources": [
+        "S7"
+      ],
+      "quote": "Website imdusd.com",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L50",
+      "section": "people",
+      "text": "The project lists @imdusd as its X account.",
+      "kind": "statement",
+      "by": "imdUSD links",
+      "sources": [
+        "S7"
+      ],
+      "quote": "X@imdusd",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L51",
+      "section": "people",
+      "text": "The project lists its imdusd GitHub organization for code.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S4"
+      ],
+      "quote": "Code: github.com/imdusd",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L52",
+      "section": "people",
+      "text": "The project links to the fa11up repository for its source code.",
+      "kind": "statement",
+      "by": "imdUSD links",
+      "sources": [
+        "S7"
+      ],
+      "quote": "Source code github.com/fa11up/infer-protocol",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L53",
+      "section": "people",
+      "text": "The project lists admin@imdusd.com for contact.",
+      "kind": "statement",
+      "by": "imdUSD links",
+      "sources": [
+        "S7"
+      ],
+      "quote": "Email admin@imdusd.com",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L54",
+      "section": "people",
+      "text": "The project says a wallet requiring two of three signers governs the settings.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S50"
+      ],
+      "quote": "a multisig wallet that needs two of its three signers to act.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L97"
+        },
+        {
+          "type": "confirms",
+          "target": "L98"
+        },
+        {
+          "type": "confirms",
+          "target": "L99"
+        }
+      ]
+    },
+    {
+      "id": "L55",
+      "section": "people",
+      "text": "The project says changes to economic settings wait at least 48 hours.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S50"
+      ],
+      "quote": "`TIMELOCK` is 48 hours.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L100"
+        }
+      ]
+    },
+    {
+      "id": "L56",
+      "section": "history",
+      "text": "IdentityMD swarm panels reviewed the contracts before launch.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S47"
+      ],
+      "quote": "Launch audit: the vault",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L57",
+      "section": "history",
+      "text": "The project says third-party audit firms did not produce its launch reviews.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S4"
+      ],
+      "quote": "not third-party audit firm reports.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L58",
+      "section": "history",
+      "text": "The documentation dates vault deployment to October 11, 2026.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S6"
+      ],
+      "quote": "on 11 October 2026.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L88"
+        }
+      ]
+    },
+    {
+      "id": "L59",
+      "section": "history",
+      "text": "The contract reference gives an earlier deployment block than the creation receipt shows.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S6",
+        "S2"
+      ],
+      "quote": "deployed at block 26166417",
+      "rerun": null,
+      "fact": {
+        "name": "Documented deployment block",
+        "value": 26166417,
+        "unit": "Ethereum block"
+      },
+      "from": [],
+      "links": [
+        {
+          "type": "contradicts",
+          "target": "L87"
+        }
+      ]
+    },
+    {
+      "id": "L60",
+      "section": "history",
+      "text": "IdentityMD’s launchpad launched INFER.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S4"
+      ],
+      "quote": "launched by the IdentityMD swarm",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L61",
+      "section": "history",
+      "text": "The project reported an internal review of the second version.",
+      "kind": "statement",
+      "by": "imdUSD blog",
+      "sources": [
+        "S22"
+      ],
+      "quote": "a full internal adversarial review.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L62",
+      "section": "history",
+      "text": "The project reported on November 9 that the second version had yet to receive an outside audit.",
+      "kind": "statement",
+      "by": "imdUSD blog",
+      "sources": [
+        "S22"
+      ],
+      "quote": "It has not had an outside audit yet.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L63",
+      "section": "history",
+      "text": "The project says minting from work was off at launch.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S45"
+      ],
+      "quote": "Minting from work is off at launch",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L140"
+        }
+      ]
+    },
+    {
+      "id": "L64",
+      "section": "history",
+      "text": "The code repository dates the Ethereum mainnet launch to October 11, 2026.",
+      "kind": "claim",
+      "by": "imdusd/infer-protocol on GitHub",
+      "sources": [
+        "S23"
+      ],
+      "quote": "live on Ethereum mainnet since 2026-10-11.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L88"
+        }
+      ]
+    },
+    {
+      "id": "L65",
+      "section": "history",
+      "text": "The repository says the project began as a fork of an IdentityMD launch repository.",
+      "kind": "claim",
+      "by": "imdusd/infer-protocol on GitHub",
+      "sources": [
+        "S23"
+      ],
+      "quote": "Forked from `identity-md-launches/launch-519-mockimd-pricefeed-nhifeed-cdpvault`",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L66",
+      "section": "how_it_works",
+      "text": "The keeper repository describes software that relays price updates and liquidates loans.",
+      "kind": "claim",
+      "by": "imdusd/imdusd-keeper on GitHub",
+      "sources": [
+        "S25"
+      ],
+      "quote": "Keeper for the imdUSD CDP vault: oracle watcher, attestation relayer, liquidator, pacer and INFER dripper.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L67",
+      "section": "how_it_works",
+      "text": "DefiLlama says 100-agent panels answer every price question.",
+      "kind": "claim",
+      "by": "DefiLlama",
+      "sources": [
+        "S26"
+      ],
+      "quote": "100-agent panels answer every price",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L68",
+      "section": "money",
+      "text": "DefiLlama counts borrowers’ locked staked IMD as protocol value locked.",
+      "kind": "claim",
+      "by": "DefiLlama",
+      "sources": [
+        "S26"
+      ],
+      "quote": "sIMD (staked IMD) collateral locked in the imdUSD CDP vault",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L69",
+      "section": "how_it_works",
+      "text": "DefiLlama describes imdUSD as minted against staked IMD.",
+      "kind": "claim",
+      "by": "DefiLlama",
+      "sources": [
+        "S26"
+      ],
+      "quote": "minted against staked IMD",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L70",
+      "section": "people",
+      "text": "An outside post credits @yadfarms with developing imdUSD.",
+      "kind": "claim",
+      "by": "@surfcoderepeat on X",
+      "sources": [
+        "S29"
+      ],
+      "quote": "developed by @yadfarms on top of IMD",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L71",
+      "section": "what_it_does",
+      "text": "An outside post says new tokens can be paired with imdUSD.",
+      "kind": "claim",
+      "by": "@surfcoderepeat on X",
+      "sources": [
+        "S29"
+      ],
+      "quote": "You can now pair new tokens with imdUSD",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L72",
+      "section": "history",
+      "text": "On November 13, @yadfarms said the second version was in audit.",
+      "kind": "claim",
+      "by": "@yadfarms on X",
+      "sources": [
+        "S30"
+      ],
+      "quote": "imdUSD v2 is in audit",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L73",
+      "section": "what_it_does",
+      "text": "The project’s X account said users could pay the swarm in imdUSD.",
+      "kind": "claim",
+      "by": "@imdusd on X",
+      "sources": [
+        "S31"
+      ],
+      "quote": "Develop your own requests and pay the swarm in imdUSD.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L74",
+      "section": "money",
+      "text": "DEX Screener shows INFER paired with IMD on Uniswap v4.",
+      "kind": "claim",
+      "by": "DEX Screener",
+      "sources": [
+        "S28"
+      ],
+      "quote": "EthereumUniswap\nv4",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L75",
+      "section": "money",
+      "text": "The description on DEX Screener says INFER has a fixed supply of 1 billion INFER.",
+      "kind": "claim",
+      "by": "Token description on DEX Screener",
+      "sources": [
+        "S28"
+      ],
+      "quote": "INFER has a fixed supply of 1 billion",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L124"
+        }
+      ]
+    },
+    {
+      "id": "L76",
+      "section": "people",
+      "text": "The IdentityMD launch explorer attributes the INFER build to nine agents.",
+      "kind": "claim",
+      "by": "IdentityMD Explorer",
+      "sources": [
+        "S27"
+      ],
+      "quote": "9 agents built it",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L77",
+      "section": "money",
+      "text": "The IdentityMD launch explorer lists IMD as the INFER trading pair.",
+      "kind": "claim",
+      "by": "IdentityMD Explorer",
+      "sources": [
+        "S27"
+      ],
+      "quote": "paired with\n$IMD",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L78",
+      "section": "on_chain",
+      "text": "An outside report identifies the project’s submitted address as the INFER token.",
+      "kind": "claim",
+      "by": "IdentityMD Explorer research report",
+      "sources": [
+        "S34"
+      ],
+      "quote": "The entered address matches INFER launch 1282",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L79",
+      "section": "people",
+      "text": "An earlier audit brief describes a cold key proposing settings changes.",
+      "kind": "claim",
+      "by": "Audit request on IdentityMD Explorer",
+      "sources": [
+        "S33"
+      ],
+      "quote": "One cold governor key (APPROVED_OPERATOR) proposes parameter changes behind a 48-hour timelock.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L80",
+      "section": "on_chain",
+      "text": "The stablecoin’s token symbol is imdUSD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 \"symbol()(string)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect imdUSD. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Stablecoin symbol",
+        "value": "imdUSD",
+        "unit": "symbol"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L81",
+      "section": "on_chain",
+      "text": "The imdUSD token uses 18 decimal places.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 \"decimals()(uint8)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 18. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Stablecoin decimal places",
+        "value": 18,
+        "unit": "decimal places"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L82",
+      "section": "on_chain",
+      "text": "The imdUSD token points to the borrowing vault.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 \"vault()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x0b69f8da8d8ce521d74ea69a7a3475b77302ef82. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Stablecoin’s vault",
+        "value": "0x0b69f8da8d8ce521d74ea69a7a3475b77302ef82",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L83",
+      "section": "on_chain",
+      "text": "The vault identifies imdUSD as its stablecoin.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"stablecoin()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x61aaf8a992a3143e2b0c9cb0030b9fe702854a25. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Vault’s stablecoin",
+        "value": "0x61aaf8a992a3143e2b0c9cb0030b9fe702854a25",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L84",
+      "section": "on_chain",
+      "text": "The vault has contract code on Ethereum mainnet.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet, use https://mainnet.gateway.tenderly.co. Run cast chain-id --rpc-url https://mainnet.gateway.tenderly.co and expect 1. Run cast code 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co and expect nonempty code. Latest code works too.",
+      "fact": {
+        "name": "Vault chain ID",
+        "value": 1,
+        "unit": "chain ID"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L85",
+      "section": "history",
+      "text": "A deployment factory created the vault.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), fetch eth_getTransactionByHash and eth_getTransactionReceipt for 0x0d457379d83f6a32a252b2cad3754a1e36fcf3d432fd441e7fb73a6408bd5d5d via https://mainnet.gateway.tenderly.co. Expect block 26166419, status 0x1, from 0x5167D014a056E43883e1BBEa5530c3c0dC993281, to 0x4e59b44847b379578588920ca78fbf26c0b4956c, and a receipt log from 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82. Split transaction input into a 32-byte salt and remaining creation code. Compute the last 20 bytes of keccak256(0xff || to || salt || keccak256(creation code)) and match 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82. This reads transaction data and the receipt.",
+      "fact": {
+        "name": "Vault deployment factory",
+        "value": "0x4e59b44847b379578588920ca78fbf26c0b4956c",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L86",
+      "section": "people",
+      "text": "The deployment transaction identifies the submitting wallet.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), call eth_getTransactionByHash for 0x0d457379d83f6a32a252b2cad3754a1e36fcf3d432fd441e7fb73a6408bd5d5d at https://mainnet.gateway.tenderly.co. Expect blockNumber 0x18f4493 (26166419) and from 0x5167D014a056E43883e1BBEa5530c3c0dC993281. The creation is via a factory. Transaction history suffices.",
+      "fact": {
+        "name": "Deployment sender",
+        "value": "0x5167d014a056e43883e1bbea5530c3c0dc993281",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L87",
+      "section": "history",
+      "text": "The creation transaction fixes the vault’s deployment block.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), fetch eth_getTransactionReceipt for 0x0d457379d83f6a32a252b2cad3754a1e36fcf3d432fd441e7fb73a6408bd5d5d at https://mainnet.gateway.tenderly.co. Expect blockNumber 0x18f4493, status 0x1 and a log emitted by 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82. This reads transaction history.",
+      "fact": {
+        "name": "Vault deployment block",
+        "value": 26166419,
+        "unit": "Ethereum block"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L88",
+      "section": "history",
+      "text": "The vault was deployed on October 11, 2026.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), fetch eth_getTransactionReceipt for 0x0d457379d83f6a32a252b2cad3754a1e36fcf3d432fd441e7fb73a6408bd5d5d, then eth_getBlockByNumber for 0x18f4493 (block 26166419) at https://mainnet.gateway.tenderly.co. The header timestamp decodes to 2026-10-11 03:08:23 UTC. This reads transaction and block history.",
+      "fact": {
+        "name": "Vault deployment date",
+        "value": "2026-10-11",
+        "unit": "UTC date"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L89",
+      "section": "people",
+      "text": "The deploying wallet’s primary ENS name is miyagod.eth.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) at block 26452404, use https://mainnet.gateway.tenderly.co. At ENS Registry 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e call resolver(bytes32) with namehash(5167d014a056e43883e1bbea5530c3c0dc993281.addr.reverse). Call name(bytes32) with that same node on the returned resolver 0x231b0ee14048e9dccd1d247744d114a4eb5e8e63 and expect miyagod.eth. Resolve namehash(miyagod.eth) at the registry and call addr(bytes32) on its resolver to get 0x5167D014a056E43883e1BBEa5530c3c0dC993281. Use an archive service if the block has been pruned.",
+      "fact": {
+        "name": "Deployer ENS name",
+        "value": "miyagod.eth",
+        "unit": "ENS name"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L90",
+      "section": "money",
+      "text": "The annual borrowing rate in the checked snapshot was 4.44%.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"duty()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 444. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Annual borrowing rate",
+        "value": 444,
+        "unit": "basis points"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L91",
+      "section": "money",
+      "text": "The minimum redemption fee is 0.5%.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"REDEMPTION_FEE_FLOOR_BPS()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 50. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Minimum redemption fee",
+        "value": 50,
+        "unit": "basis points"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L92",
+      "section": "money",
+      "text": "The maximum redemption fee is 5%.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"REDEMPTION_FEE_CAP_BPS()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 500. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Maximum redemption fee",
+        "value": 500,
+        "unit": "basis points"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L93",
+      "section": "money",
+      "text": "The checked minimum collateral ratio was 170%.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"mat()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 170. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Minimum collateral ratio",
+        "value": 170,
+        "unit": "percent"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L94",
+      "section": "money",
+      "text": "The checked redemption backing figure was one US dollar per imdUSD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"backingPerUnit()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 1000000000000000000. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Redemption backing per token",
+        "value": "1000000000000000000",
+        "unit": "USD scaled by 10^18"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L95",
+      "section": "money",
+      "text": "Minting from work was switched off in the checked snapshot.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x3D96A6Ffada9C2E5B8fF8eb3f8AFB360116dA881 \"wage()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Work minting rate",
+        "value": "0",
+        "unit": "raw imdUSD units per task"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L96",
+      "section": "money",
+      "text": "The vault had zero imdUSD in recorded bad debt in the checked snapshot.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"totalBadDebt()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Recorded bad debt",
+        "value": "0",
+        "unit": "raw imdUSD units"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L97",
+      "section": "people",
+      "text": "The settings contract points to its governing wallet.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x3D96A6Ffada9C2E5B8fF8eb3f8AFB360116dA881 \"governor()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0xbefd108085613662356aa26a2466ad3426da9c32. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Governing wallet",
+        "value": "0xbefd108085613662356aa26a2466ad3426da9c32",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L98",
+      "section": "people",
+      "text": "The governing wallet required two signatures in the checked snapshot.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0xbeFd108085613662356aa26A2466Ad3426DA9C32 \"getThreshold()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 2. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Governance signatures required",
+        "value": 2,
+        "unit": "signatures"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L99",
+      "section": "people",
+      "text": "The governing wallet had three owners in the checked snapshot.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0xbeFd108085613662356aa26A2466Ad3426DA9C32 \"getOwners()(address[])\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. If the provider has pruned that block, use its archive service. Count the three elements of the returned array.",
+      "fact": {
+        "name": "Governance wallet owners",
+        "value": 3,
+        "unit": "owners"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L100",
+      "section": "people",
+      "text": "Queued settings changes have a 48-hour delay.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x3D96A6Ffada9C2E5B8fF8eb3f8AFB360116dA881 \"TIMELOCK()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 172800. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Settings change delay",
+        "value": 172800,
+        "unit": "seconds"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L101",
+      "section": "money",
+      "text": "The checked total supply was 59822.623566003452582778 imdUSD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 \"totalSupply()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 59822623566003452582778. If the provider has pruned that block, use its archive service. Read decimals()(uint8) at the same address and divide by 10^18.",
+      "fact": {
+        "name": "Total imdUSD supply",
+        "value": "59822623566003452582778",
+        "unit": "raw imdUSD units"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L102",
+      "section": "money",
+      "text": "The checked circulating supply by the project’s method was 59780.043431460345395335 imdUSD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S4"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 \"totalSupply()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 59822623566003452582778. If the provider has pruned that block, use its archive service. At the same block call balanceOf(address) on the token with 0x6Ac8fF96Fb8DCF5d79A8eF1E59D9AC23f2BD27Bc; subtract 42580134543107187443 from total, then divide by 10^18.",
+      "fact": {
+        "name": "Circulating imdUSD supply",
+        "value": "59780043431460345395335",
+        "unit": "raw imdUSD units"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L103",
+      "section": "money",
+      "text": "The supply page reported 59822.623566003452582778 imdUSD in total.",
+      "kind": "statement",
+      "by": "imdUSD supply API",
+      "sources": [
+        "S21"
+      ],
+      "quote": "\"total\": \"59822.623566003452582778\"",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L101"
+        }
+      ]
+    },
+    {
+      "id": "L104",
+      "section": "money",
+      "text": "The supply page reported 59780.043431460345395335 imdUSD in circulation.",
+      "kind": "statement",
+      "by": "imdUSD supply API",
+      "sources": [
+        "S21"
+      ],
+      "quote": "\"circulating\": \"59780.043431460345395335\"",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L102"
+        }
+      ]
+    },
+    {
+      "id": "L105",
+      "section": "money",
+      "text": "The checked INFER supply was 1,000,000,000 INFER.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x53d0eA0A685220718Dc6a0a6e4617194C6F37921 \"totalSupply()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 1000000000000000000000000000. If the provider has pruned that block, use its archive service. Read decimals()(uint8) at the same address and divide by 10^18.",
+      "fact": {
+        "name": "Total INFER supply",
+        "value": "1000000000000000000000000000",
+        "unit": "raw INFER units"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L106",
+      "section": "money",
+      "text": "The supply page reports 1,000,000,000 INFER in total.",
+      "kind": "statement",
+      "by": "imdUSD supply API",
+      "sources": [
+        "S21"
+      ],
+      "quote": "\"total\": \"1000000000\"",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L105"
+        }
+      ]
+    },
+    {
+      "id": "L107",
+      "section": "on_chain",
+      "text": "The vault names its collateral token.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"gem()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x9efa934d9fad4ae28c998a40195646b965a97247. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Collateral token",
+        "value": "0x9efa934d9fad4ae28c998a40195646b965a97247",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L108",
+      "section": "on_chain",
+      "text": "The vault names its treasury.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"treasury()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x6ac8ff96fb8dcf5d79a8ef1e59d9ac23f2bd27bc. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Treasury",
+        "value": "0x6ac8ff96fb8dcf5d79a8ef1e59d9ac23f2bd27bc",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L109",
+      "section": "on_chain",
+      "text": "The vault names its settings contract.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"parameters()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x3d96a6ffada9c2e5b8ff8eb3f8afb360116da881. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Settings contract",
+        "value": "0x3d96a6ffada9c2e5b8ff8eb3f8afb360116da881",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L110",
+      "section": "on_chain",
+      "text": "The vault names its main price feed.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"priceFeed()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x070e0603737242b01abc1d223f7c92d63e86ec97. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Main price feed",
+        "value": "0x070e0603737242b01abc1d223f7c92d63e86ec97",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L111",
+      "section": "on_chain",
+      "text": "The vault names its network health feed.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"nhiFeed()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x014dabf6f940c9c383d9ef48636f70d842f65d7a. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Network health feed",
+        "value": "0x014dabf6f940c9c383d9ef48636f70d842f65d7a",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L112",
+      "section": "on_chain",
+      "text": "The vault names its spot price feed.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"spotFeed()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x77e1684402869bf2b7c70b8bf21e1c7ca7104951. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Spot price feed",
+        "value": "0x77e1684402869bf2b7c70b8bf21e1c7ca7104951",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L113",
+      "section": "on_chain",
+      "text": "The vault names its work oracle.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"oracle()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0xc7335a836ad85a6ac0830c6cef602d735b9d8a8a. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Work oracle",
+        "value": "0xc7335a836ad85a6ac0830c6cef602d735b9d8a8a",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L114",
+      "section": "on_chain",
+      "text": "The vault names its iMD dollar price feed.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"usdPriceFeed()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x297b85afc6bbf9d9cca636f7ed74c56da79287a0. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "IMD dollar price feed",
+        "value": "0x297b85afc6bbf9d9cca636f7ed74c56da79287a0",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L115",
+      "section": "on_chain",
+      "text": "The vault names its staked IMD dollar price feed.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"collateralPriceFeed()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0xf065c8b65aa9ac6fd9cbad15301738e91389d9e1. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Staked IMD dollar price feed",
+        "value": "0xf065c8b65aa9ac6fd9cbad15301738e91389d9e1",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L116",
+      "section": "how_it_works",
+      "text": "Each of the three deployed feeds sets a minimum panel size of 100 agents.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) use https://mainnet.gateway.tenderly.co. At block 26452404 call MIN_PANEL_SIZE()(uint16) on 0x070e0603737242B01aBC1D223f7C92D63E86EC97, 0x77E1684402869Bf2B7c70B8bf21E1C7Ca7104951, and 0x014DabF6F940c9C383D9ef48636F70D842F65D7A. Expect 100 from each. The constants can also be read at latest.",
+      "fact": {
+        "name": "Minimum reported panel size",
+        "value": 100,
+        "unit": "agents"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L117",
+      "section": "how_it_works",
+      "text": "Each of the three deployed feeds sets a minimum of 51 agreeing agents.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1) use https://mainnet.gateway.tenderly.co. At block 26452404 call MIN_AGREED()(uint16) on 0x070e0603737242B01aBC1D223f7C92D63E86EC97, 0x77E1684402869Bf2B7c70B8bf21E1C7Ca7104951, and 0x014DabF6F940c9C383D9ef48636F70D842F65D7A. Expect 51 from each. The constants can also be read at latest.",
+      "fact": {
+        "name": "Minimum reported agreeing agents",
+        "value": 51,
+        "unit": "agents"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L118",
+      "section": "on_chain",
+      "text": "The sINFER staking vault holds INFER as its underlying asset.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x5e3b440156ce928fda68b2378578dc9333846ce4 \"asset()(address)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0x53d0ea0a685220718dc6a0a6e4617194c6f37921. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "sINFER underlying token",
+        "value": "0x53d0ea0a685220718dc6a0a6e4617194c6f37921",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L119",
+      "section": "money",
+      "text": "The imdUSD and USDC pool opened with a base fee of 0.01%.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S39"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Call eth_getLogs with fromBlock and toBlock both 0x18f4857 (26167383), address 0x000000000004444c5dc75cB358380D2e3dE08A90 and topics [0xdd466e674ea557f56295e2d0218a125ea4b4f0f6f3307b95f85e6110838d6438, 0x3cb8cc9c22f7da5c3169d4059131ddba9e61f68230977797c03a2f1214992035]. The first 32-byte word in data is the fee, 100 millionths. This reads historical logs without past state.",
+      "fact": {
+        "name": "Pool base fee",
+        "value": 100,
+        "unit": "millionths"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L120",
+      "section": "on_chain",
+      "text": "Only the borrowing vault can mint or burn imdUSD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S40"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast code 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 --rpc-url https://mainnet.gateway.tenderly.co at latest (runtime checked at block 26452404) and hash the bytecode with cast keccak. Expect 0xcee6360092061374972ebce4223317261f5c91c733164c2cc69a29392fa27e55. Compare the RPC result to runtimeBytecode.onchainBytecode at https://sourcify.dev/server/v2/contract/1/0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25?fields=runtimeBytecode,sources,abi,deployment and inspect the matching sources. In src/ImdUSD.sol, both mint and burn require onlyVault. Read vault()(address) and match 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82.",
+      "fact": {
+        "name": "Authorized minter and burner",
+        "value": "0x0b69f8da8d8ce521d74ea69a7a3475b77302ef82",
+        "unit": "address"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L121",
+      "section": "on_chain",
+      "text": "The verified imdUSD code has no owner role.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S40"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast code 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 --rpc-url https://mainnet.gateway.tenderly.co at latest (runtime checked at block 26452404) and hash the bytecode with cast keccak. Expect 0xcee6360092061374972ebce4223317261f5c91c733164c2cc69a29392fa27e55. Compare the RPC result to runtimeBytecode.onchainBytecode at https://sourcify.dev/server/v2/contract/1/0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25?fields=runtimeBytecode,sources,abi,deployment and inspect the matching sources. Inspect the external ABI and source, including inherited ERC20. There is no owner or ownership transfer. setVault is a one-time initializer.",
+      "fact": {
+        "name": "Token owner role",
+        "value": false,
+        "unit": "boolean"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L122",
+      "section": "on_chain",
+      "text": "The verified imdUSD code has no pause switch.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S40"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast code 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 --rpc-url https://mainnet.gateway.tenderly.co at latest (runtime checked at block 26452404) and hash the bytecode with cast keccak. Expect 0xcee6360092061374972ebce4223317261f5c91c733164c2cc69a29392fa27e55. Compare the RPC result to runtimeBytecode.onchainBytecode at https://sourcify.dev/server/v2/contract/1/0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25?fields=runtimeBytecode,sources,abi,deployment and inspect the matching sources. Inspect transfer and transferFrom in inherited ERC20 and verify that the token has no paused state or pause check.",
+      "fact": {
+        "name": "Token pause switch",
+        "value": false,
+        "unit": "boolean"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L123",
+      "section": "on_chain",
+      "text": "The verified imdUSD code has no upgrade path.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S40"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast code 0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25 --rpc-url https://mainnet.gateway.tenderly.co at latest (runtime checked at block 26452404) and hash the bytecode with cast keccak. Expect 0xcee6360092061374972ebce4223317261f5c91c733164c2cc69a29392fa27e55. Compare the RPC result to runtimeBytecode.onchainBytecode at https://sourcify.dev/server/v2/contract/1/0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25?fields=runtimeBytecode,sources,abi,deployment and inspect the matching sources. Check that deployed code matches the implementation and that neither the ABI nor runtime provides an upgrade or implementation delegation path.",
+      "fact": {
+        "name": "Token upgrade path",
+        "value": false,
+        "unit": "boolean"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L124",
+      "section": "money",
+      "text": "INFER has a fixed supply of 1,000,000,000 INFER.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1",
+        "S41"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast code 0x53d0eA0A685220718Dc6a0a6e4617194C6F37921 --rpc-url https://mainnet.gateway.tenderly.co at latest (runtime checked at block 26452404) and hash the bytecode with cast keccak. Expect 0x9eab9ee41316d67971cd0d157d2a2c9d4e2636db8844c591cce01288a882eec4. Compare the RPC result to runtimeBytecode.onchainBytecode at https://sourcify.dev/server/v2/contract/1/0x53d0eA0A685220718Dc6a0a6e4617194C6F37921?fields=runtimeBytecode,sources,abi,deployment and inspect the matching sources. In src/InferToken.sol the only mint is in the constructor. The inherited ERC20 has no public mint or burn. Read totalSupply()(uint256) and decimals()(uint8) and divide by 10^18.",
+      "fact": {
+        "name": "Fixed INFER supply",
+        "value": "1000000000000000000000000000",
+        "unit": "raw INFER units"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L125",
+      "section": "history",
+      "text": "The project’s GitHub organization published a snapshot of the second version for public review.",
+      "kind": "claim",
+      "by": "imdusd/imdusd-v2-audit on GitHub",
+      "sources": [
+        "S42"
+      ],
+      "quote": "imdUSD v2 audit snapshot: the contracts under public review",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L126",
+      "section": "people",
+      "text": "The @yadfarms profile describes its operator as a person behind @imdusd.",
+      "kind": "claim",
+      "by": "@yadfarms on X",
+      "sources": [
+        "S43"
+      ],
+      "quote": "human @miyamaker2 @imdusd",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L127",
+      "section": "people",
+      "text": "The @yadfarms account credits its team with making INFER BOX.",
+      "kind": "claim",
+      "by": "@yadfarms on X",
+      "sources": [
+        "S43"
+      ],
+      "quote": "That’s why we made INFER BOX",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L128",
+      "section": "history",
+      "text": "The @yadfarms account says the source repository builds on IdentityMD launch 519.",
+      "kind": "claim",
+      "by": "@yadfarms on X",
+      "sources": [
+        "S44"
+      ],
+      "quote": "it’s rebased off IMD launch #519",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L129",
+      "section": "people",
+      "text": "An outside report says the imdUSD entry named @yadfarms as its personal handle.",
+      "kind": "claim",
+      "by": "IdentityMD Explorer research report",
+      "sources": [
+        "S34"
+      ],
+      "quote": "declared personal handle @yadfarms",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L130",
+      "section": "money",
+      "text": "A quote for redeeming 1 imdUSD returned a fee of 0.51% in the checked snapshot.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"redemptionFeeBps(uint256)(uint256)\" 1000000000000000000 --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 51 basis points before network fees. Use an archive service if the block has been pruned.",
+      "fact": {
+        "name": "Fee quote for redeeming 1 imdUSD",
+        "value": 51,
+        "unit": "basis points"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L131",
+      "section": "how_it_works",
+      "text": "The project says it can buy price updates from its Treasury budget.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S13"
+      ],
+      "quote": "The Treasury pays for price updates",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L132",
+      "section": "money",
+      "text": "The project says redemptions leave their fee in the backing.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S9"
+      ],
+      "quote": "fee stays in the protocol as extra backing",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L133",
+      "section": "money",
+      "text": "The project says the vault can cancel unpaid debt using Treasury imdUSD.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S48"
+      ],
+      "quote": "bad debt using imdUSD the Treasury holds.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L134",
+      "section": "how_it_works",
+      "text": "The project says the vault will only lend within a total debt limit.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S8"
+      ],
+      "quote": "and the total against the debt ceiling",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L142"
+        }
+      ]
+    },
+    {
+      "id": "L135",
+      "section": "how_it_works",
+      "text": "Depositing collateral through the terminal first requires token approval.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S10"
+      ],
+      "quote": "first asks for an approval of that token",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L136",
+      "section": "money",
+      "text": "The project says a borrower’s repayment goes to unpaid fees first.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S49"
+      ],
+      "quote": "paid first when you repay",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L137",
+      "section": "money",
+      "text": "The project says a larger redemption raises the fee on that same redemption.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S12"
+      ],
+      "quote": "the redemption that raises it",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L138",
+      "section": "money",
+      "text": "The project says there is no automatic buyback from the vault’s monetary policy.",
+      "kind": "statement",
+      "by": "imdUSD documentation",
+      "sources": [
+        "S12"
+      ],
+      "quote": "no automatic revenue distribution or buyback.",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L139",
+      "section": "money",
+      "text": "The vault’s annual borrowing rate was 4.44% at deployment.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"duty()(uint256)\" --block 26166419 --rpc-url https://mainnet.gateway.tenderly.co. Expect 444. If the provider has pruned that block, use its archive service. This is past state and needs an archive service.",
+      "fact": {
+        "name": "Launch borrowing rate",
+        "value": 444,
+        "unit": "basis points"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L140",
+      "section": "history",
+      "text": "Minting from work was off at deployment.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x3D96A6Ffada9C2E5B8fF8eb3f8AFB360116dA881 \"wage()(uint256)\" --block 26166419 --rpc-url https://mainnet.gateway.tenderly.co. Expect 0. If the provider has pruned that block, use its archive service. This is past state and needs an archive service.",
+      "fact": {
+        "name": "Launch work minting rate",
+        "value": "0",
+        "unit": "raw imdUSD units per task"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L141",
+      "section": "money",
+      "text": "The liquidation bonus is 20% of the debt repaid.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"CHOP_PERCENT()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 20. The getter is fixed, so latest state also works.",
+      "fact": {
+        "name": "Liquidation bonus",
+        "value": 20,
+        "unit": "percent"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L142",
+      "section": "money",
+      "text": "The checked debt ceiling was 1,000,000 imdUSD.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S1"
+      ],
+      "quote": null,
+      "rerun": "On Ethereum mainnet (chain ID 1), use https://mainnet.gateway.tenderly.co. Run cast call 0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82 \"line()(uint256)\" --block 26452404 --rpc-url https://mainnet.gateway.tenderly.co. Expect 1000000000000000000000000. If the provider has pruned that block, use its archive service.",
+      "fact": {
+        "name": "Borrowed principal ceiling",
+        "value": "1000000000000000000000000",
+        "unit": "raw imdUSD units"
+      },
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L143",
+      "section": "people",
+      "text": "GitHub lists fa11up as the committer for the change linking the founder’s ENS profile.",
+      "kind": "claim",
+      "by": "GitHub commit history",
+      "sources": [
+        "S52"
+      ],
+      "quote": "About: link the founder's ENS profile",
+      "rerun": null,
+      "fact": null,
+      "from": [],
+      "links": []
+    }
+  ],
+  "differs": [
+    {
+      "lines": [
+        "L59",
+        "L87"
+      ],
+      "why": "The documentation and the successful creation transaction put the same deployment in different Ethereum blocks.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L31",
+        "L116"
+      ],
+      "why": "The documented minimum panel size and the deployed feed constant differ for the same feeds.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L32",
+        "L117"
+      ],
+      "why": "The documented minimum agreement count and the deployed feed constant differ for the same feeds.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L67",
+        "L116"
+      ],
+      "why": "The contract establishes a minimum reported panel size, while the tracker says every price is answered by exactly that size of panel.",
+      "level": "question"
+    },
+    {
+      "lines": [
+        "L79",
+        "L97",
+        "L98"
+      ],
+      "why": "The audit brief describes a cold key before launch. The deployed settings point to a Safe, so the descriptions may refer to different versions.",
+      "level": "question"
+    },
+    {
+      "lines": [
+        "L40",
+        "L138"
+      ],
+      "level": "question",
+      "why": "A keeper or Treasury operator can carry out purchases even if the vault does not distribute revenue or buy tokens automatically."
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "Which verified deployment and launch announcement will establish that the second version is live?",
+    "Do the IdentityMD price panels consistently report exactly 100 agents, or do accepted updates sometimes report larger panels?",
+    "Are there other publicly self-identified founders or operators, and do signed or on-chain records tie their profiles to the project?",
+    "Does the project’s X account publish the full main vault address in posts unavailable through the sources checked?",
+    "What was the market price of imdUSD for a specific trade size at the snapshot, after swap fees and price impact?",
+    "What role, if any, did the wallet address in the reported hackathon submission play in deploying the INFER token?"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "ref": "https://mainnet.gateway.tenderly.co",
+      "type": "rpc",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S2",
+      "ref": "https://sourcify.dev/server/v2/contract/1/0x0b69F8DA8D8cE521d74Ea69a7A3475B77302EF82?fields=deployment",
+      "type": "contract verification",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S3",
+      "ref": "https://imdusd.com/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S4",
+      "ref": "https://imdusd.com/docs/overview/about/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S5",
+      "ref": "https://imdusd.com/docs/overview/what-is-imdusd/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S6",
+      "ref": "https://imdusd.com/docs/reference/contracts-and-addresses/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S7",
+      "ref": "https://imdusd.com/links/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S8",
+      "ref": "https://imdusd.com/docs/guides/open-a-position/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S9",
+      "ref": "https://imdusd.com/docs/guides/redeem/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S10",
+      "ref": "https://imdusd.com/docs/guides/use-the-terminal/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S11",
+      "ref": "https://imdusd.com/docs/keepers/how-liquidation-works/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S12",
+      "ref": "https://imdusd.com/docs/economics/monetary-policy/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S13",
+      "ref": "https://imdusd.com/docs/economics/risks-and-open-questions/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S14",
+      "ref": "https://imdusd.com/docs/economics/swarm-evidence/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S15",
+      "ref": "https://imdusd.com/docs/governance/parameters/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S16",
+      "ref": "https://imdusd.com/docs/overview/the-peg-pool/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S17",
+      "ref": "https://imdusd.com/build/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S18",
+      "ref": "https://imdusd.com/docs/economics/points-and-seasons/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S19",
+      "ref": "https://whitepaper.imdusd.com/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S20",
+      "ref": "https://infer.imdusd.com/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S21",
+      "ref": "https://infer.imdusd.com/supply.json",
+      "type": "api",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S22",
+      "ref": "https://blog.imdusd.com/v2-scope-and-strategy/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S23",
+      "ref": "https://github.com/imdusd/infer-protocol",
+      "type": "repository",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S24",
+      "ref": "https://github.com/fa11up/infer-protocol",
+      "type": "repository",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S25",
+      "ref": "https://github.com/imdusd/imdusd-keeper",
+      "type": "repository",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S26",
+      "ref": "https://defillama.com/protocol/infer",
+      "type": "tracker",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S27",
+      "ref": "https://explorer.imd.fun/token/0x53d0ea0a685220718dc6a0a6e4617194c6f37921",
+      "type": "launch explorer",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S28",
+      "ref": "https://dexscreener.com/ethereum/0x1f03dd2c202cf17b58305b73ae2f8b3143e9c056ed9c9e8dbd4924b350431e95",
+      "type": "tracker",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": "mta-sts.dexscreener.com"
+    },
+    {
+      "id": "S29",
+      "ref": "https://x.com/surfcoderepeat/status/2123113752782340423",
+      "type": "post",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": "teapawt.org"
+    },
+    {
+      "id": "S30",
+      "ref": "https://x.com/yadfarms/status/2121301249370833135",
+      "type": "post",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": "www.xitter.gq"
+    },
+    {
+      "id": "S31",
+      "ref": "https://x.com/imdusd",
+      "type": "post",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": "ssstwitterx.app"
+    },
+    {
+      "id": "S32",
+      "ref": "https://explorer.imd.fun/token/0x04b70c8cb46e2e7ab179db09f785c06494a21a07",
+      "type": "launch explorer",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S33",
+      "ref": "https://explorer.imd.fun/jobs/ed4f7f6d-0b24-4762-91b5-3f1d61657d68",
+      "type": "project audit brief",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S34",
+      "ref": "https://explorer.imd.fun/jobs/e2b921c9-35eb-48bb-add4-2e8f42d944b2",
+      "type": "outside report",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S35",
+      "ref": "https://x.com/imdusd",
+      "type": "profile",
+      "read_at": "2026-11-19",
+      "could_open": false,
+      "read_via": null
+    },
+    {
+      "id": "S36",
+      "ref": "https://app.ens.domains/miyagod.eth",
+      "type": "ENS profile",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S37",
+      "ref": "https://box.imdusd.com/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": false,
+      "read_via": null
+    },
+    {
+      "id": "S38",
+      "ref": "https://infer.imdusd.com/tokenomics/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": false,
+      "read_via": null
+    },
+    {
+      "id": "S39",
+      "ref": "https://imdusd.com/api/v1/meta",
+      "type": "api",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S40",
+      "ref": "https://sourcify.dev/server/v2/contract/1/0x61aAF8a992A3143e2B0C9cB0030b9fE702854a25?fields=runtimeBytecode,sources,abi,deployment",
+      "type": "contract verification",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S41",
+      "ref": "https://sourcify.dev/server/v2/contract/1/0x53d0eA0A685220718Dc6a0a6e4617194C6F37921?fields=runtimeBytecode,sources,abi,deployment",
+      "type": "contract verification",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S42",
+      "ref": "https://github.com/imdusd/imdusd-v2-audit",
+      "type": "repository",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S43",
+      "ref": "https://x.com/yadfarms",
+      "type": "profile",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": "nitter.rdrama.net"
+    },
+    {
+      "id": "S44",
+      "ref": "https://x.com/yadfarms/status/2115134732568510510",
+      "type": "post",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": "teapawt.org"
+    },
+    {
+      "id": "S45",
+      "ref": "https://imdusd.com/docs/reference/vault-functions/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S46",
+      "ref": "https://imdusd.com/partners/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S47",
+      "ref": "https://imdusd.com/docs/reference/audit-history/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S48",
+      "ref": "https://imdusd.com/docs/overview/glossary/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S49",
+      "ref": "https://imdusd.com/docs/overview/how-it-holds-a-dollar/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S50",
+      "ref": "https://imdusd.com/docs/governance/timelock-and-proposals/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S51",
+      "ref": "https://imdusd.com/docs/guides/manage-and-protect-a-position/",
+      "type": "web",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S52",
+      "ref": "https://github.com/imdusd/infer-protocol/commits",
+      "type": "repository",
+      "read_at": "2026-11-19",
+      "could_open": true,
+      "read_via": null
+    },
+    {
+      "id": "S53",
+      "ref": "https://etherscan.io/tx/0x0d457379d83f6a32a252b2cad3754a1e36fcf3d432fd441e7fb73a6408bd5d5d",
+      "type": "block explorer",
+      "read_at": "2026-11-19",
+      "could_open": false,
+      "read_via": null
+    }
+  ],
+  "ignored_instructions": [
+    "https://github.com/fa11up/infer-protocol",
+    "https://explorer.imd.fun/jobs/ed4f7f6d-0b24-4762-91b5-3f1d61657d68",
+    "https://explorer.imd.fun/jobs/e2b921c9-35eb-48bb-add4-2e8f42d944b2"
+  ],
+  "notes": "No earlier files or panel answers were supplied. The record covers the live Ethereum deployment identified by imdusd.com. IdentityMD Explorer lists a separate same-name launch with a different contract under launch 3293. No source checked ties that launch to this protocol. The core contract list follows the published address reference, the INFER launch listing and the supply endpoint. IMD, sIMD, IdentityMD Intake, Chainlink and the Uniswap pool manager are external dependencies. Off-domain channel ties describe the evidence found. The project links its X account, and the deployment wallet points to the founder ENS profile. The @yadfarms account association comes from public posts. No real-world identity is assigned. Proofs that use a snapshot generally refer to Ethereum block 26452404. The main vault address is published on the two protocol repositories, giving them a weak tie. ENS text records checked did not point to either X account. The contributor account is identified by its public GitHub handle. The checked links for GitHub and X establish attribution only to the named accounts. Some X posts were available through public mirrors. The source entries name those hosts."
+}
