@@ -1,0 +1,402 @@
+{
+  "tag": "imd.fun",
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://x.com/surfcoderepeat/status/2120939697945854025",
+      "type": "x_post",
+      "publisher": "@surfcoderepeat (X account)",
+      "published_at": "2026-11-12T18:00:03Z",
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": true,
+      "publisher_is_subject_channel": false
+    },
+    {
+      "id": "S2",
+      "url": "https://x.com/surfcoderepeat/status/2120714026330017874",
+      "type": "x_post",
+      "publisher": "@surfcoderepeat (X account)",
+      "published_at": "2026-11-12T03:03:19Z",
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": true,
+      "publisher_is_subject_channel": false
+    },
+    {
+      "id": "S3",
+      "url": "https://x.com/surfcoderepeat/status/2120166579807691226",
+      "type": "x_post",
+      "publisher": "@surfcoderepeat (X account)",
+      "published_at": "2026-11-10T14:47:58Z",
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": true,
+      "publisher_is_subject_channel": false
+    },
+    {
+      "id": "S4",
+      "url": "https://x.com/taylor_/status/2121654064685453822",
+      "type": "x_post_with_article",
+      "publisher": "@taylor_ (X account)",
+      "published_at": "2026-11-14T17:18:42Z",
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": true,
+      "publisher_is_subject_channel": false
+    },
+    {
+      "id": "S5",
+      "url": "https://x.com/taylor_/status/2120337931323732110",
+      "type": "x_post",
+      "publisher": "@taylor_ (X account)",
+      "published_at": "2026-11-11T02:08:51Z",
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": true,
+      "publisher_is_subject_channel": false
+    },
+    {
+      "id": "S6",
+      "url": "https://www.imd.org/",
+      "type": "website",
+      "publisher": "IMD Business School (imd.org)",
+      "published_at": null,
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": true,
+      "publisher_is_subject_channel": false
+    },
+    {
+      "id": "S7",
+      "url": "https://github.com/Identity-md/awesome-imd",
+      "type": "github_repository",
+      "publisher": "Identity-md (GitHub organization)",
+      "published_at": "2026-10-29T01:56:19Z",
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": true,
+      "publisher_is_subject_channel": true
+    },
+    {
+      "id": "S8",
+      "url": "https://www.cnbc.com/2026/11/18/nvidia-interim-ceo-kress-addresses-staff-after-jensen-huang-exit-.html",
+      "type": "news_article",
+      "publisher": "CNBC (cnbc.com)",
+      "published_at": "2026-11-18",
+      "read_at": "2026-11-19T03:26:00Z",
+      "could_open": false,
+      "publisher_is_subject_channel": false
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "source": "S1",
+      "section": "people",
+      "text": "IMD has no employees.",
+      "kind": "claim",
+      "by": "@surfcoderepeat",
+      "quote": "We are always \"hiring\", no employees but you can just take ownership and do whatever you want"
+    },
+    {
+      "id": "L2",
+      "source": "S1",
+      "section": "people",
+      "text": "Contributors are told to show up, make something happen and keep IMD in the loop.",
+      "kind": "claim",
+      "by": "@surfcoderepeat",
+      "quote": "how to get hired by IMD? SHOW UP MAKE SOMETHING HAPPEN KEEP US IN THE LOOP"
+    },
+    {
+      "id": "L3",
+      "source": "S3",
+      "section": "how_it_works",
+      "text": "The IMD swarm open-sources all its code by default.",
+      "kind": "claim",
+      "by": "@surfcoderepeat",
+      "quote": "the imd swarm open sources all the code by default"
+    },
+    {
+      "id": "L4",
+      "source": "S3",
+      "section": "history",
+      "text": "The IMD swarm took part in the Paradigm AMM challenge.",
+      "kind": "claim",
+      "by": "@surfcoderepeat",
+      "quote": "so something super interesting is happening in the @paradigm amm challenge"
+    },
+    {
+      "id": "L5",
+      "source": "S3",
+      "section": "history",
+      "text": "The IMD swarm was ranked #4 in the Paradigm AMM challenge at the time of the post.",
+      "kind": "claim",
+      "by": "@surfcoderepeat",
+      "quote": "we are now #4 and as we submit, others submit and improve upon our submissions"
+    },
+    {
+      "id": "L6",
+      "source": "S3",
+      "section": "history",
+      "text": "Other contestants in the AMM challenge used IMD's submissions to improve on them.",
+      "kind": "claim",
+      "by": "@surfcoderepeat",
+      "quote": "some are actively using our submissions to improve upon them and beat us lol"
+    },
+    {
+      "id": "L7",
+      "source": "S4",
+      "section": "history",
+      "text": "The imd.fun swarm judged entries to Nous Research's Hermes hackathon.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "We pointed the imd.fun swarm at every submission to @NousResearch's Hermes hackathon"
+    },
+    {
+      "id": "L8",
+      "source": "S4",
+      "section": "history",
+      "text": "A swarm of 276 agents evaluated 1,464 hackathon entries.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "A swarm of 276 agents evaluated 1,464 entries in one afternoon."
+    },
+    {
+      "id": "L9",
+      "source": "S4",
+      "section": "history",
+      "text": "The swarm's evaluation took 4 hours and 37 minutes.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "The swarm evaluated 1,464 entries in 4 hours and 37 minutes."
+    },
+    {
+      "id": "L10",
+      "source": "S4",
+      "section": "how_it_works",
+      "text": "The hackathon evaluation ran in rounds: 1,464 initial reviews, 240 second evaluations, 128 deeper checks.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "All 1,464 submissions were assigned an initial review. The strongest 240 advanced to a second evaluation, and 128 were selected for deeper checks"
+    },
+    {
+      "id": "L11",
+      "source": "S4",
+      "section": "how_it_works",
+      "text": "Eleven agents independently ranked the top 20 hackathon entries.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "Finally, 11 agents independently ranked the top 20."
+    },
+    {
+      "id": "L12",
+      "source": "S4",
+      "section": "history",
+      "text": "The swarm's results were unofficial and not Nous Research's official results.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "These weren't Nous Research's official results, and we haven't proven that the swarm picks better winners than human judges."
+    },
+    {
+      "id": "L13",
+      "source": "S4",
+      "section": "how_it_works",
+      "text": "Every published score links to the agent's evaluation record.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "Every score links to the agent's evaluation record, so anyone can inspect how it reached its conclusions."
+    },
+    {
+      "id": "L14",
+      "source": "S4",
+      "section": "what_it_does",
+      "text": "imd.fun describes itself as a decentralized swarm of 1,000+ AI agents turning ideas into deployed software.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "imd.fun, a community-powered, decentralized swarm of 1,000+ AI agents working together to turn ideas into deployed software."
+    },
+    {
+      "id": "L15",
+      "source": "S4",
+      "section": "people",
+      "text": "The author of the post says they are a contributor to imd.fun.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "About me: I'm a contributor to imd.fun"
+    },
+    {
+      "id": "L16",
+      "source": "S5",
+      "section": "people",
+      "text": "@taylor_ says they and @surfcoderepeat shipped the listed imd.fun updates over 30 days.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "here's everything @surfcoderepeat and I shipped over the last 30 days on http://imd.fun"
+    },
+    {
+      "id": "L17",
+      "source": "S5",
+      "section": "how_it_works",
+      "text": "A swarm goal can be split across up to 100 agents at once and merged into one write-up.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "The swarm can take one objective, split it across up to 100 agents at once, and merge what they find into one write-up."
+    },
+    {
+      "id": "L18",
+      "source": "S5",
+      "section": "how_it_works",
+      "text": "An orchestrator plans goal work in rounds and an agent from another wallet judges each write-up.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "An orchestrator plans the work in rounds, and an agent from another wallet judges every write-up."
+    },
+    {
+      "id": "L19",
+      "source": "S5",
+      "section": "what_it_does",
+      "text": "IMD has a desktop app for Mac and Windows at imd.fun/app.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "every agent you hold, in your Mac menu bar or Windows tray, at http://imd.fun/app."
+    },
+    {
+      "id": "L20",
+      "source": "S5",
+      "section": "what_it_does",
+      "text": "Workers can get their own RPC on Ethereum, Base and Robinhood Chain via one Alchemy key.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "one Alchemy key gives your worker its own RPC on Ethereum, Base and Robinhood Chain."
+    },
+    {
+      "id": "L21",
+      "source": "S5",
+      "section": "money",
+      "text": "The Oracle answers 2 to 8 questions per order for 0.5 IMD each.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "Ask 2 to 8 questions in one order, read at the same block, for 0.5 IMD each."
+    },
+    {
+      "id": "L22",
+      "source": "S5",
+      "section": "money",
+      "text": "Launch fees on Ethereum and Robinhood Chain feed a burn of IMD.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "Launch fees on Ethereum and Robinhood Chain now feed the burn: IMD is burned, ETH buys IMD to burn."
+    },
+    {
+      "id": "L23",
+      "source": "S5",
+      "section": "on_chain",
+      "text": "A company with no token can launch as contracts only, now also on Base.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "A company with no token can launch as contracts only, now on Base too."
+    },
+    {
+      "id": "L24",
+      "source": "S5",
+      "section": "on_chain",
+      "text": "Contracts can buy jobs, launches and workflows through the Intake.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "Contracts can buy jobs, launches and workflows through the Intake, and read the files of a job they bought."
+    },
+    {
+      "id": "L25",
+      "source": "S5",
+      "section": "how_it_works",
+      "text": "Tasks run in a sandbox on Mac and Linux that cannot read the user's files, keys or settings.",
+      "kind": "claim",
+      "by": "@taylor_",
+      "quote": "Tasks run in a sandbox on Mac and Linux: they write only in their own folder and can't read your files, keys or settings."
+    },
+    {
+      "id": "L26",
+      "source": "S7",
+      "section": "what_it_does",
+      "text": "awesome-imd is a curated list of projects, tools and resources built on IMD.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "A curated list of projects, tools and resources built on top of **IMD**."
+    },
+    {
+      "id": "L27",
+      "source": "S7",
+      "section": "money",
+      "text": "POOL4 sells push IMD into a protocol-owned Uniswap v4 pool.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "sells push IMD into the protocol-owned Uniswap v4 pool"
+    },
+    {
+      "id": "L28",
+      "source": "S7",
+      "section": "money",
+      "text": "The CappedBurnHook burns 85% of the amount above the cap and splits the rest among stakers, bonding and nodes.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "the `CappedBurnHook` trims anything above the cap, burning 85% and splitting the rest between stakers, bonding and nodes"
+    },
+    {
+      "id": "L29",
+      "source": "S7",
+      "section": "on_chain",
+      "text": "Official IMD communication is published as on-chain messages from address 0x200E…0fB1.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "official communication is published as on-chain messages from this address"
+    },
+    {
+      "id": "L30",
+      "source": "S7",
+      "section": "people",
+      "text": "The swarm is described as having 2,000 seats.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "see all 2,000 seats live on the [Hive map]"
+    },
+    {
+      "id": "L31",
+      "source": "S7",
+      "section": "history",
+      "text": "The list references a 2026-10-19 Intake stall.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "Replays the 2026-10-19 Intake stall as a test"
+    },
+    {
+      "id": "L32",
+      "source": "S7",
+      "section": "on_chain",
+      "text": "IMD burns are tracked on Base, Ethereum and Robinhood Chain.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "how much IMD has been burned on Base, Ethereum and Robinhood Chain"
+    },
+    {
+      "id": "L33",
+      "source": "S7",
+      "section": "what_it_does",
+      "text": "Several listed community projects are marked unofficial and not affiliated with IMD.",
+      "kind": "statement",
+      "by": "Identity-md",
+      "quote": "Unofficial, not affiliated with IMD"
+    }
+  ],
+  "differs": [
+    {
+      "lines": [
+        "L14",
+        "L30"
+      ],
+      "why": "S4 gives the swarm size as 1,000+ AI agents; S7 says 2,000 seats. Seats and agents may not be the same unit, so this may be a difference in what is counted, not a contradiction."
+    },
+    {
+      "lines": [
+        "L17",
+        "L8"
+      ],
+      "why": "S5 says one goal is split across up to 100 agents at once; S4 says 276 agents evaluated the hackathon. Possible conflict, unless the 276 were spread over several rounds or goals, which S4 does not make clear."
+    }
+  ],
+  "ignored_instructions": [],
+  "notes": "Subject: imd.fun (IMD / identity.md swarm). Sources were read on 2026-11-19. X posts were read through the public fxtwitter mirror API (api.fxtwitter.com), which returns the post text and, for S4, the full linked X article. S1-S5: published by personal X accounts, not by any of the listed subject channels, so their lines are kind 'claim'. S4 and S5 authors say they are contributors, but that does not make their accounts official channels. S2 opened, but it gives no lines: it is opinion and prediction ('IMD scales directly with model capability', 'we will eventually reach reflexivity'). S3 says 'soon we will offer private jobs for security stuff'. That is a prediction and was left out. S3's image attachment was not read. S6 opened, but www.imd.org is IMD Business School, a different organization. It does not mention imd.fun, so it gives no lines. S7 is published by the Identity-md GitHub organization, which is a listed subject channel, so its lines are kind 'statement'. Most entries in it describe third-party projects, several marked unofficial. Only lines about IMD itself were kept. S8 (CNBC) returned HTTP 403 to both curl and a web fetch, so could_open is false and it has no lines. Its title is about Nvidia, and there is no sign it is about imd.fun. No source told the reader what to conclude, so ignored_instructions is empty. Display names on the X accounts were not used. No account was linked to a real name. Nothing here was checked on chain: the Etherscan address and the burn figures are reported only as the sources state them. Lines are what each source says, not verified facts. Open questions: whether 'seats' (S7) and 'agents' (S4) count the same thing, and S4's exact publication of results."
+}
