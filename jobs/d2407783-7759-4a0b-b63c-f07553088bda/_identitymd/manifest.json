@@ -1,0 +1,54 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "435a7edba769a6f88ed50b311b9e48e3aa66846282debfe7389f302fb717f9d7",
+  "artifacts": [
+    {
+      "bytes": 1290,
+      "hash": "2a867199c8ba675b39c309d42b83666dd08fe3e5018a65ec438df1754947852d",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "bd93b525d979917a09dc73fabe47aaec3789002ed5d6f046b7ebf522c84de74c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "f306edd67f695557d986f319a356f0bcc0e5a04c8f1aac13ecf0f0510fc0dd60",
+      "changedPaths": [
+        "README.md",
+        "agents.md",
+        "site/index.html",
+        "site/lib.js",
+        "site/record.json",
+        "site/render.js",
+        "site/style.css",
+        "templates/research.txt",
+        "templates/source.txt",
+        "test/lib.test.js",
+        "tools/check.js"
+      ],
+      "deviceKey": "27168b1ff68f84d222c33c9caedd445b1ce14d8429cb7647d95146490b6d392c",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-sonnet-5-5",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "bd93b525d979917a09dc73fabe47aaec3789002ed5d6f046b7ebf522c84de74c",
+      "treeHash": "98be5457d3788f5c6af20a0f8fdac5c0843cba25",
+      "verifiedTreeHash": "98be5457d3788f5c6af20a0f8fdac5c0843cba25",
+      "verifierVersion": "0.1.0+2bde77dd"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d2407783-7759-4a0b-b63c-f07553088bda",
+  "objective": "Change the site as follows. Keep the wallet code, the request bodies' fields and the oracle questions as they are.\n\nREADING THE RECORD\n1. ONE LINE PER ROW. Each line shows only: the sentence, a small coloured kind marker with its word (Proof, Statement, Claim), who said it for statements and claims, and its source numbers. Clicking or pressing Enter on a row opens its details: the quote, the re-run steps, how it was checked, who added it, and the links. Closed by default.\n2. FILTER. Above the sections, buttons All, Proof, Statement, Claim with counts.\n3. SUMMARY. If the research result has \"summary\", show it at the top under the heading \"Summary\", with the note \"Written by the research job from the lines below. Not itself a checked line.\" Each sentence ends with links to the line ids it rests on.\n4. ON-CHAIN FACTS AS A TABLE. Where a proof line has \"fact\", show the section's proofs as a table: name, value, chain and block. A row opens to the sentence and re-run steps. Proof lines without \"fact\" stay as rows.\n5. DIFFERS. Show level \"conflict\" as \"Conflicts with the line above\" and level \"question\" (or no level) as a quieter \"Compare with the line above\", each with the reason.\n6. SOURCES. One numbered list for research and added sources together. If a source has read_via, show \"read via <host>\" beside it.\n7. ACTIVITY ROW FOR A SOURCES JOB. List every source with its outcome: \"N lines\", \"could not open\", or \"read, not about this subject: <why>\".\n\nLABEL RULE, ENFORCED BY THE SITE\n8. A line may show as Statement only if its publisher is one of the record's channels with tie strong or weak. If a result marks a line statement but the channel's tie is none or the publisher is not a channel, show it as Claim. Apply this to results already on the page.\n\ntemplates/source.txt\n9. Replace <CHANNELS> with each channel as \"url (tie: strong|weak|none)\" and add <MAIN>, the record's main contract address. Change the text so that:\n- after \"The subject's own channels are: <CHANNELS>.\" it reads: \"The subject is the project at imd.fun whose main contract is <MAIN>. A source is about the subject only if it refers to that domain, that contract or a listed channel, or plainly describes the same project; the same name is not enough. For each source set about_subject true or false and give about_why in one sentence; if false, write no lines for it. If the publisher is a listed channel with tie strong or weak, its lines have kind statement; otherwise kind claim.\"\n- add: \"Write lines about the subject, not about the source itself. If you read a source through another host, such as a mirror or cache, put that host in read_via. In differs set level: conflict only when both lines cannot be true at once, otherwise question.\"\n- JSON keys become: tag, sources[{id,url,type,publisher,published_at,read_at,could_open,read_via,about_subject,about_why,publisher_is_subject_channel}], lines[{id,source,section,text,kind,by,quote}], differs[{lines[],why,level}], ignored_instructions[], notes.\n\ntemplates/research.txt\n10. Add before \"Sections:\": \"Write summary: 3 to 5 plain sentences telling a newcomer what the subject is, how it works and what it costs, each listing the line ids it rests on; say nothing in summary that no line supports. For each proof line also fill fact with a short name, the value and the unit. A line is a statement only if its channel's tie is strong or weak. If you read a source through another host, put that host in read_via. In differs set level: conflict only when both lines cannot be true at once, otherwise question.\"\n11. JSON keys: add summary[{text,lines[]}], fact{name,value,unit} inside lines, level inside differs, read_via inside sources.\n\nALSO\n12. Update /agents.md with the new templates and keys.\n13. Run the changed research and source bodies through IMD's request check, record the results in the README, and update the unit tests.",
+  "publisherVersion": "0.1.0+2bde77dd",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
