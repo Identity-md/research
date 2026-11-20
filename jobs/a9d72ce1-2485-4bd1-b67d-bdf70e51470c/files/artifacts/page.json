@@ -1,0 +1,581 @@
+{
+  "tag": "ens-domains",
+  "input": "the project at ens.domains",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "decentralized naming protocol",
+    "name": "Ethereum Name Service (ENS)",
+    "one_line": "ENS maps readable names to blockchain identifiers through Ethereum smart contracts.",
+    "channels": [
+      {
+        "label": "ENS website",
+        "url": "https://ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS App",
+        "url": "https://app.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS documentation",
+        "url": "https://docs.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS support",
+        "url": "https://support.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS on X",
+        "url": "https://x.com/ensdomains",
+        "tie": "none"
+      },
+      {
+        "label": "ENS DAO on X",
+        "url": "https://x.com/ENS_DAO",
+        "tie": "none"
+      },
+      {
+        "label": "Nick Johnson on X",
+        "url": "https://x.com/nicksdjohnson",
+        "tie": "none"
+      },
+      {
+        "label": "ENS on YouTube",
+        "url": "https://www.youtube.com/@ENSdomains",
+        "tie": "none"
+      },
+      {
+        "label": "ENS on GitHub",
+        "url": "https://github.com/ensdomains",
+        "tie": "none"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS Registry; legacy resolution entry point",
+        "main": true
+      },
+      {
+        "address": "0xaB528d626EC275E3faD363fF1393A41F581c5897",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS Root; owns the Registry root",
+        "main": false
+      },
+      {
+        "address": "0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS governance token",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "value": "ens.domains",
+      "url": "https://ens.domains/",
+      "lines": ["L1", "L2"]
+    },
+    {
+      "label": "Token",
+      "value": "ENS governance token",
+      "url": "https://docs.ens.domains/dao/token/",
+      "lines": ["L12", "A3"]
+    },
+    {
+      "label": "Main contract",
+      "value": "ENS Registry, legacy entry point",
+      "url": "https://docs.ens.domains/registry/ens/",
+      "lines": ["L8", "A1"]
+    },
+    {
+      "label": "Chains",
+      "value": "Ethereum Mainnet",
+      "url": "https://docs.ens.domains/learn/deployments/",
+      "lines": ["L1", "A1", "A3"]
+    },
+    {
+      "label": "Supply",
+      "value": "100 million ENS",
+      "url": "https://docs.ens.domains/dao/token/",
+      "lines": ["A3"]
+    },
+    {
+      "label": "Registration payment",
+      "value": "USDC and DAI accepted",
+      "url": "https://docs.ens.domains/ensv2/eth-registrar/",
+      "lines": ["L7"]
+    },
+    {
+      "label": "Controlled by",
+      "value": "Name owners; root via ENS DAO Wallet",
+      "url": "https://docs.ens.domains/registry/ens/",
+      "lines": ["L5", "A1", "A2"]
+    },
+    {
+      "label": "Founder or creator",
+      "value": "Nick Johnson",
+      "url": "https://www.youtube.com/watch?v=f12CzDaLDdI",
+      "lines": ["L11"]
+    },
+    {
+      "label": "Launched",
+      "value": "May 2017",
+      "url": "https://support.ens.domains/en/articles/7900404-the-story-of-ens",
+      "lines": ["L13"]
+    }
+  ],
+  "summary": [
+    {
+      "text": "ENS is an Ethereum naming system that maps readable names to addresses and other identifiers.",
+      "lines": ["L1", "L2"],
+      "paragraph": 1
+    },
+    {
+      "text": "People can register and manage names through the ENS App.",
+      "lines": ["L6"],
+      "paragraph": 1
+    },
+    {
+      "text": "The current registrar accepts USDC and DAI, and the price depends on the selected name and duration.",
+      "lines": ["L7", "L9"],
+      "paragraph": 1
+    },
+    {
+      "text": "ENS says its DAO governs the protocol and treasury using the ENS governance token.",
+      "lines": ["L10", "L12"],
+      "paragraph": 2
+    },
+    {
+      "text": "The Registry root leads to a contract owned by the ENS DAO Wallet.",
+      "lines": ["A1", "A2"],
+      "paragraph": 2
+    },
+    {
+      "text": "Official pages disagree about whether ENSv2 has completed its launch.",
+      "lines": ["L13", "L14"],
+      "paragraph": 2
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "section": "what_it_does",
+      "text": "ENS says it is a distributed, open naming system based on Ethereum.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S1"],
+      "quote": "The Ethereum Name Service (ENS) is a distributed, open, and extensible naming system based on the Ethereum blockchain.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L2",
+      "section": "what_it_does",
+      "text": "ENS says it maps readable names to addresses, content hashes, metadata, and other identifiers.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S1"],
+      "quote": "ENS maps human-readable names like 'alice.eth' to machine-readable identifiers such as Ethereum addresses, other cryptocurrency addresses, content hashes, metadata, and more.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L3",
+      "section": "what_it_does",
+      "text": "ENS says its ETH Registrar issues .eth names as tokens on Ethereum.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S1"],
+      "quote": "The ETH Registrar is the registrar for the `.eth` TLD, it allows for trustless decentralized names to be issued as tokens on the Ethereum Blockchain.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L4",
+      "section": "what_it_does",
+      "text": "ENS says DNSSEC-compatible DNS names can be imported into ENS.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S1"],
+      "quote": "ENS also supports importing DNS names through the use of DNSSEC.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L5",
+      "section": "what_it_does",
+      "text": "ENS says domain owners can control resolution and create subdomains.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S1"],
+      "quote": "anyone who owns a domain at any level can take control of resolution. Users can create subdomains manually",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L6",
+      "section": "what_it_does",
+      "text": "ENS says people use the ENS App to register and manage names.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S2"],
+      "quote": "Register or manage a name",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L7",
+      "section": "what_it_does",
+      "text": "ENS says its current registrar accepts USDC and DAI at launch.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S3"],
+      "quote": "At launch the contracts accept USDC and DAI.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L8",
+      "section": "how_it_works",
+      "text": "ENS says its registry is the core contract where ENS lookups start.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S4"],
+      "quote": "The ENS registry is the core contract that lies at the heart of ENS resolution. All ENS lookups start by querying the registry.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [{"type": "context", "target": "A1"}]
+    },
+    {
+      "id": "L9",
+      "section": "what_it_does",
+      "text": "ENS says a registration price is determined for a specific name and duration at the time of query.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S5"],
+      "quote": "returns the actual cost for a specific name right now",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L10",
+      "section": "people",
+      "text": "ENS says the ENS DAO governs the ENS protocol and treasury.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S6"],
+      "quote": "The ENS DAO governs the ENS protocol and treasury",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [{"type": "partly", "target": "A2"}]
+    },
+    {
+      "id": "L11",
+      "section": "people",
+      "text": "ENS’s official YouTube channel calls Nick Johnson ENS’s founder and lead developer.",
+      "kind": "claim",
+      "by": ["ENS"],
+      "sources": ["S2", "S7"],
+      "quote": "nick.eth / Nick Johnson is the founder and lead developer of ENS.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L12",
+      "section": "money",
+      "text": "ENS says its ENS token is the DAO’s only official governance token.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S8"],
+      "quote": "the only official governance token for ENS DAO",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A1",
+      "section": "on_chain",
+      "text": "The ENS Registry root is owned by the ENS Root contract.",
+      "kind": "proof",
+      "by": [],
+      "sources": ["S9"],
+      "quote": "",
+      "rerun": "Ethereum Mainnet, block 26458142: eth_call owner(bytes32) on 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e with the zero node through https://ethereum-rpc.publicnode.com.",
+      "fact": {"name": "Registry root owner", "value": "0xaB528d626EC275E3faD363fF1393A41F581c5897", "unit": "address"},
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A2",
+      "section": "on_chain",
+      "text": "The ENS Root contract is owned by the ENS DAO Wallet.",
+      "kind": "proof",
+      "by": [],
+      "sources": ["S9", "S10"],
+      "quote": "",
+      "rerun": "Ethereum Mainnet, block 26458142: eth_call owner() on 0xaB528d626EC275E3faD363fF1393A41F581c5897 through https://ethereum-rpc.publicnode.com.",
+      "fact": {"name": "ENS Root owner", "value": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7", "unit": "address"},
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A3",
+      "section": "on_chain",
+      "text": "The ENS token has a total supply of 100000000 ENS.",
+      "kind": "proof",
+      "by": [],
+      "sources": ["S9", "S8"],
+      "quote": "",
+      "rerun": "Ethereum Mainnet, block 26458142: eth_call totalSupply() on 0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72 through https://ethereum-rpc.publicnode.com; divide by 18 token decimals.",
+      "fact": {"name": "ENS token totalSupply", "value": "100000000000000000000000000", "unit": "base units (18 decimals)"},
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L13",
+      "section": "history",
+      "text": "ENS says the first ENS names were minted in May 2017.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S11"],
+      "quote": "In May 2017, the first ENS names were minted",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L14",
+      "section": "history",
+      "text": "ENS says ENSv2 is live.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S12"],
+      "quote": "ENSV2 IS LIVE",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L15",
+      "section": "history",
+      "text": "ENS documentation says ENSv2 was deployed ahead of its launch.",
+      "kind": "statement",
+      "by": ["ENS"],
+      "sources": ["S13"],
+      "quote": "The ENSv2 contracts are deployed on Ethereum Mainnet ahead of the ENSv2 launch.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L16",
+      "section": "what_it_does",
+      "text": "Ethereum.org says ENS provides decentralized naming for Ethereum addresses.",
+      "kind": "claim",
+      "by": ["Ethereum.org"],
+      "sources": ["S14"],
+      "quote": "provides a decentralized naming service for Ethereum addresses",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    }
+  ],
+  "related": [
+    {
+      "name": "Ethereum",
+      "id": "Ethereum Mainnet",
+      "relation": "ENS runs its contracts and records on it.",
+      "lines": ["L1", "A1", "A3"]
+    },
+    {
+      "name": "DNS",
+      "id": "DNS",
+      "relation": "DNSSEC-compatible names can be imported into ENS.",
+      "lines": ["L4"]
+    }
+  ],
+  "logo": {
+    "url": "https://ens.domains/favicon.png",
+    "fetched_at": "2026-11-20T18:38:58Z"
+  },
+  "differs": [
+    {
+      "lines": ["L14", "L15"],
+      "why": "The ENS homepage says ENSv2 is live while the deployments page says its launch has not completed.",
+      "level": "conflict"
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "Which ENSv2 root-registry contract should replace the legacy ENS Registry as the main contract after the documented launch-status conflict is resolved?",
+    "What is the current price for a particular .eth name and registration duration? The official documentation says the price is queried per name and duration."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "ref": "https://docs.ens.domains/learn/protocol/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S2",
+      "ref": "https://support.ens.domains/en/articles/8874786-official-ens-websites-apps-and-tools",
+      "type": "official support article",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S3",
+      "ref": "https://docs.ens.domains/ensv2/eth-registrar/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S4",
+      "ref": "https://docs.ens.domains/registry/ens/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S5",
+      "ref": "https://docs.ens.domains/ensv2/eth-registrar/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S6",
+      "ref": "https://docs.ens.domains/dao/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S7",
+      "ref": "https://www.youtube.com/watch?v=f12CzDaLDdI",
+      "type": "video description",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "youtube.com"
+    },
+    {
+      "id": "S8",
+      "ref": "https://docs.ens.domains/dao/token/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S9",
+      "ref": "https://ethereum-rpc.publicnode.com",
+      "type": "public Ethereum RPC",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "ethereum-rpc.publicnode.com"
+    },
+    {
+      "id": "S10",
+      "ref": "https://docs.ens.domains/dao/proposals/6.19/",
+      "type": "official ENS DAO proposal",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S11",
+      "ref": "https://support.ens.domains/en/articles/7900404-the-story-of-ens",
+      "type": "official support article",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S12",
+      "ref": "https://ens.domains/",
+      "type": "official website",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S13",
+      "ref": "https://docs.ens.domains/learn/deployments/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S14",
+      "ref": "https://ethereum.org/developers/docs/smart-contracts/naming/",
+      "type": "third-party documentation",
+      "read_at": "2026-11-20T18:38:58Z",
+      "could_open": true,
+      "read_via": "ethereum.org"
+    }
+  ],
+  "ignored_instructions": [],
+  "notes": "The subject is identified as Ethereum Name Service because ens.domains and its documentation name it as ENS. The legacy ENS Registry is marked main because ENS documentation calls it the core contract where lookups start; official pages conflict on the ENSv2 launch state, so this selection is explicitly provisional. No earlier results were supplied. The favicon from ens.domains is a 32 by 32 PNG."
+}
