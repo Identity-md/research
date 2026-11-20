@@ -1,0 +1,2624 @@
+{
+  "tag": "ens-domains",
+  "input": "the project at ens.domains",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "decentralized naming protocol",
+    "name": "Ethereum Name Service (ENS)",
+    "one_line": "ENS gives people and apps readable names for addresses and other records on Ethereum.",
+    "channels": [
+      {
+        "label": "ENS website",
+        "url": "https://ens.domains/",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS App",
+        "url": "https://app.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS documentation",
+        "url": "https://docs.ens.domains/",
+        "tie": "weak"
+      },
+      {
+        "label": "ENS support",
+        "url": "https://support.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS on X",
+        "url": "https://x.com/ensdomains",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS DAO on X",
+        "url": "https://x.com/ENS_DAO",
+        "tie": "strong"
+      },
+      {
+        "label": "Nick Johnson on X",
+        "url": "https://x.com/nicksdjohnson",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS on YouTube",
+        "url": "https://www.youtube.com/@ENSdomains",
+        "tie": "none"
+      },
+      {
+        "label": "ENS on GitHub",
+        "url": "https://github.com/ensdomains",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS Explorer",
+        "url": "https://explorer.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS Blog",
+        "url": "https://ens.domains/blog",
+        "tie": "none"
+      },
+      {
+        "label": "ENS governance",
+        "url": "https://ens.domains/governance/",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS DAO forum",
+        "url": "https://discuss.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS DAO website",
+        "url": "https://ensdao.org/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS DAO voting portal",
+        "url": "https://vote.ensdao.org/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS delegation app",
+        "url": "https://delegate.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "Nick Johnson on GitHub",
+        "url": "https://github.com/Arachnid",
+        "tie": "strong"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+        "chain": "Ethereum Mainnet",
+        "role": "Version 1 ENS Registry; main because the requested address is the legacy lookup entry point",
+        "main": true
+      },
+      {
+        "address": "0xaB528d626EC275E3faD363fF1393A41F581c5897",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS Root; owns the legacy registry root",
+        "main": false
+      },
+      {
+        "address": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS voting token",
+        "main": false
+      },
+      {
+        "address": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+        "chain": "Ethereum Mainnet",
+        "role": "Version 1 .eth registrar and name tokens",
+        "main": false
+      },
+      {
+        "address": "0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401",
+        "chain": "Ethereum Mainnet",
+        "role": "Version 1 wrapped name tokens",
+        "main": false
+      },
+      {
+        "address": "0x56c447F308F463A01121C41E72b0E7e7557fCb68",
+        "chain": "Ethereum Mainnet",
+        "role": "Renewals for names still on version 1",
+        "main": false
+      },
+      {
+        "address": "0xda021a2c1c2f99574d861ef8c6fa745851beb7f6",
+        "chain": "Ethereum Mainnet",
+        "role": "Holds migrated version 1 name tokens",
+        "main": false
+      },
+      {
+        "address": "0xab821ca676cf2e0790fa273526a165cfa86aeb64",
+        "chain": "Ethereum Mainnet",
+        "role": "Migrates unwrapped and unlocked .eth names",
+        "main": false
+      },
+      {
+        "address": "0x3cea18620883a69ed349b23328a3b6302598e51a",
+        "chain": "Ethereum Mainnet",
+        "role": "Migrates locked .eth names",
+        "main": false
+      },
+      {
+        "address": "0x2553c09be6447beffdb86fa622ad41fb8f77a91e",
+        "chain": "Ethereum Mainnet",
+        "role": "Version 2 root registry",
+        "main": false
+      },
+      {
+        "address": "0xf60aba43E1f7F3DAB1186Ff03B561401C9Df85E2",
+        "chain": "Ethereum Mainnet",
+        "role": "Version 2 .eth registry and name tokens",
+        "main": false
+      },
+      {
+        "address": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+        "chain": "Ethereum Mainnet",
+        "role": "Version 2 .eth registrations and renewals",
+        "main": false
+      },
+      {
+        "address": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+        "chain": "Ethereum Mainnet",
+        "role": "Version 2 price and payment token settings",
+        "main": false
+      },
+      {
+        "address": "0xeEeEEEeE14D718C2B47D9923Deab1335E144EeEe",
+        "chain": "Ethereum Mainnet",
+        "role": "Universal Resolver proxy",
+        "main": false
+      },
+      {
+        "address": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS DAO governor",
+        "main": false
+      },
+      {
+        "address": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS DAO timelock and treasury wallet",
+        "main": false
+      },
+      {
+        "address": "0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+        "chain": "Ethereum Mainnet",
+        "role": "ENS Endowment; version 2 fee recipient",
+        "main": false
+      },
+      {
+        "address": "0x20262e3433306a4FF250a64d20a8E0F09B2C7F68",
+        "chain": "Ethereum Mainnet",
+        "role": "ENSC commemorative card collection",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "value": "ens.domains",
+      "lines": [
+        "A16"
+      ],
+      "url": "https://ens.domains/"
+    },
+    {
+      "label": "Tokens",
+      "value": "ENS: voting, 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72 on Ethereum; ENSC: art cards, 0x20262e3433306a4FF250a64d20a8E0F09B2C7F68 on Ethereum; .eth: naming rights, 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85 and 0xf60aba43E1f7F3DAB1186Ff03B561401C9Df85E2 on Ethereum; wrapped names: permissions, 0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401 on Ethereum",
+      "lines": [
+        "A3",
+        "A4",
+        "A13",
+        "A14",
+        "A24",
+        "L3",
+        "L26",
+        "L41"
+      ]
+    },
+    {
+      "label": "Main contract",
+      "value": "ENS Registry 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e on Ethereum (chain 1)",
+      "lines": [
+        "L8",
+        "A1",
+        "A21"
+      ]
+    },
+    {
+      "label": "Chains",
+      "value": "Ethereum mainnet (1); app supports payments from other chains",
+      "lines": [
+        "L1",
+        "L22",
+        "A13"
+      ]
+    },
+    {
+      "label": "Supply",
+      "value": "100 million ENS; ENSC and name token counts unknown",
+      "lines": [
+        "A3",
+        "A24",
+        "L3"
+      ]
+    },
+    {
+      "label": "One-year .eth fee",
+      "value": "$8 / $160 / $640 by length, plus network fee",
+      "lines": [
+        "L17",
+        "L18",
+        "A25"
+      ]
+    },
+    {
+      "label": "Deployed by",
+      "value": "0x4Fe4e666Be5752f1FdD210F4Ab5DE2Cc26e3E0e8",
+      "lines": [
+        "A21"
+      ]
+    },
+    {
+      "label": "Controlled by",
+      "value": "ENS DAO timelock 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7 (registry administration and registrar settings)",
+      "lines": [
+        "A1",
+        "A2",
+        "A5",
+        "A8",
+        "A28",
+        "A29"
+      ]
+    },
+    {
+      "label": "Founder or creator",
+      "value": "Nick Johnson",
+      "lines": [
+        "L11",
+        "L38"
+      ],
+      "url": "https://www.youtube.com/watch?v=f12CzDaLDdI"
+    },
+    {
+      "label": "Contributors",
+      "value": "ENS Labs; KPK manages endowment funding",
+      "lines": [
+        "L34",
+        "L47"
+      ]
+    },
+    {
+      "label": "Official accounts",
+      "value": "@ensdomains and @ENS_DAO on X",
+      "lines": [
+        "L33",
+        "A17",
+        "A19"
+      ]
+    },
+    {
+      "label": "Launched",
+      "value": "May 2017",
+      "lines": [
+        "L13"
+      ]
+    },
+    {
+      "label": "Version 2 cutover",
+      "value": "October 27, 2026",
+      "lines": [
+        "L14",
+        "L39",
+        "A15"
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "text": "ENS gives people readable names that can point to Ethereum addresses and other records.",
+      "lines": [
+        "L1",
+        "L2",
+        "L16"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "Use the ENS App to find and register an available name or manage a name you already hold.",
+      "lines": [
+        "L6",
+        "L45"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "ENS lists a one-year fee of $8 for names with at least five characters, with higher prices for shorter names and a separate network fee.",
+      "lines": [
+        "L17",
+        "L18"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "The project says the name app can swap Ethereum’s currency into digital dollars to pay for a name.",
+      "lines": [
+        "L21"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "The project says name fees go to the community that runs ENS, and payments on the new version reach its investment fund.",
+      "lines": [
+        "L23",
+        "A12",
+        "A26",
+        "A27"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "The project says its separate voting token lets holders give their votes to someone who can act for them.",
+      "lines": [
+        "L29",
+        "L30",
+        "A4"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Nick Johnson started ENS, and a community of token holders now governs its rules and treasury.",
+      "lines": [
+        "L10",
+        "L11",
+        "L29",
+        "L38",
+        "A2"
+      ],
+      "paragraph": 3
+    },
+    {
+      "text": "ENS announced that its new system went live, while its deployment guide still describes the switch as pending.",
+      "lines": [
+        "L14",
+        "L15",
+        "L39",
+        "A15"
+      ],
+      "paragraph": 3
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "section": "what_it_does",
+      "text": "ENS says it is a distributed, open naming system based on Ethereum.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "naming system based on the Ethereum blockchain",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L1"
+      ],
+      "links": []
+    },
+    {
+      "id": "L2",
+      "section": "what_it_does",
+      "text": "ENS says it maps readable names to addresses, content hashes, metadata, and other identifiers.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "maps human-readable names",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L2"
+      ],
+      "links": []
+    },
+    {
+      "id": "L3",
+      "section": "what_it_does",
+      "text": "ENS says its ETH Registrar issues .eth names as tokens on Ethereum.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1",
+        "S31"
+      ],
+      "quote": "issued as tokens on the Ethereum Blockchain",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L3"
+      ],
+      "links": []
+    },
+    {
+      "id": "L4",
+      "section": "what_it_does",
+      "text": "ENS says DNSSEC-compatible DNS names can be imported into ENS.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "importing DNS names",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L4"
+      ],
+      "links": []
+    },
+    {
+      "id": "L5",
+      "section": "what_it_does",
+      "text": "ENS says domain owners can control resolution and create subdomains.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "Users can create subdomains manually",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L5"
+      ],
+      "links": []
+    },
+    {
+      "id": "L6",
+      "section": "what_it_does",
+      "text": "ENS says people use the ENS App to register and manage names.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S2",
+        "S42"
+      ],
+      "quote": "Register or manage a name",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L6"
+      ],
+      "links": []
+    },
+    {
+      "id": "L7",
+      "section": "what_it_does",
+      "text": "ENS says the version 2 registrar accepted USDC and DAI at launch.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "At launch the contracts accept USDC and DAI.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L7"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A10"
+        },
+        {
+          "type": "partly",
+          "target": "A11"
+        }
+      ]
+    },
+    {
+      "id": "L8",
+      "section": "how_it_works",
+      "text": "ENS registry documentation describes the version 1 registry as the starting point for lookups.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "quote": "All ENS lookups start by querying the registry.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L8"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "A1"
+        },
+        {
+          "type": "context",
+          "target": "L51"
+        }
+      ]
+    },
+    {
+      "id": "L9",
+      "section": "what_it_does",
+      "text": "ENS says a registration price is determined for a specific name and duration at the time of query.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S5"
+      ],
+      "quote": "actual cost for a specific name",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L9"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A25"
+        }
+      ]
+    },
+    {
+      "id": "L10",
+      "section": "people",
+      "text": "ENS says the ENS DAO governs the ENS protocol and treasury.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S6"
+      ],
+      "quote": "The ENS DAO governs the ENS protocol and treasury",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L10"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A2"
+        },
+        {
+          "type": "partly",
+          "target": "A8"
+        }
+      ]
+    },
+    {
+      "id": "L11",
+      "section": "people",
+      "text": "ENS says on YouTube that Nick Johnson founded ENS and was its lead developer.",
+      "kind": "claim",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S2",
+        "S7"
+      ],
+      "quote": "nick.eth / Nick Johnson is the founder and lead developer of ENS.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L11"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "A22"
+        },
+        {
+          "type": "context",
+          "target": "L38"
+        }
+      ]
+    },
+    {
+      "id": "L12",
+      "section": "money",
+      "text": "ENS says its ENS token is the DAO’s only official governance token.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S8"
+      ],
+      "quote": "the only official governance token for ENS DAO",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L12"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A4"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "section": "on_chain",
+      "text": "The ENS Root contract owns the root of the version 1 registry.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call owner(bytes32) on 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e with arguments 0x0000000000000000000000000000000000000000000000000000000000000000.",
+      "fact": {
+        "name": "Registry root owner",
+        "value": "0xaB528d626EC275E3faD363fF1393A41F581c5897",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 26458142,
+          "value": "0xaB528d626EC275E3faD363fF1393A41F581c5897"
+        }
+      ],
+      "from": [
+        "F1:A1"
+      ],
+      "links": []
+    },
+    {
+      "id": "A2",
+      "section": "on_chain",
+      "text": "The ENS DAO timelock owns the ENS Root contract.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S10"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call owner() on 0xaB528d626EC275E3faD363fF1393A41F581c5897.",
+      "fact": {
+        "name": "ENS Root owner",
+        "value": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 26458142,
+          "value": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7"
+        }
+      ],
+      "from": [
+        "F1:A2"
+      ],
+      "links": []
+    },
+    {
+      "id": "A3",
+      "section": "on_chain",
+      "text": "The ENS token has a total supply of 100 million ENS.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S8"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call totalSupply() on 0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72.",
+      "fact": {
+        "name": "ENS token supply",
+        "value": "100000000000000000000000000",
+        "unit": "base units (18 decimals)"
+      },
+      "history": [
+        {
+          "block": 26458142,
+          "value": "100000000000000000000000000"
+        }
+      ],
+      "from": [
+        "F1:A3"
+      ],
+      "links": []
+    },
+    {
+      "id": "L13",
+      "section": "history",
+      "text": "ENS says the first ENS names were minted in May 2017.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "quote": "In May 2017, the first ENS names were minted",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L13"
+      ],
+      "links": []
+    },
+    {
+      "id": "L14",
+      "section": "history",
+      "text": "ENS says version 2 went live on Ethereum on October 27, 2026.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S12",
+        "S17",
+        "S49"
+      ],
+      "quote": "ENSV2 IS LIVE",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L14"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A15"
+        }
+      ]
+    },
+    {
+      "id": "L15",
+      "section": "history",
+      "text": "ENS deployment documentation says version 2 was deployed before launch and still describes the cutover as pending.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S13"
+      ],
+      "quote": "deployed on Ethereum Mainnet ahead of the ENSv2 launch. Until the launch completes, resolution and registrations on Mainnet continue through the ENSv1 contracts below.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L15"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "A15"
+        }
+      ]
+    },
+    {
+      "id": "L16",
+      "section": "what_it_does",
+      "text": "Ethereum.org says ENS provides decentralized naming for Ethereum addresses.",
+      "kind": "claim",
+      "by": [
+        "Ethereum.org"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "quote": "provides a decentralized naming service for Ethereum addresses",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L16"
+      ],
+      "links": []
+    },
+    {
+      "id": "A4",
+      "section": "on_chain",
+      "text": "The ENS governor reads voting power from the ENS token.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S25"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call token() on 0x323A76393544d5ecca80cd6ef2A560C6a395b7E3.",
+      "fact": {
+        "name": "Governor voting token",
+        "value": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A5",
+      "section": "on_chain",
+      "text": "The ENS governor points to the ENS DAO timelock.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S27"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call timelock() on 0x323A76393544d5ecca80cd6ef2A560C6a395b7E3.",
+      "fact": {
+        "name": "Governor timelock",
+        "value": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A6",
+      "section": "on_chain",
+      "text": "The DAO timelock sets a minimum execution delay of two days.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call getMinDelay() on 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7.",
+      "fact": {
+        "name": "Minimum timelock delay",
+        "value": "172800",
+        "unit": "seconds"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A7",
+      "section": "on_chain",
+      "text": "The ENS governor sets the proposal threshold at 100,000 ENS in delegated voting power.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S25"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call proposalThreshold() on 0x323A76393544d5ecca80cd6ef2A560C6a395b7E3.",
+      "fact": {
+        "name": "Proposal threshold",
+        "value": "100000000000000000000000",
+        "unit": "base units (18 decimals)"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A8",
+      "section": "on_chain",
+      "text": "The ENS DAO timelock owns the version 2 registrar.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S3",
+        "S13"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call owner() on 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81.",
+      "fact": {
+        "name": "Version 2 registrar owner",
+        "value": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A9",
+      "section": "on_chain",
+      "text": "The version 2 registrar points to the documented pricing contract.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S13"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call rentPriceOracle() on 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81.",
+      "fact": {
+        "name": "Version 2 pricing contract",
+        "value": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A10",
+      "section": "on_chain",
+      "text": "The version 2 pricing contract lists USDC as an accepted payment token.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S3"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call isPaymentToken(address) on 0x76f29609a363a8a1a2a6abe2e859c0f8916af469 with arguments 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48.",
+      "fact": {
+        "name": "USDC accepted",
+        "value": "true",
+        "unit": "boolean"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A11",
+      "section": "on_chain",
+      "text": "The version 2 pricing contract lists DAI as an accepted payment token.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S3"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call isPaymentToken(address) on 0x76f29609a363a8a1a2a6abe2e859c0f8916af469 with arguments 0x6B175474E89094C44Da98b954EedeAC495271d0F.",
+      "fact": {
+        "name": "DAI accepted",
+        "value": "true",
+        "unit": "boolean"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A12",
+      "section": "on_chain",
+      "text": "The version 2 registrar names the ENS Endowment as its fee recipient.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S27",
+        "S29"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call BENEFICIARY() on 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81.",
+      "fact": {
+        "name": "Version 2 registrar fee recipient",
+        "value": "0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A13",
+      "section": "on_chain",
+      "text": "The version 2 registrar points to the version 2 registry for .eth names.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S13"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call ETH_REGISTRY() on 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81.",
+      "fact": {
+        "name": "Version 2 .eth registry",
+        "value": "0xf60aba43E1f7F3DAB1186Ff03B561401C9Df85E2",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A14",
+      "section": "on_chain",
+      "text": "The renewal contract owns the version 1 .eth registrar.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S13",
+        "S28"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call owner() on 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85.",
+      "fact": {
+        "name": "Version 1 registrar owner",
+        "value": "0x56c447F308F463A01121C41E72b0E7e7557fCb68",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A15",
+      "section": "on_chain",
+      "text": "The ENS governor records the proposal to activate version 2 as executed.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S28"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459206, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call state(uint256) on 0x323A76393544d5ecca80cd6ef2A560C6a395b7E3 with arguments 51915723803355532053585313225201979004629663092454892570706465301184496475762.",
+      "fact": {
+        "name": "Activation proposal state",
+        "value": "7",
+        "unit": "enum (7 = executed)"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A16",
+      "section": "on_chain",
+      "text": "The ens.eth record points to the ENS homepage.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459202, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call text(bytes32,string) on 0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41 with arguments 0x4e34d3a81dc3a20f71bbdf2160492ddaa17ee7e5523757d47153379c13cb46df, url.",
+      "fact": {
+        "name": "ENS website record",
+        "value": "https://ens.domains/",
+        "unit": "URL"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A17",
+      "section": "on_chain",
+      "text": "The ens.eth record points to the ENS account on X.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459202, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call text(bytes32,string) on 0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41 with arguments 0x4e34d3a81dc3a20f71bbdf2160492ddaa17ee7e5523757d47153379c13cb46df, com.twitter.",
+      "fact": {
+        "name": "ENS X handle",
+        "value": "ensdomains",
+        "unit": "handle"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A18",
+      "section": "on_chain",
+      "text": "The ens.eth record points to the ENS organization on GitHub.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459202, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call text(bytes32,string) on 0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41 with arguments 0x4e34d3a81dc3a20f71bbdf2160492ddaa17ee7e5523757d47153379c13cb46df, com.github.",
+      "fact": {
+        "name": "ENS GitHub handle",
+        "value": "ensdomains",
+        "unit": "handle"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A19",
+      "section": "on_chain",
+      "text": "The ensdao.eth record points to the DAO account on X.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459202, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call text(bytes32,string) on 0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41 with arguments 0x845c4fbb122168f1e51374b70df49458c9ff4cdaf0b1101fa0d5c91fc64947bd, com.twitter.",
+      "fact": {
+        "name": "ENS DAO X handle",
+        "value": "ENS_DAO",
+        "unit": "handle"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A20",
+      "section": "on_chain",
+      "text": "The ensdao.eth record points to the ENS governance page.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459202, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call text(bytes32,string) on 0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41 with arguments 0x845c4fbb122168f1e51374b70df49458c9ff4cdaf0b1101fa0d5c91fc64947bd, url.",
+      "fact": {
+        "name": "ENS governance website record",
+        "value": "https://ens.domains/governance/",
+        "unit": "URL"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A21",
+      "section": "history",
+      "text": "The version 1 registry was deployed in January 2020.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S18",
+        "S19"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 9380380. Use eth_getTransactionByHash and eth_getTransactionReceipt for 0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf; check the sender and created address 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e. Timestamp 2020-01-30T00:37:12Z. Use a history-serving archive node if the receipt has been pruned.",
+      "fact": {
+        "name": "Registry deployer",
+        "value": "0x4Fe4e666Be5752f1FdD210F4Ab5DE2Cc26e3E0e8",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A22",
+      "section": "on_chain",
+      "text": "The nick.eth record points to Nick Johnson’s X account.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S7",
+        "S24"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459212, https://ethereum-rpc.publicnode.com or an archive node for pruned state. Call resolve(bytes,bytes) on 0xeEeEEEeE14D718C2B47D9923Deab1335E144EeEe with DNS wire name 0x046e69636b0365746800 and ABI calldata for text(bytes32,string) with node 0x05a67c0ee82964c4f7394cdd47fee7f4d9503a23c09c38341779ea012afe6e00 and key com.twitter; decode returned result bytes as string.",
+      "fact": {
+        "name": "Founder X handle",
+        "value": "nicksdjohnson",
+        "unit": "handle"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A23",
+      "section": "on_chain",
+      "text": "The nick.eth record points to Nick Johnson’s GitHub account.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S7",
+        "S24"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459212, https://ethereum-rpc.publicnode.com or an archive node for pruned state. Call resolve(bytes,bytes) on 0xeEeEEEeE14D718C2B47D9923Deab1335E144EeEe with DNS wire name 0x046e69636b0365746800 and ABI calldata for text(bytes32,string) with node 0x05a67c0ee82964c4f7394cdd47fee7f4d9503a23c09c38341779ea012afe6e00 and key com.github; decode returned result bytes as string.",
+      "fact": {
+        "name": "Founder GitHub handle",
+        "value": "arachnid",
+        "unit": "handle"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A24",
+      "section": "on_chain",
+      "text": "The commemorative card collection uses the symbol ENSC.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S34",
+        "S43"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459212, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call symbol() on 0x20262e3433306a4FF250a64d20a8E0F09B2C7F68.",
+      "fact": {
+        "name": "Commemorative collection symbol",
+        "value": "ENSC",
+        "unit": "symbol"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A25",
+      "section": "money",
+      "text": "A one-year quote for the example name was about 8 USDC before network fees.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S3",
+        "S15"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459212, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call getRegisterPrice(string,uint64,address) on 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81 with arguments record-page-example-20261120, 31536000, 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48; read the first return value (base fee).",
+      "fact": {
+        "name": "Example one-year base registration quote",
+        "value": "8000021",
+        "unit": "USDC base units (6 decimals)"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L17",
+      "section": "what_it_does",
+      "text": "ENS says a five-character or longer .eth name costs $8 for one year before network fees.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S15"
+      ],
+      "quote": "Names of 5 or more characters cost $8 a year",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A25"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L18",
+      "section": "what_it_does",
+      "text": "ENS lists one-year fees of $160 for four characters and $640 for three.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S45"
+      ],
+      "quote": "4 character .eth names: $160 per year. 3 character .eth names: $640 per year.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L19",
+      "section": "money",
+      "text": "ENS says adding two or more years to a version 2 name at once lowers the annual base price.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S50"
+      ],
+      "quote": "a new multi-year discount curve applies to all names",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L20",
+      "section": "what_it_does",
+      "text": "ENS says builders can inspect ownership and lookup settings in ENS Explorer.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S17"
+      ],
+      "quote": "see who controls it, understand how it resolves",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L21",
+      "section": "money",
+      "text": "ENS says the ENS App uses Uniswap to swap Ethereum ETH into USDC when a user pays with ETH.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S15",
+        "S16"
+      ],
+      "quote": "your wallet swaps to USDC on Uniswap",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L22",
+      "section": "money",
+      "text": "ENS says the app accepts USDC on Ethereum, Base, Arbitrum and Optimism.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S16"
+      ],
+      "quote": "the ENS App takes USDC on Ethereum, Base, Arbitrum or Optimism",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L23",
+      "section": "money",
+      "text": "ENS says registration and renewal fees go to the ENS DAO.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S16"
+      ],
+      "quote": "Registration and renewal fees go to the ENS DAO",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A12"
+        },
+        {
+          "type": "partly",
+          "target": "A26"
+        },
+        {
+          "type": "partly",
+          "target": "A27"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L24",
+      "section": "how_it_works",
+      "text": "ENS says the version 2 registrar records a commitment before the user submits the name registration.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "commit-reveal pattern from ENSv1",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L25",
+      "section": "how_it_works",
+      "text": "ENS says a version 2 name can have its own registry for names beneath it.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S15"
+      ],
+      "quote": "its own registry for its subnames",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L26",
+      "section": "how_it_works",
+      "text": "ENS says upgrading a .eth name replaces its version 1 token with a version 2 token for the same name.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S31",
+        "S40"
+      ],
+      "quote": "Upgrading makes your name a new ENSv2 token with a new token ID. The name stays the same.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L27",
+      "section": "how_it_works",
+      "text": "ENS says the version 2 registrar gives the new owner permission to change the name’s lookup settings.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "change the name's resolver",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L28",
+      "section": "how_it_works",
+      "text": "ENS says anyone can pay to renew a name without changing its owner.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "without changing ownership or permissions",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L29",
+      "section": "money",
+      "text": "ENS says the ENS token carries voting power separately from ownership of .eth names.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "quote": "Governance runs on the `$ENS` token, an ERC-20 that is separate from `.eth` names.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A4"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L30",
+      "section": "people",
+      "text": "ENS says token holders delegate their voting power before they vote or submit a proposal.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S25"
+      ],
+      "quote": "ENS holders cannot vote or create proposals until they delegate their voting rights to an address.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L31",
+      "section": "how_it_works",
+      "text": "ENS says the governor uses the timelock to execute approved on-chain proposals.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S25"
+      ],
+      "quote": "executed by the governance contract through timelock",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A5"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L32",
+      "section": "people",
+      "text": "ENS Labs announced that Nick Johnson would take over as its CEO in its 2025 progress report.",
+      "kind": "statement",
+      "by": [
+        "ENS Labs"
+      ],
+      "sources": [
+        "S26"
+      ],
+      "quote": "will step into the position of CEO of ENS Labs",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L33",
+      "section": "people",
+      "text": "ENS lists these official X accounts as @ensdomains and @ENS_DAO.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "quote": "x.com/ensdomains",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A17"
+        },
+        {
+          "type": "partly",
+          "target": "A19"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L34",
+      "section": "money",
+      "text": "ENS DAO policy says treasury manager KPK sends USDC from the endowment to the DAO’s operating account quarterly.",
+      "kind": "statement",
+      "by": [
+        "ENS DAO"
+      ],
+      "sources": [
+        "S37",
+        "S27"
+      ],
+      "quote": "operational USDC buffer funded by KPK quarterly",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L35",
+      "section": "money",
+      "text": "ENS DAO’s legacy fee plan describes a manager contract that sends old registrar ETH to the endowment when anyone calls its withdrawal function.",
+      "kind": "statement",
+      "by": [
+        "ENS DAO"
+      ],
+      "sources": [
+        "S27"
+      ],
+      "quote": "it pulls ETH from each controller and routes it directly to the endowment",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L36",
+      "section": "history",
+      "text": "ENS says it distributed ENS voting tokens in 2021 to people who held ENS names on October 31.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S8"
+      ],
+      "quote": "ENS Airdropped tokens to anyone who held an ENS name on October 31st, 2021.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L37",
+      "section": "history",
+      "text": "The Block says ENS announced its plan for delegated governance and a dedicated token in November 2021.",
+      "kind": "claim",
+      "by": [
+        "The Block"
+      ],
+      "sources": [
+        "S22"
+      ],
+      "quote": "through the use of delegates and a dedicated token",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L38",
+      "section": "history",
+      "text": "Nick Johnson says he began ENS as a side project while working at the Ethereum Foundation, in an interview with The Defiant.",
+      "kind": "claim",
+      "by": [
+        "Nick Johnson",
+        "The Defiant"
+      ],
+      "sources": [
+        "S21"
+      ],
+      "quote": "I began working on a project called ENS as a side project",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L39",
+      "section": "history",
+      "text": "ENSWhois says the version 2 lookup cutover completed on October 27, 2026.",
+      "kind": "claim",
+      "by": [
+        "ENSWhois"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "the resolution cutover on 27 October 2026 completed the rollout",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "A15"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L40",
+      "section": "history",
+      "text": "ENS Labs says public testing of the new app and explorer began on Sepolia in August 2026.",
+      "kind": "statement",
+      "by": [
+        "ENS Labs"
+      ],
+      "sources": [
+        "S36"
+      ],
+      "quote": "the ENS App & ENS Explorer enter public Beta on Ethereum Sepolia",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L41",
+      "section": "what_it_does",
+      "text": "ENS Labs says qualifying users can claim one commemorative art card per wallet through the app.",
+      "kind": "statement",
+      "by": [
+        "ENS Labs"
+      ],
+      "sources": [
+        "S32"
+      ],
+      "quote": "one NFT available per eligible address",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "A24"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L42",
+      "section": "how_it_works",
+      "text": "ENS Labs says the app reveals the commemorative card after the user upgrades all eligible names.",
+      "kind": "statement",
+      "by": [
+        "ENS Labs"
+      ],
+      "sources": [
+        "S32"
+      ],
+      "quote": "your card is revealed once you've upgraded all eligible names to ENSv2",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L43",
+      "section": "money",
+      "text": "ENS says users pay an Ethereum network fee to mint the optional commemorative card.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S33"
+      ],
+      "quote": "its own transaction, so you need a little ETH for network fees",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L44",
+      "section": "how_it_works",
+      "text": "ENS says the wallet holding an active .eth name on June 1, 2026 qualified for the commemorative card.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S33"
+      ],
+      "quote": "Eligibility comes from a snapshot taken on 1 June 2026",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L45",
+      "section": "what_it_does",
+      "text": "ENS Labs says a name still on version 1 can keep working without an upgrade.",
+      "kind": "statement",
+      "by": [
+        "ENS Labs"
+      ],
+      "sources": [
+        "S17"
+      ],
+      "quote": "Your existing ENS name will continue to work.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L46",
+      "section": "history",
+      "text": "ENS documentation says the old controllers stopped accepting new .eth registrations when version 2 launched.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S38"
+      ],
+      "quote": "registrations through the controllers on this page are permanently disabled",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A14"
+        },
+        {
+          "type": "context",
+          "target": "A26"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L47",
+      "section": "people",
+      "text": "ENS Labs says it develops the core ENS software.",
+      "kind": "statement",
+      "by": [
+        "ENS Labs"
+      ],
+      "sources": [
+        "S50"
+      ],
+      "quote": "responsible for the core software development of the Ethereum Name Service",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L48",
+      "section": "money",
+      "text": "ENS says its explorer takes mainnet USDC while the underlying registrar accepts a wider set of tokens.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "pays with mainnet USDC",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A26",
+      "section": "money",
+      "text": "The version 2 registrar sent 8.005501 USDC to the ENS Endowment when a user registered a .eth name.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S29",
+        "S44"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26458740, https://ethereum-rpc.publicnode.com. Use eth_getLogs for this block on 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81 and 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48; match the NameRegistered and Transfer logs for transaction 0x90cce79873524e8f9d15e78a1ac467e12da0db44131b06a900dc064e8669bb52. The transfer to 0x4F2083f5fBede34C2714aFfb3105539775f7FE64 is at log index 333.",
+      "fact": {
+        "name": "Registration payment to endowment",
+        "value": "8005501",
+        "unit": "USDC base units (6 decimals)"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A27",
+      "section": "money",
+      "text": "The version 2 registrar sent 99.090672 USDC to the ENS Endowment when a user renewed a .eth name.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S29",
+        "S44"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26458222, https://ethereum-rpc.publicnode.com. Use eth_getLogs for this block on 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81 and 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48; match the NameRenewed and Transfer logs for transaction 0x5e1d93916e7cf9c0ec4055d0249b131dd88d0334120004c98785f5d32e733a4e. The transfer to 0x4F2083f5fBede34C2714aFfb3105539775f7FE64 is at log index 24.",
+      "fact": {
+        "name": "Renewal payment to endowment",
+        "value": "99090672",
+        "unit": "USDC base units (6 decimals)"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A28",
+      "section": "on_chain",
+      "text": "The ENS DAO timelock holds registrar admin permission on the version 2 root registry.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S47",
+        "S48"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459237, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call roles(uint256,address) on 0x2553c09be6447beffdb86fa622ad41fb8f77a91e with arguments 0, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7. Test bit 128 for registrar admin permission.",
+      "fact": {
+        "name": "DAO permissions on version 2 root registry",
+        "value": "452312848583266388373324183574235730989896496894242753832103786389058945297",
+        "unit": "role bitmap"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A29",
+      "section": "on_chain",
+      "text": "The ENS DAO timelock holds registrar admin permission on the version 2 .eth registry.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S47",
+        "S48"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459237, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call roles(uint256,address) on 0xf60aba43e1f7f3dab1186ff03b561401c9df85e2 with arguments 0, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7. Test bit 128 for registrar admin permission.",
+      "fact": {
+        "name": "DAO permissions on version 2 .eth registry",
+        "value": "452312848583266388373324183574235730989896496894242753832103786389058945297",
+        "unit": "role bitmap"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "A30",
+      "section": "on_chain",
+      "text": "The version 2 registrar has permission to create and renew .eth names in the version 2 registry.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S47",
+        "S48"
+      ],
+      "quote": "",
+      "rerun": "Ethereum Mainnet (chain 1), block 26459237, https://ethereum-rpc.publicnode.com (use an archive node if state has been pruned). eth_call roles(uint256,address) on 0xf60aba43e1f7f3dab1186ff03b561401c9df85e2 with arguments 0, 0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81. Test bits 0 and 16 for the registration and renewal permissions.",
+      "fact": {
+        "name": "Version 2 registrar permissions",
+        "value": "65537",
+        "unit": "role bitmap"
+      },
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L49",
+      "section": "how_it_works",
+      "text": "ENS says the upgrade contract sends the old .eth token to a holding contract after the owner starts the upgrade.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S46"
+      ],
+      "quote": "The v1 token is forwarded to the Graveyard.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    },
+    {
+      "id": "L50",
+      "section": "how_it_works",
+      "text": "ENS says the version 1 renewal contract keeps both versions’ expiry records in sync for names that have yet to migrate.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S46"
+      ],
+      "quote": "Syncs the expiry back to the v1 BaseRegistrar",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A14"
+        }
+      ],
+      "from": []
+    },
+    {
+      "id": "L51",
+      "section": "how_it_works",
+      "text": "ENS says version 2 lookups start with its new hierarchy and use the old registry for names that have yet to move.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "quote": "resolution starts at the ENSv2 registry hierarchy",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": []
+    }
+  ],
+  "related": [
+    {
+      "name": "Ethereum",
+      "id": "Ethereum Mainnet (chain 1)",
+      "relation": "Hosts the main naming and governance contracts",
+      "lines": [
+        "L1",
+        "A1",
+        "A4"
+      ]
+    },
+    {
+      "name": "DNS",
+      "id": "icann.org",
+      "relation": "Supports importing names secured by DNSSEC",
+      "lines": [
+        "L4"
+      ]
+    },
+    {
+      "name": "USDC",
+      "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on Ethereum (chain 1)",
+      "relation": "Pays name registration and renewal fees",
+      "lines": [
+        "L7",
+        "A10",
+        "A26",
+        "A27"
+      ]
+    },
+    {
+      "name": "DAI",
+      "id": "0x6B175474E89094C44Da98b954EedeAC495271d0F on Ethereum (chain 1)",
+      "relation": "Accepted by the version 2 pricing contract",
+      "lines": [
+        "L7",
+        "A11"
+      ]
+    },
+    {
+      "name": "Uniswap",
+      "id": "uniswap.org",
+      "relation": "Swaps ETH into USDC for app payments",
+      "lines": [
+        "L21"
+      ]
+    }
+  ],
+  "logo": {
+    "url": "https://ens.domains/favicon.png",
+    "fetched_at": "2026-11-20T22:09:53Z"
+  },
+  "differs": [
+    {
+      "lines": [
+        "L14",
+        "L15",
+        "L39",
+        "A15",
+        "A26"
+      ],
+      "why": "The homepage and dated launch notice say version 2 went live. The deployment guide still describes version 1 as handling new registrations until cutover. The governor and a later version 2 registration show that activation and new registration occurred.",
+      "level": "conflict"
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "When will ENS reconcile the deployment guide’s launch wording with the October 27 cutover?",
+    "What will the registrar quote for a visitor’s particular name, term and payment token at checkout?",
+    "What are the current counts of live name tokens by version and minted ENSC cards? The collectible contract did not return a totalSupply reading.",
+    "What is the complete current set of payment tokens? The two public calls check USDC and DAI individually.",
+    "Which other accounts currently hold administrative or upgrade roles on the version 2 contracts?"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "ref": "https://docs.ens.domains/learn/protocol/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S2",
+      "ref": "https://support.ens.domains/en/articles/8874786-official-ens-websites-apps-and-tools",
+      "type": "official support article",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S3",
+      "ref": "https://docs.ens.domains/ensv2/eth-registrar/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S4",
+      "ref": "https://docs.ens.domains/registry/ens/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S5",
+      "ref": "https://docs.ens.domains/ensv2/eth-registrar/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S6",
+      "ref": "https://docs.ens.domains/dao/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S7",
+      "ref": "https://www.youtube.com/watch?v=f12CzDaLDdI",
+      "type": "video description",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "youtube.com"
+    },
+    {
+      "id": "S8",
+      "ref": "https://docs.ens.domains/dao/token/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S9",
+      "ref": "https://ethereum-rpc.publicnode.com",
+      "type": "public Ethereum RPC",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ethereum-rpc.publicnode.com"
+    },
+    {
+      "id": "S10",
+      "ref": "https://docs.ens.domains/dao/proposals/6.19/",
+      "type": "official ENS DAO proposal",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S11",
+      "ref": "https://support.ens.domains/en/articles/7900404-the-story-of-ens",
+      "type": "official support article",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S12",
+      "ref": "https://ens.domains/",
+      "type": "official website",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S13",
+      "ref": "https://docs.ens.domains/learn/deployments/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S14",
+      "ref": "https://ethereum.org/developers/docs/smart-contracts/naming/",
+      "type": "third-party documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ethereum.org"
+    },
+    {
+      "id": "F1",
+      "ref": "https://api.imd.fun/artifacts/0eea0da11d1c08c160d1dea481a780de6bef48bed6c8df5208e880e35f67ab63",
+      "type": "earlier record",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "api.imd.fun"
+    },
+    {
+      "id": "S15",
+      "ref": "https://support.ens.domains/en/articles/15122781-what-changed-with-ensv2-pricing-discounts-and-grace-period",
+      "type": "ENS support",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S16",
+      "ref": "https://support.ens.domains/en/articles/17133064-which-tokens-and-networks-can-i-pay-with",
+      "type": "ENS support",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S17",
+      "ref": "https://ens.domains/blog/post/ensv2-live-on-mainnet",
+      "type": "ENS Labs launch announcement",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S18",
+      "ref": "https://eth.blockscout.com/api/v2/addresses/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+      "type": "indexed Ethereum contract",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "eth.blockscout.com"
+    },
+    {
+      "id": "S19",
+      "ref": "https://eth.blockscout.com/api/v2/transactions/0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf",
+      "type": "indexed Ethereum transaction",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "eth.blockscout.com"
+    },
+    {
+      "id": "S20",
+      "ref": "https://etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+      "type": "Ethereum explorer",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": false,
+      "read_via": "etherscan.io"
+    },
+    {
+      "id": "S21",
+      "ref": "https://thedefiant.io/newsletter/archive/ethereum-name-service-nick-johnsons-journey-from-google-to-ethereum-ens-roadmap-and-cancel-culture",
+      "type": "published interview",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "thedefiant.io"
+    },
+    {
+      "id": "S22",
+      "ref": "https://www.theblock.co/news/ecosystems/2021-11-01-ethereum-name-service-announces-governance-token-plan-122925",
+      "type": "news article",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "www.theblock.co"
+    },
+    {
+      "id": "S23",
+      "ref": "https://enswhois.com/ensv2/rollout",
+      "type": "independent rollout tracker",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "enswhois.com"
+    },
+    {
+      "id": "S24",
+      "ref": "https://github.com/Arachnid",
+      "type": "self-published profile",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "github.com"
+    },
+    {
+      "id": "S25",
+      "ref": "https://docs.ens.domains/dao/governance/process/",
+      "type": "ENS documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S26",
+      "ref": "https://discuss.ens.domains/t/ens-labs-quarterly-progress-reports/20565",
+      "type": "ENS Labs progress reports",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "discuss.ens.domains"
+    },
+    {
+      "id": "S27",
+      "ref": "https://docs.ens.domains/dao/proposals/6.39/",
+      "type": "ENS DAO proposal",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S28",
+      "ref": "https://tally.ensdao.org/gov/ens/proposal/51915723803355532053585313225201979004629663092454892570706465301184496475762",
+      "type": "governance proposal and execution record",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "tally.ensdao.org"
+    },
+    {
+      "id": "S29",
+      "ref": "https://eth.blockscout.com/api/v2/smart-contracts/0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+      "type": "verified contract source and ABI",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "eth.blockscout.com"
+    },
+    {
+      "id": "S30",
+      "ref": "https://github.com/ensdomains/contracts-v2/blob/4f47cbcc11462fb413196e6b5c0f8090247a6c08/contracts/src/registrar/ETHRegistrar.sol",
+      "type": "ENS code",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "github.com, raw.githubusercontent.com"
+    },
+    {
+      "id": "S31",
+      "ref": "https://support.ens.domains/en/articles/14789260-why-did-my-name-s-token-id-change",
+      "type": "ENS support",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S32",
+      "ref": "https://ens.domains/blog/post/ensv2-commemorative-nft-collection",
+      "type": "ENS Labs announcement",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S33",
+      "ref": "https://support.ens.domains/en/articles/17702571-commemorative-nft",
+      "type": "ENS support",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S34",
+      "ref": "https://app.ens.domains/assets/useVisibleCommemorativeNftEligibility-Bu418mnQ.js",
+      "type": "public ENS App code",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "app.ens.domains"
+    },
+    {
+      "id": "S35",
+      "ref": "https://github.com/ensdomains/ens-contracts/wiki/ENS-Contract-Deployments",
+      "type": "ENS repository deployment index",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "github.com"
+    },
+    {
+      "id": "S36",
+      "ref": "https://ens.domains/blog/post/ensv2-beta-public-testing",
+      "type": "ENS Labs announcement",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S37",
+      "ref": "https://docs.ens.domains/dao/proposals/6.46/",
+      "type": "ENS DAO policy",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S38",
+      "ref": "https://docs.ens.domains/registry/eth/",
+      "type": "ENS documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S39",
+      "ref": "https://ens.domains/favicon.png",
+      "type": "ENS website icon",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S40",
+      "ref": "https://support.ens.domains/en/articles/15180070-upgrade-your-name-to-ensv2",
+      "type": "ENS support",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S41",
+      "ref": "https://github.com/ensdomains/contracts-v2",
+      "type": "ENS repository",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "github.com"
+    },
+    {
+      "id": "S42",
+      "ref": "https://support.ens.domains/en/articles/7900302-what-is-ens",
+      "type": "ENS support",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "support.ens.domains"
+    },
+    {
+      "id": "S43",
+      "ref": "https://eth.blockscout.com/api/v2/tokens/0x20262e3433306a4FF250a64d20a8E0F09B2C7F68",
+      "type": "indexed Ethereum token",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "eth.blockscout.com"
+    },
+    {
+      "id": "S45",
+      "ref": "https://docs.ens.domains/faq/",
+      "type": "ENS documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S46",
+      "ref": "https://docs.ens.domains/ensv2/migration/",
+      "type": "ENS documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S47",
+      "ref": "https://docs.ens.domains/ensv2/permissioned-registry/",
+      "type": "ENS documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S48",
+      "ref": "https://docs.ens.domains/ensv2/enhanced-access-control/",
+      "type": "ENS documentation",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "docs.ens.domains"
+    },
+    {
+      "id": "S50",
+      "ref": "https://ens.domains/blog/post/ensv2-eth-pricing-grace-period",
+      "type": "ENS Labs blog",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S49",
+      "ref": "https://ens.domains/ensv2",
+      "type": "ENS version 2 overview",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "ens.domains"
+    },
+    {
+      "id": "S44",
+      "ref": "https://eth.blockscout.com/api/v2/addresses/0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81/logs",
+      "type": "indexed registrar events",
+      "read_at": "2026-11-20T22:19:16Z",
+      "could_open": true,
+      "read_via": "eth.blockscout.com"
+    }
+  ],
+  "ignored_instructions": [],
+  "notes": "F1 was the only prior file supplied. All 19 earlier lines are carried, including the three older readings in proof history, and F1 supplied no changes file or reconsider list. The main marker follows the requested Registry address and its role in version 1 lookups. The version 2 root registry, registrar and lookup proxy are listed separately. Proofs use pinned Ethereum block numbers. Replay may require a history-serving archive node after pruning. The registry deployment sender was checked against the chain transaction and the created address against the indexed receipt in Blockscout, after Etherscan returned HTTP 403. Channel strength uses direct name records where available. The documentation is weak because its deployment page publishes the supplied address. The other first-party sites and YouTube account are listed in ENS support, which is separate evidence from an on-chain tie. The token box lists transferable name token families as well as the governance token and commemorative collection. The name families have descriptive labels because these contracts did not return token symbols. USDC and DAI are payment assets issued elsewhere. Individual name prices and network fees vary."
+}
