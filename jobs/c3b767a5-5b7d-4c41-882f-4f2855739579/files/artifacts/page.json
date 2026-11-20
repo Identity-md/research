@@ -1,0 +1,3953 @@
+{
+  "tag": "ens-domains",
+  "input": "The project at ens.domains; main contract 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e on chain 1.",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "blockchain naming protocol",
+    "name": "Ethereum Name Service (ENS)",
+    "one_line": "ENS connects readable names to addresses and other records on Ethereum.",
+    "channels": [
+      {
+        "label": "ENS website",
+        "url": "https://ens.domains/",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS governance",
+        "url": "https://ens.domains/governance/",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS App",
+        "url": "https://app.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS Explorer",
+        "url": "https://explorer.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS documentation",
+        "url": "https://docs.ens.domains/",
+        "tie": "weak"
+      },
+      {
+        "label": "ENS support",
+        "url": "https://support.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS governance forum",
+        "url": "https://discuss.ens.domains/",
+        "tie": "none"
+      },
+      {
+        "label": "ENS project on X",
+        "url": "https://x.com/ensdomains",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS DAO on X",
+        "url": "https://x.com/ENS_DAO",
+        "tie": "strong"
+      },
+      {
+        "label": "ENS Foundation on X",
+        "url": "https://x.com/ENSfndn",
+        "tie": "none"
+      },
+      {
+        "label": "Nick Johnson on X",
+        "url": "https://x.com/nicksdjohnson",
+        "tie": "none"
+      },
+      {
+        "label": "ENS on YouTube",
+        "url": "https://www.youtube.com/@ENSdomains",
+        "tie": "none"
+      },
+      {
+        "label": "ENS repositories",
+        "url": "https://github.com/ensdomains",
+        "tie": "strong"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+        "chain": 1,
+        "role": "Main by the visitor’s specified anchor; ENSv1 core ownership and resolver directory, now supporting unmigrated names.",
+        "main": true
+      },
+      {
+        "address": "0xaB528d626EC275E3faD363fF1393A41F581c5897",
+        "chain": 1,
+        "role": "Owns the legacy registry root",
+        "main": false
+      },
+      {
+        "address": "0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72",
+        "chain": 1,
+        "role": "ENS fungible governance token",
+        "main": false
+      },
+      {
+        "address": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+        "chain": 1,
+        "role": "ENS DAO governance timelock wallet",
+        "main": false
+      },
+      {
+        "address": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+        "chain": 1,
+        "role": "ENSv1 ERC-721 name ownership",
+        "main": false
+      },
+      {
+        "address": "0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401",
+        "chain": 1,
+        "role": "ENSv1 ERC-1155 wrapped name ownership",
+        "main": false
+      },
+      {
+        "address": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+        "chain": 1,
+        "role": "ENSv2 paid .eth registration and renewal",
+        "main": false
+      },
+      {
+        "address": "0x56c447F308F463A01121C41E72b0E7e7557fCb68",
+        "chain": 1,
+        "role": "Paid renewal of unmigrated ENSv1 names",
+        "main": false
+      },
+      {
+        "address": "0xf60aba43e1f7f3dab1186ff03b561401c9df85e2",
+        "chain": 1,
+        "role": "ENSv2 .eth name ownership registry",
+        "main": false
+      },
+      {
+        "address": "0x2553c09be6447beffdb86fa622ad41fb8f77a91e",
+        "chain": 1,
+        "role": "ENSv2 top-level name ownership registry",
+        "main": false
+      },
+      {
+        "address": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+        "chain": 1,
+        "role": "Current v2 price oracle",
+        "main": false
+      },
+      {
+        "address": "0xeEeEEEeE14D718C2B47D9923Deab1335E144EeEe",
+        "chain": 1,
+        "role": "Public name lookup proxy",
+        "main": false
+      },
+      {
+        "address": "0xcFFd2Ae680CD110D28739a70922636B5937b022B",
+        "chain": 1,
+        "role": "Council-administered intermediate lookup proxy",
+        "main": false
+      },
+      {
+        "address": "0x06Fdd07F007ADaC667177b46aB2EB9A75132Cfd5",
+        "chain": 1,
+        "role": "Current v2 name resolver implementation",
+        "main": false
+      },
+      {
+        "address": "0x5B716D6587d241166bC8914858640F8684F3A2F3",
+        "chain": 1,
+        "role": "One-owner Safe holding the v2 .eth token",
+        "main": false
+      },
+      {
+        "address": "0x7101B78638e34444F0a5AdE9e1149fbEeC029931",
+        "chain": 1,
+        "role": "Five-of-eight Safe administering intermediate resolver",
+        "main": false
+      },
+      {
+        "address": "0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+        "chain": 1,
+        "role": "Registration and renewal fee recipient",
+        "main": false
+      },
+      {
+        "address": "0x20262e3433306a4FF250a64d20a8E0F09B2C7F68",
+        "chain": 1,
+        "role": "ENSC commemorative NFT collection",
+        "main": false
+      },
+      {
+        "address": "0xDa021A2C1C2F99574D861Ef8c6fA745851BEB7F6",
+        "chain": 1,
+        "role": "Holds migrated legacy name tokens",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "value": "ens.domains",
+      "lines": [
+        "A19"
+      ],
+      "url": "https://ens.domains/"
+    },
+    {
+      "label": "Tokens",
+      "value": "Ethereum chain 1: ENS: governance, 0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72; Legacy names: ownership, 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85; Wrapped names: ownership, 0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401; V2 names: ownership, 0xf60aba43e1f7f3dab1186ff03b561401c9df85e2; V2 top-level names: ownership, 0x2553c09be6447beffdb86fa622ad41fb8f77a91e; ENSC: art, 0x20262e3433306a4FF250a64d20a8E0F09B2C7F68.",
+      "lines": [
+        "L3",
+        "L12",
+        "L20",
+        "L38",
+        "A3",
+        "A5",
+        "A21",
+        "A24",
+        "A25"
+      ],
+      "url": "https://docs.ens.domains/learn/deployments/"
+    },
+    {
+      "label": "Main contract",
+      "value": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e on Ethereum, chain 1",
+      "lines": [
+        "L8",
+        "L48",
+        "A1"
+      ],
+      "url": "https://etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    },
+    {
+      "label": "Chains",
+      "value": "Ethereum mainnet (1); records for other chains supported",
+      "lines": [
+        "L1",
+        "L2",
+        "L4",
+        "A21"
+      ],
+      "url": "https://docs.ens.domains/learn/deployments/"
+    },
+    {
+      "label": "Supply",
+      "value": "100 million ENS",
+      "lines": [
+        "A3"
+      ],
+      "url": "https://docs.ens.domains/dao/token/"
+    },
+    {
+      "label": "Supply: ENSC",
+      "value": "Unverified",
+      "lines": [
+        "A25"
+      ]
+    },
+    {
+      "label": "Supply: legacy .eth",
+      "value": "Unverified",
+      "lines": [
+        "L3",
+        "A5"
+      ]
+    },
+    {
+      "label": "Supply: wrapped names",
+      "value": "Unverified",
+      "lines": [
+        "L20"
+      ]
+    },
+    {
+      "label": "Supply: v2 .eth",
+      "value": "Unverified",
+      "lines": [
+        "L38",
+        "A21"
+      ]
+    },
+    {
+      "label": "Supply: top-level names",
+      "value": "Unverified",
+      "lines": [
+        "L38",
+        "A24"
+      ]
+    },
+    {
+      "label": "Price: annual name rent",
+      "value": "About 8 USDC yearly for 5+ characters; shorter names cost more",
+      "lines": [
+        "L17",
+        "A13",
+        "A14",
+        "A15"
+      ],
+      "url": "https://docs.ens.domains/ensv2/eth-registrar/"
+    },
+    {
+      "label": "Deployed by",
+      "value": "0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8 (main registry)",
+      "lines": [
+        "A9"
+      ],
+      "url": "https://etherscan.io/tx/0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf"
+    },
+    {
+      "label": "Controlled by",
+      "value": "DAO 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7; resolver council 0x7101B78638e34444F0a5AdE9e1149fbEeC029931 (5/8); ENSC owner 0xfbe6ce2d739df7077f407f6099ac804a076a760b.",
+      "lines": [
+        "A2",
+        "A4",
+        "A10",
+        "A24",
+        "A27",
+        "A28",
+        "A26"
+      ],
+      "url": "https://discuss.ens.domains/t/executable-activate-ensv2/22483"
+    },
+    {
+      "label": "Founder or creator",
+      "value": "Nick Johnson",
+      "lines": [
+        "L11"
+      ],
+      "url": "https://www.youtube.com/watch?v=f12CzDaLDdI"
+    },
+    {
+      "label": "Contributors",
+      "value": "ENS Labs; ENS Foundation; community governance",
+      "lines": [
+        "L10",
+        "L28",
+        "L29"
+      ],
+      "url": "https://ens.domains/blog/post/introducing-the-evolved-ens-foundation"
+    },
+    {
+      "label": "Official accounts",
+      "value": "@ensdomains; @ENS_DAO; @ENSfndn; founder @nicksdjohnson",
+      "lines": [
+        "A19",
+        "A20",
+        "L11",
+        "L49"
+      ],
+      "url": "https://docs.ens.domains/dao/"
+    },
+    {
+      "label": "Launched",
+      "value": "May 2017; ENSv2 October 2026",
+      "lines": [
+        "L13",
+        "L14"
+      ],
+      "url": "https://ens.domains/blog/post/ensv2-live-on-mainnet"
+    },
+    {
+      "label": "Fee recipient",
+      "value": "0x4F2083f5fBede34C2714aFfb3105539775f7FE64 (ENS Endowment)",
+      "lines": [
+        "A11"
+      ],
+      "url": "https://etherscan.io/address/0x4F2083f5fBede34C2714aFfb3105539775f7FE64"
+    },
+    {
+      "label": "Foundation board",
+      "value": "Five seats; distinct from protocol ownership",
+      "lines": [
+        "L30",
+        "L29",
+        "L10"
+      ],
+      "url": "https://ens.domains/blog/post/introducing-the-evolved-ens-foundation"
+    },
+    {
+      "label": "V2 grace period",
+      "value": "28 days",
+      "lines": [
+        "A17"
+      ],
+      "url": "https://docs.ens.domains/ensv2/eth-registrar/"
+    }
+  ],
+  "summary": [
+    {
+      "text": "ENS lets people use readable names for cryptocurrency addresses and other online records.",
+      "lines": [
+        "L1",
+        "L2"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "People register and manage names through the ENS App.",
+      "lines": [
+        "L6"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "ENS publishes an annual base price of $8 for names of at least five characters, with shorter names costing more.",
+      "lines": [
+        "L17",
+        "A14",
+        "A15"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "The project says payments for names reach its Endowment, while treasury income supports development and other public goods.",
+      "lines": [
+        "L25",
+        "L46",
+        "A11",
+        "L27"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "The project says name tokens record ownership, ENS tokens support voting, and commemorative collectibles mark the upgrade.",
+      "lines": [
+        "L3",
+        "L12",
+        "L35",
+        "L38"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Nick Johnson founded ENS, while ENS Labs develops it and ENS DAO governs the protocol.",
+      "lines": [
+        "L11",
+        "L28",
+        "L10"
+      ],
+      "paragraph": 3
+    },
+    {
+      "text": "ENS’s governance wallet owns the new registration contract; a council wallet needing five signatures administers part of name lookup.",
+      "lines": [
+        "A10",
+        "A28"
+      ],
+      "paragraph": 3
+    },
+    {
+      "text": "ENS’s deployment guide still describes an unfinished upgrade, despite its launch announcement and enabled registration contracts.",
+      "lines": [
+        "L14",
+        "L34",
+        "L50",
+        "A18",
+        "A23",
+        "A30"
+      ],
+      "paragraph": 3
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "section": "what_it_does",
+      "text": "ENS says it is a distributed, open naming system based on Ethereum.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1",
+        "F1"
+      ],
+      "quote": "distributed, open, and extensible naming system",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L1"
+      ],
+      "links": []
+    },
+    {
+      "id": "L2",
+      "section": "what_it_does",
+      "text": "Ethereum.org and ENS say readable names identify Ethereum addresses; ENS also lists other addresses, content hashes, metadata and other identifiers.",
+      "kind": "claim",
+      "by": [
+        "Ethereum.org",
+        "ENS"
+      ],
+      "sources": [
+        "S1",
+        "S14",
+        "F1"
+      ],
+      "quote": "Ethereum addresses, other cryptocurrency addresses, content hashes, metadata",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L2",
+        "F1:L16"
+      ],
+      "links": []
+    },
+    {
+      "id": "L3",
+      "section": "what_it_does",
+      "text": "ENS says its .eth registrar issues name ownership tokens on Ethereum.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1",
+        "S3",
+        "S13",
+        "F1"
+      ],
+      "quote": "ERC1155Singleton",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L3"
+      ],
+      "links": []
+    },
+    {
+      "id": "L4",
+      "section": "what_it_does",
+      "text": "ENS says DNSSEC-compatible DNS names can be imported into ENS.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1",
+        "S28",
+        "F1"
+      ],
+      "quote": "Both methods require you enable DNSSEC on your domain",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L4"
+      ],
+      "links": []
+    },
+    {
+      "id": "L5",
+      "section": "what_it_does",
+      "text": "ENS says domain owners can control resolution and create subdomains.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S1",
+        "F1"
+      ],
+      "quote": "take control of resolution. Users can create subdomains manually",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L5"
+      ],
+      "links": []
+    },
+    {
+      "id": "L6",
+      "section": "what_it_does",
+      "text": "ENS says people use the ENS App to register and manage names.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S2",
+        "F1"
+      ],
+      "quote": "Register or manage a name",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L6"
+      ],
+      "links": []
+    },
+    {
+      "id": "L7",
+      "section": "what_it_does",
+      "text": "ENS says its ENSv2 registrar accepts USDC and DAI at launch.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3",
+        "F1"
+      ],
+      "quote": "At launch the contracts accept USDC and DAI.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L7"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A12"
+        }
+      ]
+    },
+    {
+      "id": "L8",
+      "section": "how_it_works",
+      "text": "ENS says its registry is the core contract where ENS lookups start.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S4",
+        "F1"
+      ],
+      "quote": "All ENS lookups start by querying the registry.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L8"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "A1"
+        },
+        {
+          "type": "context",
+          "target": "L48"
+        },
+        {
+          "type": "context",
+          "target": "L21"
+        }
+      ]
+    },
+    {
+      "id": "L9",
+      "section": "what_it_does",
+      "text": "ENS says a registration price is determined for a specific name and duration at the time of query.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3",
+        "S5",
+        "F1"
+      ],
+      "quote": "returns the actual cost",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L9"
+      ],
+      "links": []
+    },
+    {
+      "id": "L10",
+      "section": "people",
+      "text": "ENS says the ENS DAO governs the ENS protocol and treasury.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S6",
+        "F1"
+      ],
+      "quote": "The ENS DAO governs the ENS protocol and treasury",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L10"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A2"
+        },
+        {
+          "type": "partly",
+          "target": "A10"
+        },
+        {
+          "type": "context",
+          "target": "L29"
+        }
+      ]
+    },
+    {
+      "id": "L11",
+      "section": "people",
+      "text": "ENS’s YouTube channel identifies Nick Johnson as ENS’s founder and lead developer.",
+      "kind": "claim",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S2",
+        "S7",
+        "S20",
+        "F1"
+      ],
+      "quote": "nick.eth / Nick Johnson is the founder and lead developer of ENS.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L11"
+      ],
+      "links": []
+    },
+    {
+      "id": "L12",
+      "section": "money",
+      "text": "ENS says its ENS token is the DAO’s only official governance token.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S8",
+        "F1"
+      ],
+      "quote": "the only official governance token for ENS DAO",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L12"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A3"
+        },
+        {
+          "type": "context",
+          "target": "L27"
+        }
+      ]
+    },
+    {
+      "id": "L13",
+      "section": "history",
+      "text": "ENS says the first ENS names were minted in May 2017.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S11",
+        "F1"
+      ],
+      "quote": "In May 2017, the first ENS names were minted",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L13"
+      ],
+      "links": []
+    },
+    {
+      "id": "L14",
+      "section": "history",
+      "text": "ENS and ENS.Tools report that ENSv2 launched on Ethereum mainnet on October 27, 2026.",
+      "kind": "statement",
+      "by": [
+        "ENS",
+        "ENS.Tools"
+      ],
+      "sources": [
+        "S12",
+        "S24",
+        "S23",
+        "F1"
+      ],
+      "quote": "Today, ENSv2 is live on Ethereum mainnet.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L14"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A23"
+        },
+        {
+          "type": "partly",
+          "target": "A30"
+        }
+      ]
+    },
+    {
+      "id": "L15",
+      "section": "history",
+      "text": "ENS documentation says ENSv2 was deployed ahead of its launch.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S13",
+        "F1"
+      ],
+      "quote": "ahead of the ENSv2 launch.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L15"
+      ],
+      "links": []
+    },
+    {
+      "id": "L17",
+      "section": "what_it_does",
+      "text": "ENS lists an annual base price of $8 for .eth names with at least five characters.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "$8/yr",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A13"
+        }
+      ]
+    },
+    {
+      "id": "L18",
+      "section": "what_it_does",
+      "text": "GoDaddy said in February 2024 that its customers could link their domains to ENS without additional charges.",
+      "kind": "claim",
+      "by": [
+        "GoDaddy"
+      ],
+      "sources": [
+        "S21"
+      ],
+      "quote": "with no additional costs or technical experience required",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L19",
+      "section": "what_it_does",
+      "text": "PayPal said in November 2024 that PayPal and Venmo users could send cryptocurrency payments to ENS names.",
+      "kind": "claim",
+      "by": [
+        "PayPal"
+      ],
+      "sources": [
+        "S22"
+      ],
+      "quote": "PayPal and Venmo are now integrated with ENS, allowing users to send cryptocurrency payments directly to ENS names",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L20",
+      "section": "how_it_works",
+      "text": "ENS says the legacy Name Wrapper converts ENS names into ERC-1155 ownership tokens.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S31"
+      ],
+      "quote": "allows you to \"wrap\" any ENS name into a ERC-1155 NFT.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L21",
+      "section": "how_it_works",
+      "text": "ENS says ENSv2 uses linked registries so each name can have its own registry for subnames.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S32"
+      ],
+      "quote": "each name can have its own registry for managing subnames",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L22",
+      "section": "how_it_works",
+      "text": "ENS says the legacy registry stores each name’s owner, resolver and cache lifetime.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "quote": "recording the owner, resolver, and TTL for each",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L23",
+      "section": "how_it_works",
+      "text": "ENS says owners begin migration by transferring their old name tokens to a migration controller.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S33"
+      ],
+      "quote": "transferring their v1 tokens to a migration controller.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L24",
+      "section": "how_it_works",
+      "text": "ENS says the compatibility renewer extends unmigrated names and copies their expiry back to the old registrar.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S33"
+      ],
+      "quote": "Syncs the expiry back to the v1 BaseRegistrar",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L25",
+      "section": "money",
+      "text": "ENS says its registration contract automatically transfers the payer’s payment tokens to its configured beneficiary.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S35"
+      ],
+      "quote": "SafeERC20.safeTransferFrom(paymentToken, msg.sender, BENEFICIARY, base + premium);",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A11"
+        }
+      ]
+    },
+    {
+      "id": "L26",
+      "section": "money",
+      "text": "ENS says Foundation spending requires published budgets ratified by its board.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S19"
+      ],
+      "quote": "published, Board-ratified budgets",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L27",
+      "section": "money",
+      "text": "ENS’s constitution directs governance to fund ENS development first and permits surplus funding for other public goods.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S29"
+      ],
+      "quote": "Income funds ENS and other public goods",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L28",
+      "section": "people",
+      "text": "ENS says ENS Labs handles its core software development.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S24"
+      ],
+      "quote": "responsible for the core software development",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L29",
+      "section": "people",
+      "text": "ENS says the Foundation and ENS Labs are separate legal and operating entities.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S19"
+      ],
+      "quote": "separate legal and operating entities",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L30",
+      "section": "people",
+      "text": "ENS says its Foundation has a five-member board.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S19"
+      ],
+      "quote": "a five-member board",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L31",
+      "section": "history",
+      "text": "ENS announced an operational Foundation with staff in August 2026.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S19"
+      ],
+      "quote": "a fully operational organization",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L32",
+      "section": "history",
+      "text": "ENS says its governance token was distributed to name owners in 2021.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S8"
+      ],
+      "quote": "distributted to ENS owners in 2021",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L33",
+      "section": "history",
+      "text": "The Block reported Nick Johnson’s roughly 3.26 million ENS represented about 80% of council vote tokens cast by June 30, 2026.",
+      "kind": "claim",
+      "by": [
+        "The Block"
+      ],
+      "sources": [
+        "S40"
+      ],
+      "quote": "representing roughly 80% of the ENS cast so far in the recent vote.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L34",
+      "section": "history",
+      "text": "ENS’s deployment guide says mainnet registrations continue through ENSv1 until the ENSv2 launch completes.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S13"
+      ],
+      "quote": "Until the launch completes, resolution and registrations on Mainnet continue through the ENSv1 contracts below.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "A18"
+        },
+        {
+          "type": "context",
+          "target": "A23"
+        },
+        {
+          "type": "context",
+          "target": "A30"
+        }
+      ]
+    },
+    {
+      "id": "L35",
+      "section": "what_it_does",
+      "text": "ENS says eligible users can claim a personalized commemorative art token after upgrading their names.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S25"
+      ],
+      "quote": "reveal and claim a personalized generative art NFT after completing their name upgrades",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L36",
+      "section": "money",
+      "text": "ENS says claiming the commemorative token requires ETH for Ethereum network fees.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S39"
+      ],
+      "quote": "It's its own transaction, so you need a little ETH for network fees (gas).",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L38",
+      "section": "how_it_works",
+      "text": "ENS says its standard v2 registry represents name ownership with individual ERC-1155 tokens.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S32"
+      ],
+      "quote": "ERC1155Singleton",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L39",
+      "section": "money",
+      "text": "ENS says released v2 names face a 21-day price premium that falls to zero.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S26"
+      ],
+      "quote": "an additional premium drops exponentially over that time to $0",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L41",
+      "section": "how_it_works",
+      "text": "Nick Johnson says the Security Council can upgrade the intermediate name resolver without a DAO vote.",
+      "kind": "statement",
+      "by": [
+        "Nick Johnson"
+      ],
+      "sources": [
+        "S30"
+      ],
+      "quote": "a proxy the security council can upgrade without a vote.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A28"
+        },
+        {
+          "type": "context",
+          "target": "A27"
+        }
+      ]
+    },
+    {
+      "id": "L42",
+      "section": "people",
+      "text": "Nick Johnson describes Karpatkey as the ENS Endowment’s manager.",
+      "kind": "statement",
+      "by": [
+        "Nick Johnson"
+      ],
+      "sources": [
+        "S30"
+      ],
+      "quote": "managed by Karpatkey",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L44",
+      "section": "how_it_works",
+      "text": "ENS says migration controllers forward old name tokens into the Graveyard holding contract.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S33"
+      ],
+      "quote": "forwarded to the Graveyard",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L45",
+      "section": "how_it_works",
+      "text": "ENS says migration assigns ownership of the reserved name in its new registry.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S33"
+      ],
+      "quote": "setting the owner",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L46",
+      "section": "money",
+      "text": "ENS says its renewal contract automatically transfers the payer’s payment tokens to its configured beneficiary.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S48"
+      ],
+      "quote": "SafeERC20.safeTransferFrom(paymentToken, msg.sender, BENEFICIARY, _renew(rd, paymentToken));",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A11"
+        }
+      ]
+    },
+    {
+      "id": "L47",
+      "section": "people",
+      "text": "ENS says token holders can appoint or remove Foundation directors.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S19"
+      ],
+      "quote": "appoint or remove Foundation directors",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L48",
+      "section": "how_it_works",
+      "text": "ENS’s updated registry guide limits the old registry to names that have not migrated.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "quote": "only backs names that have not migrated yet",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "A23"
+        }
+      ]
+    },
+    {
+      "id": "L49",
+      "section": "people",
+      "text": "ENS identifies @ensdomains, @ENS_DAO and @ENSfndn as its project, DAO and Foundation X accounts.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S6",
+        "S19",
+        "S2"
+      ],
+      "quote": "The official ENS DAO Twitter account.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A19"
+        },
+        {
+          "type": "partly",
+          "target": "A20"
+        }
+      ]
+    },
+    {
+      "id": "L50",
+      "section": "how_it_works",
+      "text": "ENS’s updated legacy registrar guide says new .eth registrations through its old controllers are permanently disabled.",
+      "kind": "statement",
+      "by": [
+        "ENS"
+      ],
+      "sources": [
+        "S27"
+      ],
+      "quote": "new .eth registrations through the controllers on this page are permanently disabled.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "A18"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "section": "on_chain",
+      "text": "The legacy registry’s root owner is the ENS Root contract.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "F1"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+                "data": "0x02571be30000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000ab528d626ec275e3fad363ff1393a41f581c5897"
+          }
+        ],
+        "decode": "Decode owner(bytes32(0)) as an ABI address."
+      },
+      "fact": {
+        "name": "Registry root owner",
+        "value": "0xab528d626ec275e3fad363ff1393a41f581c5897",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 26458142,
+          "value": "0xaB528d626EC275E3faD363fF1393A41F581c5897"
+        }
+      ],
+      "from": [
+        "F1:A1"
+      ],
+      "links": []
+    },
+    {
+      "id": "A2",
+      "section": "on_chain",
+      "text": "The ENS Root contract is owned by the ENS DAO wallet.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S10",
+        "S30",
+        "F1"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xaB528d626EC275E3faD363fF1393A41F581c5897",
+                "data": "0x8da5cb5b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          }
+        ],
+        "decode": "Decode owner() as an ABI address; S10 and S30 identify the DAO wallet."
+      },
+      "fact": {
+        "name": "Root contract owner",
+        "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 26458142,
+          "value": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7"
+        }
+      ],
+      "from": [
+        "F1:A2"
+      ],
+      "links": []
+    },
+    {
+      "id": "A3",
+      "section": "on_chain",
+      "text": "The ENS governance token has a total supply of 100 million ENS.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S8",
+        "F1"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72",
+                "data": "0x18160ddd"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000052b7d2dcc80cd2e4000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72",
+                "data": "0x313ce567"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000012"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72",
+                "data": "0x95d89b41"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000003454e530000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "decode": "Decode totalSupply() as uint256 and divide by 10^18, not by 18; decimals() returns 18 and symbol() returns ENS."
+      },
+      "fact": {
+        "name": "ENS supply",
+        "value": "100000000000000000000000000",
+        "unit": "ENS base units (18 decimals)"
+      },
+      "history": [
+        {
+          "block": 26458142,
+          "value": "100000000000000000000000000"
+        }
+      ],
+      "from": [
+        "F1:A3"
+      ],
+      "links": []
+    },
+    {
+      "id": "A4",
+      "section": "on_chain",
+      "text": "The ENS governance token’s owner is the DAO wallet.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S8",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xC18360217D8F7Ab5E7c516566761Ea12Ce7F9D72",
+                "data": "0x8da5cb5b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          }
+        ],
+        "decode": "Decode owner() as address."
+      },
+      "fact": {
+        "name": "Governance token owner",
+        "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "unit": "address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A5",
+      "section": "on_chain",
+      "text": "The old registry assigns .eth to the legacy name registrar.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S13"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+                "data": "0x02571be393cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000057f1887a8bf19b14fc0df6fd9b2acc9af147ea85"
+          }
+        ],
+        "decode": "Decode owner(namehash(\"eth\")) as address; the namehash is embedded in calldata."
+      },
+      "fact": {
+        "name": "Legacy eth owner",
+        "value": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "unit": "address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A6",
+      "section": "on_chain",
+      "text": "The legacy name registrar is owned by the compatibility renewer.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S13",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+                "data": "0x8da5cb5b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000056c447f308f463a01121c41e72b0e7e7557fcb68"
+          }
+        ],
+        "decode": "Decode owner() as address."
+      },
+      "fact": {
+        "name": "Legacy registrar owner",
+        "value": "0x56c447f308f463a01121c41e72b0e7e7557fcb68",
+        "unit": "address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A7",
+      "section": "on_chain",
+      "text": "The ENS Root contract marks .eth as locked.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xaB528d626EC275E3faD363fF1393A41F581c5897",
+                "data": "0xcbe9e7644f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+          }
+        ],
+        "decode": "Decode locked(keccak256(\"eth\")) as bool; 1 is true. This reads the legacy root lock, not every ENSv2 permission."
+      },
+      "fact": {
+        "name": "Eth root lock",
+        "value": true,
+        "unit": "boolean"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A8",
+      "section": "on_chain",
+      "text": "The ENS DAO timelock reports a minimum delay of two days.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+                "data": "0xf27a0c92"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000000000000000000000000000000000000002a300"
+          }
+        ],
+        "decode": "Decode getMinDelay() as uint256; divide 172800 by 86400."
+      },
+      "fact": {
+        "name": "DAO delay",
+        "value": "172800",
+        "unit": "seconds"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A9",
+      "section": "history",
+      "text": "The supplied registry was deployed directly by its transaction sender on January 30, 2020.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S36",
+        "S15"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 9380380,
+        "block_hash": "0x6e3a87870b12252cbc7757bede925ba4873d5790058caf4d4907ab4ed2cf80a6",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://1rpc.io/eth",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_getTransactionByHash",
+            "params": [
+              "0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf"
+            ],
+            "expected": {
+              "blockHash": "0x6e3a87870b12252cbc7757bede925ba4873d5790058caf4d4907ab4ed2cf80a6",
+              "blockNumber": "0x8f221c",
+              "blockTimestamp": "0x5e322538",
+              "from": "0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8",
+              "gas": "0x6691b7",
+              "gasPrice": "0x77359400",
+              "hash": "0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf",
+              "input": "0x608060405234801561001057600080fd5b506040516115ce3803806115ce8339818101604052602081101561003357600080fd5b8101908080519060200190929190505050336000808060001b815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506114e2806100ec6000396000f3fe608060405234801561001057600080fd5b50600436106100cf5760003560e01c80635b0fc9c31161008c578063b83f866311610066578063b83f86631461042c578063cf40882314610476578063e985e9c5146104f8578063f79fe53814610574576100cf565b80635b0fc9c3146103025780635ef2c7f014610350578063a22cb465146103dc576100cf565b80630178b8bf146100d457806302571be31461014257806306ab5923146101b057806314ab90381461021c57806316a25cbd1461025e5780631896f70a146102b4575b600080fd5b610100600480360360208110156100ea57600080fd5b81019080803590602001909291905050506105ba565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61016e6004803603602081101561015857600080fd5b810190808035906020019092919050505061068f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610206600480360360608110156101c657600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610764565b6040518082815260200191505060405180910390f35b61025c6004803603604081101561023257600080fd5b8101908080359060200190929190803567ffffffffffffffff169060200190929190505050610919565b005b61028a6004803603602081101561027457600080fd5b8101908080359060200190929190505050610aab565b604051808267ffffffffffffffff1667ffffffffffffffff16815260200191505060405180910390f35b610300600480360360408110156102ca57600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610b80565b005b61034e6004803603604081101561031857600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610d42565b005b6103da600480360360a081101561036657600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803567ffffffffffffffff169060200190929190505050610eba565b005b61042a600480360360408110156103f257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803515159060200190929190505050610edc565b005b610434610fdd565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6104f66004803603608081101561048c57600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803567ffffffffffffffff169060200190929190505050611003565b005b61055a6004803603604081101561050e57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061101e565b604051808215151515815260200191505060405180910390f35b6105a06004803603602081101561058a57600080fd5b81019080803590602001909291905050506110b2565b604051808215151515815260200191505060405180910390f35b60006105c5826110b2565b61067e57600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16630178b8bf836040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561063c57600080fd5b505afa158015610650573d6000803e3d6000fd5b505050506040513d602081101561066657600080fd5b8101908080519060200190929190505050905061068a565b61068782611120565b90505b919050565b600061069a826110b2565b61075357600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166302571be3836040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561071157600080fd5b505afa158015610725573d6000803e3d6000fd5b505050506040513d602081101561073b57600080fd5b8101908080519060200190929190505050905061075f565b61075c8261115f565b90505b919050565b600083600080600083815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690503373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614806108615750600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff165b61086a57600080fd5b6000868660405160200180838152602001828152602001925050506040516020818303038152906040528051906020012090506108a781866111e2565b85877fce0457fe73731f824cc272376169235128c118b49d344817417c6d108d155e8287604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a38093505050509392505050565b81600080600083815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690503373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161480610a145750600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff165b610a1d57600080fd5b837f1d4f9bbfc9cab89d66e1a1562f2233ccbf1308cb4f63de2ead5787adddb8fa6884604051808267ffffffffffffffff1667ffffffffffffffff16815260200191505060405180910390a28260008086815260200190815260200160002060010160146101000a81548167ffffffffffffffff021916908367ffffffffffffffff16021790555050505050565b6000610ab6826110b2565b610b6f57600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166316a25cbd836040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610b2d57600080fd5b505afa158015610b41573d6000803e3d6000fd5b505050506040513d6020811015610b5757600080fd5b81019080805190602001909291905050509050610b7b565b610b788261122f565b90505b919050565b81600080600083815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690503373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161480610c7b5750600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff165b610c8457600080fd5b837f335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd35a2c934239f94095602a084604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a28260008086815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505050565b81600080600083815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690503373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161480610e3d5750600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff165b610e4657600080fd5b610e5084846111e2565b837fd4735d920b0f87494915f556dd9b54c8f309026070caea5c737245152564d26684604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a250505050565b6000610ec7868686610764565b9050610ed4818484611262565b505050505050565b80600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055508173ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c3183604051808215151515815260200191505060405180910390a35050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b61100d8484610d42565b611018848383611262565b50505050565b6000600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b60008073ffffffffffffffffffffffffffffffffffffffff1660008084815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614159050919050565b600080600083815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b60008060008084815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690503073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156111d85760009150506111dd565b809150505b919050565b6000819050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415611220573090505b61122a8382611455565b505050565b600080600083815260200190815260200160002060010160149054906101000a900467ffffffffffffffff169050919050565b60008084815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614611383578160008085815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550827f335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd35a2c934239f94095602a083604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a25b60008084815260200190815260200160002060010160149054906101000a900467ffffffffffffffff1667ffffffffffffffff168167ffffffffffffffff1614611450578060008085815260200190815260200160002060010160146101000a81548167ffffffffffffffff021916908367ffffffffffffffff160217905550827f1d4f9bbfc9cab89d66e1a1562f2233ccbf1308cb4f63de2ead5787adddb8fa6882604051808267ffffffffffffffff1667ffffffffffffffff16815260200191505060405180910390a25b505050565b8060008084815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505056fea265627a7a72315820e307c1741e952c90d504ae303fa3fa1e5f6265200c65304d90abaa909d2dee4b64736f6c63430005100032000000000000000000000000314159265dd8dbb310642f98f50c066173c1259b",
+              "nonce": "0x0",
+              "to": null,
+              "transactionIndex": "0x21",
+              "value": "0x0",
+              "type": "0x0",
+              "v": "0x1b",
+              "r": "0x8a0a2860dd74a4bdde949e70dbefc34c69d5ba50a2e3caf17eb594141cc85edb",
+              "s": "0x569bd9cbe47ef278ce0db8edd06b181e67c31fc6a25d5d30d927717e87920fca"
+            }
+          },
+          {
+            "method": "eth_getTransactionReceipt",
+            "params": [
+              "0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf"
+            ],
+            "expected": {
+              "blockHash": "0x6e3a87870b12252cbc7757bede925ba4873d5790058caf4d4907ab4ed2cf80a6",
+              "blockNumber": "0x8f221c",
+              "contractAddress": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+              "cumulativeGasUsed": "0x315ccd",
+              "effectiveGasPrice": "0x77359400",
+              "from": "0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8",
+              "gasUsed": "0x131d2e",
+              "logs": [],
+              "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "status": "0x1",
+              "to": null,
+              "transactionHash": "0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf",
+              "transactionIndex": "0x21",
+              "type": "0x0"
+            }
+          },
+          {
+            "method": "eth_getBlockByNumber",
+            "params": [
+              "0x8f221c",
+              false
+            ],
+            "expected": {
+              "difficulty": "0x78766214adeef",
+              "extraData": "0x73656f33",
+              "gasLimit": "0x948214",
+              "gasUsed": "0x94344a",
+              "hash": "0x6e3a87870b12252cbc7757bede925ba4873d5790058caf4d4907ab4ed2cf80a6",
+              "logsBloom": "0x30309a08014120094c4420c6840054010180a1fb443c06190140004126400068009841502024110081a50d3201400104430100809600049104000050712910601c1b674009022123284c840ce0350081e04202282001c000466081bc005870443c8005494e0844212840c291212008260c00912200020e1004a02135508a1092970a4824005c0c29100a180700874c1a015901d881400024470105e20612c0480e0e600208106204166000c0900290332814442ca8c20810c0248100198411645c09012388590209a0014900c70802c86c385a2b9004c146090800999129310a2012002010602208ec0000400810e9104900080181001814844193084a04314a",
+              "miner": "0xb2930b35844a230f00e51431acae96fe543a0347",
+              "mixHash": "0x2fe8edb3148a841512129546bec43ad6759ac1513a44d3c16c71afbf68971ae2",
+              "nonce": "0x5f07c3ec1762be15",
+              "number": "0x8f221c",
+              "parentHash": "0x14d713be1d0ad5ea01e31463818455bda995e5f0bc64e04728345b1ec0742127",
+              "receiptsRoot": "0x7ba218a1980156e6640141e41c182421c7612782302c4d5cee49522fedfc4aad",
+              "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+              "size": "0x6439",
+              "stateRoot": "0xcbed3b7d65b99af54db788252a11fe3a09882a20969af05cd6f5f2a001ac0978",
+              "timestamp": "0x5e322538",
+              "transactions": [
+                "0x208d0b195105c86c00805082f7e81a0b00f5eea5eee3b84a7de43f2f3d47dc86",
+                "0x4ef6169ae5f8acff2ee97dd4310feb1f38abb744d30bb69e2855c23c5f43ab6a",
+                "0x983cf6d0793283b0958db6d5d6f8b1c1183a5628abd7d32f32e787d94a5d0d2c",
+                "0xdb1db1ec72a3998d6dc32c3f6928af98d3f9d4949a4e97837a6970d29cd308db",
+                "0xc4a206793149be6a2aa00ba94d1fdbdbfde0d5228bc3fcdc3ca55d528be6da45",
+                "0x4aa6b90d88555278b0cd8cf146f0cc73fa785060c777653f73dfec33ded92452",
+                "0x9391dbd4d98e3d8bffc39276a2ce517fc8f9198c84340839e64822b0bb95e941",
+                "0xd8638cee0702d3da0925c7f070510865ce115c21145338d08a1fe6e2f83c2016",
+                "0xcd6920185283765437e0daa4d6901b4c30dd12555e7495963b5fe9a5258210b7",
+                "0x7496d31af92aea40b71626b669eaeb8c6e66cf3507f9f47b6f559647e094c1cd",
+                "0x0f822955ae52842ec28d78b2d3eb3206b6c7e73fa300617f6992096459bb230c",
+                "0x4e806ab3fa14851ff9ce40ffa0cdf500d7e16c01833f15c157157b65896ff658",
+                "0x43ade3abeedcd7aaa2f7ddba0cfc4cd2d0003db9fa42aaebe9fe485abd3c20a5",
+                "0xc3b87355a459f5ae6e715fff38135536705710eb689bf19a35bc17a743bc9b9f",
+                "0x0c912cb5a37f5ec3cd47db5d40a0da1bd7df7f4eff6840ff65fd8d9ce3f405fb",
+                "0x632248d4eb4de900f6fc0381fa04450295bc8ef52eff095a2cc45c1c7492cca0",
+                "0x7af4de32fa26eb8f24eb6434046953706f4518fec9661723717054f9562f0f26",
+                "0xd547a4759178f5b047747e643b50660152ea9d23466988202e31f42ab1b80c6f",
+                "0x320d31dfc4da2317c5cd328d2c4d58cdc4180c1b04836d1d0afcc80ac7e4fb94",
+                "0x5badeed7ef914583599c67f9d29fc22ff60234a0f4099f4e4a0a955d439a966c",
+                "0x55c0b9eb3317af6532405136701c52a61a1f664f51ca2ee6f4c27dd3d00dd311",
+                "0x1031147f4878695ee8007c1576bd6ac0862161729e27b7b2a1135101f498af84",
+                "0x540d8b0e2542a33e7a78814f95307375ea3ddcc8fd0e5c86118b07120e7060d9",
+                "0x60a0b7695c67024cbe0288f4bc44efa030ababd2ef59ece26977630d67ab64b3",
+                "0x81397848e566cf69ea7b96ad8575723e8914af3b886d385338433b1ba01c537b",
+                "0x72d5d3a38d6c27863ecbb32f41134be1ee0b06a4c0525cfcd6709e3956ee7bb5",
+                "0x72aaeeba72b0b8b9da234a4d4055a708c2fcf82f81ba503d62460613b912bc10",
+                "0xb50fdcc778c3e1b6c8b149daa62e5b362a487ceaf4b33faafb7f961bac28d100",
+                "0x9f6187a989618bb5bbbee1d8514f5b45eaefaefdd1e22d6b8d7c397ce7f01e3d",
+                "0xb880342e6bcfd7f71d66c6c957bdb02e9cfc3ece419612e978f7b2e0b62339ec",
+                "0xa065ebee30511e4c90df1dac4fd2ef42facf83ae5640eaf9dc100c5b625dfc1b",
+                "0x51cc57ca67807842a8ccb169fb9a77bad7659ad8934e0ce3e06493dc17421e4b",
+                "0xaf421522a3b2f6b393de49315f882019fe97bf2573ffa0d2fc29ee87f0a76229",
+                "0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf",
+                "0x975f9f910f290abb49c4836c2f3a3329e78c7759f20c79d7c3f2749be0a04eea",
+                "0xc5c92f8baeaee590bfcbeb9bd254f5b95b18eddafd7a3634c783f997494ce9e4",
+                "0xb415dbc97ed0b44fb9543828043f132d8fdd5312da6c123a16fd996c474e59d6",
+                "0xc2d69962647d0c64f602944a4c3f7274e77039ae2c4d2ae67e58c40eb1a081b5",
+                "0xfdaed6f6d21eed7b910a5eb971bcfca71230fdf8793c9b9e3e926b48f567ef18",
+                "0xee51ac7da0addf69908a927272844194367708fc0861811d0bcb8e95609526fd",
+                "0x7c9443d513d49b428bc38764ba62a48a89c680ab0d69cce2d434c01d0f02e171",
+                "0xd115602b697b543cd63c427667b7e23f1af6fe6892891b8dd294bd73a8d64d26",
+                "0xe2fec4830ba60fe905b9a321c82167d4c38835ae5601e06537f25667e24d8194",
+                "0x0dd28e743514e113ae4e515f51b8e12d7ac181b9e6c8eab3a300794e38e3f267",
+                "0xbd237bea5077dd55ea5e050d1c06fed8c33999d307e9a2ee67b41800129fa173",
+                "0x0221a34c5b8a90e5e48f0bbc5536f30e38e96d7e58715f1a73fb11c5f7e71705",
+                "0x7d16ba11c70ee808bf7085dbf633751a04befbb16b4eb1f4d69bcd513055e529",
+                "0x9cb4cdf62500be96b16fe210241a7de815ec2d97f97e261ceec71eef8898c746",
+                "0x106afed2765fa5ab73674becc0db3307fef9451061b31bd01e68a7a7805bb16f",
+                "0x71957b3712aeb38ed712256c46a04fdd36f3d3b6a12f19bb96cdc47730d95b6e",
+                "0xac68ec70cc13b42b4217e74acb18113b6c30a4d06392a070582fa4aeaff95226",
+                "0x7cb985c949992116727a95816f7bc7d58d832e2abd8d476f0abe717947b33a62",
+                "0x5b447aa5bb9c829501bd94244a98b61252bd5745237e862a4677d605086a31ed",
+                "0x39e7ab484327844f1e49e89208bc47f336c0abdf227909f6188dc85dbcb473cc",
+                "0x4e68949fbca3664661f7ded459ea3fe8be2ceb681b8d183aab9c37bcd4bec5a1",
+                "0xfc55e671449b8cb05056020fda837557449b3497eb83accab212bfdbae0a8715",
+                "0x3ca807ece927620323d2706903cff4237721c2158a2cad56271964af840dc066",
+                "0x88d3d95f4005fd1db3040cc53b314e0cb5747044c63da1dd7912beff38521ca2",
+                "0xe67b3143131d5add88e5f901f7465180e044754097d353e2c550a27e8848bee4",
+                "0x1eba8cc3c62b9d980f8523bba8638377fe025d25cf668021d9a85af0cae61698",
+                "0x00e03be8dd40d05013b02e2fa0be33c20810c1ec7770ec1fe7c0569c5202cc45",
+                "0xa99cd41e2eefbf4a9085bb2a49d5ffbf9dcaf2dcb6beb358b572bbbc16763a90",
+                "0x5be1b716558baf81ea6ebe479e9fdea83cce6230b70adfdf89728c892d013e0e",
+                "0x403f04d78a4ed968fa7db99b14a018de344d6aae4462762844d379c265857e93",
+                "0x1076e9302a6e01dbba6829ffb45abd32302a03eae91c2f017bdb7b3c554db064",
+                "0x7ac8f6d3317dd11d1ea63fd730171f7c94d5d51212c22b66e2840af1167202b4",
+                "0x65e5a7af068998f9da07616bfa51a586aed14cd9b417d67e26c6b29378768d4b",
+                "0xb3e20557a90f8ec8b46f8f0d46ea5e4f5575866442586c558ac51c5071158adc",
+                "0x202a7ce6828f58d7a054565221f9b993cf9f02e31b91501ae6861546e7f1044c",
+                "0xeb9fac4710bd40b42cbad4fedaa2d80bb21ad13302b581fa9fb851d9616ef3eb",
+                "0x6fdde5f6cd57e9a70dc61981da8000b64d0bbda860a051a5e0a4abecf5c2c9da",
+                "0x30de4a4a2569aa47683a7c57919a46b3f3246a391a4a5517ce93d7a4231005b2",
+                "0xb2ff863bb60c2755780b07bd967c93e75e1c838b524b39f0f4e9561ed4044e45",
+                "0xe99bdfde58dc8e6c22c40ae09a93fe2dfde99c79bd33498aa925c4f53dba23fa",
+                "0x49bacc2c993e3a62a4a95b618a448ce7b972e6193ab8bbd6dd9dd2236638432a",
+                "0xc28b2a7257dcd3e12521cdafa5149c3e3dfb47670744267ccf1cab50c5bc7152",
+                "0xa0bed4b12bba33f9ac6b9d4921fba379e1e102f52b03a6af5d5d7fc05bed30c6",
+                "0xa046976528ae1e653471bfac0e99cccb0e97697279034571fca8da6147bc7a22",
+                "0xbcf520c423ee099c92700193c44e1bbca78887df7b4e7aa314744bc80adba088",
+                "0xb5ae25463118c30dd32056b139c3e2e92cf7594f569f11b1b23c96ece0cf86fa",
+                "0x4c7c30a47e6cb5c51ebdc78c40d14a11f53145108e53f8481f10a77a82f45465",
+                "0xd744a5ce5706b4a323d01ea5857d3f3da5f9836cad664528cf7931681da8ffe4",
+                "0xcbea44fc2b08e91ddb4fa3036c712ad1286b9af52a58cdee47f609acedd1ec51",
+                "0x45f96c06ef2dbba07d54039d8ba5aabc93c7fb4f974b61d8e0a0e193558d256d",
+                "0x999ec0db1065bbeee45cfc449f9733028444a9e2ee2f4689d9b4102a9f0b1003",
+                "0x87cbf3e7721613d1fc66d2778a84b66de55cb7b78a71f489a024395e4c123bcf",
+                "0x4469ae5d374210e5a788ec0ca8931060bec85fe43971d55f7cb186ae4d7d48a6",
+                "0x82a93a500bc8f232b3a4989f8a756c0a3b0b54519b8e4e516f1bd9ba402e738b",
+                "0xb96023cce330047b7573eae2fb1e89791ee9853290df5f41e28901a4049a0a0c",
+                "0xe72a341e5cc3a757540bb4f4fb23a6fdfa9a8b1f6e98b2991bac2ec3ecbf8ad6",
+                "0x9462ae0647a298e6a93112baf3389e4f830302a016195d157119469ddda779a7",
+                "0x634b5094c3fb628d74d22f2f908b9e9864a8dd5aac4d2d0895ece89a1abdf3e3",
+                "0xce0f7e441972d5b617f2f36d5448ca075a556b4e9854002faeefb91d4800c6e2",
+                "0x36a888ce2fc5381c8941f50bf6a7fdfc4c82c877b69364874726ed2c6ad6719c",
+                "0x847cab487d7aafce141e4df05618ff89c0f20076bf059bd3b9fc7543fbe5b231",
+                "0x92197df3eecd235d5855936962d4d3b1216329cdf5cb2ed5467117a30418bc72",
+                "0xe60c00e4ddb562a00e1f3778277e4a14af933425dd50a873aa6b9b0c467d0c42",
+                "0xf15090e153a458442e94d32e0588e96c71a95b791e298e3bf2f37258ad48624b",
+                "0xc1081076eb65dc78c1e56d0f3249c5a5dd44fc4ffbc63fd2c5dac5fbc81bee58",
+                "0x387f243e6600b41fafc5626315be48903418de2fee46be7610bba7c5a663d6f5",
+                "0xf35cbe4972d1ef3acf3cada09f3879bf41b3ac163d7e41f28aca30414cc6149a",
+                "0x58b737b9865075e058e2bd008123d17c590b9b1e8e0a22f6097a3f049bd624ea",
+                "0x4a0387abbe852a91149a72f2a4a92dd9f4320b1be7a177632643b58ad60de15b",
+                "0xb53c675e26db0a0cc72f30b3d94ccb3760e4c1a45459152821a73c4eefb3328f",
+                "0x7e70f2239fcfe6a1e04a6c226196b85d6291c24a4a5dd6da3a30b6141243bbcd",
+                "0x40cd5c14be8f414db02bfcaa5bb6411698751743bed1a92f669926edeb5d1811",
+                "0xe1025736e6e898d5662ec4610025ce6d4a0cf2ebea2793280709a72555b89e6a",
+                "0x64a809b5c1dd11896e1aa9e094db4a2808d729e48e0252968691dfb035d8f31e"
+              ],
+              "transactionsRoot": "0x56c466eb18a6da6b5a70c55d9bc77cfeb0ad7775a8b2ab2dc69ad19b4cefd364",
+              "uncles": []
+            }
+          }
+        ],
+        "decode": "Check transaction.to is null, receipt.status is 0x1, receipt.contractAddress equals the supplied registry, and receipt.from equals transaction.from; the deployment block header timestamp is 2020-01-30T00:37:12Z."
+      },
+      "fact": {
+        "name": "Registry deployment",
+        "value": {
+          "deployer": "0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8",
+          "contract": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+          "transaction": "0x00df88239dcc77e499f4ed3bad25bc58cc30663a26bc7c531decff94e861b9bf",
+          "date": "2020-01-30"
+        },
+        "unit": "deployment"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A10",
+      "section": "on_chain",
+      "text": "The v2 registrar and compatibility renewer both report the DAO wallet as owner.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S36",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://1rpc.io/eth",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+                "data": "0x8da5cb5b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x56c447F308F463A01121C41E72b0E7e7557fCb68",
+                "data": "0x8da5cb5b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          }
+        ],
+        "decode": "Decode both owner() calls as addresses."
+      },
+      "fact": {
+        "name": "Registration contract owners",
+        "value": {
+          "v2_registrar": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "compatibility_renewer": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        },
+        "unit": "addresses"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A11",
+      "section": "money",
+      "text": "The v2 registrar and compatibility renewer both name the ENS Endowment as payment beneficiary.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S36",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://1rpc.io/eth",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+                "data": "0x2f99c6cc"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000004f2083f5fbede34c2714affb3105539775f7fe64"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x56c447F308F463A01121C41E72b0E7e7557fCb68",
+                "data": "0x2f99c6cc"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000004f2083f5fbede34c2714affb3105539775f7fe64"
+          }
+        ],
+        "decode": "Decode BENEFICIARY() on both contracts as address. This proves the configured recipient, not an observed transfer."
+      },
+      "fact": {
+        "name": "Payment beneficiaries",
+        "value": {
+          "v2_registrar": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+          "compatibility_renewer": "0x4f2083f5fbede34c2714affb3105539775f7fe64"
+        },
+        "unit": "addresses"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A12",
+      "section": "money",
+      "text": "The v2 registrar’s current price oracle accepts both USDC and DAI.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S3"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+                "data": "0x7b39ba16"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000076f29609a363a8a1a2a6abe2e859c0f8916af469"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+                "data": "0x930eaddc000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+                "data": "0x930eaddc0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+          }
+        ],
+        "decode": "First decode rentPriceOracle() as address, then isPaymentToken(address) as bool for the listed USDC and DAI contracts; both return true."
+      },
+      "fact": {
+        "name": "Accepted payment tokens",
+        "value": {
+          "oracle": "0x76f29609a363a8a1a2a6abe2e859c0f8916af469",
+          "USDC": true,
+          "DAI": true
+        },
+        "unit": "boolean per token"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A13",
+      "section": "money",
+      "text": "The oracle quotes 8.000021 USDC for a one-year renewal of the five-character example abcde.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S42"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+                "data": "0x3ad86083000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e13380000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000000000056162636465000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000000000000000000007a1215"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "data": "0x313ce567"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000006"
+          }
+        ],
+        "decode": "Decode getRenewPrice(\"abcde\",0,31536000,USDC) on the oracle as uint256; divide by 10^6. This is a stateless example, not a statement that the name is registered or available; it excludes gas and registration premiums."
+      },
+      "fact": {
+        "name": "Five character annual quote",
+        "value": "8000021",
+        "unit": "USDC base units (6 decimals)"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A14",
+      "section": "money",
+      "text": "The oracle quotes 160.000009 USDC for a one-year renewal of the four-character example abcd.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S42"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+                "data": "0x3ad86083000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e13380000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000000000046162636400000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000009896809"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "data": "0x313ce567"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000006"
+          }
+        ],
+        "decode": "Decode getRenewPrice(\"abcd\",0,31536000,USDC) on the oracle as uint256; divide by 10^6. This is a stateless example, not a statement that the name is registered or available; it excludes gas and registration premiums."
+      },
+      "fact": {
+        "name": "Four character annual quote",
+        "value": "160000009",
+        "unit": "USDC base units (6 decimals)"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A15",
+      "section": "money",
+      "text": "The oracle quotes 640.000005 USDC for a one-year renewal of the three-character example abc.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S42"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+                "data": "0x3ad86083000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e13380000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000000000036162630000000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000000000000000000000000000000000002625a005"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "data": "0x313ce567"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000006"
+          }
+        ],
+        "decode": "Decode getRenewPrice(\"abc\",0,31536000,USDC) on the oracle as uint256; divide by 10^6. This is a stateless example, not a statement that the name is registered or available; it excludes gas and registration premiums."
+      },
+      "fact": {
+        "name": "Three character annual quote",
+        "value": "640000005",
+        "unit": "USDC base units (6 decimals)"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A16",
+      "section": "money",
+      "text": "The oracle quotes 27.000071 USDC for a six-year renewal of the five-character example abcde.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S42"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x76F29609A363a8A1a2a6abe2e859C0F8916Af469",
+                "data": "0x3ad8608300000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b473500000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000000000056162636465000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000000000000000000019bfd07"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "data": "0x313ce567"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000006"
+          }
+        ],
+        "decode": "Decode getRenewPrice(\"abcde\",0,189216000,USDC) as uint256; divide by 10^6. Stateless base quote, excluding gas and premiums."
+      },
+      "fact": {
+        "name": "Six year renewal quote",
+        "value": "27000071",
+        "unit": "USDC base units (6 decimals)"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A17",
+      "section": "on_chain",
+      "text": "The v2 registrar reports a grace period of 28 days.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+                "data": "0xc1a287e2"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000000000000000000000000000000000000024ea00"
+          }
+        ],
+        "decode": "Decode GRACE_PERIOD() as uint64; divide by 86400."
+      },
+      "fact": {
+        "name": "V2 grace period",
+        "value": "2419200",
+        "unit": "seconds"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A18",
+      "section": "on_chain",
+      "text": "The legacy registrar has disabled all five old registration controllers listed in the activation proposal.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S36",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://1rpc.io/eth",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+                "data": "0xda8c229e00000000000000000000000059e16fccd424cc24e280be16e11bcd56fb0ce547"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+                "data": "0xda8c229e000000000000000000000000283af0b28c62c092c9727f1ee09c02ca627eb7f5"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+                "data": "0xda8c229e000000000000000000000000d4416b13d2b3a9abae7acd5d6c2bbdbe25686401"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+                "data": "0xda8c229e00000000000000000000000060c7c2a24b5e86c38639fd1586917a8fef66a56d"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+                "data": "0xda8c229e000000000000000000000000cf60916b6cb4753f58533808fa610fcbd4098ec0"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "decode": "Decode each BaseRegistrar.controllers(address) call as bool; all five proposal-listed old controllers return false. The wrapped controller is excluded because it was never a direct BaseRegistrar controller."
+      },
+      "fact": {
+        "name": "Old controller permissions",
+        "value": {
+          "0x59E16fcCd424Cc24e280Be16E11Bcd56fb0CE547": false,
+          "0x283Af0B28c62C092C9727F1Ee09c02CA627EB7F5": false,
+          "0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401": false,
+          "0x60C7C2A24b5e86C38639Fd1586917a8FEF66a56d": false,
+          "0xCF60916b6CB4753f58533808fA610FcbD4098Ec0": false
+        },
+        "unit": "boolean per address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A19",
+      "section": "on_chain",
+      "text": "The ens.eth text records point to the ENS website, project X account and GitHub organization.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+                "data": "0x0178b8bf4e34d3a81dc3a20f71bbdf2160492ddaa17ee7e5523757d47153379c13cb46df"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000004976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41",
+                "data": "0x59d1d43c4e34d3a81dc3a20f71bbdf2160492ddaa17ee7e5523757d47153379c13cb46df0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000375726c0000000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001468747470733a2f2f656e732e646f6d61696e732f000000000000000000000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41",
+                "data": "0x59d1d43c4e34d3a81dc3a20f71bbdf2160492ddaa17ee7e5523757d47153379c13cb46df0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000b636f6d2e74776974746572000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000a656e73646f6d61696e7300000000000000000000000000000000000000000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41",
+                "data": "0x59d1d43c4e34d3a81dc3a20f71bbdf2160492ddaa17ee7e5523757d47153379c13cb46df0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a636f6d2e67697468756200000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000a656e73646f6d61696e7300000000000000000000000000000000000000000000"
+          }
+        ],
+        "decode": "Read registry.resolver(namehash(\"ens.eth\")), then text(node,key) on that resolver. Decode the dynamic ABI strings. Handles map to x.com/ensdomains and github.com/ensdomains."
+      },
+      "fact": {
+        "name": "ENS channel records",
+        "value": {
+          "name": "ens.eth",
+          "url": "https://ens.domains/",
+          "com.twitter": "ensdomains",
+          "com.github": "ensdomains"
+        },
+        "unit": "text records"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A20",
+      "section": "on_chain",
+      "text": "The ensdao.eth text records point to ENS governance and the ENS DAO X account.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+                "data": "0x0178b8bf845c4fbb122168f1e51374b70df49458c9ff4cdaf0b1101fa0d5c91fc64947bd"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000004976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41",
+                "data": "0x59d1d43c845c4fbb122168f1e51374b70df49458c9ff4cdaf0b1101fa0d5c91fc64947bd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000375726c0000000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001f68747470733a2f2f656e732e646f6d61696e732f676f7665726e616e63652f00"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41",
+                "data": "0x59d1d43c845c4fbb122168f1e51374b70df49458c9ff4cdaf0b1101fa0d5c91fc64947bd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000b636f6d2e74776974746572000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000007454e535f44414f00000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "decode": "Read the registry resolver for ensdao.eth, then decode url and com.twitter text records as ABI strings."
+      },
+      "fact": {
+        "name": "DAO channel records",
+        "value": {
+          "name": "ensdao.eth",
+          "url": "https://ens.domains/governance/",
+          "com.twitter": "ENS_DAO"
+        },
+        "unit": "text records"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A21",
+      "section": "on_chain",
+      "text": "The v2 root and registrar both point to the same .eth registry.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S36",
+        "S9",
+        "S13"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://1rpc.io/eth",
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x2553c09be6447beffdb86fa622ad41fb8f77a91e",
+                "data": "0x35af6216000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000036574680000000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000f60aba43e1f7f3dab1186ff03b561401c9df85e2"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+                "data": "0x47500708"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000f60aba43e1f7f3dab1186ff03b561401c9df85e2"
+          }
+        ],
+        "decode": "Decode root.getSubregistry(\"eth\") and registrar.ETH_REGISTRY() as addresses; compare them."
+      },
+      "fact": {
+        "name": "V2 eth registry",
+        "value": {
+          "root_subregistry": "0xf60aba43e1f7f3dab1186ff03b561401c9df85e2",
+          "registrar_registry": "0xf60aba43e1f7f3dab1186ff03b561401c9df85e2"
+        },
+        "unit": "addresses"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A22",
+      "section": "on_chain",
+      "text": "The v2 registrar reports a minimum commitment age of 60 seconds.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+                "data": "0x2e4f692a"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000000000000000000000000000000000000000003c"
+          }
+        ],
+        "decode": "Decode MIN_COMMITMENT_AGE() as uint64; this is a configured minimum, not a transaction timing test."
+      },
+      "fact": {
+        "name": "Minimum commitment age",
+        "value": "60",
+        "unit": "seconds"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A23",
+      "section": "on_chain",
+      "text": "The public name lookup proxy routes through an intermediate proxy to the documented v2 resolver.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S9",
+        "S36",
+        "S13"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://1rpc.io/eth",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xeEeEEEeE14D718C2B47D9923Deab1335E144EeEe",
+                "data": "0x5c60da1b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000cffd2ae680cd110d28739a70922636b5937b022b"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xcFFd2Ae680CD110D28739a70922636B5937b022B",
+                "data": "0x5c60da1b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000006fdd07f007adac667177b46ab2eb9a75132cfd5"
+          }
+        ],
+        "decode": "Read implementation() on the public proxy, then on the returned intermediate proxy; compare the final address to the documented UniversalResolverV2 deployment."
+      },
+      "fact": {
+        "name": "Resolver route",
+        "value": {
+          "public_proxy": "0xeEeEEEeE14D718C2B47D9923Deab1335E144EeEe",
+          "intermediate": "0xcffd2ae680cd110d28739a70922636b5937b022b",
+          "implementation": "0x06fdd07f007adac667177b46ab2eb9a75132cfd5"
+        },
+        "unit": "addresses"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A24",
+      "section": "on_chain",
+      "text": "The v2 .eth owner is a one-signature Safe whose sole owner is the DAO wallet.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S37",
+        "S36",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x2553c09be6447beffdb86fa622ad41fb8f77a91e",
+                "data": "0x63560a8e000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000036574680000000000000000000000000000000000000000000000000000000000"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000005b716d6587d241166bc8914858640f8684f3a2f3"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x5B716D6587d241166bC8914858640F8684F3A2F3",
+                "data": "0xe75235b8"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x5B716D6587d241166bC8914858640F8684F3A2F3",
+                "data": "0xa0e67e2b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000001000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          }
+        ],
+        "decode": "Decode root.findOwner(\"eth\") as address; on that Safe decode getThreshold() as uint256 and getOwners() as address[]. This does not enumerate Safe modules."
+      },
+      "fact": {
+        "name": "V2 eth ownership",
+        "value": {
+          "safe": "0x5b716d6587d241166bc8914858640f8684f3a2f3",
+          "threshold": "1",
+          "owners": [
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ]
+        },
+        "unit": "Safe configuration"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A25",
+      "section": "on_chain",
+      "text": "The commemorative contract reports the name ENS Commemorative and the symbol ENSC.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S37",
+        "S36",
+        "S34"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x20262e3433306a4FF250a64d20a8E0F09B2C7F68",
+                "data": "0x06fdde03"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000011454e5320436f6d6d656d6f726174697665000000000000000000000000000000"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x20262e3433306a4FF250a64d20a8E0F09B2C7F68",
+                "data": "0x95d89b41"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000004454e534300000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "decode": "Decode name() and symbol() as dynamic ABI strings. The official app configuration identifies this deployment."
+      },
+      "fact": {
+        "name": "Commemorative token identity",
+        "value": {
+          "contract": "0x20262e3433306a4FF250a64d20a8E0F09B2C7F68",
+          "name": "ENS Commemorative",
+          "symbol": "ENSC"
+        },
+        "unit": "token metadata"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A26",
+      "section": "on_chain",
+      "text": "The commemorative token has an owner wallet separate from the DAO wallet.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S37"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth",
+          "https://ethereum-rpc.publicnode.com"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x20262e3433306a4FF250a64d20a8E0F09B2C7F68",
+                "data": "0x8da5cb5b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000fbe6ce2d739df7077f407f6099ac804a076a760b"
+          }
+        ],
+        "decode": "Decode owner() as address and compare with the DAO wallet in A2. The controller of this wallet was not identified."
+      },
+      "fact": {
+        "name": "Commemorative token owner",
+        "value": "0xfbe6ce2d739df7077f407f6099ac804a076a760b",
+        "unit": "address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A27",
+      "section": "on_chain",
+      "text": "The public name lookup proxy reports the DAO wallet as its administrator.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S37",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xeEeEEEeE14D718C2B47D9923Deab1335E144EeEe",
+                "data": "0xf851a440"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          }
+        ],
+        "decode": "Decode admin() as address."
+      },
+      "fact": {
+        "name": "Public resolver administrator",
+        "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "unit": "address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A28",
+      "section": "on_chain",
+      "text": "The intermediate name lookup proxy is administered by a five-of-eight council Safe.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S37",
+        "S36",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://eth.drpc.org",
+          "https://1rpc.io/eth"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xcFFd2Ae680CD110D28739a70922636B5937b022B",
+                "data": "0xf851a440"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000007101b78638e34444f0a5ade9e1149fbeec029931"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x7101B78638e34444F0a5AdE9e1149fbEeC029931",
+                "data": "0xe75235b8"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000005"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x7101B78638e34444F0a5AdE9e1149fbEeC029931",
+                "data": "0xa0e67e2b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000080000000000000000000000001febba3230f157656ad05df16a4ab8ddac4291fd00000000000000000000000006f2cafb5276b11baa6679abe49d5a5c0a911f5b000000000000000000000000c3f2db5336f0b7ab8957e835b362d55e4e3894990000000000000000000000000f13801fd654ee4280980280a6f6c88a64a5f6700000000000000000000000008e52ca0109e0e981988cd9d4a4dbee6d8204aff3000000000000000000000000b34730f47bfefb22f98377a96a3760f6f4d8aeb00000000000000000000000001494811cfd2b51661e3cf2f1a83518c5232dbb0600000000000000000000000034f23a532a81118eb53a565ae9cf560aae59777d"
+          }
+        ],
+        "decode": "Decode admin() as address, then the returned Safe’s getThreshold() and getOwners(); count eight owners. This reads signer settings, not module permissions."
+      },
+      "fact": {
+        "name": "Intermediate resolver control",
+        "value": {
+          "safe": "0x7101b78638e34444f0a5ade9e1149fbeec029931",
+          "threshold": "5",
+          "owners": [
+            "0x1febba3230f157656ad05df16a4ab8ddac4291fd",
+            "0x06f2cafb5276b11baa6679abe49d5a5c0a911f5b",
+            "0xc3f2db5336f0b7ab8957e835b362d55e4e389499",
+            "0x0f13801fd654ee4280980280a6f6c88a64a5f670",
+            "0x8e52ca0109e0e981988cd9d4a4dbee6d8204aff3",
+            "0xb34730f47bfefb22f98377a96a3760f6f4d8aeb0",
+            "0x1494811cfd2b51661e3cf2f1a83518c5232dbb06",
+            "0x34f23a532a81118eb53a565ae9cf560aae59777d"
+          ]
+        },
+        "unit": "Safe configuration"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A29",
+      "section": "on_chain",
+      "text": "The Endowment Safe reports one owner and a one-signature threshold.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S36",
+        "S30"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://1rpc.io/eth",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+                "data": "0xe75235b8"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+          },
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+                "data": "0xa0e67e2b"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000bcc3da6ad796f59288c0961602675e88a2b406c"
+          }
+        ],
+        "decode": "Decode getThreshold() and getOwners() on the Endowment Safe. Its sole owner is another address; modules and ultimate control are not established here."
+      },
+      "fact": {
+        "name": "Endowment signer settings",
+        "value": {
+          "safe": "0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+          "threshold": "1",
+          "owners": [
+            "0x0bcc3da6ad796f59288c0961602675e88a2b406c"
+          ]
+        },
+        "unit": "Safe configuration"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "A30",
+      "section": "on_chain",
+      "text": "The v2 .eth registry grants its registrar registration and renewal roles.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S36",
+        "S43"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26459128,
+        "block_hash": "0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c",
+        "rpc": [
+          "https://1rpc.io/eth",
+          "https://eth.drpc.org"
+        ],
+        "archive_node": false,
+        "calls": [
+          {
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xf60aba43e1f7f3dab1186ff03b561401c9df85e2",
+                "data": "0x781ef8db0000000000000000000000000000000000000000000000000000000000010001000000000000000000000000d6d8369e55c94ae8afa714e6cf7ab5be54d5cc81"
+              },
+              "0x193bbf8"
+            ],
+            "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+          }
+        ],
+        "decode": "Decode hasRootRoles(65537,registrar) as bool. The published role library defines registration as bit 0 and renewal as bit 16."
+      },
+      "fact": {
+        "name": "V2 registrar authorization",
+        "value": {
+          "registrar": "0xd6d8369e55c94ae8afa714e6cf7ab5be54d5cc81",
+          "role_bitmap": "65537",
+          "authorized": true
+        },
+        "unit": "permission check"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    }
+  ],
+  "related": [
+    {
+      "name": "Ethereum",
+      "id": "ethereum.org; chain 1 (native network, no single contract)",
+      "relation": "Settlement and name ownership records",
+      "lines": [
+        "L1",
+        "A3",
+        "A21"
+      ]
+    },
+    {
+      "name": "USDC",
+      "id": "Ethereum chain 1: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "relation": "Accepted v2 registration and renewal payment",
+      "lines": [
+        "L7",
+        "A12",
+        "A13"
+      ]
+    },
+    {
+      "name": "DAI",
+      "id": "Ethereum chain 1: 0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "relation": "Accepted v2 registration and renewal payment",
+      "lines": [
+        "L7",
+        "A12"
+      ]
+    },
+    {
+      "name": "Safe",
+      "id": "Ethereum chain 1: 0x5B716D6587d241166bC8914858640F8684F3A2F3",
+      "relation": "Holds v2 .eth ownership for the DAO",
+      "lines": [
+        "A24"
+      ]
+    },
+    {
+      "name": "Karpatkey",
+      "id": "Ethereum chain 1: 0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+      "relation": "Reported ENS Endowment manager",
+      "lines": [
+        "L42"
+      ]
+    }
+  ],
+  "logo": {
+    "url": "https://ens.domains/favicon.png",
+    "fetched_at": "2026-11-20T22:12:45Z"
+  },
+  "differs": [
+    {
+      "lines": [
+        "L14",
+        "L34",
+        "L50",
+        "A18",
+        "A23",
+        "A30"
+      ],
+      "why": "The deployment guide still says mainnet registration continues through ENSv1 pending launch; the dated launch announcement and current disabled v1 controllers, v2 roles and resolver route show the transition has occurred. The stale guide is retained.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L15",
+        "L14"
+      ],
+      "why": "Deployment before launch is compatible with a later launch. F1 called this a conflict; dates and new evidence make the deployment page’s freshness a question instead.",
+      "level": "question"
+    },
+    {
+      "lines": [
+        "L8",
+        "L48",
+        "L21"
+      ],
+      "why": "The legacy guide’s general opening description needs its ENSv1 scope: the same page now limits that registry to unmigrated names, while v2 uses a hierarchy.",
+      "level": "question"
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "Has the deployment guide been updated to remove its pre-launch mainnet-registration wording?",
+    "What is the complete current role and upgrade-permission inventory across v2 registries, smart accounts, migration controllers and every Safe module? The selected owner/admin reads do not establish universal control.",
+    "Who controls the commemorative collection owner wallet 0xfbe6ce2d739df7077f407f6099ac804a076a760b? Its public identity was not established.",
+    "What are the issued and active supplies for ENSC, legacy names, wrapped names and v2 name tokens? The ENSC and legacy registrar totalSupply() calls reverted; no aggregate was inferred.",
+    "What price, gas cost and any expiry premium apply to a visitor’s actual chosen name and duration? The quoted oracle examples are not purchase offers.",
+    "What is the Endowment’s complete effective control path, including its owner contract, modules and spending timelocks? A29 only establishes its direct signer configuration.",
+    "Are there other ENS-issued collectible contracts or custom name registries that should be included beyond the canonical contracts documented here?",
+    "What direct economic entitlement, if any, does holding ENS confer beyond governance? This run did not establish a holder revenue-distribution mechanism."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "ref": "https://docs.ens.domains/learn/protocol/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:11:24Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S2",
+      "ref": "https://support.ens.domains/en/articles/8874786-official-ens-websites-apps-and-tools",
+      "type": "official support article",
+      "read_at": "2026-11-20T22:11:23Z",
+      "could_open": true,
+      "read_via": [
+        "support.ens.domains"
+      ]
+    },
+    {
+      "id": "S3",
+      "ref": "https://docs.ens.domains/ensv2/eth-registrar/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S4",
+      "ref": "https://docs.ens.domains/registry/ens/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S5",
+      "ref": "https://docs.ens.domains/ensv2/eth-registrar/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S6",
+      "ref": "https://docs.ens.domains/dao/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:11:24Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S7",
+      "ref": "https://www.youtube.com/watch?v=f12CzDaLDdI",
+      "type": "video description",
+      "read_at": "2026-11-20T22:11:23Z",
+      "could_open": true,
+      "read_via": [
+        "www.youtube.com"
+      ]
+    },
+    {
+      "id": "S8",
+      "ref": "https://docs.ens.domains/dao/token/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:11:24Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S9",
+      "ref": "https://ethereum-rpc.publicnode.com",
+      "type": "public Ethereum RPC",
+      "read_at": "2026-11-20T22:30:29Z",
+      "could_open": true,
+      "read_via": [
+        "ethereum-rpc.publicnode.com"
+      ]
+    },
+    {
+      "id": "S10",
+      "ref": "https://docs.ens.domains/dao/proposals/6.19/",
+      "type": "official ENS DAO proposal",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S11",
+      "ref": "https://support.ens.domains/en/articles/7900404-the-story-of-ens",
+      "type": "official support article",
+      "read_at": "2026-11-20T22:11:24Z",
+      "could_open": true,
+      "read_via": [
+        "support.ens.domains"
+      ]
+    },
+    {
+      "id": "S12",
+      "ref": "https://ens.domains/",
+      "type": "official website",
+      "read_at": "2026-11-20T22:11:23Z",
+      "could_open": true,
+      "read_via": [
+        "ens.domains"
+      ]
+    },
+    {
+      "id": "S13",
+      "ref": "https://docs.ens.domains/learn/deployments/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S14",
+      "ref": "https://ethereum.org/developers/docs/smart-contracts/naming/",
+      "type": "third-party documentation",
+      "read_at": "2026-11-20T22:11:24Z",
+      "could_open": true,
+      "read_via": [
+        "ethereum.org"
+      ]
+    },
+    {
+      "id": "F1",
+      "ref": "https://api.imd.fun/artifacts/0eea0da11d1c08c160d1dea481a780de6bef48bed6c8df5208e880e35f67ab63",
+      "type": "earlier record",
+      "read_at": "2026-11-20T22:20:01Z",
+      "could_open": true,
+      "read_via": [
+        "api.imd.fun"
+      ]
+    },
+    {
+      "id": "S15",
+      "ref": "https://etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+      "type": "contract explorer",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "etherscan.io"
+      ]
+    },
+    {
+      "id": "S16",
+      "ref": "https://docs.ens.domains/",
+      "type": "documentation index",
+      "read_at": "2026-11-20T22:11:24Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S17",
+      "ref": "https://github.com/ensdomains/ens-contracts",
+      "type": "project repository",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S18",
+      "ref": "https://github.com/ensdomains/contracts-v2",
+      "type": "project repository",
+      "read_at": "2026-11-20T22:11:25Z",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S19",
+      "ref": "https://ens.domains/blog/post/introducing-the-evolved-ens-foundation",
+      "type": "project announcement",
+      "read_at": "2026-11-20T22:12:45Z",
+      "could_open": true,
+      "read_via": [
+        "ens.domains"
+      ]
+    },
+    {
+      "id": "S20",
+      "ref": "https://x.com/nicksdjohnson",
+      "type": "public self-description",
+      "read_at": "2026-11-20T22:12:45Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "S21",
+      "ref": "https://aboutus.godaddy.net/newsroom/news-releases/press-release-details/2024/GoDaddy-and-Ethereum-Name-Service-Simplify-Connecting-Domain-Names-and-Crypto-Wallets-for-Customers/default.aspx",
+      "type": "GoDaddy press release",
+      "read_at": "2026-11-20T22:12:45Z",
+      "could_open": true,
+      "read_via": [
+        "aboutus.godaddy.net"
+      ]
+    },
+    {
+      "id": "S22",
+      "ref": "https://developer.paypal.com/community/blog/ens-names-easy-pyusd-payments/",
+      "type": "PayPal developer article",
+      "read_at": "2026-11-20T22:31:10Z",
+      "could_open": true,
+      "read_via": [
+        "developer.paypal.com"
+      ]
+    },
+    {
+      "id": "S23",
+      "ref": "https://ens.tools/blog/renew-ens-names-in-usdc-ensv2",
+      "type": "ENS.Tools product article",
+      "read_at": "2026-11-20T22:14:36Z",
+      "could_open": true,
+      "read_via": [
+        "ens.tools"
+      ]
+    },
+    {
+      "id": "S24",
+      "ref": "https://ens.domains/blog/post/ensv2-live-on-mainnet",
+      "type": "project launch announcement",
+      "read_at": "2026-11-20T22:14:35Z",
+      "could_open": true,
+      "read_via": [
+        "ens.domains"
+      ]
+    },
+    {
+      "id": "S25",
+      "ref": "https://ens.domains/blog/post/ensv2-commemorative-nft-collection",
+      "type": "project collectible announcement",
+      "read_at": "2026-11-20T22:14:35Z",
+      "could_open": true,
+      "read_via": [
+        "ens.domains"
+      ]
+    },
+    {
+      "id": "S26",
+      "ref": "https://ens.domains/blog/post/ensv2-eth-pricing-grace-period",
+      "type": "project pricing announcement",
+      "read_at": "2026-11-20T22:14:35Z",
+      "could_open": true,
+      "read_via": [
+        "ens.domains"
+      ]
+    },
+    {
+      "id": "S27",
+      "ref": "https://docs.ens.domains/registry/eth/",
+      "type": "official legacy documentation",
+      "read_at": "2026-11-20T22:14:35Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S28",
+      "ref": "https://docs.ens.domains/learn/dns/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:14:35Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S29",
+      "ref": "https://docs.ens.domains/dao/constitution/",
+      "type": "published governance policy",
+      "read_at": "2026-11-20T22:14:35Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S30",
+      "ref": "https://discuss.ens.domains/t/executable-activate-ensv2/22483",
+      "type": "Nick Johnson activation proposal",
+      "read_at": "2026-11-20T22:14:36Z",
+      "could_open": true,
+      "read_via": [
+        "discuss.ens.domains"
+      ]
+    },
+    {
+      "id": "S31",
+      "ref": "https://docs.ens.domains/wrapper/overview/",
+      "type": "official legacy documentation",
+      "read_at": "2026-11-20T22:15:44Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S32",
+      "ref": "https://docs.ens.domains/ensv2/registry-hierarchy/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:15:44Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S33",
+      "ref": "https://docs.ens.domains/ensv2/migration/",
+      "type": "official documentation",
+      "read_at": "2026-11-20T22:15:44Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S34",
+      "ref": "https://github.com/ensdomains/apps-monorepo/blob/6744eb428670de943b589a9d235b2195d261515e/apps/manager/src/features/migration/commemorative-nft/config.ts",
+      "type": "project application configuration",
+      "read_at": "2026-11-20T22:16:35Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S35",
+      "ref": "https://github.com/ensdomains/contracts-v2/blob/07e55a056f5b6a9c90119f501bdd05714e67dddd/contracts/src/registrar/ETHRegistrar.sol",
+      "type": "published registrar source",
+      "read_at": "2026-11-20T22:12:45Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S36",
+      "ref": "https://1rpc.io/eth",
+      "type": "free public Ethereum RPC",
+      "read_at": "2026-11-20T22:30:29Z",
+      "could_open": true,
+      "read_via": [
+        "1rpc.io"
+      ]
+    },
+    {
+      "id": "S37",
+      "ref": "https://eth.drpc.org",
+      "type": "free public Ethereum RPC",
+      "read_at": "2026-11-20T22:30:29Z",
+      "could_open": true,
+      "read_via": [
+        "eth.drpc.org"
+      ]
+    },
+    {
+      "id": "S38",
+      "ref": "https://github.com/ensdomains/contracts-v2/blob/4f47cbcc11462fb413196e6b5c0f8090247a6c08/contracts/deployments/mainnet/ETHRegistrar.json",
+      "type": "project deployment artifact",
+      "read_at": "2026-11-20T22:12:45Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S39",
+      "ref": "https://support.ens.domains/en/articles/17702571-commemorative-nft",
+      "type": "official support article",
+      "read_at": "2026-11-20T22:14:36Z",
+      "could_open": true,
+      "read_via": [
+        "support.ens.domains"
+      ]
+    },
+    {
+      "id": "S40",
+      "ref": "https://www.theblock.co/news/ecosystems/2026-06-30-ens-co-founder-nick-johnson-blocks-security-council-renewal-with-80-of-votes-406767",
+      "type": "The Block reporting",
+      "read_at": "2026-11-20T22:31:10Z",
+      "could_open": true,
+      "read_via": [
+        "www.theblock.co"
+      ]
+    },
+    {
+      "id": "S41",
+      "ref": "https://docs.ens.domains/dao/security-council/",
+      "type": "official governance documentation",
+      "read_at": "2026-11-20T22:31:10Z",
+      "could_open": true,
+      "read_via": [
+        "docs.ens.domains"
+      ]
+    },
+    {
+      "id": "S42",
+      "ref": "https://github.com/ensdomains/contracts-v2/blob/07e55a056f5b6a9c90119f501bdd05714e67dddd/contracts/src/registrar/StandardRentPriceOracle.sol",
+      "type": "published pricing source",
+      "read_at": "2026-11-20T22:12:45Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S43",
+      "ref": "https://github.com/ensdomains/contracts-v2/blob/07e55a056f5b6a9c90119f501bdd05714e67dddd/contracts/src/registry/libraries/RegistryRolesLib.sol",
+      "type": "published role definitions",
+      "read_at": "2026-11-20T22:16:35Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S44",
+      "ref": "https://github.com/ensdomains/apps-monorepo",
+      "type": "project application repository",
+      "read_at": "2026-11-20T22:15:44Z",
+      "could_open": true,
+      "read_via": [
+        "api.github.com"
+      ]
+    },
+    {
+      "id": "S45",
+      "ref": "https://app.ens.domains/",
+      "type": "project application",
+      "read_at": "2026-11-20T22:14:35Z",
+      "could_open": true,
+      "read_via": [
+        "app.ens.domains"
+      ]
+    },
+    {
+      "id": "S46",
+      "ref": "https://ens.domains/favicon.png",
+      "type": "project icon",
+      "read_at": "2026-11-20T22:12:45Z",
+      "could_open": true,
+      "read_via": [
+        "ens.domains"
+      ]
+    },
+    {
+      "id": "S47",
+      "ref": "https://etherscan.io/address/0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+      "type": "contract explorer",
+      "read_at": "2026-11-20T22:14:36Z",
+      "could_open": true,
+      "read_via": [
+        "etherscan.io"
+      ]
+    },
+    {
+      "id": "S48",
+      "ref": "https://github.com/ensdomains/contracts-v2/blob/07e55a056f5b6a9c90119f501bdd05714e67dddd/contracts/src/registrar/AbstractETHRegistrar.sol",
+      "type": "published renewal source",
+      "read_at": "2026-11-20T22:22:22Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    }
+  ],
+  "ignored_instructions": [],
+  "notes": "Researched on 2026-11-20. The website, registry deployment, and documentation identify one real project: Ethereum Name Service. The requested registry remains main because it is the explicit subject anchor and ENSv1 core directory; this does not imply it is the ENSv2 registration entry point.\n\nF1 was fetched in full. It contains 19 lines, no dropped lines and no reconsider or changes file. All 19 origins are carried: F1:L2 and F1:L16 share one mapping line, with both speakers and all source links retained. The merged line is conservatively a claim. No earlier line was dropped. F1:L14 also incorporates the matching ENS.Tools launch report and the dated official launch post; the same proposition is published on the subject domain, so it remains a statement.\n\nF1:A1–A3 were re-read at finalized Ethereum block 26459128 (0x36f904f5945018e04ba8a2cb1cfda8a0f9f892bb673a0cab320bf3ee88158b4c). Their older readings remain in history. The block time is 2026-11-20T21:55:35Z. Current readings do not establish launch-time token acceptance. L7 therefore links only partly to A12. The total-supply conversion is corrected to division by 10^18.\n\nThe earlier launch disagreement was overstated: deployment before launch (L15) can coexist with a completed launch (L14). The still-published instruction that registrations continue through ENSv1 is separately retained as L34 and conflicts with live activation evidence. The registry guide itself now scopes its old explanation to unmigrated names (L48).\n\nChannel ties apply to the exact channels supported by evidence. A19 ties the homepage, project X account and GitHub organization through ens.eth; A20 ties the governance page and DAO X account through ensdao.eth. Documentation publishes the supplied main address in S13, giving it a weak tie. No independent contract-to-forum tie was established. Subdomains qualify for statements independently of tie strength. Foundation X is linked by S19, and Nick Johnson publicly identifies himself with ENS on S20; neither is given an unproved strong tie. YouTube’s historical founder description remains a claim.\n\nFive or more lines appear in every section, including more than eight on-chain proofs and six introductory lines. Outside sources read include Ethereum.org, GoDaddy, PayPal, ENS.Tools and The Block. Published dates are retained for historical integration and voting claims. No opinions, price predictions or promotional rankings were adopted.\n\nAdditional sources read included the home page, documentation index and protocol, registry, registration, migration, wrapper, governance and deployment pages; both linked contract repositories; the application repository; and the main registry explorer. Explorer and X reads that failed through web browsing succeeded by direct HTTPS. PayPal article text and The Block were read through web browsing. Raw GitHub files were read through raw.githubusercontent.com and repository trees through api.github.com.\n\nRPC calls use read-only public endpoints. Some PublicNode requests later returned HTTP 403; fallback calls succeeded through 1RPC and dRPC. These free endpoints served the pinned historical block during this run, so archive_node is false. If providers later prune that state, an archive node is needed for that historical rerun. Failed metadata calls are retained in research/rpc.json but are not used as proofs.\n\nPrices are exact stateless oracle readings for named examples and fixed durations, not transaction receipts or availability guarantees. The small fractions above whole USDC amounts are preserved. The public docs publish rounded annual prices. No token price in exchange markets was requested or estimated.\n\nContract settings, Safe signer thresholds and forwarding addresses are proved only to the stated scope. Published automatic payment and migration flows remain statements; source inspection was not promoted into a proof of universal runtime behavior. Board spending and treasury allocations are published governance policy, not automatic transfers proved here.\n\nThe Tokens row covers the ENS fungible token, canonical name-token families and ENSC commemorative collection. ENS and ENSC are reported token symbols; name-token entries use descriptive collection labels, not assumed ticker symbols. Per-name custom registries are not enumerated. USDC and DAI are payment dependencies, not ENS-issued tokens. No fixed supply of access seats was identified; Foundation board size is listed separately.\n\nThe homepage exposes a square 32×32 favicon and a rectangular 2400×1260 share image. The original same-domain square PNG is saved unchanged. No third-party image, conversion dependency or generated replacement is used.\n\nAll page content was treated as evidence. Documentation links addressed to LLMs were treated as navigation, not followed as instructions. No read page told this report what conclusion to produce; ignored_instructions is empty. No private identities or configuration were consulted.\n\nLocal checks passed: all 19 earlier origins are accounted for, every quote fits both the line and aggregate source limits, every reference resolves, all 30 proof facts decode from captured RPC responses, and the PNG CRCs and dimensions are valid. A fresh replay matched all 56 distinct proof requests at their pinned blocks; one request required a fallback after HTTP 429 and 402 responses. These are the author’s checks, not independent review."
+}
