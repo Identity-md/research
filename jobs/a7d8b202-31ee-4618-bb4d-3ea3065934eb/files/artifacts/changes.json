@@ -1,0 +1,74 @@
+{
+ "tag": "zora.co",
+ "found": true,
+ "items": [
+  {
+   "n": 1,
+   "type": "wrong",
+   "target": "Zora Labs, a Delaware company founded in 2020 and led by chief executive Jacob Horne, runs it.",
+   "verdict": "kept",
+   "why": "Jacob Horne's own post of 2026-09-09 says cofounder Dee Goens is taking over as CEO, so the sentence's 'led by chief executive Jacob Horne' is out of date (L34 was accurate for its source).",
+   "lines": [
+    "N1"
+   ],
+   "final_text": "Zora Labs, a Delaware company founded in 2020, runs it; Jacob Horne said cofounder Dee Goens is taking over as chief executive."
+  }
+ ],
+ "sources": [
+  {
+   "id": "X1",
+   "url": "https://x.com/js_horne/status/2097748001666244809",
+   "type": "social_post",
+   "publisher": "jacob (@js_horne) on X",
+   "published_at": "2026-09-09",
+   "read_at": "2026-11-21",
+   "could_open": true,
+   "read_via": "https://api.fxtwitter.com/js_horne/status/2097748001666244809",
+   "about_subject": true
+  }
+ ],
+ "lines": [
+  {
+   "id": "N1",
+   "source": "X1",
+   "section": "people",
+   "text": "The X account @js_horne (named Jacob, linking jacob.energy) posted on 2026-09-09 that cofounder Dee Goens (@dg_goens) is taking over as CEO at Zora.",
+   "kind": "claim",
+   "by": "jacob (@js_horne) on X",
+   "quote": "My cofounder @dg_goens is taking over as CEO at Zora.",
+   "rerun": null,
+   "fact": {
+    "name": "Chief executive",
+    "value": "Dee Goens (per Jacob Horne's post)",
+    "unit": null
+   },
+   "links": [
+    {
+     "type": "outdates",
+     "target": "F1:L34"
+    }
+   ]
+  }
+ ],
+ "affects": [
+  {
+   "kind": "line",
+   "target": "F1:L34",
+   "type": "outdates",
+   "by_line": "N1"
+  },
+  {
+   "kind": "infobox",
+   "target": "Founder or creator",
+   "type": "outdates",
+   "by_line": "N1"
+  },
+  {
+   "kind": "summary",
+   "target": "Zora Labs, a Delaware company founded in 2020 and led by chief executive Jacob Horne, runs it.",
+   "type": "outdates",
+   "by_line": "N1"
+  }
+ ],
+ "notes": "Only the post is a claim: X is not a channel on zora.co and has no strong tie, and the tweet text was read through fxtwitter (the x.com page only gave a title/meta snippet). The post says Dee Goens is taking over as CEO; it does not literally say Horne 'stepped down', so final_text says 'taking over' rather than the visitor's wording. Not independently confirmed by a zora.co source; Zora's own site was not checked for an update. Nothing was inferred about the identity behind the account beyond its public handle and name."
+}
