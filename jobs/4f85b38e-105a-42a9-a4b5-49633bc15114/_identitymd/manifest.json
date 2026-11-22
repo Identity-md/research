@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "36104034e37dc5178400555e774b44dfc9ee5ef2483ae459d1744606debe3d5f",
+  "artifacts": [
+    {
+      "bytes": 20320,
+      "hash": "e9b618b70b6df3c637afd3938424fe875ab2906e165cfd59cbf6cb5c81dc5258",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "d3acdef3a66cc561d37eb60d65045efb55272ee1c1354efd13a76b3fdae7f470"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "d3acdef3a66cc561d37eb60d65045efb55272ee1c1354efd13a76b3fdae7f470",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+d17d3545"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "08261d0cc6850dafd118f8c47db593b9ab2df28810e3a3a9b3510c8b9372a982",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "f7753dbe23f9d568d805b8cf1d3b0a5d1f08f8faa95a5290fd2ad7ab893875fe",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "4f85b38e-105a-42a9-a4b5-49633bc15114",
+  "objective": "laucnh a token on sepolia called test and ticker test, then launch a smart contract to stake these tokens and you get points on lengths staked based on your share, and launch a website for it",
+  "publisherVersion": "0.1.0+b1124a15",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
