@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "59ccfdc49e8d0b22edf1fb6c317c5df0975041ba351ec475d10983f72e504db8",
+  "artifacts": [
+    {
+      "bytes": 47746,
+      "hash": "79be924370ad9a492df2dc107abc80b7c26e3910bfe6790082d9257619afb9e6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "e4fa80b0d9c7ac9b3a79f85ec683dd564ed3e5791e34f847dcb997bc6c685f09"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8310b806f0fcfbeadfb2de7c16e572880e58bbd2b4845c6e55df3c6f3fdb0175",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-sol",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "e4fa80b0d9c7ac9b3a79f85ec683dd564ed3e5791e34f847dcb997bc6c685f09",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+d17d3545"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9eee291846dcb0467e888aee98cb0c269ee1f883e54281b6af50d68b3f75bcc6",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "d6997e54924c8535e63e7e5d85d3a345c334704c050b608b6f0cb287da81749e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "1cf17389-43bb-405d-8303-e9e5b715d1d5",
+  "objective": "Investigate and attempt to solve the publicly offered Bitcoin Puzzle #71 through up to 50 distinct parallel research workstreams and bounded computational experiments.\n\nTARGET:\nPuzzle address: 1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU\nInclusive private-key interval:\n0x400000000000000000 to 0x7fffffffffffffffff\nEquivalent: 2^70 through 2^71-1.\n\nFirst verify these parameters, the original public challenge invitation, current UTXOs, and solved/unsolved status. Cite sources, UTC timestamps and block heights. If already solved or parameters conflict, report this and stop target-specific work; do not substitute another wallet.\n\nUSER'S DESIGNATED REWARD RECIPIENT:\nbc1pg6luxm9s4qq65lge4l6ual7xwdw5v85eh675cmrl5we0ht3vpfhswxu0cx\nThis is the recipient, NOT the puzzle target. Validate address encoding before use. Never substitute another recipient.\n\nSeek a valid solution, not merely a literature summary. Assess applicable algorithms, test hypotheses and produce reproducible experiments using available execution tools. Restrict work to the public challenge and locally generated test instances.\n\nDo not assume agents have GPUs, unlimited runtime or access to each other's intermediate results. Independent items must be self-contained. The final synthesis should compare their findings and contradictions.\n\nNo additional paid jobs, rented compute, subscriptions or purchases are authorized. Do not broadcast transactions or move funds. The Goal interface does not provide automatic prize transfer. Never publish a recovered private key, seed, or spendable signed transaction in public outputs. If a valid solution is found, report only non-sensitive verification and the need for a separate secure claiming process.\n\nDELIVER:\nOne consolidated report containing verified target facts, approaches tested, reproducible code/artifacts where supported, actual measurements, failed hypotheses, remaining uncertainty and the best next experiment. Clearly distinguish analysis, executed tests and extrapolation. State explicitly whether a solution was found. Never fabricate successful execution, keys or breakthroughs.",
+  "publisherVersion": "0.1.0+b1124a15",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
