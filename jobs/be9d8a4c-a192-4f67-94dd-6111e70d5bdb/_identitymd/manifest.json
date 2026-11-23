@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "cecc0dcefaf50fd7f1c60f85f37c4387e60bef94f96cc72673c666875bb7a046",
+  "artifacts": [
+    {
+      "bytes": 30451,
+      "hash": "97059ee40174144199054dc25ebdded8f1d3a08bc28fb110da3ae2700f4f88ef",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "99e300fdbe2aad99f86f7cc614184d3451ca66872de0ca18f7b6c883b3c1ebc9"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "12fbd676b21225124c5208843b9edf7dc22f02becfa0a26d7b7b80570e7fc634",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "99e300fdbe2aad99f86f7cc614184d3451ca66872de0ca18f7b6c883b3c1ebc9",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+d17d3545"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "b5370e603753d2ab276e77ea7a79db80adfaf61902b8fa000ed40e3b7f5653e2",
+      "evaluation": null,
+      "findings": 10,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "901c45600b296a7cd02db4c2bf32bbb1300e00ae2be24ee6382db2d256a49d1f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "be9d8a4c-a192-4f67-94dd-6111e70d5bdb",
+  "objective": "Objective: find open problems on conjectures.io (the Bittensor subnet that pays for settled math problems) that can realistically be settled now — mainly ones that are listed as open but are already solved in the literature, or are close to a known result — and prepare winning submissions.\n\nStep 0 (do first, report exactly): read conjectures.io rules and docs. What counts as \"settling\" a problem (Lean proof? which Lean/Mathlib version? proof or disproof?), payout per problem and in what token, the fee per verification attempt (reported as 0.25 TAO), whether solutions taken from existing published papers are accepted, eligibility/KYC, how submission works, and how many problems are open vs settled. If the program is inactive or rules make literature-based submissions invalid, say so clearly and stop.\n\nStep 1: list all open problems (about 274 reported). For each: id, one-line statement, source (Erdős problem number, paper), prize, and whether a Lean statement already exists.\n\nStep 2: for every open problem, search the literature (arXiv, MathSciNet-style references, erdosproblems.com threads and comments, MathOverflow, Lean Zulip, Formal Conjectures repo) for an existing full solution, counterexample, or a result that implies it. Flag mismatches between the site's statement and the original problem.\n\nStep 3: rank candidates by (a) strength of existing solution, (b) proof length and Mathlib support, (c) whether someone else already filed it.\n\nStep 4: for the top 5, write complete Lean 4 + Mathlib proofs that compile with `lake build`, no `sorry`/`admit`, axioms limited to propext, Classical.choice, Quot.sound (show `#print axioms`). The formal statement must match the site's statement exactly.\n\nDeliverable: one report with Step 0 findings, the full candidate table, the ranked shortlist with sources, compiling Lean files with build logs (or exactly where each one got stuck), and the expected payout per candidate. Mark everything unverified. Do not submit anything or pay any fees yourselves.",
+  "publisherVersion": "0.1.0+b1124a15",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
