@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "85257698cd6d33d540d297181e06d7aeb1745cc41d07b912b8482feda8541510",
+  "artifacts": [
+    {
+      "bytes": 3139,
+      "hash": "4b801b5009e94babdfe7c53bb03b2921d10dfda0fed024de5d63a0eccb21fe2e",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "0e0a907d5fefd7accf935c66c1bc60d5a3e43dd80177a0982647d9578f44f5f3"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ba44f3d5ab7b010895a775f74901bfc7f9cae8f3ed681e13f9731833d860428",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "0e0a907d5fefd7accf935c66c1bc60d5a3e43dd80177a0982647d9578f44f5f3",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+d17d3545"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a9158e223bd79f257c029b3ee1b31db6956106bb2f7bdec6d7fd4c15c6a577ad",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "4dd65c87b3c0b20125fb7a13a2e38447fc0e82b1cdbde7bcff544f5f81b7dc93",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "97ede451-3cbb-48e1-900d-02d8cbbedef8",
+  "objective": "Build LaunchScope, a complete working entry for make.fun's Token Launch Radar competition, for entrant kilicsln.\n\nCompetition: https://make.fun/bounty/token-radar-01\nStarter kit: https://make.fun/c/token-radar-01/kit\nRequirements: https://make.fun/api/competitions/token-radar-01/requirements\n\n1. ELIGIBILITY FIRST\nRead the current rules and kit RULES.txt before implementation or opening paid child jobs. Confirm that contributing agents can provide authentic development session records and required usage/provenance metadata acceptable for prize eligibility. A final report or reconstructed transcript is insufficient. If compliant records cannot be supplied, report the blocker and stop. Never fabricate records or disclose credentials, unrelated conversations or protected internal content.\n\n2. BUILD\nDeliver working code and an offline dashboard, not just research. Coordinate implementation, design, testing and packaging.\n\nInclude root main.ts and an MIT LICENSE. Use Node 22 standard library only; no dependency installation or runtime network. Read /input/snapshot.json. Generate /output/board.json, /output/dashboard/, /output/screenshots/ and /output/dossier.json. Follow every kit schema and resource limit. Use the unchanged official dossier builder. Two clean runs must produce byte-identical outputs.\n\n3. DATA AND MODEL\nCover every watchlist protocol and at least 100 unique input protocols. Rank consecutively by descending positive integer implied_value_usd. Explain a reproducible valuation model using available TVL, growth, listing age and comparables. Distinguish estimates, missing data and uncertainty. Do not invent funding, revenue, launch dates or airdrops. A missing token record does not prove a future token launch. Provide 3-12 useful protocol-specific farm_steps within the required lengths; label estimated costs and time.\n\n4. DASHBOARD\nCreate a polished English research terminal with dark graphite surfaces, emerald accents, readable tables, search, sorting, filters, protocol details and valuation methodology. Distinguish tokenized comparables from pre-token candidates. Bundle assets locally. Follow all offline and external-URL restrictions.\n\n5. VERIFY AND DELIVER\nRun official checks and test coverage, determinism, limits and offline interactions. Capture 3-4 genuine application screenshots within the kit's dimensions and size limits.\n\nDeliver source, reproduction instructions, actual test results, screenshots, dossier, permitted original development records, makefun-run.json and a compatible transcript bundle. Publish a dedicated new public repository if authorized access exists; otherwise supply the complete source package for the entrant to publish. Provide the full commit SHA when available. Clearly list remaining blockers.\n\nDo not submit the entry, sign wallet messages or set a payout address. Stay within the authorized task budget. The entrant reviews and submits through their own make.fun account. No prize guarantees.",
+  "publisherVersion": "0.1.0+b1124a15",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
