@@ -1,0 +1,5501 @@
+{
+  "tag": "identitymd-record-v1",
+  "input": "the project at uniswap.org, whose main contract is 0x000000000004444c5dc75cB358380D2e3dE08A90 on chain 1",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "project",
+    "name": "Uniswap",
+    "one_line": "Uniswap is a blockchain trading protocol governed by UNI holders, with a web app, wallet and developer tools built by Uniswap Labs.",
+    "channels": [
+      {
+        "label": "Web app",
+        "url": "https://app.uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "Project domain",
+        "url": "https://uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "Documentation",
+        "url": "https://developers.uniswap.org/docs",
+        "tie": "weak"
+      },
+      {
+        "label": "Documentation redirect",
+        "url": "https://docs.uniswap.org/",
+        "tie": "weak"
+      },
+      {
+        "label": "Help center",
+        "url": "https://support.uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "Blog",
+        "url": "https://blog.uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "About Uniswap Labs",
+        "url": "https://about.uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "Governance forum",
+        "url": "https://gov.uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "Uniswap Wallet",
+        "url": "https://wallet.uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "GitHub organization",
+        "url": "https://github.com/Uniswap",
+        "tie": "linked"
+      },
+      {
+        "label": "Uniswap on X",
+        "url": "https://x.com/Uniswap",
+        "tie": "linked"
+      },
+      {
+        "label": "Uniswap Developers on X",
+        "url": "https://x.com/UniswapBuilders",
+        "tie": "linked"
+      },
+      {
+        "label": "Uniswap Auctions on X",
+        "url": "https://x.com/UniswapAuctions",
+        "tie": "linked"
+      },
+      {
+        "label": "Hayden Adams, self-identified founder on X",
+        "url": "https://x.com/haydenzadams",
+        "tie": "none"
+      },
+      {
+        "label": "Unisocks",
+        "url": "https://socks.uniswap.org/",
+        "tie": "none"
+      },
+      {
+        "label": "Unichain",
+        "url": "https://www.unichain.org/",
+        "tie": "linked"
+      },
+      {
+        "label": "v4 deployments",
+        "url": "https://developers.uniswap.org/docs/protocols/v4/deployments",
+        "tie": "weak"
+      },
+      {
+        "label": "Uniswap on Discord",
+        "url": "https://discord.gg/uniswap",
+        "tie": "linked"
+      },
+      {
+        "label": "Uniswap on LinkedIn",
+        "url": "https://www.linkedin.com/company/uniswaporg",
+        "tie": "linked"
+      },
+      {
+        "label": "@Uniswap-Labs on YouTube",
+        "url": "https://www.youtube.com/@Uniswap-Labs",
+        "tie": "linked"
+      },
+      {
+        "label": "@uniswap on TikTok",
+        "url": "https://www.tiktok.com/@uniswap",
+        "tie": "linked"
+      },
+      {
+        "label": "r/uniswap on Reddit",
+        "url": "https://www.reddit.com/r/uniswap/",
+        "tie": "linked"
+      },
+      {
+        "label": "@Uniswap on Lens",
+        "url": "https://lenster.xyz/u/uniswap",
+        "tie": "linked"
+      },
+      {
+        "label": "UniswapX",
+        "url": "https://x.uniswap.org",
+        "tie": "none"
+      },
+      {
+        "label": "Developer dashboard",
+        "url": "https://hub.uniswap.org",
+        "tie": "none"
+      },
+      {
+        "label": "Careers",
+        "url": "https://careers.uniswap.org",
+        "tie": "none"
+      },
+      {
+        "label": "On-chain governance voting",
+        "url": "https://vote.uniswapfoundation.org",
+        "tie": "linked"
+      },
+      {
+        "label": "Uniswap Foundation",
+        "url": "https://www.uniswapfoundation.org/",
+        "tie": "linked"
+      },
+      {
+        "label": "Interface code",
+        "url": "https://github.com/Uniswap/interface",
+        "tie": "linked"
+      },
+      {
+        "label": "v4 core code",
+        "url": "https://github.com/Uniswap/v4-core",
+        "tie": "linked"
+      },
+      {
+        "label": "Unisocks collectible code",
+        "url": "https://github.com/Uniswap/unisocks-erc721",
+        "tie": "linked"
+      },
+      {
+        "label": "Uniswap status",
+        "url": "https://statuspage.incident.io/uniswap-status",
+        "tie": "linked"
+      },
+      {
+        "label": "Developer docs repository",
+        "url": "https://github.com/Uniswap/docs",
+        "tie": "weak"
+      },
+      {
+        "label": "Contract deployments",
+        "url": "https://developers.uniswap.org/deployments",
+        "tie": "weak"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0x000000000004444c5dc75cB358380D2e3dE08A90",
+        "chain": 1,
+        "role": "Ethereum v4 PoolManager, selected as main because it holds shared v4 pool state and operations [L13,L14].",
+        "main": true
+      },
+      {
+        "address": "0x23617e59A5925b2A4Bf75d73ff6711cD0b29De85",
+        "chain": 1,
+        "role": "Universal Router 2.1.2; current documented Ethereum swap router [S11,S37]",
+        "main": false
+      },
+      {
+        "address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "chain": 1,
+        "role": "Permit2; token permissions used by routers [S11,L17]",
+        "main": false
+      },
+      {
+        "address": "0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e",
+        "chain": 1,
+        "role": "v4 PositionManager; liquidity positions [S11]",
+        "main": false
+      },
+      {
+        "address": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+        "chain": 1,
+        "role": "v3 pool factory [S17]",
+        "main": false
+      },
+      {
+        "address": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
+        "chain": 1,
+        "role": "v2 pool factory [S17]",
+        "main": false
+      },
+      {
+        "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+        "chain": 1,
+        "role": "UNI governance token [S18]",
+        "main": false
+      },
+      {
+        "address": "0x23B608675a2B2fB1890d3ABBd85c5775c51691d5",
+        "chain": 1,
+        "role": "Original SOCKS token; Unisocks Edition 0 [S45]",
+        "main": false
+      },
+      {
+        "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+        "chain": 1,
+        "role": "Governance timelock; main pool manager owner and UNI minter [S18,S46]",
+        "main": false
+      },
+      {
+        "address": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+        "chain": 1,
+        "role": "GovernorBravo; timelock administrator [S18,S46]",
+        "main": false
+      },
+      {
+        "address": "0xf38521f130fcCF29dB1961597bc5d2B60F995f85",
+        "chain": 1,
+        "role": "TokenJar; Ethereum protocol-fee collector [S17,S46]",
+        "main": false
+      },
+      {
+        "address": "0x0D5Cd355e2aBEB8fb1552F56c965B867346d6721",
+        "chain": 1,
+        "role": "Firepit; UNI-for-fee-assets releaser [S17,S46]",
+        "main": false
+      },
+      {
+        "address": "0x89A5D5bF00a27D55c02951E49078a5C5771051dB",
+        "chain": 1,
+        "role": "v4 fee adapter; pool manager fee controller [S17,S46]",
+        "main": false
+      },
+      {
+        "address": "0xf2371551Fe3937Db7c750f4DfABe5c2fFFdcBf5A",
+        "chain": 1,
+        "role": "v3 open fee adapter; v3 factory owner [S17,S46]",
+        "main": false
+      },
+      {
+        "address": "0x5B453493D2328E7F747eb2e66446eFe707728be7",
+        "chain": 1,
+        "role": "uniUSDC Earn vault and share token [S59,L106]",
+        "main": false
+      },
+      {
+        "address": "0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703",
+        "chain": 1,
+        "role": "uniUSDT Earn vault and share token [S59,L107]",
+        "main": false
+      },
+      {
+        "address": "0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d",
+        "chain": 1,
+        "role": "uniETH Earn vault and share token [S59,L108]",
+        "main": false
+      },
+      {
+        "address": "0x65770b5283117639760beA3F867b69b3697a91dd",
+        "chain": 1,
+        "role": "Digital Unisocks redemption collectible [L115]",
+        "main": false
+      },
+      {
+        "address": "0x05931D644063954f35AFa3dBefA4725b0ad79F85",
+        "chain": 1,
+        "role": "Digital Unisocks redemption controller [L116]",
+        "main": false
+      },
+      {
+        "address": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+        "chain": 5042,
+        "role": "Arc v4 PoolManager [S87]",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "value": "uniswap.org",
+      "lines": [
+        "L01",
+        "L70"
+      ],
+      "url": "https://uniswap.org/"
+    },
+    {
+      "label": "Tokens",
+      "value": "UNI: governance, 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984; SOCKS: redemption, 0x23B608675a2B2fB1890d3ABBd85c5775c51691d5; uniUSDC: shares, 0x5B453493D2328E7F747eb2e66446eFe707728be7; uniUSDT: shares, 0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703; uniETH: shares, 0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d; S0CKS: collectible, 0x65770b5283117639760beA3F867b69b3697a91dd (all on Ethereum)",
+      "lines": [
+        "L38",
+        "L42",
+        "L30",
+        "L53",
+        "L106",
+        "L107",
+        "L108",
+        "L111",
+        "L115",
+        "L114"
+      ],
+      "values": [
+        {
+          "name": "UNI",
+          "purpose": "governance",
+          "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+          "chain": 1,
+          "chains": [
+            "Ethereum"
+          ],
+          "bridged_chains": [
+            "Arbitrum One",
+            "OP Mainnet",
+            "Polygon",
+            "Base",
+            "BNB Chain",
+            "Celo",
+            "Unichain",
+            "World Chain",
+            "Soneium",
+            "X Layer",
+            "Zora"
+          ]
+        },
+        {
+          "name": "SOCKS",
+          "purpose": "sock redemption",
+          "address": "0x23B608675a2B2fB1890d3ABBd85c5775c51691d5",
+          "chain": 1,
+          "chains": [
+            "Ethereum"
+          ]
+        },
+        {
+          "name": "uniUSDC",
+          "purpose": "vault shares",
+          "address": "0x5B453493D2328E7F747eb2e66446eFe707728be7",
+          "chain": 1,
+          "chains": [
+            "Ethereum"
+          ]
+        },
+        {
+          "name": "uniUSDT",
+          "purpose": "vault shares",
+          "address": "0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703",
+          "chain": 1,
+          "chains": [
+            "Ethereum"
+          ]
+        },
+        {
+          "name": "uniETH",
+          "purpose": "vault shares",
+          "address": "0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d",
+          "chain": 1,
+          "chains": [
+            "Ethereum"
+          ]
+        },
+        {
+          "name": "S0CKS",
+          "purpose": "redemption collectible",
+          "address": "0x65770b5283117639760beA3F867b69b3697a91dd",
+          "chain": 1,
+          "chains": [
+            "Ethereum"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Main contract",
+      "value": "v4 PoolManager: 0x000000000004444c5dc75cB358380D2e3dE08A90 on Ethereum",
+      "lines": [
+        "L14",
+        "L13"
+      ],
+      "url": "https://etherscan.io/address/0x000000000004444c5dc75cB358380D2e3dE08A90"
+    },
+    {
+      "label": "Chains",
+      "value": "Ethereum, Base, Arbitrum, Polygon, Unichain, Arc, Elysium and others",
+      "lines": [
+        "L01",
+        "L94",
+        "L95",
+        "L119"
+      ],
+      "url": "https://developers.uniswap.org/deployments",
+      "values": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Polygon",
+        "Unichain",
+        "Arc",
+        "Elysium"
+      ]
+    },
+    {
+      "label": "Supply",
+      "value": "1B UNI, 296.99 SOCKS, uniUSDC 10.00M, uniUSDT 2.83M, uniETH 0.7K, 151 S0CKS",
+      "lines": [
+        "L42",
+        "L53",
+        "L106",
+        "L107",
+        "L108",
+        "L115"
+      ],
+      "values": [
+        {
+          "name": "UNI",
+          "value": "1000000000"
+        },
+        {
+          "name": "SOCKS",
+          "value": "296.992857926618025474"
+        },
+        {
+          "name": "uniUSDC",
+          "value": "9997120.750654657807308770"
+        },
+        {
+          "name": "uniUSDT",
+          "value": "2831861.076663145183881064"
+        },
+        {
+          "name": "uniETH",
+          "value": "715.559292022898531990"
+        },
+        {
+          "name": "S0CKS",
+          "value": "151"
+        }
+      ]
+    },
+    {
+      "label": "Price",
+      "value": "0% Labs interface fee plus applicable pool and network costs",
+      "lines": [
+        "L05",
+        "L06",
+        "L10"
+      ],
+      "url": "https://support.uniswap.org/hc/en-us/articles/42640092742541-What-are-Uniswap-Labs-fees"
+    },
+    {
+      "label": "Size",
+      "value": "$3.11B locked, DefiLlama, November 23, 2026",
+      "lines": [
+        "L90"
+      ],
+      "url": "https://defillama.com/protocol/uniswap?denomination=USD"
+    },
+    {
+      "label": "Deployed by",
+      "value": "Transaction sender: 0x6b93e3bb9c0780c0f9042346ffc379530a5882c1 on Ethereum",
+      "lines": [
+        "L66"
+      ],
+      "url": "https://etherscan.io/tx/0x747e0e02b7590eed32cface28e83260884e0b80675f5ae223c6888053aa68528"
+    },
+    {
+      "label": "Controlled by",
+      "value": "v4 settings: governance timelock 0x1a9c8182c09f50c8318d769245bea52c32be35bc on Ethereum",
+      "lines": [
+        "L43",
+        "L47",
+        "L59"
+      ]
+    },
+    {
+      "label": "Founder or creator",
+      "value": "Hayden Adams",
+      "lines": [
+        "L37"
+      ],
+      "url": "https://about.uniswap.org/"
+    },
+    {
+      "label": "Contributors",
+      "value": "Uniswap Labs, Uniswap Foundation and community contributors",
+      "lines": [
+        "L70",
+        "L39",
+        "L102"
+      ],
+      "values": [
+        "Uniswap Labs",
+        "Uniswap Foundation",
+        "Community contributors"
+      ]
+    },
+    {
+      "label": "Official accounts",
+      "lines": [
+        "L40",
+        "L71",
+        "L72",
+        "L73",
+        "L74",
+        "L75",
+        "L76",
+        "L112"
+      ],
+      "values": [
+        {
+          "name": "@Uniswap on X",
+          "url": "https://x.com/Uniswap"
+        },
+        {
+          "name": "@UniswapBuilders on X",
+          "url": "https://x.com/UniswapBuilders"
+        },
+        {
+          "name": "@UniswapAuctions on X",
+          "url": "https://x.com/UniswapAuctions"
+        },
+        {
+          "name": "Uniswap on GitHub",
+          "url": "https://github.com/Uniswap"
+        },
+        {
+          "name": "Uniswap on Discord",
+          "url": "https://discord.gg/uniswap"
+        },
+        {
+          "name": "Uniswap on LinkedIn",
+          "url": "https://www.linkedin.com/company/uniswaporg"
+        },
+        {
+          "name": "@Uniswap-Labs on YouTube",
+          "url": "https://www.youtube.com/@Uniswap-Labs"
+        },
+        {
+          "name": "@uniswap on TikTok",
+          "url": "https://www.tiktok.com/@uniswap"
+        },
+        {
+          "name": "r/uniswap on Reddit",
+          "url": "https://www.reddit.com/r/uniswap/"
+        },
+        {
+          "name": "@Uniswap on Lens",
+          "url": "https://lenster.xyz/u/uniswap"
+        }
+      ]
+    },
+    {
+      "label": "Launched",
+      "value": "January 31, 2025",
+      "lines": [
+        "L63"
+      ],
+      "url": "https://blog.uniswap.org/uniswap-v4-is-here"
+    },
+    {
+      "label": "App provider",
+      "value": "Universal Navigation Inc., trading as Uniswap Labs",
+      "lines": [
+        "L36"
+      ]
+    },
+    {
+      "label": "Governance delay",
+      "value": "2 days at the Ethereum snapshot",
+      "lines": [
+        "L46"
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "text": "Uniswap is a trading system that uses pools of tokens to let people swap directly from their wallets, according to Uniswap Labs.",
+      "lines": [
+        "L01",
+        "L02",
+        "L11"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "The web app, wallet and developer tools come from Uniswap Labs, which also helps develop the trading system.",
+      "lines": [
+        "L70",
+        "L36"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "People who hold UNI can vote on fees and other settings, according to Uniswap Labs.",
+      "lines": [
+        "L38",
+        "L104"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "The apps connect traders to shared pools, and some trades use competing providers to fill signed orders, the project says.",
+      "lines": [
+        "L01",
+        "L11",
+        "L18",
+        "L68"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Callers give up UNI to withdraw collected trading fees, and the submitted UNI goes to a burn address, the project says.",
+      "lines": [
+        "L20",
+        "L21",
+        "L54"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "The app also sends Earn deposits to lending vaults, where borrowers pay the interest depositors receive, the project says.",
+      "lines": [
+        "L77",
+        "L78"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "The web app has no interface fee, while pool fees and blockchain transaction costs can still apply, according to Uniswap Labs.",
+      "lines": [
+        "L05",
+        "L06",
+        "L10"
+      ],
+      "paragraph": 3
+    },
+    {
+      "text": "Uniswap Labs reports that some newer pools collect protocol fees, although its token guide still lists fees only for older pools.",
+      "lines": [
+        "L117",
+        "L118",
+        "L44"
+      ],
+      "paragraph": 3
+    }
+  ],
+  "lines": [
+    {
+      "id": "L01",
+      "section": "what_it_does",
+      "text": "Uniswap’s web app offers token swaps on Ethereum, Base, Arbitrum, Polygon and Unichain.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S01",
+        "S54"
+      ],
+      "quote": "Swap crypto on Ethereum, Base, Arbitrum, Polygon, Unichain and more.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L01"
+      ],
+      "links": []
+    },
+    {
+      "id": "L02",
+      "section": "what_it_does",
+      "text": "Accessing the interface requires a wallet controlled by its user.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S03"
+      ],
+      "quote": "you must use a non-custodial wallet software",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L02"
+      ],
+      "links": []
+    },
+    {
+      "id": "L03",
+      "section": "what_it_does",
+      "text": "Uniswap serves traders, liquidity providers and developers.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S06"
+      ],
+      "quote": "liquidity providers, traders, and developers.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L03"
+      ],
+      "links": []
+    },
+    {
+      "id": "L04",
+      "section": "what_it_does",
+      "text": "Liquidity providers can supply v4 pools through the web app.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S21"
+      ],
+      "quote": "provide liquidity on Uniswap v4 through the Uniswap web app",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L04"
+      ],
+      "links": []
+    },
+    {
+      "id": "L05",
+      "section": "what_it_does",
+      "text": "Uniswap Labs says its interface fee has been zero since December 27, 2025.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S05"
+      ],
+      "quote": "As of December 27, 2025 Uniswap Labs does not charge interface fees.",
+      "rerun": null,
+      "fact": {
+        "name": "Labs interface fee",
+        "value": "0",
+        "unit": "percent"
+      },
+      "history": [],
+      "from": [
+        "F1:L05"
+      ],
+      "links": []
+    },
+    {
+      "id": "L06",
+      "section": "what_it_does",
+      "text": "Uniswap says blockchain transactions incur network costs even when they fail.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "quote": "Every blockchain transaction has a non-refundable network cost, even if it fails.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L06"
+      ],
+      "links": []
+    },
+    {
+      "id": "L07",
+      "section": "what_it_does",
+      "text": "Developers can add swaps to their applications using Uniswap’s tools.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S02"
+      ],
+      "quote": "Add swapping features to any app",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L07"
+      ],
+      "links": []
+    },
+    {
+      "id": "L08",
+      "section": "what_it_does",
+      "text": "The web app lets token teams configure and launch token auctions.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S32",
+        "S61"
+      ],
+      "quote": "Token auctions can be customized and launched",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L08"
+      ],
+      "links": []
+    },
+    {
+      "id": "L09",
+      "section": "what_it_does",
+      "text": "Uniswap’s terms describe Earn as access to Morpho lending vaults curated by Gauntlet.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S03",
+        "S47",
+        "S57",
+        "S58"
+      ],
+      "quote": "Gauntlet is the curator of the Morpho vault",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L09"
+      ],
+      "links": []
+    },
+    {
+      "id": "L10",
+      "section": "what_it_does",
+      "text": "Uniswap says trading fees depend on the pool and protocol version.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S06"
+      ],
+      "quote": "pool-specific swap fees based on protocol version",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L10"
+      ],
+      "links": []
+    },
+    {
+      "id": "L67",
+      "section": "what_it_does",
+      "text": "Uniswap Wallet lets users control assets, swap, send funds and connect to blockchain apps.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S49"
+      ],
+      "quote": "The self-custody wallet for swapping, sending, bridging, and exploring apps",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L67"
+      ],
+      "links": []
+    },
+    {
+      "id": "L83",
+      "section": "what_it_does",
+      "text": "Uniswap Earn supports deposits of USDC, USDT and ETH on Ethereum.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S57"
+      ],
+      "quote": "Earn is currently available on Ethereum Mainnet for USDC, USDT, and ETH.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L85",
+      "section": "what_it_does",
+      "text": "Users can find token auctions, bid and claim tokens through the web app.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S60"
+      ],
+      "quote": "discover auctions, place bids, and claim tokens directly from the interface.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L119",
+      "section": "what_it_does",
+      "text": "Uniswap’s deployment directory lists v4 PoolManager contracts across 26 networks.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S89"
+      ],
+      "quote": "26 networks",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L11",
+      "section": "how_it_works",
+      "text": "Liquidity providers deposit tokens into shared pools.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S06"
+      ],
+      "quote": "Liquidity providers contribute ERC-20 tokens to shared liquidity pools.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L11"
+      ],
+      "links": []
+    },
+    {
+      "id": "L12",
+      "section": "how_it_works",
+      "text": "Uniswap describes standard pool pricing as a constant-product calculation.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S07"
+      ],
+      "quote": "prices tokens algorithmically using a constant product formula",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L12"
+      ],
+      "links": []
+    },
+    {
+      "id": "L13",
+      "section": "how_it_works",
+      "text": "Uniswap’s v4 pool manager holds pool state and operations in one contract.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "OpenZeppelin"
+      ],
+      "sources": [
+        "S12",
+        "S64"
+      ],
+      "quote": "all pool state and operations are managed by a single contract",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L13"
+      ],
+      "links": []
+    },
+    {
+      "id": "L14",
+      "section": "how_it_works",
+      "text": "The deployment documentation identifies the recorded Ethereum address as the v4 pool manager.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S11",
+        "S53",
+        "S87",
+        "S89"
+      ],
+      "quote": "PoolManager",
+      "rerun": null,
+      "fact": {
+        "name": "Ethereum v4 pool manager",
+        "value": "0x000000000004444c5dc75cB358380D2e3dE08A90",
+        "unit": "Ethereum address"
+      },
+      "history": [],
+      "from": [
+        "F1:L14"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L65"
+        },
+        {
+          "type": "context",
+          "target": "L43"
+        }
+      ]
+    },
+    {
+      "id": "L15",
+      "section": "how_it_works",
+      "text": "Developers can attach custom code to v4 pool actions through hooks.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "quote": "Developers can attach solidity logic to the swap lifecycle through hooks.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L15"
+      ],
+      "links": []
+    },
+    {
+      "id": "L16",
+      "section": "how_it_works",
+      "text": "The Universal Router combines swaps across v2, v3 and v4.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S13"
+      ],
+      "quote": "aggregates trades across Uniswap v2, v3, and v4.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L16"
+      ],
+      "links": []
+    },
+    {
+      "id": "L17",
+      "section": "how_it_works",
+      "text": "The router uses Permit2 to obtain token-transfer permission through user signatures.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S13",
+        "S14"
+      ],
+      "quote": "so token transfer permissions can be provided by signature.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L17"
+      ],
+      "links": []
+    },
+    {
+      "id": "L18",
+      "section": "how_it_works",
+      "text": "UniswapX traders sign orders and competing fillers supply the requested output tokens.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S15"
+      ],
+      "quote": "Swappers generate signed orders which specify the outputs of their swap, and fillers compete to satisfy these orders",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L18"
+      ],
+      "links": []
+    },
+    {
+      "id": "L19",
+      "section": "how_it_works",
+      "text": "Uniswap says a caller invokes a strategy contract to move completed auction proceeds into v4 liquidity.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S32"
+      ],
+      "quote": "call migrate() after migrationBlock to initialize the Uniswap v4 pool and liquidity positions.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L19"
+      ],
+      "links": []
+    },
+    {
+      "id": "L20",
+      "section": "how_it_works",
+      "text": "Uniswap says fee adapters send collected protocol fees into each network’s TokenJar.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S16"
+      ],
+      "quote": "send them to the TokenJar",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L20"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L50"
+        },
+        {
+          "type": "partly",
+          "target": "L44"
+        },
+        {
+          "type": "partly",
+          "target": "L58"
+        }
+      ]
+    },
+    {
+      "id": "L21",
+      "section": "how_it_works",
+      "text": "Uniswap says a caller supplies UNI to its release contract in exchange for collected fee assets.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S16"
+      ],
+      "quote": "burns the required UNI amount to withdraw configured assets from the releaser flow.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L21"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L51"
+        },
+        {
+          "type": "partly",
+          "target": "L52"
+        },
+        {
+          "type": "partly",
+          "target": "L54"
+        }
+      ]
+    },
+    {
+      "id": "L22",
+      "section": "how_it_works",
+      "text": "Uniswap says its aggregator hooks route web-app trades through liquidity from other protocols.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S22"
+      ],
+      "quote": "Swaps on the Uniswap Web App include external liquidity sources automatically.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L22"
+      ],
+      "links": []
+    },
+    {
+      "id": "L23",
+      "section": "how_it_works",
+      "text": "Uniswap’s documentation says deployed core contracts cannot be upgraded.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S07"
+      ],
+      "quote": "Once deployed, core contracts are not upgradeable.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L23"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L43"
+        },
+        {
+          "type": "context",
+          "target": "L59"
+        }
+      ]
+    },
+    {
+      "id": "L24",
+      "section": "how_it_works",
+      "text": "Uniswap v2 issues pool tokens representing shares of deposited reserves.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S07"
+      ],
+      "quote": "Uniswap v2 mints fungible ERC-20 pool tokens",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L24"
+      ],
+      "links": []
+    },
+    {
+      "id": "L25",
+      "section": "how_it_works",
+      "text": "Uniswap describes v3 liquidity positions as non-fungible tokens.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S38"
+      ],
+      "quote": "positions will be represented by non-fungible tokens (NFTs).",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L25"
+      ],
+      "links": []
+    },
+    {
+      "id": "L68",
+      "section": "how_it_works",
+      "text": "The Uniswap API can return pool routes, UniswapX routes or both according to the request and available liquidity.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S50"
+      ],
+      "quote": "The Uniswap API can return routes from Uniswap AMM liquidity, UniswapX liquidity, or both",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L68"
+      ],
+      "links": []
+    },
+    {
+      "id": "L77",
+      "section": "how_it_works",
+      "text": "Deposits in Uniswap Earn go into Morpho vaults.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S57",
+        "S58"
+      ],
+      "quote": "Your deposit goes into a Morpho vault",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L79",
+      "section": "how_it_works",
+      "text": "Earn records deposits as on-chain vault shares that users can view in either Uniswap or Morpho.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S57"
+      ],
+      "quote": "Your position is held in vault shares onchain and is the same whether you view it in the Uniswap app or on Morpho.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L80",
+      "section": "how_it_works",
+      "text": "Gauntlet chooses the lending markets for funds deposited through Uniswap Earn.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S57"
+      ],
+      "quote": "a curator (Gauntlet) selects which lending markets the vault allocates to, within limits enforced onchain.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L86",
+      "section": "how_it_works",
+      "text": "In Uniswap’s token auctions each bidder submits a budget and a maximum price.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S61"
+      ],
+      "quote": "Bidders submit a budget and maximum price",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L87",
+      "section": "how_it_works",
+      "text": "TJAR makes Uniswap’s fee conversion mechanism available to other applications.",
+      "kind": "statement",
+      "by": [
+        "Alan Wu",
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S62",
+        "S36"
+      ],
+      "quote": "It generalizes the protocol fee conversion and UNI burn mechanism into reusable infrastructure for any onchain system.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L89",
+      "section": "how_it_works",
+      "text": "A TJAR operator can configure where the token paid in exchange for fee assets goes.",
+      "kind": "statement",
+      "by": [
+        "Alan Wu",
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S62",
+        "S36"
+      ],
+      "quote": "The destination of the chosen token is configurable",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L97",
+      "section": "how_it_works",
+      "text": "Unichain runs as an Ethereum rollup.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S74",
+        "S73"
+      ],
+      "quote": "Unichain is an optimistic rollup protocol for the Ethereum blockchain",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L111",
+      "section": "how_it_works",
+      "text": "Uniswap documents bridged UNI on additional networks.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "quote": "UNI is available as a bridged token on several networks.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L113",
+      "section": "how_it_works",
+      "text": "Uniswap’s published redemption controller requires an authorized operator to submit the collectible mint.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S84",
+        "S82"
+      ],
+      "quote": "function mint(address to) public ensureCallerIsOwner",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L116"
+        }
+      ]
+    },
+    {
+      "id": "L114",
+      "section": "how_it_works",
+      "text": "Uniswap’s published collectible code caps mints according to how many SOCKS have been burned.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S83",
+        "S82"
+      ],
+      "quote": "# can only mint if a sock has been burned",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L26",
+      "section": "money",
+      "text": "Uniswap says liquidity-provider fees are taken from the token being sold.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S09"
+      ],
+      "quote": "The LP fee is taken from the input token.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L26"
+      ],
+      "links": []
+    },
+    {
+      "id": "L27",
+      "section": "money",
+      "text": "Uniswap says liquidity-provider fees accrue proportionally to active liquidity positions.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S09"
+      ],
+      "quote": "paid proportionally to all liquidity providers who have an active liquidity position.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L27"
+      ],
+      "links": []
+    },
+    {
+      "id": "L28",
+      "section": "money",
+      "text": "Uniswap says v3 and v4 position owners must collect their accrued fees manually.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S08"
+      ],
+      "quote": "In v3 and v4, fees are collected separately and must be manually redeemed by the position owner.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L28"
+      ],
+      "links": []
+    },
+    {
+      "id": "L29",
+      "section": "money",
+      "text": "Uniswap’s current token documentation says no inflation is active.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "quote": "No active inflation.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L29"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L42"
+        },
+        {
+          "type": "context",
+          "target": "L56"
+        },
+        {
+          "type": "context",
+          "target": "L57"
+        }
+      ]
+    },
+    {
+      "id": "L30",
+      "section": "money",
+      "text": "Uniswap says SOCKS historically could be redeemed for physical socks.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "Onchain Atlas"
+      ],
+      "sources": [
+        "S19",
+        "S33",
+        "S85"
+      ],
+      "quote": "redeemed SOCKS tokens for physical socks",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L30"
+      ],
+      "links": []
+    },
+    {
+      "id": "L31",
+      "section": "money",
+      "text": "CoinGecko says UNI traded at $4.48 at the November 21, 2026 reading.",
+      "kind": "claim",
+      "by": [
+        "CoinGecko"
+      ],
+      "sources": [
+        "S29"
+      ],
+      "quote": "UNI $4.48",
+      "rerun": null,
+      "fact": {
+        "name": "Reported UNI spot price",
+        "value": "4.48",
+        "unit": "USD per UNI"
+      },
+      "history": [],
+      "from": [
+        "F1:L31"
+      ],
+      "links": []
+    },
+    {
+      "id": "L32",
+      "section": "money",
+      "text": "DefiLlama says Uniswap’s combined total value locked was about $2.808 billion at the November 21, 2026 reading.",
+      "kind": "claim",
+      "by": [
+        "DefiLlama"
+      ],
+      "sources": [
+        "S28"
+      ],
+      "quote": "Total Value Locked$2.808b",
+      "rerun": null,
+      "fact": {
+        "name": "Reported combined total value locked",
+        "value": "2808000000",
+        "unit": "USD"
+      },
+      "history": [],
+      "from": [
+        "F1:L32"
+      ],
+      "links": [
+        {
+          "type": "outdates",
+          "target": "L90"
+        }
+      ]
+    },
+    {
+      "id": "L33",
+      "section": "money",
+      "text": "Uniswap proposed directing net Unichain sequencer fees toward UNI burning in November 2025.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "Uniswap Foundation"
+      ],
+      "sources": [
+        "S31",
+        "S48",
+        "S39"
+      ],
+      "quote": "This proposal directs all Unichain sequencer fees, after L1 data costs and the 15% to Optimism, into the burn mechanism.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L33"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L98"
+        }
+      ]
+    },
+    {
+      "id": "L34",
+      "section": "money",
+      "text": "CoinGecko says UNI’s total supply was about 885.64 million UNI at the November 21, 2026 reading.",
+      "kind": "claim",
+      "by": [
+        "CoinGecko"
+      ],
+      "sources": [
+        "S29"
+      ],
+      "quote": "Total Supply | 885.64M",
+      "rerun": null,
+      "fact": {
+        "name": "CoinGecko reported UNI total supply",
+        "value": "885640000",
+        "unit": "UNI"
+      },
+      "history": [],
+      "from": [
+        "F1:L34"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L42"
+        },
+        {
+          "type": "context",
+          "target": "L55"
+        },
+        {
+          "type": "outdates",
+          "target": "L91"
+        }
+      ]
+    },
+    {
+      "id": "L35",
+      "section": "money",
+      "text": "Uniswap’s token guide says fee-funded burns reduce the total supply it reports.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "quote": "reducing its total supply over time.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L35"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L54"
+        },
+        {
+          "type": "context",
+          "target": "L42"
+        },
+        {
+          "type": "context",
+          "target": "L55"
+        }
+      ]
+    },
+    {
+      "id": "L69",
+      "section": "money",
+      "text": "Uniswap says swaps through aggregator hooks pay protocol fees that contribute to UNI burning.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S22"
+      ],
+      "quote": "swaps routed through them pay protocol fees, contributing to UNI burn.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L69"
+      ],
+      "links": []
+    },
+    {
+      "id": "L78",
+      "section": "money",
+      "text": "Uniswap Earn depositors earn interest paid by borrowers.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S57"
+      ],
+      "quote": "your funds are lent out to borrowers who pay interest",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L84",
+      "section": "money",
+      "text": "The proposal to change vault oversight reported a zero performance fee across the three Earn vaults.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S58",
+        "S59"
+      ],
+      "quote": "Performance fee is currently zero on all three vaults.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L88",
+      "section": "money",
+      "text": "Robinhood receives its Uniswap API trading fees in USDC and USDG using TJAR.",
+      "kind": "statement",
+      "by": [
+        "Alan Wu"
+      ],
+      "sources": [
+        "S62"
+      ],
+      "quote": "choosing to receive its trading fees through the Uniswap API in USDC and USDG.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L90",
+      "section": "money",
+      "text": "DefiLlama says Uniswap’s combined total value locked was about $3.11 billion at the November 23, 2026 reading.",
+      "kind": "claim",
+      "by": [
+        "DefiLlama"
+      ],
+      "sources": [
+        "S63"
+      ],
+      "quote": "Total Value Locked$3.11b",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L91",
+      "section": "money",
+      "text": "CoinGecko says UNI’s total supply was about 885.488 million UNI at the November 23, 2026 reading.",
+      "kind": "claim",
+      "by": [
+        "CoinGecko"
+      ],
+      "sources": [
+        "S88"
+      ],
+      "quote": "885.488M",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L55"
+        },
+        {
+          "type": "context",
+          "target": "L42"
+        }
+      ]
+    },
+    {
+      "id": "L98",
+      "section": "money",
+      "text": "KalshiEX says Unichain sequencer revenue helps fund UNI purchases and burns.",
+      "kind": "claim",
+      "by": [
+        "KalshiEX"
+      ],
+      "sources": [
+        "S75"
+      ],
+      "quote": "purchases and burns of UNI funded by protocol fees and Unichain sequencer revenue.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L100",
+      "section": "money",
+      "text": "Uniswap Labs and the Uniswap Foundation proposed moving governance’s SOCKS liquidity to v4 on Unichain.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "Uniswap Foundation"
+      ],
+      "sources": [
+        "S39"
+      ],
+      "quote": "move this position from Uniswap v1 on mainnet to Uniswap v4 on Unichain",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L101",
+      "section": "money",
+      "text": "The same proposal would send the new SOCKS liquidity position to a burn address.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "Uniswap Foundation"
+      ],
+      "sources": [
+        "S39"
+      ],
+      "quote": "transfer the LP position to a burn address",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L104",
+      "section": "money",
+      "text": "When Ethereum v2 protocol fees are active, 0.25% goes to liquidity providers and 0.05% goes to the protocol.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "Uniswap Foundation",
+        "DefiLlama"
+      ],
+      "sources": [
+        "S39",
+        "S63"
+      ],
+      "quote": "Once activated, LP fees are 0.25% and protocol fees are 0.05%.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L50"
+        }
+      ]
+    },
+    {
+      "id": "L117",
+      "section": "money",
+      "text": "The UNI token guide says protocol fees are active only on v2 and v3.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "quote": "currently active only on Uniswap v2 and v3.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L118"
+        }
+      ]
+    },
+    {
+      "id": "L118",
+      "section": "money",
+      "text": "On November 16, Uniswap Labs reported active v4 protocol fees on eight chains, including Ethereum.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S78"
+      ],
+      "quote": "now active on eight chains: Ethereum, Arbitrum, Base, OP Mainnet, BNB Chain, Polygon, Robinhood Chain, and Arc.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L44"
+        }
+      ]
+    },
+    {
+      "id": "L36",
+      "section": "people",
+      "text": "Universal Navigation Inc., trading as Uniswap Labs, provides the web app.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S03"
+      ],
+      "quote": "Universal Navigation Inc. (d/b/a Uniswap Labs",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L36"
+      ],
+      "links": []
+    },
+    {
+      "id": "L37",
+      "section": "people",
+      "text": "Hayden Adams created the Uniswap Protocol and identifies himself as founder.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "Hayden Adams"
+      ],
+      "sources": [
+        "S04",
+        "S41",
+        "S20"
+      ],
+      "quote": "In 2018, Hayden Adams created the Uniswap Protocol",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L37"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L60"
+        }
+      ]
+    },
+    {
+      "id": "L38",
+      "section": "people",
+      "text": "Uniswap says UNI holders have protocol-governance rights.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "quote": "UNI holders have governance rights",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L38"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L47"
+        },
+        {
+          "type": "partly",
+          "target": "L48"
+        },
+        {
+          "type": "partly",
+          "target": "L49"
+        }
+      ]
+    },
+    {
+      "id": "L39",
+      "section": "people",
+      "text": "Uniswap Labs credits hundreds of community members with v4 code contributions.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S21"
+      ],
+      "quote": "code contributions from hundreds of community members",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L39"
+      ],
+      "links": []
+    },
+    {
+      "id": "L40",
+      "section": "people",
+      "text": "Uniswap Labs lists @Uniswap, @UniswapBuilders and @UniswapAuctions as its official X accounts.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "X/Twitter: @Uniswap, @UniswapBuilders, and @UniswapAuctions",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L40"
+      ],
+      "links": []
+    },
+    {
+      "id": "L41",
+      "section": "people",
+      "text": "Uniswap Labs says it develops interface code privately before publishing production releases.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S24"
+      ],
+      "quote": "Uniswap Labs develops all front-end interfaces in a private repository.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L41"
+      ],
+      "links": []
+    },
+    {
+      "id": "L70",
+      "section": "people",
+      "text": "Uniswap Labs develops the web app, wallet, trading API and Unichain.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S04"
+      ],
+      "quote": "This includes the Uniswap Web App and Wallet, as well as crypto infrastructure like the Uniswap Trading API and Unichain.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L71",
+      "section": "people",
+      "text": "Uniswap Labs lists its GitHub organisation as an official channel.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "GitHub: Uniswap",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L72",
+      "section": "people",
+      "text": "The project directory lists an official Uniswap presence on LinkedIn.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "LinkedIn: https://www.linkedin.com/company/uniswaporg",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L73",
+      "section": "people",
+      "text": "The project directory lists an official Uniswap presence on Lens.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "Lens: @Uniswap",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L74",
+      "section": "people",
+      "text": "The project directory lists an official Uniswap presence on YouTube.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "Youtube: @Uniswap-Labs",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L75",
+      "section": "people",
+      "text": "The project directory lists an official Uniswap presence on TikTok.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "TikTok: @uniswap",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L76",
+      "section": "people",
+      "text": "The project directory lists an official Uniswap presence on Reddit.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "Reddit: r/uniswap",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L81",
+      "section": "people",
+      "text": "Uniswap governance owns the three Uniswap Earn vaults through its timelock.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S58",
+        "S59"
+      ],
+      "quote": "the Owner is Uniswap governance’s mainnet Timelock.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L105"
+        }
+      ]
+    },
+    {
+      "id": "L96",
+      "section": "people",
+      "text": "Optimism runs Unichain’s production sequencers, RPC services, monitoring and incident response.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S71",
+        "S70",
+        "S72"
+      ],
+      "quote": "Optimism runs the production stack: sequencers across mainnet and testnet, RPC, monitoring, and incident response.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L102",
+      "section": "people",
+      "text": "Most of the Uniswap Foundation team moved to Uniswap Labs.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Foundation"
+      ],
+      "sources": [
+        "S76"
+      ],
+      "quote": "the majority of the Foundation team having transitioned into Uniswap Labs",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L112",
+      "section": "people",
+      "text": "Uniswap Labs lists its Discord server as an official channel.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "quote": "Discord: Uniswap",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L42",
+      "section": "on_chain",
+      "text": "The UNI contract reported a total supply of 1,000,000,000 UNI on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S18",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_supply",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x18160ddd"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000",
+          "0x0000000000000000000000000000000000000000000000000000000000000012"
+        ],
+        "observations": [
+          "uni_supply",
+          "uni_decimals"
+        ],
+        "decode": "Decode totalSupply as uint256; divide by 10 ** decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "UNI contract total supply",
+        "value": "1000000000",
+        "unit": "UNI"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "1000000000"
+        }
+      ],
+      "from": [
+        "F1:L42"
+      ],
+      "links": []
+    },
+    {
+      "id": "L43",
+      "section": "on_chain",
+      "text": "The Ethereum v4 pool manager’s owner was the governance timelock on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S18",
+        "S27",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "pool_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x000000000004444c5dc75cB358380D2e3dE08A90",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc"
+        ],
+        "observations": [
+          "pool_owner"
+        ],
+        "decode": "Decode owner() as the last 20 bytes.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Pool manager owner",
+        "value": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0x1a9c8182c09f50c8318d769245bea52c32be35bc"
+        }
+      ],
+      "from": [
+        "F1:L43"
+      ],
+      "links": []
+    },
+    {
+      "id": "L44",
+      "section": "on_chain",
+      "text": "The Ethereum v4 pool manager selected the documented v4 fee adapter as its fee controller on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S17",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "pool_fee_controller",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x000000000004444c5dc75cB358380D2e3dE08A90",
+                "data": "0xf02de3b2"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x00000000000000000000000089a5d5bf00a27d55c02951e49078a5c5771051db"
+        ],
+        "observations": [
+          "pool_fee_controller"
+        ],
+        "decode": "Decode protocolFeeController() as the last 20 bytes; compare with the deployment table.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Pool manager fee controller",
+        "value": "0x89a5d5bf00a27d55c02951e49078a5c5771051db",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0x89a5d5bf00a27d55c02951e49078a5c5771051db"
+        }
+      ],
+      "from": [
+        "F1:L44"
+      ],
+      "links": []
+    },
+    {
+      "id": "L45",
+      "section": "on_chain",
+      "text": "The UNI contract’s minter was the governance timelock on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S18",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_minter",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x07546172"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc"
+        ],
+        "observations": [
+          "uni_minter"
+        ],
+        "decode": "Decode minter() as the last 20 bytes.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "UNI minter",
+        "value": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0x1a9c8182c09f50c8318d769245bea52c32be35bc"
+        }
+      ],
+      "from": [
+        "F1:L45"
+      ],
+      "links": []
+    },
+    {
+      "id": "L46",
+      "section": "on_chain",
+      "text": "The governance timelock’s delay setting was 2 days on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "timelock_delay",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+                "data": "0x6a42b8f8"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x000000000000000000000000000000000000000000000000000000000002a300"
+        ],
+        "observations": [
+          "timelock_delay"
+        ],
+        "decode": "Decode delay() as uint256 seconds and divide by 86400.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Timelock delay",
+        "value": "2",
+        "unit": "days"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "2"
+        }
+      ],
+      "from": [
+        "F1:L46"
+      ],
+      "links": []
+    },
+    {
+      "id": "L47",
+      "section": "on_chain",
+      "text": "The governance timelock’s administrator was the documented GovernorBravo contract on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S18",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "timelock_admin",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+                "data": "0xf851a440"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x000000000000000000000000408ed6354d4973f66138c91495f2f2fcbd8724c3"
+        ],
+        "observations": [
+          "timelock_admin"
+        ],
+        "decode": "Decode admin() as the last 20 bytes; compare with the governance deployment table.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Timelock administrator",
+        "value": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3"
+        }
+      ],
+      "from": [
+        "F1:L47"
+      ],
+      "links": []
+    },
+    {
+      "id": "L48",
+      "section": "on_chain",
+      "text": "GovernorBravo’s quorum setting was 40,000,000 UNI worth of votes on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "governor_quorum",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+                "data": "0x24bc1a64"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000002116545850052128000000",
+          "0x0000000000000000000000000000000000000000000000000000000000000012"
+        ],
+        "observations": [
+          "governor_quorum",
+          "uni_decimals"
+        ],
+        "decode": "Decode quorumVotes() as uint256; divide by 10 ** UNI decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Governance quorum",
+        "value": "40000000",
+        "unit": "UNI voting units"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "40000000"
+        }
+      ],
+      "from": [
+        "F1:L48"
+      ],
+      "links": []
+    },
+    {
+      "id": "L49",
+      "section": "on_chain",
+      "text": "GovernorBravo’s proposal-threshold setting was 1,000,000 UNI worth of votes on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "governor_proposal_threshold",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+                "data": "0xb58131b0"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x00000000000000000000000000000000000000000000d3c21bcecceda1000000",
+          "0x0000000000000000000000000000000000000000000000000000000000000012"
+        ],
+        "observations": [
+          "governor_proposal_threshold",
+          "uni_decimals"
+        ],
+        "decode": "Decode proposalThreshold() as uint256; divide by 10 ** UNI decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Governance proposal threshold",
+        "value": "1000000",
+        "unit": "UNI voting units"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "1000000"
+        }
+      ],
+      "from": [
+        "F1:L49"
+      ],
+      "links": []
+    },
+    {
+      "id": "L50",
+      "section": "on_chain",
+      "text": "The Ethereum v2 factory’s protocol-fee recipient was the documented TokenJar on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S17",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "v2_fee_to",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
+                "data": "0x017e7e58"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x000000000000000000000000f38521f130fccf29db1961597bc5d2b60f995f85"
+        ],
+        "observations": [
+          "v2_fee_to"
+        ],
+        "decode": "Decode feeTo() as the last 20 bytes; compare with TokenJar in the deployment table.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "v2 protocol-fee recipient",
+        "value": "0xf38521f130fccf29db1961597bc5d2b60f995f85",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0xf38521f130fccf29db1961597bc5d2b60f995f85"
+        }
+      ],
+      "from": [
+        "F1:L50"
+      ],
+      "links": []
+    },
+    {
+      "id": "L51",
+      "section": "on_chain",
+      "text": "The Ethereum TokenJar authorized the documented Firepit releaser on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S17",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "jar_releaser",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xf38521f130fcCF29dB1961597bc5d2B60F995f85",
+                "data": "0x02691bcb"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000d5cd355e2abeb8fb1552f56c965b867346d6721"
+        ],
+        "observations": [
+          "jar_releaser"
+        ],
+        "decode": "Decode releaser() as the last 20 bytes; compare with the deployment table.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Authorized fee releaser",
+        "value": "0x0d5cd355e2abeb8fb1552f56c965b867346d6721",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0x0d5cd355e2abeb8fb1552f56c965b867346d6721"
+        }
+      ],
+      "from": [
+        "F1:L51"
+      ],
+      "links": []
+    },
+    {
+      "id": "L52",
+      "section": "on_chain",
+      "text": "The Ethereum Firepit’s release threshold was 4,000 UNI on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S16",
+        "S18",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "fire_threshold",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x0D5Cd355e2aBEB8fb1552F56c965B867346d6721",
+                "data": "0x42cde4e8"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "fire_resource",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x0D5Cd355e2aBEB8fb1552F56c965B867346d6721",
+                "data": "0x2b3ed84e"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000000000d8d726b7177a800000",
+          "0x0000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984",
+          "0x0000000000000000000000000000000000000000000000000000000000000012"
+        ],
+        "observations": [
+          "fire_threshold",
+          "fire_resource",
+          "uni_decimals"
+        ],
+        "decode": "Verify RESOURCE() equals the documented UNI address; divide threshold() by 10 ** UNI decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Fee release threshold",
+        "value": "4000",
+        "unit": "UNI"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "4000"
+        }
+      ],
+      "from": [
+        "F1:L52"
+      ],
+      "links": []
+    },
+    {
+      "id": "L53",
+      "section": "on_chain",
+      "text": "The original Ethereum SOCKS contract reported about 296.99 SOCKS in total supply on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S45"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "socks_supply",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x23B608675a2B2fB1890d3ABBd85c5775c51691d5",
+                "data": "0x18160ddd"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "socks_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x23B608675a2B2fB1890d3ABBd85c5775c51691d5",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "socks_symbol",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x23B608675a2B2fB1890d3ABBd85c5775c51691d5",
+                "data": "0x95d89b41"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "socks_name",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x23B608675a2B2fB1890d3ABBd85c5775c51691d5",
+                "data": "0x06fdde03"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x000000000000000000000000000000000000000000000010199a96bfa81f8e02",
+          "0x0000000000000000000000000000000000000000000000000000000000000012",
+          "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005534f434b53000000000000000000000000000000000000000000000000000000",
+          "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000012556e69736f636b732045646974696f6e20300000000000000000000000000000"
+        ],
+        "observations": [
+          "socks_supply",
+          "socks_decimals",
+          "socks_symbol",
+          "socks_name"
+        ],
+        "decode": "Verify symbol/name; divide totalSupply() by 10 ** decimals; address is published in the Unisocks application bundle.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Original SOCKS total supply",
+        "value": "296.992857926618025474",
+        "unit": "SOCKS"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "296.992857926618025474"
+        }
+      ],
+      "from": [
+        "F1:L53"
+      ],
+      "links": []
+    },
+    {
+      "id": "L54",
+      "section": "on_chain",
+      "text": "The configured burn recipient held about 114.51 million UNI on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "fire_resource_recipient",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x0D5Cd355e2aBEB8fb1552F56c965B867346d6721",
+                "data": "0xec0fa86d"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_burn_balance",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x70a08231000000000000000000000000000000000000000000000000000000000000dead"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x000000000000000000000000000000000000000000000000000000000000dead",
+          "0x0000000000000000000000000000000000000000005eb8c5419f5a279efe9305",
+          "0x0000000000000000000000000000000000000000000000000000000000000012"
+        ],
+        "observations": [
+          "fire_resource_recipient",
+          "uni_burn_balance",
+          "uni_decimals"
+        ],
+        "decode": "Decode RESOURCE_RECIPIENT(); verify balanceOf argument equals it; divide the balance by 10 ** UNI decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "UNI at configured burn recipient",
+        "value": "114511581.213802937903387397",
+        "unit": "UNI"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "114363581.213802937903387397"
+        }
+      ],
+      "from": [
+        "F1:L54"
+      ],
+      "links": []
+    },
+    {
+      "id": "L55",
+      "section": "on_chain",
+      "text": "Excluding the configured burn recipient left about 885.49 million UNI on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_supply",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x18160ddd"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_burn_balance",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x70a08231000000000000000000000000000000000000000000000000000000000000dead"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "fire_resource_recipient",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x0D5Cd355e2aBEB8fb1552F56c965B867346d6721",
+                "data": "0xec0fa86d"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000",
+          "0x0000000000000000000000000000000000000000005eb8c5419f5a279efe9305",
+          "0x0000000000000000000000000000000000000000000000000000000000000012",
+          "0x000000000000000000000000000000000000000000000000000000000000dead"
+        ],
+        "observations": [
+          "uni_supply",
+          "uni_burn_balance",
+          "uni_decimals",
+          "fire_resource_recipient"
+        ],
+        "decode": "Compute (totalSupply() - balanceOf(RESOURCE_RECIPIENT())) / 10 ** UNI decimals; this is not a circulating-supply audit.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "UNI excluding one burn recipient",
+        "value": "885488418.786197062096612603",
+        "unit": "UNI"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "885636418.786197062096612603"
+        }
+      ],
+      "from": [
+        "F1:L55"
+      ],
+      "links": []
+    },
+    {
+      "id": "L56",
+      "section": "on_chain",
+      "text": "UNI’s mint-cap getter returned 2 percent on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S18",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_mint_cap",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x76c71ca1"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000000000000000000000000002"
+        ],
+        "observations": [
+          "uni_mint_cap"
+        ],
+        "decode": "Decode mintCap() as uint256; the documentation describes the limit as a percentage of supply.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "UNI mint-cap parameter",
+        "value": "2",
+        "unit": "percent"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "2"
+        }
+      ],
+      "from": [
+        "F1:L56"
+      ],
+      "links": []
+    },
+    {
+      "id": "L57",
+      "section": "on_chain",
+      "text": "UNI’s minimum interval between mints was 365 days on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "uni_mint_interval",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "data": "0x5c11d62f"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000000000000000000001e13380"
+        ],
+        "observations": [
+          "uni_mint_interval"
+        ],
+        "decode": "Decode minimumTimeBetweenMints() as seconds and divide by 86400.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Minimum time between UNI mints",
+        "value": "365",
+        "unit": "days"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "365"
+        }
+      ],
+      "from": [
+        "F1:L57"
+      ],
+      "links": []
+    },
+    {
+      "id": "L58",
+      "section": "on_chain",
+      "text": "The Ethereum v3 factory’s owner was the documented open fee adapter on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S17",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "v3_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x000000000000000000000000f2371551fe3937db7c750f4dfabe5c2fffdcbf5a"
+        ],
+        "observations": [
+          "v3_owner"
+        ],
+        "decode": "Decode owner() as the last 20 bytes; compare with V3OpenFeeAdapter in the deployment table.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "v3 factory owner",
+        "value": "0xf2371551fe3937db7c750f4dfabe5c2fffdcbf5a",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0xf2371551fe3937db7c750f4dfabe5c2fffdcbf5a"
+        }
+      ],
+      "from": [
+        "F1:L58"
+      ],
+      "links": []
+    },
+    {
+      "id": "L59",
+      "section": "on_chain",
+      "text": "The Ethereum fee collector, release contract and v4 fee adapter shared the governance timelock as owner on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S17",
+        "S18",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "jar_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xf38521f130fcCF29dB1961597bc5d2B60F995f85",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "fire_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x0D5Cd355e2aBEB8fb1552F56c965B867346d6721",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "adapter_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x89A5D5bF00a27D55c02951E49078a5C5771051dB",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc"
+        ],
+        "observations": [
+          "jar_owner",
+          "fire_owner",
+          "adapter_owner"
+        ],
+        "decode": "Decode each owner() return; all three must equal the timelock address.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Fee-system owner",
+        "value": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "unit": "Ethereum address"
+      },
+      "history": [
+        {
+          "block": 26459768,
+          "value": "0x1a9c8182c09f50c8318d769245bea52c32be35bc"
+        }
+      ],
+      "from": [
+        "F1:L59"
+      ],
+      "links": []
+    },
+    {
+      "id": "L105",
+      "section": "on_chain",
+      "text": "All three Ethereum Earn vaults reported the governance timelock as owner on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S59"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "0_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x5B453493D2328E7F747eb2e66446eFe707728be7",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "1_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "2_owner",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d",
+                "data": "0x8da5cb5b"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc"
+        ],
+        "observations": [
+          "0_owner",
+          "1_owner",
+          "2_owner"
+        ],
+        "decode": "Decode each owner() result as its last 20 bytes.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "Earn vault owner",
+        "value": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "unit": "Ethereum address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L106",
+      "section": "on_chain",
+      "text": "The Ethereum Earn vault reported about 9,997,121 uniUSDC shares on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S59"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "0_supply",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x5B453493D2328E7F747eb2e66446eFe707728be7",
+                "data": "0x18160ddd"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "0_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x5B453493D2328E7F747eb2e66446eFe707728be7",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "0_symbol",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x5B453493D2328E7F747eb2e66446eFe707728be7",
+                "data": "0x95d89b41"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000000844f90077789c4898d7e2",
+          "0x0000000000000000000000000000000000000000000000000000000000000012",
+          "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000007756e695553444300000000000000000000000000000000000000000000000000"
+        ],
+        "observations": [
+          "0_supply",
+          "0_decimals",
+          "0_symbol"
+        ],
+        "decode": "Decode symbol as an ABI string and divide totalSupply() by 10 ** decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "uniUSDC vault share supply",
+        "value": "9997120.750654657807308770",
+        "unit": "uniUSDC"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L107",
+      "section": "on_chain",
+      "text": "The Ethereum Earn vault reported about 2,831,861 uniUSDT shares on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S59"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "1_supply",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703",
+                "data": "0x18160ddd"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "1_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "1_symbol",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703",
+                "data": "0x95d89b41"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000000257ab7f1f861c56c0a768",
+          "0x0000000000000000000000000000000000000000000000000000000000000012",
+          "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000007756e695553445400000000000000000000000000000000000000000000000000"
+        ],
+        "observations": [
+          "1_supply",
+          "1_decimals",
+          "1_symbol"
+        ],
+        "decode": "Decode symbol as an ABI string and divide totalSupply() by 10 ** decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "uniUSDT vault share supply",
+        "value": "2831861.076663145183881064",
+        "unit": "uniUSDT"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L108",
+      "section": "on_chain",
+      "text": "The Ethereum Earn vault reported about 716 uniETH shares on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S59"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "2_supply",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d",
+                "data": "0x18160ddd"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "2_decimals",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d",
+                "data": "0x313ce567"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "2_symbol",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d",
+                "data": "0x95d89b41"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x000000000000000000000000000000000000000000000026ca6148e632df9e96",
+          "0x0000000000000000000000000000000000000000000000000000000000000012",
+          "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000006756e694554480000000000000000000000000000000000000000000000000000"
+        ],
+        "observations": [
+          "2_supply",
+          "2_decimals",
+          "2_symbol"
+        ],
+        "decode": "Decode symbol as an ABI string and divide totalSupply() by 10 ** decimals.",
+        "archive_fallback": "https://eth.drpc.org"
+      },
+      "fact": {
+        "name": "uniETH vault share supply",
+        "value": "715.559292022898531990",
+        "unit": "uniETH"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L115",
+      "section": "on_chain",
+      "text": "The Digital Unisocks contract reported 151 S0CKS collectibles on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S56",
+        "S82"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://eth.drpc.org",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "s0cks_supply",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x65770b5283117639760beA3F867b69b3697a91dd",
+                "data": "0x18160ddd"
+              },
+              "0x1940d56"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "s0cks_symbol",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x65770b5283117639760beA3F867b69b3697a91dd",
+                "data": "0x95d89b41"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x0000000000000000000000000000000000000000000000000000000000000097",
+          "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000055330434b53000000000000000000000000000000000000000000000000000000"
+        ],
+        "observations": [
+          "s0cks_supply",
+          "s0cks_symbol"
+        ],
+        "decode": "Decode totalSupply() as an integer and symbol() as an ABI string."
+      },
+      "fact": {
+        "name": "Digital Unisocks collectible supply",
+        "value": 151,
+        "unit": "collectibles"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L116",
+      "section": "on_chain",
+      "text": "The Digital Unisocks collectible named its documented redemption controller as minter on November 23, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S56",
+        "S82"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 26479958,
+        "block_hash": "0xdec7c8b4c9da8e0bd0605c06560c9de53417ceb97ff07a13dcd1c6d55f63875b",
+        "rpc": "https://eth.drpc.org",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "s0cks_minter",
+            "method": "eth_call",
+            "params": [
+              {
+                "to": "0x65770b5283117639760beA3F867b69b3697a91dd",
+                "data": "0x07546172"
+              },
+              "0x1940d56"
+            ]
+          }
+        ],
+        "expected": [
+          "0x00000000000000000000000005931d644063954f35afa3dbefa4725b0ad79f85"
+        ],
+        "observations": [
+          "s0cks_minter"
+        ],
+        "decode": "Decode minter() as its last 20 bytes and compare with the project address list."
+      },
+      "fact": {
+        "name": "Digital Unisocks minter",
+        "value": "0x05931D644063954f35AFa3dBefA4725b0ad79F85",
+        "unit": "Ethereum address"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L60",
+      "section": "history",
+      "text": "Hayden Adams dates Uniswap’s public announcement and Ethereum launch to November 2, 2018.",
+      "kind": "statement",
+      "by": [
+        "Hayden Adams"
+      ],
+      "sources": [
+        "S20"
+      ],
+      "quote": "On November 2, 2018, Uniswap was publicly announced and deployed to the Ethereum mainnet.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L60"
+      ],
+      "links": []
+    },
+    {
+      "id": "L61",
+      "section": "history",
+      "text": "Uniswap’s v3 announcement dates the introduction of v2 features to May 2020.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S38"
+      ],
+      "quote": "In May 2020, Uniswap v2 introduced new features and optimizations",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L61"
+      ],
+      "links": []
+    },
+    {
+      "id": "L62",
+      "section": "history",
+      "text": "Uniswap Labs announced UNI as live on September 16, 2020.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S19"
+      ],
+      "quote": "UNI, the Uniswap Protocol token, is live!",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L62"
+      ],
+      "links": []
+    },
+    {
+      "id": "L63",
+      "section": "history",
+      "text": "Uniswap Labs announced v4 as live on January 31, 2025.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S21"
+      ],
+      "quote": "Uniswap v4 is now live.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L63"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L65"
+        }
+      ]
+    },
+    {
+      "id": "L64",
+      "section": "history",
+      "text": "The Block says Uniswap governance had passed UNIfication by December 25, 2025.",
+      "kind": "claim",
+      "by": [
+        "The Block"
+      ],
+      "sources": [
+        "S30"
+      ],
+      "quote": "Uniswap governance passed the UNIfication proposal",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L64"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L50"
+        },
+        {
+          "type": "context",
+          "target": "L51"
+        },
+        {
+          "type": "context",
+          "target": "L109"
+        }
+      ]
+    },
+    {
+      "id": "L65",
+      "section": "history",
+      "text": "Code appeared at the selected Ethereum v4 pool manager address on January 23, 2025.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S27",
+        "S56"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 21688329,
+        "block_hash": "0x651a11a4362df710d0c37c686d4c4aca184bb404aa56a64c491e69ef0a174bd3",
+        "rpc": "https://eth.drpc.org",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "pool_code_before",
+            "method": "eth_getCode",
+            "params": [
+              "0x000000000004444c5dc75cB358380D2e3dE08A90",
+              "0x14af008"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "pool_code_at_creation",
+            "method": "eth_getCode",
+            "params": [
+              "0x000000000004444c5dc75cB358380D2e3dE08A90",
+              "0x14af009"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "deployment_block",
+            "method": "eth_getBlockByNumber",
+            "params": [
+              "0x14af009",
+              false
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "encoding": "hex-bytes",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          },
+          {
+            "encoding": "hex-bytes",
+            "sha256": "3316c7b1c67095ef6fc9b7e62fc754ad1e46e1c9119564ea4f5615a252af893e",
+            "bytes": 24009
+          },
+          {
+            "number": "0x14af009",
+            "hash": "0x651a11a4362df710d0c37c686d4c4aca184bb404aa56a64c491e69ef0a174bd3",
+            "timestamp": "0x67926b6f"
+          }
+        ],
+        "observations": [
+          "pool_code_before",
+          "pool_code_at_creation",
+          "deployment_block"
+        ],
+        "decode": "Check empty code at the previous block, nonempty code at the creation block, then convert that block timestamp to UTC."
+      },
+      "fact": {
+        "name": "Pool manager deployment time",
+        "value": "2025-01-23T16:16:47+00:00",
+        "unit": "UTC"
+      },
+      "history": [
+        {
+          "block": 21688328,
+          "value": "0x"
+        }
+      ],
+      "from": [
+        "F1:L65"
+      ],
+      "links": []
+    },
+    {
+      "id": "L66",
+      "section": "history",
+      "text": "The pool manager’s deployment transaction was sent by the wallet recorded in the deployment evidence.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "S46",
+        "S27"
+      ],
+      "quote": "",
+      "rerun": {
+        "chain": 1,
+        "block": 21688329,
+        "block_hash": "0x651a11a4362df710d0c37c686d4c4aca184bb404aa56a64c491e69ef0a174bd3",
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "node": "public RPC",
+        "requests": [
+          {
+            "jsonrpc": "2.0",
+            "id": "pool_deployment_tx",
+            "method": "eth_getTransactionByHash",
+            "params": [
+              "0x747e0e02b7590eed32cface28e83260884e0b80675f5ae223c6888053aa68528"
+            ]
+          },
+          {
+            "jsonrpc": "2.0",
+            "id": "pool_deployment_receipt",
+            "method": "eth_getTransactionReceipt",
+            "params": [
+              "0x747e0e02b7590eed32cface28e83260884e0b80675f5ae223c6888053aa68528"
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "hash": "0x747e0e02b7590eed32cface28e83260884e0b80675f5ae223c6888053aa68528",
+            "from": "0x6b93e3bb9c0780c0f9042346ffc379530a5882c1",
+            "to": "0x48e516b34a1274f49457b9c6182097796d0498cb",
+            "blockNumber": "0x14af009",
+            "blockHash": "0x651a11a4362df710d0c37c686d4c4aca184bb404aa56a64c491e69ef0a174bd3"
+          },
+          {
+            "transactionHash": "0x747e0e02b7590eed32cface28e83260884e0b80675f5ae223c6888053aa68528",
+            "from": "0x6b93e3bb9c0780c0f9042346ffc379530a5882c1",
+            "to": "0x48e516b34a1274f49457b9c6182097796d0498cb",
+            "blockNumber": "0x14af009",
+            "blockHash": "0x651a11a4362df710d0c37c686d4c4aca184bb404aa56a64c491e69ef0a174bd3",
+            "status": "0x1",
+            "contractAddress": null,
+            "logs": [
+              {
+                "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+                "topics": [
+                  "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+                  "0x0000000000000000000000000000000000000000000000000000000000000000",
+                  "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc"
+                ],
+                "data": "0x",
+                "blockHash": "0x651a11a4362df710d0c37c686d4c4aca184bb404aa56a64c491e69ef0a174bd3",
+                "blockNumber": "0x14af009",
+                "transactionHash": "0x747e0e02b7590eed32cface28e83260884e0b80675f5ae223c6888053aa68528",
+                "transactionIndex": "0xaf",
+                "logIndex": "0x15d",
+                "removed": false
+              }
+            ]
+          }
+        ],
+        "observations": [
+          "pool_deployment_tx",
+          "pool_deployment_receipt"
+        ],
+        "decode": "Check successful receipt, matching block and transaction hashes, receipt log emitted by PoolManager, and transaction.from; transaction.to is a deployment factory, not the sender."
+      },
+      "fact": {
+        "name": "Deployment transaction sender",
+        "value": "0x6b93e3bb9c0780c0f9042346ffc379530a5882c1",
+        "unit": "Ethereum address"
+      },
+      "history": [],
+      "from": [
+        "F1:L66"
+      ],
+      "links": []
+    },
+    {
+      "id": "L82",
+      "section": "history",
+      "text": "Uniswap Labs launched Uniswap Earn in July 2026.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S58"
+      ],
+      "quote": "Uniswap Labs launched Uniswap Earn in July 2026.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L92",
+      "section": "history",
+      "text": "OpenZeppelin says it audited the Uniswap v4 core repository at commit d5d4957.",
+      "kind": "claim",
+      "by": [
+        "OpenZeppelin"
+      ],
+      "sources": [
+        "S64"
+      ],
+      "quote": "We audited the Uniswap/v4-core repository at commit d5d4957.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L93",
+      "section": "history",
+      "text": "The Commodity Futures Trading Commission says its September 2024 order required Uniswap Labs to pay a $175,000 penalty.",
+      "kind": "claim",
+      "by": [
+        "the Commodity Futures Trading Commission",
+        "Axios"
+      ],
+      "sources": [
+        "S65",
+        "S66"
+      ],
+      "quote": "pay a $175,000 civil monetary penalty",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L94",
+      "section": "history",
+      "text": "Uniswap v2, v3, v4 and UniswapX launched on Circle’s Arc network on September 16, 2026.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S67",
+        "S68"
+      ],
+      "quote": "Uniswap v2, v3, v4 and UniswapX are live on Arc",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L95",
+      "section": "history",
+      "text": "Uniswap Labs announced Elysium support in the web app and API on November 18, 2026.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S69"
+      ],
+      "quote": "Elysium is now available in the Uniswap Web App and API",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L99",
+      "section": "history",
+      "text": "Uniswap Labs transferred its original SOCKS–ETH pool position to Uniswap governance when UNI launched.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs",
+        "Uniswap Foundation"
+      ],
+      "sources": [
+        "S39"
+      ],
+      "quote": "ownership of the original Uniswap v1 SOCKS/ETH liquidity position to Uniswap governance",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L103",
+      "section": "history",
+      "text": "Uniswap Labs reports the v4 protocol fee rollout began in July 2026.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S78",
+        "S77"
+      ],
+      "quote": "v4 protocol fees went live in July",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L44"
+        }
+      ]
+    },
+    {
+      "id": "L109",
+      "section": "history",
+      "text": "The governance voting page lists UNIfication as executed on December 29, 2025.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Governance"
+      ],
+      "sources": [
+        "S79",
+        "S39"
+      ],
+      "quote": "Executed 3:38 am Dec 29, 2025",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L110",
+      "section": "history",
+      "text": "The September 2020 UNI airdrop included holders of SOCKS.",
+      "kind": "statement",
+      "by": [
+        "Uniswap Labs"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "quote": "and SOCKS token holders, based on a snapshot taken September 1, 2020.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    }
+  ],
+  "related": [
+    {
+      "name": "Ethereum",
+      "id": "eip155:1",
+      "relation": "Main contract deployment and settlement",
+      "lines": [
+        "L14",
+        "L65"
+      ]
+    },
+    {
+      "name": "Unichain",
+      "id": "eip155:130",
+      "relation": "Trading network developed with Labs",
+      "lines": [
+        "L01",
+        "L70",
+        "L97"
+      ]
+    },
+    {
+      "name": "Morpho",
+      "id": "morpho.org",
+      "relation": "Lending vaults for Earn",
+      "lines": [
+        "L77",
+        "L79"
+      ]
+    },
+    {
+      "name": "Gauntlet",
+      "id": "gauntlet.xyz",
+      "relation": "Selects Earn lending markets",
+      "lines": [
+        "L80"
+      ]
+    },
+    {
+      "name": "Optimism",
+      "id": "optimism.io",
+      "relation": "Runs Unichain production infrastructure",
+      "lines": [
+        "L96"
+      ]
+    },
+    {
+      "name": "Arc",
+      "id": "eip155:5042",
+      "relation": "Circle network hosting Uniswap versions",
+      "lines": [
+        "L94"
+      ],
+      "contract": "0x8366a39CC670B4001A1121B8F6A443A643e40951"
+    }
+  ],
+  "logo": {
+    "url": "https://cdn.app.uniswap.org/images/192x192_App_Icon.png",
+    "fetched_at": "2026-11-23T19:50:23+00:00"
+  },
+  "differs": [
+    {
+      "lines": [
+        "L91",
+        "L42",
+        "L54",
+        "L55"
+      ],
+      "level": "question",
+      "why": "CoinGecko’s November 23 estimate used different accounting from Ethereum’s totalSupply() getter. The approximate match after excluding the configured recipient suggests burn accounting. The tracker’s precise exclusions and timestamp remain unverified."
+    },
+    {
+      "lines": [
+        "L117",
+        "L118"
+      ],
+      "level": "conflict",
+      "why": "The token guide limits active fees to v2 and v3, while the November governance post includes v4. Ethereum’s configured controller supports the v4 rollout, but the individual pools and other chains were outside the chain check."
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "Which exclusions and cutoff times does CoinGecko apply to UNI supply? The comparison with the configured recipient supports an inference about burn accounting. [L42,L55,L91]",
+    "Which route, hook, pool fee and network charge will apply to a particular trade? These depend on the quote and current conditions. [L10,L15,L68]",
+    "How does net Unichain sequencer revenue reach the UNI release system after the operator migration? The proposal and outside filing describe the revenue source. [L33,L96,L98]",
+    "What fees and allocation limits apply to each Earn vault today? Ownership and share supply were checked, while the zero performance fee is dated to the earlier proposal. [L84,L105,L80]",
+    "Can holders still redeem physical SOCKS, and did a separate vote execute the proposed liquidity migration? [L30,L100]",
+    "Does the deployed web app match the published interface release? The repository describes its release process. [L41]",
+    "Does a contract, ENS record or deployer wallet point to any of the project channels? The public links reviewed establish website attribution. [S11,S23,L66]"
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "ref": "https://app.uniswap.org/",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "app.uniswap.org"
+      ]
+    },
+    {
+      "id": "S02",
+      "ref": "https://docs.uniswap.org/",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "docs.uniswap.org",
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S03",
+      "ref": "https://uniswap.org/terms-of-service",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "uniswap.org",
+        "support.uniswap.org"
+      ]
+    },
+    {
+      "id": "S04",
+      "ref": "https://about.uniswap.org/",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "about.uniswap.org"
+      ]
+    },
+    {
+      "id": "S05",
+      "ref": "https://support.uniswap.org/hc/en-us/articles/42640092742541-What-are-Uniswap-Labs-fees",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "support.uniswap.org"
+      ]
+    },
+    {
+      "id": "S06",
+      "ref": "https://developers.uniswap.org/docs/get-started/concepts/ecosystem-participants",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S07",
+      "ref": "https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S08",
+      "ref": "https://developers.uniswap.org/docs/get-started/concepts/fees",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S09",
+      "ref": "https://support.uniswap.org/hc/en-us/articles/20901935681677-What-is-a-liquidity-provider-LP-fee",
+      "type": "official",
+      "read_at": "2026-11-21T00:09:03.915739+00:00",
+      "could_open": true,
+      "read_via": [
+        "support.uniswap.org"
+      ]
+    },
+    {
+      "id": "S10",
+      "ref": "https://support.uniswap.org/hc/en-us/articles/40074336993549-What-is-a-network-cost",
+      "type": "official",
+      "read_at": "2026-11-21T00:09:03.926908+00:00",
+      "could_open": true,
+      "read_via": [
+        "support.uniswap.org"
+      ]
+    },
+    {
+      "id": "S11",
+      "ref": "https://docs.uniswap.org/contracts/v4/deployments",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "docs.uniswap.org",
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S12",
+      "ref": "https://developers.uniswap.org/docs/protocols/v4/concepts/architecture",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S13",
+      "ref": "https://developers.uniswap.org/docs/protocols/universal-router/overview",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S14",
+      "ref": "https://developers.uniswap.org/docs/protocols/permit2/overview",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S15",
+      "ref": "https://developers.uniswap.org/docs/liquidity/uniswapx/overview",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S16",
+      "ref": "https://developers.uniswap.org/docs/protocols/protocol-fee/overview",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S17",
+      "ref": "https://developers.uniswap.org/docs/protocols/protocol-fee/deployments",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S18",
+      "ref": "https://developers.uniswap.org/docs/ecosystem/governance/uni",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S19",
+      "ref": "https://blog.uniswap.org/uni",
+      "type": "official",
+      "read_at": "2026-11-21T00:09:04.790646+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S20",
+      "ref": "https://blog.uniswap.org/uniswap-history",
+      "type": "official",
+      "read_at": "2026-11-21T00:09:04.814646+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S21",
+      "ref": "https://blog.uniswap.org/uniswap-v4-is-here",
+      "type": "official",
+      "read_at": "2026-11-21T00:09:04.914554+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S22",
+      "ref": "https://blog.uniswap.org/aggregator-hooks-are-now-live",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S23",
+      "ref": "https://support.uniswap.org/hc/en-us/articles/17522892515341-Official-Uniswap-Labs-links",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "support.uniswap.org"
+      ]
+    },
+    {
+      "id": "S24",
+      "ref": "https://github.com/Uniswap/interface",
+      "type": "repository",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S25",
+      "ref": "https://github.com/Uniswap/v4-core",
+      "type": "repository",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S26",
+      "ref": "https://github.com/Uniswap/protocol-fees",
+      "type": "repository",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S27",
+      "ref": "https://etherscan.io/address/0x000000000004444c5dc75cB358380D2e3dE08A90",
+      "type": "explorer",
+      "read_at": "2026-11-21T00:09:05.081642+00:00",
+      "could_open": true,
+      "read_via": [
+        "etherscan.io"
+      ]
+    },
+    {
+      "id": "S28",
+      "ref": "https://defillama.com/protocol/uniswap",
+      "type": "outside-data",
+      "read_at": "2026-11-21T00:09:05.092792+00:00",
+      "could_open": true,
+      "read_via": [
+        "defillama.com"
+      ]
+    },
+    {
+      "id": "S29",
+      "ref": "https://www.coingecko.com/en/coins/uniswap",
+      "type": "outside-data",
+      "read_at": "2026-11-21T00:09:05.111079+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.coingecko.com"
+      ]
+    },
+    {
+      "id": "S30",
+      "ref": "https://www.theblock.co/news/ecosystems/2025-12-25-uniswap-passes-unification-proposal-383742",
+      "type": "news",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.theblock.co"
+      ]
+    },
+    {
+      "id": "S31",
+      "ref": "https://blog.uniswap.org/unification",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S32",
+      "ref": "https://developers.uniswap.org/docs/liquidity/liquidity-launchpad/overview",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S33",
+      "ref": "https://socks.uniswap.org/",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "socks.uniswap.org"
+      ]
+    },
+    {
+      "id": "S34",
+      "ref": "https://github.com/Uniswap/unisocks",
+      "type": "repository",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S35",
+      "ref": "https://developers.uniswap.org/docs/protocols/v4/overview",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S36",
+      "ref": "https://developers.uniswap.org/docs/protocols/tjar/overview",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S37",
+      "ref": "https://developers.uniswap.org/docs/trading/swapping-api/supported-chains",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S38",
+      "ref": "https://blog.uniswap.org/uniswap-v3",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S39",
+      "ref": "https://gov.uniswap.org/t/executed-unification-proposal/25881",
+      "type": "forum",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "gov.uniswap.org"
+      ]
+    },
+    {
+      "id": "S40",
+      "ref": "https://x.com/Uniswap",
+      "type": "social",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "S41",
+      "ref": "https://x.com/haydenzadams",
+      "type": "social",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "S42",
+      "ref": "https://x.com/UniswapBuilders",
+      "type": "social",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "S43",
+      "ref": "https://x.com/UniswapAuctions",
+      "type": "social",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "S44",
+      "ref": "https://cdn.app.uniswap.org/images/192x192_App_Icon.png",
+      "type": "image",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "cdn.app.uniswap.org"
+      ]
+    },
+    {
+      "id": "S45",
+      "ref": "https://socks.uniswap.org/static/js/main.a2989bbb.chunk.js",
+      "type": "official-code",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "socks.uniswap.org"
+      ]
+    },
+    {
+      "id": "S47",
+      "ref": "https://morpho.org/",
+      "type": "outside-primary",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "morpho.org"
+      ]
+    },
+    {
+      "id": "S48",
+      "ref": "https://www.unichain.org/",
+      "type": "project",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.unichain.org"
+      ]
+    },
+    {
+      "id": "S49",
+      "ref": "https://wallet.uniswap.org/",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "wallet.uniswap.org"
+      ]
+    },
+    {
+      "id": "S50",
+      "ref": "https://developers.uniswap.org/docs/trading/swapping-api/amm-vs-uniswapx-routing",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S51",
+      "ref": "https://ethereum.publicnode.com/",
+      "type": "rpc-provider",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "ethereum.publicnode.com"
+      ]
+    },
+    {
+      "id": "S46",
+      "ref": "https://ethereum-rpc.publicnode.com",
+      "type": "rpc",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "ethereum-rpc.publicnode.com"
+      ]
+    },
+    {
+      "id": "S52",
+      "ref": "https://api.imd.fun/artifacts/f5bd0e60b5cea8dc72e702962c04b9556593fdc1e3e994c7809dad94345adc29",
+      "type": "prior_record",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "api.imd.fun"
+      ]
+    },
+    {
+      "id": "S53",
+      "ref": "https://developers.uniswap.org/docs/protocols/v4/deployments",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S54",
+      "ref": "https://uniswap.org/",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "uniswap.org",
+        "app.uniswap.org"
+      ]
+    },
+    {
+      "id": "S55",
+      "ref": "https://support.uniswap.org/",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "support.uniswap.org"
+      ]
+    },
+    {
+      "id": "S56",
+      "ref": "https://eth.drpc.org",
+      "type": "rpc",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "eth.drpc.org"
+      ]
+    },
+    {
+      "id": "S57",
+      "ref": "https://support.uniswap.org/hc/en-us/articles/46865818181901-Earn-on-Uniswap",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "support.uniswap.org"
+      ]
+    },
+    {
+      "id": "S58",
+      "ref": "https://gov.uniswap.org/t/executed-temp-check-rotate-sentinel-addresses-on-the-duni-owned-uniswap-earn-vaults/26281",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "gov.uniswap.org"
+      ]
+    },
+    {
+      "id": "S59",
+      "ref": "https://vote.uniswapfoundation.org/proposals/101",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "vote.uniswapfoundation.org"
+      ]
+    },
+    {
+      "id": "S60",
+      "ref": "https://blog.uniswap.org/token-auctions-are-coming-to-the-uniswap-web-app",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S61",
+      "ref": "https://blog.uniswap.org/launch-auctions-from-uniswap-web-app",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S62",
+      "ref": "https://blog.uniswap.org/how-tjar-works-uniswaps-onchain-fee-conversion-system",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S63",
+      "ref": "https://defillama.com/protocol/uniswap?denomination=USD",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "defillama.com"
+      ]
+    },
+    {
+      "id": "S64",
+      "ref": "https://www.openzeppelin.com/news/uniswap-v4-core-audit",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.openzeppelin.com"
+      ]
+    },
+    {
+      "id": "S65",
+      "ref": "https://www.cftc.gov/PressRoom/PressReleases/8961-24",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.cftc.gov"
+      ]
+    },
+    {
+      "id": "S66",
+      "ref": "https://www.axios.com/2024/09/04/uniswap-labs-regulators-cftc",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.axios.com"
+      ]
+    },
+    {
+      "id": "S67",
+      "ref": "https://blog.uniswap.org/pt-BR/uniswap-is-live-on-arc",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S68",
+      "ref": "https://investor.circle.com/news/news-details/2026/Circle-Launches-Arc-Mainnet-an-Economic-Operating-System-for-the-Internet/",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "investor.circle.com"
+      ]
+    },
+    {
+      "id": "S69",
+      "ref": "https://blog.uniswap.org/elysium-is-live-on-uniswap-apps",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S70",
+      "ref": "https://www.unichain.org/about",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.unichain.org"
+      ]
+    },
+    {
+      "id": "S71",
+      "ref": "https://blog.uniswap.org/unichain-is-upgrading-to-op-enterprise",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "blog.uniswap.org"
+      ]
+    },
+    {
+      "id": "S72",
+      "ref": "https://gov.optimism.io/t/maintenance-upgrade-proposal-unichain-mainnet-proposer-rotation-and-l1-cost-fee-routing/10905",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "gov.optimism.io"
+      ]
+    },
+    {
+      "id": "S73",
+      "ref": "https://developers.uniswap.org/docs/unichain",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    },
+    {
+      "id": "S74",
+      "ref": "https://www.unichain.org/terms",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.unichain.org"
+      ]
+    },
+    {
+      "id": "S75",
+      "ref": "https://www.cftc.gov/filings/ptc/ptc09292630339.pdf",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.cftc.gov"
+      ]
+    },
+    {
+      "id": "S76",
+      "ref": "https://www.uniswapfoundation.org/impact",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.uniswapfoundation.org"
+      ]
+    },
+    {
+      "id": "S77",
+      "ref": "https://gov.uniswap.org/t/executed-temp-check-activate-v4-protocol-fees/26162/1",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "gov.uniswap.org"
+      ]
+    },
+    {
+      "id": "S78",
+      "ref": "https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-v4-on-five-more-chains/26349",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "gov.uniswap.org"
+      ]
+    },
+    {
+      "id": "S79",
+      "ref": "https://vote.uniswapfoundation.org/proposals/93",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "vote.uniswapfoundation.org"
+      ]
+    },
+    {
+      "id": "S80",
+      "ref": "https://discord.gg/uniswap",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "discord.gg",
+        "discord.com"
+      ]
+    },
+    {
+      "id": "S81",
+      "ref": "https://lenster.xyz/u/uniswap",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": false,
+      "read_via": [
+        "lenster.xyz",
+        "www.lenster.xyz"
+      ]
+    },
+    {
+      "id": "S82",
+      "ref": "https://github.com/Uniswap/unisocks-erc721/blob/master/README.md",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S83",
+      "ref": "https://raw.githubusercontent.com/Uniswap/unisocks-erc721/master/contracts/unisocks.vy",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S84",
+      "ref": "https://raw.githubusercontent.com/Uniswap/unisocks-erc721/master/contracts/unisocksController.sol",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S85",
+      "ref": "https://www.onchainatlas.org/unisocks/history/",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.onchainatlas.org"
+      ]
+    },
+    {
+      "id": "S86",
+      "ref": "https://statuspage.incident.io/uniswap-status",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "statuspage.incident.io"
+      ]
+    },
+    {
+      "id": "S87",
+      "ref": "https://github.com/Uniswap/docs/blob/main/content/protocols/v4/deployments.mdx",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "S88",
+      "ref": "https://www.coingecko.com/en/coins/uniswap#uniswap-statistics",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "www.coingecko.com"
+      ]
+    },
+    {
+      "id": "S89",
+      "ref": "https://developers.uniswap.org/deployments",
+      "type": "official",
+      "read_at": "2026-11-23T19:56:40+00:00",
+      "could_open": true,
+      "read_via": [
+        "developers.uniswap.org"
+      ]
+    }
+  ],
+  "ignored_instructions": [],
+  "notes": [
+    "F1 was fetched from https://api.imd.fun/artifacts/f5bd0e60b5cea8dc72e702962c04b9556593fdc1e3e994c7809dad94345adc29. All 69 earlier lines are carried with their original IDs in from. Earlier market observations refer to the November 21 reading.",
+    "The full Uniswap domain covers trading contracts and governance plus the web app, wallet, and developer products developed by Uniswap Labs. The selected Ethereum PoolManager is the shared core for v4. This inventory concentrates on the principal Ethereum components and includes the Earn share tokens and Digital Unisocks collectible. [S04,L13,L14,S59]",
+    "Current Ethereum chain reads use finalized block 26479958 at 2026-11-23T19:34:47+00:00. PublicNode served the current reads and deployment transaction. dRPC served the historical deployment bytecode and most prior state checks. Prior proof values are carried in history. Older snapshots may require an archive-capable endpoint. [S46,S56]",
+    "The developer documentation is weak at the channel level because its v4 deployment page publishes the address. The legacy documentation root redirects to that documentation. The official directory establishes links to social and code accounts. The founder’s personal X channel was retained from its self-identification. The Lens link in the directory returned an unavailable profile in this run. [S02,S11,S23,S41]",
+    "The deployment transaction sender is a wallet address, with transaction execution through a separate factory. Governance control refers to v4 fee settings. [L43,L44,L66]",
+    "Supply shows Ethereum contract totals for the live native tokens , the three Earn share contracts and the collectible. UNI bridge representations are documented separately. The configured burn-recipient balance remains part of the UNI contract total. [L42,L54,L55,S18]",
+    "The Etherscan address page returned HTTP 403. Deployment block, bytecode and transaction evidence were checked directly by RPC. [S27,L65,L66]",
+    "Tracker figures reflect the pages as read. The historical UNI price remains as an attributed line. The price row covers interface charges. [L05,L31,L32]"
+  ]
+}
