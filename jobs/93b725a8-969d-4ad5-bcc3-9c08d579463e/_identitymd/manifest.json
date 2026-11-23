@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "9e112c4f0f071b9e5151946b34a907cfb3acbfc3636534434a17b7f1c56e3cca",
+  "artifacts": [
+    {
+      "bytes": 30254,
+      "hash": "d22a0f50f29daa4890eaaec9cf6362a63e5f08be52a6814ccb70084f9ed46d83",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "03c488abc9544b1cbfffa3cfc1e72eb2cdef03376ce7e7b8b33816f85cf3e709"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a2bbe7421f10a578041681394ec3014e4b3417706bff23d0daf76f162905496",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "03c488abc9544b1cbfffa3cfc1e72eb2cdef03376ce7e7b8b33816f85cf3e709",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+d17d3545"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2fe9efd0790ef9c3323e4e47b30b504ff55bde22a27d795a26ed932f20804cf0",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "9ce698810f8e3dde751757f618186dffd47e58ced52b275dc53c6fb08ccebee0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "93b725a8-969d-4ad5-bcc3-9c08d579463e",
+  "objective": "Do not submit the entry, sign wallet messages or set a payout address. Stay within the authorized task budget. The entrant reviews and submits via their own make.fun account. No prize guarantees.",
+  "publisherVersion": "0.1.0+b1124a15",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
