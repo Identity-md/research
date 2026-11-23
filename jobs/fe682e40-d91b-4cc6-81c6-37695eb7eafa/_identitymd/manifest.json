@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "8a996c52c9a4a0e3315593ddc6765752ea3ed5f0005de77663bdafcaa447f149",
+  "artifacts": [
+    {
+      "bytes": 27366,
+      "hash": "931c4594a3d95a597253c6a88b8e699c67988be1f3d462a95898ad11afe5406c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "b5b622b070ecd4544fab4b498b8718391547df3301204d8c485cecad02bc61cb"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0eca5d6d7ad6ddb47e81e2e533a069b9ec3a436b27ba5c360a4dda3013256c32",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-2",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "b5b622b070ecd4544fab4b498b8718391547df3301204d8c485cecad02bc61cb",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+c253a67b"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "410247426ec5a6df24bcc4befa402ac518031430e3f07ab61a2958f23426b5e2",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-2",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "802cc174033fd38d662bda8ad4b65e4ff62b7163a96fd79f7c0931c8582e93fa",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "fe682e40-d91b-4cc6-81c6-37695eb7eafa",
+  "objective": "Launch a token called Test (ticker TEST) on Sepolia; its launch opens its Uniswap v4 pool so it trades there. Also deploy one staking contract: holders stake TEST and earn points over time in proportion to their share of the total currently staked. Then build one website for the token where people can see it and stake. That is two contracts to deploy (the token and the staking contract) and one website, all on Sepolia.",
+  "publisherVersion": "0.1.0+c253a67b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
