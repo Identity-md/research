@@ -1,0 +1,42 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6a95583193801e2cef1122983f906d93cffa547919e08b5507a760e287927a33",
+  "artifacts": [
+    {
+      "bytes": 2611,
+      "hash": "a6954f651cb5a3f0c5aca9f5a391cbffa04197aa4376f75d2c8b27049b574d47",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "83847d89d3cbab73de276b1a61f6114b4ed00c394d483fc117c7a136c437b013"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "0da932e4a0b9bd4adf391ad52fb089f61654b58f505c38cf1a7382392ab436a7",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "83847d89d3cbab73de276b1a61f6114b4ed00c394d483fc117c7a136c437b013",
+      "treeHash": "4a233c502ff9ff6c3de47ba7d93664434bb34dee",
+      "verifiedTreeHash": "4a233c502ff9ff6c3de47ba7d93664434bb34dee",
+      "verifierVersion": "0.1.0+c253a67b"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "fcac8377-7188-49bd-9ba5-51c573ca59ab",
+  "objective": "Start from this report's page file and return the whole page again as artifacts/page.json, in the same format, with every earlier line kept under its same id. Make one correction: Fren Pet on Base and IMD on Ethereum are one token joined by a LayerZero bridge.\n\nSource to start from: https://etherscan.io/token/0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 (the IMD token on Ethereum). Read its peers for Base (id 30184), then read token() and peers on the contract it names. Treat this note as a lead to check, not as a fact.\n\nIf the reads confirm it, fix the Tokens and Supply key facts and add one proof line with the reads. Report separately how many Fren Pet are locked in the Base contract next to the IMD supply on other chains, and say plainly if they differ. Change nothing else. In notes, say which earlier files you were given and how you received them.",
+  "publisherVersion": "0.1.0+c253a67b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
