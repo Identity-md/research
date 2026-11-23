@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6440fa70d24e228097432add98314424019a745f42dbc21a888d8485e939e5e5",
+  "artifacts": [
+    {
+      "bytes": 63886,
+      "hash": "bd047681294885fe78d685723698690e235e0b4b86389dcf4623dfbc63ddab8a",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "7dcdbd4e4adeed511ea1ab6a9d05af3b8c4222c3ad92fd4bff89a80a4b4f8978"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a11a2548561202060d91f2958eb777cf289a47192203ea2c941beffa898f0242",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "7dcdbd4e4adeed511ea1ab6a9d05af3b8c4222c3ad92fd4bff89a80a4b4f8978",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+d17d3545"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4eb5b0156b09157cb422ac7b91833309585c2e4b492d529ff9f98ca971ce7074",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "f6efd0b9151c0f43be1b94ba725b857899f9d7b9df9a29f89558c54b824000dd",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "339a87f9-3f35-495f-9fd7-4cee39c84d78",
+  "objective": "Objective: find and formalize in Lean 4 already-SOLVED problems from the Justin Sun Prize problem bank that still lack a Lean proof, so a Lean-formalization claim (30% share) can be filed.\n\nSource: https://github.com/TheJustinSunPrize/awards (problems/README.md and problems/catalog-*.md). Rules: https://www.hejustinsun.com/prize/rules (Lean only; Coq/Isabelle not accepted).\n\nPlan:\n1. Scan the whole bank (JSP-000001..JSP-001022). List every problem with Current status = Solved AND Lean proof = No or Pending, and claim status not Claimed. For each: JSP id, Erdős number if any, one-line statement, link to the published solution (paper/arXiv/erdosproblems.com thread), proof length estimate, and which Mathlib areas it needs.\n2. Rank candidates by how easy the formalization is: short elementary proofs first (number theory / combinatorics with existing Mathlib support). Check GitHub, Mathlib, erdosproblems.com, the Formal Conjectures repo and Lean Zulip to drop any problem that already has a public Lean proof or an open formalization effort.\n3. For the top 5 candidates, write a complete Lean 4 + current Mathlib formalization of the statement and proof. Each file must compile with `lake build`, contain no `sorry`/`admit`, and add no axioms beyond propext, Classical.choice, Quot.sound (show `#print axioms` output). Make sure the formal statement matches the bank's statement exactly.\n4. Find out what award amount applies to bank problems (tiers II-V) and how a Lean-formalization claim is submitted (PR format to TheJustinSunPrize GitHub org).\n\nDeliverable: one report with (a) the full candidate table, (b) the ranked shortlist with reasons, (c) the Lean files that compile with build logs and #print axioms output, or for each failed one exactly where it got stuck, (d) award amounts and the claim procedure. Be explicit about anything not verified. Do not submit any claim or PR yourselves.",
+  "publisherVersion": "0.1.0+b1124a15",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
