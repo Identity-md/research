@@ -1,0 +1,3642 @@
+{
+  "tag": "page",
+  "input": "nousresearch.com",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "project",
+    "name": "Nous Research",
+    "one_line": "Nous Research, Inc. develops AI models, Hermes apps and Nous Portal, and operates the Psyche training testnet with programs on Solana devnet.",
+    "channels": [
+      {
+        "label": "Nous Research website",
+        "url": "https://nousresearch.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Nous Research releases",
+        "url": "https://nousresearch.com/releases",
+        "tie": "none"
+      },
+      {
+        "label": "Nous Research blog",
+        "url": "https://nousresearch.com/blog",
+        "tie": "none"
+      },
+      {
+        "label": "Nous Portal",
+        "url": "https://portal.nousresearch.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Hermes Agent website",
+        "url": "https://hermes-agent.nousresearch.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Hermes Agent docs",
+        "url": "https://hermes-agent.nousresearch.com/docs",
+        "tie": "none"
+      },
+      {
+        "label": "Nous Research forum",
+        "url": "https://forum.nousresearch.com/latest",
+        "tie": "none"
+      },
+      {
+        "label": "Nous Forge",
+        "url": "https://forge.nousresearch.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Psyche dashboard",
+        "url": "https://psyche.network/",
+        "tie": "linked"
+      },
+      {
+        "label": "Psyche docs",
+        "url": "https://docs.psyche.network/",
+        "tie": "linked"
+      },
+      {
+        "label": "Psyche repository",
+        "url": "https://github.com/PsycheFoundation/nousnet",
+        "tie": "linked"
+      },
+      {
+        "label": "Hermes Agent repository",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "tie": "linked"
+      },
+      {
+        "label": "Nous fine-tuning subnet repository",
+        "url": "https://github.com/NousResearch/finetuning-subnet",
+        "tie": "linked"
+      },
+      {
+        "label": "Hermes Agent on Docker Hub",
+        "url": "https://hub.docker.com/r/nousresearch/hermes-agent",
+        "tie": "linked"
+      },
+      {
+        "label": "@NousResearch on X",
+        "url": "https://x.com/NousResearch",
+        "tie": "linked"
+      },
+      {
+        "label": "Nous Research on Discord",
+        "url": "https://discord.gg/nousresearch",
+        "tie": "linked"
+      },
+      {
+        "label": "NousResearch on GitHub",
+        "url": "https://github.com/NousResearch",
+        "tie": "linked"
+      },
+      {
+        "label": "Nous Research on YouTube",
+        "url": "https://www.youtube.com/@NousResearch",
+        "tie": "linked"
+      },
+      {
+        "label": "Nous Research on LinkedIn",
+        "url": "https://www.linkedin.com/company/nousresearch/",
+        "tie": "linked"
+      },
+      {
+        "label": "Nous Research on Facebook",
+        "url": "https://www.facebook.com/profile.php?id=61594748580975",
+        "tie": "linked"
+      },
+      {
+        "label": "Nous Research on Instagram",
+        "url": "https://www.instagram.com/nous_research/",
+        "tie": "linked"
+      },
+      {
+        "label": "Nous Research on TikTok",
+        "url": "https://www.tiktok.com/@nousresearch",
+        "tie": "linked"
+      },
+      {
+        "label": "NousResearch on Hugging Face",
+        "url": "https://huggingface.co/NousResearch",
+        "tie": "linked"
+      },
+      {
+        "label": "Dillon Rolnick on LinkedIn",
+        "url": "https://www.linkedin.com/in/dillon-rolnick-a29501128",
+        "tie": "none"
+      },
+      {
+        "label": "Jeffrey Quesnelle’s website",
+        "url": "https://jeffq.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Jeffrey Quesnelle on GitHub",
+        "url": "https://github.com/jquesnelle",
+        "tie": "none"
+      },
+      {
+        "label": "Jeffrey Quesnelle on LinkedIn",
+        "url": "https://www.linkedin.com/in/jeffrey-quesnelle-2490a524",
+        "tie": "none"
+      },
+      {
+        "label": "@theemozilla on X",
+        "url": "https://x.com/theemozilla",
+        "tie": "none"
+      },
+      {
+        "label": "@karan4d on X",
+        "url": "https://x.com/karan4d",
+        "tie": "none"
+      },
+      {
+        "label": "Shivani Mitra’s website",
+        "url": "https://shivanimitra.com/",
+        "tie": "none"
+      },
+      {
+        "label": "Teknium on GitHub",
+        "url": "https://github.com/teknium1",
+        "tie": "none"
+      },
+      {
+        "label": "@Teknium on X",
+        "url": "https://x.com/Teknium",
+        "tie": "none"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y",
+        "chain": "Solana devnet",
+        "role": "Psyche coordinator. Nous links to this deployment, and the coordinator is the program that holds training state and advances runs.",
+        "main": true
+      },
+      {
+        "address": "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7",
+        "chain": "Solana devnet",
+        "role": "NousNet coordinator named in current source code",
+        "main": false
+      },
+      {
+        "address": "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw",
+        "chain": "Solana devnet",
+        "role": "Training participant authorization",
+        "main": false
+      },
+      {
+        "address": "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw",
+        "chain": "Solana devnet",
+        "role": "Optional run escrow and rewards",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "value": "nousresearch.com",
+      "lines": [
+        "L1"
+      ],
+      "url": "https://nousresearch.com/"
+    },
+    {
+      "label": "Main contract",
+      "value": "Psyche coordinator HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y on Solana devnet",
+      "lines": [
+        "L21",
+        "L80"
+      ],
+      "url": "https://explorer.solana.com/address/HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y?cluster=devnet",
+      "values": [
+        {
+          "name": "Psyche coordinator",
+          "text": "",
+          "address": "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y",
+          "chain": "Solana devnet"
+        }
+      ]
+    },
+    {
+      "label": "Chains",
+      "value": "Solana devnet",
+      "lines": [
+        "L80",
+        "L85"
+      ],
+      "url": "https://explorer.solana.com/address/HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y?cluster=devnet"
+    },
+    {
+      "label": "Contracts",
+      "value": "NousNet coordinator, authorizer and treasurer on Solana devnet",
+      "lines": [
+        "L81",
+        "L82",
+        "L83"
+      ],
+      "values": [
+        {
+          "name": "Source-listed nousnet coordinator",
+          "text": "",
+          "address": "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7",
+          "chain": "Solana devnet"
+        },
+        {
+          "name": "Authorizer",
+          "text": "",
+          "address": "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw",
+          "chain": "Solana devnet"
+        },
+        {
+          "name": "Treasurer",
+          "text": "",
+          "address": "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw",
+          "chain": "Solana devnet"
+        }
+      ]
+    },
+    {
+      "label": "Nous Portal personal plans",
+      "value": "Free, $20, $100 or $200 per month",
+      "lines": [
+        "L8",
+        "L31"
+      ],
+      "url": "https://portal.nousresearch.com/manage-subscription",
+      "values": [
+        {
+          "name": "Free",
+          "text": "$0"
+        },
+        {
+          "name": "Plus",
+          "text": "$20/month"
+        },
+        {
+          "name": "Super",
+          "text": "$100/month"
+        },
+        {
+          "name": "Ultra",
+          "text": "$200/month"
+        }
+      ]
+    },
+    {
+      "label": "Size",
+      "value": "57.9 trillion Hermes model tokens on OpenRouter (November 24, 2026)",
+      "lines": [
+        "L49"
+      ],
+      "url": "https://openrouter.ai/apps/hermes-agent"
+    },
+    {
+      "label": "Deployed by",
+      "value": "8HhvCSDMjnse59ocSWSRsbYsfVGNb1t2rqdaG4Giu4sJ (Psyche coordinator)",
+      "lines": [
+        "L88"
+      ],
+      "url": "https://explorer.solana.com/tx/62cmEJtoaNvAarcyF9VjQThkXDM6UnmBPXRAFKKvjaxEi4vXyiqsEVAAQNRut5KkTQWbcF9fjXfFg82JtT4CmRQ3?cluster=devnet"
+    },
+    {
+      "label": "Controlled by",
+      "value": "8HhvCSDMjnse59ocSWSRsbYsfVGNb1t2rqdaG4Giu4sJ (coordinator upgrades)",
+      "lines": [
+        "L86"
+      ],
+      "url": "https://explorer.solana.com/address/8HhvCSDMjnse59ocSWSRsbYsfVGNb1t2rqdaG4Giu4sJ?cluster=devnet"
+    },
+    {
+      "label": "Founder or creator",
+      "value": "Jeffrey Quesnelle, Karan Malhotra, Shivani Mitra, Teknium",
+      "lines": [
+        "L54",
+        "L55",
+        "L56",
+        "L58"
+      ],
+      "values": [
+        {
+          "name": "Jeffrey Quesnelle",
+          "text": ""
+        },
+        {
+          "name": "Karan Malhotra",
+          "text": ""
+        },
+        {
+          "name": "Shivani Mitra",
+          "text": ""
+        },
+        {
+          "name": "Teknium",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "label": "Run by",
+      "value": "Nous Research, Inc. and Dillon Rolnick, CEO",
+      "lines": [
+        "L50",
+        "L51"
+      ],
+      "url": "https://nousresearch.com/hermes-enterprise-in-microsoft-teams",
+      "values": [
+        {
+          "name": "Nous Research, Inc.",
+          "text": ""
+        },
+        {
+          "name": "Dillon Rolnick",
+          "text": "CEO"
+        }
+      ]
+    },
+    {
+      "label": "Contributors",
+      "value": "Jeffrey Quesnelle and the Psyche team",
+      "lines": [
+        "L53",
+        "L71",
+        "L21"
+      ],
+      "values": [
+        {
+          "name": "Jeffrey Quesnelle",
+          "text": "CTO"
+        },
+        {
+          "name": "Psyche Team",
+          "text": "distributed training"
+        }
+      ]
+    },
+    {
+      "label": "Official accounts",
+      "value": "Nous Research accounts",
+      "lines": [
+        "L60",
+        "L61",
+        "L62"
+      ],
+      "values": [
+        {
+          "name": "@NousResearch on X",
+          "text": "",
+          "url": "https://x.com/NousResearch"
+        },
+        {
+          "name": "Nous Research on Discord",
+          "text": "",
+          "url": "https://discord.gg/nousresearch"
+        },
+        {
+          "name": "NousResearch on GitHub",
+          "text": "",
+          "url": "https://github.com/NousResearch"
+        },
+        {
+          "name": "Nous Research on YouTube",
+          "text": "",
+          "url": "https://www.youtube.com/@NousResearch"
+        },
+        {
+          "name": "Nous Research on LinkedIn",
+          "text": "",
+          "url": "https://www.linkedin.com/company/nousresearch/"
+        },
+        {
+          "name": "Nous Research on Facebook",
+          "text": "",
+          "url": "https://www.facebook.com/profile.php?id=61594748580975"
+        },
+        {
+          "name": "Nous Research on Instagram",
+          "text": "",
+          "url": "https://www.instagram.com/nous_research/"
+        },
+        {
+          "name": "Nous Research on TikTok",
+          "text": "",
+          "url": "https://www.tiktok.com/@nousresearch"
+        },
+        {
+          "name": "NousResearch on Hugging Face",
+          "text": "",
+          "url": "https://huggingface.co/NousResearch"
+        }
+      ]
+    },
+    {
+      "label": "Launched",
+      "value": "2023 (Nous releases), February 2026 (Hermes Agent)",
+      "lines": [
+        "L64",
+        "L67",
+        "L66",
+        "L68"
+      ],
+      "url": "https://nousresearch.com/releases",
+      "values": [
+        {
+          "name": "Nous Research",
+          "text": "2023"
+        },
+        {
+          "name": "Hermes Agent",
+          "text": "February 2026"
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "text": "Nous Research develops AI models, builds apps for using them, and runs a training test network called Psyche.",
+      "lines": [
+        "L2",
+        "L9",
+        "L3",
+        "L10",
+        "L75"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "Nous Research, Inc. operates the services, and Dillon Rolnick is its chief executive, according to the company.",
+      "lines": [
+        "L50",
+        "L51",
+        "L59"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "You can use Hermes Agent on your computer or through a hosted dashboard, and the software is free to run yourself, Nous Research says.",
+      "lines": [
+        "L4",
+        "L6",
+        "L7"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "Psyche pools computing power and uses Solana to coordinate training, and Nous Research says it used Psyche to refine a Hermes model.",
+      "lines": [
+        "L10",
+        "L21",
+        "L20",
+        "L80"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Nous Portal connects the agent to models and tools and offers a free plan and paid plans from $20 a month, the project says.",
+      "lines": [
+        "L5",
+        "L8",
+        "L31"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "API calls use prepaid credits, and paid personal plans include one cloud agent within size limits, according to Nous Portal.",
+      "lines": [
+        "L33",
+        "L32"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Joining a NousNet training run requires approval, and the Psyche team’s test network terms say its test tokens have no monetary value.",
+      "lines": [
+        "L11",
+        "L40"
+      ],
+      "paragraph": 3
+    },
+    {
+      "text": "The checked Psyche programs run on Solana’s test network, and the ledger records their upgrade addresses while the key holders remain unidentified.",
+      "lines": [
+        "L80",
+        "L81",
+        "L86",
+        "L87",
+        "L85"
+      ],
+      "paragraph": 3
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "section": "what_it_does",
+      "text": "Nous Research operates nousresearch.com and its subdomains.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "official",
+        "home"
+      ],
+      "quote": "operates nousresearch.com and its subdomains",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L2",
+      "section": "what_it_does",
+      "text": "Nous Research develops AI models, agent software and training infrastructure.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "home",
+        "enterprise",
+        "sec"
+      ],
+      "quote": "We train models, build agents, and develop infrastructure",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L3",
+      "section": "what_it_does",
+      "text": "Hermes Agent is open-source software that can run tasks, remember past work and create reusable skills.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "hermes",
+        "hermes_code",
+        "home"
+      ],
+      "quote": "Procedural memory the agent creates and reuses",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L4",
+      "section": "what_it_does",
+      "text": "People can use Hermes Agent from a terminal, a desktop app or a connected messaging app.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "home",
+        "hermes",
+        "guide"
+      ],
+      "quote": "CLI, Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Mattermost, Email",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L5",
+      "section": "what_it_does",
+      "text": "One Nous Portal sign-in connects Hermes Agent to models, hosted tools and cloud hosting.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "portal",
+        "integration"
+      ],
+      "quote": "A single sign-in connects Hermes to the model catalog, the Tool Gateway, and cloud hosting.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L6",
+      "section": "what_it_does",
+      "text": "People can chat with a cloud-hosted Hermes Agent from its browser dashboard.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "cloud"
+      ],
+      "quote": "directly in your browser",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L7",
+      "section": "what_it_does",
+      "text": "Hermes Agent is free to self-host under the MIT license.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "official",
+        "hermes_code"
+      ],
+      "quote": "free to self-host",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L8",
+      "section": "what_it_does",
+      "text": "Nous Portal has a free plan limited to free models.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "plans",
+        "cloud"
+      ],
+      "quote": "Free models only",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L9",
+      "section": "what_it_does",
+      "text": "Nous Research publishes Hermes model weights on Hugging Face for people to run themselves.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "model",
+        "model_card",
+        "hub",
+        "releases"
+      ],
+      "quote": "consumer local inference or enterprise self-deployment",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L10",
+      "section": "what_it_does",
+      "text": "Psyche lets compute providers contribute GPUs to train AI models together over the internet.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "intro",
+        "architecture",
+        "psyche_repo"
+      ],
+      "quote": "Psyche is a system that enables distributed training of transformer-based AI models over the internet",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L11",
+      "section": "what_it_does",
+      "text": "The NousNet quickstart requires the run administrator to approve a compute provider’s wallet.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "provider",
+        "joining",
+        "architecture"
+      ],
+      "quote": "NousNet runs are permissioned. To join, you need the run administrator to authorize your wallet.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L12",
+      "section": "what_it_does",
+      "text": "Hermes Business provides hosted agents to members of a team.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "business"
+      ],
+      "quote": "hosted agents for every member",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L13",
+      "section": "what_it_does",
+      "text": "Nous Research announced Hermes Enterprise access in Microsoft Teams and on Azure on November 18, 2026.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "enterprise",
+        "microsoft"
+      ],
+      "quote": "Hermes Agent is available in native Microsoft services for the enterprise.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L14",
+      "section": "what_it_does",
+      "text": "Forge is an API that combines multiple AI models for step-by-step reasoning.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "forge",
+        "forge_news"
+      ],
+      "quote": "is a configurable step-based planning engine that uses a mixture of open and closed LLMs",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L15",
+      "section": "what_it_does",
+      "text": "Nous Chat debuted as a free browser interface for the Hermes 3 70B model.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "forge_news",
+        "releases",
+        "chat"
+      ],
+      "quote": "Nous Chat is available at hermes.nousresearch.com and is currently free!",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L16",
+      "section": "what_it_does",
+      "text": "Atropos coordinates text generation across workers for reinforcement learning.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "atropos",
+        "hermes"
+      ],
+      "quote": "Atropos is designed to reliably coordinate generation tasks across potentially thousands of distributed workers.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L17",
+      "section": "how_it_works",
+      "text": "Hermes Agent supports model providers including Nous Portal, OpenRouter and OpenAI.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "hermes",
+        "guide",
+        "integration"
+      ],
+      "quote": "Works with Nous Portal, OpenRouter, OpenAI, or any endpoint",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L18",
+      "section": "how_it_works",
+      "text": "Nous Portal serves Nous Research’s Hermes 4 models alongside models from other developers.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "integration",
+        "portal"
+      ],
+      "quote": "is available through the Portal",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L19",
+      "section": "how_it_works",
+      "text": "Developers can call models through the Nous Inference API.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "api",
+        "portal",
+        "terms"
+      ],
+      "quote": "Nous Inference API",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L20",
+      "section": "how_it_works",
+      "text": "Nous Research used Psyche to refine the released Hermes 4.3 model after its initial training.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "model",
+        "model_card",
+        "releases"
+      ],
+      "quote": "our first production model post-trained entirely on the Psyche network",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L21",
+      "section": "how_it_works",
+      "text": "Psyche’s main on-chain program is the coordinator because it stores training state and moves runs between stages.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "architecture",
+        "workflow",
+        "model",
+        "explorer"
+      ],
+      "quote": "transition between states of a training run",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L80"
+        }
+      ]
+    },
+    {
+      "id": "L22",
+      "section": "how_it_works",
+      "text": "Psyche workers exchange their model updates directly over the network.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "model",
+        "architecture"
+      ],
+      "quote": "training gradients are communicated out-of-band through a custom mesh P2P network",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L23",
+      "section": "how_it_works",
+      "text": "Psyche uses DisTrO to reduce data transfer between training computers.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team",
+        "Nous Research"
+      ],
+      "sources": [
+        "architecture",
+        "model"
+      ],
+      "quote": "uses the DisTrO optimizer to efficiently communicate between training nodes",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L24",
+      "section": "how_it_works",
+      "text": "Psyche uses Iroh for communication between participating computers.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "architecture"
+      ],
+      "quote": "uses Iroh for its P2P networking",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L25",
+      "section": "how_it_works",
+      "text": "The Psyche run creation guide says owners can pause and unpause their runs.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "creating",
+        "onchain_docs"
+      ],
+      "quote": "until it is explicitly unpaused by the owner, and it can be paused again at any time",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L93"
+        }
+      ]
+    },
+    {
+      "id": "L26",
+      "section": "how_it_works",
+      "text": "Psyche’s run creation tools support runs with open enrollment.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "creating",
+        "onchain_docs"
+      ],
+      "quote": "valid for everyone so any other client can join",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L27",
+      "section": "how_it_works",
+      "text": "A Psyche run can use a treasurer program to hold tokens in escrow.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "rewards",
+        "claim_code"
+      ],
+      "quote": "created through a Treasurer escrow smart contract",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L28",
+      "section": "how_it_works",
+      "text": "The coordinator divides a pool of points equally among workers that finish a training round.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "rewards"
+      ],
+      "quote": "shared equally among all the finishing clients",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L29",
+      "section": "how_it_works",
+      "text": "The Nous fine-tuning subnet used Hugging Face to pass trained models from miners to validators.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "subnet",
+        "miner"
+      ],
+      "quote": "Validators download the models from 🤗 Hugging Face for each miner",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L30",
+      "section": "how_it_works",
+      "text": "Hermes Enterprise lets employees assign and review work within Microsoft Teams.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "enterprise"
+      ],
+      "quote": "review the finished result in the same conversation",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L31",
+      "section": "money",
+      "text": "Nous Portal lists personal subscriptions at $20, $100 and $200 per month.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "cloud",
+        "plans",
+        "portal"
+      ],
+      "quote": "$20 / month",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L32",
+      "section": "money",
+      "text": "Each paid Nous subscription includes one hosted agent up to the plan’s size limit.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "plans",
+        "cloud"
+      ],
+      "quote": "Every subscription includes hosting for one Cloud agent, up to the plan’s included size.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L33",
+      "section": "money",
+      "text": "Nous Portal charges programmatic API calls against pay-as-you-go credits.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "plans",
+        "portal"
+      ],
+      "quote": "API keys always use your credits (pay-as-you-go)",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L34",
+      "section": "money",
+      "text": "The hosted tools and models draw from the same Nous credit balance when billed per use.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "portal"
+      ],
+      "quote": "bills to the same credit balance as your models.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L35",
+      "section": "money",
+      "text": "Deploying a cloud agent requires at least $2 in credits or an active subscription.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "cloud"
+      ],
+      "quote": "$2 minimum in credits, or an active subscription",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L36",
+      "section": "money",
+      "text": "For metered hosting, Nous bills from credits daily for compute and storage, with only storage charged when stopped.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "cloud",
+        "plans"
+      ],
+      "quote": "billed from your Nous credit once each day",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L37",
+      "section": "money",
+      "text": "Hermes Business members draw from one team balance with spending caps the team sets.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "business"
+      ],
+      "quote": "Members draw from it with per-member spend caps you set",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L38",
+      "section": "money",
+      "text": "Nous Research provides the Psyche Phase 0 test network free of charge.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "psyche_terms"
+      ],
+      "quote": "provided as a free service by Nous Research Inc.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L39",
+      "section": "money",
+      "text": "For a funded Psyche run, a participant claims tokens from the treasurer program at a fixed rate per earned point.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "rewards",
+        "claim_code"
+      ],
+      "quote": "a fixed amount of reward token for each earned coordinator point",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L40",
+      "section": "money",
+      "text": "The Psyche Phase 0 terms say its test tokens have no monetary value.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "psyche_terms"
+      ],
+      "quote": "have no economic or monetary value",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L41",
+      "section": "money",
+      "text": "Nous Research says it has no official token for the company or Hermes Agent.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "official",
+        "ownyourmind"
+      ],
+      "quote": "no Hermes Agent or Nous Research token",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L42",
+      "section": "money",
+      "text": "Fortune says Nous had yet to choose between its own token and SOL for paying Psyche participants in April 2025.",
+      "kind": "claim",
+      "by": [
+        "Fortune"
+      ],
+      "sources": [
+        "fortune"
+      ],
+      "quote": "whether users will be rewarded with a proprietary token created by the startup or Solana’s native cryptocurrency",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L43",
+      "section": "money",
+      "text": "Architect Partners says contributors receive a NOUS token that serves as a governance tool, in its April 2025 report.",
+      "kind": "claim",
+      "by": [
+        "Architect Partners"
+      ],
+      "sources": [
+        "architect"
+      ],
+      "quote": "are rewarded with NOUS tokens, which also serve as governance tools within the ecosystem",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L44",
+      "section": "money",
+      "text": "For the historical Nous subnet, Bittensor used validator scores to allocate TAO to miners and validators.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "subnet"
+      ],
+      "quote": "determine the proportion of TAO emission rewarded to miners and validators.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L45",
+      "section": "money",
+      "text": "Nous Research announced a $90 million financing in October 2026.",
+      "kind": "statement",
+      "by": [
+        "Dillon Rolnick",
+        "TechCrunch",
+        "Axios"
+      ],
+      "sources": [
+        "fundraise",
+        "tc2",
+        "axios"
+      ],
+      "quote": "Nous Research raised $90 million",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L46",
+      "section": "money",
+      "text": "TechCrunch says Robot Ventures led the October 2026 financing at a $1.5 billion valuation.",
+      "kind": "claim",
+      "by": [
+        "TechCrunch",
+        "Axios"
+      ],
+      "sources": [
+        "tc2",
+        "axios"
+      ],
+      "quote": "The round was led by Robot Ventures",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L47",
+      "section": "money",
+      "text": "The Block says Paradigm led a $50 million Series A for Nous Research in April 2025.",
+      "kind": "claim",
+      "by": [
+        "The Block",
+        "Fortune"
+      ],
+      "sources": [
+        "theblock",
+        "fortune"
+      ],
+      "quote": "Paradigm has led a $50 million Series A",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L48",
+      "section": "money",
+      "text": "Fortune says the April 2025 financing implied a $1 billion token valuation.",
+      "kind": "claim",
+      "by": [
+        "Fortune",
+        "The Block"
+      ],
+      "sources": [
+        "fortune",
+        "theblock"
+      ],
+      "quote": "The round values Nous at a token valuation of $1 billion",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L49",
+      "section": "what_it_does",
+      "text": "OpenRouter says its Hermes Agent page showed 57.9 trillion model tokens as of November 24, 2026.",
+      "kind": "claim",
+      "by": [
+        "OpenRouter"
+      ],
+      "sources": [
+        "openrouter"
+      ],
+      "quote": "Total tokens 57.9T",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L50",
+      "section": "people",
+      "text": "Nous Research, Inc. operates Nous Portal.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "terms",
+        "home"
+      ],
+      "quote": "Nous Research, Inc., a corporation established under the laws of the State of Delaware",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L51",
+      "section": "people",
+      "text": "Dillon Rolnick is the CEO of Nous Research.",
+      "kind": "statement",
+      "by": [
+        "Nous Research",
+        "Dillon Rolnick"
+      ],
+      "sources": [
+        "enterprise",
+        "fundraise",
+        "nous_linkedin_roles",
+        "dillon"
+      ],
+      "quote": "Dillon Rolnick, CEO of Nous Research",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L52",
+      "section": "people",
+      "text": "The U.S. Securities and Exchange Commission says Dillon Rolnick was Nous Research’s operating chief in September 2025.",
+      "kind": "claim",
+      "by": [
+        "The U.S. Securities and Exchange Commission",
+        "Nous Research"
+      ],
+      "sources": [
+        "sec",
+        "accelerate"
+      ],
+      "quote": "Dillon Rolnick (COO, Nous Research)",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L53",
+      "section": "people",
+      "text": "Jeffrey Quesnelle is the chief technology officer of Nous Research.",
+      "kind": "statement",
+      "by": [
+        "Nous Research",
+        "Microsoft",
+        "RootData",
+        "Jeffrey Quesnelle"
+      ],
+      "sources": [
+        "nous_linkedin_roles",
+        "microsoft",
+        "jeff",
+        "jeff_github",
+        "jeff_linkedin",
+        "rootdata"
+      ],
+      "quote": "Our CEO Dillon Rolnick and CTO Jeffrey Quesnelle",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L54",
+      "section": "people",
+      "text": "TechCrunch says Jeffrey Quesnelle co-founded Nous Research.",
+      "kind": "claim",
+      "by": [
+        "TechCrunch",
+        "Microsoft",
+        "The Block",
+        "RootData",
+        "Jeffrey Quesnelle"
+      ],
+      "sources": [
+        "tc1",
+        "microsoft",
+        "jeff",
+        "jeff_github",
+        "theblock",
+        "rootdata"
+      ],
+      "quote": "The company was founded in 2023 by Jeffrey Quesnelle",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L55",
+      "section": "people",
+      "text": "The Block says Karan Malhotra co-founded Nous Research and was its head of behavior in April 2025.",
+      "kind": "claim",
+      "by": [
+        "The Block",
+        "Fortune",
+        "TechCrunch"
+      ],
+      "sources": [
+        "theblock",
+        "fortune",
+        "tc1",
+        "model_paper"
+      ],
+      "quote": "Head of Behavior Karan Malhotra",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L56",
+      "section": "people",
+      "text": "TechCrunch says Shivani Mitra co-founded Nous Research.",
+      "kind": "claim",
+      "by": [
+        "TechCrunch",
+        "The Block",
+        "RootData",
+        "Shivani Mitra"
+      ],
+      "sources": [
+        "tc1",
+        "theblock",
+        "shivani",
+        "rootdata"
+      ],
+      "quote": "Shivani Mitra",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L57",
+      "section": "people",
+      "text": "Shivani Mitra says she was Nous Research’s founding CEO and president, roles documented on her own site.",
+      "kind": "claim",
+      "by": [
+        "Shivani Mitra"
+      ],
+      "sources": [
+        "shivani"
+      ],
+      "quote": "As Co-Founder, Founding CEO and President",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L58",
+      "section": "people",
+      "text": "The Block says Teknium co-founded Nous Research and was its head of post-training in April 2025.",
+      "kind": "claim",
+      "by": [
+        "The Block",
+        "RootData",
+        "Teknium"
+      ],
+      "sources": [
+        "theblock",
+        "tek_x",
+        "tek_mirror",
+        "tek_github",
+        "rootdata"
+      ],
+      "quote": "Head of Post Training \"Teknium\"",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L59",
+      "section": "people",
+      "text": "Nous Research provides the Psyche test network on behalf of the Psyche Foundation.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "psyche_terms"
+      ],
+      "quote": "on behalf of the Psyche Foundation",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L60",
+      "section": "people",
+      "text": "Nous Research links its X, GitHub and Discord accounts from its official docs.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "official",
+        "home",
+        "x",
+        "github",
+        "discord"
+      ],
+      "quote": "the NousResearch organization",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L61",
+      "section": "people",
+      "text": "Nous Research links its YouTube, Facebook, Instagram, TikTok and LinkedIn accounts from its homepage.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "home",
+        "youtube",
+        "facebook",
+        "instagram",
+        "tiktok",
+        "linkedin"
+      ],
+      "quote": "Go to Youtube",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L62",
+      "section": "people",
+      "text": "Nous Research publishes model releases through the NousResearch account on Hugging Face.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "releases",
+        "hub",
+        "model_card"
+      ],
+      "quote": "Arete-27B",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L63",
+      "section": "people",
+      "text": "Nous Research lists the nousresearch/hermes-agent Docker Hub image as official.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "official",
+        "docker"
+      ],
+      "quote": "namespace is official",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L64",
+      "section": "history",
+      "text": "Nous Research dates its formation to 2023.",
+      "kind": "statement",
+      "by": [
+        "Dillon Rolnick",
+        "Nous Research",
+        "TechCrunch",
+        "The Block"
+      ],
+      "sources": [
+        "fundraise",
+        "linkedin",
+        "tc1",
+        "theblock"
+      ],
+      "quote": "We formed Nous in 2023",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L65",
+      "section": "history",
+      "text": "Fortune says Nous Research began as a volunteer group in 2022, according to Karan Malhotra.",
+      "kind": "claim",
+      "by": [
+        "Fortune",
+        "Karan Malhotra"
+      ],
+      "sources": [
+        "fortune"
+      ],
+      "quote": "created in 2022 as a group of volunteers",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L66",
+      "section": "history",
+      "text": "Nous Research lists a public Hermes model release in July 2023.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "releases"
+      ],
+      "quote": "Nous-Hermes-Llama2-13b",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L67",
+      "section": "history",
+      "text": "Hugging Face says the original Nous-Hermes-13b model repository was created on June 3, 2023.",
+      "kind": "claim",
+      "by": [
+        "Hugging Face",
+        "Safeguard"
+      ],
+      "sources": [
+        "early_model_api",
+        "early_model",
+        "early_model_coverage"
+      ],
+      "quote": "\"createdAt\":\"2023-06-03T03:21:50.000Z\"",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L68",
+      "section": "history",
+      "text": "Nous Research dates the public Hermes Agent release to February 25, 2026.",
+      "kind": "statement",
+      "by": [
+        "Nous Research",
+        "Dillon Rolnick",
+        "TechRadar",
+        "Teknium"
+      ],
+      "sources": [
+        "releases",
+        "fundraise",
+        "techradar",
+        "tek_mirror"
+      ],
+      "quote": "02/25/26 AGENT",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L69",
+      "section": "history",
+      "text": "Microsoft says Hermes Agent launched in March 2026.",
+      "kind": "claim",
+      "by": [
+        "Microsoft"
+      ],
+      "sources": [
+        "microsoft"
+      ],
+      "quote": "Hermes Agent launched in March 2026",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L70",
+      "section": "history",
+      "text": "The Block says Nous Research announced the Psyche test network on April 25, 2025.",
+      "kind": "claim",
+      "by": [
+        "The Block"
+      ],
+      "sources": [
+        "theblock"
+      ],
+      "quote": "Nous Research also announced the testnet for its Psyche Network on Friday",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L71",
+      "section": "history",
+      "text": "The Psyche team identifies Consilience 40B as its first testnet training run.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "phase"
+      ],
+      "quote": "Our initial training run on testnet",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L72",
+      "section": "history",
+      "text": "Nous Research listed its Bittensor fine-tuning project in January 2024, and its repository identifies subnet 6.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "releases",
+        "subnet",
+        "miner"
+      ],
+      "quote": "01/29/24 SUBNET",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L73",
+      "section": "history",
+      "text": "Taostats says Bittensor subnet 6 is now listed as Numinous.",
+      "kind": "claim",
+      "by": [
+        "Taostats"
+      ],
+      "sources": [
+        "taostats"
+      ],
+      "quote": "SN6 · Numinous",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L74",
+      "section": "on_chain",
+      "text": "Psyche’s on-chain guide describes a coordinator, an authorizer and an optional treasurer.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "onchain_docs"
+      ],
+      "quote": "the Coordinator and the Authorizer—and one optional account, the Treasurer",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L83"
+        }
+      ]
+    },
+    {
+      "id": "L75",
+      "section": "on_chain",
+      "text": "The Psyche team describes its initial network as a permissioned Solana testnet.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "architecture",
+        "provider"
+      ],
+      "quote": "permissioned testnet",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L88"
+        }
+      ]
+    },
+    {
+      "id": "L76",
+      "section": "on_chain",
+      "text": "Own Your Mind says its October 2026 check found the coordinator, authorizer and treasurer deployed on Solana devnet.",
+      "kind": "claim",
+      "by": [
+        "Own Your Mind"
+      ],
+      "sources": [
+        "ownyourmind"
+      ],
+      "quote": "coordinator, authorizer and treasurer are deployed there",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L92"
+        }
+      ]
+    },
+    {
+      "id": "L77",
+      "section": "on_chain",
+      "text": "Own Your Mind says none of its four checked Psyche program addresses existed on Solana mainnet on October 27, 2026.",
+      "kind": "claim",
+      "by": [
+        "Own Your Mind"
+      ],
+      "sources": [
+        "ownyourmind"
+      ],
+      "quote": "On 27 October 2026 none of the four existed on Solana mainnet.",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L78",
+      "section": "how_it_works",
+      "text": "Hermes 4.3 was built on ByteDance’s Seed-OSS-36B-Base model.",
+      "kind": "statement",
+      "by": [
+        "Nous Research"
+      ],
+      "sources": [
+        "model",
+        "model_card",
+        "seed"
+      ],
+      "quote": "Based on Seed-OSS-36B-Base",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L79",
+      "section": "how_it_works",
+      "text": "Psyche assigns each training computer part of the work and can ask it to check peers.",
+      "kind": "statement",
+      "by": [
+        "Psyche Team"
+      ],
+      "sources": [
+        "architecture",
+        "workflow"
+      ],
+      "quote": "participates in the witness process when elected to validate the work of its peers",
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L80",
+      "section": "on_chain",
+      "text": "The published Psyche coordinator was executable on Solana devnet on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "model",
+        "explorer"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Published psyche coordinator executable",
+        "value": {
+          "address": "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y",
+          "executable": true
+        },
+        "unit": "program account"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 525902383,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getAccountInfo",
+        "params": [
+          "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y",
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 525902383,
+            "dataSlice": {
+              "offset": 0,
+              "length": 36
+            }
+          }
+        ],
+        "check": "Check value.executable and value.owner. The owner is the Solana upgradeable loader. This reruns on a finalized bank at or after the observation slot."
+      }
+    },
+    {
+      "id": "L81",
+      "section": "on_chain",
+      "text": "The source-listed NousNet coordinator was executable on Solana devnet on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-coordinator"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Source-listed nousnet coordinator executable",
+        "value": {
+          "address": "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7",
+          "executable": true
+        },
+        "unit": "program account"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 525902383,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getAccountInfo",
+        "params": [
+          "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7",
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 525902383,
+            "dataSlice": {
+              "offset": 0,
+              "length": 36
+            }
+          }
+        ],
+        "check": "Check value.executable and value.owner. The owner is the Solana upgradeable loader. This reruns on a finalized bank at or after the observation slot."
+      }
+    },
+    {
+      "id": "L82",
+      "section": "on_chain",
+      "text": "The Psyche authorizer was executable on Solana devnet on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-authorizer"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Psyche authorizer executable",
+        "value": {
+          "address": "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw",
+          "executable": true
+        },
+        "unit": "program account"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 525902383,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getAccountInfo",
+        "params": [
+          "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw",
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 525902383,
+            "dataSlice": {
+              "offset": 0,
+              "length": 36
+            }
+          }
+        ],
+        "check": "Check value.executable and value.owner. The owner is the Solana upgradeable loader. This reruns on a finalized bank at or after the observation slot."
+      }
+    },
+    {
+      "id": "L83",
+      "section": "on_chain",
+      "text": "The Psyche treasurer was executable on Solana devnet on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-treasurer"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Psyche treasurer executable",
+        "value": {
+          "address": "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw",
+          "executable": true
+        },
+        "unit": "program account"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 525902383,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getAccountInfo",
+        "params": [
+          "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw",
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 525902383,
+            "dataSlice": {
+              "offset": 0,
+              "length": 36
+            }
+          }
+        ],
+        "check": "Check value.executable and value.owner. The owner is the Solana upgradeable loader. This reruns on a finalized bank at or after the observation slot."
+      }
+    },
+    {
+      "id": "L84",
+      "section": "on_chain",
+      "text": "Devnet returned no accounts for the source-listed mining pool and distributor addresses on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-mining-pool",
+        "solana-distributor"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Undeployed devnet program addresses",
+        "value": {
+          "addresses": [
+            "GQEX84Laeg8JSJiiP5hL9L1vi3gGAMB3E6r1eWhf2fjS",
+            "CQy5JKR2Lrm16pqSY5nkMaMYSazRk2aYx99pJDNGupR7"
+          ],
+          "found": 0
+        },
+        "unit": "accounts"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 525902383,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "GQEX84Laeg8JSJiiP5hL9L1vi3gGAMB3E6r1eWhf2fjS",
+            "CQy5JKR2Lrm16pqSY5nkMaMYSazRk2aYx99pJDNGupR7"
+          ],
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 525902383,
+            "dataSlice": {
+              "offset": 0,
+              "length": 36
+            }
+          }
+        ],
+        "check": "Both entries in value were null. This reruns at a finalized slot at or after the observation slot."
+      }
+    },
+    {
+      "id": "L85",
+      "section": "on_chain",
+      "text": "None of the six checked Psyche addresses was an executable program on Solana mainnet on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "mainnet",
+        "model",
+        "solana-coordinator",
+        "solana-authorizer",
+        "solana-treasurer",
+        "solana-mining-pool",
+        "solana-distributor"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Executable checked mainnet addresses",
+        "value": {
+          "executable_count": 0,
+          "by_address": {
+            "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y": false,
+            "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw": null,
+            "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7": null,
+            "GQEX84Laeg8JSJiiP5hL9L1vi3gGAMB3E6r1eWhf2fjS": null,
+            "CQy5JKR2Lrm16pqSY5nkMaMYSazRk2aYx99pJDNGupR7": null,
+            "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw": null
+          }
+        },
+        "unit": "program accounts"
+      },
+      "rerun": {
+        "chain": "Solana mainnet",
+        "block": 473469847,
+        "block_unit": "slot",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y",
+            "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw",
+            "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7",
+            "GQEX84Laeg8JSJiiP5hL9L1vi3gGAMB3E6r1eWhf2fjS",
+            "CQy5JKR2Lrm16pqSY5nkMaMYSazRk2aYx99pJDNGupR7",
+            "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw"
+          ],
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 473469847,
+            "dataSlice": {
+              "offset": 0,
+              "length": 36
+            }
+          }
+        ],
+        "check": "Five entries were null. The project-linked coordinator address had executable=false and SPL Token as owner. A finalized account read is current state at or after the minimum slot."
+      }
+    },
+    {
+      "id": "L86",
+      "section": "on_chain",
+      "text": "One Solana address held upgrade authority over both Psyche coordinators and the treasurer on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "model",
+        "explorer",
+        "solana-coordinator",
+        "solana-authorizer",
+        "solana-treasurer"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Coordinator and treasurer upgrade authority",
+        "value": {
+          "address": "8HhvCSDMjnse59ocSWSRsbYsfVGNb1t2rqdaG4Giu4sJ",
+          "program_data": {
+            "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y": "5huhy9gjn3VZgmU8HNzrtMzkLDvcB8pCDKHvg76hv65J",
+            "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7": "3jbJbLAGqTrT4MoVmsQYJ7G8ofaecpEqRTSyvjXa6CXL",
+            "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw": "3DPUjNWe6D8JmF2XsTyASYey8jHqKoBoPwg3wfqYec3i"
+          }
+        },
+        "unit": "Solana public key"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 525902385,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "5huhy9gjn3VZgmU8HNzrtMzkLDvcB8pCDKHvg76hv65J",
+            "3jbJbLAGqTrT4MoVmsQYJ7G8ofaecpEqRTSyvjXa6CXL",
+            "3DPUjNWe6D8JmF2XsTyASYey8jHqKoBoPwg3wfqYec3i"
+          ],
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 525902385,
+            "dataSlice": {
+              "offset": 0,
+              "length": 45
+            }
+          }
+        ],
+        "check": "Read the loader ProgramData tag as little-endian u32 at bytes 0–3. Tag 3 identifies ProgramData. Byte 12 is 1 when an authority is present. Decode bytes 13–44 as a base58 Solana public key. The first read below establishes that each program points to the corresponding ProgramData account through bytes 4–35 of its loader account. Snapshot reads use finalized state at or after the stated slot.",
+        "program_lookup": {
+          "method": "getMultipleAccounts",
+          "params": [
+            [
+              "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y",
+              "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7",
+              "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw"
+            ],
+            {
+              "commitment": "finalized",
+              "encoding": "base64",
+              "minContextSlot": 525902383,
+              "dataSlice": {
+                "offset": 0,
+                "length": 36
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L87",
+      "section": "on_chain",
+      "text": "A different Solana address held upgrade authority over the Psyche authorizer on November 24, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "model",
+        "explorer",
+        "solana-coordinator",
+        "solana-authorizer",
+        "solana-treasurer"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Authorizer upgrade authority",
+        "value": {
+          "address": "9Sj5tX5C5VbkWhkrCvp8ttdCaTbH3AEuez6Hw4do4jFN",
+          "program_data": {
+            "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw": "2PqSqCtXVk1dJ8GWbYsE6rhenzSRZnwUyeSik1tZTiMS"
+          }
+        },
+        "unit": "Solana public key"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 525902385,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "2PqSqCtXVk1dJ8GWbYsE6rhenzSRZnwUyeSik1tZTiMS"
+          ],
+          {
+            "commitment": "finalized",
+            "encoding": "base64",
+            "minContextSlot": 525902385,
+            "dataSlice": {
+              "offset": 0,
+              "length": 45
+            }
+          }
+        ],
+        "check": "Read the loader ProgramData tag as little-endian u32 at bytes 0–3. Tag 3 identifies ProgramData. Byte 12 is 1 when an authority is present. Decode bytes 13–44 as a base58 Solana public key. The first read below establishes that each program points to the corresponding ProgramData account through bytes 4–35 of its loader account. Snapshot reads use finalized state at or after the stated slot.",
+        "program_lookup": {
+          "method": "getMultipleAccounts",
+          "params": [
+            [
+              "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw"
+            ],
+            {
+              "commitment": "finalized",
+              "encoding": "base64",
+              "minContextSlot": 525902383,
+              "dataSlice": {
+                "offset": 0,
+                "length": 36
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L88",
+      "section": "history",
+      "text": "The published Psyche coordinator was deployed on Solana devnet on April 12, 2025.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "published-coordinator_deployment_tx"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Deployment fee payer",
+        "value": {
+          "address": "8HhvCSDMjnse59ocSWSRsbYsfVGNb1t2rqdaG4Giu4sJ",
+          "program": "HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y",
+          "signature": "62cmEJtoaNvAarcyF9VjQThkXDM6UnmBPXRAFKKvjaxEi4vXyiqsEVAAQNRut5KkTQWbcF9fjXfFg82JtT4CmRQ3",
+          "timestamp": "2025-04-12T05:49:02+00:00"
+        },
+        "unit": "Solana public key"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 373690807,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getTransaction",
+        "params": [
+          "62cmEJtoaNvAarcyF9VjQThkXDM6UnmBPXRAFKKvjaxEi4vXyiqsEVAAQNRut5KkTQWbcF9fjXfFg82JtT4CmRQ3",
+          {
+            "commitment": "finalized",
+            "encoding": "jsonParsed",
+            "maxSupportedTransactionVersion": 0
+          }
+        ],
+        "check": "Check meta.err is null, then inspect the upgradeable loader deployWithMaxDataLen instruction for its programAccount and payerAccount."
+      }
+    },
+    {
+      "id": "L89",
+      "section": "history",
+      "text": "The Psyche authorizer was deployed on Solana devnet on March 26, 2025.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-authorizer_deployment_tx"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Deployment fee payer",
+        "value": {
+          "address": "9Sj5tX5C5VbkWhkrCvp8ttdCaTbH3AEuez6Hw4do4jFN",
+          "program": "PsyAUmhpmiUouWsnJdNGFSX8vZ6rWjXjgDPHsgqPGyw",
+          "signature": "4teyJ3jZ9STHHpEtWk3MvsuvMtc7VwoSiVjHiEpC5en5swS8CNZhF1kCQM1CNgYsUsacNTCDGuqezHYk9n9eWwdh",
+          "timestamp": "2025-03-26T08:50:32+00:00"
+        },
+        "unit": "Solana public key"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 369926328,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getTransaction",
+        "params": [
+          "4teyJ3jZ9STHHpEtWk3MvsuvMtc7VwoSiVjHiEpC5en5swS8CNZhF1kCQM1CNgYsUsacNTCDGuqezHYk9n9eWwdh",
+          {
+            "commitment": "finalized",
+            "encoding": "jsonParsed",
+            "maxSupportedTransactionVersion": 0
+          }
+        ],
+        "check": "Check meta.err is null, then inspect the upgradeable loader deployWithMaxDataLen instruction for its programAccount and payerAccount."
+      }
+    },
+    {
+      "id": "L90",
+      "section": "history",
+      "text": "The source-listed NousNet coordinator was deployed on Solana devnet on December 05, 2025.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-coordinator_deployment_tx"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Deployment fee payer",
+        "value": {
+          "address": "8HhvCSDMjnse59ocSWSRsbYsfVGNb1t2rqdaG4Giu4sJ",
+          "program": "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7",
+          "signature": "jbeccGRM7oswv43bLJmR9F7MRtVz7vPVvMuBW7L5rSa26jg68Rh8CioGFGK6by1pZaBATUNQqs83UjR6mRq7VCb",
+          "timestamp": "2025-12-05T20:08:56+00:00"
+        },
+        "unit": "Solana public key"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 426276969,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getTransaction",
+        "params": [
+          "jbeccGRM7oswv43bLJmR9F7MRtVz7vPVvMuBW7L5rSa26jg68Rh8CioGFGK6by1pZaBATUNQqs83UjR6mRq7VCb",
+          {
+            "commitment": "finalized",
+            "encoding": "jsonParsed",
+            "maxSupportedTransactionVersion": 0
+          }
+        ],
+        "check": "Check meta.err is null, then inspect the upgradeable loader deployWithMaxDataLen instruction for its programAccount and payerAccount."
+      }
+    },
+    {
+      "id": "L91",
+      "section": "history",
+      "text": "The Psyche treasurer was deployed on Solana devnet on December 09, 2025.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-treasurer_deployment_tx"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Deployment fee payer",
+        "value": {
+          "address": "8HhvCSDMjnse59ocSWSRsbYsfVGNb1t2rqdaG4Giu4sJ",
+          "program": "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw",
+          "signature": "3mDuo1fdCmZqnVLe6M7TRkvAmpLpASZLgd2LSLT54FfjM8AHpyFirdwQnKYXg9UjK4RdKrrKUb2q2eCEDPijBCrD",
+          "timestamp": "2025-12-09T16:53:18+00:00"
+        },
+        "unit": "Solana public key"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 427142953,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getTransaction",
+        "params": [
+          "3mDuo1fdCmZqnVLe6M7TRkvAmpLpASZLgd2LSLT54FfjM8AHpyFirdwQnKYXg9UjK4RdKrrKUb2q2eCEDPijBCrD",
+          {
+            "commitment": "finalized",
+            "encoding": "jsonParsed",
+            "maxSupportedTransactionVersion": 0
+          }
+        ],
+        "check": "Check meta.err is null, then inspect the upgradeable loader deployWithMaxDataLen instruction for its programAccount and payerAccount."
+      }
+    },
+    {
+      "id": "L92",
+      "section": "on_chain",
+      "text": "The source-listed NousNet coordinator processed a successful peer-witness instruction on July 27, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-coordinator_activity_tx",
+        "solana-coordinator"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Successful coordinator witness instruction",
+        "value": {
+          "signature": "5kC1s5siUvHYot5oVFTq3jJkxkgV2dT9rPZgRtt1nhLVsgWe7fiayPm3GyHYNLrhV3Lgcre2quMzRy7gPYq7nTYt",
+          "program": "4SHugWqSXwKE5fqDchkJcPEqnoZE22VYKtSTVm7axbT7"
+        },
+        "unit": "transaction"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 479182900,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getTransaction",
+        "params": [
+          "5kC1s5siUvHYot5oVFTq3jJkxkgV2dT9rPZgRtt1nhLVsgWe7fiayPm3GyHYNLrhV3Lgcre2quMzRy7gPYq7nTYt",
+          {
+            "commitment": "finalized",
+            "encoding": "jsonParsed",
+            "maxSupportedTransactionVersion": 0
+          }
+        ],
+        "check": "Check meta.err is null and meta.logMessages shows Instruction: Witness and success for the source-listed coordinator."
+      }
+    },
+    {
+      "id": "L93",
+      "section": "on_chain",
+      "text": "The Psyche treasurer called the source-listed NousNet coordinator to pause a run on May 01, 2026.",
+      "kind": "proof",
+      "by": [],
+      "sources": [
+        "devnet",
+        "solana-treasurer_activity_tx",
+        "solana-treasurer"
+      ],
+      "from": [],
+      "links": [],
+      "fact": {
+        "name": "Treasurer run pause",
+        "value": {
+          "signature": "2jvUH3BCdeEujkcYJPYu9g6Tdz18XnEqjL9Ru94Y3TAozArFco2YHQDo5TJUKKnXfJx1knBScC6KavYDuxihWhmC",
+          "program": "EnU7DRx5az5YWxaxgqEGbXSYtudcfnjXewyBRRZCjJPw"
+        },
+        "unit": "transaction"
+      },
+      "rerun": {
+        "chain": "Solana devnet",
+        "block": 459414070,
+        "block_unit": "slot",
+        "rpc": "https://api.devnet.solana.com",
+        "method": "getTransaction",
+        "params": [
+          "2jvUH3BCdeEujkcYJPYu9g6Tdz18XnEqjL9Ru94Y3TAozArFco2YHQDo5TJUKKnXfJx1knBScC6KavYDuxihWhmC",
+          {
+            "commitment": "finalized",
+            "encoding": "jsonParsed",
+            "maxSupportedTransactionVersion": 0
+          }
+        ],
+        "check": "Check meta.err is null and meta.logMessages shows the treasurer entering RunUpdate, invoking the source-listed coordinator and setting paused=true."
+      }
+    }
+  ],
+  "related": [
+    {
+      "name": "Solana",
+      "id": "solana.com",
+      "relation": "Devnet runs the Psyche coordinator, authorizer and treasurer",
+      "lines": [
+        "L21",
+        "L80",
+        "L82",
+        "L83"
+      ]
+    },
+    {
+      "name": "Bittensor",
+      "id": "bittensor.com",
+      "relation": "Historical fine-tuning subnet distributed TAO",
+      "lines": [
+        "L72",
+        "L44"
+      ]
+    },
+    {
+      "name": "Iroh",
+      "id": "iroh.computer",
+      "relation": "Peer-to-peer networking for Psyche",
+      "lines": [
+        "L24"
+      ]
+    },
+    {
+      "name": "Hugging Face",
+      "id": "huggingface.co",
+      "relation": "Hosts Hermes weights and fine-tuning subnet models",
+      "lines": [
+        "L9",
+        "L29"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "id": "microsoft.com",
+      "relation": "Teams and Azure integration for Hermes Enterprise",
+      "lines": [
+        "L13",
+        "L30"
+      ]
+    },
+    {
+      "name": "OpenRouter",
+      "id": "openrouter.ai",
+      "relation": "Optional model provider for Hermes Agent",
+      "lines": [
+        "L17"
+      ]
+    },
+    {
+      "name": "ByteDance Seed",
+      "id": "seed.bytedance.com",
+      "relation": "Seed-OSS base model for Hermes 4.3",
+      "lines": [
+        "L78"
+      ]
+    }
+  ],
+  "logo": {
+    "url": "https://nousresearch.com/assets/nous-web/favicon.png",
+    "fetched_at": "2026-11-24T19:57:36Z"
+  },
+  "differs": [
+    {
+      "lines": [
+        "L64",
+        "L65"
+      ],
+      "why": "The company dates formation to 2023. The Fortune interview dates the volunteer group to 2022. These may refer to different stages.",
+      "level": "question"
+    },
+    {
+      "lines": [
+        "L68",
+        "L69"
+      ],
+      "why": "Nous lists a February 25 public release. Microsoft calls March the launch month and does not specify a different release milestone.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L43",
+        "L42",
+        "L41",
+        "L40"
+      ],
+      "why": "The April 2025 report describes NOUS rewards as operating. The contemporary interview says the reward asset was undecided, and official material documents only test assets and disclaims a company token.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L77",
+        "L85"
+      ],
+      "why": "The October article described absence. The later check found a non-executable token account at the published coordinator address. The collection date and tested addresses differ, so the two readings do not establish a contradiction.",
+      "level": "question"
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "Who, if anyone publicly identified, controls the coordinator upgrade address and the separate authorizer upgrade address?",
+    "Is there an official Psyche mainnet deployment at different addresses, and which coordinator would it use?",
+    "Which Psyche runs are currently open for compute providers and what is the operator’s approval process?",
+    "Has any Psyche participant received a reward with monetary value, and what asset and funding source were used?",
+    "Which Nous Research activities took place in 2022 before its stated 2023 formation?",
+    "Does Nous use Portal or enterprise revenue to fund Psyche compute rewards?"
+  ],
+  "sources": [
+    {
+      "id": "home",
+      "ref": "https://nousresearch.com/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "portal",
+      "ref": "https://portal.nousresearch.com/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "portal.nousresearch.com"
+      ]
+    },
+    {
+      "id": "plans",
+      "ref": "https://portal.nousresearch.com/manage-subscription",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "portal.nousresearch.com"
+      ]
+    },
+    {
+      "id": "cloud",
+      "ref": "https://portal.nousresearch.com/cloud",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "portal.nousresearch.com"
+      ]
+    },
+    {
+      "id": "business",
+      "ref": "https://portal.nousresearch.com/business",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "portal.nousresearch.com"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "ref": "https://nousresearch.com/hermes-enterprise-in-microsoft-teams",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "terms",
+      "ref": "https://portal.nousresearch.com/terms",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "portal.nousresearch.com"
+      ]
+    },
+    {
+      "id": "hermes",
+      "ref": "https://hermes-agent.nousresearch.com/docs",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "hermes-agent.nousresearch.com"
+      ]
+    },
+    {
+      "id": "guide",
+      "ref": "https://hermes-agent.nousresearch.com/docs/getting-started/quickstart",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "hermes-agent.nousresearch.com"
+      ]
+    },
+    {
+      "id": "official",
+      "ref": "https://hermes-agent.nousresearch.com/docs/getting-started/official-domains",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "hermes-agent.nousresearch.com"
+      ]
+    },
+    {
+      "id": "integration",
+      "ref": "https://hermes-agent.nousresearch.com/docs/integrations/nous-portal",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "hermes-agent.nousresearch.com"
+      ]
+    },
+    {
+      "id": "api",
+      "ref": "https://portal.nousresearch.com/api-docs",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "portal.nousresearch.com"
+      ]
+    },
+    {
+      "id": "help",
+      "ref": "https://portal.nousresearch.com/help",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "portal.nousresearch.com"
+      ]
+    },
+    {
+      "id": "forum",
+      "ref": "https://forum.nousresearch.com/latest",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "forum.nousresearch.com"
+      ]
+    },
+    {
+      "id": "github",
+      "ref": "https://github.com/NousResearch",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "hermes_code",
+      "ref": "https://github.com/NousResearch/hermes-agent",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "subnet",
+      "ref": "https://github.com/NousResearch/finetuning-subnet",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "miner",
+      "ref": "https://github.com/NousResearch/finetuning-subnet/blob/master/docs/miner.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "taostats",
+      "ref": "https://taostats.io/subnets/6",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "taostats.io"
+      ]
+    },
+    {
+      "id": "releases",
+      "ref": "https://nousresearch.com/releases",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "fundraise",
+      "ref": "https://nousresearch.com/a-note-on-our-fundraise",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "model_paper",
+      "ref": "https://nousresearch.com/wp-content/uploads/2025/08/Hermes_4_Technical_Report.pdf",
+      "type": "paper",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "model",
+      "ref": "https://nousresearch.com/introducing-hermes-4-3",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "hermes3",
+      "ref": "https://nousresearch.com/freedom-at-the-frontier-hermes-3",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "model_card",
+      "ref": "https://huggingface.co/NousResearch/Hermes-4.3-36B",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "id": "hub",
+      "ref": "https://huggingface.co/NousResearch",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "id": "early_model",
+      "ref": "https://huggingface.co/NousResearch/Nous-Hermes-13b",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "id": "early_model_api",
+      "ref": "https://huggingface.co/api/models/NousResearch/Nous-Hermes-13b",
+      "type": "metadata",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "id": "early_model_coverage",
+      "ref": "https://www.safeguard.sh/resources/blog/nous-hermes-models-history-from-nous-hermes-13b-to-hermes-4-3",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.safeguard.sh"
+      ]
+    },
+    {
+      "id": "seed",
+      "ref": "https://seed.bytedance.com/en/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "seed.bytedance.com"
+      ]
+    },
+    {
+      "id": "forge_news",
+      "ref": "https://nousresearch.com/introducing-the-forge-reasoning-api-beta-and-nous-chat-an-evolution-in-llm-inference",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "forge",
+      "ref": "https://forge.nousresearch.com/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "forge.nousresearch.com"
+      ]
+    },
+    {
+      "id": "chat",
+      "ref": "https://hermes.nousresearch.com/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "hermes.nousresearch.com",
+        "hermes-agent.nousresearch.com"
+      ]
+    },
+    {
+      "id": "atropos",
+      "ref": "https://nousresearch.com/introducing-atropos",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "architecture",
+      "ref": "https://nousresearch.com/nous-psyche",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "phase",
+      "ref": "https://nousresearch.com/the-next-phase-of-psyche",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    },
+    {
+      "id": "psyche",
+      "ref": "https://psyche.network/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "psyche.network"
+      ]
+    },
+    {
+      "id": "psyche_docs",
+      "ref": "https://docs.psyche.network/",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "docs.psyche.network"
+      ]
+    },
+    {
+      "id": "psyche_terms",
+      "ref": "https://psyche.network/legal",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "psyche.network"
+      ]
+    },
+    {
+      "id": "psyche_repo",
+      "ref": "https://github.com/PsycheFoundation/nousnet",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "psyche_repo_link",
+      "ref": "https://github.com/PsycheFoundation/psyche",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "book",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/SUMMARY.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "intro",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/intro.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "provider",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/enduser/quickstart-compute-provider.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "joining",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/enduser/join-run.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "creating",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/enduser/create-run.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "onchain_docs",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/development/running-onchain.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "rewards",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/explain/rewards.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "workflow",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/psyche-book/src/explain/general-workflow.md",
+      "type": "docs",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "solana-treasurer",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/architectures/decentralized/solana-treasurer/programs/solana-treasurer/src/lib.rs",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "solana-distributor",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/architectures/decentralized/solana-distributor/programs/solana-distributor/src/lib.rs",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "solana-coordinator",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/architectures/decentralized/solana-coordinator/programs/solana-coordinator/src/lib.rs",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "solana-authorizer",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/architectures/decentralized/solana-authorizer/programs/solana-authorizer/src/lib.rs",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "solana-mining-pool",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/architectures/decentralized/solana-mining-pool/programs/solana-mining-pool/src/lib.rs",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "claim_code",
+      "ref": "https://github.com/PsycheFoundation/nousnet/blob/0bdb13d94a05675da93d69ffa5d4c4e5a680736c/architectures/decentralized/solana-treasurer/programs/solana-treasurer/src/logic/participant_claim.rs",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "fortune",
+      "ref": "https://fortune.com/crypto/2025/04/25/paradigm-nous-research-crypto-ai-venture-capital-deepseek-openai-blockchain/",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "fortune.com"
+      ]
+    },
+    {
+      "id": "theblock",
+      "ref": "https://www.theblock.co/news/deals/2025-04-25-paradigm-leads-50-million-usd-round-decentralized-ai-project-nous-research-352000",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.theblock.co"
+      ]
+    },
+    {
+      "id": "tc1",
+      "ref": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "techcrunch.com"
+      ]
+    },
+    {
+      "id": "tc2",
+      "ref": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "techcrunch.com"
+      ]
+    },
+    {
+      "id": "axios",
+      "ref": "https://www.axios.com/newsletters/axios-pro-rata-7e584a6d-5c95-4a3a-afc5-640056c4bc3f",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.axios.com"
+      ]
+    },
+    {
+      "id": "microsoft",
+      "ref": "https://devblogs.microsoft.com/foundry/build-trusted-autonomous-agents-for-your-team-with-microsoft-foundry/",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "devblogs.microsoft.com"
+      ]
+    },
+    {
+      "id": "ownyourmind",
+      "ref": "https://ownyourmind.ai/projects/nous-research/",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "ownyourmind.ai"
+      ]
+    },
+    {
+      "id": "sacra",
+      "ref": "https://sacra.com/c/nous-research/",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "sacra.com"
+      ]
+    },
+    {
+      "id": "techradar",
+      "ref": "https://www.techradar.com/pro/how-to-automate-workflows-using-open-source-ai-agents",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.techradar.com"
+      ]
+    },
+    {
+      "id": "architect",
+      "ref": "https://architectpartners.com/wp-content/uploads/2025/04/04-30-25-Weekly-Crypto-Financing-Snapshot.pdf",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "architectpartners.com"
+      ]
+    },
+    {
+      "id": "smallyu",
+      "ref": "https://en.smallyu.net/2025/08/01/Analysis%20of%20the%20Psyche%20Network%20Project/",
+      "type": "article",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "en.smallyu.net"
+      ]
+    },
+    {
+      "id": "sec",
+      "ref": "https://www.sec.gov/files/ctf-memo-collab-currency-090825.pdf",
+      "type": "document",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.sec.gov"
+      ]
+    },
+    {
+      "id": "rootdata",
+      "ref": "https://www.rootdata.com/projects/detail/Nous%20Research?k=MTczMzQ%3D",
+      "type": "tracker",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.rootdata.com"
+      ]
+    },
+    {
+      "id": "openrouter",
+      "ref": "https://openrouter.ai/apps/hermes-agent",
+      "type": "tracker",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "openrouter.ai"
+      ]
+    },
+    {
+      "id": "openrouter_list",
+      "ref": "https://openrouter.ai/apps",
+      "type": "tracker",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "openrouter.ai"
+      ]
+    },
+    {
+      "id": "jeff",
+      "ref": "https://jeffq.com/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "jeffq.com"
+      ]
+    },
+    {
+      "id": "jeff_github",
+      "ref": "https://github.com/jquesnelle",
+      "type": "profile",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "jeff_linkedin",
+      "ref": "https://www.linkedin.com/in/jeffrey-quesnelle-2490a524",
+      "type": "profile",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.linkedin.com"
+      ]
+    },
+    {
+      "id": "nous_linkedin_roles",
+      "ref": "https://www.linkedin.com/posts/nousresearch_our-ceo-dillon-rolnick-and-cto-jeffrey-quesnelle-activity-7468309035247714304-mUV0",
+      "type": "post",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.linkedin.com"
+      ]
+    },
+    {
+      "id": "dillon",
+      "ref": "https://www.linkedin.com/in/dillon-rolnick-a29501128",
+      "type": "profile",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.linkedin.com"
+      ]
+    },
+    {
+      "id": "shivani",
+      "ref": "https://shivanimitra.com/",
+      "type": "website",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "shivanimitra.com"
+      ]
+    },
+    {
+      "id": "tek_github",
+      "ref": "https://github.com/teknium1",
+      "type": "profile",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "tek_x",
+      "ref": "https://x.com/Teknium",
+      "type": "profile",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "x.com",
+        "www.teapawt.org"
+      ]
+    },
+    {
+      "id": "tek_mirror",
+      "ref": "https://www.teapawt.org/Teknium?cursor=DAAHCgABHXgpgIa__-oLAAIAAAATMjEyMjExODQ1ODI5MzAzMDkxNQgAAwAAAAIAAA",
+      "type": "mirror",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.teapawt.org"
+      ]
+    },
+    {
+      "id": "jeff_x",
+      "ref": "https://x.com/theemozilla",
+      "type": "profile",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "karan_x",
+      "ref": "https://x.com/karan4d",
+      "type": "profile",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "x",
+      "ref": "https://x.com/NousResearch",
+      "type": "channel",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "discord",
+      "ref": "https://discord.gg/nousresearch",
+      "type": "channel",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "discord.gg",
+        "discord.com"
+      ]
+    },
+    {
+      "id": "youtube",
+      "ref": "https://www.youtube.com/@NousResearch",
+      "type": "channel",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "www.youtube.com"
+      ]
+    },
+    {
+      "id": "linkedin",
+      "ref": "https://www.linkedin.com/company/nousresearch/",
+      "type": "channel",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.linkedin.com"
+      ]
+    },
+    {
+      "id": "facebook",
+      "ref": "https://www.facebook.com/profile.php?id=61594748580975",
+      "type": "channel",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "www.facebook.com"
+      ]
+    },
+    {
+      "id": "instagram",
+      "ref": "https://www.instagram.com/nous_research/",
+      "type": "channel",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "www.instagram.com"
+      ]
+    },
+    {
+      "id": "tiktok",
+      "ref": "https://www.tiktok.com/@nousresearch",
+      "type": "channel",
+      "read_at": "2026-11-24",
+      "could_open": false,
+      "read_via": [
+        "www.tiktok.com"
+      ]
+    },
+    {
+      "id": "docker",
+      "ref": "https://hub.docker.com/r/nousresearch/hermes-agent",
+      "type": "repository",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "hub.docker.com"
+      ]
+    },
+    {
+      "id": "accelerate",
+      "ref": "https://www.youtube.com/watch?v=GpF52rxuURs",
+      "type": "video",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "www.youtube.com"
+      ]
+    },
+    {
+      "id": "devnet",
+      "ref": "https://api.devnet.solana.com",
+      "type": "rpc",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.devnet.solana.com"
+      ]
+    },
+    {
+      "id": "mainnet",
+      "ref": "https://api.mainnet-beta.solana.com",
+      "type": "rpc",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.mainnet-beta.solana.com"
+      ]
+    },
+    {
+      "id": "explorer",
+      "ref": "https://explorer.solana.com/address/HR8RN2TP9E9zsi2kjhvPbirJWA1R6L6ruf4xNNGpjU5Y?cluster=devnet",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "explorer.solana.com"
+      ]
+    },
+    {
+      "id": "published-coordinator_deployment_tx",
+      "ref": "https://explorer.solana.com/tx/62cmEJtoaNvAarcyF9VjQThkXDM6UnmBPXRAFKKvjaxEi4vXyiqsEVAAQNRut5KkTQWbcF9fjXfFg82JtT4CmRQ3?cluster=devnet",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.devnet.solana.com"
+      ]
+    },
+    {
+      "id": "solana-authorizer_deployment_tx",
+      "ref": "https://explorer.solana.com/tx/4teyJ3jZ9STHHpEtWk3MvsuvMtc7VwoSiVjHiEpC5en5swS8CNZhF1kCQM1CNgYsUsacNTCDGuqezHYk9n9eWwdh?cluster=devnet",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.devnet.solana.com"
+      ]
+    },
+    {
+      "id": "solana-coordinator_deployment_tx",
+      "ref": "https://explorer.solana.com/tx/jbeccGRM7oswv43bLJmR9F7MRtVz7vPVvMuBW7L5rSa26jg68Rh8CioGFGK6by1pZaBATUNQqs83UjR6mRq7VCb?cluster=devnet",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.devnet.solana.com"
+      ]
+    },
+    {
+      "id": "solana-treasurer_deployment_tx",
+      "ref": "https://explorer.solana.com/tx/3mDuo1fdCmZqnVLe6M7TRkvAmpLpASZLgd2LSLT54FfjM8AHpyFirdwQnKYXg9UjK4RdKrrKUb2q2eCEDPijBCrD?cluster=devnet",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.devnet.solana.com"
+      ]
+    },
+    {
+      "id": "solana-coordinator_activity_tx",
+      "ref": "https://explorer.solana.com/tx/5kC1s5siUvHYot5oVFTq3jJkxkgV2dT9rPZgRtt1nhLVsgWe7fiayPm3GyHYNLrhV3Lgcre2quMzRy7gPYq7nTYt?cluster=devnet",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.devnet.solana.com"
+      ]
+    },
+    {
+      "id": "solana-treasurer_activity_tx",
+      "ref": "https://explorer.solana.com/tx/2jvUH3BCdeEujkcYJPYu9g6Tdz18XnEqjL9Ru94Y3TAozArFco2YHQDo5TJUKKnXfJx1knBScC6KavYDuxihWhmC?cluster=devnet",
+      "type": "explorer",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "api.devnet.solana.com"
+      ]
+    },
+    {
+      "id": "logo",
+      "ref": "https://nousresearch.com/assets/nous-web/favicon.png",
+      "type": "image",
+      "read_at": "2026-11-24",
+      "could_open": true,
+      "read_via": [
+        "nousresearch.com"
+      ]
+    }
+  ],
+  "ignored_instructions": [],
+  "notes": "Research snapshot for November 24, 2026. Nous links the published coordinator from its Hermes 4.3 release, so the infobox uses that deployment. The pinned Psyche repository names another deployed coordinator that the public transaction history shows handling later training instructions. The explorer page loaded its address and cluster shell, while the account and transaction checks came directly from Solana’s public RPC. Solana records blocks by slot here. Account calls reproduce the checks on a finalized bank at or after the observed slot. Historical state at an exact old slot requires an archive node with historical account state or a saved snapshot. The saved transaction signatures work independently of those account snapshots. The Psyche dashboard and documentation host timed out on direct reads. The repository’s pinned documentation and the cached Phase 0 terms were readable. X blocked direct access and several other social hosts throttled or restricted access. Official account ties rely on the project’s links. Public signing addresses identify keys, and the RPC responses do not identify their holders. The Size row measures model use recorded by OpenRouter. The project’s earliest exact public launch date remains unverified, so the Launched row uses the year of its own formation statement and dated public releases. No earlier results or channels were supplied."
+}
