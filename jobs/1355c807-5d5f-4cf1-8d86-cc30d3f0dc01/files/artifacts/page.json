@@ -1,0 +1,125 @@
+{
+  "tag": "identitymd.record.v1",
+  "input": "https://tacit.finance",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "protocol, applications, and linked project channels",
+    "name": "Tacit",
+    "one_line": "Tacit is a Bitcoin-and-Ethereum privacy and DeFi project with pools, a TAC payment chain, web applications, and linked social and code channels.",
+    "channels": [
+      {"label": "tacit.finance", "url": "https://tacit.finance/", "tie": "strong"},
+      {"label": "@tacitfi on X", "url": "https://x.com/tacitfi", "tie": "linked"},
+      {"label": "src-company/tacit on GitHub", "url": "https://github.com/src-company/tacit", "tie": "linked"},
+      {"label": "Tacit Discord", "url": "https://discord.gg/VxYx9XSBrM", "tie": "linked"}
+    ],
+    "contracts": [
+      {"address": "0x000000000Ed1eabD231Be41d93b719056F7febFC", "chain": "Ethereum", "role": "Main: the DeFi pool for swapping, farming, borrowing, sending, and Bitcoin bridging", "main": true},
+      {"address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9", "chain": "Ethereum", "role": "Pay pool for private ETH and supported assets", "main": false},
+      {"address": "0x00000000000a9147ffd8d41d152d730ca5f84e6c", "chain": "Ethereum", "role": "TacitBlocks payment-chain contract", "main": false},
+      {"address": "0xA1313eb9f3A445606D9583bcAc3ebeB56a858279", "chain": "Ethereum", "role": "Public TAC ERC-20", "main": false}
+    ]
+  },
+  "infobox": [
+    {"label": "Website", "value": "tacit.finance", "url": "https://tacit.finance/", "lines": ["L1"]},
+    {"label": "Tokens", "values": [{"name": "TAC", "text": "public ERC-20", "address": "0xA1313eb9f3A445606D9583bcAc3ebeB56a858279", "chain": "Ethereum"}], "lines": ["L25", "L26"]},
+    {"label": "Supply", "values": [{"name": "TAC", "text": "about 4.65 million ERC-20 units at Ethereum block 26,487,251"}], "lines": ["L27"]},
+    {"label": "Main contract", "value": "ConfidentialPool, Ethereum: 0x000000000Ed1eabD231Be41d93b719056F7febFC", "url": "https://etherscan.io/address/0x000000000Ed1eabD231Be41d93b719056F7febFC", "lines": ["L3", "L28"]},
+    {"label": "Contracts", "values": [{"name": "Pay pool", "text": "", "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9", "chain": "Ethereum"}, {"name": "TacitBlocks", "text": "", "address": "0x00000000000a9147ffd8d41d152d730ca5f84e6c", "chain": "Ethereum"}, {"name": "Public TAC", "text": "", "address": "0xA1313eb9f3A445606D9583bcAc3ebeB56a858279", "chain": "Ethereum"}], "lines": ["L4", "L5", "L25"]},
+    {"label": "Chains", "values": [{"name": "Bitcoin", "text": "asset and bridge side"}, {"name": "Ethereum", "text": "pools and settlement"}, {"name": "Base", "text": "Pay pool support"}, {"name": "Robinhood Chain", "text": "Pay pool support"}], "lines": ["L1", "L4", "L9"]},
+    {"label": "Size", "value": "about $192,688 TVL, DefiLlama, 24 November 2026", "url": "https://defillama.com/protocol/tacit", "lines": ["L37"]},
+    {"label": "Official accounts", "values": [{"name": "@tacitfi on X", "text": "", "url": "https://x.com/tacitfi"}, {"name": "src-company/tacit on GitHub", "text": "", "url": "https://github.com/src-company/tacit"}, {"name": "Tacit Discord", "text": "", "url": "https://discord.gg/VxYx9XSBrM"}], "lines": ["L19", "L20", "L21"]}
+  ],
+  "summary": [
+    {"text": "Tacit is a project for private finance across Bitcoin and Ethereum.", "lines": ["L1"], "paragraph": 1},
+    {"text": "People can shield, swap, send, earn, and borrow through a tacit1 ID.", "lines": ["L2"], "paragraph": 1},
+    {"text": "Its pages describe a DeFi pool and a separate Pay pool with different functions.", "lines": ["L3", "L4"], "paragraph": 1},
+    {"text": "The Tacit chain is presented as a place to hold TAC privately and pay others.", "lines": ["L5"], "paragraph": 1},
+    {"text": "The project says the pools do not share on-chain assets; transfers between them use public withdrawal and shielding.", "lines": ["L8"], "paragraph": 2},
+    {"text": "Payment proofs are made on the payer’s device and checked on Ethereum, according to Tacit.", "lines": ["L9"], "paragraph": 2},
+    {"text": "Sending has a published 0.002 TAC fee; Tacit says most fees cover Ethereum gas.", "lines": ["L15"], "paragraph": 2},
+    {"text": "DefiLlama reported about $192,688 of Tacit value locked on 24 November 2026.", "lines": ["L37"], "paragraph": 2},
+    {"text": "Public sources reviewed do not establish a legal operator or a public administrator for every project component.", "lines": ["L19", "L20", "L21", "L31"], "paragraph": 2}
+  ],
+  "lines": [
+    {"id": "L1", "section": "what_it_does", "text": "Tacit describes itself as private DeFi across Bitcoin and Ethereum.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "Private DeFi across Bitcoin and Ethereum", "from": [], "links": []},
+    {"id": "L2", "section": "what_it_does", "text": "Tacit says users can shield, swap, send, earn and borrow from one tacit1 ID.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "shield, swap, send, earn and borrow from one tacit1 ID", "from": [], "links": []},
+    {"id": "L3", "section": "what_it_does", "text": "Tacit says its DeFi pool can swap, farm, borrow, send and bridge to Bitcoin.", "kind": "statement", "by": ["Tacit"], "sources": ["S2"], "quote": "Swap, farm, borrow, send, bridge to Bitcoin", "from": [], "links": []},
+    {"id": "L4", "section": "what_it_does", "text": "Tacit says its Pay pool can shield, pay privately, withdraw and create deposit addresses.", "kind": "statement", "by": ["Tacit"], "sources": ["S2"], "quote": "Shield, pay anyone privately, withdraw, deposit addresses", "from": [], "links": []},
+    {"id": "L5", "section": "what_it_does", "text": "Tacit says its chain lets people hold TAC privately and pay anyone.", "kind": "statement", "by": ["Tacit"], "sources": ["S3"], "quote": "Hold TAC privately, pay anyone, get paid", "from": [], "links": []},
+    {"id": "L6", "section": "what_it_does", "text": "Bankless says Tacit combines confidential tokens, an anonymous mixer, a private AMM and wrapped BTC.", "kind": "claim", "by": ["Bankless"], "sources": ["S9"], "quote": "Confidential tokens, an anonymous mixer, a private AMM, and trustless wrapped BTC", "from": [], "links": []},
+
+    {"id": "L7", "section": "how_it_works", "text": "Tacit says a private pool transaction needs an SP1 zero-knowledge proof.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "accepts a private transaction only with an SP1 zero-knowledge proof", "from": [], "links": []},
+    {"id": "L8", "section": "how_it_works", "text": "Tacit says its DeFi and Pay pools share nothing on chain; moving between them combines a public withdrawal and a shield.", "kind": "statement", "by": ["Tacit"], "sources": ["S2"], "quote": "The two pools share nothing on chain", "from": [], "links": []},
+    {"id": "L9", "section": "how_it_works", "text": "Tacit says each payment is proved on the payer device and each block is checked on Ethereum.", "kind": "statement", "by": ["Tacit"], "sources": ["S3"], "quote": "Each payment is proven on the payer’s device", "from": [], "links": []},
+    {"id": "L10", "section": "how_it_works", "text": "Tacit says Bitcoin and Ethereum state cross by proof-of-work and an Ethereum light client.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "Bitcoin by proof-of-work and Ethereum by its light client", "from": [], "links": []},
+    {"id": "L11", "section": "how_it_works", "text": "Bankless says Tacit uses an indexer validation system that derives results from on-chain data.", "kind": "claim", "by": ["Bankless"], "sources": ["S9"], "quote": "its own bespoke indexer validation system", "from": [], "links": []},
+    {"id": "L12", "section": "how_it_works", "text": "Tacitscan says bridge confirmation, reflection and destination execution are separate stages.", "kind": "claim", "by": ["Tacitscan"], "sources": ["S10"], "quote": "Confirmation, reflection, and destination execution are separate stages", "from": [], "links": []},
+
+    {"id": "L13", "section": "money", "text": "Tacit says the public TAC ERC-20 is minted by its pool from TAC proven to have left Bitcoin and burned on return.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "minted only by the Tacit pool", "from": [], "links": []},
+    {"id": "L14", "section": "money", "text": "Tacit says each chain action has a small TAC fee shown before the user proceeds.", "kind": "statement", "by": ["Tacit"], "sources": ["S3"], "quote": "Each action costs a small fee in TAC", "from": [], "links": []},
+    {"id": "L15", "section": "money", "text": "Tacit lists a 0.002 TAC send fee and says most fees pay the leader’s Ethereum gas cost.", "kind": "statement", "by": ["Tacit"], "sources": ["S3"], "quote": "Send 0.002 TAC", "from": [], "links": []},
+    {"id": "L16", "section": "money", "text": "Tacit says users can borrow cUSD against Bitcoin.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "Borrow cUSD against Bitcoin", "from": [], "links": []},
+    {"id": "L17", "section": "money", "text": "Tacit says its chain pool retains part of each fee, increasing the TAC value of its shares.", "kind": "statement", "by": ["Tacit"], "sources": ["S3"], "quote": "The part of each fee that stays in the pool", "from": [], "links": []},
+    {"id": "L18", "section": "money", "text": "The linked GitHub deployment document says TAC vault borrowing has no interest and a one-time fee for the ops multisig reserve.", "kind": "claim", "by": ["z0r0z/tacit GitHub"], "sources": ["S5"], "quote": "no interest and a one-time borrow fee", "from": [], "links": []},
+
+    {"id": "L19", "section": "people", "text": "Tacit links to the src-company/tacit GitHub repository as its source channel.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "Source", "from": [], "links": []},
+    {"id": "L20", "section": "people", "text": "Tacit links to the @tacitfi X account.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "@tacitfi on X", "from": [], "links": []},
+    {"id": "L21", "section": "people", "text": "Tacit links to a Discord community invite.", "kind": "statement", "by": ["Tacit"], "sources": ["S1"], "quote": "Tacit Discord community", "from": [], "links": []},
+    {"id": "L22", "section": "people", "text": "Bankless describes an account named ross.wei in connection with a new Tacit project.", "kind": "claim", "by": ["Bankless"], "sources": ["S9"], "quote": "his new Tacit project", "from": [], "links": []},
+    {"id": "L23", "section": "people", "text": "GitHub describes src-company/tacit as a public repository owned by the src-company organization.", "kind": "statement", "by": ["src-company"], "sources": ["S11"], "quote": "smart contracts on bitcoin", "from": [], "links": []},
+
+    {"id": "L24", "section": "on_chain", "text": "Ethereum returned the TAC contract name as Tacit Token.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_call 0x06fdde03 to 0xA1313eb9f3A445606D9583bcAc3ebeB56a858279 at block 26487251", "fact": {"name": "ERC-20 name", "value": "Tacit Token", "unit": "text"}, "from": [], "links": []},
+    {"id": "L25", "section": "on_chain", "text": "Ethereum returned TAC as the TAC contract symbol.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_call 0x95d89b41 to 0xA1313eb9f3A445606D9583bcAc3ebeB56a858279 at block 26487251", "fact": {"name": "ERC-20 symbol", "value": "TAC", "unit": "text"}, "from": [], "links": []},
+    {"id": "L26", "section": "on_chain", "text": "Ethereum returned 18 decimal places for TAC.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_call 0x313ce567 to 0xA1313eb9f3A445606D9583bcAc3ebeB56a858279 at block 26487251", "fact": {"name": "TAC decimals", "value": "18", "unit": "decimal places"}, "from": [], "links": []},
+    {"id": "L27", "section": "on_chain", "text": "Ethereum returned 4,649,985.76244507 TAC as the ERC-20 total supply.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_call 0x18160ddd to 0xA1313eb9f3A445606D9583bcAc3ebeB56a858279 at block 26487251", "fact": {"name": "TAC ERC-20 total supply", "value": "4649985.76244507", "unit": "TAC"}, "from": [], "links": []},
+    {"id": "L28", "section": "on_chain", "text": "Ethereum returned nonempty code for the ConfidentialPool.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_getCode for 0x000000000Ed1eabD231Be41d93b719056F7febFC at block 26487251", "fact": {"name": "ConfidentialPool code", "value": "present", "unit": "bytecode"}, "from": [], "links": []},
+    {"id": "L29", "section": "on_chain", "text": "Ethereum returned nonempty code for the TAC token.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_getCode for 0xA1313eb9f3A445606D9583bcAc3ebeB56a858279 at block 26487251", "fact": {"name": "TAC token code", "value": "present", "unit": "bytecode"}, "from": [], "links": []},
+    {"id": "L30", "section": "on_chain", "text": "Tacit’s build page identifies the ConfidentialPool at its listed Ethereum address.", "kind": "statement", "by": ["Tacit"], "sources": ["S2"], "quote": "Pool 0x000000000Ed1eabD231Be41d93b719056F7febFC", "from": [], "links": []},
+    {"id": "L31", "section": "on_chain", "text": "The linked GitHub deployment document says the ConfidentialPool is immutable and has no admin key over escrow, exits or payouts.", "kind": "claim", "by": ["z0r0z/tacit GitHub"], "sources": ["S5"], "quote": "no admin key over escrow, exits or payouts", "from": [], "links": []},
+    {"id": "L32", "section": "on_chain", "text": "Tacitscan reported the ConfidentialPool in its Ethereum reflection view.", "kind": "claim", "by": ["Tacitscan"], "sources": ["S10"], "quote": "\"ethereumHeight\": 26487237", "from": [], "links": []},
+    {"id": "L38", "section": "on_chain", "text": "Ethereum returned nonempty code for Tacit’s listed Pay pool.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_getCode for 0x000000c2A20657CE25f2Ba99737933D031AFBEE9 at block 26487251", "fact": {"name": "Pay pool code", "value": "present", "unit": "bytecode"}, "from": [], "links": []},
+    {"id": "L39", "section": "on_chain", "text": "Ethereum returned nonempty code for TacitBlocks.", "kind": "proof", "sources": ["S7"], "rerun": "Ethereum JSON-RPC eth_getCode for 0x00000000000a9147ffd8d41d152d730ca5f84e6c at block 26487251", "fact": {"name": "TacitBlocks code", "value": "present", "unit": "bytecode"}, "from": [], "links": []},
+
+    {"id": "L33", "section": "history", "text": "The linked GitHub README says Tacit was live on Ethereum mainnet from 18 September 2026.", "kind": "claim", "by": ["z0r0z/tacit GitHub"], "sources": ["S5"], "quote": "Live on Ethereum mainnet since 2026-09-18", "from": [], "links": []},
+    {"id": "L34", "section": "history", "text": "The linked GitHub deployment document dates TAC’s Bitcoin genesis to 7 May 2026.", "kind": "claim", "by": ["z0r0z/tacit GitHub"], "sources": ["S5"], "quote": "height 948242 (2026-05-07)", "from": [], "links": []},
+    {"id": "L35", "section": "history", "text": "Bankless published an article titled Tacit: A New Take on Confidential Bitcoin DeFi on 1 June 2026.", "kind": "claim", "by": ["Bankless"], "sources": ["S9"], "quote": "Tacit: A New Take on Confidential Bitcoin DeFi", "from": [], "links": []},
+    {"id": "L36", "section": "history", "text": "The linked GitHub README says a Bitcoin-native AMM pool went live on 25 September 2026.", "kind": "claim", "by": ["z0r0z/tacit GitHub"], "sources": ["S5"], "quote": "is live in the indexer as of 2026-09-25", "from": [], "links": []},
+    {"id": "L37", "section": "history", "text": "DefiLlama reports $192,688 of Tacit total value locked on 24 November 2026.", "kind": "claim", "by": ["DefiLlama"], "sources": ["S8"], "quote": "192688", "from": [], "links": []}
+  ],
+  "related": [
+    {"name": "Ethereum", "id": "chain:ethereum", "relation": "settles the pools and Tacit payment blocks", "lines": ["L1", "L9", "L30"]},
+    {"name": "Bitcoin", "id": "chain:bitcoin", "relation": "hosts TAC issuance and the other bridge side", "lines": ["L1", "L10", "L13"]}
+  ],
+  "logo": {"url": "https://tacit.finance/tacit-card.png", "fetched_at": "2026-11-24T20:00:00+01:00"},
+  "differs": [],
+  "dropped": [],
+  "open_questions": [
+    "What legal entity, if any, operates Tacit?",
+    "Who holds operational authority over components outside the stated immutable pool surface?",
+    "The main Etherscan address page returned HTTP 403 in this research environment; can its deployment and creator metadata be independently retrieved?"
+  ],
+  "sources": [
+    {"id": "S1", "ref": "https://tacit.finance/", "type": "project website", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true},
+    {"id": "S2", "ref": "https://tacit.finance/build/", "type": "project documentation", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true},
+    {"id": "S3", "ref": "https://tacit.finance/docs/chain/", "type": "project documentation", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true},
+    {"id": "S4", "ref": "https://github.com/src-company/tacit", "type": "linked code repository", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true},
+    {"id": "S5", "ref": "https://github.com/z0r0z/tacit/blob/main/docs/DEPLOYMENTS.md", "type": "code repository documentation", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true, "read_via": "https://raw.githubusercontent.com/z0r0z/tacit/main/docs/DEPLOYMENTS.md"},
+    {"id": "S6", "ref": "https://etherscan.io/address/0x000000000Ed1eabD231Be41d93b719056F7febFC", "type": "contract explorer", "read_at": "2026-11-24T20:00:00+01:00", "could_open": false, "read_via": "direct HTTP request returned 403"},
+    {"id": "S7", "ref": "https://ethereum-rpc.publicnode.com", "type": "public Ethereum RPC", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true},
+    {"id": "S8", "ref": "https://api.llama.fi/protocol/tacit", "type": "independent tracker API", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true, "read_via": "https://api.llama.fi"},
+    {"id": "S9", "ref": "https://www.bankless.com/read/tacit-a-new-take-on-confidential-bitcoin-defi", "type": "independent article", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true},
+    {"id": "S10", "ref": "https://tacitscan.io/protocol/bridge", "type": "independent block explorer", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true},
+    {"id": "S11", "ref": "https://api.github.com/repos/src-company/tacit", "type": "repository metadata API", "read_at": "2026-11-24T20:00:00+01:00", "could_open": true, "read_via": "https://api.github.com"}
+  ],
+  "ignored_instructions": [],
+  "notes": {
+    "what_it_does": "Read the home page, build page, chain documentation, linked code repository, DefiLlama, Bankless, and Tacitscan. The report distinguishes Tacit’s DeFi pool, Pay pool, and payment chain.",
+    "how_it_works": "Project descriptions are statements, not independently proven technical guarantees. Bankless and Tacitscan observations are retained as claims.",
+    "money": "The TAC ERC-20 supply read from Ethereum is a current bridged ERC-20 reading, not a claim about all Bitcoin-side TAC issuance. No market-price row is included.",
+    "people": "Tacit’s linked X, GitHub, and Discord channels were identified. No legal operator or publicly named founder was established from the reviewed sources; ross.wei is kept as an account name only.",
+    "on_chain": "Ethereum RPC reads were made at block 26,487,251. The main Etherscan page was attempted but returned HTTP 403, so it supports no report line.",
+    "history": "No earlier results were supplied. Four dated claims and one tracker reading are included; the project’s current version history remains incomplete."
+  }
+}
