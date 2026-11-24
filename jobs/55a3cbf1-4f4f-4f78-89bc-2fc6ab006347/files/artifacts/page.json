@@ -1,0 +1,5028 @@
+{
+  "tag": "zora.co",
+  "input": "the project at zora.co, whose main contract is 0x1111111111166b7FE7bd91427724B487980aFc69 on chain 8453",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "project",
+    "name": "Zora",
+    "one_line": "Zora Labs runs social trading apps and develops the contracts for creator coins and ZORA, alongside an earlier network and marketplace for digital collectibles.",
+    "channels": [
+      {
+        "label": "Website",
+        "url": "https://zora.co/",
+        "tie": "weak"
+      },
+      {
+        "label": "Docs",
+        "url": "https://docs.zora.co/",
+        "tie": "weak"
+      },
+      {
+        "label": "Help centre",
+        "url": "https://support.zora.co/",
+        "tie": "weak"
+      },
+      {
+        "label": "X @zora",
+        "url": "https://x.com/zora",
+        "tie": "linked"
+      },
+      {
+        "label": "X @zoradevs",
+        "url": "https://x.com/zoradevs",
+        "tie": "linked"
+      },
+      {
+        "label": "X @zorasupport",
+        "url": "https://x.com/zorasupport",
+        "tie": "linked"
+      },
+      {
+        "label": "Farcaster zora",
+        "url": "https://warpcast.com/zora",
+        "tie": "linked"
+      },
+      {
+        "label": "Farcaster channel zora",
+        "url": "https://warpcast.com/~/channel/zora",
+        "tie": "linked"
+      },
+      {
+        "label": "Farcaster channel zora-devs",
+        "url": "https://warpcast.com/~/channel/zora-devs",
+        "tie": "linked"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/our.zora/",
+        "tie": "linked"
+      },
+      {
+        "label": "TikTok",
+        "url": "https://www.tiktok.com/@zora",
+        "tie": "linked"
+      },
+      {
+        "label": "GitHub ourzora",
+        "url": "https://github.com/ourzora",
+        "tie": "linked"
+      },
+      {
+        "label": "Zora Network site",
+        "url": "https://zora.energy/",
+        "tie": "linked"
+      },
+      {
+        "label": "ZORA claim",
+        "url": "https://claim.zora.co/",
+        "tie": "weak"
+      },
+      {
+        "label": "Token metadata",
+        "url": "https://www.theme.wtf/assets/metadata.json",
+        "tie": "strong"
+      },
+      {
+        "label": "Status",
+        "url": "https://status.zora.co/",
+        "tie": "none"
+      },
+      {
+        "label": "Zora Zine",
+        "url": "https://zine.zora.co/",
+        "tie": "none"
+      },
+      {
+        "label": "Legacy NFT docs",
+        "url": "https://nft-docs.zora.co/",
+        "tie": "none"
+      },
+      {
+        "label": "X @dg_goens",
+        "url": "https://x.com/dg_goens",
+        "tie": "none"
+      },
+      {
+        "label": "X @js_horne",
+        "url": "https://x.com/js_horne",
+        "tie": "none"
+      },
+      {
+        "label": "CLI docs",
+        "url": "https://cli.zora.com/",
+        "tie": "linked"
+      },
+      {
+        "label": "LinkedIn ZORA",
+        "url": "https://www.linkedin.com/company/ourzora/",
+        "tie": "none"
+      },
+      {
+        "label": "Farcaster zora channel",
+        "url": "https://farcaster.xyz/~/channel/zora",
+        "tie": "linked"
+      },
+      {
+        "label": "Agents and CLI docs",
+        "url": "https://agents.zora.com/",
+        "tie": "linked"
+      },
+      {
+        "label": "Web app",
+        "url": "https://zora.co/app/",
+        "tie": "none"
+      },
+      {
+        "label": "Legacy marketplace address",
+        "url": "https://market.zora.co/",
+        "tie": "none"
+      },
+      {
+        "label": "Zora blog",
+        "url": "https://zora.co/blog/",
+        "tie": "weak"
+      },
+      {
+        "label": "Farcaster zora profile",
+        "url": "https://farcaster.xyz/zora",
+        "tie": "linked"
+      },
+      {
+        "label": "Farcaster zora-devs channel",
+        "url": "https://farcaster.xyz/~/channel/zora-devs",
+        "tie": "linked"
+      },
+      {
+        "label": "X @tbtstl",
+        "url": "https://x.com/tbtstl",
+        "tie": "none"
+      },
+      {
+        "label": "Website alias",
+        "url": "https://zora.com/",
+        "tie": "weak"
+      },
+      {
+        "label": "Former creator site",
+        "url": "https://creators.zora.com/",
+        "tie": "weak"
+      },
+      {
+        "label": "Help centre alias",
+        "url": "https://support.zora.com/",
+        "tie": "none"
+      },
+      {
+        "label": "TikTok @ourzora",
+        "url": "https://www.tiktok.com/@ourzora",
+        "tie": "none"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0x1111111111166b7FE7bd91427724B487980aFc69",
+        "chain": "base (8453)",
+        "role": "Main contract specified for the record and used as Zora’s Base pairing and rewards token",
+        "main": true
+      },
+      {
+        "address": "0x777777751622c0d3258f214F9DF38E35BF45baF3",
+        "chain": "base (8453)",
+        "role": "Factory for the Base Coins protocol",
+        "main": false
+      },
+      {
+        "address": "0x777777C4c14b133858c3982D41Dbf02509fc18d7",
+        "chain": "base (8453)",
+        "role": "Registry of Uniswap V4 hooks",
+        "main": false
+      },
+      {
+        "address": "0x004d6611884B4A661749B64b2ADc78505c3e1AB3",
+        "chain": "base (8453)",
+        "role": "3-of-6 Safe that owns the coin factory",
+        "main": false
+      },
+      {
+        "address": "soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora",
+        "chain": "solana",
+        "role": "Official Solana ZORA mint bridged from Base through LayerZero",
+        "main": false
+      },
+      {
+        "address": "0x0000000002ba96c69b95e32caab8fc38bab8b3f8",
+        "chain": "base (8453)",
+        "role": "Community airdrop claim contract",
+        "main": false
+      },
+      {
+        "address": "0x0000000000ffe8b47b3e2130213b802212439497",
+        "chain": "base (8453)",
+        "role": "CREATE2 factory used to deploy the ZORA token",
+        "main": false
+      },
+      {
+        "address": "0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5",
+        "chain": "base (8453)",
+        "role": "LayerZero adapter that locks and releases Base ZORA",
+        "main": false
+      },
+      {
+        "address": "Exp715biUyVV6Gu8qdk5jjTWQatwSEvXHG4LPpZP761e",
+        "chain": "solana",
+        "role": "LayerZero program that operates the Solana ZORA mint and burn route",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "value": "zora.co",
+      "lines": [
+        "L1",
+        "L69"
+      ],
+      "url": "https://zora.co/"
+    },
+    {
+      "label": "Tokens",
+      "value": "ZORA 0x1111111111166b7FE7bd91427724B487980aFc69 on Base, bridged to Solana at soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora",
+      "lines": [
+        "L20",
+        "L25",
+        "L50",
+        "L115",
+        "L116",
+        "L117"
+      ],
+      "url": "https://support.zora.co/en/articles/5654721",
+      "values": [
+        {
+          "name": "ZORA",
+          "text": "Pairing and rewards token, bridged to Solana at soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora",
+          "address": "0x1111111111166b7FE7bd91427724B487980aFc69",
+          "chain": "Base"
+        }
+      ]
+    },
+    {
+      "label": "Main contract",
+      "value": "ZORA 0x1111111111166b7FE7bd91427724B487980aFc69 on Base",
+      "lines": [
+        "L20",
+        "L25",
+        "L40",
+        "L50"
+      ],
+      "url": "https://basescan.org/token/0x1111111111166b7FE7bd91427724B487980aFc69"
+    },
+    {
+      "label": "Chains",
+      "value": "Base, Robinhood Chain, Solana and Zora Network",
+      "lines": [
+        "L8",
+        "L39",
+        "L50",
+        "L85"
+      ],
+      "values": [
+        {
+          "name": "Base",
+          "text": ""
+        },
+        {
+          "name": "Robinhood Chain",
+          "text": ""
+        },
+        {
+          "name": "Solana",
+          "text": ""
+        },
+        {
+          "name": "Zora Network",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "label": "Supply",
+      "value": "10 billion ZORA on Base, about 99.10 million bridged on Solana",
+      "lines": [
+        "L41",
+        "L115",
+        "L118",
+        "L119"
+      ],
+      "values": [
+        {
+          "name": "ZORA on Base",
+          "text": "10 billion"
+        },
+        {
+          "name": "ZORA bridged to Solana",
+          "text": "about 99.10 million"
+        }
+      ]
+    },
+    {
+      "label": "Coin trading fees",
+      "value": "1% creator, post and custom-pair coins, 0.01% trend coins",
+      "lines": [
+        "L4",
+        "L5",
+        "L13",
+        "L27",
+        "L104"
+      ],
+      "url": "https://support.zora.co/en/articles/2509953",
+      "values": [
+        {
+          "name": "Base creator and post coins",
+          "text": "1% base fee"
+        },
+        {
+          "name": "Base trend coins",
+          "text": "0.01% base fee"
+        },
+        {
+          "name": "Custom-pair coins",
+          "text": "1% trading fee"
+        }
+      ]
+    },
+    {
+      "label": "App transaction fee",
+      "value": "$0.50 below $50, 1% from $50",
+      "lines": [
+        "L101",
+        "L102"
+      ],
+      "url": "https://support.zora.co/en/articles/2509953",
+      "values": [
+        {
+          "name": "Trades below $50",
+          "text": "$0.50"
+        },
+        {
+          "name": "Trades from $50",
+          "text": "1%"
+        }
+      ]
+    },
+    {
+      "label": "Size",
+      "value": "About $81,000 30-day Base volume (DefiLlama, Nov 24, 2026)",
+      "lines": [
+        "L68"
+      ],
+      "url": "https://defillama.com/protocol/zora-coins"
+    },
+    {
+      "label": "Deployed by",
+      "value": "Factory 0x0000000000ffe8b47b3e2130213b802212439497, transaction sender 0xbebe537efb8377629a1dfb1ac5c0568036e32712",
+      "lines": [
+        "L90",
+        "L91"
+      ],
+      "url": "https://basescan.org/tx/0xd0a10c53c9a776cd5fa6d6065a786cda4a9bba88a6262009e39708e0762ebd46",
+      "values": [
+        {
+          "name": "CREATE2 factory",
+          "text": "Created the contract",
+          "address": "0x0000000000ffe8b47b3e2130213b802212439497",
+          "chain": "Base"
+        },
+        {
+          "name": "Transaction sender",
+          "text": "Called the factory",
+          "address": "0xbebe537efb8377629a1dfb1ac5c0568036e32712",
+          "chain": "Base"
+        }
+      ]
+    },
+    {
+      "label": "Controlled by",
+      "value": "Coin factory 3-of-6 0x004d6611884B4A661749B64b2ADc78505c3e1AB3, bridge 2-of-4 0xe669740B7f2364aaca734fA9C2087121042f327c",
+      "lines": [
+        "L47",
+        "L63",
+        "L120"
+      ],
+      "values": [
+        {
+          "name": "Coin factory",
+          "text": "3-of-6 Safe",
+          "address": "0x004d6611884B4A661749B64b2ADc78505c3e1AB3",
+          "chain": "Base"
+        },
+        {
+          "name": "Base bridge adapter",
+          "text": "2-of-4 Safe",
+          "address": "0xe669740B7f2364aaca734fA9C2087121042f327c",
+          "chain": "Base"
+        }
+      ]
+    },
+    {
+      "label": "Founder or creator",
+      "value": "Jacob Horne, Dee Goens, Tyson Battistella",
+      "lines": [
+        "L83",
+        "L84"
+      ],
+      "values": [
+        {
+          "name": "Jacob Horne",
+          "text": ""
+        },
+        {
+          "name": "Dee Goens",
+          "text": ""
+        },
+        {
+          "name": "Tyson Battistella",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "label": "Run by",
+      "value": "Zora Labs, Inc., led by Dee Goens",
+      "lines": [
+        "L33",
+        "L66",
+        "L69"
+      ],
+      "values": [
+        {
+          "name": "Zora Labs, Inc.",
+          "text": "Operator and maintainer"
+        },
+        {
+          "name": "Dee Goens",
+          "text": "Chief executive"
+        }
+      ]
+    },
+    {
+      "label": "Official accounts",
+      "value": "X, Farcaster, Instagram, TikTok, GitHub",
+      "lines": [
+        "L38",
+        "L64",
+        "L19"
+      ],
+      "url": "https://support.zora.co/en/articles/5638529",
+      "values": [
+        {
+          "name": "@zora on X",
+          "text": "",
+          "url": "https://x.com/zora"
+        },
+        {
+          "name": "@zoradevs on X",
+          "text": "",
+          "url": "https://x.com/zoradevs"
+        },
+        {
+          "name": "@zorasupport on X",
+          "text": "",
+          "url": "https://x.com/zorasupport"
+        },
+        {
+          "name": "zora on Farcaster",
+          "text": "",
+          "url": "https://farcaster.xyz/zora"
+        },
+        {
+          "name": "zora channel on Farcaster",
+          "text": "",
+          "url": "https://farcaster.xyz/~/channel/zora"
+        },
+        {
+          "name": "zora-devs on Farcaster",
+          "text": "",
+          "url": "https://farcaster.xyz/~/channel/zora-devs"
+        },
+        {
+          "name": "our.zora on Instagram",
+          "text": "",
+          "url": "https://www.instagram.com/our.zora/"
+        },
+        {
+          "name": "@zora on TikTok",
+          "text": "",
+          "url": "https://www.tiktok.com/@zora"
+        },
+        {
+          "name": "ourzora on GitHub",
+          "text": "",
+          "url": "https://github.com/ourzora"
+        }
+      ]
+    },
+    {
+      "label": "Launched",
+      "value": "2020, current cross-chain coin creation since August 2026",
+      "lines": [
+        "L105",
+        "L106",
+        "L107",
+        "L59"
+      ],
+      "url": "https://zora.co/blog/the-ticker-is-zora"
+    },
+    {
+      "label": "Contracts",
+      "value": "Coin factory 0x777777751622c0d3258f214F9DF38E35BF45baF3 and claim contract 0x0000000002ba96c69b95e32caab8fc38bab8b3f8 on Base",
+      "lines": [
+        "L45",
+        "L51",
+        "L94",
+        "L97"
+      ],
+      "values": [
+        {
+          "name": "Coin factory",
+          "text": "Creates Base coins",
+          "address": "0x777777751622c0d3258f214F9DF38E35BF45baF3",
+          "chain": "Base"
+        },
+        {
+          "name": "Airdrop claims",
+          "text": "Processes ZORA claims",
+          "address": "0x0000000002ba96c69b95e32caab8fc38bab8b3f8",
+          "chain": "Base"
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "text": "Zora Labs runs a social trading app and maintains the contracts that let people turn posts into tradeable coins.",
+      "paragraph": 1,
+      "lines": [
+        "L1",
+        "L2",
+        "L69"
+      ]
+    },
+    {
+      "text": "Dee Goens became chief executive in September 2026, as he announced in his public post.",
+      "paragraph": 1,
+      "lines": [
+        "L66"
+      ]
+    },
+    {
+      "text": "People can activate a profile coin for free and use Explore to find coins to buy.",
+      "paragraph": 1,
+      "lines": [
+        "L74",
+        "L103"
+      ]
+    },
+    {
+      "text": "Creator, post and custom-pair coins have a 1% base trading fee, and the app lists a separate transaction fee, according to Zora.",
+      "paragraph": 1,
+      "lines": [
+        "L4",
+        "L101",
+        "L102",
+        "L27"
+      ]
+    },
+    {
+      "text": "Profile coins trade against ZORA, and post coins usually trade against their creator’s profile coin, the project says.",
+      "paragraph": 2,
+      "lines": [
+        "L20",
+        "L21"
+      ]
+    },
+    {
+      "text": "Trading contracts on Base collect fees and pay rewards in ZORA, as described in Zora’s documentation.",
+      "paragraph": 2,
+      "lines": [
+        "L22",
+        "L25"
+      ]
+    },
+    {
+      "text": "The bridge locks ZORA on Base to mint it on Solana, as receipts on both chains show.",
+      "paragraph": 2,
+      "lines": [
+        "L115",
+        "L116"
+      ]
+    },
+    {
+      "text": "Zora also lists a separate network that Keylo says was used for digital collectibles.",
+      "paragraph": 3,
+      "lines": [
+        "L39",
+        "L85"
+      ]
+    },
+    {
+      "text": "The Base token reports ten billion ZORA, and a section of Zora’s white paper gives a conflicting figure of one billion.",
+      "paragraph": 3,
+      "lines": [
+        "L41",
+        "L82",
+        "L100"
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "section": "what_it_does",
+      "text": "Zora describes itself as a social network where people post, discover and trade.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S1",
+        "S48",
+        "S59"
+      ],
+      "quote": "Zora — Post, discover, and trade what’s next",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L1"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L1"
+    },
+    {
+      "id": "L2",
+      "section": "what_it_does",
+      "text": "Zora says every post on it becomes a tradeable token.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Every post becomes an instantly tradeable cryptocurrency token, transforming social media content into a tradeable asset.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L2"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L2"
+    },
+    {
+      "id": "L3",
+      "section": "what_it_does",
+      "text": "Zora says each account has one creator coin named after its username.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "each account has its own coin where the username becomes the ticker ($username).",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L3"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L3"
+    },
+    {
+      "id": "L4",
+      "section": "what_it_does",
+      "text": "Zora says its current creator and content coin pools have a 1% base trading fee.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S4",
+        "S29"
+      ],
+      "quote": "Creator/Content Coins : 1% (10,000 pips)",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L4"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L4"
+    },
+    {
+      "id": "L5",
+      "section": "what_it_does",
+      "text": "Zora says trend coins are for trending topics and have a 0.01% base trading fee.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Ultra-low fees - 0.01% (1 bps) trading fee, 100x lower than standard coins",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L5"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L5"
+    },
+    {
+      "id": "L6",
+      "section": "what_it_does",
+      "text": "Zora says creating a coin with a custom pair has no fee.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S12"
+      ],
+      "quote": "No fee to create",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L6"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L6"
+    },
+    {
+      "id": "L7",
+      "section": "what_it_does",
+      "text": "Zora says developers can earn referral rewards by building coin creation and trading into their apps.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S19",
+        "S56"
+      ],
+      "quote": "Earn automatic rewards by facilitating coin creation and trading on the Zora Coins Protocol.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L7"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L7"
+    },
+    {
+      "id": "L8",
+      "section": "what_it_does",
+      "text": "Zora says users can create and trade custom-pair coins on Base, Robinhood Chain and Solana.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S12"
+      ],
+      "quote": "Available on Base, Robinhood Chain, and Solana",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L8"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L8"
+    },
+    {
+      "id": "L9",
+      "section": "what_it_does",
+      "text": "Zora says ZORA is a memecoin for the Zora community.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S21"
+      ],
+      "quote": "We are excited to announce $ZORA, a memecoin for the Zora community, launching in Spring 2025.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L9"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L9"
+    },
+    {
+      "id": "L10",
+      "section": "what_it_does",
+      "text": "DefiLlama says Zora Coins is a launchpad.",
+      "kind": "claim",
+      "by": "DefiLlama",
+      "sources": [
+        "S17",
+        "S27"
+      ],
+      "quote": "Category: Launchpad",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L10"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L10"
+    },
+    {
+      "id": "L11",
+      "section": "how_it_works",
+      "text": "Zora says each coin in its Base Coins protocol trades in a dedicated Uniswap v4 pool with a custom hook.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Every coin has a backing currency and trades through a dedicated Uniswap V4 pool with a custom hook",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L11"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L11"
+    },
+    {
+      "id": "L12",
+      "section": "how_it_works",
+      "text": "Zora says coins are created through its coin factory contract on Base.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S3"
+      ],
+      "quote": "This guide covers how to create coins directly using the ZoraFactory contract.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L12"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L12"
+    },
+    {
+      "id": "L13",
+      "section": "how_it_works",
+      "text": "Zora says its Base Coins protocol starts a new pool at a 99% trading fee that falls to the base rate in ten seconds.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S4"
+      ],
+      "quote": "The sniper tax starts at 99% and decays linearly to the coin type's base fee:",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L13"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L13"
+    },
+    {
+      "id": "L14",
+      "section": "how_it_works",
+      "text": "Zora says creator and content coins have a fixed supply of 1 billion each.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "All coins have a 1 billion token supply with different allocation strategies",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L14"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L14"
+    },
+    {
+      "id": "L15",
+      "section": "how_it_works",
+      "text": "Zora says half of a creator coin vests to the creator over 5 years and half trades freely.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2",
+        "S5",
+        "S28"
+      ],
+      "quote": "500M tokens vest to creator, 500M available for trading",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L15"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L15"
+    },
+    {
+      "id": "L16",
+      "section": "how_it_works",
+      "text": "Zora says a content coin gives 10 million tokens to its creator at launch.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Instant creator allocation - 10M tokens go directly to creators at launch",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L16"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L16"
+    },
+    {
+      "id": "L17",
+      "section": "how_it_works",
+      "text": "Zora says initial pool liquidity is placed using the Doppler protocol.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Deposits initial liquidity using Doppler protocol for optimized multi-curve positioning",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L17"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L17"
+    },
+    {
+      "id": "L18",
+      "section": "how_it_works",
+      "text": "Zora documents an on-chain registry of the Uniswap v4 hooks its coins use.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S6"
+      ],
+      "quote": "A canonical registry of Zora Uniswap V4 hook addresses to discover and track changes.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L18"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L48"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L18"
+    },
+    {
+      "id": "L19",
+      "section": "how_it_works",
+      "text": "Zora describes its GitHub repository as a shared home for protocol contracts and developer kits.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S14"
+      ],
+      "quote": "Monorepo for Zora Protocol (contracts & sdks)",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L19"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L19"
+    },
+    {
+      "id": "L20",
+      "section": "money",
+      "text": "Zora says creator coins are paired against ZORA.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S5"
+      ],
+      "quote": "CreatorCoin One per creator, backed by ZORA tokens",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L20"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L20"
+    },
+    {
+      "id": "L21",
+      "section": "money",
+      "text": "Zora says post coins are paired with their creator’s coin by default.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S5",
+        "S28"
+      ],
+      "quote": "Each post becomes a tradeable coin, paired against your Creator Coin by default.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L21"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L21"
+    },
+    {
+      "id": "L22",
+      "section": "money",
+      "text": "Zora says the latest Base coin pools use a hook to collect fees and pay rewards automatically.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S4"
+      ],
+      "quote": "The latest V4 coins use a UniswapV4 hook to collect fees, swap to a backing currency, and distribute rewards to recipients on every swap.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L22"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L22"
+    },
+    {
+      "id": "L23",
+      "section": "money",
+      "text": "Zora says 20% of creator and content coin fees are kept as permanent pool liquidity.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Preserves liquidity by locking 20% of trading fees as permanent pool depth (Creator/Content Coins)",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L23"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L23"
+    },
+    {
+      "id": "L24",
+      "section": "money",
+      "text": "Zora says creators get 50% of total creator and content coin fees, platform referrers 20%, trade referrers 4%, Doppler 1%, and the protocol 5%.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S4"
+      ],
+      "quote": "Creator 62.5% 50% Platform Referral 25% 20% Trade Referral 5% 4% Doppler 1.25% 1% Protocol 6.25% 5%",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L24"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L24"
+    },
+    {
+      "id": "L25",
+      "section": "money",
+      "text": "Zora says the Base Coins protocol swaps trading fees through multiple pools so rewards are paid in ZORA.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Converts fees through multi-hop swaps to ensure all rewards are paid in ZORA",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L25"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L25"
+    },
+    {
+      "id": "L26",
+      "section": "money",
+      "text": "Zora says all trend coin fees go to the protocol.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S2"
+      ],
+      "quote": "Protocol fees only - All collected fees go to the protocol",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L26"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L26"
+    },
+    {
+      "id": "L27",
+      "section": "money",
+      "text": "Zora says 0.70% of each custom-pair trade goes straight to the creator’s Zora wallet out of a 1% fee.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S12",
+        "S29",
+        "S32",
+        "FeesCurrent"
+      ],
+      "quote": "1% trading fee on swaps, with 0.70% going directly to you as the creator, paid instantly to your Zora wallet",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L27"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L27"
+    },
+    {
+      "id": "L28",
+      "section": "money",
+      "text": "Zora says ZORA gives holders no governance rights or equity claim.",
+      "kind": "statement",
+      "by": "Zora; Blockworks",
+      "sources": [
+        "S8",
+        "S26",
+        "S37"
+      ],
+      "quote": "$ZORA is for fun only and does not entitle its holders to any governance rights or a claim on any equity ownership in Zora",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L28"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L43"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L28"
+    },
+    {
+      "id": "L29",
+      "section": "money",
+      "text": "Zora says team and investor ZORA unlock monthly over 36 months starting six months after token generation.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S8"
+      ],
+      "quote": "Unlocks monthly over 36 months starting six months after TGE.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L29"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L29"
+    },
+    {
+      "id": "L30",
+      "section": "money",
+      "text": "Zora says treasury ZORA unlocks monthly over 48 months starting six months after token generation.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S8"
+      ],
+      "quote": "Unlocks monthly over 48 months starting six months after TGE.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L30"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L30"
+    },
+    {
+      "id": "L31",
+      "section": "money",
+      "text": "CoinGecko and DefiLlama say about 4.47 billion ZORA circulate out of 10 billion.",
+      "kind": "claim",
+      "by": "CoinGecko; DefiLlama",
+      "sources": [
+        "S16",
+        "S50",
+        "S55",
+        "MarketData"
+      ],
+      "quote": "\"circulating_supply\":4469999998.0",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L31"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L41"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L31"
+    },
+    {
+      "id": "L32",
+      "section": "money",
+      "text": "CoinGecko says ZORA was priced at about 0.00432 US dollars on November 24, 2026.",
+      "kind": "claim",
+      "by": "CoinGecko",
+      "sources": [
+        "S16",
+        "MarketData"
+      ],
+      "quote": "\"usd\":0.00431803",
+      "rerun": null,
+      "fact": {
+        "name": "ZORA market price",
+        "value": "0.00431803",
+        "unit": "USD"
+      },
+      "history": [
+        {
+          "block": "2026-11-21",
+          "value": "0.00456292"
+        }
+      ],
+      "from": [
+        "F1:L32"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L32"
+    },
+    {
+      "id": "L33",
+      "section": "people",
+      "text": "Zora's MiCA white paper names Zora Labs, Inc., a Delaware corporation, as the ZORA offeror.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "A.1 Name Zora Labs, Inc. A.2 Legal Form XTIQ – Delaware Corporation",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L33"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L33"
+    },
+    {
+      "id": "L34",
+      "section": "people",
+      "text": "Zora’s August 2025 MiCA white paper lists Jacob Horne as chief executive.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "Chief Executive Officer",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L34"
+      ],
+      "links": [
+        {
+          "type": "outdates",
+          "target": "L66"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L34"
+    },
+    {
+      "id": "L35",
+      "section": "people",
+      "text": "Zora’s August 2025 MiCA white paper lists LaDarius “Dee” Goens as chief operating officer.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "Chief Operating Officer",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L35"
+      ],
+      "links": [
+        {
+          "type": "outdates",
+          "target": "L66"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L35"
+    },
+    {
+      "id": "L36",
+      "section": "people",
+      "text": "Zora’s August 2025 MiCA white paper lists Tyson Battistella as chief technology officer.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "Chief Technology Officer",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L36"
+      ],
+      "links": [
+        {
+          "type": "outdates",
+          "target": "L121"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L36"
+    },
+    {
+      "id": "L37",
+      "section": "people",
+      "text": "Zora's MiCA white paper says Zora Labs was founded in 2020.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "Zora Labs, Inc. is a privately held technology company founded in 2020",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L37"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L37"
+    },
+    {
+      "id": "L38",
+      "section": "people",
+      "text": "Zora lists its official X accounts as @zora, @zoradevs and @zorasupport.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S10",
+        "CurrentAccounts"
+      ],
+      "quote": "Zora account: https://x.com/zora Zora Developers account: https://x.com/zoradevs Zora Support account: https://x.com/zorasupport",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L38"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L38"
+    },
+    {
+      "id": "L39",
+      "section": "people",
+      "text": "Zora lists zora.energy as its Zora Network website.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S10",
+        "CurrentAccounts"
+      ],
+      "quote": "https://zora.energy - Zora Network website",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L39"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L39"
+    },
+    {
+      "id": "L40",
+      "section": "on_chain",
+      "text": "The ZORA token on Base reports name Zora and symbol ZORA.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 'name()(string)' && cast call --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 'symbol()(string)'",
+      "fact": {
+        "name": "Token name and symbol",
+        "value": "Zora / ZORA",
+        "unit": "string"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "ZORA"
+        },
+        {
+          "block": 60577931,
+          "value": "ZORA"
+        },
+        {
+          "block": 61365201,
+          "value": "Zora / ZORA"
+        }
+      ],
+      "from": [
+        "F1:L40"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L40"
+    },
+    {
+      "id": "L41",
+      "section": "on_chain",
+      "text": "The ZORA token total supply on Base is 10 billion ZORA.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 'totalSupply()(uint256)'",
+      "fact": {
+        "name": "ZORA total supply",
+        "value": "10000000000000000000000000000",
+        "unit": "base units (18 decimals)"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "10000000000000000000000000000"
+        },
+        {
+          "block": 60577931,
+          "value": "10000000000000000000000000000"
+        },
+        {
+          "block": 61365201,
+          "value": "10000000000000000000000000000"
+        }
+      ],
+      "from": [
+        "F1:L41"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L41"
+    },
+    {
+      "id": "L42",
+      "section": "on_chain",
+      "text": "The ZORA token uses 18 decimals.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 'decimals()(uint8)'",
+      "fact": {
+        "name": "ZORA decimals",
+        "value": "18",
+        "unit": "decimals"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "18"
+        },
+        {
+          "block": 60577931,
+          "value": "18"
+        },
+        {
+          "block": 61365201,
+          "value": "18"
+        }
+      ],
+      "from": [
+        "F1:L42"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L42"
+    },
+    {
+      "id": "L43",
+      "section": "on_chain",
+      "text": "Calling owner() on the Base ZORA token reverts.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 'owner()(address)'",
+      "fact": {
+        "name": "ZORA owner() call",
+        "value": "reverted",
+        "unit": "result"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "reverted"
+        },
+        {
+          "block": 60577931,
+          "value": "reverted"
+        },
+        {
+          "block": 61365201,
+          "value": "reverted"
+        }
+      ],
+      "from": [
+        "F1:L43"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L81"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L43"
+    },
+    {
+      "id": "L44",
+      "section": "on_chain",
+      "text": "The ZORA token has no EIP-1967 implementation slot set.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast storage --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a933dd6a8ad6c5bbc",
+      "fact": {
+        "name": "ZORA EIP-1967 implementation slot",
+        "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "unit": "bytes32"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "0x0"
+        },
+        {
+          "block": 60577931,
+          "value": "0x0"
+        },
+        {
+          "block": 61365201,
+          "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "from": [
+        "F1:L44"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L44"
+    },
+    {
+      "id": "L45",
+      "section": "on_chain",
+      "text": "The coin factory reports its name as ZoraCoinFactory, version 2.6.0.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x777777751622c0d3258f214F9DF38E35BF45baF3 'contractName()(string)' && cast call --rpc-url https://mainnet.base.org --block 61708308 0x777777751622c0d3258f214F9DF38E35BF45baF3 'contractVersion()(string)'",
+      "fact": {
+        "name": "Factory name and version",
+        "value": "ZoraCoinFactory 2.6.0",
+        "unit": "string"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "2.6.0"
+        },
+        {
+          "block": 60577931,
+          "value": "2.6.0"
+        },
+        {
+          "block": 61365201,
+          "value": "ZoraCoinFactory 2.6.0"
+        }
+      ],
+      "from": [
+        "F1:L45"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L45"
+    },
+    {
+      "id": "L46",
+      "section": "on_chain",
+      "text": "The coin factory is a small proxy whose implementation() points to another contract.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x777777751622c0d3258f214F9DF38E35BF45baF3 'implementation()(address)' && cast codesize --rpc-url https://mainnet.base.org --block 61708308 0x777777751622c0d3258f214F9DF38E35BF45baF3",
+      "fact": {
+        "name": "Factory implementation",
+        "value": "0xbbae128a65239c3328faa0c70b8d5f9c961a8038",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "0xbbAe128a65239c3328fAa0c70B8D5F9C961a8038"
+        },
+        {
+          "block": 60577931,
+          "value": "0xbbAe128a65239c3328fAa0c70B8D5F9C961a8038"
+        },
+        {
+          "block": 61365201,
+          "value": "0xbbae128a65239c3328faa0c70b8d5f9c961a8038"
+        }
+      ],
+      "from": [
+        "F1:L46"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L46"
+    },
+    {
+      "id": "L47",
+      "section": "on_chain",
+      "text": "The coin factory owner is a Safe multisig needing 3 of 6 signers.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x777777751622c0d3258f214F9DF38E35BF45baF3 'owner()(address)' && cast call --rpc-url https://mainnet.base.org --block 61708308 0x004d6611884B4A661749B64b2ADc78505c3e1AB3 'getThreshold()(uint256)' && cast call --rpc-url https://mainnet.base.org --block 61708308 0x004d6611884B4A661749B64b2ADc78505c3e1AB3 'getOwners()(address[])'",
+      "fact": {
+        "name": "Factory owner Safe threshold",
+        "value": "3 of 6 (owner 0x004d6611884b4a661749b64b2adc78505c3e1ab3)",
+        "unit": "signers"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "3 of 6 (owner 0x004d6611884B4A661749B64b2ADc78505c3e1AB3, Safe VERSION 1.3.0)"
+        },
+        {
+          "block": 60577931,
+          "value": "3 of 6 (owner 0x004d6611884B4A661749B64b2ADc78505c3e1AB3, Safe VERSION 1.3.0)"
+        },
+        {
+          "block": 61365201,
+          "value": "3 of 6 (owner 0x004d6611884b4a661749b64b2adc78505c3e1ab3)"
+        }
+      ],
+      "from": [
+        "F1:L47"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L47"
+    },
+    {
+      "id": "L48",
+      "section": "on_chain",
+      "text": "The hook registry lists 17 hook contracts.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x777777C4c14b133858c3982D41Dbf02509fc18d7 'getHookAddresses()(address[])'",
+      "fact": {
+        "name": "Registered hooks",
+        "value": "17",
+        "unit": "addresses"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "17"
+        },
+        {
+          "block": 60577931,
+          "value": "17"
+        },
+        {
+          "block": 61365201,
+          "value": "17"
+        }
+      ],
+      "from": [
+        "F1:L48"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L48"
+    },
+    {
+      "id": "L49",
+      "section": "on_chain",
+      "text": "The factory reports a separate implementation contract for trend coins.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x777777751622c0d3258f214F9DF38E35BF45baF3 'trendCoinImpl()(address)'",
+      "fact": {
+        "name": "Trend coin implementation",
+        "value": "0xbf8ee9724a5acde54e4397290c9b60b4a04ab40d",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 60145088,
+          "value": "0xBf8ee9724A5ACdE54E4397290c9b60b4A04Ab40d"
+        },
+        {
+          "block": 60577931,
+          "value": "0xBf8ee9724A5ACdE54E4397290c9b60b4A04Ab40d"
+        },
+        {
+          "block": 61365201,
+          "value": "0xbf8ee9724a5acde54e4397290c9b60b4a04ab40d"
+        }
+      ],
+      "from": [
+        "F1:L49"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L49"
+    },
+    {
+      "id": "L50",
+      "section": "on_chain",
+      "text": "Zora publishes separate official ZORA token addresses for Base and Solana.",
+      "kind": "statement",
+      "by": "Zora; ZORA on LinkedIn",
+      "sources": [
+        "S7",
+        "S26",
+        "S40",
+        "S58",
+        "CurrentTokenAddresses"
+      ],
+      "quote": "0x1111111111166b7fe7bd91427724b487980afc69 (Base) soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora (Solana)",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L50"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L40"
+        },
+        {
+          "type": "context",
+          "target": "L98"
+        },
+        {
+          "type": "context",
+          "target": "L115"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L50"
+    },
+    {
+      "id": "L51",
+      "section": "on_chain",
+      "text": "Zora lists the same coin factory address for Base and Base Sepolia.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S3"
+      ],
+      "quote": "The ZoraFactory is deployed at the same address across all supported chains",
+      "rerun": null,
+      "fact": {
+        "name": "Coin factory",
+        "value": "0x777777751622c0d3258f214F9DF38E35BF45baF3",
+        "unit": "address"
+      },
+      "history": [],
+      "from": [
+        "F1:L51"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L45"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L51"
+    },
+    {
+      "id": "L52",
+      "section": "on_chain",
+      "text": "CoinGecko and DefiLlama say the Base contract is the ZORA token.",
+      "kind": "claim",
+      "by": "CoinGecko; DefiLlama",
+      "sources": [
+        "S16",
+        "S55",
+        "S7"
+      ],
+      "quote": "'base': '0x1111111111166b7fe7bd91427724b487980afc69'",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L52"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L40"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L52"
+    },
+    {
+      "id": "L53",
+      "section": "history",
+      "text": "Zora says the ZORA token generation event was March 11, 2025.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S8",
+        "S26"
+      ],
+      "quote": "TGE for $ZORA was March 11, 2025.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L53"
+      ],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L92"
+        },
+        {
+          "type": "partly",
+          "target": "L92"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L53"
+    },
+    {
+      "id": "L54",
+      "section": "history",
+      "text": "Zora says it allocated one billion ZORA to 2,415,024 eligible airdrop addresses.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S9"
+      ],
+      "quote": "The airdrop allocated 1,000,000,000 $ZORA to 2,415,024 unique addresses.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L54"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L56"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L54"
+    },
+    {
+      "id": "L55",
+      "section": "history",
+      "text": "crypto.news and CoinDesk said ahead of launch that ZORA would go live on Base on April 23, 2025.",
+      "kind": "claim",
+      "by": "crypto.news; CoinDesk",
+      "sources": [
+        "S18",
+        "S35"
+      ],
+      "quote": "Zora's onchain social media platform will launch its ZORA token on April 23, 2025",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L55"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L80"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L55"
+    },
+    {
+      "id": "L56",
+      "section": "history",
+      "text": "crypto.news says 10% of ZORA supply was reserved for the airdrop.",
+      "kind": "claim",
+      "by": "crypto.news",
+      "sources": [
+        "S18"
+      ],
+      "quote": "Of that, 10% has been reserved for the retroactive airdrop.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L56"
+      ],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L54"
+        },
+        {
+          "type": "partly",
+          "target": "L41"
+        },
+        {
+          "type": "context",
+          "target": "L41"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L56"
+    },
+    {
+      "id": "L57",
+      "section": "history",
+      "text": "Zora’s Base protocol docs say coins made in its app after June 6, 2025 use Uniswap v4.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S4"
+      ],
+      "quote": "All coins created on the Zora app including web and mobile after June 6th 2025 use the V4 configuration.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L57"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L57"
+    },
+    {
+      "id": "L58",
+      "section": "history",
+      "text": "Zora says its pool fee fell from 3% to 1% as of coin version 2.2.0.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S4"
+      ],
+      "quote": "As of version 2.2.0, the fee structure has been unified with a total fee of 1% on pools (was 3% previously)",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L58"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L104"
+        }
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L58"
+    },
+    {
+      "id": "L59",
+      "section": "history",
+      "text": "Zora says Robinhood Chain support and custom pairs arrived in August 2026.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S12"
+      ],
+      "quote": "Coins paired against any asset: When creating a coin, you can now choose a custom asset to pair against",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L59"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L59"
+    },
+    {
+      "id": "L60",
+      "section": "history",
+      "text": "GitHub says the ourzora organization was created in January 2020.",
+      "kind": "claim",
+      "by": "GitHub",
+      "sources": [
+        "S47"
+      ],
+      "quote": "2020-01-19T05:43:50Z",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L60"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L60"
+    },
+    {
+      "id": "L61",
+      "section": "history",
+      "text": "DefiLlama says it tracks Zora Bridge as Zora Network’s canonical bridge on Ethereum.",
+      "kind": "claim",
+      "by": "DefiLlama",
+      "sources": [
+        "S17"
+      ],
+      "quote": "'name': 'Zora Bridge', ... 'category': 'Canonical Bridge'",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L61"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L61"
+    },
+    {
+      "by": null,
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast codesize --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69",
+      "fact": {
+        "name": "ZORA contract code size",
+        "value": "12018",
+        "unit": "bytes"
+      },
+      "history": [
+        {
+          "block": 60577931,
+          "value": "12018"
+        },
+        {
+          "block": 61365201,
+          "value": "12018"
+        }
+      ],
+      "from": [
+        "F1:L62"
+      ],
+      "links": [],
+      "id": "L62",
+      "section": "on_chain",
+      "text": "The ZORA token contract on Base holds 12,018 bytes of deployed code.",
+      "kind": "proof",
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L62"
+    },
+    {
+      "by": null,
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x004d6611884B4A661749B64b2ADc78505c3e1AB3 'getOwners()(address[])' && cast call --rpc-url https://mainnet.base.org --block 61708308 0x004d6611884B4A661749B64b2ADc78505c3e1AB3 'VERSION()(string)'",
+      "fact": {
+        "name": "Factory owner Safe signers",
+        "value": "0x2329e1259ea52eed4800cf44b5dfa59bebfb0211, 0x4b705d1195ef91423cae924dcc69c92b29b05ea8, 0xc08c1b8fd69a22a448fc014bee4a700d70726da7, 0xf2989961bf987bdd6c86cd6b845b6faca194a8e4, 0x2182a78fb76c85eb4494c14508404901494cb151, 0xb9741a46e2bb37c625cf0bbea3a3c43029c9a714 (Safe 1.3.0)",
+        "unit": "addresses"
+      },
+      "history": [
+        {
+          "block": 60577931,
+          "value": "0x2329E1259Ea52eED4800cF44B5dFA59BebFB0211, 0x4b705D1195EF91423CAE924dCC69C92B29B05ea8, 0xc08C1b8fD69A22a448fC014bEe4A700d70726dA7, 0xf2989961Bf987bdD6c86CD6B845B6fACa194a8e4, 0x2182A78Fb76c85EB4494C14508404901494CB151, 0xB9741a46E2BB37C625CF0bbEA3a3C43029c9a714 (Safe 1.3.0)"
+        },
+        {
+          "block": 61365201,
+          "value": "0x2329e1259ea52eed4800cf44b5dfa59bebfb0211, 0x4b705d1195ef91423cae924dcc69c92b29b05ea8, 0xc08c1b8fd69a22a448fc014bee4a700d70726da7, 0xf2989961bf987bdd6c86cd6b845b6faca194a8e4, 0x2182a78fb76c85eb4494c14508404901494cb151, 0xb9741a46e2bb37c625cf0bbea3a3c43029c9a714 (Safe 1.3.0)"
+        }
+      ],
+      "from": [
+        "F1:L63"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L47"
+        }
+      ],
+      "id": "L63",
+      "section": "on_chain",
+      "text": "The Safe that owns the coin factory runs Safe version 1.3.0 and lists six owner wallets.",
+      "kind": "proof",
+      "sources": [
+        "S22",
+        "S15",
+        "S25",
+        "BaseRPC"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L63"
+    },
+    {
+      "by": "Zora",
+      "quote": "Zora account: https://www.tiktok.com/@zora",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L64"
+      ],
+      "links": [],
+      "id": "L64",
+      "section": "people",
+      "text": "Zora's official account list also names its Farcaster, Instagram and TikTok accounts and two Farcaster channels.",
+      "kind": "statement",
+      "sources": [
+        "S10",
+        "CurrentAccounts"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L64"
+    },
+    {
+      "by": "DefiLlama",
+      "quote": "'name': 'ZORA Marketplace', 'category': 'NFT Marketplace', 'url': 'https://market.zora.co'",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [
+        "F1:L65"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L10"
+        }
+      ],
+      "id": "L65",
+      "section": "what_it_does",
+      "text": "DefiLlama says it tracks Zora Coins, ZORA Marketplace and Zora Bridge separately.",
+      "kind": "claim",
+      "sources": [
+        "S23"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L65"
+    },
+    {
+      "by": "Dee Goens; Jacob Horne; The Defiant; Crypto Briefing",
+      "quote": "Excited to share I am now CEO at Zora.",
+      "rerun": null,
+      "fact": {
+        "name": "Chief executive",
+        "value": "Dee Goens",
+        "unit": null
+      },
+      "history": [],
+      "from": [
+        "F1:L66"
+      ],
+      "links": [],
+      "id": "L66",
+      "section": "people",
+      "text": "Dee Goens announced he became Zora’s chief executive on September 9, 2026.",
+      "kind": "claim",
+      "sources": [
+        "S31",
+        "X1",
+        "S32",
+        "S33",
+        "DefiantCEO",
+        "CEOAnnouncement",
+        "CEOHandover"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L66"
+    },
+    {
+      "by": "DefiLlama",
+      "quote": "\"tvl\":3342996.8925340436",
+      "rerun": null,
+      "fact": {
+        "name": "Zora Bridge value locked",
+        "value": "3342996.8925340436",
+        "unit": "USD"
+      },
+      "history": [
+        {
+          "block": "2026-11-22",
+          "value": "3330007.01"
+        }
+      ],
+      "from": [
+        "F1:L67"
+      ],
+      "links": [
+        {
+          "type": "context",
+          "target": "L61"
+        }
+      ],
+      "id": "L67",
+      "section": "money",
+      "text": "DefiLlama says about $3.34 million was locked in Zora Bridge on Ethereum on November 24, 2026.",
+      "kind": "claim",
+      "sources": [
+        "S23",
+        "BridgeTVL"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L67"
+    },
+    {
+      "id": "L68",
+      "section": "money",
+      "text": "DefiLlama says Zora Coins on Base had $80,891 in 30-day trading volume on November 24, 2026.",
+      "kind": "claim",
+      "by": "DefiLlama",
+      "sources": [
+        "S27",
+        "DappVolume"
+      ],
+      "quote": "\"total30d\":80891",
+      "rerun": null,
+      "fact": {
+        "name": "30-day Base coin volume",
+        "value": "80891",
+        "unit": "USD"
+      },
+      "history": [
+        {
+          "block": "2026-11-23",
+          "value": "85594"
+        }
+      ],
+      "links": [],
+      "from": [
+        "F1:L68"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L68"
+    },
+    {
+      "id": "L69",
+      "section": "people",
+      "text": "Zora Labs operates Zora’s web and mobile apps and maintains the Zora Protocol.",
+      "kind": "statement",
+      "by": "Zora; Blockworks",
+      "sources": [
+        "S11",
+        "S37",
+        "CurrentFiling"
+      ],
+      "quote": "the primary maintainer of which is Zora Labs, Inc.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L69"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L69"
+    },
+    {
+      "id": "L70",
+      "section": "what_it_does",
+      "text": "Zora says buyers of a custom-pair coin pay with the asset selected for that pair.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S30"
+      ],
+      "quote": "You'll spend the paired asset (e.g. if the coin is paired with ETH, you spend ETH)",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L70"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L70"
+    },
+    {
+      "id": "L71",
+      "section": "money",
+      "text": "Zora says sellers of a custom-pair coin receive the paired asset.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S30"
+      ],
+      "quote": "You'll receive the paired asset back",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L71"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L71"
+    },
+    {
+      "id": "L72",
+      "section": "how_it_works",
+      "text": "Zora says Doppler deploys each custom-pair token on the chain of the selected backing asset.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S29"
+      ],
+      "quote": "Custom Pairs deploy as their own token via Doppler on the chain where the paired asset lives",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L72"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L72"
+    },
+    {
+      "id": "L73",
+      "section": "money",
+      "text": "Zora says custom-pair fees are split among the creator, the protocol and Doppler.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S29",
+        "FeesCurrent"
+      ],
+      "quote": "the fee is split only between the Creator, Protocol, and Doppler",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L73"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L73"
+    },
+    {
+      "id": "L74",
+      "section": "what_it_does",
+      "text": "Zora says activating a profile coin costs nothing.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S28"
+      ],
+      "quote": "enabling your Creator Coin is completely free",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L74"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L74"
+    },
+    {
+      "id": "L75",
+      "section": "how_it_works",
+      "text": "Zora says a tag lets creators pair posts with a shared trend coin.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S12"
+      ],
+      "quote": "Tag coins let creators pair their posts with a shared topic",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L75"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L75"
+    },
+    {
+      "id": "L76",
+      "section": "money",
+      "text": "Zora says it moved $11 million from its treasury into the ZORA–USDC trading pool on Uniswap v3.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S51"
+      ],
+      "quote": "Zora added $11M of liquidity from The Treasury to the ZORA-USDC pool",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L76"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L76"
+    },
+    {
+      "id": "L77",
+      "section": "what_it_does",
+      "text": "Zora directs eligible airdrop recipients to its claim site to connect their wallets.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S26",
+        "S40"
+      ],
+      "quote": "To check your eligibility, please connect your wallet at",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L77"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L77"
+    },
+    {
+      "id": "L78",
+      "section": "what_it_does",
+      "text": "Zora says external wallets pay network fees for airdrop claims and Zora smart wallets claim for free.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S26"
+      ],
+      "quote": "for external wallets, you must pay gas fees to claim your $ZORA allocation",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L78"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L78"
+    },
+    {
+      "id": "L79",
+      "section": "history",
+      "text": "Zora dates its retroactive airdrop to April 23, 2025.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S26"
+      ],
+      "quote": "The retroactive airdrop date for $ZORA was April 23, 2025.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L94"
+        }
+      ],
+      "from": [
+        "F1:L79"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L79"
+    },
+    {
+      "id": "L80",
+      "section": "history",
+      "text": "The Block says ZORA began trading on Base on April 23, 2025.",
+      "kind": "claim",
+      "by": "The Block; Decrypt",
+      "sources": [
+        "S20",
+        "S36"
+      ],
+      "quote": "it began trading without an official announcement or claim link",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L79"
+        }
+      ],
+      "from": [
+        "F1:L80"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L80"
+    },
+    {
+      "id": "L81",
+      "section": "on_chain",
+      "text": "Zora describes the Base ZORA token contract as immutable.",
+      "kind": "statement",
+      "by": "Zora; Blockworks",
+      "sources": [
+        "S26",
+        "S37"
+      ],
+      "quote": "The $ZORA token contract is immutable",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L44"
+        }
+      ],
+      "from": [
+        "F1:L81"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L81"
+    },
+    {
+      "id": "L82",
+      "section": "money",
+      "text": "The characteristics section of Zora’s August 2025 MiCA white paper gives a fixed supply of one billion ZORA.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "$ZORA has a fixed total supply of 1,000,000,000 units.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "contradicts",
+          "target": "L41"
+        },
+        {
+          "type": "contradicts",
+          "target": "L100"
+        }
+      ],
+      "from": [
+        "F1:L82"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L82"
+    },
+    {
+      "id": "L83",
+      "section": "people",
+      "text": "Zora Zine identifies Jacob Horne as a Zora co-founder.",
+      "kind": "statement",
+      "by": "Zora Zine; Kraken; Blockworks; Jacob Horne",
+      "sources": [
+        "S42",
+        "S43",
+        "S37",
+        "JacobProfile"
+      ],
+      "quote": "Zora co-founder (note, this publication is owned by Zora) Jacob Horne",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L83"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L83"
+    },
+    {
+      "id": "L84",
+      "section": "people",
+      "text": "Blockworks says Dee Goens and Tyson Battistella co-founded Zora.",
+      "kind": "claim",
+      "by": "Blockworks; Kraken; The Defiant; Jacob Horne; Tyson Battistella",
+      "sources": [
+        "S43",
+        "S37",
+        "S32",
+        "TysonSite",
+        "TysonProfile",
+        "CEOHandover"
+      ],
+      "quote": "Dee Goens co-founded Zora in 2020.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L84"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L84"
+    },
+    {
+      "id": "L85",
+      "section": "what_it_does",
+      "text": "Keylo says Zora Network is an Ethereum layer 2 used for earlier Zora NFT minting.",
+      "kind": "claim",
+      "by": "Keylo",
+      "sources": [
+        "S44",
+        "S45"
+      ],
+      "quote": "Zora Network is an Ethereum layer 2 where many Zora NFTs were minted in 2023 and 2024.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L85"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L85"
+    },
+    {
+      "id": "L86",
+      "section": "how_it_works",
+      "text": "Base says Zora was among the apps in its Base–Solana bridge rollout.",
+      "kind": "claim",
+      "by": "Base",
+      "sources": [
+        "S46"
+      ],
+      "quote": "rolling out for anyone to use in apps like Zora, Aerodrome, Virtuals, Flaunch, and Relay",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L86"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L86"
+    },
+    {
+      "id": "L87",
+      "section": "history",
+      "text": "Zora reported delays showing creator and content coin trades and posts in its app and website on November 9, 2026.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S41"
+      ],
+      "quote": "Zora coin trades and posts are processing onchain but may not appear in the app right away.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L87"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L87"
+    },
+    {
+      "id": "L88",
+      "section": "history",
+      "text": "Zora says its 2022 Create app was built on its NFT protocol.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "Create (which is now known as Zora), an application built on top of the Zora Protocol",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L88"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L88"
+    },
+    {
+      "id": "L89",
+      "section": "history",
+      "text": "The Base ZORA token first had deployed code on February 28, 2025.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 26990278. cast code --rpc-url https://mainnet.base.org --block 26990277 0x1111111111166b7FE7bd91427724B487980aFc69 && cast code --rpc-url https://mainnet.base.org --block 26990278 0x1111111111166b7FE7bd91427724B487980aFc69 && cast block --rpc-url https://mainnet.base.org 26990278 --field timestamp",
+      "fact": {
+        "name": "First Base block with token code",
+        "value": "26990278",
+        "unit": "block"
+      },
+      "history": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L90"
+        }
+      ],
+      "from": [
+        "F1:L89"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L89"
+    },
+    {
+      "id": "L90",
+      "section": "on_chain",
+      "text": "The Base ZORA token was deployed through a deterministic deployment factory.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "S38",
+        "S39",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 26990278. cast tx --rpc-url https://mainnet.base.org 0xd0a10c53c9a776cd5fa6d6065a786cda4a9bba88a6262009e39708e0762ebd46 --json && cast receipt --rpc-url https://mainnet.base.org 0xd0a10c53c9a776cd5fa6d6065a786cda4a9bba88a6262009e39708e0762ebd46 --json Decode transaction calldata as safeCreate2(bytes32,bytes) and compute the last 20 bytes of keccak256(0xff || transaction to || salt || keccak256(init code)); compare with 0x1111111111166b7FE7bd91427724B487980aFc69.",
+      "fact": {
+        "name": "ZORA deployment factory",
+        "value": "0x0000000000ffe8b47b3e2130213b802212439497",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L91"
+        }
+      ],
+      "from": [
+        "F1:L90"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L90"
+    },
+    {
+      "id": "L91",
+      "section": "on_chain",
+      "text": "A separate wallet submitted the transaction that deployed the Base ZORA token through the factory.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 26990278. cast tx --rpc-url https://mainnet.base.org 0xd0a10c53c9a776cd5fa6d6065a786cda4a9bba88a6262009e39708e0762ebd46 --json",
+      "fact": {
+        "name": "ZORA deployment transaction sender",
+        "value": "0xbebe537efb8377629a1dfb1ac5c0568036e32712",
+        "unit": "address"
+      },
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L91"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L91"
+    },
+    {
+      "id": "L92",
+      "section": "history",
+      "text": "The Base token recorded a mint of ten billion ZORA on March 11, 2025.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "S26",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 27463361. cast receipt --rpc-url https://mainnet.base.org 0x0825dac372c72fa8abbb2310ca76e103ae9d853c308d608b797c03229f40cca4 --json && cast block --rpc-url https://mainnet.base.org 27463361 --field timestamp Check the ZORA Transfer log from the zero address.",
+      "fact": {
+        "name": "ZORA mint amount",
+        "value": "10000000000000000000000000000",
+        "unit": "base units (18 decimals)"
+      },
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L92"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L92"
+    },
+    {
+      "id": "L93",
+      "section": "on_chain",
+      "text": "The Base ZORA token points to its metadata on theme.wtf.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "S49",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 'contractURI()(string)'",
+      "fact": {
+        "name": "ZORA token metadata URI",
+        "value": "https://www.theme.wtf/assets/metadata.json",
+        "unit": "URL"
+      },
+      "history": [
+        {
+          "block": 61365201,
+          "value": "https://www.theme.wtf/assets/metadata.json"
+        }
+      ],
+      "links": [],
+      "from": [
+        "F1:L93"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L93"
+    },
+    {
+      "id": "L94",
+      "section": "on_chain",
+      "text": "The Base airdrop contract records April 23, 2025 at 14:00 UTC as the claim opening time.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x0000000002ba96c69b95e32caab8fc38bab8b3f8 'claimStart()(uint256)'",
+      "fact": {
+        "name": "Airdrop claim start",
+        "value": "1745416800",
+        "unit": "Unix seconds"
+      },
+      "history": [
+        {
+          "block": 61365201,
+          "value": "1745416800"
+        }
+      ],
+      "links": [],
+      "from": [
+        "F1:L94"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L94"
+    },
+    {
+      "id": "L95",
+      "section": "on_chain",
+      "text": "The Base airdrop contract reports an admin wallet.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x0000000002ba96c69b95e32caab8fc38bab8b3f8 'admin()(address)'",
+      "fact": {
+        "name": "Airdrop admin",
+        "value": "0x078362961fcf3e48cdc850f9cbca335d0b47d968",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 61365201,
+          "value": "0x078362961fcf3e48cdc850f9cbca335d0b47d968"
+        }
+      ],
+      "links": [],
+      "from": [
+        "F1:L95"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L95"
+    },
+    {
+      "id": "L96",
+      "section": "on_chain",
+      "text": "The Base airdrop contract reports a separate wallet that sets allocations.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "S25",
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x0000000002ba96c69b95e32caab8fc38bab8b3f8 'allocationSetter()(address)'",
+      "fact": {
+        "name": "Airdrop allocation setter",
+        "value": "0xe847ebff4d1b7ae3691f238c5cd5cf691fd1f413",
+        "unit": "address"
+      },
+      "history": [
+        {
+          "block": 61365201,
+          "value": "0xe847ebff4d1b7ae3691f238c5cd5cf691fd1f413"
+        }
+      ],
+      "links": [],
+      "from": [
+        "F1:L96"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L96"
+    },
+    {
+      "id": "L97",
+      "section": "on_chain",
+      "text": "Blockworks says Zora’s community airdrop uses a Base claim contract.",
+      "kind": "claim",
+      "by": "Blockworks",
+      "sources": [
+        "S37",
+        "S26"
+      ],
+      "quote": "BaseScan shows the community-claim contract",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L94"
+        }
+      ],
+      "from": [
+        "F1:L97"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L97"
+    },
+    {
+      "id": "L98",
+      "section": "on_chain",
+      "text": "Blockworks says the Solana ZORA mint is a direct issuance.",
+      "kind": "claim",
+      "by": "Blockworks",
+      "sources": [
+        "S37",
+        "CurrentFiling"
+      ],
+      "quote": "Direct token issuance",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "contradicts",
+          "target": "L115"
+        }
+      ],
+      "from": [
+        "F1:L98"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L98"
+    },
+    {
+      "id": "L99",
+      "section": "money",
+      "text": "Solscan says the Solana mint had about 99.09 million ZORA on November 23, 2026.",
+      "kind": "claim",
+      "by": "Solscan",
+      "sources": [
+        "S57",
+        "S60"
+      ],
+      "quote": "99,087,636.750902772",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L98"
+        },
+        {
+          "type": "context",
+          "target": "L118"
+        }
+      ],
+      "from": [
+        "F1:L99"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L99"
+    },
+    {
+      "id": "L100",
+      "section": "money",
+      "text": "Zora’s claim FAQ and the detailed token description in its MiCA white paper give a supply of ten billion ZORA.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S26",
+        "S11"
+      ],
+      "quote": "The total supply of $ZORA is 10,000,000,000 (10 billion).",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [
+        {
+          "type": "confirms",
+          "target": "L41"
+        }
+      ],
+      "from": [
+        "F1:L100"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L100"
+    },
+    {
+      "id": "L101",
+      "section": "what_it_does",
+      "text": "Zora’s help centre lists an app transaction fee of $0.50 for trades below $50.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S29",
+        "FeesCurrent"
+      ],
+      "quote": "Trades under $50 — flat fee of $0.50",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L101"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L101"
+    },
+    {
+      "id": "L102",
+      "section": "what_it_does",
+      "text": "Zora’s help centre lists an app transaction fee of 1% for trades of $50 and above.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S29",
+        "FeesCurrent"
+      ],
+      "quote": "Trades of $50 and above — fee of 1%",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L102"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L102"
+    },
+    {
+      "id": "L103",
+      "section": "what_it_does",
+      "text": "Zora says people can find coins through Explore, their wallet or a direct pair page link.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S30"
+      ],
+      "quote": "Find the coin via Explore, your wallet, or a direct pair page link",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L103"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L103"
+    },
+    {
+      "id": "L104",
+      "section": "money",
+      "text": "Zora says pools from before coin version 2.2.0 keep their original fees until their owners move liquidity to a newer hook.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S4"
+      ],
+      "quote": "Coins deployed before version 2.2.0 continue to use their original fee structure",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "links": [],
+      "from": [
+        "F1:L104"
+      ],
+      "origin": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa#L104"
+    },
+    {
+      "id": "L105",
+      "section": "history",
+      "text": "Zora says its first release in 2020 was a token redeemable for a cassette by RAC.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "ZoraHistory"
+      ],
+      "quote": "the first project released with Zora was $TAPE, a token that could be redeemed for a limited-edition set of 100 cassette tapes",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L106",
+      "section": "history",
+      "text": "Bankless says the first Zora drop was live by May 12, 2020.",
+      "kind": "claim",
+      "by": "Bankless",
+      "sources": [
+        "EarlyDrop"
+      ],
+      "quote": "Yesterday he dropped $TAPE tokens on Ethereum issued through Uniswap.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L107",
+      "section": "history",
+      "text": "CoinGecko says Zora officially launched on Ethereum in January 2021.",
+      "kind": "claim",
+      "by": "CoinGecko",
+      "sources": [
+        "NFTLaunch"
+      ],
+      "quote": "Zora was established in 2020 and was officially launched on Ethereum in January 2021.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L108",
+      "section": "what_it_does",
+      "text": "Zora says traders can find coins, research wallets and trade using its command-line app.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "ZoraCLI"
+      ],
+      "quote": "Find coins, research wallets, and trade either by typing commands yourself or letting an agent do it for you.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L109",
+      "section": "how_it_works",
+      "text": "Zora says its chat assistant runs on the same tools as its command-line app.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "ZoraAgent"
+      ],
+      "quote": "Zora Agent runs on the Zora CLI.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L110",
+      "section": "what_it_does",
+      "text": "Zora says users can place buy and sell orders through its chat assistant.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S12"
+      ],
+      "quote": "Ask the agent to buy or sell coins directly in chat",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L111",
+      "section": "history",
+      "text": "The Defiant says Zora launched markets for trading trends on Solana on February 17, 2026.",
+      "kind": "claim",
+      "by": "The Defiant",
+      "sources": [
+        "DefiantMarkets"
+      ],
+      "quote": "Zora launched a new token market on Solana today",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L112",
+      "section": "history",
+      "text": "Zora’s September 2025 wallet guide described ZORA as available only on Base.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "EarlierSendHelp"
+      ],
+      "quote": "$ZORA is only on the Base Network.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "outdates",
+          "target": "L50"
+        }
+      ]
+    },
+    {
+      "id": "L113",
+      "section": "history",
+      "text": "ZORA’s LinkedIn account says ZORA became available to trade on Solana.",
+      "kind": "claim",
+      "by": "ZORA on LinkedIn",
+      "sources": [
+        "SolanaListing"
+      ],
+      "quote": "$ZORA is now listed on Solana.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L50"
+        }
+      ]
+    },
+    {
+      "id": "L114",
+      "section": "on_chain",
+      "text": "Blockworks says the Base ZORA contract was deployed on March 11, 2025.",
+      "kind": "claim",
+      "by": "Blockworks",
+      "sources": [
+        "CurrentFiling"
+      ],
+      "quote": "The token contract was deployed on Base on March 11, 2025",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "contradicts",
+          "target": "L89"
+        },
+        {
+          "type": "context",
+          "target": "L92"
+        }
+      ]
+    },
+    {
+      "id": "L115",
+      "section": "on_chain",
+      "text": "The Base ZORA adapter and the Solana ZORA mint are linked by reciprocal LayerZero peers.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "BaseRPC",
+        "SolRPC",
+        "LayerZeroSend",
+        "LayerZeroEndpoint"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308; Solana mainnet, finalized account snapshots at slots 473385242 and 473385527. cast call --rpc-url https://mainnet.base.org --block 61708308 0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5 'token()(address)' && cast call --rpc-url https://mainnet.base.org --block 61708308 0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5 'peers(uint32)(bytes32)' 30168. Base58-encode those 32 peer bytes to match the Solana mintAuthority from curl -fsS https://api.mainnet-beta.solana.com -H 'Content-Type: application/json' --data '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"getAccountInfo\",\"params\":[\"soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora\",{\"encoding\":\"jsonParsed\",\"commitment\":\"finalized\"}]}'. Use curl -fsS https://api.mainnet-beta.solana.com -H 'Content-Type: application/json' --data '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"getAccountInfo\",\"params\":[\"9e3nvd49HKsRDTecKwHvaEXmVgnewXZKCNuy58giMkNK\",{\"encoding\":\"base64\",\"commitment\":\"finalized\"}]}' to read the Solana peer config for Base endpoint 30184, owned by Exp715biUyVV6Gu8qdk5jjTWQatwSEvXHG4LPpZP761e. Decode the Base64 data and read bytes [8:40] as the peer address, dropping 12 leading zero bytes. The peer account is the second account of the Send instruction in the Solana transaction in L117. The Solana account calls report live finalized state; exact historical account snapshots require an account-history archive.",
+      "fact": {
+        "name": "ZORA bridge route",
+        "value": {
+          "baseToken": "0x1111111111166b7FE7bd91427724B487980aFc69",
+          "baseAdapter": "0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5",
+          "baseEndpointId": 30184,
+          "solanaEndpointId": 30168,
+          "solanaMint": "soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora",
+          "solanaMintAuthority": "DiBJWFTk9gC8n9LDkCsaDfVPXs7yQ85EovVLWrL9VjJZ",
+          "solanaMintAuthorityBytes": "0xbcd8b45e9db97e291bf08ab3cc8fe730904341e72e00dabbb7df20ce36258d62",
+          "solanaPeerAccount": "9e3nvd49HKsRDTecKwHvaEXmVgnewXZKCNuy58giMkNK",
+          "solanaProgram": "Exp715biUyVV6Gu8qdk5jjTWQatwSEvXHG4LPpZP761e"
+        },
+        "unit": "addresses and endpoint IDs"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L116",
+      "section": "money",
+      "text": "A verified bridge transfer locked 10,559.898853 ZORA on Base and minted the same amount on Solana.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "BaseRPC",
+        "SolRPC",
+        "LayerZeroToSol"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61655904; Solana mainnet, slot 473336317. cast receipt --rpc-url https://mainnet.base.org 0x170e128f610baabf72473bc0021f1efcd7441a6ac882a36c3afb5570eed07753 --json. Check the ZORA Transfer into 0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5 and the adapter OFTSent event. Then run curl -fsS https://api.mainnet-beta.solana.com -H 'Content-Type: application/json' --data '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"getTransaction\",\"params\":[\"2earFS6UU6ZM77dHaPNhN4KTzUamk3pmgQnyXxWLy7F6mHnpKPs7djYR8KxULtvQCmwJBxderpqdQzxuAHis4LRm\",{\"encoding\":\"jsonParsed\",\"maxSupportedTransactionVersion\":1}]}' and inspect the mintTo instruction for the Solana ZORA mint. Match the packet GUID against the message record.",
+      "fact": {
+        "name": "ZORA bridged from Base to Solana",
+        "value": "10559.898853",
+        "unit": "ZORA"
+      },
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L115"
+        }
+      ]
+    },
+    {
+      "id": "L117",
+      "section": "money",
+      "text": "A verified bridge transfer burned 6,208.828943 ZORA on Solana and released the same amount on Base.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "BaseRPC",
+        "SolRPC",
+        "LayerZeroToBase"
+      ],
+      "quote": null,
+      "rerun": "Solana mainnet, slot 468995398; Base (chain 8453), block 56987073. curl -fsS https://api.mainnet-beta.solana.com -H 'Content-Type: application/json' --data '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"getTransaction\",\"params\":[\"3nrxq9yWS3jSC4qfTTJzWVxXdVNa1eKMUtc8WobQxxrpzuKg68rPDXLGhg7NvwXacJxhXzDsHHoJ9wTadJVHSNiX\",{\"encoding\":\"jsonParsed\",\"maxSupportedTransactionVersion\":0}]}'. Check the inner SPL burn and the LayerZero endpoint return data; its first 32 decoded bytes are the packet GUID. Run cast receipt --rpc-url https://mainnet.base.org 0x2336ec2a1ba22c87f002709d82f7bfe6d1126f31a5d49c433af76c01196a76a8 --json and match the GUID in OFTReceived and the ZORA Transfer out of 0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5.",
+      "fact": {
+        "name": "ZORA bridged from Solana to Base",
+        "value": "6208.828943",
+        "unit": "ZORA"
+      },
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L115"
+        }
+      ]
+    },
+    {
+      "id": "L118",
+      "section": "on_chain",
+      "text": "The Solana ZORA mint held a supply of about 99.10 million ZORA at the checked slot.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "SolRPC"
+      ],
+      "quote": null,
+      "rerun": "Solana mainnet, finalized slot 473385242 at observation. curl -fsS https://api.mainnet-beta.solana.com -H 'Content-Type: application/json' --data '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"getAccountInfo\",\"params\":[\"soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora\",{\"encoding\":\"jsonParsed\",\"commitment\":\"finalized\"}]}'. Read data.parsed.info.supply and decimals. The free RPC reports live finalized state; replay of the exact account snapshot requires an account-history archive.",
+      "fact": {
+        "name": "Solana ZORA mint supply",
+        "value": "99098196649755772",
+        "unit": "base units (9 decimals)"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L119",
+      "section": "money",
+      "text": "The bridge adapter held about 99.12 million of the ZORA on Base at the checked block.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x1111111111166b7FE7bd91427724B487980aFc69 'balanceOf(address)(uint256)' 0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5",
+      "fact": {
+        "name": "ZORA held by Base bridge adapter",
+        "value": "99121384090457000000000000",
+        "unit": "base units (18 decimals)"
+      },
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L120",
+      "section": "on_chain",
+      "text": "A 2-of-4 Safe owns the Base side of the ZORA bridge.",
+      "kind": "proof",
+      "by": null,
+      "sources": [
+        "BaseRPC"
+      ],
+      "quote": null,
+      "rerun": "Base (chain 8453), block 61708308. cast call --rpc-url https://mainnet.base.org --block 61708308 0x9d0b5812618357fd7d5997f7f017ae6e8a9dd3c5 'owner()(address)' && cast call --rpc-url https://mainnet.base.org --block 61708308 0xe669740B7f2364aaca734fA9C2087121042f327c 'getThreshold()(uint256)' && cast call --rpc-url https://mainnet.base.org --block 61708308 0xe669740B7f2364aaca734fA9C2087121042f327c 'getOwners()(address[])'",
+      "fact": {
+        "name": "Base bridge adapter owner and threshold",
+        "value": {
+          "address": "0xe669740B7f2364aaca734fA9C2087121042f327c",
+          "threshold": 2,
+          "owners": 4,
+          "ownerAddresses": [
+            "0x4b705D1195EF91423CAE924dCC69C92B29B05ea8",
+            "0xf2989961Bf987bdD6c86CD6B845B6fACa194a8e4",
+            "0xc08C1b8fD69A22a448fC014bEe4A700d70726dA7",
+            "0xADE45df2F96DA794dfE4c319979424A78539D068"
+          ]
+        },
+        "unit": "signers"
+      },
+      "history": [],
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L115"
+        }
+      ]
+    },
+    {
+      "id": "L121",
+      "section": "people",
+      "text": "Tyson Battistella says he previously served as Zora’s chief technology officer.",
+      "kind": "claim",
+      "by": "Tyson Battistella",
+      "sources": [
+        "TysonSite",
+        "TysonProfile"
+      ],
+      "quote": "Previously co-founder and CTO of zora.",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L122",
+      "section": "people",
+      "text": "Zora’s help centre at zora.com lists @ourzora as its TikTok account.",
+      "kind": "claim",
+      "by": "Zora help centre at zora.com",
+      "sources": [
+        "DotComAccounts"
+      ],
+      "quote": "Zora account: https://www.tiktok.com/@ourzora",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L123",
+      "section": "money",
+      "text": "Zora says its protocol receives 0.25% of custom-pair trade value on Base and Robinhood Chain, and 0.225% on Solana.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "FeesCurrent"
+      ],
+      "quote": "Base 0.70% 0.25% 0.05% 1% Robinhood Chain 0.70% 0.25% 0.05% 1%",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L124",
+      "section": "money",
+      "text": "Zora says Doppler receives 0.05% of custom-pair trade value on Base and Robinhood Chain, and 0.075% on Solana.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "FeesCurrent"
+      ],
+      "quote": "Solana 0.70% 0.225% 0.075% 1%",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L125",
+      "section": "money",
+      "text": "Zora says its earlier NFT marketplace paid royalties for supported collections immediately when NFTs sold.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "NFTMarketplaceV3"
+      ],
+      "quote": "the royalties will be paid out instantly and trustlessly onchain",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    },
+    {
+      "id": "L126",
+      "section": "money",
+      "text": "Zora says it receives a portion of transaction gas fees on its own network.",
+      "kind": "statement",
+      "by": "Zora",
+      "sources": [
+        "S11"
+      ],
+      "quote": "Zora now receives a portion of gas fees for transactions executed on the network",
+      "rerun": null,
+      "fact": null,
+      "history": [],
+      "from": [],
+      "links": []
+    }
+  ],
+  "related": [
+    {
+      "name": "Base",
+      "id": "base.org",
+      "relation": "Network hosting the ZORA token and Base Coins factory",
+      "lines": [
+        "L40",
+        "L51",
+        "L86"
+      ]
+    },
+    {
+      "name": "Uniswap",
+      "id": "uniswap.org",
+      "relation": "V4 pools for Base coins and V3 ZORA–USDC treasury liquidity",
+      "lines": [
+        "L11",
+        "L76"
+      ]
+    },
+    {
+      "name": "Doppler",
+      "id": "doppler.lol",
+      "relation": "Initial Base coin liquidity and custom-pair deployment",
+      "lines": [
+        "L17",
+        "L72",
+        "L73"
+      ]
+    },
+    {
+      "name": "Robinhood Chain",
+      "id": "Robinhood Chain",
+      "relation": "Network for custom-pair coins",
+      "lines": [
+        "L8",
+        "L59"
+      ]
+    },
+    {
+      "name": "Solana",
+      "id": "solana.com",
+      "relation": "Network for custom-pair coins and the bridged ZORA mint",
+      "lines": [
+        "L8",
+        "L50",
+        "L115"
+      ]
+    },
+    {
+      "name": "LayerZero",
+      "id": "layerzero.network",
+      "relation": "OFT adapter route between the Base token and Solana mint",
+      "lines": [
+        "L115",
+        "L116",
+        "L117"
+      ]
+    }
+  ],
+  "logo": {
+    "url": "https://zora.co/assets/favicon/apple-touch-icon.png",
+    "fetched_at": "2026-11-24T15:02:39Z"
+  },
+  "differs": [
+    {
+      "lines": [
+        "L82",
+        "L100",
+        "L41"
+      ],
+      "why": "The white paper paragraph says one billion ZORA, while the Base contract reports ten billion and the claim FAQ also says ten billion.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L105",
+        "L106",
+        "L107"
+      ],
+      "why": "Zora dates its first release to 2020 and Bankless reported it live that May. CoinGecko puts the official Ethereum launch in January 2021, which may describe a later milestone.",
+      "level": "question"
+    },
+    {
+      "lines": [
+        "L114",
+        "L89",
+        "L92"
+      ],
+      "why": "The February Base deployment is visible in the code boundary and deployment transaction. March 11 is the date of the initial mint.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L98",
+        "L115",
+        "L116",
+        "L117"
+      ],
+      "why": "Blockworks classifies the Solana mint as direct issuance. The reciprocal peer configuration and successful mint and burn transfers show that it functions as a bridged representation.",
+      "level": "conflict"
+    },
+    {
+      "lines": [
+        "L64",
+        "L122"
+      ],
+      "why": "The zora.co help centre links @zora, while the separate zora.com help centre lists @ourzora. It is unclear which handle Zora uses now.",
+      "level": "question"
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "Which wallets currently control distribution of team, investor and treasury ZORA, and how do their balances compare with the published unlock schedules?",
+    "Do the currently active coin pools enforce the published reward splits for each coin type and chain?",
+    "Who currently operates Zora Network infrastructure, and which current app features rely on it?",
+    "Who holds the six signing wallets for the coin factory’s Safe?",
+    "Which contract created the coin factory proxy internally, and which authority controls that deployer?",
+    "Will Zora correct the one-billion supply figure in its August 2025 white paper?",
+    "Which authority can change the Solana bridge program and its peer configuration today?",
+    "Which app routes apply both the pool fee and the app transaction fee, and how does that vary by chain?",
+    "Does Zora publish a full reconciliation of outstanding Solana ZORA and the adapter’s Base balance, including transfers in flight?"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "ref": "https://zora.co",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "S2",
+      "ref": "https://docs.zora.co/coins",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S3",
+      "ref": "https://docs.zora.co/coins/contracts/creating-a-coin",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S4",
+      "ref": "https://docs.zora.co/coins/contracts/rewards",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S5",
+      "ref": "https://docs.zora.co/coins/contracts/architecture",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S6",
+      "ref": "https://docs.zora.co/coins/contracts/hook-registry",
+      "type": "channel",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S7",
+      "ref": "https://support.zora.co/en/articles/5654721",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S8",
+      "ref": "https://support.zora.co/en/articles/4797185",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S9",
+      "ref": "https://support.zora.co/en/articles/5653441",
+      "type": "channel",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S10",
+      "ref": "https://support.zora.co/en/articles/5638529",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S11",
+      "ref": "https://support.zora.co/en/articles/8192065",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S12",
+      "ref": "https://support.zora.co/en/articles/4641857",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S13",
+      "ref": "https://support.zora.co/en/articles/5654849",
+      "type": "channel",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S14",
+      "ref": "https://github.com/ourzora/zora-protocol",
+      "type": "repository",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "api.github.com"
+      ]
+    },
+    {
+      "id": "S15",
+      "ref": "https://mainnet.base.org (Base, chain 8453) eth_call / eth_getCode at block 60145088",
+      "type": "rpc",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "mainnet.base.org"
+      ]
+    },
+    {
+      "id": "S16",
+      "ref": "https://api.coingecko.com/api/v3/coins/zora",
+      "type": "outside",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "api.coingecko.com"
+      ]
+    },
+    {
+      "id": "S17",
+      "ref": "https://api.llama.fi/protocols",
+      "type": "outside",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "api.llama.fi"
+      ]
+    },
+    {
+      "id": "S18",
+      "ref": "https://crypto.news/ethereum-nft-platform-zora-to-launch-token-on-apr-23/",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "crypto.news"
+      ]
+    },
+    {
+      "id": "S19",
+      "ref": "https://docs.zora.co/llms.txt",
+      "type": "channel",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S20",
+      "ref": "https://www.theblock.co/news/ecosystems/2025-04-23-zora-airdrop-triggers-confusion-as-token-launches-without-announcement-requires-users-claim-manually-351671",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.theblock.co"
+      ]
+    },
+    {
+      "id": "S21",
+      "ref": "https://support.zora.co/en/articles/4796161",
+      "type": "channel",
+      "read_at": "2026-11-21T00:05:00Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S22",
+      "ref": "https://mainnet.base.org (Base, chain 8453) eth_call / eth_getCode / eth_getStorageAt at block 60577931",
+      "type": "rpc",
+      "read_at": "2026-11-22T00:06:18Z",
+      "could_open": true,
+      "read_via": [
+        "mainnet.base.org"
+      ]
+    },
+    {
+      "id": "S23",
+      "ref": "https://api.llama.fi/protocols",
+      "type": "outside",
+      "read_at": "2026-11-22T00:06:18Z",
+      "could_open": true,
+      "read_via": [
+        "api.llama.fi"
+      ]
+    },
+    {
+      "id": "X1",
+      "ref": "https://x.com/js_horne/status/2097748001666244809",
+      "type": "social_post",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "api.fxtwitter.com"
+      ]
+    },
+    {
+      "id": "S24",
+      "ref": "https://base.blockscout.com/api/v2/addresses/0x1111111111166b7FE7bd91427724B487980aFc69",
+      "type": "explorer",
+      "read_at": "2026-11-22T00:06:18Z",
+      "could_open": false,
+      "read_via": [
+        "base.blockscout.com"
+      ]
+    },
+    {
+      "id": "F1",
+      "ref": "https://api.imd.fun/artifacts/f8a2699d451fdafc315e4de2269c289eedf4a9d19ff723106b30816e6548fd0f",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "api.imd.fun"
+      ]
+    },
+    {
+      "id": "S25",
+      "ref": "https://mainnet.base.org",
+      "type": "rpc",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "mainnet.base.org"
+      ]
+    },
+    {
+      "id": "S26",
+      "ref": "https://claim.zora.co/faq",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "claim.zora.co"
+      ]
+    },
+    {
+      "id": "S27",
+      "ref": "https://defillama.com/protocol/zora-coins",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "defillama.com"
+      ]
+    },
+    {
+      "id": "S28",
+      "ref": "https://support.zora.co/en/articles/6316801",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S29",
+      "ref": "https://support.zora.co/en/articles/2509953",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S30",
+      "ref": "https://support.zora.co/en/articles/13602113",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S31",
+      "ref": "https://x.com/dg_goens/status/2097747517798498642",
+      "type": "social_post",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "api.fxtwitter.com"
+      ]
+    },
+    {
+      "id": "S32",
+      "ref": "https://www.kucoin.com/news/flash/zora-co-founder-dee-goens-replaces-jacob-horne-as-ceo",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.kucoin.com"
+      ]
+    },
+    {
+      "id": "S33",
+      "ref": "https://cryptobriefing.com/dee-goens-replaces-jacob-horne-ceo-zora/",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "cryptobriefing.com"
+      ]
+    },
+    {
+      "id": "S35",
+      "ref": "https://www.coindesk.com/markets/2025/04/21/coinbase-backed-zora-to-airdrop-token-after-a-week-of-contentious-promotions",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.coindesk.com"
+      ]
+    },
+    {
+      "id": "S36",
+      "ref": "https://decrypt.co/334500/preload",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "decrypt.co"
+      ]
+    },
+    {
+      "id": "S37",
+      "ref": "https://blockworks.com/token-transparency/filing/zora",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "blockworks.com"
+      ]
+    },
+    {
+      "id": "S38",
+      "ref": "https://www.codeslaw.app/contracts/base/0x1111111111166b7fe7bd91427724b487980afc69?tab=dependencies",
+      "type": "explorer",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.codeslaw.app"
+      ]
+    },
+    {
+      "id": "S39",
+      "ref": "https://github.com/ourzora/zora-token/blob/main/DEPLOYMENT.md",
+      "type": "repository",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S40",
+      "ref": "https://zora.co/blog/zora-is-live",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "S41",
+      "ref": "https://status.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "status.zora.co"
+      ]
+    },
+    {
+      "id": "S42",
+      "ref": "https://zine.zora.co/ali-breland-peering-over-the-edge-daos",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "zine.zora.co"
+      ]
+    },
+    {
+      "id": "S43",
+      "ref": "https://assets-cms.kraken.com/files/51n36hrp/facade/62d0a61501e08d09c22ed867da3fa9a362bc613e.pdf",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "assets-cms.kraken.com"
+      ]
+    },
+    {
+      "id": "S44",
+      "ref": "https://keylo.io/blog/zora-wallet",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "keylo.io"
+      ]
+    },
+    {
+      "id": "S45",
+      "ref": "https://l2beat.com/layer2s/projects/zora",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "l2beat.com"
+      ]
+    },
+    {
+      "id": "S46",
+      "ref": "https://www.base.org/blog/base-solana-bridge",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.base.org"
+      ]
+    },
+    {
+      "id": "S47",
+      "ref": "https://api.github.com/orgs/ourzora",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "api.github.com"
+      ]
+    },
+    {
+      "id": "S48",
+      "ref": "https://support.zora.co/en/articles/6171073",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S49",
+      "ref": "https://www.theme.wtf/assets/metadata.json",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.theme.wtf"
+      ]
+    },
+    {
+      "id": "S50",
+      "ref": "https://www.coingecko.com/en/coins/zora",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.coingecko.com"
+      ]
+    },
+    {
+      "id": "S51",
+      "ref": "https://zora.co/blog/adding-liquidity-on-zora",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "S52",
+      "ref": "https://docs.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S53",
+      "ref": "https://basescan.org/token/0x1111111111166b7FE7bd91427724B487980aFc69",
+      "type": "explorer",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": false,
+      "read_via": [
+        "basescan.org"
+      ]
+    },
+    {
+      "id": "S54",
+      "ref": "https://github.com/ourzora/zora-token/blob/main/src/zora/Zora.sol",
+      "type": "repository",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "S55",
+      "ref": "https://defillama.com/token/ZORA",
+      "type": "outside",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "defillama.com"
+      ]
+    },
+    {
+      "id": "S56",
+      "ref": "https://docs.zora.co/coins/contracts/earning-referral-rewards",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "S57",
+      "ref": "https://solscan.io/token/soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora",
+      "type": "explorer",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "solscan.io"
+      ]
+    },
+    {
+      "id": "S58",
+      "ref": "https://www.linkedin.com/company/ourzora/",
+      "type": "social_post",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "www.linkedin.com"
+      ]
+    },
+    {
+      "id": "S59",
+      "ref": "https://support.zora.co/en/articles/4648001",
+      "type": "channel",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "S60",
+      "ref": "https://api.mainnet-beta.solana.com",
+      "type": "rpc",
+      "read_at": "2026-11-23T19:56:29Z",
+      "could_open": true,
+      "read_via": [
+        "api.mainnet-beta.solana.com"
+      ]
+    },
+    {
+      "id": "Prior",
+      "ref": "https://api.imd.fun/artifacts/1a6e76c20ca39b21d504238740f72d5ed8e3b958b33025b5ee3d5b86aeb052aa",
+      "type": "artifact",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "api.imd.fun"
+      ]
+    },
+    {
+      "id": "BaseRPC",
+      "ref": "https://mainnet.base.org",
+      "type": "rpc",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "mainnet.base.org"
+      ]
+    },
+    {
+      "id": "SolRPC",
+      "ref": "https://api.mainnet-beta.solana.com",
+      "type": "rpc",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "api.mainnet-beta.solana.com"
+      ]
+    },
+    {
+      "id": "ZoraHistory",
+      "ref": "https://zora.co/blog/the-ticker-is-zora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "EarlyDrop",
+      "ref": "https://banklesscom.beehiiv.com/p/how-to-buy-tape-on-zora",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "banklesscom.beehiiv.com"
+      ]
+    },
+    {
+      "id": "NFTLaunch",
+      "ref": "https://www.coingecko.com/learn/what-is-zora-and-zora-network-crypto",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "www.coingecko.com"
+      ]
+    },
+    {
+      "id": "EarlyMarketplace",
+      "ref": "https://techcrunch.com/2020/10/16/crypto-driven-marketplace-zora-raises-2m-to-build-a-sustainable-creator-economy/",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "techcrunch.com"
+      ]
+    },
+    {
+      "id": "ZoraCLI",
+      "ref": "https://zora.co/blog/your-terminal-is-now-a-trading-agent",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "ZoraAgent",
+      "ref": "https://zora.co/blog/zora-agent-is-live",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "ZoraBlog",
+      "ref": "https://zora.co/blog/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "CurrentAccounts",
+      "ref": "https://support.zora.co/en/articles/5638529",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "CurrentTokenAddresses",
+      "ref": "https://support.zora.co/en/articles/5654721",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "DappVolume",
+      "ref": "https://api.llama.fi/summary/dexs/zora-coins?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true",
+      "type": "tracker",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "api.llama.fi"
+      ]
+    },
+    {
+      "id": "BridgeTVL",
+      "ref": "https://api.llama.fi/protocols",
+      "type": "tracker",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "api.llama.fi"
+      ]
+    },
+    {
+      "id": "MarketData",
+      "ref": "https://api.coingecko.com/api/v3/coins/zora?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false",
+      "type": "tracker",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "api.coingecko.com"
+      ]
+    },
+    {
+      "id": "CurrentFiling",
+      "ref": "https://blockworks.com/token-transparency/filing/zora",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "blockworks.com"
+      ]
+    },
+    {
+      "id": "DefiantCEO",
+      "ref": "https://thedefiant.io/newsletter/weekly-recap/weekly-recap-247-to-1-90-in-three-hours",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "thedefiant.io"
+      ]
+    },
+    {
+      "id": "DefiantMarkets",
+      "ref": "https://thedefiant.io/newsletter/defi-daily/pumpfun-launches-cashback-coins",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "thedefiant.io"
+      ]
+    },
+    {
+      "id": "EarlierSendHelp",
+      "ref": "https://support.zora.co/en/articles/5626113",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "SolanaListing",
+      "ref": "https://www.linkedin.com/posts/ourzora_zora-is-now-listed-on-solana-trade-it-activity-7419465153890492416-ljEb",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "www.linkedin.com"
+      ]
+    },
+    {
+      "id": "BaseTokenSource",
+      "ref": "https://raw.githubusercontent.com/ourzora/zora-token/main/src/zora/Zora.sol",
+      "type": "code",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "raw.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "LayerZeroSend",
+      "ref": "https://github.com/LayerZero-Labs/devtools/blob/main/examples/oft-solana/programs/oft/src/instructions/send.rs",
+      "type": "code",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "LayerZeroEndpoint",
+      "ref": "https://www.helius.dev/parsed-data/layerzero/endpoint",
+      "type": "code",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "www.helius.dev"
+      ]
+    },
+    {
+      "id": "LayerZeroToSol",
+      "ref": "https://scan.layerzero-api.com/v1/messages/tx/2earFS6UU6ZM77dHaPNhN4KTzUamk3pmgQnyXxWLy7F6mHnpKPs7djYR8KxULtvQCmwJBxderpqdQzxuAHis4LRm",
+      "type": "tracker",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "scan.layerzero-api.com"
+      ]
+    },
+    {
+      "id": "LayerZeroToBase",
+      "ref": "https://scan.layerzero-api.com/v1/messages/tx/3nrxq9yWS3jSC4qfTTJzWVxXdVNa1eKMUtc8WobQxxrpzuKg68rPDXLGhg7NvwXacJxhXzDsHHoJ9wTadJVHSNiX",
+      "type": "tracker",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "scan.layerzero-api.com"
+      ]
+    },
+    {
+      "id": "Channel0",
+      "ref": "https://zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "Channel1",
+      "ref": "https://docs.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "docs.zora.co"
+      ]
+    },
+    {
+      "id": "Channel2",
+      "ref": "https://support.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "Channel3",
+      "ref": "https://x.com/zora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "Channel4",
+      "ref": "https://x.com/zoradevs",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "Channel5",
+      "ref": "https://x.com/zorasupport",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "Channel6",
+      "ref": "https://warpcast.com/zora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "warpcast.com",
+        "farcaster.xyz"
+      ]
+    },
+    {
+      "id": "Channel7",
+      "ref": "https://warpcast.com/~/channel/zora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "warpcast.com",
+        "farcaster.xyz"
+      ]
+    },
+    {
+      "id": "Channel8",
+      "ref": "https://warpcast.com/~/channel/zora-devs",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "warpcast.com",
+        "farcaster.xyz"
+      ]
+    },
+    {
+      "id": "Channel9",
+      "ref": "https://www.instagram.com/our.zora/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": false,
+      "read_via": [
+        "www.instagram.com"
+      ]
+    },
+    {
+      "id": "Channel10",
+      "ref": "https://www.tiktok.com/@zora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "www.tiktok.com"
+      ]
+    },
+    {
+      "id": "Channel11",
+      "ref": "https://github.com/ourzora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "github.com"
+      ]
+    },
+    {
+      "id": "Channel12",
+      "ref": "https://zora.energy/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.energy"
+      ]
+    },
+    {
+      "id": "Channel13",
+      "ref": "https://claim.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "claim.zora.co"
+      ]
+    },
+    {
+      "id": "Channel14",
+      "ref": "https://www.theme.wtf/assets/metadata.json",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "www.theme.wtf"
+      ]
+    },
+    {
+      "id": "Channel15",
+      "ref": "https://status.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": false,
+      "read_via": [
+        "status.zora.co"
+      ]
+    },
+    {
+      "id": "Channel16",
+      "ref": "https://zine.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zine.zora.co"
+      ]
+    },
+    {
+      "id": "Channel17",
+      "ref": "https://nft-docs.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "nft-docs.zora.co"
+      ]
+    },
+    {
+      "id": "Channel18",
+      "ref": "https://x.com/dg_goens",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "Channel19",
+      "ref": "https://x.com/js_horne",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "Channel20",
+      "ref": "https://cli.zora.com/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "cli.zora.com",
+        "agents.zora.com"
+      ]
+    },
+    {
+      "id": "Channel21",
+      "ref": "https://www.linkedin.com/company/ourzora/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": false,
+      "read_via": [
+        "www.linkedin.com"
+      ]
+    },
+    {
+      "id": "Channel22",
+      "ref": "https://farcaster.xyz/~/channel/zora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "farcaster.xyz"
+      ]
+    },
+    {
+      "id": "Channel23",
+      "ref": "https://agents.zora.com/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "agents.zora.com"
+      ]
+    },
+    {
+      "id": "Channel24",
+      "ref": "https://zora.co/app/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "Channel25",
+      "ref": "https://market.zora.co/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "market.zora.co"
+      ]
+    },
+    {
+      "id": "Channel26",
+      "ref": "https://zora.co/blog/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    },
+    {
+      "id": "Channel27",
+      "ref": "https://farcaster.xyz/zora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "farcaster.xyz"
+      ]
+    },
+    {
+      "id": "Channel28",
+      "ref": "https://farcaster.xyz/~/channel/zora-devs",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "farcaster.xyz"
+      ]
+    },
+    {
+      "id": "TysonSite",
+      "ref": "https://tbts.tl/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "tbts.tl"
+      ]
+    },
+    {
+      "id": "TysonProfile",
+      "ref": "https://x.com/tbtstl",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "JacobProfile",
+      "ref": "https://wellfound.com/company/zora-4/people",
+      "type": "article",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "wellfound.com"
+      ]
+    },
+    {
+      "id": "CEOAnnouncement",
+      "ref": "https://x.com/dg_goens/status/2097747517798498642",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "CEOHandover",
+      "ref": "https://x.com/js_horne/status/2097748001666244809",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "x.com"
+      ]
+    },
+    {
+      "id": "DotComAccounts",
+      "ref": "https://support.zora.com/en/articles/10420033",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.com"
+      ]
+    },
+    {
+      "id": "FeesCurrent",
+      "ref": "https://support.zora.co/en/articles/2509953",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "support.zora.co"
+      ]
+    },
+    {
+      "id": "DopplerHome",
+      "ref": "https://www.doppler.lol/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "www.doppler.lol"
+      ]
+    },
+    {
+      "id": "DotComMain",
+      "ref": "https://zora.com/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.com",
+        "zora.co"
+      ]
+    },
+    {
+      "id": "DotComCreators",
+      "ref": "https://creators.zora.com/",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "creators.zora.com",
+        "zora.co"
+      ]
+    },
+    {
+      "id": "AltTikTok",
+      "ref": "https://www.tiktok.com/@ourzora",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": false,
+      "read_via": [
+        "www.tiktok.com"
+      ]
+    },
+    {
+      "id": "NFTMarketplaceV3",
+      "ref": "https://zine.zora.co/zora-v3",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zine.zora.co"
+      ]
+    },
+    {
+      "id": "SiteIcon",
+      "ref": "https://zora.co/assets/favicon/apple-touch-icon.png",
+      "type": "channel",
+      "read_at": "2026-11-24T15:02:39Z",
+      "could_open": true,
+      "read_via": [
+        "zora.co"
+      ]
+    }
+  ],
+  "ignored_instructions": [
+    "https://docs.zora.co/",
+    "https://agents.zora.com/"
+  ],
+  "notes": "All 104 lines from the supplied F1 are carried with immediate origins. Base ZORA is the requested main contract and serves as a pairing currency and rewards asset. The Base reads were repeated at block 61708308 and the deployment address was independently derived from the public transaction. The LayerZero route was checked from both peer accounts and with completed transfers in both directions. The Base total includes the tokens held by the adapter. The Solana amount is shown separately as a bridged balance. The Solana account reads use finalized slots and the transfer receipts are independently replayable. The first documented release in 2020 is used for launch. The public token launch, Base deployment and Base initial mint are separate events. The Size figure is DefiLlama’s 30-day volume for Base Zora Coins. Coverage for other chains was not established. All previously listed channel URLs were checked. Instagram redirected to login, and the status and LinkedIn company profiles blocked direct access. The current help centre links the social accounts. Its official account list does not link the LinkedIn company profile, and the accessible LinkedIn post lists only the Solana mint, so the prior weak tie could not be confirmed. The CLI now resolves to the agents docs, and Warpcast URLs redirect to Farcaster. The X profile fetches were used for reachability, with the help centre as tie evidence for the official accounts. The factory, bridge adapter and airdrop controls are scoped to those contracts. The Base token owner call and implementation slot checks alone do not establish all possible authority. Setup directions on the developer and agent pages were treated as page content. The account lists at zora.co and zora.com give different TikTok handles. The .co list supports the account shown in the infobox."
+}
