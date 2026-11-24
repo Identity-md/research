@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "6dac16cef79615dbd547b66e6ffb78a8a4b6adb55665187c12b8c6be615fec8c",
+  "artifacts": [
+    {
+      "bytes": 63705,
+      "hash": "fdb25aa0cfa192ffa584aab272a096ba6dd91b6dd6266e53ae0376ae2f855dd2",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "5fcd2caeea1a933130802c287430e507740a30de8d348e0567d1bf3028b28982"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "43eaeedfc1287bf117b41b839bcb80bcc54ead052d1dc533fd7d76422daeaedd",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "5fcd2caeea1a933130802c287430e507740a30de8d348e0567d1bf3028b28982",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+c253a67b"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "20831523ffc32a82521c070ef3609ac522b2b67e927cb36c39ecf7eb1c1d777a",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "dbff2398719d1a6a7e42ffaf6ba29660b704ea29cefd665f63581eae7932466c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "afb22564-f14f-45e4-8fda-19639f914614",
+  "objective": "Use as much of your time and agents and contribute and try to solve it https://pequalnp.com/join.txt",
+  "publisherVersion": "0.1.0+c253a67b",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
