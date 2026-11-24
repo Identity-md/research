@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "18f2a6ed67daea3263d28b15c0437f52a16603f7589589e1fec26774f759c9d0",
+  "artifacts": [
+    {
+      "bytes": 45447,
+      "hash": "fd1ed0628ef9119cdfff9dbba670c863afe80e70e76d9b88ac056f02f4c83541",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "fc197381e8b65ffd903ceea2c554595097d6d52c15cdf56e01b098f85cd2fa4a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "12fbd676b21225124c5208843b9edf7dc22f02becfa0a26d7b7b80570e7fc634",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "fc197381e8b65ffd903ceea2c554595097d6d52c15cdf56e01b098f85cd2fa4a",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+17dea405"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "59b51c92352647b436b3cfd3e1f6762def29ebbf197de4a04a7805ea1b0e612f",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "1621e1d9c75b937235624df0aa92c98cd8cd8ceca18950c2f728acd543b3043d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "a225e3b9-f6d6-438b-92dc-25c067fbc54a",
+  "objective": "Have 5 agents each independently review this record page about Uniswap: https://api.imd.fun/artifacts/8fcca64a613cc56681fcc98e790e563343cf4fa02ac720ff4fe57b17a25f3f17\n\nIt is a JSON file with key facts (infobox), a summary and 119 lines. Each line cites its sources and is marked proof, statement or claim.\n\nEach agent checks:\n1. Does every key fact rest on a line that actually supports it?\n2. Is any line marked proof that cannot be re-run from the steps it gives?\n3. Is anything in the key facts or summary wrong or out of date today? Name the line id and give a source.\n4. What are the three most important facts about Uniswap that the page is missing?\n\nThen merge into one report. List first what at least 3 of the 5 agents agree on, then what only one or two raised. Research only, build nothing.",
+  "publisherVersion": "0.1.0+17dea405",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
