@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "553606de95ced9ac69b9bdb653898c5f89ef3f67ddb61b2d4cb5b9c634314424",
+  "artifacts": [
+    {
+      "bytes": 54693,
+      "hash": "9c2fc165f329c0f19712b4d9d0f1612dcc56ed935604ed75c47b0da991c464be",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "d1ecd98d78184eb9f4aab2c28efbd18863db3bb6a4649859e9dc8c575883730f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "43eaeedfc1287bf117b41b839bcb80bcc54ead052d1dc533fd7d76422daeaedd",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "d1ecd98d78184eb9f4aab2c28efbd18863db3bb6a4649859e9dc8c575883730f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+17dea405"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f221b135e401d24839a30c767499d6fa3a24d10dd971c1409610eedc364fb21a",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "cd88d84f66b2d18e4b962b01c6cc14e7a4b72c78139a175fbc354bac77046486",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "93ac12ac-cb50-4ba4-8157-d5fa18732e0a",
+  "objective": "OBJECTIVE\nSolve the public Bitcoin Puzzle #140 and send its available prize to the recipient below. A report or benchmark alone is NOT completion.\n\nCHALLENGE\nAddress: 1QKBaU6WAeycb3DbKbLBkX7vJiaS8r42Xo\nReported compressed public key:\n031f6a332d3c5c4f2de2378c012f429cd109ba07d69690c6c701b6bb87860d6640\nInclusive private-key interval: [2^139, 2^140 - 1].\nIndependently verify the public challenge, public-key/address match, interval and current spendable prize before execution. Target only this public challenge.\n\nSOLE PRIZE RECIPIENT\nbc1pg6luxm9s4qq65lge4l6ual7xwdw5v85eh675cmrl5we0ht3vpfhswxu0cx\nValidate its Bitcoin mainnet checksum. Pay this address exclusively, less Bitcoin network fees. No substituted recipient, operator fee, donation or reward-sharing pool.\n\nEXECUTION\nUse the maximum workers and planning rounds available to this order. Coordinate specialists in interval discrete logarithms, secp256k1, CPU/GPU optimization, distributed search, independent verification and Bitcoin claiming.\n\nWhen an approach fails, analyze the failure and assign another approach or capable worker within platform limits. Share findings, prevent duplicate work and preserve resumable checkpoints. Continue productive work throughout the available execution allowance.\n\nReview established Pollard Kangaroo implementations, including https://github.com/RetiredC/RCKangaroo. Inspect source and licenses; pin versions. Compare methods using reproducible evidence. Do not assume patterns in previously solved keys predict this key.\n\nVerify implementations on generated small-range challenges with known answers. Measure actual hardware, throughput, memory and elapsed time. Synthetic success is not solving #140. Do not assume LLM workers provide GPUs.\n\nRun the real search using available authorized compute, with appropriate coordinated walks, collision handling and checkpoints. If execution is unavailable, deliver the runnable package and explicitly mark the objective incomplete.\n\nSECURE CLAIM\nNever expose recovered private keys in public outputs, logs, repositories or transcripts. Establish a private recovery/signing path before real-key execution. If workers cannot protect secrets, provide an entrant-controlled private runner.\n\nTest the claim workflow on Bitcoin regtest. Independently verify any recovered key and current UTXOs. The entrant authorizes broadcasting a valid prize transaction paying ONLY the recipient above, minus network fees, when secure signing and broadcasting are supported. Otherwise provide the private local claim tool and exact remaining action.\n\nSUCCESS AND BUDGET\nCompletion requires a verified real solution and confirmed prize payment. If resources expire first, report INCOMPLETE with source, checkpoints, measured results and restart instructions. Never invent success.\n\nTotal spending must not exceed 5 IMD. No paid external services or rented compute. Do not promise unlimited runtime or delegation beyond platform capabilities.",
+  "publisherVersion": "0.1.0+17dea405",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
