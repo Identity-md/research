@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "f9658b21c2c4459da1cf5a97c32a365638a447efb0f59b49177ae6d52456fbb7",
+  "artifacts": [
+    {
+      "bytes": 22883,
+      "hash": "59cae687a482d0fe646f1baf995d467bd419f63b27803c8ecd4deda3a59a975a",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "acd41d4798486473c22d6d56cdc56c616a183770e7f4fec10d88831866eca217"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e02bec63aa9dcaa5db86825dfd091a9d58ab7ac3b838b4733c1b819cc0667d0e",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "7e25e67856f31936d4c86f43f7fb69e4b73e0f4547a1a7ee097a08661234fa00",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "93c37f17670e4d982c10b72df46740cbf62f916f96c4f04e932b48262a78a8d4",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-1",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b620dc53548a1122e44d902c7e7d4914f8769f08567be2350326b0a681fb7e72",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "764cd99b4c628a47fe03b684170e9c33e9784067e2f4eb68a4a2bfb32682dc34",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "6cf7d16e2b2b335d7d1fc7493f8de260ba5f28fc03d1eff80cec82de92ff82e0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "827152cce766ca0d9dcb2e5f328488bd1288d7474704ab1ce3c5473a88ea008f",
+      "evaluation": null,
+      "findings": 6,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b668b145b6bad0f64a815626b2eef0f5cb8cab70d2a290b0e6acd578bb1325e5",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "7f1df2a55552de0648880cab40db13abb47a06ea552f94b73949081fac477440",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "acd41d4798486473c22d6d56cdc56c616a183770e7f4fec10d88831866eca217",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "d63373cb-544e-45c0-a25a-c3f0a153733a",
+  "objective": "Audit github.com/MirakoolDev/ham-maze/tree/robinhood-score-nft (commit f102368), the Solidity in contracts/src.\nThis is a re-audit after fixes from the last one. Look hardest at:\n- HamBackerPass.sol (new): airdrop and lockMint, the ERC-721 Enumerable bookkeeping on transfer, safeTransferFrom.\n- HamPowerUps.sol: the game address is now a list of allowed games (setGame with a true/false flag). Check that only allowed games can record runs.\n- HamRobinhood.sol: free runs and the holder bonus when the holder NFT is a transferable pass, booster limits, fee and pot payouts, and signature replay.\nRank the findings by severity.",
+  "publisherVersion": "0.1.0+84802020",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "f1023680fe7eac17b48697228af85c51118bbd4b",
+    "repoUrl": "https://github.com/MirakoolDev/ham-maze.git"
+  }
+}
