@@ -1,0 +1,2559 @@
+{
+  "tag": "identitymd.record.v1",
+  "input": "https://tacit.finance",
+  "found": true,
+  "ambiguous": false,
+  "candidates": [],
+  "subject": {
+    "type": "protocol, payment chain, applications and project organisation",
+    "name": "Tacit",
+    "one_line": "Tacit provides private TAC payments, Bitcoin–Ethereum DeFi pools and web apps; the reviewed sources do not name its operating organisation.",
+    "channels": [
+      {
+        "label": "tacit.finance",
+        "url": "https://tacit.finance/",
+        "tie": "strong"
+      },
+      {
+        "label": "@tacitfi on X",
+        "url": "https://x.com/tacitfi",
+        "tie": "linked"
+      },
+      {
+        "label": "src-company/tacit on GitHub",
+        "url": "https://github.com/src-company/tacit",
+        "tie": "linked"
+      },
+      {
+        "label": "Tacit Discord",
+        "url": "https://discord.gg/VxYx9XSBrM",
+        "tie": "linked"
+      },
+      {
+        "label": "z0r0z/tacit on GitHub",
+        "url": "https://github.com/z0r0z/tacit",
+        "tie": "strong"
+      },
+      {
+        "label": "ross.wei (@z0r0zzz) on X",
+        "url": "https://x.com/z0r0zzz",
+        "tie": "none"
+      },
+      {
+        "label": "tacit.wei payment app",
+        "url": "https://tacit.wei.limo/",
+        "tie": "linked"
+      }
+    ],
+    "contracts": [
+      {
+        "address": "0x000000000Ed1eabD231Be41d93b719056F7febFC",
+        "chain": "Ethereum",
+        "role": "Main DeFi pool: current project-listed hub for swaps, farms, borrowing and Bitcoin bridging; deployed code and no successor read.",
+        "status": "live",
+        "main": true
+      },
+      {
+        "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9",
+        "chain": "Ethereum",
+        "role": "Pay pool; core deployment documented; Ethereum/Base/Robinhood code checked, MegaETH/Fraxtal deployment stated.",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9",
+        "chain": "Base",
+        "role": "Pay pool; core deployment documented; Ethereum/Base/Robinhood code checked, MegaETH/Fraxtal deployment stated.",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9",
+        "chain": "Robinhood Chain",
+        "role": "Pay pool; core deployment documented; Ethereum/Base/Robinhood code checked, MegaETH/Fraxtal deployment stated.",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9",
+        "chain": "MegaETH",
+        "role": "Pay pool; core deployment documented; Ethereum/Base/Robinhood code checked, MegaETH/Fraxtal deployment stated.",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9",
+        "chain": "Fraxtal",
+        "role": "Pay pool; core deployment documented; Ethereum/Base/Robinhood code checked, MegaETH/Fraxtal deployment stated.",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9",
+        "chain": "Sepolia",
+        "role": "Pay-pool testnet mirror; no mainnet funds.",
+        "status": "test",
+        "main": false
+      },
+      {
+        "address": "0x00000000000a9147ffd8d41d152d730ca5f84e6c",
+        "chain": "Ethereum",
+        "role": "Private TAC payment-chain settlement and backing",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x00000000001f703eae70de3b528213e4802790fb",
+        "chain": "Ethereum",
+        "role": "Payment-chain leader rotation",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0xA1313eb9f3A445606D9583bcAc3ebeB56a858279",
+        "chain": "Ethereum",
+        "role": "Public ERC-20 representation of Bitcoin-native TAC",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x000000003f608BDdF0ca45934003ffb9DbDF70DB",
+        "chain": "Ethereum",
+        "role": "Governed Bitcoin-collateral borrowing engine",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x00000087ac9ed3E1Bd443E00FBe18B4EdcAEeb1F",
+        "chain": "Ethereum",
+        "role": "TAC collateral dollar vault",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x00000047bFC8cF504967049D9Cf9E1FD9651ED80",
+        "chain": "Ethereum",
+        "role": "TAC collateral ether vault",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0xA0f6B02561C8ef08335B69aD25e022C0B342147C",
+        "chain": "Ethereum",
+        "role": "TACD synthetic dollar minted by TAC vault",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x9DE27883C5Dc9Db47BE12E595D59b8f1aBEC8570",
+        "chain": "Ethereum",
+        "role": "TACE synthetic ether minted by TAC vault",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0xdf1d99148bEb7a9AFf1d95C49B3d22b7ed90D696",
+        "chain": "Ethereum",
+        "role": "Public tacBTC / cBTC representation",
+        "status": "live",
+        "main": false
+      },
+      {
+        "address": "0x23cACFFAc2674514A6d4F6cD420B4cc2aC921564",
+        "chain": "Ethereum",
+        "role": "Public tacUSD / cUSD representation",
+        "status": "live",
+        "main": false
+      }
+    ]
+  },
+  "infobox": [
+    {
+      "label": "Website",
+      "lines": [
+        "L75"
+      ],
+      "value": "tacit.finance",
+      "url": "https://tacit.finance/"
+    },
+    {
+      "label": "Products",
+      "lines": [
+        "L40",
+        "L3",
+        "L4",
+        "L44"
+      ],
+      "values": [
+        {
+          "name": "Chain",
+          "text": "TAC payments",
+          "status": "live"
+        },
+        {
+          "name": "DeFi",
+          "text": "swaps, borrowing",
+          "status": "live"
+        },
+        {
+          "name": "Pay",
+          "text": "transfers",
+          "status": "live"
+        },
+        {
+          "name": "Secret Sats",
+          "text": "Bitcoin payments",
+          "status": "live"
+        }
+      ]
+    },
+    {
+      "label": "Native asset",
+      "lines": [
+        "L73",
+        "L74"
+      ],
+      "value": "TAC: 21 million issued on Bitcoin"
+    },
+    {
+      "label": "TAC ERC-20",
+      "lines": [
+        "L25",
+        "L27",
+        "L60"
+      ],
+      "value": "Ethereum: 0xA1313eb9f3A445606D9583bcAc3ebeB56a858279; 4.72 million public TAC",
+      "url": "https://etherscan.io/address/0xA1313eb9f3A445606D9583bcAc3ebeB56a858279"
+    },
+    {
+      "label": "Main contract",
+      "lines": [
+        "L3",
+        "L28",
+        "L30",
+        "L59"
+      ],
+      "value": "Ethereum: 0x000000000Ed1eabD231Be41d93b719056F7febFC (DeFi pool)",
+      "url": "https://etherscan.io/address/0x000000000Ed1eabD231Be41d93b719056F7febFC"
+    },
+    {
+      "label": "Contracts",
+      "lines": [
+        "L4",
+        "L9",
+        "L54",
+        "L61",
+        "L40"
+      ],
+      "values": [
+        {
+          "name": "Payments",
+          "text": "",
+          "status": "live",
+          "address": "0x000000c2A20657CE25f2Ba99737933D031AFBEE9",
+          "chain": "Ethereum"
+        },
+        {
+          "name": "Blocks",
+          "text": "",
+          "status": "live",
+          "address": "0x00000000000a9147ffd8d41d152d730ca5f84e6c",
+          "chain": "Ethereum"
+        },
+        {
+          "name": "Seats",
+          "text": "",
+          "status": "live",
+          "address": "0x00000000001f703eae70de3b528213e4802790fb",
+          "chain": "Ethereum"
+        },
+        {
+          "name": "Collateral",
+          "text": "",
+          "status": "live",
+          "address": "0x000000003f608BDdF0ca45934003ffb9DbDF70DB",
+          "chain": "Ethereum"
+        }
+      ]
+    },
+    {
+      "label": "Chains",
+      "lines": [
+        "L42",
+        "L46"
+      ],
+      "values": [
+        {
+          "name": "Bitcoin",
+          "text": "",
+          "status": "live"
+        },
+        {
+          "name": "Ethereum",
+          "text": "",
+          "status": "live"
+        },
+        {
+          "name": "Base",
+          "text": "",
+          "status": "live"
+        },
+        {
+          "name": "Robinhood Chain",
+          "text": "",
+          "status": "live"
+        },
+        {
+          "name": "MegaETH",
+          "text": "",
+          "status": "live"
+        },
+        {
+          "name": "Fraxtal",
+          "text": "",
+          "status": "live"
+        }
+      ]
+    },
+    {
+      "label": "Price",
+      "lines": [
+        "L15"
+      ],
+      "value": "Chain send: 0.002 TAC plus variable gas fee"
+    },
+    {
+      "label": "Size",
+      "lines": [
+        "L37",
+        "L77"
+      ],
+      "value": "About $189,000 TVL; DefiLlama, 25 November 2026",
+      "url": "https://defillama.com/protocol/tacit"
+    },
+    {
+      "label": "Deployed by",
+      "lines": [
+        "L65"
+      ],
+      "value": "0x68575B073DE49a94e3E3ACf6F3A0d6E3b66267C7 via CreateX, Ethereum"
+    },
+    {
+      "label": "Controlled by",
+      "lines": [
+        "L56",
+        "L57",
+        "L82",
+        "L84"
+      ],
+      "value": "Borrowing: 0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2; 2/5 delayed, 5/5 immediate (project-stated)"
+    },
+    {
+      "label": "Run by",
+      "lines": [
+        "L19",
+        "L23",
+        "L66"
+      ],
+      "value": "Who runs it is not stated in the sources read."
+    },
+    {
+      "label": "Official accounts",
+      "lines": [
+        "L19",
+        "L20",
+        "L21"
+      ],
+      "values": [
+        {
+          "name": "@tacitfi on X",
+          "text": "",
+          "status": "live",
+          "url": "https://x.com/tacitfi"
+        },
+        {
+          "name": "src-company/tacit on GitHub",
+          "text": "",
+          "status": "live",
+          "url": "https://github.com/src-company/tacit"
+        },
+        {
+          "name": "Tacit Discord",
+          "text": "",
+          "status": "live",
+          "url": "https://discord.gg/VxYx9XSBrM"
+        }
+      ]
+    },
+    {
+      "label": "Launched",
+      "lines": [
+        "L33",
+        "L34"
+      ],
+      "value": "TAC: 7 May 2026; Ethereum: 18 September 2026, project-stated"
+    },
+    {
+      "label": "Test networks",
+      "lines": [
+        "L47",
+        "L45"
+      ],
+      "values": [
+        {
+          "name": "Sepolia",
+          "text": "Pay-pool mirror",
+          "status": "test"
+        },
+        {
+          "name": "Signet",
+          "text": "Secret Sats demo ended",
+          "status": "past"
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "text": "Tacit offers private TAC payments, Bitcoin asset issuance, DeFi pools and web apps.",
+      "lines": [
+        "L40",
+        "L42",
+        "L3",
+        "L4",
+        "L44"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "Its homepage now leads with the live TAC payment chain, which settles on Ethereum.",
+      "lines": [
+        "L40"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "Users sign in with a wallet or passkey, then shield assets, pay, swap, farm or borrow.",
+      "lines": [
+        "L41",
+        "L2",
+        "L3"
+      ],
+      "paragraph": 1
+    },
+    {
+      "text": "TAC moves between Bitcoin and Ethereum through proofs, the project says.",
+      "lines": [
+        "L10",
+        "L13",
+        "L60",
+        "L74"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Private payment balances hold shares whose value rises with retained fees, according to Tacit.",
+      "lines": [
+        "L17"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Sending retains 0.002 TAC for that pool plus a variable gas fee, its documentation states.",
+      "lines": [
+        "L15"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "The separate Pay and DeFi pools exchange assets through public withdrawals and fresh deposits, the project says.",
+      "lines": [
+        "L8"
+      ],
+      "paragraph": 2
+    },
+    {
+      "text": "Borrowing controls sit with a wallet configured for two approvals among five owners, according to Ethereum reads.",
+      "lines": [
+        "L56",
+        "L57"
+      ],
+      "paragraph": 3
+    },
+    {
+      "text": "The legal operator is not identified in the sources read, and Tacit’s paper still lists four wallet owners.",
+      "lines": [
+        "L19",
+        "L20",
+        "L21",
+        "L23",
+        "L66",
+        "L86"
+      ],
+      "paragraph": 3
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "section": "what_it_does",
+      "text": "Tacit describes itself as private DeFi across Bitcoin and Ethereum.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "Private DeFi",
+      "from": [
+        "F1:L1"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L1",
+      "status": "live"
+    },
+    {
+      "id": "L2",
+      "section": "what_it_does",
+      "text": "Tacit says users can shield, swap, send, earn and borrow from one tacit1 ID.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "shield, swap, send, earn and borrow",
+      "from": [
+        "F1:L2"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L2",
+      "status": "live"
+    },
+    {
+      "id": "L3",
+      "section": "what_it_does",
+      "text": "Tacit says its DeFi pool can swap, farm, borrow, send and bridge to Bitcoin.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "quote": "Swap, farm, borrow",
+      "from": [
+        "F1:L3"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L3",
+      "status": "live"
+    },
+    {
+      "id": "L4",
+      "section": "what_it_does",
+      "text": "Tacit says its Pay pool can shield, pay privately, withdraw and create deposit addresses.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "quote": "deposit addresses",
+      "from": [
+        "F1:L4"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L4",
+      "status": "live"
+    },
+    {
+      "id": "L5",
+      "section": "what_it_does",
+      "text": "Tacit says its chain lets people hold TAC privately and pay anyone.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "Hold TAC privately",
+      "from": [
+        "F1:L5"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L5",
+      "status": "live"
+    },
+    {
+      "id": "L6",
+      "section": "what_it_does",
+      "text": "Bankless described Tacit as combining confidential tokens, a mixer, a private AMM and wrapped BTC on 1 June 2026.",
+      "kind": "claim",
+      "by": [
+        "Bankless"
+      ],
+      "sources": [
+        "S9"
+      ],
+      "quote": "Confidential tokens",
+      "from": [
+        "F1:L6"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L6",
+      "status": "live"
+    },
+    {
+      "id": "L7",
+      "section": "how_it_works",
+      "text": "Tacit says its Ethereum confidential pool accepts private transactions only with an SP1 zero-knowledge proof.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S16"
+      ],
+      "quote": "SP1",
+      "from": [
+        "F1:L7"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L7",
+      "status": "live"
+    },
+    {
+      "id": "L8",
+      "section": "how_it_works",
+      "text": "Tacit says its DeFi and Pay pools share nothing on chain; moving between them combines a public withdrawal and a shield.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "quote": "share nothing on chain",
+      "from": [
+        "F1:L8"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L8",
+      "status": "live"
+    },
+    {
+      "id": "L9",
+      "section": "how_it_works",
+      "text": "Tacit says each payment is proved on the payer device and each block is checked on Ethereum.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "payer’s device",
+      "from": [
+        "F1:L9"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L9",
+      "status": "live"
+    },
+    {
+      "id": "L10",
+      "section": "how_it_works",
+      "text": "Tacit says Bitcoin and Ethereum state cross by proof-of-work and an Ethereum light client.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S16"
+      ],
+      "quote": "light client",
+      "from": [
+        "F1:L10"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L10",
+      "status": "live"
+    },
+    {
+      "id": "L11",
+      "section": "how_it_works",
+      "text": "Bankless says Tacit uses an indexer validation system that derives results from on-chain data.",
+      "kind": "claim",
+      "by": [
+        "Bankless"
+      ],
+      "sources": [
+        "S9"
+      ],
+      "quote": "indexer validation system",
+      "from": [
+        "F1:L11"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L11",
+      "status": "live"
+    },
+    {
+      "id": "L12",
+      "section": "how_it_works",
+      "text": "Tacitscan says bridge confirmation, reflection and destination execution are separate stages.",
+      "kind": "claim",
+      "by": [
+        "Tacitscan"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "quote": "separate stages",
+      "from": [
+        "F1:L12"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L12",
+      "status": "live"
+    },
+    {
+      "id": "L13",
+      "section": "money",
+      "text": "Tacit says its pool mints public TAC from Bitcoin-origin value and burns it when wrapping back into private notes.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S28"
+      ],
+      "quote": "Only the pool mints TAC",
+      "from": [
+        "F1:L13"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L13",
+      "status": "live"
+    },
+    {
+      "id": "L14",
+      "section": "what_it_does",
+      "text": "Tacit says each chain action has a small TAC fee shown before the user proceeds.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "small fee in TAC",
+      "from": [
+        "F1:L14"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L14",
+      "status": "live"
+    },
+    {
+      "id": "L15",
+      "section": "money",
+      "text": "Tacit lists a 0.002 TAC pool-retained send fee plus a variable leader fee that covers Ethereum gas.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "0.002 TAC",
+      "from": [
+        "F1:L15"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L15",
+      "status": "live"
+    },
+    {
+      "id": "L16",
+      "section": "money",
+      "text": "Tacit says users can borrow cUSD against Bitcoin.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "Borrow cUSD",
+      "from": [
+        "F1:L16"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L16",
+      "status": "live"
+    },
+    {
+      "id": "L17",
+      "section": "money",
+      "text": "Tacit says its chain pool retains part of each fee, increasing the TAC value of its shares.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "quote": "stays in the pool",
+      "from": [
+        "F1:L17"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L17",
+      "status": "live"
+    },
+    {
+      "id": "L18",
+      "section": "money",
+      "text": "Tacit’s z0r0z/tacit repository says TAC-vault borrowing has no interest and a one-time fee paid to the operations multisig reserve.",
+      "kind": "statement",
+      "by": [
+        "Tacit / z0r0z"
+      ],
+      "sources": [
+        "S5"
+      ],
+      "quote": "one-time borrow fee",
+      "from": [
+        "F1:L18"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L18",
+      "status": "live"
+    },
+    {
+      "id": "L19",
+      "section": "people",
+      "text": "Tacit links to the src-company/tacit GitHub repository as its source channel.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "Source",
+      "from": [
+        "F1:L19"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L19",
+      "status": "live"
+    },
+    {
+      "id": "L20",
+      "section": "people",
+      "text": "Tacit links to the @tacitfi X account.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "@tacitfi on X",
+      "from": [
+        "F1:L20"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L20",
+      "status": "live"
+    },
+    {
+      "id": "L21",
+      "section": "people",
+      "text": "Tacit links to a Discord community invite.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "quote": "Tacit Discord community",
+      "from": [
+        "F1:L21"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L21",
+      "status": "live"
+    },
+    {
+      "id": "L22",
+      "section": "people",
+      "text": "Bankless describes an account named ross.wei in connection with a new Tacit project.",
+      "kind": "claim",
+      "by": [
+        "Bankless"
+      ],
+      "sources": [
+        "S9"
+      ],
+      "quote": "his new Tacit project",
+      "from": [
+        "F1:L22"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L22",
+      "status": "live"
+    },
+    {
+      "id": "L23",
+      "section": "people",
+      "text": "GitHub identifies src-company/tacit as a public repository owned by the src-company account.",
+      "kind": "claim",
+      "by": [
+        "GitHub"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "quote": "\"full_name\":\"src-company/tacit\"",
+      "from": [
+        "F1:L23"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L23",
+      "status": "live"
+    },
+    {
+      "id": "L24",
+      "section": "on_chain",
+      "text": "Ethereum returned the TAC contract name as Tacit Token.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0x06fdde03\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "ERC-20 name",
+        "value": "Tacit Token",
+        "unit": "text"
+      },
+      "from": [
+        "F1:L24"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L24",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "Tacit Token"
+        }
+      ]
+    },
+    {
+      "id": "L25",
+      "section": "on_chain",
+      "text": "Ethereum returned TAC as the TAC contract symbol.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0x95d89b41\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "ERC-20 symbol",
+        "value": "TAC",
+        "unit": "text"
+      },
+      "from": [
+        "F1:L25"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L25",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "TAC"
+        }
+      ]
+    },
+    {
+      "id": "L26",
+      "section": "on_chain",
+      "text": "Ethereum returned 18 decimal places for TAC.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0x313ce567\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TAC decimals",
+        "value": "18",
+        "unit": "decimal places"
+      },
+      "from": [
+        "F1:L26"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L26",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "18"
+        }
+      ]
+    },
+    {
+      "id": "L27",
+      "section": "on_chain",
+      "text": "Ethereum returned 4,718,258.64687012 TAC as the public ERC-20 supply.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0x18160ddd\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TAC ERC-20 total supply",
+        "value": "4718258.64687012",
+        "unit": "TAC"
+      },
+      "from": [
+        "F1:L27"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L27",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "4649985.76244507"
+        }
+      ]
+    },
+    {
+      "id": "L28",
+      "section": "on_chain",
+      "text": "Ethereum returned nonempty code for the ConfidentialPool.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_getCode\",\"params\":[\"0x000000000Ed1eabD231Be41d93b719056F7febFC\",\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "ConfidentialPool code",
+        "value": "24290",
+        "unit": "bytes"
+      },
+      "from": [
+        "F1:L28"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L28",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "present"
+        }
+      ]
+    },
+    {
+      "id": "L29",
+      "section": "on_chain",
+      "text": "Ethereum returned nonempty code for the TAC token.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_getCode\",\"params\":[\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TAC token code",
+        "value": "2982",
+        "unit": "bytes"
+      },
+      "from": [
+        "F1:L29"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L29",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "present"
+        }
+      ]
+    },
+    {
+      "id": "L30",
+      "section": "on_chain",
+      "text": "Tacit’s build page identifies the ConfidentialPool at its listed Ethereum address.",
+      "kind": "statement",
+      "by": [
+        "Tacit"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "quote": "0x000000000Ed1eabD231Be41d93b719056F7febFC",
+      "from": [
+        "F1:L30"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L30",
+      "status": "live"
+    },
+    {
+      "id": "L31",
+      "section": "on_chain",
+      "text": "Tacit’s z0r0z/tacit repository says the confidential pool is immutable, with no admin key over escrow, exits or payouts.",
+      "kind": "statement",
+      "by": [
+        "Tacit / z0r0z"
+      ],
+      "sources": [
+        "S5"
+      ],
+      "quote": "no admin key",
+      "from": [
+        "F1:L31"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L31",
+      "status": "live"
+    },
+    {
+      "id": "L32",
+      "section": "on_chain",
+      "text": "Tacitscan reports the DeFi pool in its current Ethereum reflection view.",
+      "kind": "claim",
+      "by": [
+        "Tacitscan"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "quote": "\"ethereumHeight\": 26489590",
+      "from": [
+        "F1:L32"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L32",
+      "status": "live",
+      "fact": {
+        "name": "Explorer reflection Ethereum height",
+        "value": "26489590",
+        "unit": "Ethereum block"
+      },
+      "history": [
+        {
+          "block": 26487237,
+          "value": {
+            "ethereumHeight": 26487237
+          }
+        }
+      ]
+    },
+    {
+      "id": "L38",
+      "section": "on_chain",
+      "text": "Ethereum returned nonempty code for Tacit’s listed Pay pool.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_getCode\",\"params\":[\"0x000000c2A20657CE25f2Ba99737933D031AFBEE9\",\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Pay pool code",
+        "value": "3319",
+        "unit": "bytes"
+      },
+      "from": [
+        "F1:L38"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L38",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "present"
+        }
+      ]
+    },
+    {
+      "id": "L39",
+      "section": "on_chain",
+      "text": "Ethereum returned nonempty code for TacitBlocks.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_getCode\",\"params\":[\"0x00000000000a9147ffd8d41d152d730ca5f84e6c\",\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TacitBlocks code",
+        "value": "17572",
+        "unit": "bytes"
+      },
+      "from": [
+        "F1:L39"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L39",
+      "status": "live",
+      "history": [
+        {
+          "block": 26487251,
+          "value": "present"
+        }
+      ]
+    },
+    {
+      "id": "L33",
+      "section": "history",
+      "text": "Tacit’s z0r0z/tacit repository dates Tacit’s Ethereum-mainnet launch to 18 September 2026.",
+      "kind": "statement",
+      "by": [
+        "Tacit / z0r0z"
+      ],
+      "sources": [
+        "S5"
+      ],
+      "quote": "2026-09-18",
+      "from": [
+        "F1:L33"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L33",
+      "status": "live"
+    },
+    {
+      "id": "L34",
+      "section": "history",
+      "text": "Tacit’s z0r0z/tacit repository dates TAC’s Bitcoin genesis to 7 May 2026.",
+      "kind": "statement",
+      "by": [
+        "Tacit / z0r0z"
+      ],
+      "sources": [
+        "S5"
+      ],
+      "quote": "2026-05-07",
+      "from": [
+        "F1:L34"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L34",
+      "status": "live"
+    },
+    {
+      "id": "L35",
+      "section": "history",
+      "text": "Bankless published its introductory Tacit article on 1 June 2026.",
+      "kind": "claim",
+      "by": [
+        "Bankless"
+      ],
+      "sources": [
+        "S9"
+      ],
+      "quote": "Jun 1, 2026",
+      "from": [
+        "F1:L35"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L35",
+      "status": "live"
+    },
+    {
+      "id": "L36",
+      "section": "history",
+      "text": "Tacit’s z0r0z/tacit repository says the Bitcoin-native AMM pool went live in its indexer on 25 September 2026.",
+      "kind": "statement",
+      "by": [
+        "Tacit / z0r0z"
+      ],
+      "sources": [
+        "S32"
+      ],
+      "quote": "2026-09-25",
+      "from": [
+        "F1:L36"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L36",
+      "status": "live"
+    },
+    {
+      "id": "L37",
+      "section": "money",
+      "text": "DefiLlama reports $188,969 of Tacit value locked at 2026-11-25T02:59:23+00:00.",
+      "kind": "claim",
+      "by": [
+        "DefiLlama"
+      ],
+      "sources": [
+        "S8"
+      ],
+      "quote": "188969",
+      "from": [
+        "F1:L37"
+      ],
+      "links": [],
+      "origin": "https://api.imd.fun/artifacts/6077a2900e225473916951b5f15fe6c8cd4790a17c52accdb6138972cf6381d1#L37",
+      "status": "live",
+      "fact": {
+        "name": "Project total value locked",
+        "value": "188969",
+        "unit": "USD"
+      },
+      "history": [
+        {
+          "block": null,
+          "value": {
+            "date": "2026-11-24",
+            "TVL_USD": 192688
+          }
+        }
+      ]
+    },
+    {
+      "id": "L40",
+      "section": "what_it_does",
+      "text": "Tacit’s homepage now leads with its live TAC payment chain, settled on Ethereum and connected to Bitcoin.",
+      "kind": "statement",
+      "sources": [
+        "S1",
+        "S14"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "tacit chain"
+    },
+    {
+      "id": "L41",
+      "section": "what_it_does",
+      "text": "Tacit lets payment-chain users sign in with an Ethereum wallet or passkey before shielding and sending TAC.",
+      "kind": "statement",
+      "sources": [
+        "S3"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "passkey"
+    },
+    {
+      "id": "L42",
+      "section": "what_it_does",
+      "text": "Tacit’s paper describes a Bitcoin asset-issuance protocol alongside its Ethereum DeFi pool.",
+      "kind": "statement",
+      "sources": [
+        "S16"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "Issue, send and trade"
+    },
+    {
+      "id": "L43",
+      "section": "what_it_does",
+      "text": "Tacit offers TAC-backed dollar and ether borrowing through TACD and TACE vaults deployed on Ethereum mainnet.",
+      "kind": "statement",
+      "sources": [
+        "S25"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "Ethereum mainnet"
+    },
+    {
+      "id": "L44",
+      "section": "what_it_does",
+      "text": "Tacit presents Secret Sats as a mainnet Bitcoin payments app with sends, silent payments and a TAC-and-cBTC shielded pool.",
+      "kind": "statement",
+      "sources": [
+        "S26"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "Mainnet moves real bitcoin"
+    },
+    {
+      "id": "L45",
+      "section": "history",
+      "text": "Tacit says the Secret Sats signet demo has been switched off.",
+      "kind": "statement",
+      "sources": [
+        "S26"
+      ],
+      "status": "past",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "signet testing is switched off"
+    },
+    {
+      "id": "L46",
+      "section": "on_chain",
+      "text": "Tacit documents the Pay pool on five main networks: Ethereum, Base, Robinhood Chain, MegaETH and Fraxtal.",
+      "kind": "statement",
+      "sources": [
+        "S15"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "MegaETH and Fraxtal"
+    },
+    {
+      "id": "L47",
+      "section": "on_chain",
+      "text": "Tacit documents a Sepolia Pay-pool mirror for tests, without mainnet funds.",
+      "kind": "statement",
+      "sources": [
+        "S13"
+      ],
+      "status": "test",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "testnet mirror"
+    },
+    {
+      "id": "L48",
+      "section": "how_it_works",
+      "text": "Tacit says payment-chain TAC can exit to a public wallet, its DeFi pool or Bitcoin.",
+      "kind": "statement",
+      "sources": [
+        "S3"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "Withdraw"
+    },
+    {
+      "id": "L49",
+      "section": "how_it_works",
+      "text": "Tacit says swapping fees remain in AMM reserves for liquidity providers.",
+      "kind": "statement",
+      "sources": [
+        "S2"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "fee stays in the reserves"
+    },
+    {
+      "id": "L50",
+      "section": "money",
+      "text": "Tacit says farms pay wTAC, redeemable one for one for TAC.",
+      "kind": "statement",
+      "sources": [
+        "S12"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "a 1:1 TAC wrapper"
+    },
+    {
+      "id": "L51",
+      "section": "money",
+      "text": "Tacit says cBTC is minted against Bitcoin self-custody locks supported by additional wstETH escrow.",
+      "kind": "statement",
+      "sources": [
+        "S16"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "economically"
+    },
+    {
+      "id": "L52",
+      "section": "money",
+      "text": "Tacit says borrowing cUSD creates dollar debt secured by cBTC collateral.",
+      "kind": "statement",
+      "sources": [
+        "S12"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "against cBTC collateral"
+    },
+    {
+      "id": "L53",
+      "section": "how_it_works",
+      "text": "Tacit says TAC-vault routers move TAC collateral into vaults and mint TACD or TACE for the borrower.",
+      "kind": "statement",
+      "sources": [
+        "S25"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "borrow on a signature"
+    },
+    {
+      "id": "L54",
+      "section": "money",
+      "text": "Tacit says its borrowing engine’s operations multisig can change oracles and borrowing parameters within contract limits.",
+      "kind": "statement",
+      "sources": [
+        "S13"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "governed"
+    },
+    {
+      "id": "L55",
+      "section": "on_chain",
+      "text": "Tacit says its immutable pool’s lineage steward can create a successor and close the old pool to new value.",
+      "kind": "statement",
+      "sources": [
+        "S13"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "createNextGen"
+    },
+    {
+      "id": "L56",
+      "section": "on_chain",
+      "text": "The borrowing engine and both TAC vaults returned the same owner wallet.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L54"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x000000003f608BDdF0ca45934003ffb9DbDF70DB\",\"data\":\"0x8da5cb5b\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000087ac9ed3E1Bd443E00FBe18B4EdcAEeb1F\",\"data\":\"0x8da5cb5b\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000047bFC8cF504967049D9Cf9E1FD9651ED80\",\"data\":\"0x8da5cb5b\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Borrowing component owner",
+        "value": "0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2",
+        "unit": "Ethereum address"
+      }
+    },
+    {
+      "id": "L57",
+      "section": "on_chain",
+      "text": "The operations wallet returned a configured threshold of two approvals among five owners.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L54"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2\",\"data\":\"0x42cde4e8\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2\",\"data\":\"0x0db02622\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2\",\"data\":\"0xa0e67e2b\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Operations wallet approval rule",
+        "value": {
+          "threshold": 2,
+          "owners": 5
+        },
+        "unit": "approvals / owners"
+      }
+    },
+    {
+      "id": "L58",
+      "section": "money",
+      "text": "Both TAC vaults returned a 1% borrowing fee directed to their shared owner wallet.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L18"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000087ac9ed3E1Bd443E00FBe18B4EdcAEeb1F\",\"data\":\"0xb76b0aa7\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000047bFC8cF504967049D9Cf9E1FD9651ED80\",\"data\":\"0xb76b0aa7\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000087ac9ed3E1Bd443E00FBe18B4EdcAEeb1F\",\"data\":\"0x017e7e58\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000047bFC8cF504967049D9Cf9E1FD9651ED80\",\"data\":\"0x017e7e58\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TAC vault borrowing fee",
+        "value": {
+          "basis_points": 100,
+          "recipient": "0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2"
+        },
+        "unit": "basis points and Ethereum address"
+      }
+    },
+    {
+      "id": "L59",
+      "section": "on_chain",
+      "text": "The DeFi pool returned no successor at the reading block.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L55"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x000000000Ed1eabD231Be41d93b719056F7febFC\",\"data\":\"0x6ff968c3\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Pool successor address",
+        "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "unit": "ABI-encoded address"
+      }
+    },
+    {
+      "id": "L60",
+      "section": "on_chain",
+      "text": "The TAC ERC-20 names the DeFi pool as its minter and shares its TAC cross-chain asset identifier.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L13"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0xfe6d8124\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0x9ceb21ae\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x000000000Ed1eabD231Be41d93b719056F7febFC\",\"data\":\"0x9fda5b66f0bbe868af10c6c67652a99709bf32048d1aa7194efe3e9a1ef1bde43f94762b\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TAC bridge registration",
+        "value": {
+          "minter": "0x000000000Ed1eabD231Be41d93b719056F7febFC",
+          "asset_id": "0xf0bbe868af10c6c67652a99709bf32048d1aa7194efe3e9a1ef1bde43f94762b",
+          "underlying": "0xA1313eb9f3A445606D9583bcAc3ebeB56a858279",
+          "pool_minted": true
+        },
+        "unit": "Ethereum addresses and asset identifier"
+      }
+    },
+    {
+      "id": "L61",
+      "section": "on_chain",
+      "text": "The payment-chain contract points to public TAC and the DeFi pool.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L48"
+        },
+        {
+          "type": "context",
+          "target": "L40"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000000000a9147ffd8d41d152d730ca5f84e6c\",\"data\":\"0x19f68523\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000000000a9147ffd8d41d152d730ca5f84e6c\",\"data\":\"0xd6b0a6b3\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Payment chain asset and DeFi endpoint",
+        "value": {
+          "token": "0xA1313eb9f3A445606D9583bcAc3ebeB56a858279",
+          "pool": "0x000000000Ed1eabD231Be41d93b719056F7febFC"
+        },
+        "unit": "Ethereum addresses"
+      }
+    },
+    {
+      "id": "L62",
+      "section": "on_chain",
+      "text": "The payment-chain contract returned a nonzero settled height.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L40"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000000000a9147ffd8d41d152d730ca5f84e6c\",\"data\":\"0x0ef26743\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Payment chain height",
+        "value": "1268",
+        "unit": "Tacit blocks"
+      }
+    },
+    {
+      "id": "L63",
+      "section": "money",
+      "text": "The payment-chain contract reported 288,719.82479125 TAC backing private shares.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000000000a9147ffd8d41d152d730ca5f84e6c\",\"data\":\"0x16f0115b\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000000000a9147ffd8d41d152d730ca5f84e6c\",\"data\":\"0x516cec7d\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TAC backing payment-chain shares",
+        "value": "288719.82479125",
+        "unit": "TAC"
+      }
+    },
+    {
+      "id": "L64",
+      "section": "on_chain",
+      "text": "Base and Robinhood Chain returned bytecode for the documented Pay-pool address.",
+      "kind": "proof",
+      "sources": [
+        "S33",
+        "S34"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L46"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 4663 at block 122756375, chain 8453 at block 61942298. POST each request to the public RPC in the cited source: {\"method\":\"eth_getCode\",\"params\":[\"0x000000c2A20657CE25f2Ba99737933D031AFBEE9\",\"0x3b12a1a\"]}; {\"method\":\"eth_getCode\",\"params\":[\"0x000000c2A20657CE25f2Ba99737933D031AFBEE9\",\"0x7511d17\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Pay pool runtime code",
+        "value": {
+          "Base": 3319,
+          "Robinhood Chain": 3319
+        },
+        "unit": "bytes"
+      }
+    },
+    {
+      "id": "L65",
+      "section": "history",
+      "text": "A successful Ethereum transaction from the documented deployer created the DeFi pool through CreateX.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L33"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_getTransactionByHash\",\"params\":[\"0x89ef3990d01fc27b72f78d3e53d93c8ed886a5c27dfd153751af2929ca328159\"]}; {\"method\":\"eth_getTransactionReceipt\",\"params\":[\"0x89ef3990d01fc27b72f78d3e53d93c8ed886a5c27dfd153751af2929ca328159\"]}; {\"method\":\"eth_getCode\",\"params\":[\"0x000000000Ed1eabD231Be41d93b719056F7febFC\",\"0x18cb59e\"]}; {\"method\":\"eth_getCode\",\"params\":[\"0x000000000Ed1eabD231Be41d93b719056F7febFC\",\"0x18cb59f\"]}; {\"method\":\"eth_getBlockByNumber\",\"params\":[\"0x18cb59f\",false]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "DeFi pool deployment",
+        "value": {
+          "transaction": "0x89ef3990d01fc27b72f78d3e53d93c8ed886a5c27dfd153751af2929ca328159",
+          "initiator": "0x68575B073DE49a94e3E3ACf6F3A0d6E3b66267C7",
+          "factory": "0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed",
+          "block": 25998751,
+          "date": "2026-09-17T17:37:47Z"
+        },
+        "unit": "Ethereum transaction"
+      }
+    },
+    {
+      "id": "L66",
+      "section": "people",
+      "text": "Tacit’s whitepaper credits the pseudonymous name z0r0z as its author.",
+      "kind": "statement",
+      "sources": [
+        "S16"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "z0r0z"
+    },
+    {
+      "id": "L67",
+      "section": "people",
+      "text": "ross.wei publicly associates the @z0r0zzz account with @tacitfi in its X biography.",
+      "kind": "claim",
+      "sources": [
+        "S35"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "ross.wei"
+      ],
+      "quote": "@src_co_ | @tacitfi"
+    },
+    {
+      "id": "L68",
+      "section": "how_it_works",
+      "text": "ETHBeat says Tacit Pay deposits and withdrawals expose addresses and amounts, permitting timing and amount correlations.",
+      "kind": "claim",
+      "sources": [
+        "S17"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "ETHBeat"
+      ],
+      "quote": "timing and amounts"
+    },
+    {
+      "id": "L69",
+      "section": "people",
+      "text": "ETHBeat says the Z DAO controls the anon.wei app name and endpoint registries, distinct from the immutable Pay-pool contracts.",
+      "kind": "claim",
+      "sources": [
+        "S17"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "ETHBeat"
+      ],
+      "quote": "owns the name anon.wei"
+    },
+    {
+      "id": "L70",
+      "section": "history",
+      "text": "TokenPost reported Tacit Chain’s prototype introduction on 8 November 2026.",
+      "kind": "claim",
+      "sources": [
+        "S18"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L40"
+        }
+      ],
+      "by": [
+        "TokenPost"
+      ],
+      "quote": "Nov. 8"
+    },
+    {
+      "id": "L72",
+      "section": "on_chain",
+      "text": "Tacit says its payment-chain contracts have no owner, upgrade key or pause.",
+      "kind": "statement",
+      "sources": [
+        "S3"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "No owner, no upgrade key, no pause"
+    },
+    {
+      "id": "L73",
+      "section": "money",
+      "text": "TAC’s Bitcoin genesis commitment opens to 21 million TAC, with a zero mint authority.",
+      "kind": "proof",
+      "sources": [
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L34"
+        }
+      ],
+      "rerun": "Bitcoin mainnet block 948242 (00000000000000000001faaa331b2bcbb9896e97d0c40ad2b78855a1f769b832). GET https://mempool.space/api/tx/e2d10be19c2b73b86e14be99dc237a3d999ba3dfbe6f3e3714590acee2ca481e; decode vin[0].witness[1] Taproot TACIT/T_CETCH payload. Read the metadata CID from its image_uri; verify SHA-256 df6753ef656025935778287abfadd06619db85fea4eab52a38b4a9d1a6303b02. Recompute supply*H + blinding*G using SPEC section 2.1 H derivation. Run python3 research/check_bitcoin.py offline against saved observations. This checks the genesis opening, not all later metaprotocol state.",
+      "fact": {
+        "name": "TAC genesis issuance",
+        "value": {
+          "supply_TAC": "21000000",
+          "decimals": 8,
+          "mint_authority": "0000000000000000000000000000000000000000000000000000000000000000",
+          "commitment": "02f5a454ee1e79c29e746e945143d12a19607f4b7188e6d9c00573824bd12ffc64"
+        },
+        "unit": "TAC and encoded issuance fields"
+      }
+    },
+    {
+      "id": "L74",
+      "section": "on_chain",
+      "text": "The Bitcoin TAC genesis identifier equals the Ethereum TAC token’s asset identifier.",
+      "kind": "proof",
+      "sources": [
+        "S23",
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "partly",
+          "target": "L13"
+        }
+      ],
+      "rerun": "Bitcoin mainnet block 948242: GET https://mempool.space/api/tx/e2d10be19c2b73b86e14be99dc237a3d999ba3dfbe6f3e3714590acee2ca481e. SHA-256(reverse(bytes.fromhex(txid)) + uint32_le(0)) gives 0xf0bbe868af10c6c67652a99709bf32048d1aa7194efe3e9a1ef1bde43f94762b. Compare with Ethereum chain 1 ASSET_ID() at block 26489634. Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0x9ceb21ae\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Bitcoin / Ethereum TAC asset identity",
+        "value": "0xf0bbe868af10c6c67652a99709bf32048d1aa7194efe3e9a1ef1bde43f94762b",
+        "unit": "32-byte asset identifier"
+      }
+    },
+    {
+      "id": "L75",
+      "section": "people",
+      "text": "The TAC token’s content-addressed contract metadata points to tacit.finance.",
+      "kind": "proof",
+      "sources": [
+        "S7",
+        "S20"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [
+        {
+          "type": "context",
+          "target": "L19"
+        }
+      ],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA1313eb9f3A445606D9583bcAc3ebeB56a858279\",\"data\":\"0xe8a3d485\"},\"0x1943322\"]}. Historical state may require an archive node. Decode ABI string, translate its base16 CIDv1 to base32, GET https://ipfs.filebase.io/ipfs/bafkreibzzaeyokynl77ua4wdk6x6hh7enupa5xdi4osxrr7jjxqtrwasge, verify SHA-256 39c809872b0d5fff4072c357afe39fe46d1e0edc68e3a578c7e94de138d81231, read external_link.",
+      "fact": {
+        "name": "Contract metadata website",
+        "value": "https://tacit.finance",
+        "unit": "URL"
+      }
+    },
+    {
+      "id": "L76",
+      "section": "how_it_works",
+      "text": "Tacit says Pay-pool proofs are generated in the user’s browser.",
+      "kind": "statement",
+      "sources": [
+        "S15"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "proved in the browser"
+    },
+    {
+      "id": "L77",
+      "section": "money",
+      "text": "DefiLlama says its Tacit TVL counts assets held by project contracts and excludes TAC.",
+      "kind": "claim",
+      "sources": [
+        "S8"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "DefiLlama"
+      ],
+      "quote": "Tacit's own token (TAC) is not counted"
+    },
+    {
+      "id": "L79",
+      "section": "people",
+      "text": "TAC’s Bitcoin genesis links to metadata naming the z0r0z/tacit repository.",
+      "kind": "proof",
+      "sources": [
+        "S21",
+        "S23"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "rerun": "Bitcoin mainnet block 948242 (00000000000000000001faaa331b2bcbb9896e97d0c40ad2b78855a1f769b832). GET https://mempool.space/api/tx/e2d10be19c2b73b86e14be99dc237a3d999ba3dfbe6f3e3714590acee2ca481e; decode vin[0].witness[1] Taproot TACIT/T_CETCH payload. Read the metadata CID from its image_uri; verify SHA-256 df6753ef656025935778287abfadd06619db85fea4eab52a38b4a9d1a6303b02. Recompute supply*H + blinding*G using SPEC section 2.1 H derivation. Run python3 research/check_bitcoin.py offline against saved observations. This checks the genesis opening, not all later metaprotocol state. Read external_url in the verified metadata.",
+      "fact": {
+        "name": "Bitcoin genesis metadata repository",
+        "value": "https://github.com/z0r0z/tacit",
+        "unit": "URL"
+      }
+    },
+    {
+      "id": "L80",
+      "section": "money",
+      "text": "Tacit lists Ethereum tacBTC and tacUSD as the public forms of private-pool cBTC and cUSD.",
+      "kind": "statement",
+      "sources": [
+        "S13"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "pool-minted"
+    },
+    {
+      "id": "L81",
+      "section": "on_chain",
+      "text": "Each TAC vault points to its corresponding synthetic token, which names that vault as its minter.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000087ac9ed3E1Bd443E00FBe18B4EdcAEeb1F\",\"data\":\"0xe1eddde3\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x00000047bFC8cF504967049D9Cf9E1FD9651ED80\",\"data\":\"0xe1eddde3\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0xA0f6B02561C8ef08335B69aD25e022C0B342147C\",\"data\":\"0xfe6d8124\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x9DE27883C5Dc9Db47BE12E595D59b8f1aBEC8570\",\"data\":\"0xfe6d8124\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "TAC synthetic token issuers",
+        "value": {
+          "TACD": {
+            "token": "0xA0f6B02561C8ef08335B69aD25e022C0B342147C",
+            "minter": "0x00000087ac9ed3E1Bd443E00FBe18B4EdcAEeb1F"
+          },
+          "TACE": {
+            "token": "0x9DE27883C5Dc9Db47BE12E595D59b8f1aBEC8570",
+            "minter": "0x00000047bFC8cF504967049D9Cf9E1FD9651ED80"
+          }
+        },
+        "unit": "Ethereum addresses"
+      }
+    },
+    {
+      "id": "L82",
+      "section": "on_chain",
+      "text": "The operations wallet returned a one-hour delay and a configured executor contract.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2\",\"data\":\"0x6a42b8f8\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"to\":\"0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2\",\"data\":\"0xc34c08e5\"},\"0x1943322\"]}; {\"method\":\"eth_getCode\",\"params\":[\"0x00000000a72a30adbf38e14d36bce2610ec3973f\",\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Operations wallet execution configuration",
+        "value": {
+          "delay_seconds": 3600,
+          "executor": "0x00000000a72a30adbf38e14d36bce2610ec3973f"
+        },
+        "unit": "seconds and Ethereum address"
+      }
+    },
+    {
+      "id": "L83",
+      "section": "on_chain",
+      "text": "A read-only simulation from the configured executor executed a wallet self-call without signatures; the same call from the deployer reverted.",
+      "kind": "proof",
+      "sources": [
+        "S7"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "rerun": "Read-only JSON-RPC on chain 1 at block 26489634. POST each request to the public RPC in the cited source: {\"method\":\"eth_call\",\"params\":[{\"from\":\"0x00000000a72a30adbf38e14d36bce2610ec3973f\",\"to\":\"0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2\",\"data\":\"0xda0980c7000000000000000000000000006cd14f36f65ecbb29b2519ccbe63a0dc8549f20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000046a42b8f8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\"},\"0x1943322\"]}; {\"method\":\"eth_call\",\"params\":[{\"from\":\"0x68575B073DE49a94e3E3ACf6F3A0d6E3b66267C7\",\"to\":\"0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2\",\"data\":\"0xda0980c7000000000000000000000000006cd14f36f65ecbb29b2519ccbe63a0dc8549f20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000046a42b8f8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\"},\"0x1943322\"]}. Historical state may require an archive node.",
+      "fact": {
+        "name": "Executor-path simulation",
+        "value": {
+          "executor_call": "success",
+          "deployer_call": "reverted",
+          "signatures": "empty",
+          "target": "0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2",
+          "target_function": "delay()"
+        },
+        "unit": "eth_call outcomes"
+      }
+    },
+    {
+      "id": "L84",
+      "section": "people",
+      "text": "Tacit says two-owner operations-wallet calls wait one hour, while calls signed by all five owners execute immediately.",
+      "kind": "statement",
+      "sources": [
+        "S22"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "signed by all five owners"
+    },
+    {
+      "id": "L85",
+      "section": "people",
+      "text": "Tacit says TAC-holder governance votes are advisory and the operations multisig executes passed proposals.",
+      "kind": "statement",
+      "sources": [
+        "S28"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit / src-company"
+      ],
+      "quote": "Results are advisory"
+    },
+    {
+      "id": "L86",
+      "section": "people",
+      "text": "Tacit’s 2026 whitepaper describes the operations multisig as two-of-four with a one-hour delay.",
+      "kind": "statement",
+      "sources": [
+        "S16"
+      ],
+      "status": "live",
+      "from": [],
+      "links": [],
+      "by": [
+        "Tacit"
+      ],
+      "quote": "2-of-4"
+    }
+  ],
+  "related": [
+    {
+      "name": "Bitcoin",
+      "id": "chain:bitcoin",
+      "relation": "TAC issuance, native asset protocol, Bitcoin payment pool and bridge side",
+      "lines": [
+        "L42",
+        "L44",
+        "L73",
+        "L74"
+      ]
+    },
+    {
+      "name": "Ethereum",
+      "id": "chain:1",
+      "relation": "DeFi pool and TAC payment settlement",
+      "lines": [
+        "L3",
+        "L9",
+        "L61"
+      ]
+    }
+  ],
+  "logo": {
+    "url": "https://tacit.finance/favicon.svg",
+    "fetched_at": "2026-11-25T03:51:46.248846+00:00"
+  },
+  "differs": [
+    {
+      "lines": [
+        "L86",
+        "L57",
+        "L84"
+      ],
+      "why": "The 2026 whitepaper says four owners; current on-chain reads and the current specification say five. The paper has no precise revision date, so whether its count is stale or was inaccurate is unanswered. Use the five-owner chain reading for the current configuration.",
+      "level": "question"
+    }
+  ],
+  "dropped": [],
+  "open_questions": [
+    "What legal entity, if any, operates Tacit?",
+    "Who holds operational authority over components outside the stated immutable pool surface?",
+    "Do the MegaETH and Fraxtal Pay-pool deployments have current public usage beyond the documented core contracts?",
+    "What checks does the configured operations-wallet executor enforce before it uses its immediate execution privilege?"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "ref": "https://tacit.finance/",
+      "type": "project website",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://tacit.finance/"
+    },
+    {
+      "id": "S2",
+      "ref": "https://tacit.finance/build/",
+      "type": "project documentation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://tacit.finance/build/"
+    },
+    {
+      "id": "S3",
+      "ref": "https://tacit.finance/docs/chain/",
+      "type": "project documentation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://tacit.finance/docs/chain/"
+    },
+    {
+      "id": "S4",
+      "ref": "https://github.com/src-company/tacit",
+      "type": "linked repository",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://github.com/src-company/tacit"
+    },
+    {
+      "id": "S5",
+      "ref": "https://github.com/z0r0z/tacit/blob/main/docs/DEPLOYMENTS.md",
+      "type": "upstream repository documentation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/z0r0z/tacit/main/docs/DEPLOYMENTS.md"
+    },
+    {
+      "id": "S6",
+      "ref": "https://etherscan.io/address/0x000000000Ed1eabD231Be41d93b719056F7febFC",
+      "type": "contract explorer",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://etherscan.io/address/0x000000000Ed1eabD231Be41d93b719056F7febFC"
+    },
+    {
+      "id": "S7",
+      "ref": "https://ethereum-rpc.publicnode.com",
+      "type": "Ethereum read-only JSON-RPC",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://ethereum-rpc.publicnode.com"
+    },
+    {
+      "id": "S8",
+      "ref": "https://api.llama.fi/protocol/tacit",
+      "type": "independent tracker API",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://api.llama.fi/protocol/tacit"
+    },
+    {
+      "id": "S9",
+      "ref": "https://www.bankless.com/read/tacit-a-new-take-on-confidential-bitcoin-defi",
+      "type": "independent article",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://www.bankless.com/read/tacit-a-new-take-on-confidential-bitcoin-defi"
+    },
+    {
+      "id": "S10",
+      "ref": "https://tacitscan.io/protocol/bridge",
+      "type": "external protocol explorer",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://tacitscan.io/protocol/bridge"
+    },
+    {
+      "id": "S11",
+      "ref": "https://api.github.com/repos/src-company/tacit",
+      "type": "repository metadata API",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://api.github.com/repos/src-company/tacit"
+    },
+    {
+      "id": "S12",
+      "ref": "https://github.com/src-company/tacit/blob/main/README.md",
+      "type": "linked project README",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/README.md"
+    },
+    {
+      "id": "S13",
+      "ref": "https://github.com/src-company/tacit/blob/main/docs/DEPLOYMENTS.md",
+      "type": "linked deployment documentation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/docs/DEPLOYMENTS.md"
+    },
+    {
+      "id": "S14",
+      "ref": "https://github.com/src-company/tacit/blob/main/docs/TACIT-BLOCKS.md",
+      "type": "linked payment-chain specification",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/docs/TACIT-BLOCKS.md"
+    },
+    {
+      "id": "S15",
+      "ref": "https://github.com/src-company/tacit/blob/main/docs/EVM-POOL.md",
+      "type": "linked Pay-pool documentation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/docs/EVM-POOL.md"
+    },
+    {
+      "id": "S16",
+      "ref": "https://tacit.finance/tacit-v1.pdf",
+      "type": "project whitepaper",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://tacit.finance/tacit-v1.pdf"
+    },
+    {
+      "id": "S17",
+      "ref": "https://ethbeat.org/privacy/projects/tacit-pay",
+      "type": "independent privacy review",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://ethbeat.org/privacy/projects/tacit-pay"
+    },
+    {
+      "id": "S18",
+      "ref": "https://www.tokenpost.com/news/technology/53343",
+      "type": "external article",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://www.tokenpost.com/news/technology/53343"
+    },
+    {
+      "id": "S19",
+      "ref": "https://x.com/tacitfi",
+      "type": "linked project social account",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://x.com/tacitfi"
+    },
+    {
+      "id": "S20",
+      "ref": "https://ipfs.filebase.io/ipfs/bafkreibzzaeyokynl77ua4wdk6x6hh7enupa5xdi4osxrr7jjxqtrwasge",
+      "type": "on-chain-linked token metadata",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://ipfs.filebase.io/ipfs/bafkreibzzaeyokynl77ua4wdk6x6hh7enupa5xdi4osxrr7jjxqtrwasge"
+    },
+    {
+      "id": "S21",
+      "ref": "https://ipfs.filebase.io/ipfs/bafkreig7m5j66zlaewjvo6bipk723udgdhnyl7ve5k2suofuvhi2mmb3ai",
+      "type": "Bitcoin genesis-linked metadata",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://ipfs.filebase.io/ipfs/bafkreig7m5j66zlaewjvo6bipk723udgdhnyl7ve5k2suofuvhi2mmb3ai"
+    },
+    {
+      "id": "S22",
+      "ref": "https://github.com/src-company/tacit/blob/main/SPEC.md",
+      "type": "linked protocol specification",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/SPEC.md"
+    },
+    {
+      "id": "S23",
+      "ref": "https://mempool.space/api/tx/e2d10be19c2b73b86e14be99dc237a3d999ba3dfbe6f3e3714590acee2ca481e",
+      "type": "Bitcoin transaction API",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://mempool.space/api/tx/e2d10be19c2b73b86e14be99dc237a3d999ba3dfbe6f3e3714590acee2ca481e"
+    },
+    {
+      "id": "S24",
+      "ref": "https://github.com/src-company/tacit/blob/main/contracts/src/CanonicalBridgedERC20.sol",
+      "type": "linked token implementation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/contracts/src/CanonicalBridgedERC20.sol"
+    },
+    {
+      "id": "S25",
+      "ref": "https://github.com/src-company/tacit/blob/main/docs/TAC-VAULTS-DEPLOY.md",
+      "type": "linked TAC-vault documentation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/docs/TAC-VAULTS-DEPLOY.md"
+    },
+    {
+      "id": "S26",
+      "ref": "https://tacit.finance/sats/",
+      "type": "project Bitcoin payments app",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://tacit.finance/sats/"
+    },
+    {
+      "id": "S27",
+      "ref": "https://tacit.finance/favicon.svg",
+      "type": "project square site icon",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://tacit.finance/favicon.svg"
+    },
+    {
+      "id": "S28",
+      "ref": "https://github.com/src-company/tacit/blob/main/docs/TAC.md",
+      "type": "linked TAC documentation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/docs/TAC.md"
+    },
+    {
+      "id": "S29",
+      "ref": "https://etherscan.io/address/0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2#code",
+      "type": "operations-wallet ABI",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://etherscan.io/address/0x006CD14F36F65eCbB29b2519cCBe63A0DC8549F2#code"
+    },
+    {
+      "id": "S30",
+      "ref": "https://etherscan.io/tx/0x89ef3990d01fc27b72f78d3e53d93c8ed886a5c27dfd153751af2929ca328159",
+      "type": "deployment transaction explorer",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://etherscan.io/tx/0x89ef3990d01fc27b72f78d3e53d93c8ed886a5c27dfd153751af2929ca328159"
+    },
+    {
+      "id": "S31",
+      "ref": "https://github.com/src-company/tacit/blob/main/contracts/src/TacitBlocks.sol",
+      "type": "linked payment settlement implementation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/src-company/tacit/main/contracts/src/TacitBlocks.sol"
+    },
+    {
+      "id": "S32",
+      "ref": "https://github.com/z0r0z/tacit/blob/main/README.md",
+      "type": "upstream README",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://raw.githubusercontent.com/z0r0z/tacit/main/README.md"
+    },
+    {
+      "id": "S33",
+      "ref": "https://base-rpc.publicnode.com",
+      "type": "Base read-only JSON-RPC",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://base-rpc.publicnode.com"
+    },
+    {
+      "id": "S34",
+      "ref": "https://robinhood-rpc.publicnode.com",
+      "type": "Robinhood Chain read-only JSON-RPC",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://robinhood-rpc.publicnode.com"
+    },
+    {
+      "id": "S35",
+      "ref": "https://x.com/z0r0zzz",
+      "type": "self-associated pseudonymous social account",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://x.com/z0r0zzz"
+    },
+    {
+      "id": "S36",
+      "ref": "https://discord.gg/VxYx9XSBrM",
+      "type": "linked community invitation",
+      "read_at": "2026-11-25T04:11:57.372769+00:00",
+      "could_open": true,
+      "read_via": "https://discord.com/invite/VxYx9XSBrM"
+    }
+  ],
+  "ignored_instructions": [],
+  "notes": {
+    "scope": "Whole-project rebuild from F1: payment chain, Bitcoin protocol, DeFi and Pay pools, apps, borrowing components and public project organisation. The current homepage leads with the payment chain; proof availability does not decide prominence.",
+    "carry_forward": "All 39 F1 line IDs are carried once with their original origins; none dropped. No changes results or panel answers were supplied. F1 was treated as a lead, and its cited primary sources were read afresh. Quotes were shortened; L13’s burn-on-return shorthand is clarified as burning on wrapping back into private notes, from the project’s newer TAC documentation. The upstream repository’s tie is now supported by Bitcoin issuance metadata, so its carried first-party lines are statements rather than external claims.",
+    "evidence": "Statements are restricted to the project domain or strong/linked channels. External articles, trackers, GitHub platform metadata and Tacitscan remain claims. On-chain reads prove only the values and relationships stated, not blanket privacy, decentralisation or safety. No independent audit was performed.",
+    "tokens": "TAC is Bitcoin-native and has a canonical metaprotocol asset identifier, not a Bitcoin smart-contract address. To honor the Tokens rule requiring the home-chain contract address, Tokens and its dependent Supply row are omitted rather than placing an Ethereum bridge address on the home chain or calling an asset ID a contract. Native asset and TAC ERC-20 rows give the 21 million genesis issuance and the Ethereum public subset. The Ethereum contract remains in subject.contracts. The bridge identity is checked with the Bitcoin genesis identifier, MINTER, ASSET_ID and the pool asset tuple; it is not LayerZero. The 4.72 million public Ethereum units are a subset, not additional issuance; no confidential balance distribution is inferred. TACD/TACE and cBTC/cUSD are described in lines. wTAC and payment shares are wrappers/receipts, not extra central tokens.",
+    "supply_limit": "The Bitcoin proof verifies a disclosed genesis commitment opening and zero mint authority against retrieved transaction witness data; it does not replay every later metaprotocol transaction or independently verify Bitcoin consensus. It establishes the original issuance, not current chain-by-chain confidential balances.",
+    "status": "Live denotes present real-value deployment offered/documented by the project, not a guarantee of availability or safety. MegaETH/Fraxtal have documented core Pay-pool deployments; the public build guide lists only Ethereum/Base/Robinhood. This is a scope difference, not evidence of retirement. Their runtime code was not read in this run. Sepolia is test. Secret Sats signet is past because its current page says testing is switched off; its mainnet product is still offered.",
+    "controls": "Pool immutability remains a project statement with its stated limits. The lineage steward can retire a generation by creating a successor; current successor is zero. Borrowing is a separate governed surface: engine/vault owner reads match the 2-of-5 wallet. Its normal delay reads one hour, and a contract executor is configured. A simulated call from that executor bypassed signatures, as the multisig code permits; this does not show that an arbitrary user can impersonate it on-chain. The project describes an all-five-signature immediate route, but this run did not verify the executor contract’s internal authorization logic. The paper’s two-of-four description is retained separately from the current five-owner reads as a question-level discrepancy, because its revision date is unclear. No real-world identities are assigned to its owner addresses. The full scope of operational authority is still unanswered; ETHBeat attributes anon.wei app-name/endpoints control to the Z DAO, which is not asserted to operate every Tacit app.",
+    "people": "No anonymous account is connected to a real name. z0r0z is credited only as the paper’s pseudonymous author; ross.wei is a self-associated account and a Bankless-reported connection, not a proved legal founder. A legal operator is not identified in the reviewed sources. GitHub ownership and app stewardship do not by themselves answer who runs the organisation.",
+    "channels": "The four supplied channels were rechecked. The home page still links X, src-company/tacit and the Discord invite. Its strong tie is independently supported by TAC contractURI metadata. TAC’s Bitcoin issuance metadata points to github.com/z0r0z/tacit, supporting that additional strong channel. The project’s X bio links tacit.wei.limo. The ross.wei account is self-associated only and has tie none. Discord resolves but did not expose a reliably readable server name beyond the project’s own label.",
+    "history": "Repeated readings are merged with F1 history; off-chain tracker history uses block null and includes its date in value. The explorer-access question is closed: Etherscan now opens and the deployment transaction/receipt were retrieved. The source’s Ethereum launch date is 18 September; the pool deployment was 17 September. Deployment before announced launch is not a contradiction. Documentation’s suite start block 25998736 is not used as this pool’s creation block; its receipt is 25998751.",
+    "outside_sources": "Read Bankless’s June article, DefiLlama’s API, Tacitscan, ETHBeat and TokenPost. No evidence warrants treating Tacit as a widely covered project requiring eight outside publishers. ETHBeat discusses Tacit Pay/anon.wei, not the whole DeFi system. TokenPost’s dated prototype introduction is retained with a context link to the current first-party mainnet statement: a launch event is not out-dated by continued operation, and prototype does not itself mean testnet.",
+    "reading_limits": "The /docs/ route returned the app shell rather than a separate documentation index. The build index, payment-chain docs, linked README and main specifications were read instead. An attempted Bankless November article URL returned 404, so it supports no line. X and Discord were read directly; third-party X mirrors were consulted as discovery aids only, not as evidence for account identity.",
+    "logo": "The prior tacit-card.png reference was a share-card/banner lead. Replaced by the project’s own square 32x32 SVG favicon, rasterized faithfully to a transparent 256x256 PNG with the light-theme ring colour.",
+    "questions": "The existing legal-operator question stays open. The authority question is partially answered by owner/threshold reads and the ETHBeat app review, but its wording is retained because authority over all project services is not established.",
+    "checks": "The attached checks test JSON integrity, source/line references, provenance carry-forward, quote lengths, status fields, PNG format and saved Bitcoin opening. They are local self-checks, not independent certification."
+  }
+}
