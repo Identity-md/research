@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "c18414e67370aa3a084cf4cfe5cdc95e701a536a9cc5adfcc90180ec2c5b4e1a",
+  "artifacts": [
+    {
+      "bytes": 49076,
+      "hash": "acf43770f47beb8533e3a9224718cdd7693bf2e983d53db8a1c7280ea8537fe1",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "b8d82083748c90fc0d4076393076f5b15d29745b621620edbb29804c76971c62"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f20ec62b0213db3f94aea2bb9bc4991d44282fc61f19f8ca9d251d3b10cff049",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "a7fe5385ad5878c9acf02843f88708f6a72bea3f834bc1543707c7d911d0c970",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "be306690d4a9deec29b402dde8844f57211fd508cdc5ebd2a2e5df2845dca4b3",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0f7799469f19ae6e48767309dffbb384f2d203a6eb310858826b52b72f4d7e6d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2a9662a76cb5f51d178c6d5ff9e9a5da33ad63feb5a9ef85547ee127dbf9fd6f",
+      "evaluation": null,
+      "findings": 8,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "f3f8d38690b6a783d73be198c86248e965836ff40a312666be8441130eaa8df0",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "ee235ca2c050b44d3aa386fd3bf23296f2697c7212b42d42232af645ee2002be",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "67066229b7e7edfaa71b6bf2dbecf6667b6f87636079bb9d350c4c66dac11255",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "dd2ee4882a1be950e89bc870c2886733619a93bc6d0d0f610b35774715a69940",
+      "evaluation": null,
+      "findings": 15,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b8d82083748c90fc0d4076393076f5b15d29745b621620edbb29804c76971c62",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9a020ffc-afdb-41b8-b89d-89c302c28bce",
+  "objective": "Audit github.com/MirakoolDev/basketoor at commit b14b3cc4facaa197c319db2ed6596f537b7eebd1. Scope: contracts/src/Basketoor.sol and contracts/src/adapters/AerodromeCLAdapter.sol (mocks, scripts, keeper and web are out of scope). Read contracts/AUDIT.md first: it has the roles, intended invariants and known limitations. Look hardest at: (1) escrow and ERC-4626 savings-vault accounting: principal vs idle vs shares, yield fee on withdraw/cancel, and whether the contract's loose USDC can drift from zero; (2) updatePlan resizing the budget (pull vs refund) and fee snapshots per plan; (3) executeDue/executeMany: Chainlink staleness and price bounds, the minOut derivation for 8-decimal stock tokens vs 18-decimal crypto, skipped legs, and fees charged only on USDC actually spent; (4) AerodromeCLAdapter: the uniswapV3SwapCallback can only be paid by the active pool (transient storage), partial fills, and the sqrt price limits; (5) owner powers (adapter, feeds, vault) and whether a plan owner can always cancel and exit without the keeper or owner.",
+  "publisherVersion": "0.1.0+84802020",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "b14b3cc4facaa197c319db2ed6596f537b7eebd1",
+    "repoUrl": "https://github.com/MirakoolDev/basketoor.git"
+  }
+}
