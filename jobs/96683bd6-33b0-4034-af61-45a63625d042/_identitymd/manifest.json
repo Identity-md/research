@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "fae9a00a701607ca4eea286d0f75d68114417209745986d331f0eaf28371c43b",
+  "artifacts": [
+    {
+      "bytes": 62300,
+      "hash": "adb763f906e8adf02cc7f3a3b601fb6cf874ef4285a33a187af8079d317f9256",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "a964de2332dfaa7445adb425c5d45d57e4a1ad8cb0ae9b54dffe9e8fa214d57f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a11a2548561202060d91f2958eb777cf289a47192203ea2c941beffa898f0242",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "a964de2332dfaa7445adb425c5d45d57e4a1ad8cb0ae9b54dffe9e8fa214d57f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+84802020"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "9a29c101a23c14cc1a27a875f2c1b5eceaf7ebad46ca78d581e333462a34af88",
+      "evaluation": null,
+      "findings": 4,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "c4d444cc2916eb7a50119fd677242ce46570a42d994675d88359ec1fc0cf1799",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "96683bd6-33b0-4034-af61-45a63625d042",
+  "objective": "Create the Kekborn portrait style guide, painted layer library and 12 sample portraits for owner approval. Deploy, mint and spend nothing.\n\nStyle, identical on every portrait: painted medieval court portrait of an original anthropomorphic frog noble, in a frame. Oil-painting look, visible brushwork, soft light from the upper left, warm varnish, fine craquelure. Head and shoulders, three-quarter view facing left, 4:5, master 2048x2560. Muted earth tones, deep greens, oxblood, ochre, gold leaf. Dark backdrop with a heraldic banner. Do not reproduce Matt Furie's Pepe; the frog is its own design.\n\nSteps:\n1. Write style-guide.md: the rules above, the palette as hex values, the bust template with fixed eye line and alignment guides, and do/don't examples.\n2. Paint a layer library aligned to that one bust template, as transparent PNGs: 6+ frog skins (incl. 2 rare), 8+ eyes, 10+ expressions (smug, paranoid side-eye, serene, scowl, dim grin...), attire per category (scholar robe and spectacles, monocle and scroll, plate armour, artisan garb, seer hood and orb, council sash), headwear and regalia per tier, props, 5 backgrounds, banners, coat-of-arms parts, and 5 frames: plain wood (Common), carved oak (Uncommon), silver (Rare), gilded gold (Epic), ornate gold with gems and plaque (Legendary).\n3. Write a deterministic compositor: input wallet, tier, genetics, traits, artSeed; seed = sha256(wallet + artSeed); pick layers, composite, apply one shared finishing pass (varnish, craquelure, frame shadow). Same input gives a byte-identical PNG. Record the layers used in a JSON file beside each PNG.\n4. Generate a procedural coat of arms from the same seed (tincture, division, ordinary, charge), painted to match, shown on the banner and on the frame.\n5. Render 12 sample portraits with sample data covering all five tiers and all six categories, plus a contact sheet of all 12 side by side to prove the style is consistent.\n6. Deliver style-guide.md, the layer library, compositor source with tests, the 12 samples, the contact sheet, and manifest.json listing every file with its sha256.",
+  "publisherVersion": "0.1.0+84802020",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
