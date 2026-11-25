@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "b733590f0ec960a9e07589c142b677ad0b245c27be389b0eccca6b3e71fac69d",
+  "artifacts": [
+    {
+      "bytes": 63826,
+      "hash": "39f5a795ac9cda58eb7f0d13c29c87fead39a59d3b5b8613b6c6fe9b518132b2",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "f4d8dcf9c49205173ddb3f3a0119b7560eee72c1a1035b0c73e68a0750fe0ebe"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "f4d8dcf9c49205173ddb3f3a0119b7560eee72c1a1035b0c73e68a0750fe0ebe",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+bc2ea6e9"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "88cc3b0a22556b9a90da99db62c80858a61a8cedb8ee5b01dc48814f69d024c2",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6.1-sol",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "90b15e999ac4f596953206dffd96304d80f6d908dc16e2c61efe58eadc2895c1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "c4da2fbc-8de8-490f-9aa5-32ad67dda3e3",
+  "objective": "Kekborn Genesis snapshot and scoring for IMD holders. Research and data only: deploy, mint or spend nothing.\n\nSteps:\n1. Choose one snapshot block on Ethereum and one on Robinhood chain. Store each block number and its UTC time in snapshot.json.\n2. Build the holder list of the IMD token (Ethereum 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7, Robinhood 0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127) with each wallet's balance at the snapshot block, from on-chain data. Merge wallets across chains.\n3. For each holder, gather its IMD job history from the IMD API at api.imd.fun: orders the wallet paid for, job details and results, goals, seats and earnings. Only orders created before the snapshot time count.\n4. Classify each job by status (completed, abandoned, failed, ongoing) and category (code/contracts, research, audit, website/product, oracle/indexer, multi-agent goal), with scope, deliverables and quality signals. Count each job once; goal child jobs are not counted twice.\n5. Never guess. A job that cannot be linked to a wallet is listed as unlinked, with the reason.\n6. Design a transparent Genesis Contribution Score from: completed jobs, IMD spent, category diversity, scope and complexity, successful deliverables, quality signals and multi-agent goal participation. Balance alone is not the score. Write the formula in methodology.md and a script that recomputes every score from the saved datasets.\n7. Set five rarity tiers (Common, Uncommon, Rare, Epic, Legendary) from the score distribution itself, e.g. natural breaks, not fixed percentages. Explain the cut points.\n8. Give each wallet genetic tendencies from its job categories: code/contracts = problem-solving, technical aptitude; research = memory, perception, analysis; audits = defence, resilience; websites/products = creativity, adaptability; oracles/indexers = perception, information processing; multi-agent goals = rare special combinations.\n9. Deliver: sources/ (the collected records as JSON data, one file per source), snapshot.json, holders.csv, jobs.csv, scores.csv (wallet, balance, jobs by status and category, IMD spent, score, tier, genetics), methodology.md, data-accessibility.md (what is available, what is missing, other ways to verify) and manifest.json with the sha256 of every file.\n\nThe snapshot is final once written and is the fixed input for all later Kekborn work.",
+  "publisherVersion": "0.1.0+bc2ea6e9",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
