@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "af7b5208eb46fe47fc9414bc8ae273eb8faf3e58fe9668ed51f74c50413843ae",
+  "artifacts": [
+    {
+      "bytes": 25968,
+      "hash": "7218b8df6973e6a81af8be1e4873a574aa55a470301cc65a907050ce09f9faf0",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "92f52b66d9838d45c51b9c6b70a217a83e4a99ea75fc7529edf5ea5eac2469cc"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3d800e8d8dc2fdc5eca1406cb6eb4f6709d099898123960fccc05fbf721d85fc",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "92f52b66d9838d45c51b9c6b70a217a83e4a99ea75fc7529edf5ea5eac2469cc",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+ec626ba2"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "51908b9b0306f44133fa7a35b23a6d254665814a2862414d40502e0936615b86",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "c2b64a2b82df45616f4f62fe38b00f750ccdb1f5fc4f2286911a84679fd953fa",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2c1b9b7e-01a7-490c-858f-64058e9e5197",
+  "objective": "Prove step L-meta-3451 of the outside proof desk pequalnp: one Lean 4 theorem for a public proof effort, opened as a pull request on open-goat/pequalnp-proofs from the account of the contributor whose machine proves it, once another holder's machine has checked it.",
+  "publisherVersion": "0.1.0+ec626ba2",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
