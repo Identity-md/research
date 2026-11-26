@@ -1,0 +1,100 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "ce881d3bb09a02a0e79138b632b2933944e732c272b8bd99d484a7e2f460b4dc",
+  "artifacts": [
+    {
+      "bytes": 63,
+      "hash": "dca08aa723ed319399e5880bff51a260cd1fd104cb1d3146bd9e0bc33396148b",
+      "mediaType": "application/json",
+      "name": "figures",
+      "path": "artifacts/goal/writeup/figures.json",
+      "publishedPath": "files/artifacts/goal/writeup/figures.json",
+      "submissionHash": "205c62622d194d52ee8717f8e3cd672e734d7af16156d2095dce8ef4adce152d"
+    },
+    {
+      "bytes": 63887,
+      "hash": "938c37feaa59ebbe2c24430b4ba6380f6812777b731e61a2542e959684b93131",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "205c62622d194d52ee8717f8e3cd672e734d7af16156d2095dce8ef4adce152d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a11a2548561202060d91f2958eb777cf289a47192203ea2c941beffa898f0242",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "205c62622d194d52ee8717f8e3cd672e734d7af16156d2095dce8ef4adce152d",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "d192c3efd847050aa8b29c6a95e07900fceecc329b0007a266430d96159a64c9",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "eed07aeb6ef95ea7ee363558f124e180293241d7b963487c4d55fd47f8801a5a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "derived": [
+    {
+      "bytes": 1215,
+      "dataset": "catalogue-triage-v1",
+      "hash": "ee95b689527689ebc0a7a456e7d23cc643e609562f697a176f90010503cdecb5",
+      "kind": "dataset",
+      "mediaType": "application/json",
+      "name": "manifest",
+      "path": "datasets/catalogue-triage-v1/manifest.json",
+      "publishedPath": "files/datasets/catalogue-triage-v1/manifest.json"
+    },
+    {
+      "bytes": 833071,
+      "dataset": "catalogue-triage-v1",
+      "hash": "5b7d9d858949ffdace92cf67b74c1786a50be4d836700d18d3d2c7cdbf8cfd56",
+      "kind": "dataset",
+      "mediaType": "text/csv",
+      "name": "rows-csv",
+      "path": "datasets/catalogue-triage-v1/rows.csv",
+      "publishedPath": "files/datasets/catalogue-triage-v1/rows.csv"
+    },
+    {
+      "bytes": 987298,
+      "dataset": "catalogue-triage-v1",
+      "hash": "bcc8714b599f118ff613961ff675cd86b4b3165eaea438ee06a919ab88819795",
+      "kind": "dataset",
+      "mediaType": "application/x-ndjson",
+      "name": "rows-jsonl",
+      "path": "datasets/catalogue-triage-v1/rows.jsonl",
+      "publishedPath": "files/datasets/catalogue-triage-v1/rows.jsonl"
+    }
+  ],
+  "derivedCid": "bafybeih4gxwzyobqlw7lk5dirhbowmimz3utmbkxil36pfwk5ygpymgbgu",
+  "jobId": "4b73084b-2364-4345-98a7-a272655e0499",
+  "objective": "Objective: produce the first Lean 4 formalization of at least one well-known theorem that is still missing from the Lean community's \"1000+ theorems\" list, as a project that compiles against current Mathlib with no sorry. Public, reusable work: quality over quantity.\n\nSource of targets: https://leanprover-community.github.io/1000-missing.html (about 956 theorems not yet formalized in Lean, each with a Wikidata id). Read also https://leanprover-community.github.io/1000.html to see how finished entries are recorded.\n\nStep 1 - triage, one batch of theorems per agent: for each missing theorem give the precise statement, the standard proof and its length, which definitions and lemmas already exist in Mathlib (search Mathlib and Loogle/Moogle), what is missing, and a feasibility grade: A (provable in a few hundred lines from existing Mathlib), B (needs some new definitions), C (hard or needs major theory). Check GitHub, Lean Zulip and the Mathlib PR queue to confirm nobody has already formalized it or has an open PR. Skip famous hard results (Fermat's Last Theorem, Four color theorem and similar).\n\nStep 2 - pick the 8 best grade-A targets, preferring theorems people recognise by name (geometry, combinatorics, graph theory, number theory, probability). Examples to consider if triage confirms: Brianchon's theorem, Balinski's theorem, Schwenk's theorem, Ford's theorem, classification of Platonic solids, Gauss-Markov theorem.\n\nStep 3 - formalize, two or three agents per target with different proof routes. Use a Lake project pinned to a recent Mathlib release; fetch the prebuilt cache (lake exe cache get) and never build Mathlib from source; keep every command under 10 minutes. State the theorem faithfully and in the generality of the textbook statement, with a docstring quoting the informal statement and the Wikidata id. No sorry, admit, native_decide or new axioms. Follow Mathlib naming and style so the result could be proposed upstream. Partial progress must be delivered as lemmas that compile.\n\nStep 4 - verify: a different agent rebuilds from a clean clone, runs #print axioms (only propext, Classical.choice, Quot.sound), and reviews that the Lean statement really is the named theorem and not a weaker or trivial variant. Re-check that no prior Lean formalization exists.\n\nDeliverable: for each finished theorem: the Lean files, build log, #print axioms output, a plain-English explanation of the statement and proof, the fidelity review, the prior-work check, and a ready entry for the 1000+ theorems database (Wikidata id, declaration name, file). Also the full triage table, and for unfinished targets the compiled lemmas and where the proof got stuck. Mark anything unverified as UNVERIFIED.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
