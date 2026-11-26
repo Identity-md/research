@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "5cd932c327cfe5d9b8fb51243120c845750b50550b4508ac8b56edfa0db7afb9",
+  "artifacts": [
+    {
+      "bytes": 63736,
+      "hash": "44489fbcb035c85b952cf2ed7294eb48b2c03c28e1a3b67006037bfb93842da8",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "951171727fa75a53da2f23e480446ef999030858073405d8a5c6abff5e76c60d"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "12fbd676b21225124c5208843b9edf7dc22f02becfa0a26d7b7b80570e7fc634",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "951171727fa75a53da2f23e480446ef999030858073405d8a5c6abff5e76c60d",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "970da38f1d564250f87c22c648c051558ffcf5ea71902aa5a0a8c81cc30194db",
+      "evaluation": null,
+      "findings": 3,
+      "model": "claude-fable-5-2",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "86b475f8dfd366994748a8c1ec59f2c53494bb682461f134cdb6d951f2d4a20d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "82521e09-7b5c-47c8-ba0b-d1deb20f7270",
+  "objective": "Objective: find a packing of 15 unit semicircles in an enclosing circle with radius strictly below 2.94853 (the value shared by the top of the Paradigm \"Shape Packing\" leaderboard), validated by the official local scorer. Do NOT submit anything or sign in anywhere. Deliver solution files to the requester only.\n\nRules: https://www.paradigm.xyz/puzzles/packing/about and repo https://github.com/benedictbrady/shape-packing-challenge (read both first). A solution is a JSON array of exactly 15 objects {x, y, theta}: x, y = centre of the full unit disk, theta = direction of the curved side; the flat edge passes through (x, y) perpendicular to theta. Coordinates are rounded to 6 decimals before scoring. Valid if no two semicircles overlap (intersection area below 1e-6) and all lie in the enclosing circle. Score = radius of the minimum enclosing circle, lower is better. Area lower bound is about 2.74.\n\nStep 1 - setup: clone the repo, uv sync, score the sample with uv run python run.py. Write a fast own scorer (exact overlap test and minimum enclosing circle for semicircles) and confirm it matches the official one on random and tight cases, including the 6-decimal rounding.\n\nStep 2 - reproduce the record: reach 2.94853 or better by any method and save that configuration. Describe its structure: how many semicircles pair into full disks, where the flat edges sit, the symmetry.\n\nStep 3 - search for something better, one strategy per agent, each with different seeds and time-boxed commands (under 10 minutes each, checkpoint to disk):\n- different topologies: 7 pairs + 1, 6 pairs + 3, 5 pairs + 5, no pairs; flat edges on the boundary vs facing the centre; rings (e.g. 1+5+9, 2+6+7, 3+12, 4+11), with and without rotational or mirror symmetry;\n- global optimisers: simulated annealing, basin hopping, CMA-ES, differential evolution, with penalty for overlap then exact repair;\n- local polish: shrink the container with SLSQP or an interior-point method under exact non-overlap constraints; remove-and-reinsert moves; swapping a semicircle's orientation by pi;\n- exploit the rules only as written: the 1e-6 overlap tolerance and the 6-decimal rounding, verified by the official scorer.\nShare the best configuration between rounds so later agents start from it and also from fresh random starts.\n\nStep 4 - verify: the best solution.json must pass the official scorer from a clean clone after rounding to 6 decimals; a different agent re-runs it and reports the radius to 8 decimals with a plot.\n\nDeliverable: best solution.json, its official score, the plot, a table of every strategy with its best radius, and a short note on the structure of the best packing and why it beats or fails to beat 2.94853. If nothing goes below 2.94853, deliver the best tie and say so plainly.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
