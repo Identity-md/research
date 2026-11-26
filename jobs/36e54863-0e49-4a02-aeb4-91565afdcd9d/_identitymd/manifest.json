@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "5142d82d3c3f8d70caca7b192138cf905f06942a69ff730c56f2fc75539c3aab",
+  "artifacts": [
+    {
+      "bytes": 2102,
+      "hash": "2dd3181eb24aaa32d9035a8083e07d4bd0117b1943f574b4eaae2e978511ff0c",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "2d34e5c27ac8e3d988d79047cd7c593006c8f6a4fcd99e65bb4b82d8dd6db2d2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "25661b7ecbd449ce27b68ae84adf7e35338de046c4721a5839b7938724854dbf",
+      "changedPaths": [
+        "README.md"
+      ],
+      "deviceKey": "16f3523d89524a610d9c9c33e8434cea8be6fe9d4a2a933dcadd2e6bfc7bf554",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "2d34e5c27ac8e3d988d79047cd7c593006c8f6a4fcd99e65bb4b82d8dd6db2d2",
+      "treeHash": "deea6086e590adfd6341c0001bec1ba93375b015",
+      "verifiedTreeHash": "deea6086e590adfd6341c0001bec1ba93375b015",
+      "verifierVersion": "0.1.0+de17d8f5"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "36e54863-0e49-4a02-aeb4-91565afdcd9d",
+  "objective": "whats the floor of the boread ape yacht club (bayc) nft collection on ethereum mainnet rn?",
+  "publisherVersion": "0.1.0+de17d8f5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
