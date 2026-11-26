@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0bbc60dcf2d7d0d8fda35b38017cd19cb6a47c848e6b260475891c0acad6226e",
+  "artifacts": [
+    {
+      "bytes": 63975,
+      "hash": "e618c43ad7c1588f2245a249be296e64eefaf16c251bb401835df455b4141863",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "890dd512804dba619b01e95924a25de1afbbeb9581bef4aed721c32dd77eaa7a"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "2c736d2f8963f8a507c1f105407e5ba312f42ab34716c5f81b163e655e340023",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "890dd512804dba619b01e95924a25de1afbbeb9581bef4aed721c32dd77eaa7a",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "a6bc9bc7471a6711c503d423f1bb35da72a09b56f4843233dec15af7f0ce6b82",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-2",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "328addfb63743f78f213782499a5a6b92a583814501237c372407a0f44474f74",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "9bb712e0-a5b4-4acb-9701-a15c9898186d",
+  "objective": "Objective: security review of the Morpho Midnight Adapter for the Cantina competition (ends 3 Dec 2026). Find real vulnerabilities with coded proofs. Do NOT submit anything anywhere, do NOT create accounts, do NOT contact the team. Deliver findings to the requester only.\n\nScope: repo morpho-org/vault-v2 at commit bbeda7b27ae80abcf070e0158cb8a31e87bb2286, directory src/adapters/midnight: MidnightAdapter.sol, MidnightAdapterFactory.sol, gates/IKRCompatibleEnterGate.sol, gates/IKRCompatibleEnterGateFactory.sol, gates/WhitelistEnterSubGate.sol, gates/WhitelistEnterSubGateFactory.sol, libraries/PackedDurationsLib.sol, ratifiers/MidnightAdapterPriceRatifierV1.sol, ratifiers/MidnightAdapterRateRatifierV1.sol, plus interfaces under interfaces/, gates/interfaces/, ratifiers/interfaces/. The adapter lets a Morpho Vault V2 allocate into Midnight fixed-rate, fixed-maturity markets (buys, sells, holds credit, withdraws repaid assets). Read the adapter README, NatSpec, Vault V2 docs, Midnight docs and whitepaper first.\n\nOut of scope: issues already in the prior audit drafts (Cantina and TrustSec, Midnight Adapter, 2026-10-12), expected behaviour of trusted roles (curator, allocators, sentinels), accepted risks listed by the team.\n\nStep 1 - build: clone at the commit, run the existing test suite with Foundry, confirm it passes.\nStep 2 - review, one angle per agent: accounting and rounding in buy/sell/hold/withdraw; maturity and duration edge cases (PackedDurationsLib packing, overflow, zero and max values); price and rate ratifier checks (stale, manipulated or boundary inputs); gates and whitelists (bypass, wrong caller, factory misconfiguration); interaction with Vault V2 roles, caps and allocation ids; reentrancy and callback order with Midnight; loss realisation and bad debt; factory deployment (address prediction, duplicates); invariant and fuzz tests for each of these.\nStep 3 - prove: every candidate needs a Foundry test (PoC) that runs against the pinned commit and shows the impact with numbers. No PoC = not a finding. Classify with Cantina's severity criteria (impact x likelihood). Check each candidate against the out-of-scope list and the prior audit reports.\nStep 4 - independent check: a different agent re-runs each PoC from a clean clone and tries to refute the finding. Keep only findings that survive.\n\nDeliverable: for each surviving finding: title, severity with reasoning, affected file and lines, description, the PoC test file, exact command and output, suggested fix. Separately, a ranked list of Low/Informational findings written to a high standard (clear, specific, with code references). Mark anything not fully verified as UNVERIFIED. If nothing survives, say so plainly and list what was covered.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
