@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "3bd0ae191315aefe381871a19b2ef75bda747dbdb9e3b21b4c4c9b1fc35571d3",
+  "artifacts": [
+    {
+      "bytes": 63562,
+      "hash": "df245d1f9fefab6d8e3404cac2da79022fd3cf65443a297606417b1be05ed854",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "b222fcc84184ba3c75a7c8bd1dfcc5f107374583d7da5369ed77282995e04a41"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "74db3e88f3c65478418bb70ef02552b0c063bea9c57144a2539529eef1a8af3a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-sol",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "b222fcc84184ba3c75a7c8bd1dfcc5f107374583d7da5369ed77282995e04a41",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f2eb60f00abb5b803f8896e47de247f4ec2a859f12d8717dc17f9d1f0b6f6acc",
+      "evaluation": null,
+      "findings": 1,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "cb45ce3459807252e8050035862e1673a0d649989d57d618370291d79fde43fb",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "919878e7-0eb9-49cb-9159-502d51b2c8b6",
+  "objective": "Beat the conjectures.io Exact integer kernels thumbv6m (Cortex-M0+) board, verified locally only. Do NOT register a hotkey, sign, run miner/submit.py, submit, or spend TAO.\n\nContext: prior IMD goal 245c10e6-494e-43f3-a3bf-bc67925b46dd (public repo https://github.com/identity-md-launches/goal-3465-objective-build-entry-c-conjectures-io at c5e3f91274b1f0c409127e8cfc14aa5ac8f392da) made 0 takeovers: its only change tied or lost to former champion 50. Its lessons: 20 of 39 items went to packaging, 9 to re-scoring old champions, only 8 single micro-changes, and every one added instructions on the common path. This goal fixes that: no re-baselining of 37/42/46/48, no offline-replay packaging, all effort on Thumb speed and size.\n\nBase for every item: https://github.com/identity-md-launches/goal-3465-objective-build-entry-c-conjectures-io/blob/c5e3f91274b1f0c409127e8cfc14aa5ac8f392da/eik-work/baselines/former-50/entry.c (sha256 88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3). Kit: https://github.com/conjectures-io/exact-integer-kernels-miner at 5a32428ad4aa23bce737d50a738ace24ddeeed2e, measurement fingerprint 2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322. If python -m eik setup fails, reuse the prior repo's eik-work/toolkit setup.\n\nTarget and threshold: reigning thumbv6m champion 53 is withheld but scored 0.9684x former 50 on the validator's inputs, so a takeover needs S_thumbv6m <= 0.97 x 0.9684 = 0.939x former 50. Internal goal: <= 0.935x former 50 on every seed, for margin. Former 50 thumbv6m: S 40.43, bytes 20,500 (size factor 1.146), typical means sigmoid 37.7, tanh 37.6, exp 42.9; wide 28.9/20.2/34.3; hard 49.9/79.3/55.6. Score math (lnS): 1 KiB of code+tables = 0.58%; one instruction off one function's typical mean = 0.183/mean (about 0.45%); wide = 0.1/mean.\n\nRules (RULES.md in the kit is the authority): one C11 file, eik_sigmoid/eik_tanh/eik_exp on binary32 words, correctly rounded nearest-even on all 2^32 inputs incl. NaN payload quieting and signed zeros; integer only; no #include or other directives beyond #define/#undef/#if family; no predefined-macro dependence (keep the existing EIK_SEL wide-char selector; Thumb uses the t_ paths); no long, plain char, attributes, pragmas, volatile, function pointers, recursion or mutable statics; <=64 KiB code+tables, <=8 KiB stack per target; renamed copies are rejected.\n\nEdit only Thumb-selected code and tables so the RV32IM object stays byte-identical. Shared measurement seeds for all items: 1001, 2002, 3003. Held-out seeds for integration only: 4004, 5005, 6006. Every result needs per-class numbers, a diff against the base, and full-domain checks of changed functions. Mark anything unchecked UNVERIFIED. If nothing reaches the threshold, deliver the best combined entry, its ratios and the next steps.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
