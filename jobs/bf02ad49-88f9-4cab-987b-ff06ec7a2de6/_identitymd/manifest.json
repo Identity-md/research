@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "af79ae4f99c8db8d8423df8e388e0768d4566dd5d28f329b853d9bcc583cf21f",
+  "artifacts": [
+    {
+      "bytes": 63395,
+      "hash": "cf3d235cca5d1be06a09102b5daa6704343ce2e290505af070de6cafa9881df6",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "8e5d7d2aae71154ec55e8bbdc34fd3d817e62cf9fb3106c9c38b703a45c02ddb"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "35c52a5b502e847cda633d436a25cd57d809a4ea7935560acc2b18eccfd592ac",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "8e5d7d2aae71154ec55e8bbdc34fd3d817e62cf9fb3106c9c38b703a45c02ddb",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "da72e21237e01c8a28ba48157e573e0fa20a1480325df2419f1d29d63567bf32",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "e3f36f3197789329d53ef01a25d5cc723275cec2ec5ae893d55000f8d21a7d40",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "bf02ad49-88f9-4cab-987b-ff06ec7a2de6",
+  "objective": "Have 50 agents eaTask: map every public source of RENTAL PRICE, AVAILABILITY and SUPPLY data for data-centre GPUs, with its access terms, for an internal price-tracking project.\n\nChips: H100 SXM (flag PCIe/NVL mixing), H200, B200, B300, GB200/GB300 per GPU.\n\nSearch each category: transacted prices (exchanges, auctions, cleared trades, on-chain leases); spot/preemptible; posted on-demand (hyperscalers, 30+ neoclouds); reserved/term rates; availability and stock feeds; price indexes and benchmarks (maker, method, inputs); compute futures/derivatives (what they settle on); aggregators and trackers (which providers inside); supply (shipments, data-centre builds, AI-server makers' monthly revenue); demand proxies (inference prices, uptime); GPU lending reports; news, outage and price-change feeds.\n\nRules:\n- Public info only: no accounts, logins, forms, or contacting anyone.\n- Read terms and robots.txt; never bypass paywalls, limits or bot blocks; no crawling or bulk downloads.\n- Do NOT copy price or index values: describe fields and formats only.\n- Cite a URL for every fact; quote terms VERBATIM with URL; date each check (UTC).\n- Never guess. Mark unconfirmed items UNVERIFIED.\n\nTerms verdict per source, with a supporting quote:\n- AUTOMATED-OK: programmatic reads allowed.\n- FILES-ONLY: open licence on files only.\n- OPEN-NONCOMMERCIAL.\n- PERMISSION.\n- LICENCE-PAID: give the price.\n- FORBIDDEN.\n- UNCLEAR.\n\nQuote any clause on scraping, use in pricing/trading/risk systems, AI training, redistribution or derived data, and attribution.\n\nData checks per source:\n- transacted or posted;\n- method and provider count;\n- composition breaks;\n- update frequency;\n- history;\n- revisions;\n- UPSTREAM: whose index or feed it contains.\n\nOutput:\n\n1) JSON Lines, one source per line, keys:\nname, owner, category, homepage_url, data_urls, docs_url, chips_covered, price_kinds, fields, format, update_frequency, history, auth_required, rate_limits, transacted_or_posted, method_public, upstream, terms_url, terms_checked_utc, terms_verdict, terms_quotes, robots_txt, attribution_required, price_of_access, status, caveats, confidence.\n\nAggregators add \"providers\": [{provider, republish_licence_stated, provider_terms_verdict, provider_terms_quote}].\n\n2) Top 15 AUTOMATED-OK or FILES-ONLY sources for daily rental prices, ranked by: transacted first, daily or faster, covers H200/B200/B300, history length, stable method. One line each on what it adds and its weakness. Then the top 5 paid or permission-only sources and what access needs.\n\n3) Gaps: what you didn't find, poorly covered chips, contradictions, unchecked companies.\n\nFewer sources done properly beat many done carelessly. Plain language, no hype, no price forecasts.ch review one top DeFi protocol and rank them by risk.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
