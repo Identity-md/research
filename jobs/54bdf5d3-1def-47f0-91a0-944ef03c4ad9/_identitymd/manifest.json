@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "bf387d91b91ba322dda88feece24ae70bac83cd86302855564e31c61659f1c0a",
+  "artifacts": [
+    {
+      "bytes": 46408,
+      "hash": "1fc95dde14bb46348a735a3dae39e1353f0f9ce54fd87d54053d5c62e542b5ef",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "503f93b0786fa8533ba47f856ff985a8b9c0ba5b513d0fad12cc98fd912027c2"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3f6a9bdd601cb99f6ed43e548c54969af8f5a70edeae432aa541d955a4078cdf",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "503f93b0786fa8533ba47f856ff985a8b9c0ba5b513d0fad12cc98fd912027c2",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f2a99efe911b558118b52bae6046f6c1683497f439e5d26ce4867310c99db597",
+      "evaluation": null,
+      "findings": 8,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "b91d6c81b9f92faf712cc42caa3dc5b1c08b2821da145c3a656d80deb9e3307d",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "54bdf5d3-1def-47f0-91a0-944ef03c4ad9",
+  "objective": "Build and deploy IMD SPORT INTELLIGENCE, a premium AI-powered sports betting prediction platform covering UFC/MMA, NHL, NFL, NBA, football and tennis.\n\nUse 200+ specialized IMD Swarm agents to analyze statistics, injuries, breaking news, weather, home/away performance, experience, fatigue, tactics, historical patterns, odds and unexpected factors.\n\nAgents must independently challenge conclusions, identify misleading statistics and deliver evidence-based predictions with probabilities, confidence levels and detailed explanations. Consider experience versus youth, quality of opposition, stylistic matchups and factors conventional statistics overlook.\n\n**NO NEW TOKEN. NO TOKEN LAUNCH. NO NFT.**\n\nUse exclusively the existing official IMD token on Ethereum Mainnet.\n\nCharge exactly 1 IMD per premium prediction:\n- 0.5 IMD automatically transferred to the developer wallet.\n- 0.5 IMD allocated to Swarm research.\n\nTechnical requirements:\n- Login and wallet app IDs: builders choose.\n- MetaMask, Rabby and WalletConnect integration.\n- Existing official IMD token address: builders identify and verify.\n- Payment routing: builders implement securely without creating a new token.\n- Developer wallet: [INSERT PUBLIC WALLET ADDRESS].\n- Logo, sports APIs, database, hosting and RPC: builders choose.\n\nInclude live scores, upcoming events, premium predictions, injury reports, AI research, historical accuracy, personal prediction history and transparent payments.\n\nUse a premium black, gold and electric-blue design with professional sports visuals and mobile optimization.\n\nUse real data, independent verification, historical backtesting and calibrated probabilities. Optimize shared research and caching within the available Swarm budget.\n\nProvide sports analysis only, without accepting wagers or guaranteeing winnings.\n\nBuild, test and deploy a fully functional production website, not a mockup. Builders choose all remaining technical requirements.\n\nThis is a website-only project using the existing IMD token. Do not launch any cryptocurrency. Check again and proceed.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
