@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "a6fecda047a54bfc826c7a9a4ffd615b9a85e2b4800f15e6b4ae6067afff4c19",
+  "artifacts": [
+    {
+      "bytes": 20342,
+      "hash": "bf2781bdc1c1fc3198c8536b3ff309c6ed2f41266a890c3870e4ef44beeb75a5",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "f2d05f9fcf0b965bd37ebc2bd2a4187fc488c1eefcd6aa838266cd2d0cb6510c"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ba44f3d5ab7b010895a775f74901bfc7f9cae8f3ed681e13f9731833d860428",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "f2d05f9fcf0b965bd37ebc2bd2a4187fc488c1eefcd6aa838266cd2d0cb6510c",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "cd309c94b2fdc871ee39fa0ca448bd13381b58af68108f7cad1e6c756faa29fc",
+      "evaluation": null,
+      "findings": 7,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "5b2930eb60588c44105d5c383ab176f4e0fa87ea15107f113cf724ccd7bf4002",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "99f422e1-4578-4c5b-867c-e58575c7f8f3",
+  "objective": "Kekborn portraits v2: repaint the layer library with an image model in Tudor court oil style, then render 12 sample portraits and a contact sheet for owner approval. Deploy, mint and spend nothing.\n\nBuild on the existing repo https://github.com/identity-md-launches/goal-3401-create-kekborn-portrait-style (bust template, catalog, compositor, heraldry, tests). Keep its structure. Its layers were drawn by code and look digital; replace every layer PNG with image-model paintings.\n\nStyle, identical on every layer and portrait: hand-painted 16th-century Tudor court oil portrait of an anthropomorphic frog noble. Visible brushstrokes, impasto on jewels and gold thread, glazed shadows, soft light from upper left, warm varnish, fine craquelure. Brocade and damask doublets, slashed sleeves, fur trim, pearl and gem chains, velvet hats. Deep greens, oxblood, black, ochre, cream, gold leaf. Dark damask backdrop with a heraldic banner. Half-length, three-quarter view facing left, 4:5, 2048x2560. Face: Pepe-like but its own design: large heavy-lidded eyes with clear irises, wide mouth with full muted-red lips, smooth green skin, very expressive. Do not copy Matt Furie's Pepe, Pepelangelo's paintings or any specific historical painting.\n\nSteps:\n1. Write one locked style prompt and a negative prompt; store them in style-guide.md with the palette and the bust template.\n2. Paint every layer with an image model from the locked prompt plus the layer's description, on the bust template. Paint attire, headwear and props onto the base bust (inpainting) so edges and light match, then cut out to transparent PNG. Layers: 6 skins (2 rare), 10 strongly different expressions (melancholy, smug, paranoid side-eye, dim grin, scowl, serene, startled, regal, sly, weeping), attire per category (scholar, antiquary, knight, artisan, seer, council), headwear and regalia per tier, props, 5 backdrops, banners, 5 frames (plain wood, carved oak, silver, gilded gold, jewelled gold with plaque).\n3. Keep the catalog valid as layers are replaced: schema kekborn-assets@1 everywhere, accepted rarity values, and the existing real-catalog and sample-input tests passing.\n4. Extend the finishing pass: glaze, varnish, brush-texture overlay, craquelure, frame shadow, so layers read as one painting. Add an optional low-strength image-to-image harmonisation pass with a fixed seed.\n5. Render the 12 sample inputs in sample-inputs/ with the compositor, each as plain composite and harmonised. Commit them as 1024x1280 JPEG previews (quality 90) plus one contact sheet of all 12, every file under 4 MB; full-size PNGs stay reproducible from the compositor. Keep every committed file under 8 MB.\n6. Deliver the repainted library, updated catalog and compositor with passing tests, style-guide.md, the 24 sample previews, the contact sheet, and manifest.json with the sha256 of every file.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
