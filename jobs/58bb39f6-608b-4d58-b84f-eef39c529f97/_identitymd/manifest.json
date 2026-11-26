@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "434c982a72824e01582c0b7032972bf8a1687e8ea7e16a79132406e0322051d3",
+  "artifacts": [
+    {
+      "bytes": 63980,
+      "hash": "87af98c5c7d94d48b0a986a0017b2379f601b78f9c3cbfe81bbc2010f167eb88",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "ad0fc4bb04f89de0b4cd9daac626b140a061d3066cde0abbfa4d0ed0a83daaca"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "4ba44f3d5ab7b010895a775f74901bfc7f9cae8f3ed681e13f9731833d860428",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "ad0fc4bb04f89de0b4cd9daac626b140a061d3066cde0abbfa4d0ed0a83daaca",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "3a271480f26269e36f6994c9ba67a8ad19fcf40f7b5edfad684b8422691362fe",
+      "evaluation": null,
+      "findings": 3,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "151c2753c8d79471c719a7c216ae6e5e43a7a8fe2845816c35f500153b634cf2",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "58bb39f6-608b-4d58-b84f-eef39c529f97",
+  "objective": "Objective: settle at least one open problem on conjectures.io (Bittensor subnet 66) with a Lean proof or refutation that compiles locally. Do NOT submit, create accounts, buy credits or spend TAO. Deliver files to the requester only.\n\nRules (read https://conjectures.io/how-it-works and the submission terms first): each target is an exact Lean statement (Challenge.lean); proving it or its exact negation both count. A complete solution already published in the literature is NOT eligible, even if first formalized here; using published lemmas, weaker results and special cases to close a remaining gap is fine. Toolchain: Lean v4.35.0-rc2, Mathlib 065356127b1d, Formal Conjectures 6adcbe13652f. No sorry, admit, native_decide, set_option, new axioms or extra imports; only propext, Classical.choice, Quot.sound.\n\nStep 1 - inventory: list every target with submissions open: slug, statement, source, attempts so far, bounty.\n\nStep 2 - triage, one target per agent: read the exact Lean statement and the source problem (erdosproblems.com page and its comments, cited papers, recent arXiv). Classify: (a) decidable by finite computation or a counterexample search; (b) the Lean statement is weaker or different from the famous problem and may be provable; (c) a short gap remains after a known partial result; (d) genuinely hard. Give a one-paragraph plan and an honest chance estimate. Check the target is not already solved in the literature.\n\nStep 3 - attack the best 10 of classes (a)-(c), several agents per target with different approaches: computer search for counterexamples or extremal examples (then prove the found object in Lean with kernel-checkable computation), reduction to Mathlib lemmas, induction or probabilistic or density arguments written out fully, splitting into lemmas proved separately. Work in a pinned Lake project. Partial progress must be stated as lemmas that compile.\n\nStep 4 - verify: a full proof must build with lake from a clean clone, with #print axioms showing only the three allowed axioms. A different agent re-builds it and checks the statement is exactly the target, unmodified. Re-check the literature once more for the exact result.\n\nStep 5 - keep the complete original AI chat logs for every proof attempt that succeeds: the subnet requires them for submission and rejects a proof without them.\n\nDeliverable: for each solved target: slug, Main.lean, build log, #print axioms output, a plain-English explanation of the argument, literature check, chat logs location. Also the triage table for all targets, and for the 10 attacked ones what was tried, compiled lemmas and where it got stuck. Mark anything unverified as UNVERIFIED. If nothing is solved, say so plainly.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
