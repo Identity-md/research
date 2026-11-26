@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0813dbc6a767c03b960eb2e931e973b78e76dcdf3d75a4fe776173c5b8e60fc4",
+  "artifacts": [
+    {
+      "bytes": 53573,
+      "hash": "c4f3aa4f249c399025e07367df7091b58f88957ed695e6e6036ff69e826bf80b",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "73ae6e98fe4345bff1ad7f749c5b7d3eeb9c4e13222fd7a2aba27f720c6f6e37"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f42f27bce9bb7fc5251ad781c221ee157406ba6f3ed5767a0fd8420eec11c54a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "73ae6e98fe4345bff1ad7f749c5b7d3eeb9c4e13222fd7a2aba27f720c6f6e37",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+de17d8f5"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "8576036969b9332c2c191439b764d7cecdfef5dbbaf254cbc060cb624f366ff6",
+      "evaluation": null,
+      "findings": 2,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "0886892b6c5a140f049e9cdda730ca3f8b5db8c22baaa2325ebab8b0ac6ef76a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "b171a955-9521-44f3-b5cd-1a94d9c0d239",
+  "objective": "create a token on sepolia named test, ticker testAdam, that launches with a univ4 pool, and a contract where you can send to it and other ppl can claim what you sent, but you get points for donating. Also creat a site that explains how the thing works and you can interact with the contracts, buy the token, and display the state of the market cap of the token, volume ,etc\n\nTotal supply: 1000000000\nSite name: test staking",
+  "publisherVersion": "0.1.0+de17d8f5",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
