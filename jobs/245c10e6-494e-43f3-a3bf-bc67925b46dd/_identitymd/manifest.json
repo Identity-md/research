@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "8a973ef38da45d9a333e0bd80cf2024f99c540d8e2fb5eeab08be835d4578dcc",
+  "artifacts": [
+    {
+      "bytes": 30738,
+      "hash": "9705652668c2c323cf315d559135d88e5b80da6d5d8904ee80724c26d35e0530",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "85c2b287590dd8b7ee4ef143d7f51a09133460f7de0bd33e013220f06f68b825"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "f42f27bce9bb7fc5251ad781c221ee157406ba6f3ed5767a0fd8420eec11c54a",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "85c2b287590dd8b7ee4ef143d7f51a09133460f7de0bd33e013220f06f68b825",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "c65c96fe91d42eb7ecd37c378c3cbc9d00957d846427ff4c13389942d344d519",
+      "evaluation": null,
+      "findings": 0,
+      "model": "gpt-6-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "6a2de2bc66e5b64d23d5ec0e859df8225c62080aa0b5145a16397ee2da01b528",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "245c10e6-494e-43f3-a3bf-bc67925b46dd",
+  "objective": "Objective: build an entry.c for the conjectures.io \"Exact integer kernels\" competition (Bittensor subnet 66) that beats the current champion by at least 3% on at least one board, verified locally. Do NOT register a hotkey, do NOT submit, do NOT spend any TAO.\n\nRules: https://github.com/conjectures-io/exact-integer-kernels-miner/blob/main/RULES.md (read fully first). One C11 file defining eik_sigmoid, eik_tanh, eik_exp on binary32 bit patterns, correctly rounded (nearest, ties to even) on all 2^32 inputs incl. special values; integer arithmetic only (no float types/literals/casts), no #include, no state between calls, no long or plain char, max 256 KiB. Score S = mean instructions per call in an emulator on RV32IM and Cortex-M0+ (thumbv6m), weighted inputs (typical 55%, wide 30%, near-midpoint hard 10%, random 5%) plus a tail term and a code-size term. Lower is better. A candidate needs S <= 0.970x of the champion re-measured on the same inputs, then must pass every input under UBSan/ASan and on target object code. Copies (same preprocessed source after renaming) are rejected.\n\nStep 1 - setup: clone https://github.com/conjectures-io/exact-integer-kernels-miner on Linux x86-64, Python 3.12, gcc; run python -m eik setup. Read current champions and S per board from GET https://conjectures.io/v1/competitions/exact-integer-kernels/boards.\nStep 2 - baseline: download the public sources of former champions (https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/<id>/source for ids 50, 48, 46, 42, 37...). Score each locally with eik evaluate; pick the best base per board. Write down which techniques each uses (tables, polynomial degree, range reduction, fast paths, per-target #ifdef).\nStep 3 - optimise: find genuine improvements, one technique per experiment, measured with eik evaluate on fresh seeds: cheaper range reduction, smaller/denser tables, better fast paths for the typical and wide input classes, fewer branches, per-target paths (Cortex-M0+ has no 32x32->64 multiply; RV32IM has MULH), lower code size, cheaper handling of hard near-midpoint cases. Keep a log of every experiment with S per board.\nStep 4 - verify: for the best candidate run eik check, eik evaluate on several seeds, and eik fullcheck for all three functions (every input, UBSan and ASan) plus the target object-code checks the kit supports. Zero wrong outputs.\n\nDeliverable: entry.c, a table of S per board for the candidate vs the current champion re-measured (ratio), which boards it would take, full check logs, the experiment log, and a short note on what changed versus the base it started from. If no candidate reaches 0.970x, deliver the best entry, its ratios and what to try next.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
