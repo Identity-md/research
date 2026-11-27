@@ -1,0 +1,106 @@
+{
+  "acceptanceNote": "The judge's accepted audit report. Publication is not a guarantee that the audited code has no other defects.",
+  "artifactSetHash": "f2c69260a29be13ca418d1c6958ce4be43978fd4b78a402ce55c1998fe5ca6b6",
+  "artifacts": [
+    {
+      "bytes": 39677,
+      "hash": "13a7181ce1b05bbd73a3529dfbe37238dc168560b33f4dcc0f6fb0eb3bd47191",
+      "mediaType": "text/markdown",
+      "name": "audit_report",
+      "path": "AUDIT.md",
+      "publishedPath": "files/AUDIT.md",
+      "submissionHash": "19f19e6b4595618410227e3dca68d8de00f6ec5cec975b36beeabb153f640387"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "6ef494db85781eec11af6ed42b4e455faba3a2395fa3fe3ca47b4b5fc8708369",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_economics",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "b7fff5c511c52921c0470dbb85d640d19847b3c79fc73285e2cd2551ee40ca3f",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "e6de8d4c6cf9755159db0f1186e45380731977af9ac6ac182deeacfba39d97ee",
+      "evaluation": null,
+      "findings": 9,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_permissions",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "88557846eed8286e86443cd34e1918374f40e506a5c302993c826782dcc5a10a",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "78d8eb9b16352a1818b45163a221b7d9058c3037be7afef732c817815027e5b1",
+      "evaluation": null,
+      "findings": 7,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_flow",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "0ea55ec36440ed5ced73f09307cc48e95ae0840bd809545a37607ae9e58ef79c",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "87804e27e9c9f85a56b7d27769006acebfcf590ed64f6eef9617da5195c9d826",
+      "evaluation": null,
+      "findings": 10,
+      "model": "claude-fable-5-2",
+      "nodeKey": "audit_math",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "5b1afaf8877247edee520ac0b88ff51c352669daccd710b263f82b32a80105b1",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "af4be7a5238dbcbf7302ca643c8bde33a5fdec9fa89dfdfb5941a78fa75153ad",
+      "evaluation": null,
+      "findings": 11,
+      "model": "claude-opus-5-5",
+      "nodeKey": "audit_judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "19f19e6b4595618410227e3dca68d8de00f6ec5cec975b36beeabb153f640387",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2b372e3c-5c92-4c05-b62c-ebaaa402a9e2",
+  "objective": "Audit github.com/MirakoolDev/basketoor at commit 404e0ce, contracts/ only (scope and notes in contracts/AUDIT.md). This is a re-audit: you audited b14b3cc, and those fixes are in test/audit/. Look hardest at what changed since then:\n\n1. Fee splits in DCAC._execute: the smart-buys premium (smartFeeBps) and shared baskets (createSharedPlan, creator gets creatorShareBps of each buy fee, paid via _pay). Can a creator, a copier or the owner take more than intended, block the keeper, or leave USDC stuck in the contract?\n2. Budget math: _resize, setSmartBuys and updatePlan resizing deposits when the fee changes. Can a user underpay for their remaining buys or get back more than they put in?\n3. PoolTwapFeed and TickMath: a 30-minute TWAP of Aerodrome Slipstream pools holding about $105k of USDC, used as the price check for stocks without Chainlink. How cheap is it to move, and what can an attacker get out of it?\n4. AerodromeCLAdapter swap paths, and the gas budget (gasFor / InsufficientGas) with executeDue(3).\n\nThe contract will run on Base mainnet with real USDC and Coinbase tokenized stocks (8 decimals, multiplier() about 1.0005).",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "404e0ced4e2a4d92bfc99a46a539fc54e10c58ad",
+    "repoUrl": "https://github.com/MirakoolDev/basketoor.git"
+  }
+}
