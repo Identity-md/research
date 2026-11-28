@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "535ce0526533ed4d527563d6fe3fcaeeca6b3c5fc44ab0fa272778fb615be914",
+  "artifacts": [
+    {
+      "bytes": 45863,
+      "hash": "3577ef1acbac4b1d5c720676557aebcf1451b95a5d2a1f49f0ed102e01c20cb1",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "042ea1489b495f48ded819b1a6b75872d0975dbee37c2c25e4d8a8f48f71221f"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "98b4506bef931d13cb913bf855d8360596e9aceab2a590f8f5b165a483e76a95",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-2",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "042ea1489b495f48ded819b1a6b75872d0975dbee37c2c25e4d8a8f48f71221f",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "33bef35e96ccb6539eccd61b0f469a38ce7af4e5424afca909419cb2751e601f",
+      "evaluation": null,
+      "findings": 4,
+      "model": "claude-fable-5-2",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "claude",
+      "submissionHash": "83bd0a5bf2f0a5b80d7f756c8dbd7fa59956e684bdffff937686df1fbbfea40e",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "e11da06c-d65f-41cc-9d25-ef3934ce5a75",
+  "objective": "Build, audit and deploy PEPE RUN at peperun.imd.site. Slogan: RUN. SURVIVE. WIN. Deliver 2 smart contracts, 1 website, 6 media assets: logo, characters, obstacles, backgrounds, music, sound effects.\n\nGAME: Premium 2D Pepe endless runner. Auto-run, jump, duck, live distance in meters, speed, death score, personal best. Rapid difficulty increase, fair obstacles, 60 FPS, desktop/mobile controls, evolving worlds, pixel art and smooth animations. Fun, challenging, highly replayable.\n\nEthereum Mainnet, chain 1.\nIMD: 0xD34a99Bc0f67aE1bbd63C660e6d0b0dd03E263B7\nDev: 0x83027AD9d0D5374335086c539dADD1db983441B0\n\nPRICES: Game 1 IMD, permanent skin 5 IMD, Royal skin 10 IMD. ALL purchases: 50% weekly jackpot, 25% permanent burn, 25% developer. Atomic immutable distribution. Verify decimals/burn. No NFTs, new token or hidden fees.\n\nWEEKLY: Every Sunday 20:00 UTC, highest verified distance wins entire jackpot directly to wallet. Seven-day cycles, automatic renewal, permissionless settlement, countdown, tie rules, verification deadlines, no-winner rollover.\n\nSKINS: Classic free, 20 premium animated skins including Ninja, Cyber, Illuminati and Dragon. Permanent non-transferable on-chain wallet ownership. Identical physics/hitboxes, no advantages.\n\nROYAL: Golden crown/cape, one extra life per game, distance preserved. No stacking. Expires weekly, repurchase next week. Disclose advantage/expiry and leaderboard status.\n\nSITE: Premium black/neon green/gold arcade design. Free practice with separate rankings, skin shop, inventory, live jackpot, leaderboard, Hall of Fame, achievements, profiles, shareable scores, burn tracker, verified IMD swap, FAQ.\n\nWALLETS: MetaMask/Rabby EIP-6963, balances, network switching, exact approvals, confirmations.\n\nSECURITY: Server-authoritative physics, fair seeds, single-use sessions, replay validation, bot detection, independent signed score verification. Fair disconnect handling. No browser-trusted scores, backdoors, admin withdrawals or arbitrary winners.\n\nSWARM: Persistent backend/database, RPC, secure hosting, automated payouts, gas optimization, tests, independent audits, verified contracts, source code and documentation. Validate security/legal eligibility before paid play. No fake data, mockups or manipulative spending.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
