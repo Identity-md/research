@@ -1,0 +1,58 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "af1c0eb5e0d0f8029ff6504a2d46970112228ec48f578ba6480a6074361fc968",
+  "artifacts": [
+    {
+      "bytes": 63024,
+      "hash": "2d35c62984e68d4642f5d05eadd38493933c1ca296dec0d560d7205480dfe1c7",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/goal/writeup/report.md",
+      "publishedPath": "files/artifacts/goal/writeup/report.md",
+      "submissionHash": "7dc487df021dab356821c3d080be831f60a7e8ba77051246eef93ecccab9d232"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "468e82a89b9bfe188ef46b055e2ea554bde626cc162630c20effb0fcc7e13fed",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "claude-fable-5-2",
+      "nodeKey": "writeup",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "claude",
+      "submissionHash": "7dc487df021dab356821c3d080be831f60a7e8ba77051246eef93ecccab9d232",
+      "treeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifiedTreeHash": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "verifierVersion": "0.1.0+0ce771de"
+    },
+    {
+      "bundleHash": null,
+      "changedPaths": [],
+      "deviceKey": "5e0997ddda681c3254036a946fbb73d528deccfc869bc60186e295a1d58f625b",
+      "evaluation": null,
+      "findings": 4,
+      "model": "gpt-6.2-astra",
+      "nodeKey": "judge",
+      "profile": null,
+      "role": "review",
+      "runtime": "codex",
+      "submissionHash": "c688b8b6864958053ee80d16d25ecd3352b24804b97e1b7e5ff623b7df5298b8",
+      "treeHash": null,
+      "verifiedTreeHash": null,
+      "verifierVersion": null
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "2364e1a4-4bb9-4c54-925e-992800427de7",
+  "objective": "Create a sampling of images using the prompt \"meadow hikari transformator tempus portafoglio\". Review the images after they are made and state which one is the best choice if the image is going to be delivered to a group of five stangers collectively making an nft online through a tool as an experiement. They are paying for the nfts so will want high-quality, interesting, and unique art.",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
