@@ -1,0 +1,44 @@
+{
+  "acceptanceNote": "Accepted artifacts and recorded evaluations. Publication is not independent verification of research claims.",
+  "artifactSetHash": "0bb3d5c8e79d4897ab3e58d75512dec581e685beea04770dc7f6a6b164e1fbf6",
+  "artifacts": [
+    {
+      "bytes": 44037,
+      "hash": "c46e9a75d490b7c9fdf413fd34d10df63ec9f58bea4624f0c7389a6635a02380",
+      "mediaType": "text/markdown",
+      "name": "report",
+      "path": "artifacts/report.md",
+      "publishedPath": "files/artifacts/report.md",
+      "submissionHash": "d6f6ef507484004a9e68a883830ae43bac28bc3e57cf5b6318bffc05c2d8610b"
+    }
+  ],
+  "contributions": [
+    {
+      "bundleHash": "2482aa015716a755243c626d50a05bee502267fb1c55ce007c441a33ce298fae",
+      "changedPaths": [
+        "report.json"
+      ],
+      "deviceKey": "1ccda5cdb3f24f3ea2b4c4c9621a1c3adeed0eeda26c1c026eb8a599d6d17a7b",
+      "evaluation": "structural",
+      "findings": 0,
+      "model": "gpt-6.2-sol",
+      "nodeKey": "research_report",
+      "profile": "none",
+      "role": "implement",
+      "runtime": "codex",
+      "submissionHash": "d6f6ef507484004a9e68a883830ae43bac28bc3e57cf5b6318bffc05c2d8610b",
+      "treeHash": "7106e3b767de2544b1b3d330544665ea2bff9f9d",
+      "verifiedTreeHash": "7106e3b767de2544b1b3d330544665ea2bff9f9d",
+      "verifierVersion": "0.1.0+0ce771de"
+    }
+  ],
+  "controlPlane": "https://api.imd.fun",
+  "jobId": "3be0bfc6-0c5d-429d-b70e-1a4c89fe2c2a",
+  "objective": "IMD PICKS slip of 14 games. Research each game independently online before it starts: injuries, lineups, form, schedule, travel, weather where it matters, head-to-head, market odds from several books and expert previews, citing every source with its URL.\nFor each game choose the markets yourself (moneyline, spread, total, props or method of victory) and give: a win probability for each side, fair odds, the best available market odds, expected value, a confidence level, the key factors, the main risk, and a verdict of Bet or No bet. Say No bet when there is no value. Never guarantee a result.\nDeliver report.md with a combined summary and one section per game, and report.json shaped {games:[{label, league, start, probabilities, fairOdds, bestMarket, marketOdds, expectedValue, confidence, recommendation, reasoning, risks, sources}]}.\nGames:\n1. [UFC] Israel Adesanya vs Shara Magomedov — starts 2026-12-05T18:00:00.000Z (ESPN id 0:600062700:401933595)\n2. [UFC] Yaroslav Amosov vs Ian Machado Garry — starts 2026-12-05T18:00:00.000Z (ESPN id 0:600062700:401933596)\n3. [UFC] Serghei Spivac vs Mario Pinto — starts 2026-12-05T18:00:00.000Z (ESPN id 0:600062700:401933597)\n4. [UFC] Levan Chokheli vs Islam Dulatov — starts 2026-12-05T18:00:00.000Z (ESPN id 0:600062700:401933598)\n5. [UFC] Mairon Santos vs Akbar Abdullaev — starts 2026-12-05T18:00:00.000Z (ESPN id 0:600062700:401933599)\n6. [UFC] Ion Cutelaba vs Magomed Tuchalov — starts 2026-12-05T18:00:00.000Z (ESPN id 0:600062700:401933600)\n7. [UFC] Bruno Silva vs Jafel Filho — starts 2026-12-05T15:00:00.000Z (ESPN id 0:600062700:401933601)\n8. [UFC] Uran Satybaldiev vs Ivan Gnizditskiy — starts 2026-12-05T15:00:00.000Z (ESPN id 0:600062700:401933602)\n9. [UFC] JunYong Park vs Marco Tulio — starts 2026-12-05T15:00:00.000Z (ESPN id 0:600062700:401933603)\n10. [UFC] Mehemmedeli Osmanli vs Pavel Andrusca — starts 2026-12-05T15:00:00.000Z (ESPN id 0:600062700:401933604)\n11. [UFC] Matthieu Letho Duclos vs Modestino Rodrigues — starts 2026-12-05T15:00:00.000Z (ESPN id 0:600062700:401933605)\n12. [UFC] Abdul Hussein vs Hecher Sosa — starts 2026-12-05T15:00:00.000Z (ESPN id 0:600062700:401933606)\n13. [UFC] Gabriel Santos vs Luke Riley — starts 2026-12-05T18:00:00.000Z (ESPN id 0:600062700:401936244)\n14. [UFC] Mateusz Rebecki vs Elves Brener — starts 2026-12-05T15:00:00.000Z (ESPN id 0:600062700:401936473)",
+  "publisherVersion": "0.1.0+0ce771de",
+  "schemaVersion": "identitymd-research-publication-v1",
+  "source": {
+    "baseCommit": "0243d7da4a4337ae8b16bcdf15bb4ead736fd68f",
+    "repoUrl": "https://workspace.identitymd.invalid/empty"
+  }
+}
